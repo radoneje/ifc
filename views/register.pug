@@ -1,0 +1,38 @@
+h4 Регистрация
+.passprtForm
+    .regField.mt-3
+        .regPhotoWr.flex
+            .regPhoto.flex.center НЕТ ФОТО
+            .regFieldLabel
+                button#addPhoto Изменить фото
+    .regField.mt-3
+        .regFieldLabel Паспорт серия номер
+        input(name="passportSerial")
+        input(name="passportNumber")
+        .regFieldError Поле должно быть заполнено
+    .regField.mt-2
+        .regFieldLabel Паспорт дата выдачи и код подразделения
+        input(name="passportDate")
+        input(name="passportCode")
+        .regFieldError Поле должно быть заполнено
+    .regField.mt-2
+        .regFieldLabel Адрес регистрации
+        input(name="address")
+        .regFieldError Поле должно быть заполнено
+    .regField.mt-2
+        .regFieldLabel email и телефон
+        input(name="email")
+        input#phone(name="phone")
+        .regFieldError Поле должно быть заполнено
+
+button#addProxyBtn.mt-3 Добавить контктное лицо или представителя
+.proxyBox.mt-3
+
+.paymantTypeBox.mt-3
+    button#companyPayBtn Оплачивает компания
+    button#selfPayBtn Оплачиваю сам
+
+.fullScreenClose.mt-3
+
+link(rel="stylesheet" href="/static/lib/cropper.min.css" )
+

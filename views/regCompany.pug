@@ -1,0 +1,17 @@
+.passprtForm
+    .regField.mt-3
+        .regFieldLabel ИНН компании, которую вы предсталяете
+        input#companyINN(type="number" name="companyINN" value='7709501144')
+        button#checkInn Проверить
+        .regFieldError Поле должно быть заполнено
+        #companyINNError
+    .companyCard.mt-2
+    .companyPayCard
+        .mt-2 Компания-плательщик
+            #isPayCompanyWR.active
+                #isPayCompany Совпадает с основной компанией
+            #payCompanyBox
+
+
+
+include regConfirm

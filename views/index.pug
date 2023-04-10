@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1  ifrongress 2023
+  p Welcome to ifrongress 2023
+  .mt-3
+    .regForm
+      .h4 регистрация
+      .mt-3
+        .regField.mt-1
+          .regFieldLabel Фамилия
+          input(name="f" value="Иванов")
+          .regFieldError Поле должно быть заполнено
+        .regField.mt-1
+          .regFieldLabel Имя
+          input(name="i" value="Иван")
+          .regFieldError Поле должно быть заполнено
+        .regField.mt-1
+          .regFieldLabel Отчество
+          input(name="o" value="Иванович")
+          .regFieldError Поле должно быть заполнено
+        .mt-1
+          button(onclick="register()") Зарегистрироваться
+  script(src="/static/javascripts/utils.js")
+  script(src="/static/javascripts/mainScript.js")
