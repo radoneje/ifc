@@ -202,10 +202,11 @@ h2{
 }
 .mainDecor{
     position: absolute;
-    bottom: -4%;
-    width: 90%;
-    left: -5%;
+    bottom: -3px;
+    width: 100%;
+    left: 0;
     opacity: .5;
+
 }
 .mainDecor svg{
     width: 100%;
