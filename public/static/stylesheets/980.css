@@ -78,7 +78,7 @@
         line-height: 21px;
     }
     #news{
-        margin-top:48px;
+        padding-top:48px;
         padding-bottom: 24px;
     /*    margin-bottom: 24px;*/
         overflow: hidden;
@@ -177,7 +177,7 @@
         justify-content: space-around;
     }
     #partners {
-        margin-top: 56px;
+        padding-top: 56px;
     }
     .sectionTitle {
         font-size: 32px;
@@ -185,20 +185,21 @@
     }
     .partnersDecor, .faqDecor {
         width: 150px;
-        top: 48px;
+        top: 100px;
     }
     .partnersDecor svg, .faqDecor svg{
         width: 100%;
         height: auto;
     }
     #faq{
-        margin-top: 72px;
+        padding-top: 72px;
         width: 100%;
         overflow: hidden;
+        padding-bottom: 48px;
     }
     .faqDecor {
 
-        top: 86px;
+        top: 120px;
     }
     .faqMenuItem {
         margin-top: 72px;

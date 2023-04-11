@@ -86,6 +86,7 @@ footer, header, hgroup, menu, nav, section {
 body {
     line-height: 1;
     font-family: 'Stem', SansSerif;
+    background-image: url('/static/images/0_fon_02.svg');
 }
 
 ol, ul {
@@ -127,12 +128,16 @@ table {
     margin-top: 24px
 }
 .mt-4 {
-    margin-top: 48px
+    padding-top: 48px
 }
 
 .tower{
     width: min(1800px, 100%);
     margin: 0 auto;
+    background: white;
+}
+#menu{
+    padding-top: 48px;
 }
 .mainImageWr{
     position: relative;
@@ -266,7 +271,7 @@ h2{
     text-transform: uppercase;
 }
 #news{
-    margin-top:112px;
+    padding-top:112px;
     position: relative;
     padding-bottom: 125px;
 }
@@ -402,8 +407,9 @@ h2{
     align-items: flex-end;
 }
 #partners{
-    margin-top:152px;
+    padding-top:152px;
     position: relative;
+    padding-bottom:56px;
 }
 .sectionTitle{
     font-weight: 500;
@@ -426,7 +432,7 @@ h2{
 }
 #faq{
     position: relative;
-    margin-top: 112px;
+    padding-top: 112px;
     background: #E39A3F;
     color: #FFFFFF;
     padding-top: 40px;
@@ -477,9 +483,7 @@ h2{
 .faqMenuItem{
     cursor: pointer;
 }
-#footer{
 
-}
 .faqBg{
     position: absolute;
     bottom: -2px;
@@ -491,8 +495,8 @@ h2{
     height: auto;
 }
 #footer{
-    margin-top:68px;
-    margin-bottom: 62px;
+    padding-top:68px;
+    padding-bottom: 62px;
 }
 .footerItem{
     width: 25%;
