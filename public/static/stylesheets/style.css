@@ -165,7 +165,7 @@ h1{
     /*position: absolute;*/
     top:157px;
     left: 20%;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 48px;
     line-height: 46px;
     margin-left: 4%;
@@ -214,6 +214,7 @@ h2{
 }
 .mainMenuGroup{
     margin-right: 60px;
+    width: 90%;
 }
 .mainMenuItem{
     cursor: pointer;
