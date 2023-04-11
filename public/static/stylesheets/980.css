@@ -274,7 +274,7 @@
     }
     #mobileMenu .menuItem{
         margin-top: 0px;
-        padding: 12px;
+        padding: 0 10px;
     }
     .mobileMenuSiteItems{
         margin-top: 12px;
