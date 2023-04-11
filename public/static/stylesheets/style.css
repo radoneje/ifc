@@ -225,6 +225,9 @@ h2{
     padding: 8px 12px;
 
 }
+.h1Wr{
+    align-items: flex-start;
+}
 .mainMenu{
     position: absolute;
     bottom: 88px;
