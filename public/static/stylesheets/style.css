@@ -228,6 +228,7 @@ h2{
 }
 .h1Wr{
     align-items: flex-start;
+    width: 100%;
 }
 .mainMenu{
     position: absolute;
