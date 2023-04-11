@@ -520,6 +520,12 @@ h2{
     color:#878787;
 
 }
+.faqItem .newsButton:hover{
+    background-color: #263378;
+}
+.faqItem .newsButton:hover svg path{
+    stroke: #e7929c;
+}
 
 
 
