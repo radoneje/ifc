@@ -327,7 +327,7 @@ h2{
 }
 .newsBlockDecor{
     position: absolute;
-    bottom: 0;
+    bottom: -3px;
     left: 0;
     right: 0;
 }
@@ -339,7 +339,7 @@ h2{
     background: #BB3E3F;
 }
 .quotesArrow{
-    width: 56px;
+    width: 112px;
     height: 56px;
     background: #E39A4F;
     box-sizing: border-box;
@@ -354,7 +354,7 @@ h2{
     transform: rotate(180deg);
 }
 .quotesCenter{
-    width: calc(100% - (56px * 2));
+    width: calc(100% - (112px * 2));
     padding: 44px;
     box-sizing: border-box;
 }
