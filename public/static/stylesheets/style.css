@@ -300,7 +300,7 @@ h2{
     margin-top:12px;
 }
 .newsText{
-    font-weight: 400;
+    font-weight: 300;
     font-size: 21px;
     line-height: 26px;
     /* or 124% */
@@ -308,6 +308,7 @@ h2{
 
     color: #878787;
 }
+
 .newsButton{
     position: absolute;
     bottom: 28px;
@@ -317,6 +318,12 @@ h2{
     width: 40px;
     height: 40px;
     background-color: #E39A4F;
+}
+.newsButton:hover{
+    background-color: #BB3E3F;
+}
+.newsButton:hover svg path{
+    fill: #E39A4F;
 }
 .newsBlockDecor{
     position: absolute;
