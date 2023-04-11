@@ -227,13 +227,16 @@ h2{
     padding: 8px 12px;
 
 }
+.mainMenuItem:hover{
+    color:#F1CCA7
+}
 .h1Wr{
     align-items: flex-start;
     width: 100%;
 }
 .mainMenu{
     position: absolute;
-    bottom: 88px;
+
     bottom:64px;
     left: 56px;
     align-items: flex-start;
@@ -525,6 +528,22 @@ h2{
 }
 .faqItem .newsButton:hover svg path{
     stroke: #e7929c;
+}
+.faqMenuItem:hover .menuItemText{
+    color:#263378 !important;
+}
+
+.desktop{
+    display: block;
+}
+.mobile{
+    display: none;
+}
+.mobileMenuBtn{
+    position: absolute;
+    right: 16px;
+    top: 40px;
+    cursor: pointer;
 }
 
 

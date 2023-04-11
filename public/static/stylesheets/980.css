@@ -1,0 +1,301 @@
+@media all and (max-width: 980px) {
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    body {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .h1Wr, .mainMenu, .newsItems, .faqLink {
+        display: block;
+    }
+
+
+
+
+
+    .mainImageWr {
+        padding-bottom: 120%;
+    }
+
+    .mainImage {
+        background-image: url(../images/mainImageMobile.png);
+       /* background-color: yellow;*/
+    }
+
+    .mainTitle {
+        padding: 40px 16px;
+    }
+
+    .h1Wr {
+        display: block;
+    }
+
+    h1 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+        line-height: 24px;
+        padding: 0px 16px;
+    }
+
+    .mainMenu {
+        display: none;
+    }
+
+    .tower {
+        /* padding: 0 16px;*/
+    }
+
+    .subTower {
+        padding: 0 16px;
+    }
+
+    .menuItem {
+        margin-top: 16px;
+    }
+
+    .menuItemBox {
+        width: 24px;
+        height: 24px;
+    }
+
+    .menuItemText {
+        font-size: 18px;
+        line-height: 21px;
+    }
+    #news{
+        margin-top:48px;
+        padding-bottom: 24px;
+    /*    margin-bottom: 24px;*/
+        overflow: hidden;
+    }
+    .newsItemsBox{
+        width: 100%;
+        overflow-y: scroll;
+    }
+    .newsItem{
+        padding: 40px 24px;
+        padding-bottom: 84px;
+        margin-right: 24px;
+        width: calc(100vw - 128px);
+        overflow: hidden;
+    }
+    .newsItems{
+        display: flex;
+        width: max-content;
+    }
+    .newsDate{
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 17px;
+    }
+    .newsTitle, .newsText, .faqTitle, .faqText{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .newsBlockDecor {
+        position: absolute;
+        bottom: -3px;
+        top: 53px;
+        left: -547px;
+        width: auto;
+    }
+    .newsBlockDecor svg {
+        width: auto;
+        height: 100%;
+    }
+    #news .subTower{
+        padding: 0 0px;
+    }
+    .newsItem:first-child{
+        margin-left: 24px;
+    }
+    .quotesWr{
+        display: block;
+    }
+    .quotesWr{
+        padding: 80px 24px;
+    }
+    .quotesCenter{
+        width: 100%;
+        padding: 0;
+    }
+    .quoteTextWr {
+        width: 100%;
+        padding-left: 0%;
+    }
+    .quoteTextTitle {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .quoteImg{
+        width: 100%;
+        flex: 1 2 100%;
+        order: 1;
+    }
+    .quoteTextWr {
+        flex: 1 1 100%;
+        order: 2;
+    }
+    .quoteText{
+        height: auto;
+        font-size: 32px;
+        line-height: 40px;
+        padding-top: 38px;
+    }
+    .quoteTextDivaider {
+       display: none;
+    }
+    .quteBodyBox {
+        align-items: stretch;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .quotesCtrl{
+        margin-top:96px
+    }
+    .quotesArrow{
+        width: 56px;
+        height: 56px;
+    }
+    .quotesCtrlBox{
+        justify-content: space-around;
+    }
+    #partners {
+        margin-top: 56px;
+    }
+    .sectionTitle {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .partnersDecor, .faqDecor {
+        width: 150px;
+        top: 48px;
+    }
+    .partnersDecor svg, .faqDecor svg{
+        width: 100%;
+        height: auto;
+    }
+    #faq{
+        margin-top: 72px;
+        width: 100%;
+        overflow: hidden;
+    }
+    .faqDecor {
+
+        top: 86px;
+    }
+    .faqMenuItem {
+        margin-top: 72px;
+    }
+    #faq .menuItemText{
+        font-size: 17px;
+        line-height: 21px;
+    }
+    .faqItems{
+        margin-top:48px;
+    }
+    .faqItemsBox{
+        width: max-content;
+    }
+    .faqItemsWr{
+        width: calc( 100% + 48px);
+        overflow-x: scroll;
+        margin-left: -24px
+    }
+
+    .faqItem{
+        width: calc(100vw - 110px);
+        margin-left: 24px;
+        padding: 40px 24px;
+        padding-bottom: 92px;
+    }
+    .footerWr{
+        flex-wrap: wrap;
+    }
+    .footerItem{
+        width: 100%;
+        text-align: center !important;
+        margin-top:24px;
+    }
+    #mobileMenu{
+        background: linear-gradient(180deg, rgba(38, 51, 121, 0.4) 0%, #BB3E3F 100%), #BB3E3F;
+        position: fixed;
+        top:0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 1000;
+    }
+    .mobileMenuWr{
+        position: relative;
+    }
+    #mobileMenu h1, #mobileMenu h2{
+        color: #FFFFFF;
+    }
+    .mobileMenuCloseBtn{
+        position: absolute;
+        right: 16px;
+        top:40px
+    }
+    #mobileMenu .mainMenuGroup{
+        margin-right: 0px;
+        width: 100%;
+    }
+    #mobileMenu .mainMenuItem{
+        text-align: center;
+        cursor: pointer;
+        color: #FFFFFF;
+        padding: 12px;
+    }
+    #mobileMenu .menuItemText{
+        color: #FFFFFF;
+
+
+    }
+    #mobileMenu .menuItem{
+        margin-top: 0px;
+        padding: 12px;
+    }
+    .mobileMenuSiteItems{
+        margin-top: 24px;
+    }
+    .mobileMenuLangMenu{
+        margin-top: 24px;
+    }
+    .LangMenuItem{
+        color: #FFFFFF;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 28px;
+        padding: 10px 24px;
+        background-color: #878787;
+    }
+    .LangMenuItem.active{
+        background-color: #BB3E3F;
+    }
+    .LangMenuItem:first-child{
+        margin-right: 12px;
+    }
+    .LangMenuItem:last-child{
+        margin-right: 12px;
+    }
+
+
+
+}

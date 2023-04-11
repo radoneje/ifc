@@ -292,5 +292,13 @@ const register = async () => {
         closePopUp();
     }
 
-
+}
+const showMobileMenu=()=>{
+    document.body.style.overflow="hidden"
+    mobileMenu.style.display="block"
+}
+const closeMobileMenu=()=>{
+    console.log(11)
+    mobileMenu.style.display="none"
+    document.body.style.overflow=null
 }

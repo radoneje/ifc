@@ -1,0 +1,30 @@
+@media all and (max-width: 1315px){
+    h1, h2 {
+        /* position: absolute; */
+        font-size: 36px;
+
+    }
+    .mainMenuItem{
+        font-size: 24px;
+        line-height: 24px;
+    }
+    .menuItem{
+        margin-right: 32px;
+
+    }
+    .newsTitle, .newsText, .faqTitle, .faqText{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .newsItem, .faqItem {
+    .
+        width: calc(25% - 40px);
+        padding: 48px 38px;
+        padding-bottom: 84px;
+
+    }
+    .quoteTextTitle{
+        font-size: 36px;
+        line-height: 42px;
+    }
+}

@@ -2,23 +2,15 @@
     .tower
         .mainImageWr
             .mainImage
-                .mainTitle.flex.center
-                    .mainLogo
-                        include ../svg/mainlogo.svg
-                    .h1Wr.flex
-                        h1 ФИНАНСОВЫЙ<br>КОНГРЕСС<br>БАНКА&nbsp;РОССИИ
-                        h2 6-7 июля 2023<br>Санкт-петербург
+                .mobileMenuBtn.mobile(onclick="showMobileMenu()")
+                    include ../svg/mobileMenuBtn.svg
+                include mainTitle
+
             .mainDecor
                 include ../svg/mainpoloski.svg
             .mainMenu.flex.left
-                .mainMenuGroup
-                    .mainMenuItem Новости
-                    .mainMenuItem Патнеры
-                    .mainMenuItem Участникам
+                include mainMenuItems
 
-                .mainMenuGroup
-                    .mainMenuItem Программа
-                    .mainMenuItem Спикеры
 
 
 

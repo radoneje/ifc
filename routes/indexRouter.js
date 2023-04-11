@@ -8,7 +8,7 @@ router.get('/demo/:lang?', async function(req, res, next) {
     return res.redirect("/demo/ru")
   if(!req.params.lang.match(/ru|en/))
     res.redirect("/demo/ru")
-  res.render('demo', );
+  res.render('demo',{lang:req.params.lang, ru:req.params.lang=="ru"} );
 });
 
 
