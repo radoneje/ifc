@@ -339,8 +339,8 @@ h2{
     background: #BB3E3F;
 }
 .quotesArrow{
-    width: 112px;
-    height: 112px;
+    width: 88px;
+    height: 88px;
     background: #E39A4F;
     box-sizing: border-box;
     padding: 14px 0;
@@ -354,7 +354,7 @@ h2{
     transform: rotate(180deg);
 }
 .quotesCenter{
-    width: calc(100% - (112px * 2));
+    width: calc(100% - (88px * 2));
     padding: 44px;
     box-sizing: border-box;
 }
