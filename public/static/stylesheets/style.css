@@ -323,7 +323,7 @@ h2{
     background-color: #BB3E3F;
 }
 .newsButton:hover svg path{
-    fill: #E39A4F;
+    stroke: #E39A4F;
 }
 .newsBlockDecor{
     position: absolute;
