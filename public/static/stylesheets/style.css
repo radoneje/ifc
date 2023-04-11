@@ -247,11 +247,15 @@ h2{
     background-color: #BB3E3F;
 }
 .menuItemText{
-    font-weight: 400;
+    font-weight: 300;
     font-size: 21px;
     line-height: 24px;
     color: #878787;
     margin-left: 24px;
+}
+.menuItem:hover .menuItemText{
+    color: #4A4A49;
+
 }
 .menuItem{
     cursor: pointer;
