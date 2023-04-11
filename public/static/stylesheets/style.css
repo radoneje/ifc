@@ -180,6 +180,7 @@ h2{
     font-size: 48px;
     line-height: 46px;
     text-transform: uppercase;
+    opacity: 0.8;
 }
 .flex{
     display: flex;
