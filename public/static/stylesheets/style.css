@@ -213,13 +213,13 @@ h2{
     height: auto;
 }
 .mainMenuGroup{
-    margin-right: 102px;
+    margin-right: 60px;
 }
 .mainMenuItem{
     cursor: pointer;
     font-weight: 500;
     font-size: 28px;
-    line-height: 36px;
+    line-height: 28px;
     text-transform: uppercase;
     margin-top: 0px;
     padding: 8px 12px;
@@ -230,6 +230,7 @@ h2{
     bottom: 88px;
     bottom:64px;
     left: 56px;
+    align-items: flex-start;
 }
 .subTower{
     padding:0 56px
