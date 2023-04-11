@@ -516,9 +516,9 @@ h2{
     cursor: pointer;
     color:#BB3E3F
 }
-.faqMenuItem:hover .menuItemText{
+.menuItemText:hover{
     color:#878787;
-    color:yellow
+
 }
 
 
