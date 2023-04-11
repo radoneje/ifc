@@ -350,6 +350,12 @@ h2{
     height: 100%;
     width: auto;
 }
+.quotesArrow:hover {
+    background: #263378;
+}
+.quotesArrow:hover svg path{
+    stroke: #e7929c;
+}
 .quotesArrow.l svg{
     transform: rotate(180deg);
 }
