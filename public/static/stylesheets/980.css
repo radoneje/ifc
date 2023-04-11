@@ -257,11 +257,15 @@
         margin-right: 0px;
         width: 100%;
     }
+    #mobileMenu .mainTitle{
+        padding-bottom: 24px;
+    }
+
     #mobileMenu .mainMenuItem{
         text-align: center;
         cursor: pointer;
         color: #FFFFFF;
-        padding: 12px;
+        padding: 10px;
     }
     #mobileMenu .menuItemText{
         color: #FFFFFF;
@@ -273,10 +277,10 @@
         padding: 12px;
     }
     .mobileMenuSiteItems{
-        margin-top: 24px;
+        margin-top: 12px;
     }
     .mobileMenuLangMenu{
-        margin-top: 24px;
+        margin-top: 12px;
     }
     .LangMenuItem{
         color: #FFFFFF;
