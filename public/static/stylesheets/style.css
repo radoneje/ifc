@@ -126,6 +126,374 @@ table {
 .mt-3 {
     margin-top: 24px
 }
+.mt-4 {
+    margin-top: 48px
+}
+
+.tower{
+    width: min(1800px, 100%);
+    margin: 0 auto;
+}
+.mainImageWr{
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 58.2%;
+    color:#FFF;
+    overflow-y: clip;
+}
+.mainImage{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: url('../images/mainImage.png');
+    background-size: contain;
+}
+.mainLogo{
+    /*position: absolute;*/
+    top:7%;
+    left: 7%;
+    width: 10%;
+}
+.mainLogo svg{
+    width: 100%;
+    height: auto;
+}
+h1{
+    /*position: absolute;*/
+    top:157px;
+    left: 20%;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 46px;
+    margin-left: 4%;
+    margin-right: 20%;
+
+}
+h2{
+   /* position: absolute;*/
+    top:184px;
+    right: 3%;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 46px;
+    text-transform: uppercase;
+}
+.flex{
+    display: flex;
+}
+.center{
+    justify-content: center;
+    align-items: center;
+}
+.left{
+    justify-content: left;
+    align-items: center;
+}
+.beetwen{
+    justify-content: space-between;
+}
+.mainTitle{
+    justify-content: left;
+    box-sizing: border-box;
+    padding: 52px 56px;
+}
+.mainDecor{
+    position: absolute;
+    bottom: -4%;
+    width: 90%;
+    left: -5%;
+    opacity: .5;
+}
+.mainDecor svg{
+    width: 100%;
+    height: auto;
+}
+.mainMenuGroup{
+    margin-right: 102px;
+}
+.mainMenuItem{
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 36px;
+    text-transform: uppercase;
+    margin-top: 0px;
+    padding: 8px 12px;
+
+}
+.mainMenu{
+    position: absolute;
+    bottom: 88px;
+    bottom:64px;
+    left: 56px;
+}
+.subTower{
+    padding:0 56px
+}
+.menuItemBox{
+    width: 28px;
+    height:28px;
+    background-color: #BB3E3F;
+}
+.menuItemText{
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 24px;
+    color: #878787;
+    margin-left: 24px;
+}
+.menuItem{
+    cursor: pointer;
+    margin-right: 64px;
+    text-transform: uppercase;
+}
+#news{
+    margin-top:112px;
+    position: relative;
+    padding-bottom: 125px;
+}
+.newsItems{
+    align-items: stretch;
+
+}
+.newsItem{
+    width: calc(20% - 40px);
+    background: #F1CCA7;
+    padding: 48px 38px;
+    padding-bottom: 84px;
+    position: relative;
+}
+.newsDate{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+
+    color: #BB3E3F;
+}
+.newsTitle{
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 26px;
+    /* or 124% */
+    margin-top:2px;
+    text-transform: uppercase;
+
+    color: #000000;
+}
+.newsDecor{
+    margin-left: -48px;
+    margin-top:12px;
+}
+.newsText{
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 26px;
+    /* or 124% */
+
+
+    color: #878787;
+}
+.newsButton{
+    position: absolute;
+    bottom: 28px;
+    right: 28px;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    background-color: #E39A4F;
+}
+.newsBlockDecor{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.newsBlockDecor svg{
+    width: 100%;
+    height: auto;
+}
+.quotesWr{
+    background: #BB3E3F;
+}
+.quotesArrow{
+    width: 56px;
+    height: 56px;
+    background: #E39A4F;
+    box-sizing: border-box;
+    padding: 14px 0;
+    cursor: pointer;
+}
+.quotesArrow svg{
+    height: 100%;
+    width: auto;
+}
+.quotesArrow.l svg{
+    transform: rotate(180deg);
+}
+.quotesCenter{
+    width: calc(100% - (56px * 2));
+    padding: 44px;
+    box-sizing: border-box;
+}
+.quoteImg{
+    width: 66.66%;
+}
+.quoteImg img{
+    width: 100%;
+    height: auto;
+}
+.quoteTextWr{
+    width: 33.33%;
+    padding-left: 3%;
+}
+.quoteText{
+    font-weight: 500;
+    font-size: 49px;
+    line-height: 56px;
+    /* or 114% */
+
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+.quoteText{
+    height: 55%;
+}
+.quoteTextDivaider{
+    height: 45%;
+}
+
+.quteBodyBox{
+    align-items: stretch;
+}
+.quoteText{
+    align-items: flex-end;
+}
+#partners{
+    margin-top:152px;
+    position: relative;
+}
+.sectionTitle{
+    font-weight: 500;
+    font-size: 49px;
+    line-height: 61px;
+    text-transform: uppercase;
+    color: #4A4A49;
+}
+.partnersBox{
+    margin-top:102px;
+}
+.partnersBox img{
+    width: 100%;
+    height: auto;
+}
+.partnersDecor{
+    position: absolute;
+    left: 0;
+    top:60px
+}
+#faq{
+    position: relative;
+    margin-top: 112px;
+    background: #E39A3F;
+    color: #FFFFFF;
+    padding-top: 40px;
+    padding-bottom: 112px;
+}
+#faq .sectionTitle{
+    color: #FFFFFF;
+}
+.faqDecor{
+    position: absolute;
+    left: 0;
+    top:106px
+}
+.faqItem{
+    width: calc(20% - 40px);
+    background: #BB3E3F;
+    padding: 48px 38px;
+    padding-bottom: 84px;
+    position: relative;
+}
+.faqItems{
+    align-items: stretch;
+    margin-top: 112px;
+}
+.faqTitle{
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 26px;
+
+    text-transform: uppercase;
+
+}
+.faqText{
+    margin-top: 16px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: rgba(255, 255, 255, 0.8);
+
+}
+.faqText a {
+    color: rgba(255, 255, 255, 0.8);
+}
+#faq .menuItemText{
+      color: rgba(255, 255, 255, 0.8);
+  }
+.faqMenuItem{
+    cursor: pointer;
+}
+#footer{
+
+}
+.faqBg{
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+}
+.faqBg svg{
+    width: 100%;
+    height: auto;
+}
+#footer{
+    margin-top:68px;
+    margin-bottom: 62px;
+}
+.footerItem{
+    width: 25%;
+    min-height: 30px;
+}
+.footerWr{
+    justify-content: space-around;
+}
+.centerfooterItem{
+    text-align: center;
+}
+.footerItemRow{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 18px;
+    margin-top:21px;
+    color: #878787;
+}
+.footerItemRow a{
+    color: #878787;
+    text-decoration: none;
+}
+.footerItemRowLink{
+    cursor: pointer;
+    color:#BB3E3F
+}
+
+
+
 
 
 
