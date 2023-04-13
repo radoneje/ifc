@@ -1,0 +1,110 @@
+
+    .menuItem.flex.center.left.mt-4
+        .menuItemBox
+        .menuItemText Участник
+    .regRow
+        .reqPhoto.reg287(v-on:click="uploadPhoto()" v-bind:class="{errorPhoto:photoError}")
+            img(v-if="user.photoid" :src="'/static/image/middle/'+user.photoid")
+            #noFoto(v-else)
+                div Загрузить фото<br>для аккредитации
+                include ../svg/userAvatarWhiteWithBorder.svg
+                //.photoLoader(v-if="photoIsLoading")
+                        include ../svg/loader.svg
+        .reqRowErrorMessage(v-if="photoError") Фотография должна быть загружена
+
+    .regRow(v-bind:class="{error:errors.f}")
+        .regRowGroup.flex.left
+            .recLabel.reg287 Фамилия
+            input.reqInput(v-model="user.f" must name="f")
+    .regRow(v-bind:class="{error:errors.i}")
+        .regRowGroup.flex.left
+            .recLabel.reg287 Имя
+            input.reqInput(v-model="user.i" must name="i")
+    .regRow(v-bind:class="{error:errors.o}")
+        .regRowGroup.flex.left
+            .recLabel.reg287 Отчество
+            input.reqInput(v-model="user.o" must name="o")
+    .regRow(v-bind:class="{error:errors.passportNumber}")
+        .regRowGroup.flex.left
+            .recLabel.reg287 паспорт серия номер
+            input.reqInput(v-model="user.passportNumber" must name="passportNumber")
+    .regRow(v-bind:class="{error:errors.passportDate}")
+        .regRowGroup.flex.left
+            .recLabel.reg287 дата выдачи
+            input.reqInput(v-model="user.passportDate" must name="passportDate")
+    .regRow(v-bind:class="{error:errors.passportCode}")
+        .regRowGroup.flex.left
+            .recLabel.reg287 код подразделения
+            input.reqInput(v-model="user.passportCode" must name="passportCode")
+    .regRow(v-bind:class="{error:errors.address}")
+        .regRowGroup.flex.left
+            .recLabel.reg287 адрес регистрации
+            input.reqInput(v-model="user.address" must name="address")
+    .regRow(v-bind:class="{error:errors.email}")
+        .regRowGroup.flex.left
+            .recLabel.reg287 email
+            input.reqInput(v-model="user.email" must name="email" email )
+    .regRow(v-bind:class="{error:errors.phone}")
+        .regRowGroup.flex.left
+            .recLabel.reg287 телефон
+            input.reqInput(v-model="user.phone" must name="phone")
+    .regRow
+        .regCheckBox.flex.left(v-bind:class="{active:user.isProxy}" v-on:click="user.isProxy=!user.isProxy")
+            .regCheckBoxBox
+            .regCheckBoxText есть Контактное лицо
+    .regIsProxy(v-if="user.isProxy")
+        .regRow(v-bind:class="{error:errors.proxyi}")
+            .regRowGroup.flex.left
+                .recLabel.reg287 Имя
+                input.reqInput(v-model="user.proxyi" must name="proxyi")
+        .regRow(v-bind:class="{error:errors.proxyemail}")
+            .regRowGroup.flex.left
+                .recLabel.reg287 email
+                input.reqInput(v-model="user.proxyemail" must email name="proxyemail")
+        .regRow(v-bind:class="{error:errors.proxyphone}")
+            .regRowGroup.flex.left
+                .recLabel.reg287 телефон
+                input.reqInput(v-model="user.proxyphone" must name="proxyphone")
+    .regRow.topdivaider &nbsp;
+    .regRow
+        .menuItem.flex.center.left
+            .menuItemBox
+            .menuItemText Компания, которую вы представляете
+    .regRow(v-bind:class="{error:errors.company.inn}")
+        .regRowGroup.flex.left()
+            .recLabel.reg287 ИНН
+            input#inn.reqInput(v-on:change="if(innStatus.state==2) clear('company')" v-model="user.company.inn"  type="number")
+        .reqRowErrorMessage(v-if="innStatus.message") {{innStatus.message}}
+
+        .regCheckBox.green.flex.left(v-on:click="loadInn('company', innStatus)" v-bind:class="{active:innStatus.state==2,loading:innStatus.state==1}" style="margin-top: 6px;" )
+
+            .regCheckBoxText(style="margin-left:0") <span class="innBtn">Загрузить из ФНС </span>
+            .regCheckBoxBox.opacity0(v-bind:class="{opacity100:innStatus.state==1}")
+                div
+                    include ../svg/loader.svg
+            .regCheckBoxComment Для регистрации компании нажмите на кнопку
+
+    .regRow
+        .regRowGroup.readonly.flex.left
+            .recLabel.reg287 Название
+            input.reqInput( readonly v-model="user.company.name")
+    .regRow
+        .regRowGroup.readonly.flex.left
+            .recLabel.reg287 КПП
+            input.reqInput(readonly v-model="user.company.kpp")
+    .regRow
+        .regRowGroup.readonly.flex.left
+            .recLabel.reg287 ОГРН
+            input.reqInput(readonly v-model="user.company.ogrn")
+    .regRow
+        .regRowGroup.readonly.flex.left
+            .recLabel.reg287 адрес
+            input.reqInput(readonly v-model="user.company.address")
+    .regRow
+        .regRowGroup.readonly.flex.left
+            .recLabel.reg287 руководитель
+            input.reqInput(readonly v-model="user.company.director")
+    .regRow
+        .regRowGroup.flex.left
+            .recLabel.reg287 телефон
+            input.reqInput( v-model="user.company.phone")

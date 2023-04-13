@@ -29,7 +29,6 @@ const createPopUp = async (url, callback) => {
     }
 
 
-
     box.onclick = (e) => {
         e.preventDefault();
         e.stopPropagation();
@@ -62,24 +61,136 @@ const createPopUp = async (url, callback) => {
 
 
 }
+
 function closePopUp() {
-    let elem=document.querySelector(".fullScreenWr")
+    let elem = document.querySelector(".fullScreenWr")
     document.body.removeChild(elem)
     document.body.style.overflow = null
 }
-async function fetchJson(url, obj){
-    let r=await fetch(url,
+
+async function fetchJson(url, obj) {
+    let r = await fetch(url,
         {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
             method: "POST",
+            mode: 'cors',
             body: JSON.stringify(obj)
         })
 
-    if(r.ok)
+    if (r.ok)
         return await r.json()
     return null;
+}
+
+const postJson = fetchJson;
+
+async function getJson(url) {
+    let r = await fetch(url)
+    if (r.ok)
+        return await r.json()
+    return null;
+}
+
+
+const getPhoto = async (aspectRatio=4/5) => {
+    return new Promise(async (responce, reject) => {
+        let inp = document.createElement("input")
+        inp.type = "file"
+        inp.accept = "image/png, image/jpeg"
+        inp.click()
+        inp.onchange = async () => {
+            let elem = document.createElement("div")
+            elem.classList.add("fullScreenPhotoEditor")
+            let res = await fetch("/photoEditor")
+            if (!res.ok)
+                return responce()
+            elem.innerHTML = await res.text();
+            document.body.appendChild(elem);
+            elem.querySelectorAll(".fullScreenCloseNotSave").forEach(e => e.onclick = () => {
+                document.body.removeChild(elem);
+            })
+            elem.onclick = () => {
+                document.body.removeChild(elem);
+            }
+            elem.querySelector(".fullScreenBox").onclick = (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+            var fr = new FileReader();
+            fr.readAsDataURL(inp.files[0]);
+            fr.onload = () => {
+                photoEditorImage.src = fr.result
+
+                const cropper = new Cropper(photoEditorImage, {
+                    aspectRatio: aspectRatio,//1,//    9/16
+                    viewMode: 1,
+                    autoCropArea: 1,
+                    zoomable: false,
+                });
+                photoSaveBtn.onclick = () => {
+                    cropper.getCroppedCanvas().toBlob(async (blob) => {
+                        let formData = new FormData()
+                        formData.append('file', blob, 'userPhoto.png');
+                        let ret = await fetch(frontUrl + "/api/uploadFile", {
+                            method: 'post',
+                            body: formData,
+                        })
+                        if (ret.ok)
+                            responce(await ret.json())
+                        document.body.removeChild(elem);
+                    }, 'image/png', 1)
+                }
+            }
+        }
+    })
+}
+const copyToClpboard = async (text) => {
+    await navigator.clipboard.writeText(text)
+}
+const uploadUserFile = async (userid) => {
+    let inp = document.createElement("input")
+    inp.type = "file"
+    inp.setAttribute("multiple", true)
+    inp.click()
+    inp.onchange = async () => {
+        for (let file of inp.files) {
+            let fileguid = await uploadUserFileDo(userid, file)
+            if (fileguid) {
+                let r = await fetch('/userFile/' + fileguid + "/" + userid)
+                if (r.ok)
+                    if (userDetailFiles)
+                        userDetailFiles.innerHTML = await r.text() + userDetailFiles.innerHTML;
+            }
+        }
+    }
 
 }
+const uploadUserFileDo = async (userid, file) => {
+    formData = new FormData()
+    formData.append('file', file, file.name);
+    console.log(file)
+    let ret = await fetch(frontUrl + "/api/uploadFile", {
+        method: 'post',
+        body: formData,
+    })
+    if (ret.ok) {
+        let fileid = await ret.json();
+        fetchJson("/api/userAddFile/", {userid, fileid})
+        return fileid
+    } else return null;
+}
+const downloadFile = (guid) => {
+    document.location.href = frontUrl + "/static/file/" + guid
+}
+const validateEmail = (email) => {
+    return String(email)
+        .toLowerCase()
+        .match(
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        );
+};
+
+

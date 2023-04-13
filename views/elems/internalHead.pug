@@ -1,0 +1,24 @@
+.tower
+    .internalHead
+        .internalHeadImage
+            img.desktop(src="/static/images/internalHeadBg.svg" width="1900" height="371")
+            img.mobile(src="/static/images/internalHaedBgMobile.png" width="375" height="160")
+
+        .internalHeadLogoWr.flex.center
+            .internalHeadLogo(onclick="document.location.href='/'")
+                include ../svg/mainlogo.svg
+            .internalHeadText.flex.center
+                .internalHeadH1 Финансовый<br>конгресс<br>Банка&nbsp;России
+                .internalHeadMenu
+                    include mainMenuItems
+        .internalH1Wr.mobile
+            .mainTitle.flex.center
+                .mainLogo
+                    include ../svg/mainlogo.svg
+                .h1Wr.flex
+                    h1 ФИНАНСОВЫЙ<br>КОНГРЕСС<br>БАНКА&nbsp;РОССИИ
+                    h2.desktop 6-7 июля 2023<br>Санкт-петербург
+            .mobileMenuCloseBtn(onclick="showMobileMenu()")
+                include ../svg/mobileMenuBtn.svg
+.desktop
+    include menu

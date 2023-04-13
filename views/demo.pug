@@ -9,28 +9,13 @@ block content
     include elems/partners
     include elems/faq
     include elems/footer
-
-    #mobileMenu(style="display:none")
-        .mobileMenuWr
-            .mainTitle.flex.center
-                .mainLogo
-                    include svg/mainlogo.svg
-                .h1Wr.flex
-                    h1 ФИНАНСОВЫЙ<br>КОНГРЕСС<br>БАНКА&nbsp;РОССИИ
-                    h2.desktop 6-7 июля 2023<br>Санкт-петербург
-            .mobileMenuCloseBtn(onclick="closeMobileMenu()")
-                include svg/closeBtn.svg
-            .mobileMenuItems
-                include elems/mainMenuItems
-            .mobileMenuSiteItems
-                include elems/menuItems
-            .mobileMenuLangMenu
-                .mobileMenuLangMenuWr.flex.center
-                    include elems/menuLangItems
+    include elems/mobileMenu
 
 
 
 
 
+    script.
+        let apiUrl = !{JSON.stringify(apiUrl)}
     script(src="/static/javascripts/utils.js")
     script(src="/static/javascripts/mainScript.js")

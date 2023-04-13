@@ -8,7 +8,7 @@ export default {
     "database": "ifc2023"
   },
   uloadPath: "public/uploads/",
-
+  apiUrl:"http://localhost:3003",
 "sha256Secret": "Blddgfnjrn%^hg",
   "smtp": {
     "host": "smtp.mail.ru",

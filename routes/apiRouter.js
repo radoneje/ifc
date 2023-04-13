@@ -145,6 +145,8 @@ router.post('/regUser2', async function (req, res, next) {
             companyid: company.id,
             payCompanyId: (companyPay ? companyPay.id : company.id)
         }, "*").where({id: user.id}))[0]
+        if(!types)
+            types=[{id:1}]
         for (let type of types) {
             await addUserToType(req, user.id, type.id)
         }
@@ -360,6 +362,7 @@ router.get('/loadCompanyByINN/:inn', async function (req, res, next) {
                 "director": cmp.dt["Руководитель"]["Должн"]+": "+ cmp.dt["Руководитель"]["ФИОПолн"],
                 "address": cmp.dt["Адрес"]["АдресПолн"],
                 "phone": cmp.dt["НомТел"],
+                "kpp":cmp.dt["КПП"],
                 "inn": req.params.inn,
             }
         }
@@ -372,6 +375,7 @@ router.get('/loadCompanyByINN/:inn', async function (req, res, next) {
                 "address": cmp.dt["Адрес"]["АдресПолн"],
                 "phone": cmp.dt["E-mail"],
                 "inn": req.params.inn,
+                "kpp": "--",
             }
         }
 

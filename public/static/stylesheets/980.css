@@ -282,7 +282,7 @@
         margin-top: 12px;
     }
     .mobileMenuLangMenu{
-        margin-top: 12px;
+        margin-top: 36px;
         padding-bottom: 36px;
     }
     .LangMenuItem{
@@ -301,6 +301,75 @@
     }
     .LangMenuItem:last-child{
         margin-right: 12px;
+    }
+    .regCheckBox.mobileWrap{
+        flex-wrap: wrap;
+    }
+    .regBox {
+        padding: 0;
+    }
+    .regRowGroup{
+        display: block;
+    }
+    .recLabel, .regRowGroup input{
+        width: 100% !important;
+    }
+    .regCheckBoxText{
+        width: 100%;
+    }
+    .innBtn {
+        width: 100%;
+        box-sizing: border-box;
+        display: block;
+    }
+    .regCheckBoxComment{
+        margin-top: -36px;
+        margin-left: 57px;
+    }
+    .regCheckBox{
+        align-items: flex-start;
+    }
+    #registration{
+        padding-bottom: 56px;
+        padding-top: 46px;
+    }
+    .regBox {
+        margin-top: 0;
+    }
+    #registration .sectionTitle{
+        font-size: 29px;
+    }
+    #registration .partnersDecor {
+        top: 86px;
+    }
+    .regCheckBoxText{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .internalHeadLogo {
+        width: 42px;
+    }
+    .internalHeadH1 {
+        font-size: 18px;
+        line-height: 22px;
+        margin-left: 23px;
+    }
+    .internalHeadLogoWr{
+        left: 24px;
+    }
+    .internalHeadMenu{
+        margin: 0;
+        padding-left: calc(100vw - 304px);
+    }
+    .internalH1Wr{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        color:#ffffff;
+    }
+    .internalHeadLogoWr{
+        display: none;
     }
 
 

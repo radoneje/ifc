@@ -27,4 +27,8 @@
         font-size: 36px;
         line-height: 42px;
     }
+    .regBox {
+        margin-top: 100px;
+        padding: 0 56px;
+    }
 }

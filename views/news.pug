@@ -1,0 +1,17 @@
+extends layout
+
+block head
+    title="Новости"
+block content
+    include elems/internalHead
+    .tower#registration
+        .subTower
+            .partnersDecor
+                include svg/regDecor.svg
+            .sectionTitle Новости
+
+
+    include elems/footer
+    script(src="/static/javascripts/utils.js")
+    script(src="/static/javascripts/mainScript.js")
+

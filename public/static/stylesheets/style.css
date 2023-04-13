@@ -82,11 +82,15 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
+a{
+    text-decoration: none;
+}
+
 
 body {
     line-height: 1;
     font-family: 'Stem', SansSerif;
-    background-image: url('/static/images/0_fon_02.svg');
+    /*background-image: url('/static/images/0_fon_02.svg');*/
 }
 
 ol, ul {
@@ -549,7 +553,319 @@ h2{
     top: 40px;
     cursor: pointer;
 }
+.internalHead{
+    position: relative;
+}
+.internalHeadImage img{
+    width: 100%;
+    height: auto;
+}
+.internalHeadLogo{
+    width: 100px;
+}
+.internalHeadLogo svg{
+    width: 100%;
+    height: auto;
+}
 
+.internalHeadLogoWr{
+    position: absolute;
+    top: 13%;
+    left: 6%;
+    cursor: pointer;
+    z-index: 100;
+}
+.internalHeadH1{
+    color:#FFFFFF;
+    font-size: 36px;
+    line-height: 42px;
+    margin-left: 48px;
+    font-weight: 300;
+    text-transform: uppercase;
+    cursor:pointer;
+}
+.internalHeadText{
+    align-items: flex-start;
+}
+.internalHeadMenu{
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    margin-left:193px;
+}
+.internalHeadMenu .mainMenuItem{
+    padding-top: 0;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 24px;
+    text-transform: uppercase;
+
+}
+#registration{
+    padding-top: 80px;
+    padding-bottom: 120px;
+    position: relative;
+}
+#registration .partnersDecor{
+    top:146px;
+}
+.regBox{
+    margin-top: 100px;
+    padding: 0 207px;
+}
+.regRow{
+    margin-top:26px
+}
+.reg287{
+    width: 287px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    font-size: 21px;
+    line-height: 28px;
+    /* identical to box height, or 133% */
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #E39A3F;
+    padding: 6px 12px;
+}
+#noFoto{
+    width: 100%;
+}
+.reqPhoto{
+    height: 358.75px;
+    cursor: pointer;
+    text-align: center;
+    padding: 1px;
+}
+.reqPhoto img{
+    width: 100%;
+}
+.reqInput{
+    width: calc(100% - 287px);
+    font-size: 21px;
+    box-sizing: border-box;
+    padding: 7px 12px;
+    border: 1px solid #E39A3F;
+
+}
+.regCheckBox{
+    cursor: pointer;
+}
+.regCheckBoxBox{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    box-sizing: border-box;
+    border: 1px solid #E39A3F;
+}
+.regCheckBoxText{
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 26px;
+
+    color: #878787;
+    margin-left: 12px;
+    text-transform: uppercase;
+}
+.regCheckBox.active .regCheckBoxBox:after{
+    content: '';
+    position: absolute;
+    top:6px;
+    left: 6px;
+    bottom: 6px;
+    right: 6px;
+    background-color: #E39A3F;
+}
+.regCheckBox.green.active .regCheckBoxBox:after{
+    background-color: #4D8955;
+}
+.regCheckBox.active .regCheckBoxText{
+    color:#4A4A49;
+}
+.regRowGroup.readonly .recLabel{
+    background: #878787;
+    color: #FFFFFF;
+}
+.gray{
+    color:#878787;
+}
+.regBox .menuItem{
+    cursor: inherit;
+
+}
+.regBox .menuItemText{
+    font-weight: 500;
+    color:#4A4A49;
+}
+.regSubmit{
+    background: #BB3E3F;
+    padding:  18px 56px;
+    cursor: pointer;
+    color: white;
+    text-transform: uppercase;
+    width: max-content;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 32px;
+}
+.regRow.error .reqInput{
+   background-color:  #eeb3ba4d
+}
+.regRow{
+    position: relative;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+.regCheckBox .regCheckBoxBox svg{
+    width: calc(100%);
+    padding: 4px;
+    box-sizing: border-box;
+    height: auto;
+}
+.regRow.error{
+    position:relative;
+}
+.regRow.error:after, .reqRowErrorMessage{
+    position: absolute;
+    bottom: -14px;
+    left: 10px;
+    content: "Поле должно быть заполнено";
+    color: #EEB3BA;
+    font-size: 12px;
+}
+.reqRowErrorMessage{
+
+    left: 10px;
+    background: white;
+    z-index: 100;
+}
+.regRow.divaider{
+    border-bottom: 1px solid #E39A3F;
+}
+.regRow.topdivaider{
+
+    border-top: 1px solid #E39A3F;
+     margin-bottom: 50px;
+}
+.innBtn, .btn{
+    color:white;
+    background-color: #BB3E3F;
+     padding: 7px 20px;;
+    cursor: pointer;
+    width: 248px;
+    text-align: center;
+    display: inline-block;
+    border-top: 1px solid #E39A3F;
+    font-weight: 500;
+    font-size: 21px;
+    text-transform: uppercase;
+}
+.fullScreenWr, .fullScreenPhotoEditor{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #00000023;
+    left: 0;
+    top: 0;
+    backdrop-filter: blur(10px);
+    --webkit-backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+.fullScreenPhotoEditor{
+    z-index: 2000;
+}
+.fullScreenBox{
+    box-sizing: border-box;
+    background: white;
+    padding: 24px;
+    width: min(100%, 1100px);
+    position: relative;
+}
+.fullScreencontent{
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
+}
+.fullScreenCloseNotSave{
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background: #878787;
+    border-radius: 50%;
+    color:white;
+}
+.pUserPhoto{
+    width: 240px;
+    background-color: #878787;
+    border-radius: 8px;
+}
+.photoLoader{
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 24px;
+}
+.photoLoader svg circle, .photoLoader svg line{
+    fill:#FFFFFF;
+}
+.errorPhoto{
+    border:8px solid #EEB3BA;
+}
+.photoEditorImageBox{
+    width: 300px;
+    /*max-height: CALC(100vh - 300px);*/
+    height: calc((300px / 4) * 5);
+}
+.regRow.checkBox .reqRowErrorMessage{
+    left: 52px;
+    top: 32px;
+}
+.regCheckBox.success .regCheckBoxBox{
+    border-color: #4D8955;
+}
+.regSuccess .regSubmit{
+    margin-left: 30px;
+}
+.regRowGroup.readonly input{
+    border-color: #878787;
+}
+.opacity0{
+    opacity: 0;
+}
+.opacity100{
+    opacity: 1;
+}
+.regCheckBoxComment{
+    margin-left: 24px;
+    color: #878787;
+    font-size: 18px;
+}
+#noFoto svg{
+    width: 33%;
+    margin-top: 32px;
+    height: auto;
+}
+.regSubmit svg{
+    width: 2em;
+}
 
 
 
