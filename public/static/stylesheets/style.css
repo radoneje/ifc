@@ -633,12 +633,16 @@ h2{
 }
 #noFoto{
     width: 100%;
+
 }
 .reqPhoto{
     height: 358.75px;
     cursor: pointer;
     text-align: center;
     padding: 1px;
+    background-image: url('/static/images/fotobg.svg');
+    position:relative;
+    background-size: cover;
 }
 .reqPhoto img{
     width: 100%;
@@ -858,10 +862,17 @@ input[type=number] {
     color: #878787;
     font-size: 18px;
 }
-#noFoto svg{
+ svg{
     width: 33%;
     margin-top: 32px;
     height: auto;
+}
+#noFoto{
+    position: absolute;
+    width: 100%;
+    bottom: 12%;
+    left: 0;
+    text-align: center;
 }
 .regSubmit svg{
     width: 2em;
