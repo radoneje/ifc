@@ -371,6 +371,9 @@
     .internalHeadLogoWr{
         display: none;
     }
+    .reqInput{
+        margin-top: -2px;
+    }
 
 
 
