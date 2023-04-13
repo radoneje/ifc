@@ -862,11 +862,11 @@ input[type=number] {
     color: #878787;
     font-size: 18px;
 }
- svg{
+/* svg{
     width: 33%;
     margin-top: 32px;
     height: auto;
-}
+}*/
 #noFoto{
     position: absolute;
     width: 100%;
