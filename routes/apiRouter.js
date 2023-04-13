@@ -19,8 +19,8 @@ const __dirname = path.dirname(__filename);
 
 /* GET home page. */
 router.get('/', async function (req, res, next) {
-
-    res.json({})
+    let u=await req.knex("t_users")
+    res.json(u)
 });
 router.post('/uploadFile', upload.single('file'), cors(), async function (req, res, next) {
 
