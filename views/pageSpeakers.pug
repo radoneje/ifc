@@ -14,7 +14,7 @@ block content
 
             .spkWr
                 each spk in speakers
-                    .oSpkItem(id="news"+spk.id onclick="showSpeaker("+spk.id+")")
+                    .oSpkItem(id="news"+spk.id onclick="showSpeaker("+spk.id+", '"+lang+"')")
                         img.oSpkItemImage(src=spk.photoid? ("https://ifcongress.ru/static/image/small/"+spk.photoid): "/static/images/nouser.png" width="150" height="150" loading="lazy")
                         .spkNameWr
                             .spkName #{spk["i"+lang]}
@@ -32,7 +32,7 @@ block content
 
     include elems/footer
     include elems/mobileMenu
-    script let lang=!{JSON.stringify(lang)}
+
     script(src="/static/javascripts/utils.js")
     script(src="/static/javascripts/mainScript.js")
 
