@@ -1,8 +1,10 @@
-.fullScreenWr
-    .fullScreenLayer
-        .fullScreenBack
-        .fullScreenFront
-                div !{spk["i"+lang]}
-                div !{JSON.stringify(spk)}
-                div !{JSON.stringify(lang)}
-        .fullScreenCloseNotSave flex center
+.pSpkHead.flex.center
+    .pSpkPhotoWR
+        .pSpkBg
+        .pSpkPhoto
+    .pSpkNameWR
+        .pSpkNameBox
+            .pSpkName #{spk["i"+lang]}
+            .pSpkName #{spk["f"+lang]}
+            .pSpkCompany  #{spk["company"+lang]}
+

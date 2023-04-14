@@ -1266,26 +1266,25 @@ input[type=number] {
     color: #878787;
 }
 
-.fullScreenLayer {
-    box-sizing: border-box;
-   /* */
-    width: min(100%, 1100px);
+.pSpkHead{}
+.pSpkPhotoWR{
+    width: 251px;
     position: relative;
 }
-.fullScreenBack{
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
+.pSpkNameWR{
+    width: calc(100% - 251px );
 }
-.fullScreenFront {
+.pSpkBg{
     position: absolute;
-    width: 100%;
     left: 0;
-    top: 0;
-    background: white;
-    padding: 24px;
+    top:0
 }
+.pSpkPhoto{
+    position: absolute;
+    left: 0;
+    top:0
+}
+
 
 
 
