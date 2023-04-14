@@ -246,7 +246,7 @@ const showSpeaker=async (id, lang)=>{
         elem.style.overflowY="inherit"
         elem.style.overflowX="visible"
 }
-const clickMenuItem=(elemSelector, redirectPage)=>{
+const clickMenuItem=(elemSelector, redirectPage, lang)=>{
     let elem=document.querySelector(elemSelector);
     if(elem)
     {
@@ -254,7 +254,9 @@ const clickMenuItem=(elemSelector, redirectPage)=>{
         elem.scrollIntoView({behavior:'smooth'})
     }
     else {
-        document.location.href=redirectPage+"/"+lang
+        if(lang)
+            redirectPage+="/"+lang
+        document.location.href=redirectPage
     }
 }
 
