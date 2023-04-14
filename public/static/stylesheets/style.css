@@ -984,6 +984,15 @@ input[type=number] {
     /* identical to box height */
     color: #878787;
 }
+.newsHeadPhoto{
+    width: 258px;
+    margin-left: 34px;
+    position: relative;
+}
+.newsHeadPhoto img{
+    width: 100%;
+    height: auto;
+}
 
 
 

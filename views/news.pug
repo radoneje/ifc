@@ -19,7 +19,7 @@ block content
                         .newsBodyRow.flex.left
                             if n.photoid
                                 .newsHeadPhoto
-                                    img(src="https://ifcongress.ru/static/image/middle/"+n.photoid)
+                                    img(src="https://ifcongress.ru/static/image/middle/"+n.photoid loading="lazy")
                             .newsBody
                                 .newsBodyText #{n.text}
 
