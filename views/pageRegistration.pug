@@ -231,20 +231,20 @@ block content
                 .regRow &nbsp;
 
                 .regRow.checkBox
-                    .regCheckBox.green.flex.left( v-bind:class="{active:user.isPersonalAgreement}")
+                    .regCheckBox.green.flex.left(v-on:click="user.isPersonalAgreement=!user.isPersonalAgreement" v-bind:class="{active:user.isPersonalAgreement}")
                         div
                             .regCheckBoxBox
                         div
                             .regCheckBoxText( ) ПРИНИМАЮ ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ
-                                a.gray(href="#")  (посмотреть)
+                                a.gray  (посмотреть)
                     .reqRowErrorMessage(v-if="isPersonalAgreementError && !user.isPersonalAgreement") Cоглашение не принято
                 .regRow.checkBox
-                    .regCheckBox.green.flex.left( v-bind:class="{active:user.isTerms}")
+                    .regCheckBox.green.flex.left(v-on:click="user.isTerms=!user.isTerms" v-bind:class="{active:user.isTerms}")
                         div
                             .regCheckBoxBox
                         div
                             .regCheckBoxText СОГЛАШАЮСЬ НА ОБРАБОТКУ ПЕРСОНАЛЬНЫХ ДАННЫХ
-                                a.gray(href="#")  (посмотреть)
+                                a.gray  (посмотреть)
                     .reqRowErrorMessage(v-if="isTermsError && !user.isTerms") Cоглашение не принято
 
                 .regRow.desktop &nbsp;
