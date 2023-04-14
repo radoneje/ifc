@@ -481,9 +481,7 @@
     .newsDecor2 {
         bottom: -36px;
     }
-    .oSpkItem {
-        width: 50%;
-    }
+
     .oNewsDecor{
         width: 30%;
     }
@@ -494,6 +492,10 @@
     .spkCompamy{
         font-size: 18px;
         line-height: 22px;
+    }
+    .oSpkItem {
+        width: 50%;
+        padding: 24px 8px;
     }
 
 
