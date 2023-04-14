@@ -131,6 +131,7 @@ const getPhoto = async (aspectRatio=4/5) => {
                     zoomable: false,
                 });
                 photoSaveBtn.onclick = () => {
+                    alert(1);
                     cropper.getCroppedCanvas().toBlob(async (blob) => {
                         let formData = new FormData()
                         formData.append('file', blob, 'userPhoto.png');
