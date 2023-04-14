@@ -33,5 +33,9 @@
     }
     .spkWr, .newsWr {
         padding: 0 0px;
+        padding-top: 56px;
+    }
+    .oSpkItem {
+        width: 25%;
     }
 }
