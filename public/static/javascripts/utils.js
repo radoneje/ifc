@@ -125,7 +125,7 @@ const getPhoto = async (aspectRatio=4/5) => {
                 let image = new Image();
                 image.src = fr.result;
                 image.onload=()=>{
-                    let coof=600/image.width;
+                    let coof=800/image.width;
                     let canvas = document.createElement('canvas');
                     canvas.width = coof*image.width;
                     canvas.height = coof*image.height;

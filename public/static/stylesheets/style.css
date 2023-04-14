@@ -697,7 +697,7 @@ h2{
     height: 4px;
     width: 0%;
     background-color: #E39A3F;
-    animation: photoSaveBtn 40s linear;
+    animation: photoSaveBtn 20s linear;
 }
 .reqPhotoBox2{
     position: relative;
