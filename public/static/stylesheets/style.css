@@ -1047,7 +1047,20 @@ input[type=number] {
     overflow-x: clip;
 }
 .oSpkItemImage{
-
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+.spkWr{
+    padding: 0 141px;
+    padding-top: 56px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.oSpkItem{
+    width: 20px;
+    box-sizing: border-box;
+    padding:calc(95px / 2);
 }
 
 
