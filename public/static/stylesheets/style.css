@@ -1027,11 +1027,11 @@ input[type=number] {
 
 .newsDecor2 {
     position: absolute;
-    bottom: -72px;
+    bottom: -141px;
     right: 0;
-    width: 300px;
+    width: 600px;
 }
-.newsDeco2r svg{
+.newsDecor2 svg{
     width: 100%;
     height: auto;
 }
