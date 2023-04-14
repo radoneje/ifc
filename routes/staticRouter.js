@@ -62,7 +62,7 @@ router.get('/image/:size/:id', async function (req, res, next) {
                 }
             });
 
-        //res.download(r[0].path, r[0].originalname)
+        res.download(r[0].path, r[0].originalname)
     } catch (e) {
         console.error(e)
         res.sendStatus(500)
