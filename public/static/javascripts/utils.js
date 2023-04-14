@@ -242,6 +242,7 @@ var dataURLToBlob = function (dataURL) {
 }
 const showSpeaker=async (id, lang)=>{
     await createPopUp("/popupSpeaker/"+id+"/"+lang,()=>{})
+    document.querySelector(".fullScreencontent").style.overflowY="inherit"
 }
 
 
