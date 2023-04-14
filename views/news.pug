@@ -10,6 +10,20 @@ block content
                 include svg/regDecor.svg
             .sectionTitle Новости
 
+            .newsWr
+                each n in news
+                    .newsItem(id="news"+id)
+                        .newsHeadRow.flex.left
+                            if n.photoid
+                                .newsHeadPhoto
+                                    img(src="https://ifcongress.ru/static/image/middle/"+photoid)
+                                .newsHeadTitleBox
+                                    .newsHeadDate #{n.date}
+                                    .newsHeadTitle #{n.title}
+                        .newsBody
+                            .newsBodyText #{n.text}
+
+
 
     include elems/footer
     script(src="/static/javascripts/utils.js")

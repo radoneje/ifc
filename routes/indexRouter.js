@@ -34,7 +34,10 @@ router.get('/news/:lang?', async function(req, res, next) {
     return res.redirect("/news/ru")
   if(!req.params.lang.match(/ru|en/))
     res.redirect("/news/ru")
-  res.render('news',{lang:req.params.lang, ru:req.params.lang=="ru"} );
+
+  let news=await req.knex("t_news").where({status:2}).orderBy("sort","desc")
+
+  res.render('news',{lang:req.params.lang, ru:req.params.lang=="ru", news} );
 });
 
 router.get('/photoEditor', async function(req, res, next) {
