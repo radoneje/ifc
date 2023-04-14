@@ -1322,14 +1322,15 @@ input[type=number] {
 .pSpkBody{
     margin-top:40px;
 }
-.pSpkBio{
-    margin-top:40px;
+.pSpkBio {
+    margin-top: 24px;
     font-weight: 350;
     font-size: 21px;
     line-height: 25px;
-
     color: #878787;
     white-space: break-spaces;
+    max-height: calc(100vh - 433px);
+    overflow-y: scroll;
 }
 
 
