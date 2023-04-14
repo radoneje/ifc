@@ -1015,12 +1015,12 @@ input[type=number] {
     padding-top: 56px;
 }
 
-.newsDecor{
+.oNewsDecor{
      position: absolute;
      left: 0;
      top:108px
  }
-.newsDecor svg{
+.oNewsDecor svg{
     width: 100%;
     height: auto;
 }
