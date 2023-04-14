@@ -959,6 +959,21 @@ input[type=number] {
     padding: 0 141px;
     padding-top: 56px;
 }
+.newsHeadDate{
+    font-weight: 350;
+    font-size: 21px;
+    line-height: 25px;
+
+    color: #878787;
+}
+.newsHeadTitle{
+    ont-weight: 500;
+    font-size: 21px;
+    line-height: 26px;
+
+    color: #4A4A49;
+    margin-top: 4px;
+}
 
 
 
