@@ -128,9 +128,9 @@ let regApp = new Vue({
         toggle: function (data) {
 
             data = data ? false : true;
-            console.log(data)
+
             setTimeout(() => {
-                this.$forceUpdate();
+                //this.$forceUpdate();
             }, 0)
             return data;
         },
