@@ -1005,6 +1005,10 @@ input[type=number] {
 }
 .newsHeadPhotoBg{
     position: absolute;
+    width: 150%;
+}
+.newsHeadPhotoBg svg{
+    width: 100%;
 }
 #newsPage {
     position: relative;
