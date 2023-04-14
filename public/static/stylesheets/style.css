@@ -1332,6 +1332,10 @@ input[type=number] {
     max-height: calc(100vh - 440px);
     overflow-y: scroll;
 }
+.pSpkBg svg{
+    width: 100%;
+    height: auto;
+}
 
 
 
