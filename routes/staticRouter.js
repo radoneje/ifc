@@ -34,19 +34,14 @@ router.get('/image/:size/:id', async function (req, res, next) {
 
         let orig=/*__dirname+"/../"+*/r[0].path;
         let small=orig.replace("uploads","uploads/"+req.params.size)
-        console.log(orig,small )
+       // console.log(orig,small )
 
         if(fs.existsSync(small)) {
-            console.log("downlod from cache", small)
+            //console.log("downlod from cache", small)
             return res.download(small)
         }
-        console.log("try resize")
-       /* let dir=__dirname+"/../public/uploads/"+req.params.size;
+        //console.log("try resize")
 
-
-        if (!fs.existsSync(dir)){
-            fs.mkdirSync(dir);
-        }*/
         let size=150;
         if(req.params.size=="small")
             size=150
@@ -59,7 +54,7 @@ router.get('/image/:size/:id', async function (req, res, next) {
             .resizeExact(size)
             .write(small, function (err) {
                 if (!err) {
-                    console.log("resize file "+small+ " to size:"+size)
+                    //console.log("resize file "+small+ " to size:"+size)
                     return res.download(small)
                 }
                 else {
