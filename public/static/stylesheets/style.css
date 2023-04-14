@@ -664,10 +664,10 @@ h2{
 .reqPhoto2 .reqRowErrorMessage{
     width: 100%;
     left: 0px;
-    bottom: -8px;
+    bottom: -4px;
 
     text-align: center;
-    color: #4A4A49;
+    color: #FFFFFF;
     background: #EEB3BA;
 
 }
@@ -877,7 +877,7 @@ input[type=number] {
     fill:#FFFFFF;
 }
 .errorPhoto{
-    border:8px solid #EEB3BA;
+    border:4px solid #EEB3BA;
 }
 .photoEditorImageBox{
     width: 300px;

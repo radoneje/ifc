@@ -131,16 +131,21 @@ const getPhoto = async (aspectRatio=4/5) => {
                     zoomable: false,
                 });
                 photoSaveBtn.onclick = () => {
-                    alert(1);
+                    if(photoSaveBtn.classList.contains("loading"))
+                        return;
+                    let txt=photoSaveBtn.innerHTML;
+                    photoSaveBtn.innerHTML="сохраняю.."
+                    photoSaveBtn.classList.add("loading")
                     cropper.getCroppedCanvas().toBlob(async (blob) => {
                         let formData = new FormData()
                         formData.append('file', blob, 'userPhoto.png');
                         alert(1.1);
+
                         let ret = await fetch(frontUrl + "/api/uploadFile", {
                             method: 'post',
                             body: formData,
                         })
-                        alert(2);
+
                         if (ret.ok)
                             responce(await ret.json())
                         else
