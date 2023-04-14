@@ -1214,7 +1214,7 @@ input[type=number] {
 
 .oSpkItemImage {
     margin: 0 26px;
-    width: calc(100% - 26px)
+    width: calc(100% - 26px);
     height: auto;
     border-radius: 50%;
 }
