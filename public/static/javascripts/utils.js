@@ -246,7 +246,7 @@ const showSpeaker=async (id, lang)=>{
         elem.style.overflowY="inherit"
         elem.style.overflowX="visible"
 }
-const clickMenuItem=(elemSelector, redirectPage, lang)=>{
+const clickMenuItem=(elemSelector, redirectPage, lang=null)=>{
     let elem=document.querySelector(elemSelector);
     if(elem)
     {
