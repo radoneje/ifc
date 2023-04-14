@@ -134,6 +134,7 @@ const getPhoto = async (aspectRatio=4/5) => {
                     if(photoSaveBtn.classList.contains("loading"))
                         return;
                     let txt=photoSaveBtn.innerHTML;
+                    alert("1.1"+txt);
                     photoSaveBtn.innerHTML="сохраняю.."
                     photoSaveBtn.classList.add("loading")
                     cropper.getCroppedCanvas().toBlob(async (blob) => {
