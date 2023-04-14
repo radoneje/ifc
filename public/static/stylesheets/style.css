@@ -115,7 +115,11 @@ table {
     border-spacing: 0;
 }
 
+input {
+    border-radius: 0;
+    -webkit-appearance: none;
 }
+
 
 .mt {
     margin-top: 4px
