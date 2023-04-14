@@ -101,8 +101,11 @@ const getPhoto = async (aspectRatio=4/5) => {
         inp.type = "file"
         inp.accept = "image/*"
         //inp.setAttribute("capture","capture")
+       // inp.setAttribute("change","getFile()")
         inp.click()
-        inp.onchange = async () => {
+        inp.onchange = getFile;
+            async function getFile(e)  {
+                alert(e.target.files)
             let elem = document.createElement("div")
             elem.classList.add("fullScreenPhotoEditor")
             let res = await fetch("/photoEditor")
