@@ -1035,6 +1035,10 @@ input[type=number] {
     width: 100%;
     height: auto;
 }
+.subTower {
+
+    overflow-x: clip;
+}
 
 
 
