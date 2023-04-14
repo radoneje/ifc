@@ -1286,6 +1286,29 @@ input[type=number] {
     width: 100%;
     box-sizing: border-box;
 }
+.pSpkPhoto img{
+    width: 100%;
+    height: auto;
+}
+.pSpkName{
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+    /* or 117% */
+
+    text-transform: uppercase;
+
+    color: #4A4A49;
+}
+.pSpkCompany{
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 30px;
+    margin-top:4px;
+    color: #878787;
+
+
+}
 
 
 
