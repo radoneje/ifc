@@ -1,7 +1,7 @@
 extends layout
 
 block head
-    title="Новости"
+    title="СПИКЕРЫ"
 block content
     include elems/internalHead
     .tower#newsPage
@@ -10,7 +10,7 @@ block content
                 include svg/newsDecor.svg
             .newsDecor2
                 include svg/newsDecor2.svg
-            .sectionTitle Новости
+            .sectionTitle СПИКЕРЫ
 
             .spkWr
                 each spk in speakers
@@ -19,6 +19,7 @@ block content
                         .spkNameWr
                             .spkName #{spk["i"+lang]}
                             .spkName #{spk["f"+lang]}
+                        .spkCompamy #{spk["company"+lang]}
                 each spk in speakers
                     .oSpkItem(id="news" + spk.id)
                         img.oSpkItemImage(src=spk.photoid ? ("https://ifcongress.ru/static/image/small/" + spk.photoid) : "/static/images/nouser.png")
