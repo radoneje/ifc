@@ -16,10 +16,10 @@ block content
                         .newsHeadRow.flex.left
                             if n.photoid
                                 .newsHeadPhoto
-                                    img(src="https://ifcongress.ru/static/image/middle/"+photoid)
-                                .newsHeadTitleBox
-                                    .newsHeadDate #{n.date}
-                                    .newsHeadTitle #{n.title}
+                                    img(src="https://ifcongress.ru/static/image/middle/"+n.photoid)
+                            .newsHeadTitleBox
+                                .newsHeadDate #{n.date}
+                                .newsHeadTitle #{n.title}
                         .newsBody
                             .newsBodyText #{n.text}
 
