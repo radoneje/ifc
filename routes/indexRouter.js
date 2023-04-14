@@ -66,12 +66,12 @@ router.get('/speakers/:lang?', async function(req, res, next) {
  }
 });
 
-router.get('/popupSpeaker/:id', async function(req, res, next) {
+router.get('/popupSpeaker/:id/:lang', async function(req, res, next) {
   try {
     let speakers = await req.knex("t_pgm_spk").where({id:req.params.id})
     if(speakers.length==0)
       res.sendStatus(404);
-    res.render("popupSpeaker",{spk:speakers[0]})
+    res.render("popupSpeaker",{spk:speakers[0],lang:req.params.lang })
   }
   catch (e) {
     console.warn(e)

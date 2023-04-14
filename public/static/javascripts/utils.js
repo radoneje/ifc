@@ -240,8 +240,8 @@ var dataURLToBlob = function (dataURL) {
 
     return new Blob([uInt8Array], {type: contentType});
 }
-const showSpeaker=async (id)=>{
-    await createPopUp("/popupSpeaker/"+id,()=>{})
+const showSpeaker=async (id, lang)=>{
+    await createPopUp("/popupSpeaker/"+id+"/"+lang,()=>{})
 }
 
 
