@@ -1022,9 +1022,9 @@ input[type=number] {
     cursor: pointer;
     width: 40px;
     height: 40px;
-    background: #878787;
+    background: #E39A3F;
     border-radius: 50%;
-    color: white;
+    color: #BB3E3F;
 }
 
 .pUserPhoto {
