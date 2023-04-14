@@ -11,7 +11,7 @@ router.get('/demo/:lang?', async function(req, res, next) {
     res.redirect("/demo/ru")
 
 
-  let news=await req.knex("t_news").where({status:2}).orderBy("sort","desc")
+  let news=await req.knex("t_news").where({status:2}).orderBy("sort","desc").limit(4)
   res.render('demo',{lang:req.params.lang, ru:req.params.lang=="ru", apiUrl:config.apiUrl, news} );
 });
 router.get('/registration/:lang?', async function(req, res, next) {
