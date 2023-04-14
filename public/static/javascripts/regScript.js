@@ -26,7 +26,13 @@ let regApp = new Vue({
         uploadPhoto: async function () {
 
             this.photoIsLoading = true;
-            this.user.photoid = await getPhoto()
+            try {
+                this.user.photoid = await getPhoto();
+
+            }
+            catch (e) {
+                aler(e.message);
+            }
             this.$forceUpdate();
             this.photoError = false;
 
