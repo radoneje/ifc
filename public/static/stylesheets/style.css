@@ -1280,8 +1280,9 @@ input[type=number] {
 }
 .pSpkBg{
     position: absolute;
-    left: 0;
-    top:0
+    left: -118px;
+    bottom: -20px;
+    width: 250%;
 }
 .pSpkPhoto{
     position: absolute;
@@ -1336,6 +1337,7 @@ input[type=number] {
     width: 100%;
     height: auto;
 }
+
 
 
 
