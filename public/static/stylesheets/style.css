@@ -674,7 +674,7 @@ h2{
 #photoSaveBtn{
     position: relative;
 }
-#photoSaveBtn:after{
+#photoSaveBtn.loading:after{
     content: '';
     position: absolute;
     left: 4px;
@@ -689,15 +689,15 @@ h2{
     0% {width: 0%}
     100%{width: 100%}
 }
-#photoSaveBtn:before{
+#photoSaveBtn.loading:before{
     content: '';
     position: absolute;
     left: 0;
     bottom: 0;
-    height: 2px;
+    height: 4px;
     width: 0%;
     background-color: #E39A3F;
-    animation: photoSaveBtn 20s linear;
+    animation: photoSaveBtn 40s linear;
 }
 .reqPhotoBox2{
     position: relative;
