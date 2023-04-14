@@ -20,13 +20,23 @@ block content
                     else
                         .menuItemText Участник
                 .regRow
-                    .reqPhoto.reg287(v-on:click="uploadPhoto()" v-bind:class="{errorPhoto:photoError}")
-                        img(v-if="user.photoid" :src="'/static/image/middle/'+user.photoid")
-                        #noFoto(v-else)
-                            div Загрузить фото<br>для аккредитации
+                    .reqPhoto2.reg287(v-on:click="uploadPhoto()" v-bind:class="{errorPhoto:photoError}")
+                        .reqPhotoBox2
+                            .reqPhotoBox2Photo
+                                img(v-if="user.photoid" :src="'/static/image/middle/'+user.photoid")
+                                #noFoto(v-else)
+                                    div Загрузить фото<br>для аккредитации
+                        .reqRowErrorMessage(v-if="photoError") Фотография должна быть загружена
 
-                            //.photoLoader(v-if="photoIsLoading")
-                                    include svg/loader.svg
+                //.regRow
+                    .reqPhoto.reg287(v-on:click="uploadPhoto()" v-bind:class="{errorPhoto:photoError}")
+                        .reqPhotoBox
+                            img(v-if="user.photoid" :src="'/static/image/middle/'+user.photoid")
+                            #noFoto(v-else)
+                                div Загрузить фото<br>для аккредитации
+
+                                //.photoLoader(v-if="photoIsLoading")
+                                        include svg/loader.svg
                     .reqRowErrorMessage(v-if="photoError") Фотография должна быть загружена
 
                 .regRow(v-bind:class="{error:errors.f}")
@@ -94,9 +104,9 @@ block content
                     .menuItem.flex.center.left
                         .menuItemBox
                         if typeid==4
-                            .menuItemText СМИ, которое вы представляете
+                            .menuItemText СМИ, которое вы&nbsp;представляете
                         else
-                            .menuItemText Компания, которую вы представляете
+                            .menuItemText Компания, которую вы&nbsp;представляете
                 .regRow(v-bind:class="{error:errors.company.inn}")
                     .regRowGroup.flex.left()
                         .recLabel.reg287 ИНН
@@ -104,15 +114,16 @@ block content
                     .reqRowErrorMessage(v-if="innStatus.message") {{innStatus.message}}
 
                     .regCheckBox.green.flex.mobileWrap.left(v-on:click="loadInn('company', innStatus)" v-bind:class="{active:innStatus.state==2,loading:innStatus.state==1}" style="margin-top: 6px;" )
-
                         .regCheckBoxText(style="margin-left:0") <span class="innBtn">Загрузить из ФНС </span>
-                        .regCheckBoxBox.opacity0(v-bind:class="{opacity100:innStatus.state==1}")
-                            div
+                        .regCheckBoxBox.desktop.opacity0(v-bind:class="{opacity100:innStatus.state==1}")
+                            .FNSloader
                                 include svg/loader.svg
                         if typeid==4
                             .regCheckBoxComment Для регистрации издания нажмите на кнопку
                         else
                             .regCheckBoxComment Для регистрации компании нажмите на кнопку
+                        .FNSloader.mobile.opacity0(v-bind:class="{opacity100:innStatus.state==1}")
+                            include svg/loader.svg
 
                 .regRow
                     .regRowGroup.readonly.flex.left

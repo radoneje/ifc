@@ -253,7 +253,7 @@
     .mobileMenuCloseBtn{
         position: absolute;
         right: 16px;
-        top:40px
+        top:48px
     }
     #mobileMenu .mainMenuGroup{
         margin-right: 0px;
@@ -304,6 +304,7 @@
     }
     .regCheckBox.mobileWrap{
         flex-wrap: wrap;
+        position: relative;
     }
     .regBox {
         padding: 0;
@@ -311,8 +312,21 @@
     .regRowGroup{
         display: block;
     }
+    .recLabel{
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .regRow {
+        margin-top: 14px;
+    }
+    .regBox .menuItemText{
+        width: calc(100% - 50px);
+    }
     .recLabel, .regRowGroup input{
         width: 100% !important;
+    }
+    .regRowGroup input{
+        font-size: 18px;
     }
     .regCheckBoxText{
         width: 100%;
@@ -321,11 +335,10 @@
         width: 100%;
         box-sizing: border-box;
         display: block;
+        padding: 12px 4px;
+        padding-bottom: 24px;
     }
-    .regCheckBoxComment{
-        margin-top: -36px;
-        margin-left: 57px;
-    }
+
     .regCheckBox{
         align-items: flex-start;
     }
@@ -337,7 +350,7 @@
         margin-top: 0;
     }
     #registration .sectionTitle{
-        font-size: 29px;
+        font-size: 22px;
     }
     #registration .partnersDecor {
         top: 86px;
@@ -345,6 +358,9 @@
     .regCheckBoxText{
         font-size: 16px;
         line-height: 20px;
+    }
+    .internalHead{
+        margin: -2px 0;
     }
     .internalHeadLogo {
         width: 42px;
@@ -373,6 +389,71 @@
     }
     .reqInput{
         margin-top: -2px;
+    }
+    #noFoto{
+
+        font-size: 14px;
+        bottom: 34px;
+        line-height: 20px;
+
+    }
+    .reqPhoto2 .reqRowErrorMessage{
+        line-height: 16px;
+        padding: 4px 0;
+    }
+    .reqPhoto{
+        width: 50%;
+    }
+    .regSubmit{
+        background: #BB3E3F;
+        padding: 18px 56px;
+        cursor: pointer;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 32px;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    #footer {
+        padding-top: 8px;
+        padding-bottom: 62px;
+    }
+    .footerItem svg{
+        width: 189px;
+        height: auto;
+        margin-bottom: 1px;
+    }
+    .footerItemRow{
+        font-size: 12px;
+        line-height: 18px;
+        margin-top: 7px;
+    }
+    .reqPhoto2.reg287 {
+        width: 50%;
+    }
+    .regCheckBoxComment {
+        margin-top: -20px;
+
+        text-transform: uppercase;
+        font-size: 12px;
+        margin-left: 0;
+        text-align: center;
+        width: 100%;
+        color: white;
+    }
+    .FNSloader{
+        width: 30px;
+        height: 30px;
+        box-sizing: border-box;
+        /* padding: 4px; */
+        /* border: 1px solid green; */
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        z-index: 100;
     }
 
 

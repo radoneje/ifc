@@ -46,7 +46,7 @@ let regApp = new Vue({
 
             if (!this.user.photoid) {
                 this.photoError = true;
-                document.querySelector(".reqPhoto").scrollIntoView({
+                document.querySelector(".reqPhoto2").scrollIntoView({
                     behavior: 'smooth'
                 });
                 return;
