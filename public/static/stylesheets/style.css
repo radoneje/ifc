@@ -1188,6 +1188,7 @@ input[type=number] {
     position: absolute;
     left: 0;
     top: 108px
+
 }
 
 .oNewsDecor svg {
@@ -1253,7 +1254,7 @@ input[type=number] {
     /* identical to box height */
 
     text-align: center;
-
+    margin-top: 8px;
     color: #878787;
 }
 

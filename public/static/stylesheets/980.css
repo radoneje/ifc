@@ -484,6 +484,17 @@
     .oSpkItem {
         width: 50%;
     }
+    .oNewsDecor{
+        width: 30%;
+    }
+    .spkNameWr{
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .spkCompamy{
+        font-size: 18px;
+        line-height: 22px;
+    }
 
 
 
