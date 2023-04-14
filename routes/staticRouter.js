@@ -32,7 +32,7 @@ router.get('/image/:size/:id', async function (req, res, next) {
 
         //return res.download(r[0].path, r[0].originalname)
 
-        let orig=__dirname+"/../"+r[0].path;
+        let orig=/*__dirname+"/../"+*/r[0].path;
         let small=orig.replace("uploads","uploads/"+req.params.size)
         console.log(orig,small )
 
