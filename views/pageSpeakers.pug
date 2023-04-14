@@ -14,7 +14,8 @@ block content
 
             .newsWr
                 each spk in speakers
-                    .oNewsItem(id="news"+spk.id)
+                    .oSpkItem(id="news"+spk.id)
+                        img(src=spk.photoid|| "/static/images/nouser.png")
 
 
 
