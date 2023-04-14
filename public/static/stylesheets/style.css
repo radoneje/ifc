@@ -56,7 +56,6 @@
 }
 
 
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -82,7 +81,8 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
-a{
+
+a {
     text-decoration: none;
     color: inherit;
 }
@@ -97,7 +97,8 @@ body {
 ol, ul {
     list-style: none;
 }
-textarea:focus, input:focus, textarea:active, input:active{
+
+textarea:focus, input:focus, textarea:active, input:active {
     outline: none !important;
 }
 
@@ -125,6 +126,7 @@ input {
 .mt {
     margin-top: 4px
 }
+
 .mt-1 {
     margin-top: 16px
 }
@@ -136,27 +138,31 @@ input {
 .mt-3 {
     margin-top: 24px
 }
+
 .mt-4 {
     padding-top: 48px
 }
 
-.tower{
+.tower {
     width: min(1800px, 100%);
     margin: 0 auto;
     background: white;
 }
-#menu{
+
+#menu {
     padding-top: 48px;
 }
-.mainImageWr{
+
+.mainImageWr {
     position: relative;
     width: 100%;
     height: 0;
     padding-bottom: 58.2%;
-    color:#FFF;
+    color: #FFF;
     overflow-y: clip;
 }
-.mainImage{
+
+.mainImage {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -165,19 +171,22 @@ input {
     background-image: url('../images/mainImage.png');
     background-size: contain;
 }
-.mainLogo{
+
+.mainLogo {
     /*position: absolute;*/
-    top:7%;
+    top: 7%;
     left: 7%;
     width: 10%;
 }
-.mainLogo svg{
+
+.mainLogo svg {
     width: 100%;
     height: auto;
 }
-h1{
+
+h1 {
     /*position: absolute;*/
-    top:157px;
+    top: 157px;
     left: 20%;
     font-weight: 300;
     font-size: 48px;
@@ -186,9 +195,10 @@ h1{
     margin-right: 20%;
 
 }
-h2{
-   /* position: absolute;*/
-    top:184px;
+
+h2 {
+    /* position: absolute;*/
+    top: 184px;
     right: 3%;
     font-weight: 300;
     font-size: 48px;
@@ -196,26 +206,32 @@ h2{
     text-transform: uppercase;
     opacity: 0.8;
 }
-.flex{
+
+.flex {
     display: flex;
 }
-.center{
+
+.center {
     justify-content: center;
     align-items: center;
 }
-.left{
+
+.left {
     justify-content: left;
     align-items: center;
 }
-.beetwen{
+
+.beetwen {
     justify-content: space-between;
 }
-.mainTitle{
+
+.mainTitle {
     justify-content: left;
     box-sizing: border-box;
     padding: 52px 56px;
 }
-.mainDecor{
+
+.mainDecor {
     position: absolute;
     bottom: -3px;
     width: 100%;
@@ -223,15 +239,18 @@ h2{
     opacity: .5;
 
 }
-.mainDecor svg{
+
+.mainDecor svg {
     width: 100%;
     height: auto;
 }
-.mainMenuGroup{
+
+.mainMenuGroup {
     margin-right: 60px;
     width: 90%;
 }
-.mainMenuItem{
+
+.mainMenuItem {
     cursor: pointer;
     font-weight: 500;
     font-size: 28px;
@@ -241,82 +260,97 @@ h2{
     padding: 8px 12px;
 
 }
-.mainMenuItem:hover{
-    color:#F1CCA7
+
+.mainMenuItem:hover {
+    color: #F1CCA7
 }
-.h1Wr{
+
+.h1Wr {
     align-items: flex-start;
     width: 100%;
 }
-.mainMenu{
+
+.mainMenu {
     position: absolute;
 
-    bottom:64px;
+    bottom: 64px;
     left: 56px;
     align-items: flex-start;
 }
-.subTower{
-    padding:0 56px
+
+.subTower {
+    padding: 0 56px
 }
-.menuItemBox{
+
+.menuItemBox {
     width: 28px;
-    height:28px;
+    height: 28px;
     background-color: #BB3E3F;
 }
-.menuItemText{
+
+.menuItemText {
     font-weight: 300;
     font-size: 21px;
     line-height: 24px;
     color: #878787;
     margin-left: 24px;
 }
-.menuItem:hover .menuItemText{
+
+.menuItem:hover .menuItemText {
     color: #4A4A49;
 
 }
-.menuItem{
+
+.menuItem {
     cursor: pointer;
     margin-right: 64px;
     text-transform: uppercase;
 }
-#news{
-    padding-top:112px;
+
+#news {
+    padding-top: 112px;
     position: relative;
     padding-bottom: 125px;
 }
-.newsItems{
+
+.newsItems {
     align-items: stretch;
 
 }
-.newsItem{
+
+.newsItem {
     width: calc(20% - 40px);
     background: #F1CCA7;
     padding: 48px 38px;
     padding-bottom: 84px;
     position: relative;
 }
-.newsDate{
+
+.newsDate {
     font-weight: 400;
     font-size: 15px;
     line-height: 17px;
 
     color: #BB3E3F;
 }
-.newsTitle{
+
+.newsTitle {
     font-weight: 500;
     font-size: 21px;
     line-height: 26px;
     /* or 124% */
-    margin-top:2px;
+    margin-top: 2px;
     text-transform: uppercase;
 
     color: #000000;
 }
-.newsDecor{
+
+.newsDecor {
     margin-left: -38px;
-    margin-top:12px;
+    margin-top: 12px;
 }
-.newsText{
+
+.newsText {
     font-weight: 300;
     font-size: 21px;
     line-height: 26px;
@@ -326,7 +360,7 @@ h2{
     color: #878787;
 }
 
-.newsButton{
+.newsButton {
     position: absolute;
     bottom: 28px;
     right: 28px;
@@ -336,26 +370,32 @@ h2{
     height: 40px;
     background-color: #E39A4F;
 }
-.newsButton:hover{
+
+.newsButton:hover {
     background-color: #BB3E3F;
 }
-.newsButton:hover svg path{
+
+.newsButton:hover svg path {
     stroke: #E39A4F;
 }
-.newsBlockDecor{
+
+.newsBlockDecor {
     position: absolute;
     bottom: -3px;
     left: 0;
     right: 0;
 }
-.newsBlockDecor svg{
+
+.newsBlockDecor svg {
     width: 100%;
     height: auto;
 }
-.quotesWr{
+
+.quotesWr {
     background: #BB3E3F;
 }
-.quotesArrow{
+
+.quotesArrow {
     width: 88px;
     height: 88px;
     background: #E39A4F;
@@ -363,36 +403,45 @@ h2{
     padding: 14px 0;
     cursor: pointer;
 }
-.quotesArrow svg{
+
+.quotesArrow svg {
     height: 100%;
     width: auto;
 }
+
 .quotesArrow:hover {
     background: #263378;
 }
-.quotesArrow:hover svg path{
+
+.quotesArrow:hover svg path {
     stroke: #e7929c;
 }
-.quotesArrow.l svg{
+
+.quotesArrow.l svg {
     transform: rotate(180deg);
 }
-.quotesCenter{
+
+.quotesCenter {
     width: calc(100% - (88px * 2));
     padding: 44px;
     box-sizing: border-box;
 }
-.quoteImg{
+
+.quoteImg {
     width: 66.66%;
 }
-.quoteImg img{
+
+.quoteImg img {
     width: 100%;
     height: auto;
 }
-.quoteTextWr{
+
+.quoteTextWr {
     width: 33.33%;
     padding-left: 3%;
 }
-.quoteText{
+
+.quoteText {
     font-weight: 500;
     font-size: 49px;
     line-height: 56px;
@@ -402,44 +451,53 @@ h2{
 
     color: #FFFFFF;
 }
-.quoteText{
+
+.quoteText {
     height: 55%;
 }
-.quoteTextDivaider{
+
+.quoteTextDivaider {
     height: 45%;
 }
 
-.quteBodyBox{
+.quteBodyBox {
     align-items: stretch;
 }
-.quoteText{
+
+.quoteText {
     align-items: flex-end;
 }
-#partners{
-    padding-top:152px;
+
+#partners {
+    padding-top: 152px;
     position: relative;
-    padding-bottom:56px;
+    padding-bottom: 56px;
 }
-.sectionTitle{
+
+.sectionTitle {
     font-weight: 500;
     font-size: 49px;
     line-height: 61px;
     text-transform: uppercase;
     color: #4A4A49;
 }
-.partnersBox{
-    margin-top:102px;
+
+.partnersBox {
+    margin-top: 102px;
 }
-.partnersBox img{
+
+.partnersBox img {
     width: 100%;
     height: auto;
 }
-.partnersDecor{
+
+.partnersDecor {
     position: absolute;
     left: 0;
-    top:60px
+    top: 60px
 }
-#faq{
+
+#faq {
     position: relative;
     padding-top: 112px;
     background: #E39A3F;
@@ -447,26 +505,31 @@ h2{
     padding-top: 40px;
     padding-bottom: 112px;
 }
-#faq .sectionTitle{
+
+#faq .sectionTitle {
     color: #FFFFFF;
 }
-.faqDecor{
+
+.faqDecor {
     position: absolute;
     left: 0;
-    top:106px
+    top: 106px
 }
-.faqItem{
+
+.faqItem {
     width: calc(20% - 40px);
     background: #BB3E3F;
     padding: 48px 38px;
     padding-bottom: 84px;
     position: relative;
 }
-.faqItems{
+
+.faqItems {
     align-items: stretch;
     margin-top: 112px;
 }
-.faqTitle{
+
+.faqTitle {
     font-weight: 500;
     font-size: 21px;
     line-height: 26px;
@@ -474,7 +537,8 @@ h2{
     text-transform: uppercase;
 
 }
-.faqText{
+
+.faqText {
     margin-top: 16px;
     font-weight: 300;
     font-size: 18px;
@@ -483,122 +547,147 @@ h2{
     color: rgba(255, 255, 255, 0.8);
 
 }
+
 .faqText a {
     color: rgba(255, 255, 255, 0.8);
 }
-#faq .menuItemText{
-      color: rgba(255, 255, 255, 0.8);
-  }
-.faqMenuItem{
+
+#faq .menuItemText {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.faqMenuItem {
     cursor: pointer;
 }
 
-.faqBg{
+.faqBg {
     position: absolute;
     bottom: -2px;
     left: 0;
     width: 100%;
 }
-.faqBg svg{
+
+.faqBg svg {
     width: 100%;
     height: auto;
 }
-#footer{
-    padding-top:68px;
+
+#footer {
+    padding-top: 68px;
     padding-bottom: 62px;
 }
-.footerItem{
+
+.footerItem {
     width: 25%;
     min-height: 30px;
 }
-.footerWr{
+
+.footerWr {
     justify-content: space-around;
 }
-.centerfooterItem{
+
+.centerfooterItem {
     text-align: center;
 }
-.footerItemRow{
+
+.footerItemRow {
     font-weight: 300;
     font-size: 16px;
     line-height: 18px;
-    margin-top:21px;
+    margin-top: 21px;
     color: #878787;
 }
-.footerItemRow a{
+
+.footerItemRow a {
     color: #878787;
     text-decoration: none;
 }
-.footerItemRowLink{
+
+.footerItemRowLink {
     cursor: pointer;
-    color:#BB3E3F
+    color: #BB3E3F
 }
-.menuItemText:hover{
-    color:#878787;
+
+.menuItemText:hover {
+    color: #878787;
 
 }
-.faqItem .newsButton:hover{
+
+.faqItem .newsButton:hover {
     background-color: #263378;
 }
-.faqItem .newsButton:hover svg path{
+
+.faqItem .newsButton:hover svg path {
     stroke: #e7929c;
 }
-.faqMenuItem:hover .menuItemText{
-    color:#263378 !important;
+
+.faqMenuItem:hover .menuItemText {
+    color: #263378 !important;
 }
 
-.desktop{
+.desktop {
     display: block;
 }
-.mobile{
+
+.mobile {
     display: none;
 }
-.mobileMenuBtn{
+
+.mobileMenuBtn {
     position: absolute;
     right: 16px;
     top: 40px;
     cursor: pointer;
 }
-.internalHead{
+
+.internalHead {
     position: relative;
 }
-.internalHeadImage img{
-    width: 100%;
-    height: auto;
-}
-.internalHeadLogo{
-    width: 100px;
-}
-.internalHeadLogo svg{
+
+.internalHeadImage img {
     width: 100%;
     height: auto;
 }
 
-.internalHeadLogoWr{
+.internalHeadLogo {
+    width: 100px;
+}
+
+.internalHeadLogo svg {
+    width: 100%;
+    height: auto;
+}
+
+.internalHeadLogoWr {
     position: absolute;
     top: 13%;
     left: 6%;
     cursor: pointer;
     z-index: 100;
 }
-.internalHeadH1{
-    color:#FFFFFF;
+
+.internalHeadH1 {
+    color: #FFFFFF;
     font-size: 36px;
     line-height: 42px;
     margin-left: 48px;
     font-weight: 300;
     text-transform: uppercase;
-    cursor:pointer;
+    cursor: pointer;
 }
-.internalHeadText{
+
+.internalHeadText {
     align-items: flex-start;
 }
-.internalHeadMenu{
+
+.internalHeadMenu {
     display: flex;
     justify-content: left;
     align-items: flex-start;
-    margin-left:193px;
+    margin-left: 193px;
 }
-.internalHeadMenu .mainMenuItem{
+
+.internalHeadMenu .mainMenuItem {
     padding-top: 0;
     color: #FFFFFF;
     font-weight: 500;
@@ -607,22 +696,27 @@ h2{
     text-transform: uppercase;
 
 }
-#registration{
+
+#registration {
     padding-top: 80px;
     padding-bottom: 120px;
     position: relative;
 }
-#registration .partnersDecor{
-    top:146px;
+
+#registration .partnersDecor {
+    top: 146px;
 }
-.regBox{
+
+.regBox {
     margin-top: 100px;
     padding: 0 207px;
 }
-.regRow{
-    margin-top:26px
+
+.regRow {
+    margin-top: 26px
 }
-.reg287{
+
+.reg287 {
     width: 287px;
     box-sizing: border-box;
     display: flex;
@@ -636,33 +730,38 @@ h2{
     background-color: #E39A3F;
     padding: 6px 12px;
 }
-#noFoto{
+
+#noFoto {
     width: 100%;
 
 }
-.reqPhoto{
+
+.reqPhoto {
     height: 358.75px;
     cursor: pointer;
     text-align: center;
     padding: 1px;
     background-image: url('/static/images/fotobg.svg');
-    position:relative;
+    position: relative;
     background-size: cover;
     position: relative;
     height: 0;
     padding-bottom: 125%;
 
 }
-.reqPhotoBox{
+
+.reqPhotoBox {
     position: absolute;
     width: 100%;
     height: 100%;
 }
-.reqPhoto2.reg287{
+
+.reqPhoto2.reg287 {
     padding: 0;
     position: relative;
 }
-.reqPhoto2 .reqRowErrorMessage{
+
+.reqPhoto2 .reqRowErrorMessage {
     width: 100%;
     left: 0px;
     bottom: -4px;
@@ -672,10 +771,12 @@ h2{
     background: #EEB3BA;
 
 }
-#photoSaveBtn{
+
+#photoSaveBtn {
     position: relative;
 }
-#photoSaveBtn.loading:after{
+
+#photoSaveBtn.loading:after {
     content: '';
     position: absolute;
     left: 4px;
@@ -686,11 +787,17 @@ h2{
     background-size: contain;
     background-image: url('/static/images/loader.svg');
 }
+
 @keyframes photoSaveBtn {
-    0% {width: 0%}
-    100%{width: 100%}
+    0% {
+        width: 0%
+    }
+    100% {
+        width: 100%
+    }
 }
-#photoSaveBtn.loading:before{
+
+#photoSaveBtn.loading:before {
     content: '';
     position: absolute;
     left: 0;
@@ -700,13 +807,15 @@ h2{
     background-color: #E39A3F;
     animation: photoSaveBtn 20s linear;
 }
-.reqPhotoBox2{
+
+.reqPhotoBox2 {
     position: relative;
     padding-bottom: 125%;
     height: 0;
     width: 100%;
 }
-.reqPhotoBox2Photo{
+
+.reqPhotoBox2Photo {
     position: absolute;
     top: 0;
     left: 0;
@@ -715,13 +824,15 @@ h2{
     background-color: #E39A3F;
     background-image: url('/static/images/fotobg.svg');
 }
-.reqPhoto img, .reqPhotoBox2Photo img{
+
+.reqPhoto img, .reqPhotoBox2Photo img {
     width: 100%;
     height: auto;
     box-sizing: border-box;
     border: 1px solid #E39A3F;
 }
-.reqInput{
+
+.reqInput {
     width: calc(100% - 287px);
     font-size: 21px;
     box-sizing: border-box;
@@ -729,17 +840,20 @@ h2{
     border: 1px solid #E39A3F;
 
 }
-.regCheckBox{
+
+.regCheckBox {
     cursor: pointer;
 }
-.regCheckBoxBox{
+
+.regCheckBoxBox {
     width: 40px;
     height: 40px;
     position: relative;
     box-sizing: border-box;
     border: 1px solid #E39A3F;
 }
-.regCheckBoxText{
+
+.regCheckBoxText {
     font-weight: 500;
     font-size: 21px;
     line-height: 26px;
@@ -748,39 +862,47 @@ h2{
     margin-left: 12px;
     text-transform: uppercase;
 }
-.regCheckBox.active .regCheckBoxBox:after{
+
+.regCheckBox.active .regCheckBoxBox:after {
     content: '';
     position: absolute;
-    top:6px;
+    top: 6px;
     left: 6px;
     bottom: 6px;
     right: 6px;
     background-color: #E39A3F;
 }
-.regCheckBox.green.active .regCheckBoxBox:after{
+
+.regCheckBox.green.active .regCheckBoxBox:after {
     background-color: #4D8955;
 }
-.regCheckBox.active .regCheckBoxText{
-    color:#4A4A49;
+
+.regCheckBox.active .regCheckBoxText {
+    color: #4A4A49;
 }
-.regRowGroup.readonly .recLabel{
+
+.regRowGroup.readonly .recLabel {
     background: #878787;
     color: #FFFFFF;
 }
-.gray{
-    color:#878787;
+
+.gray {
+    color: #878787;
 }
-.regBox .menuItem{
+
+.regBox .menuItem {
     cursor: inherit;
 
 }
-.regBox .menuItemText{
+
+.regBox .menuItemText {
     font-weight: 500;
-    color:#4A4A49;
+    color: #4A4A49;
 }
-.regSubmit{
+
+.regSubmit {
     background: #BB3E3F;
-    padding:  18px 56px;
+    padding: 18px 56px;
     cursor: pointer;
     color: white;
     text-transform: uppercase;
@@ -789,10 +911,12 @@ h2{
     font-size: 26px;
     line-height: 32px;
 }
-.regRow.error .reqInput{
-   background-color:  #eeb3ba4d
+
+.regRow.error .reqInput {
+    background-color: #eeb3ba4d
 }
-.regRow{
+
+.regRow {
     position: relative;
 }
 
@@ -805,18 +929,21 @@ input::-webkit-inner-spin-button {
 }
 
 input[type=number] {
-    -moz-appearance:textfield; /* Firefox */
+    -moz-appearance: textfield; /* Firefox */
 }
-.regCheckBox .regCheckBoxBox svg{
+
+.regCheckBox .regCheckBoxBox svg {
     width: calc(100%);
     padding: 4px;
     box-sizing: border-box;
     height: auto;
 }
-.regRow.error{
-    position:relative;
+
+.regRow.error {
+    position: relative;
 }
-.regRow.error:after, .reqRowErrorMessage{
+
+.regRow.error:after, .reqRowErrorMessage {
     position: absolute;
     bottom: -14px;
     left: 10px;
@@ -824,24 +951,28 @@ input[type=number] {
     color: #EEB3BA;
     font-size: 12px;
 }
-.reqRowErrorMessage{
+
+.reqRowErrorMessage {
 
     left: 10px;
     background: white;
     z-index: 100;
 }
-.regRow.divaider{
+
+.regRow.divaider {
     border-bottom: 1px solid #E39A3F;
 }
-.regRow.topdivaider{
+
+.regRow.topdivaider {
 
     border-top: 1px solid #E39A3F;
-     margin-bottom: 50px;
+    margin-bottom: 50px;
 }
-.innBtn, .btn{
-    color:white;
+
+.innBtn, .btn {
+    color: white;
     background-color: #BB3E3F;
-     padding: 7px 20px;;
+    padding: 7px 20px;;
     cursor: pointer;
     width: 248px;
     text-align: center;
@@ -852,7 +983,7 @@ input[type=number] {
     text-transform: uppercase;
 }
 
-.fullScreenWr, .fullScreenPhotoEditor{
+.fullScreenWr, .fullScreenPhotoEditor {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -866,21 +997,25 @@ input[type=number] {
     justify-content: center;
     z-index: 1000;
 }
-.fullScreenPhotoEditor{
+
+.fullScreenPhotoEditor {
     z-index: 2000;
 }
-.fullScreenBox{
+
+.fullScreenBox {
     box-sizing: border-box;
     background: white;
     padding: 24px;
     width: min(100%, 1100px);
     position: relative;
 }
-.fullScreencontent{
+
+.fullScreencontent {
     max-height: calc(100vh - 48px);
     overflow-y: auto;
 }
-.fullScreenCloseNotSave{
+
+.fullScreenCloseNotSave {
     position: absolute;
     top: 4px;
     right: 4px;
@@ -889,85 +1024,103 @@ input[type=number] {
     height: 40px;
     background: #878787;
     border-radius: 50%;
-    color:white;
+    color: white;
 }
-.pUserPhoto{
+
+.pUserPhoto {
     width: 240px;
     background-color: #878787;
     border-radius: 8px;
 }
-.photoLoader{
+
+.photoLoader {
     width: 40px;
     height: 40px;
     margin: 0 auto;
     margin-top: 24px;
 }
-.photoLoader svg circle, .photoLoader svg line{
-    fill:#FFFFFF;
+
+.photoLoader svg circle, .photoLoader svg line {
+    fill: #FFFFFF;
 }
-.errorPhoto{
-    border:4px solid #EEB3BA;
+
+.errorPhoto {
+    border: 4px solid #EEB3BA;
 }
-.photoEditorImageBox{
+
+.photoEditorImageBox {
     width: 300px;
     /*max-height: CALC(100vh - 300px);*/
     height: calc((300px / 4) * 5);
 }
-.regRow.checkBox .reqRowErrorMessage{
+
+.regRow.checkBox .reqRowErrorMessage {
     left: 52px;
     top: 32px;
 }
-.regCheckBox.success .regCheckBoxBox{
+
+.regCheckBox.success .regCheckBoxBox {
     border-color: #4D8955;
 }
-.regSuccess .regSubmit{
+
+.regSuccess .regSubmit {
     margin-left: 30px;
 }
-.regRowGroup.readonly input{
+
+.regRowGroup.readonly input {
     border-color: #878787;
 }
-.opacity0{
+
+.opacity0 {
     opacity: 0;
 }
-.opacity100{
+
+.opacity100 {
     opacity: 1;
 }
-.regCheckBoxComment{
+
+.regCheckBoxComment {
     margin-left: 24px;
     color: #878787;
     font-size: 18px;
     text-transform: uppercase;
 }
+
 /* svg{
     width: 33%;
     margin-top: 32px;
     height: auto;
 }*/
-#noFoto{
+#noFoto {
     position: absolute;
     width: 100%;
     bottom: 12%;
     left: 0;
     text-align: center;
 }
-.regSubmit svg{
+
+.regSubmit svg {
     width: 2em;
 }
-.oNewsItem{
+
+.oNewsItem {
     padding-top: 56px;
 }
-.newsWr{
+
+.newsWr {
     padding: 0 141px;
     padding-top: 56px;
 }
-.newsHeadDate{
+
+.newsHeadDate {
     font-weight: 350;
     font-size: 21px;
     line-height: 25px;
 
     color: #878787;
 }
-.newsHeadTitle{
+
+.newsHeadTitle {
     font-weight: 500;
     font-size: 21px;
     line-height: 26px;
@@ -976,7 +1129,8 @@ input[type=number] {
     margin-top: 4px;
     position: relative;
 }
-.newsHeadTitle:before{
+
+.newsHeadTitle:before {
     content: '';
     width: 28px;
     height: 28px;
@@ -985,11 +1139,13 @@ input[type=number] {
     top: 0;
     left: -40px;
 }
-.newsBodyRow{
+
+.newsBodyRow {
     margin-top: 14px;
     align-items: flex-start;
 }
-.newsBodyText{
+
+.newsBodyText {
     font-weight: 350;
     font-size: 21px;
     line-height: 25px;
@@ -997,37 +1153,44 @@ input[type=number] {
     color: #878787;
     white-space: pre-wrap;
 }
-.newsHeadPhoto{
+
+.newsHeadPhoto {
     width: 150px;
     margin-right: 34px;
     position: relative;
 }
-.newsHeadPhoto img{
+
+.newsHeadPhoto img {
     width: 100%;
     height: auto;
 }
-.withPhoto{
+
+.withPhoto {
     width: calc(100% - 150px);
 }
-.newsHeadPhotoBg{
+
+.newsHeadPhotoBg {
     position: absolute;
     width: 150%;
 }
-.newsHeadPhotoBg svg{
+
+.newsHeadPhotoBg svg {
     width: 100%;
 }
+
 #newsPage {
     position: relative;
     padding-top: 56px;
     padding-bottom: 56px;
 }
 
-.oNewsDecor{
-     position: absolute;
-     left: 0;
-     top:108px
- }
-.oNewsDecor svg{
+.oNewsDecor {
+    position: absolute;
+    left: 0;
+    top: 108px
+}
+
+.oNewsDecor svg {
     width: 100%;
     height: auto;
 }
@@ -1038,20 +1201,25 @@ input[type=number] {
     right: 0;
     width: 600px;
 }
-.newsDecor2 svg{
+
+.newsDecor2 svg {
     width: 100%;
     height: auto;
 }
+
 .subTower {
 
     overflow-x: clip;
 }
-.oSpkItemImage{
+
+.oSpkItemImage {
+    margin: 0 26px;
     width: 100%;
     height: auto;
     border-radius: 50%;
 }
-.spkWr{
+
+.spkWr {
     padding: 0 141px;
     padding-top: 56px;
     display: flex;
@@ -1059,12 +1227,14 @@ input[type=number] {
     justify-content: center;
     align-items: flex-start;
 }
-.oSpkItem{
+
+.oSpkItem {
     width: 20%;
     box-sizing: border-box;
-    padding:calc(95px / 2);
+    padding: 96px 24px
 }
-.spkNameWr{
+
+.spkNameWr {
     font-weight: 500;
     font-size: 21px;
     line-height: 26px;
@@ -1074,7 +1244,8 @@ input[type=number] {
 
     color: #878787;
 }
-.spkCompamy{
+
+.spkCompamy {
     font-weight: 350;
     font-size: 21px;
     line-height: 25px;
