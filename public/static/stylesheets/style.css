@@ -986,7 +986,7 @@ input[type=number] {
 }
 .newsHeadPhoto{
     width: 258px;
-    margin-left: 34px;
+    margin-right: 34px;
     position: relative;
 }
 .newsHeadPhoto img{
