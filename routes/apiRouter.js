@@ -149,12 +149,13 @@ router.post('/regUser2', async function (req, res, next) {
         for (let type of types) {
             await addUserToType(req, user.id, type.id)
         }
-        res.json(user);
+        res.json({user:{guid:user.guid}});
     } catch (e) {
         console.error(e)
         res.sendStatus(500)
     }
 });
+
 
 /*
 {
@@ -406,6 +407,22 @@ router.get('/loadCompanyByINN_FAKE/:inn', async function (req, res, next) {
         res.sendStatus(500)
     }
 });
+router.get('/userToApprove/:guid', async function (req, res, next) {
+    try {
+      let users=await req.knex("t_users").where({guid:req.params.guid})
+        if(users[0].statusid==10)
+        {
+            user=await req.knex("t_users").update({statusid:20}, "*").where({guid:req.params.guid})
+        }
+
+        res.json(users[0].guid)
+
+    } catch (e) {
+        console.warn(e)
+        res.sendStatus(500)
+    }
+});
+
 
 
 export default router;
