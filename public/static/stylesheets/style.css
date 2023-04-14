@@ -986,6 +986,7 @@ input[type=number] {
 }
 .newsBodyRow{
     margin-top: 14px;
+    align-items: flex-start;
 }
 .newsBodyText{
     font-weight: 350;
