@@ -10,8 +10,8 @@
                         .newsTitle #{n.title}
                         .newsDecor
                             include ../svg/newsDecor.svg
-                        .newsText #{n.lid}
-                        .newsButton.flex.center
+                        .newsText.truncateText #{n.lid}
+                        a.newsButton.flex.center(href="/news#"+n.id)
                             include ../svg/arrowRightRed.svg
 
 
