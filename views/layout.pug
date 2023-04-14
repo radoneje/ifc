@@ -8,6 +8,10 @@ html(lang="ru")
     link(rel='stylesheet', href='/static/stylesheets/style.css')
     link(rel='stylesheet', href='/static/stylesheets/1320.css')
     link(rel='stylesheet', href='/static/stylesheets/980.css')
+    if lang
+      script let lang=!{JSON.stringify(lang)}
+    else
+      script let lang=''
     block head
   body
     block content

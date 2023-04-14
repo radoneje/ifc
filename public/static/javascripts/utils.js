@@ -246,5 +246,16 @@ const showSpeaker=async (id, lang)=>{
         elem.style.overflowY="inherit"
         elem.style.overflowX="visible"
 }
+const clickMenuItem=(elemSelector, redirectPage)=>{
+    let elem=document.querySelector(elemSelector);
+    if(elem)
+    {
+        closeMobileMenu();
+        elem.scrollIntoView({behavior:'smooth'})
+    }
+    else {
+        document.location.href=redirectPage+"/"+lang
+    }
+}
 
 
