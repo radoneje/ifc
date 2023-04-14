@@ -974,6 +974,16 @@ input[type=number] {
     color: #4A4A49;
     margin-top: 4px;
 }
+.newsBodyRow{
+    margin-top: 14px;
+}
+.newsBodyText{
+    font-weight: 350;
+    font-size: 21px;
+    line-height: 25px;
+    /* identical to box height */
+    color: #878787;
+}
 
 
 
