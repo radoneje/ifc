@@ -1058,7 +1058,7 @@ input[type=number] {
     flex-wrap: wrap;
 }
 .oSpkItem{
-    width: 20px;
+    width: 20%;
     box-sizing: border-box;
     padding:calc(95px / 2);
 }
