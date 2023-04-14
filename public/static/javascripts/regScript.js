@@ -104,7 +104,7 @@ let regApp = new Vue({
                 if (this.isPersonalAgreementError || this.isTermsError)
                     return;
 
-                if(type)
+                if(typeof( type)!="undefined")
                     this.user.types=[{id:type}]
                 //////////сюда вставляем код регистрации
                 this.isLodinng = true
