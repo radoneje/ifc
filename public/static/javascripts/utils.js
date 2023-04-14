@@ -95,22 +95,18 @@ async function getJson(url) {
 }
 
 
-const getPhoto = async (aspectRatio=4/5) => {
+const getPhoto = async (aspectRatio = 4 / 5) => {
     return new Promise(async (responce, reject) => {
         let inp = document.createElement("input")
         inp.type = "file"
         inp.accept = "image/*"
-        //inp.setAttribute("capture","capture")
-       // inp.setAttribute("change","getFile()")
-
-        //inp.onchange = getFile;
-        inp.addEventListener("change",getFile);
-        inp.style.display="none"
+        inp.addEventListener("change", getFile);
+        inp.style.display = "none"
         document.body.appendChild(inp)
         inp.click()
 
-            async function getFile(e)  {
-                alert(e.target.files)
+        async function getFile(e) {
+
             let elem = document.createElement("div")
             elem.classList.add("fullScreenPhotoEditor")
             let res = await fetch("/photoEditor")
@@ -133,13 +129,13 @@ const getPhoto = async (aspectRatio=4/5) => {
             fr.onload = () => {
                 let image = new Image();
                 image.src = fr.result;
-                image.onload=()=>{
-                    let coof=800/image.width;
+                image.onload = () => {
+                    let coof = 800 / image.width;
                     let canvas = document.createElement('canvas');
-                    canvas.width = coof*image.width;
-                    canvas.height = coof*image.height;
+                    canvas.width = coof * image.width;
+                    canvas.height = coof * image.height;
                     canvas.getContext('2d').drawImage(image, 0, 0, canvas.width, canvas.height);
-                    photoEditorImage.src=canvas.toDataURL('image/jpeg');
+                    photoEditorImage.src = canvas.toDataURL('image/jpeg');
                     const cropper = new Cropper(photoEditorImage, {
                         aspectRatio: aspectRatio,//1,//    9/16
                         viewMode: 1,
@@ -147,11 +143,11 @@ const getPhoto = async (aspectRatio=4/5) => {
                         zoomable: false,
                     });
                     photoSaveBtn.onclick = () => {
-                        if(photoSaveBtn.classList.contains("loading"))
+                        if (photoSaveBtn.classList.contains("loading"))
                             return;
-                        let txt=photoSaveBtn.innerHTML;
+                        let txt = photoSaveBtn.innerHTML;
 
-                        photoSaveBtn.innerHTML="сохраняю..."
+                        photoSaveBtn.innerHTML = "сохраняю..."
                         photoSaveBtn.classList.add("loading")
                         cropper.getCroppedCanvas().toBlob(async (blob) => {
                             let formData = new FormData()
@@ -165,7 +161,7 @@ const getPhoto = async (aspectRatio=4/5) => {
 
                             if (ret.ok)
                                 responce(await ret.json())
-
+                            document.body.removeChild(inp);
                             document.body.removeChild(elem);
                         }, 'image/png', 1)
                     }
@@ -221,7 +217,7 @@ const validateEmail = (email) => {
             /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
         );
 };
-var dataURLToBlob = function(dataURL) {
+var dataURLToBlob = function (dataURL) {
     var BASE64_MARKER = ';base64,';
     if (dataURL.indexOf(BASE64_MARKER) == -1) {
         var parts = dataURL.split(',');
