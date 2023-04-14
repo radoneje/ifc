@@ -1005,6 +1005,7 @@ input[type=number] {
 }
 #newsPage {
     position: relative;
+    padding-top: 56px;
 }
 
 .newsDecor{
