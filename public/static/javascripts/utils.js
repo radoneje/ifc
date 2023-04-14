@@ -147,7 +147,7 @@ const getPhoto = async (aspectRatio=4/5) => {
                         cropper.getCroppedCanvas().toBlob(async (blob) => {
                             let formData = new FormData()
                             formData.append('file', blob, 'userPhoto.png');
-                            alert(1.1);
+
 
                             let ret = await fetch(frontUrl + "/api/uploadFile", {
                                 method: 'post',
@@ -156,8 +156,6 @@ const getPhoto = async (aspectRatio=4/5) => {
 
                             if (ret.ok)
                                 responce(await ret.json())
-                            else
-                                alert(3);
 
                             document.body.removeChild(elem);
                         }, 'image/png', 1)
