@@ -683,7 +683,21 @@ h2{
     height: 27px;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url(/static/images/loader.svg);
+    background-image: url('/static/images/loader.svg');
+}
+@keyframes photoSaveBtn {
+    0% {width: 0%}
+    100%{width: 100%}
+}
+#photoSaveBtn:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0%;
+    background-color: #E39A3F;
+    animation: photoSaveBtn 20s linear;
 }
 .reqPhotoBox2{
     position: relative;
