@@ -132,7 +132,7 @@ router.post('/regUser2', async function (req, res, next) {
         let types = user.types;
         delete user.types
         delete user.companyPay;
-
+        console.log(req.body)
         company = await addCompany(req, company)
 
 
