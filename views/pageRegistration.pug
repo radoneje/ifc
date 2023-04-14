@@ -239,7 +239,7 @@ block content
                                 a.gray(href="#")  (посмотреть)
                     .reqRowErrorMessage(v-if="isPersonalAgreementError && !user.isPersonalAgreement") Cоглашение не принято
                 .regRow.checkBox
-                    .regCheckBox.green.flex.left(v-on:click="user.isTerms=!user.isTerms" v-bind:class="{active:user.isTerms}")
+                    .regCheckBox.green.flex.left( v-bind:class="{active:user.isTerms}")
                         div
                             .regCheckBoxBox
                         div
