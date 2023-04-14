@@ -12,7 +12,7 @@ block content
 
             .newsWr
                 each n in news
-                    .newsItem(id="news"+id)
+                    .newsItem(id="news"+n.id)
                         .newsHeadRow.flex.left
                             if n.photoid
                                 .newsHeadPhoto
