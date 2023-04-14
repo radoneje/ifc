@@ -36,9 +36,14 @@ router.get('/image/:size/:id', async function (req, res, next) {
         let small=orig.replace("uploads","uploads/"+req.params.size)
         console.log(orig,small )
 
-        if(fs.existsSync(small))
+        if(fs.existsSync(small)) {
+            console.log("downlod from cache")
             return res.download(r[0].path, small)
+        }
+        console.log("try resize")
         let dir=__dirname+"/../public/uploads/"+req.params.size;
+
+
         if (!fs.existsSync(dir)){
             fs.mkdirSync(dir);
         }
