@@ -31,4 +31,7 @@
         margin-top: 100px;
         padding: 0 56px;
     }
+    .spkWr, .newsWr {
+        padding: 0 0px;
+    }
 }

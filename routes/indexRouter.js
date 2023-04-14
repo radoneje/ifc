@@ -44,14 +44,11 @@ router.get('/speakers/:lang?', async function(req, res, next) {
     return res.redirect("/speakers/ru")
   if(!req.params.lang.match(/ru|en/))
     res.redirect("/speakers/ru")
-
   let speakers=await req.knex("t_pgm_spk").where({isEnabled:true,}).orderBy("sort",).orderBy("f"+req.params.lang,).orderBy("i"+req.params.lang,)
-
   res.render('pageSpeakers',{lang:req.params.lang, ru:req.params.lang=="ru", speakers} );
 });
 
 router.get('/photoEditor', async function(req, res, next) {
-
   res.render('photoEditor' );
 });
 
