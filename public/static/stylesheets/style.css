@@ -1266,6 +1266,26 @@ input[type=number] {
     color: #878787;
 }
 
+.fullScreenLayer {
+    box-sizing: border-box;
+   /* background: white;
+    padding: 24px;*/
+    width: min(100%, 1100px);
+    position: relative;
+}
+.fullScreenBack{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+.fullScreenFront {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
 
 
 
