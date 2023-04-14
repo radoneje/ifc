@@ -23,7 +23,7 @@ block content
                                 .newsHeadPhoto
                                     img(src="https://ifcongress.ru/static/image/middle/"+n.photoid loading="lazy")
 
-                            .newsBody
+                            .newsBody(class=n.photoid? "withPhoto":"")
                                 .newsBodyText #{n.text}
 
 

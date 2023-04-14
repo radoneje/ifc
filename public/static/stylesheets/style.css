@@ -1004,6 +1004,9 @@ input[type=number] {
     width: 100%;
     height: auto;
 }
+.withPhoto{
+    width: calc(100% - 400px);
+}
 .newsHeadPhotoBg{
     position: absolute;
     width: 150%;
