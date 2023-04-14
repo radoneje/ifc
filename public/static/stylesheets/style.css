@@ -671,6 +671,20 @@ h2{
     background: #EEB3BA;
 
 }
+#photoSaveBtn{
+    position: relative;
+}
+#photoSaveBtn:after{
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 29px;
+    height: 27px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(/static/images/loader.svg);
+}
 .reqPhotoBox2{
     position: relative;
     padding-bottom: 125%;
