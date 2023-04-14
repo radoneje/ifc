@@ -45,7 +45,7 @@ router.get('/speakers/:lang?', async function(req, res, next) {
   if(!req.params.lang.match(/ru|en/))
     res.redirect("/speakers/ru")
 
-  let speakers=await req.knex("t_pgm_spk").where({isEnabled:true,}).orderBy("sort","desc").orderBy("f"+req.params.lang,).orderBy("i"+req.params.lang,)
+  let speakers=await req.knex("t_pgm_spk").where({isEnabled:true,}).orderBy("sort",).orderBy("f"+req.params.lang,).orderBy("i"+req.params.lang,)
 
   res.render('pageSpeakers',{lang:req.params.lang, ru:req.params.lang=="ru", speakers} );
 });
