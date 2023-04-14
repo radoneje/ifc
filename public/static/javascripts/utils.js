@@ -102,8 +102,13 @@ const getPhoto = async (aspectRatio=4/5) => {
         inp.accept = "image/*"
         //inp.setAttribute("capture","capture")
        // inp.setAttribute("change","getFile()")
+
+        //inp.onchange = getFile;
+        inp.addEventListener("change",getFile);
+        inp.style.display="none"
+        document.body.appendChild(inp)
         inp.click()
-        inp.onchange = getFile;
+
             async function getFile(e)  {
                 alert(e.target.files)
             let elem = document.createElement("div")
