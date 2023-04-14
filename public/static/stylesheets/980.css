@@ -497,6 +497,23 @@
         width: 50%;
         padding: 24px 8px;
     }
+    .pSpkTower{
+        padding: 0;
+    }
+    .pSpkHead{
+        display: block;
+    }
+    .pSpkNameWR{
+        width: 100%;
+    }
+    .pSpkNameBox {
+        padding-left: 0;
+        padding-top: 24px;
+    }
+    .pSpkName{
+        font-size: 26px;
+        line-height: 30px;
+    }
 
 
 
