@@ -21,7 +21,7 @@ const __dirname = path.dirname(__filename);
 router.get('/', async function (req, res, next) {
 
 });
-router.post('/uploadFile', upload.single('file'), cors(), async function (req, res, next) {
+router.post('/uploadFile', upload.single('file'),  async function (req, res, next) {
 
     let ext = path.extname(req.file.originalname)
     let newPath = req.file.path + ext
