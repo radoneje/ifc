@@ -41,12 +41,12 @@ router.get('/image/:size/:id', async function (req, res, next) {
             return res.download(r[0].path, small)
         }
         console.log("try resize")
-        let dir=__dirname+"/../public/uploads/"+req.params.size;
+       /* let dir=__dirname+"/../public/uploads/"+req.params.size;
 
 
         if (!fs.existsSync(dir)){
             fs.mkdirSync(dir);
-        }
+        }*/
         let size=150;
         if(req.params.size=="small")
             size=150
@@ -59,6 +59,7 @@ router.get('/image/:size/:id', async function (req, res, next) {
             .resizeExact(size)
             .write(small, function (err) {
                 if (!err) {
+                    console.log("resize file "+small+ "to size:"+size)
                     return res.download(small)
                 }
                 else {
@@ -67,7 +68,7 @@ router.get('/image/:size/:id', async function (req, res, next) {
                 }
             });
 
-        res.download(r[0].path, r[0].originalname)
+       // res.download(r[0].path, r[0].originalname)
     } catch (e) {
         console.error(e)
         res.sendStatus(500)
