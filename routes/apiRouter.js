@@ -410,9 +410,10 @@ router.get('/loadCompanyByINN_FAKE/:inn', async function (req, res, next) {
 router.get('/userToApprove/:guid', async function (req, res, next) {
     try {
       let users=await req.knex("t_users").where({guid:req.params.guid})
+
         if(users[0].statusid==10)
         {
-            user=await req.knex("t_users").update({statusid:20}, "*").where({guid:req.params.guid})
+            users=await req.knex("t_users").update({statusid:20}, "*").where({guid:req.params.guid})
         }
 
         res.json(users[0].guid)
