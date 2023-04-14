@@ -132,7 +132,7 @@ router.post('/regUser2', async function (req, res, next) {
         let types = user.types;
         delete user.types
         delete user.companyPay;
-        console.log(req.body)
+
         company = await addCompany(req, company)
 
 
@@ -339,7 +339,7 @@ router.get('/loadCompanyByINN/:inn', async function (req, res, next) {
         let items = data.data.items;
 
         let cmp = null;
-        console.log(data)
+
         items.forEach(item => {
             let ul = item["ЮЛ"]
             if (ul && ul["ИНН"] == req.params.inn) {
