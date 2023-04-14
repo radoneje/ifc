@@ -975,7 +975,7 @@ input[type=number] {
     margin-top: 4px;
     position: relative;
 }
-newsHeadTitle:before{
+.newsHeadTitle:before{
     content: '';
     width: 28px;
     height: 28px;
