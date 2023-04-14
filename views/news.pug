@@ -13,15 +13,15 @@ block content
             .newsWr
                 each n in news
                     .oNewsItem(id="news"+n.id)
-                        .newsHeadRow.flex.left
+                        .newsHeadTitleBox
+                            .newsHeadDate #{n.date}
+                            .newsHeadTitle #{n.title}
+                        .newsBodyRow.flex.left
                             if n.photoid
                                 .newsHeadPhoto
                                     img(src="https://ifcongress.ru/static/image/middle/"+n.photoid)
-                            .newsHeadTitleBox
-                                .newsHeadDate #{n.date}
-                                .newsHeadTitle #{n.title}
-                        .newsBody
-                            .newsBodyText #{n.text}
+                            .newsBody
+                                .newsBodyText #{n.text}
 
 
 
