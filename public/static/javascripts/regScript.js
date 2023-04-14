@@ -115,7 +115,7 @@ let regApp = new Vue({
                     return
                 }
 
-                 res = await postJson(apiUrl + "/api/userToApprove/"+ res.user.guid)
+                 res = await getJson(apiUrl + "/api/userToApprove/"+ res.user.guid)
                 setTimeout(() => {
                     this.isLodinng = false
                     this.isRegSuccess = true;
