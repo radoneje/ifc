@@ -994,6 +994,7 @@ input[type=number] {
     line-height: 25px;
     /* identical to box height */
     color: #878787;
+    white-space: pre-wrap;
 }
 .newsHeadPhoto{
     width: 150px;
