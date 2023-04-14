@@ -1074,6 +1074,16 @@ input[type=number] {
 
     color: #878787;
 }
+.spkCompamy{
+    font-weight: 350;
+    font-size: 21px;
+    line-height: 25px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #878787;
+}
 
 
 

@@ -23,7 +23,7 @@ block content
                     .oSpkItem(id="news" + spk.id)
                         img.oSpkItemImage(src=spk.photoid ? ("https://ifcongress.ru/static/image/small/" + spk.photoid) : "/static/images/nouser.png")
                         .spkNameWr
-                            .spkName .spkNameWr
+                            .spkName #{spk["i"+lang]}
                             .spkName #{spk["f"+lang]}
                         .spkCompamy #{spk["company"+lang]}
 
