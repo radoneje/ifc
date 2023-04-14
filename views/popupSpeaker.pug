@@ -10,9 +10,10 @@
                 .pSpkName #{spk["f"+lang]}
                 .pSpkCompany  #{spk["company"+lang]}
     .pSpkBody
-        .menuItem.flex.center.left
-            .menuItemBox
-            .menuItemText Биография
-        .pSpkBio #{spk["bio"+lang]}
+        if spk["bio"+lang]
+            .menuItem.flex.center.left
+                .menuItemBox
+                .menuItemText Биография
+            .pSpkBio #{spk["bio"+lang]}
 
 
