@@ -1269,6 +1269,7 @@ input[type=number] {
 .pSpkHead{}
 .pSpkPhotoWR{
     width: 251px;
+    height: 251px;
     position: relative;
 }
 .pSpkNameWR{
@@ -1314,6 +1315,9 @@ input[type=number] {
 .pSpkNameBox{
     padding-left: 86px;
     padding-top: 12px;
+}
+.pSpkTower{
+    padding: 24px;
 }
 
 
