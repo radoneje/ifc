@@ -1329,7 +1329,7 @@ input[type=number] {
     line-height: 25px;
     color: #878787;
     white-space: break-spaces;
-    max-height: calc(100vh - 433px);
+    max-height: calc(100vh - 440px);
     overflow-y: scroll;
 }
 
