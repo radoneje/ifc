@@ -1024,6 +1024,16 @@ input[type=number] {
     width: 100%;
     height: auto;
 }
+.newsDecor2{
+    position: absolute;
+    bottom: 0;
+    top:108px
+}
+.newsDeco2r svg{
+    width: 100%;
+    height: auto;
+}
+
 
 
 
