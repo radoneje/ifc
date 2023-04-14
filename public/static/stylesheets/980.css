@@ -456,6 +456,11 @@
         left: 8px;
         z-index: 100;
     }
+    .newsWr {
+        padding: 0;
+        padding-left:40px;
+        padding-top: 56px;
+    }
 
 
 
