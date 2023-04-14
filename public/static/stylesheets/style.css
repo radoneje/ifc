@@ -1213,10 +1213,9 @@ input[type=number] {
 }
 
 .oSpkItemImage {
-    margin: 0 26px;
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
+    width: 20%;
+    box-sizing: border-box;
+    padding: 96px 24px;
 }
 
 .spkWr {
@@ -1231,7 +1230,7 @@ input[type=number] {
 .oSpkItem {
     width: 20%;
     box-sizing: border-box;
-    padding: 96px 24px
+    padding: 24px 24px
 }
 
 .spkNameWr {
