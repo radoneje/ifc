@@ -77,7 +77,6 @@ async function fetchJson(url, obj) {
                 'mode':'cors'
             },
             method: "POST",
-            mode: "no-cors",
             body: JSON.stringify(obj)
         })
 
