@@ -461,6 +461,20 @@
         padding-left:40px;
         padding-top: 56px;
     }
+    .newsBodyRow{
+        display: block;
+    }
+.newsHeadTitle{
+    font-size: 18px;
+    line-height: 22px;
+}
+    .newsBodyText{
+        width: 100%;
+        margin-top: 14px;
+        font-size: 16px;
+        line-height: 19px;
+
+    }
 
 
 
