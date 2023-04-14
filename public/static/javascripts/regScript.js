@@ -28,10 +28,10 @@ let regApp = new Vue({
             this.photoIsLoading = true;
             try {
                 this.user.photoid = await getPhoto();
-                aler(this.user.photoid);
+                alert(this.user.photoid);
             }
             catch (e) {
-                aler("err: "+e.message);
+                alert("err: "+e.message);
             }
             this.$forceUpdate();
             this.photoError = false;
