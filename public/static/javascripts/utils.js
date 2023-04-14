@@ -99,7 +99,8 @@ const getPhoto = async (aspectRatio=4/5) => {
     return new Promise(async (responce, reject) => {
         let inp = document.createElement("input")
         inp.type = "file"
-        inp.accept = "image/png, image/jpeg"
+        inp.accept = "image/*"
+        inp.setPriority("capture")
         inp.click()
         inp.onchange = async () => {
             let elem = document.createElement("div")
