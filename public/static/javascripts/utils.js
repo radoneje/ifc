@@ -77,7 +77,7 @@ async function fetchJson(url, obj) {
                 'mode':'cors'
             },
             method: "POST",
-            mode: 'cors',
+            mode: "no-cors",
             body: JSON.stringify(obj)
         })
 
@@ -89,9 +89,9 @@ async function fetchJson(url, obj) {
 const postJson = fetchJson;
 
 async function getJson(url) {
-    let r = await fetch(url,{ headers: {
-            'mode':'cors'
-        }})
+    let r = await fetch(url,{
+            'mode':'no-cors'
+        })
     if (r.ok)
         return await r.json()
     return null;
