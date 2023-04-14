@@ -1274,6 +1274,9 @@ input[type=number] {
 .pSpkNameWR{
     width: calc(100% - 251px );
 }
+.pSpkHead {
+    align-items: flex-start;
+}
 .pSpkBg{
     position: absolute;
     left: 0;
@@ -1289,6 +1292,7 @@ input[type=number] {
 .pSpkPhoto img{
     width: 100%;
     height: auto;
+    border-radius: 50%;
 }
 .pSpkName{
     font-weight: 500;
@@ -1306,8 +1310,10 @@ input[type=number] {
     line-height: 30px;
     margin-top:4px;
     color: #878787;
-
-
+}
+.pSpkNameBox{
+    padding-left: 86px;
+    padding-top: 12px;
 }
 
 
