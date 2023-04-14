@@ -996,7 +996,7 @@ input[type=number] {
     color: #878787;
 }
 .newsHeadPhoto{
-    width: 361px;
+    width: 150px;
     margin-right: 34px;
     position: relative;
 }
@@ -1005,7 +1005,7 @@ input[type=number] {
     height: auto;
 }
 .withPhoto{
-    width: calc(100% - 395px);
+    width: calc(100% - 150px);
 }
 .newsHeadPhotoBg{
     position: absolute;
