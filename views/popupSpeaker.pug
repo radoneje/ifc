@@ -2,6 +2,7 @@
     .pSpkPhotoWR
         .pSpkBg
         .pSpkPhoto
+            img(src=(spk.photoid ? ("/static/image/middle/" + spk.photoid) : "/static/images/nouser.png") width="150" height="150" loading="lazy")
     .pSpkNameWR
         .pSpkNameBox
             .pSpkName #{spk["i"+lang]}
