@@ -139,8 +139,12 @@ const getPhoto = async (aspectRatio=4/5) => {
                             method: 'post',
                             body: formData,
                         })
+                        alert(2);
                         if (ret.ok)
                             responce(await ret.json())
+                        else
+                            alert(3);
+
                         document.body.removeChild(elem);
                     }, 'image/png', 1)
                 }
