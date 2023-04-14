@@ -1064,6 +1064,16 @@ input[type=number] {
     box-sizing: border-box;
     padding:calc(95px / 2);
 }
+.spkNameWr{
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 26px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 24px;
+
+    color: #878787;
+}
 
 
 
