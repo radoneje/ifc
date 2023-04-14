@@ -249,10 +249,12 @@ block content
 
                 .regRow.desktop &nbsp;
                 .regRow &nbsp;
+                .regSubmit(v-on:click="regUser()") подать заявку 000
                 .regRow(v-if="isLodinng")
                     .regSubmit()
                         include svg/loader.svg
                 .regRow(v-else)
+
                     .regSubmit(v-on:click="regUser()" v-if="!isRegSuccess") подать заявку
                     .regSuccess.flex.left(v-else)
                         .regCheckBox.success.flex.left()
