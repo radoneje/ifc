@@ -24,6 +24,20 @@ router.get('/file/:id', async function (req, res, next) {
         res.sendStatus(500)
     }
 });
+
+
+router.get('/key/:KEY', async function (req, res, next) {
+    try {
+        let r = await req.knex("t_staticfiles").where({key: req.params.key})
+        if (!r)
+            return res.sendStatus(404)
+        res.redirect("/file/"+r[0].fileid)
+    } catch (e) {
+        console.error(e)
+        res.sendStatus(500)
+    }
+});
+
 router.get('/image/:size/:id', async function (req, res, next) {
     try {
         let r = await req.knex("t_files").where({guid: req.params.id})
