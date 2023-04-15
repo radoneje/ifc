@@ -10,6 +10,7 @@
                 .pSpkName #{spk["i"+lang]}
                 .pSpkName #{spk["f"+lang]}
                 .pSpkCompany  #{spk["company"+lang]}
+            .pSpkSessionsBox !{JSON.stringify(spk.sessions)}
     .pSpkBody
         if spk["bio"+lang]
             .menuItem.flex.center.left
