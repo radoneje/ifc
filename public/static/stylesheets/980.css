@@ -581,6 +581,7 @@
     }
     .pSpkBody {
         max-height: calc(100vh - 377px);
+        padding-right: 4px;
 
     }
 
