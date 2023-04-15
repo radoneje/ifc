@@ -34,7 +34,8 @@ router.get('/key/:id', async function (req, res, next) {
 
         let where="name = '"+req.params.id+"'"
         console.log(where)
-        let r = await req.knex("v_staticfiles").whereRaw(where)
+        let r = await req.knex("t_staticfiles");//.whereRaw(where)
+        r=r.filter(rr=>rr.key==req.params.id)
         console.log("-."+req.params.id+".-", r)
         if (r.length==0)
             return res.sendStatus(404)
