@@ -19,7 +19,7 @@
                     .menuItemText Участвует в сессиях:
                 .pSpkSessionsWr
                     each session in spk.sessions
-                        .pSpkSession #{session["title_" + lang]}
+                        .pSpkSession(onclick="closePopUp();showSession("+session.id+", '"+lang+"')") #{session["title_" + lang]}
         if spk["bio"+lang]
             .menuItem.flex.center.left
                 .menuItemBox
