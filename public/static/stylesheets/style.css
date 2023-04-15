@@ -1221,10 +1221,7 @@ input[type=number] {
     filter: brightness(.9);
 }
 .oSpkItem:hover .oSpkItemImage {
-    margin: 0 14px;
-    width: calc(100% - 28px);
-    height: auto;
-    border-radius: 50%;
+
     filter: brightness(1.1);
 }
 
