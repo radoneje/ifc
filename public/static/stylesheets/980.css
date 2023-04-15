@@ -572,7 +572,12 @@
         margin-top: 0px;
     }
     .pSpkSessionsWr {
-        /* margin-left: 50px; */
+         margin-left: 0px;
+    }
+    .pSpkSession{
+        font-size: 18px;
+        line-height: 21px;
+        margin-top: 12px
     }
 
 
