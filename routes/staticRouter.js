@@ -37,7 +37,7 @@ router.get('/key/:id', async function (req, res, next) {
         let r = await req.knex("t_staticfiles");//.whereRaw(where)
         console.log(r)
         r=r.filter(rr=>{
-            console.log("=>",r.key, req.params.id, rr.key==req.params.id)
+            console.log("=>",r, req.params.id, rr.key==req.params.id)
             return rr.key==req.params.id})
         console.log(r)
         if (r.length==0)
