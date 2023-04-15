@@ -1492,9 +1492,7 @@ input[type=number] {
 
     color: #4A4A49;
 }
-.pPgmPopScroll{
-    margin-top:12px
-}
+
 .pPgmPopDescription{
     white-space: break-spaces;
     font-weight: 350;
@@ -1502,6 +1500,12 @@ input[type=number] {
     line-height: 25px;
 
     color: #878787;
+}
+.pPgmPopScroll {
+    margin-top: 12px;
+    overflow-y: scroll;
+    max-height: calc(100vh - 312px);
+
 }
 
 
