@@ -517,6 +517,22 @@
     .pSpkBio {
         max-height: calc(100vh - 560px);
     }
+    .oTs{
+        display: block;
+    }
+    .pgmHeadDate{
+        margin-left: 0;
+    }
+    .oTsDate{
+        width: 100%;
+        text-align: left;
+    }
+    .oTrack {
+        width: calc(100% );
+        padding: 16px;
+        box-sizing: border-box;
+        margin-top: 0;
+    }
 
 
 
