@@ -32,7 +32,7 @@ router.get('/file/:id', async function (req, res, next) {
 router.get('/key/:id', async function (req, res, next) {
     try {
         console.log("-."+req.params.id+".-")
-        let r = await req.knex("t_staticfiles");//.where({key: req.params.id})
+        let r = await req.knex("t_staticfiles").where({key: req.params.id})
         console.log("-."+req.params.id+".-", r)
         if (r.length==0)
             return res.sendStatus(404)
