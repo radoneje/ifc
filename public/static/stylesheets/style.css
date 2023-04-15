@@ -1350,6 +1350,8 @@ input[type=number] {
     padding-left: 48px;
     position: relative;
     margin-top:72px;
+    text-transform: uppercase;
+    margin-left: 141px;
 }
 .pgmHeadDate:before{
     content: '';
