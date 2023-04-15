@@ -89,7 +89,7 @@ router.get('/popupSpeaker/:id/:lang', async function(req, res, next) {
     {
       spk.sessions=await req.knex("v_pgm_sessions")
           .where({moderatorid:spk.id})
-          .orderByRaw(spk.id+"=any(speakersid)")
+          .orWhereRaw(spk.id+"=any(speakersid)")
     }
     res.render("popupSpeaker",{spk:speakers[0],lang:req.params.lang })
   }
