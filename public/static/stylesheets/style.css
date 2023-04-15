@@ -1372,6 +1372,17 @@ input[type=number] {
     font-size: 21px;
     line-height: 25px;
 }
+.oAllTracks{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 28px;
+    /* identical to box height, or 133% */
+    background: #E0E0E0;
+    padding: 16px;
+    text-transform: uppercase;
+    color: #4A4A49;
+}
 
 
 

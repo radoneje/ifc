@@ -21,7 +21,8 @@ block content
                                 each ts in day.timeslots
                                     .oTs.flex.left
                                         .oTsDate #{ts["title_"+lang]}
-                                        .oTsTitle #{ts["descr_"+lang]}
+                                        if(ts.allTracks)
+                                            .oAllTracks #{ts["descr_"+lang]}
 
 
 
