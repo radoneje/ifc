@@ -23,6 +23,16 @@ block content
                                         .oTsDate #{ts["title_"+lang]}
                                         if(ts.allTracks)
                                             .oTrack.oAllTracks #{ts["descr_"+lang]}
+                                        else
+                                            .oTrack
+                                                if !ts.isImpotant
+                                                    .oSessionWr
+                                                        if ts.sessions
+                                                            each session in ts.sessions
+                                                                .oSession
+                                                                    .oSessionTitle #{session["title_"+lang]}
+
+
 
 
 
