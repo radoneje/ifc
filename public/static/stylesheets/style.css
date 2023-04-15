@@ -1509,6 +1509,10 @@ input[type=number] {
 }
 .pPgmPopSpeakers{
 flex-wrap: wrap;
+    align-items: flex-start;
+}
+.pPgmPopUp .oSpkItem{
+    width: 33%;
 }
 
 
