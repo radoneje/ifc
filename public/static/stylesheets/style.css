@@ -1470,6 +1470,17 @@ input[type=number] {
 .pPgmPopUp .pgmHeadDate{
     margin: 0;
 }
+.pPgmPopUpWr{
+    margin-left: 48px;
+    margin-top: 12px;
+}
+.pPgmPopUpHall{
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 26px;
+
+    color: #263378;
+}
 
 
 

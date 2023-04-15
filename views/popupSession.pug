@@ -1,3 +1,5 @@
 .pPgmPopUp
     div !{JSON.stringify(session)}
-    .pgmHeadDate #{session["day"+lang]}
+    .pgmHeadDate #{session["day"+lang]} #{session["ts"+lang]}
+    .pPgmPopUpWr
+        .pPgmPopUpHall #{session["halltitle"+lang]}
