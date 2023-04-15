@@ -538,7 +538,7 @@
         overflow-y: scroll;
         width: 100%;
     }
-    .oSessionScroll .oSessionWr {
+    .oTrack:not(.impotant) .oSessionWr {
         width: max-content;
     }
     .oTrack:not(.impotant){
