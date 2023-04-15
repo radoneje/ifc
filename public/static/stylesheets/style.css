@@ -1454,6 +1454,12 @@ input[type=number] {
 .impotant.oTrack{
     background: #F8DEE1;
 }
+.impotant .oSession{
+    width: 100%;
+}
+.impotant .oSession:not(:first-child) {
+    display: none;
+}
 
 
 
