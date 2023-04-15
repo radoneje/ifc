@@ -18,6 +18,7 @@ router.get('/file/:id', async function (req, res, next) {
         let r = await req.knex("t_files").where({guid: req.params.id})
         if (r.length==0)
             return res.sendStatus(404)
+        console.log(req.query)
         if( req.query.open)
             return  res.sendFile(r[0].path)
 
@@ -37,7 +38,7 @@ router.get('/key/:key', async function (req, res, next) {
         if (r.length==0)
             return res.sendStatus(404)
         let url="/static/file/"+r[0].fileid
-        console.log(req.query)
+
         if( req.query.open)
             url+="?open=true"
         res.redirect("/static/file/"+r[0].fileid)
