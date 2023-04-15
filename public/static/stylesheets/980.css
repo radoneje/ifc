@@ -537,6 +537,13 @@
         overflow-y: scroll;
         width: 100%;
     }
+    .oSessionScroll .oSessionWr {
+        width: max-content;
+    }
+    .oSessionScroll .oSession {
+        width: calc(100vw - 76px);
+
+    }
 
 
 
