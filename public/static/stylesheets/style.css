@@ -1467,6 +1467,9 @@ input[type=number] {
 .impotant .oSessionHallTitle{
     text-transform: uppercase;
 }
+.pPgmPopUp .pgmHeadDate{
+    margin: 0;
+}
 
 
 
