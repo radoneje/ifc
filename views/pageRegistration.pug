@@ -236,7 +236,7 @@ block content
                             .regCheckBoxBox
                         div
                             .regCheckBoxText( ) ПРИНИМАЮ ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ
-                                a.gray  (посмотреть)
+                                a.gray(onclick="window.open('/static/key/agr"+lang+"?open=open')")  (посмотреть)
                     .reqRowErrorMessage(v-if="isPersonalAgreementError && !user.isPersonalAgreement") Cоглашение не принято
                 .regRow.checkBox
                     .regCheckBox.green.flex.left(v-on:click="user.isTerms=!user.isTerms" v-bind:class="{active:user.isTerms}")
@@ -244,7 +244,7 @@ block content
                             .regCheckBoxBox
                         div
                             .regCheckBoxText СОГЛАШАЮСЬ НА ОБРАБОТКУ ПЕРСОНАЛЬНЫХ ДАННЫХ
-                                a.gray  (посмотреть)
+                                a.gray(onclick="window.open('/static/key/pers"+lang+"?open=open')")  (посмотреть)
                     .reqRowErrorMessage(v-if="isTermsError && !user.isTerms") Cоглашение не принято
 
                 .regRow.desktop &nbsp;
