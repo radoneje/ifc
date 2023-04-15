@@ -1508,7 +1508,7 @@ input[type=number] {
 
 }
 .pPgmPopSpeakers{
-
+flex-wrap: wrap;
 }
 
 
