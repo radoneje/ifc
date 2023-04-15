@@ -33,6 +33,7 @@ router.get('/key/:key', async function (req, res, next) {
     try {
         console.log("-."+req.params.key+".-")
         let r = await req.knex("t_staticfiles").where({key: req.params.key})
+        console.log("-."+req.params.key+".-", r)
         if (r.length==0)
             return res.sendStatus(404)
         let url="/static/file/"+r[0].fileid
