@@ -537,6 +537,9 @@
     .oSessionWr{
         align-items: normal;
     }
+    .oSession{
+        padding-bottom: 24px;
+    }
     .oSessionScroll{
         overflow-y: scroll;
         width: 100%;
