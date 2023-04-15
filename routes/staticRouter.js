@@ -41,7 +41,7 @@ router.get('/key/:key', async function (req, res, next) {
 
         if( req.query.open)
             url+="?open=true"
-        res.redirect("/static/file/"+r[0].fileid)
+        res.redirect(url)
     } catch (e) {
         console.error(e)
         res.sendStatus(500)
