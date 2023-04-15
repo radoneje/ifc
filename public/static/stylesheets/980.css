@@ -533,6 +533,10 @@
         box-sizing: border-box;
         margin-top: 12px;
     }
+    .oSessionScroll{
+        overflow-y: scroll;
+        width: max-content;
+    }
 
 
 
