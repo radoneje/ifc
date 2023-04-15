@@ -1460,6 +1460,12 @@ input[type=number] {
 .impotant .oSession:not(:first-child) {
     display: none;
 }
+.impotant span.plenar{
+    color: #BB3E3F;
+}
+.impotant .oSessionHallTitle{
+    text-transform: uppercase;
+}
 
 
 
