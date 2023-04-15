@@ -10,15 +10,16 @@
                 .pSpkName #{spk["i"+lang]}
                 .pSpkName #{spk["f"+lang]}
                 .pSpkCompany  #{spk["company"+lang]}
-                if spk.sessions && spk.sessions.length>0
-                    .pSpkSessionsBox
-                        .menuItem.flex.center.left
-                            .menuItemBox
-                            .menuItemText Участвует в сессиях:
-                        .pSpkSessionsWr
-                            each session in spk.sessions
-                                .pSpkSession #{session["title_"+lang]}
+
     .pSpkBody
+        if spk.sessions && spk.sessions.length > 0
+            .pSpkSessionsBox
+                .menuItem.flex.center.left
+                    .menuItemBox
+                    .menuItemText Участвует в сессиях:
+                .pSpkSessionsWr
+                    each session in spk.sessions
+                        .pSpkSession #{session["title_" + lang]}
         if spk["bio"+lang]
             .menuItem.flex.center.left
                 .menuItemBox
