@@ -541,7 +541,7 @@
     .oSessionScroll .oSessionWr {
         width: max-content;
     }
-    .oSessionScroll .oSession {
+    .oTrack:not(.impotant) .oSession {
         width: calc(100vw - 76px);
         padding-bottom: 12px;
         padding: 8px;
