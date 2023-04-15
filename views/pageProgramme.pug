@@ -38,6 +38,15 @@ block content
                                                                             .oSessionSpkBoxTitle Модератор:
                                                                             .oSessionSpkBoxName #{session.moderators[0]["i"+lang]} #{session.moderators[0]["f"+lang]}
                                                                                 .oSessionSpkBoxPos  #{session.moderators[0]["company"+lang]}
+                                                if session.speakers
+                                                    .oSessionSpkBox
+                                                        .oSessionSpkBoxTitle Спикеры:
+                                                        each spk in session.speakers
+                                                            .oSessionSpkBox
+                                                                .oSessionSpkBoxTitle Модератор:
+                                                                .oSessionSpkBoxName #{spk["i" + lang]} #{spk["f" + lang]}
+                                                                    .oSessionSpkBoxPos  #{spk["company" + lang]}
+
 
 
 
