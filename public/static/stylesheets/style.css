@@ -1513,6 +1513,15 @@ flex-wrap: wrap;
 }
 .pPgmPopUp .oSpkItem{
     width: 33%;
+    text-align: center;
+}
+.pPgmPopUp .oSpkItem{
+    width: 33%;
+    text-align: center;
+}
+.pPgmPopUp .oSpkItemImage {
+    margin: 0 auto;
+    width: calc(100% - 48px);
 }
 
 
