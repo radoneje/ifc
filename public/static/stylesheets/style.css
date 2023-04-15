@@ -1588,6 +1588,9 @@ input[type=number] {
     max-height: calc(100vh - 440px);
     overflow-y: scroll;
 }
+.pSpkBio{
+    padding-left: 50px;
+}
 
 
 
