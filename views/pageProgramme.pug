@@ -30,11 +30,12 @@ block content
                                                         if ts.sessions
                                                             each session in ts.sessions
                                                                 .oSession
-                                                                    .oSessionHallTitle
+                                                                    .oSessionHallTitle #{session["halltitle_"+lang]}
+                                                                    .oSessionTitle
                                                                         if ts.isImpotant
-                                                                            span.plenar Пленарная сессия:
-                                                                        span  #{session["halltitle_"+lang]}
-                                                                    .oSessionTitle #{session["title_"+lang]}
+                                                                            span.plenar  Пленарная сессия:
+                                                                        span #{session["title_"+lang]}
+
                                                                     .oSessionDetails подробнее
                                                                     if session.moderators
                                                                         .oSessionSpkBox
