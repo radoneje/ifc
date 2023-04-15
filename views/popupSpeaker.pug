@@ -10,7 +10,14 @@
                 .pSpkName #{spk["i"+lang]}
                 .pSpkName #{spk["f"+lang]}
                 .pSpkCompany  #{spk["company"+lang]}
-            .pSpkSessionsBox !{JSON.stringify(spk.sessions)}
+            if spk.sessions && spk.sessions.left>0
+                .pSpkSessionsBox !{JSON.stringify(spk.sessions)}
+                    .menuItem.flex.center.left
+                        .menuItemBox
+                        .menuItemText Участвует в сессиях:
+                    .pSpkSessionsWr
+                        each session in spk.sessions
+                            .pSpkSession #{session["title_"+lang]}
     .pSpkBody
         if spk["bio"+lang]
             .menuItem.flex.center.left
