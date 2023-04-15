@@ -532,6 +532,7 @@
         padding: 8px;
         box-sizing: border-box;
         margin-top: 12px;
+        background: #fafafa;
     }
     .oSessionScroll{
         overflow-y: scroll;
@@ -542,6 +543,7 @@
     }
     .oSessionScroll .oSession {
         width: calc(100vw - 76px);
+        padding-bottom: 12px;
 
     }
 
