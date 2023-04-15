@@ -17,10 +17,11 @@ block content
                     .oPgmItem(id="day"+day.id)
                         .pgmHeadDate #{day["title_"+lang]}
                         .oTimeslots
-                            each ts in day.timeslots
-                               .oTs.flex.center
-                                   .oTsDate #{ts["title_"+lang]}
-                                    .oTsTitle #{ts["descr_"+lang]}
+                            if day.timeslots
+                                each ts in day.timeslots
+                                   .oTs.flex.center
+                                       .oTsDate #{ts["title_"+lang]}
+                                        .oTsTitle #{ts["descr_"+lang]}
 
 
 
