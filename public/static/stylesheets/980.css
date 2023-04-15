@@ -544,7 +544,7 @@
     .oSessionScroll .oSession {
         width: calc(100vw - 76px);
         padding-bottom: 12px;
-        padding-right: 8px;
+        padding: 8px;
         margin-right: 16px;
         background: #fafafa;
     }
