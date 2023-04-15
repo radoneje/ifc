@@ -1411,6 +1411,17 @@ input[type=number] {
 .oSessionWr{
     align-items: flex-start;
 }
+.oSessionDetails{
+    background: #E39A4F;
+    padding: 4px 8px;
+    font-weight: 350;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height, or 125% */
+
+    text-transform: uppercase;
+    color: #BB3E3F;
+}
 
 
 
