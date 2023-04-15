@@ -1,0 +1,6 @@
+.oSpkItem
+    img.oSpkItemImage(src=spk.photoid ? ("/static/image/small/" + spk.photoid) : "/static/images/nouser.png" width="150" height="150" loading="lazy")
+    .spkNameWr
+        .spkName #{spk["i"+lang]}
+        .spkName #{spk["f"+lang]}
+    .spkCompamy #{spk["company"+lang]}
