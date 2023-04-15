@@ -1521,7 +1521,8 @@ flex-wrap: wrap;
     width: calc(100% - 48px);
 }
 .pSpkSessionsBox{
-    margin-top: 24px
+    margin-top: 24px;
+    margin-bottom: 24px
 }
 .pSpkSessionsWr{
     margin-left: 50px;
