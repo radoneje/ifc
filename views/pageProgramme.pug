@@ -14,9 +14,8 @@ block content
 
             .spkWr !{JSON.stringify(pgm)}
                 each day in pgm
-                    .oNewsItem(id="day"+day.id)
-                        .newsHeadTitleBox
-                        .newsHeadDate #{day["title"+lang]}
+                    .oPgmItem(id="day"+day.id)
+                        .pgmHeadDate #{day["title"+lang]}
 
 
 
