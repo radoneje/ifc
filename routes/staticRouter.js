@@ -26,7 +26,7 @@ router.get('/file/:id', async function (req, res, next) {
 });
 
 
-router.get('/key/:KEY', async function (req, res, next) {
+router.get('/key/:key', async function (req, res, next) {
     try {
         let r = await req.knex("t_staticfiles").where({key: req.params.key})
         if (!r)
