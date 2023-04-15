@@ -1342,6 +1342,23 @@ input[type=number] {
     padding: 0 141px;
     padding-top: 56px;
 }
+.pgmHeadDate{
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 26px;
+    color: #4A4A49;
+    padding-left: 24px;
+    position: relative;
+}
+.pgmHeadDate:before{
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    top:0;
+    left:0;
+    background: #BB3E3F;
+}
 
 
 
