@@ -1339,7 +1339,7 @@ input[type=number] {
     height: auto;
 }
 .pgmWr{
-    padding: 0 141px;
+   /* padding: 0 141px;*/
   /* // padding-top: 56px;*/
 }
 .pgmHeadDate{
