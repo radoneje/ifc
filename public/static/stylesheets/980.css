@@ -535,7 +535,7 @@
     }
     .oSessionScroll{
         overflow-y: scroll;
-        width: max-content;
+        width: 100%;
     }
 
 
