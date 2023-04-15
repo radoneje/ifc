@@ -1462,6 +1462,7 @@ input[type=number] {
 }
 .impotant span.plenar{
     color: #BB3E3F;
+    text-transform: uppercase;
 }
 .impotant .oSessionHallTitle{
     text-transform: uppercase;
