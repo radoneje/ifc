@@ -25,8 +25,8 @@ block content
                                             .oTrack.oAllTracks #{ts["descr_"+lang]}
                                         else
                                             .oTrack
-                                                if !ts.isImpotant
-                                                    .oSessionWr.flex.left
+
+                                                    .oSessionWr.flex.left(class=ts.isImpotant?"impotant":"")
                                                         if ts.sessions
                                                             each session in ts.sessions
                                                                 .oSession
