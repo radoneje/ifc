@@ -1437,6 +1437,16 @@ input[type=number] {
 
     color: #878787;
 }
+.oSessionSpkBoxName{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+
+    color: #878787;
+}
+.oSessionSpkBoxName{
+    font-size: 16px;
+}
 
 
 
