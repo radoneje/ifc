@@ -1383,6 +1383,10 @@ input[type=number] {
     text-transform: uppercase;
     color: #4A4A49;
 }
+.oTs{
+    margin-top: 22px;
+    align-items: flex-start;
+}
 
 
 
