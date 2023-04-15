@@ -529,15 +529,9 @@
     }
     .oTrack {
         width: calc(100% );
-        padding: 0;
+        padding: 8px;
         box-sizing: border-box;
         margin-top: 12px;
-    }
-    .oSessionScroll{
-        overflow-y: scroll;
-    }
-    .oSessionWr {
-        width: max-content;
     }
 
 
