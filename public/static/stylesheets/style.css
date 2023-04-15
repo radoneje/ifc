@@ -1394,6 +1394,14 @@ input[type=number] {
     width: 25%;box-sizing: border-box;
     padding-right: 24px;
 }
+.oSessionHallTitle {
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 26px;
+
+    color: #263378;
+    text-transform: uppercase;
+}
 
 
 
