@@ -1423,6 +1423,7 @@ input[type=number] {
     color: #BB3E3F;
     margin-top:20px;
     width: max-content;
+    cursor:pointer;
 }
 
 
