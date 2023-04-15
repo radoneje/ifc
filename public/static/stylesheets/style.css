@@ -1492,6 +1492,17 @@ input[type=number] {
 
     color: #4A4A49;
 }
+.pPgmPopScroll{
+    margin-top:12px
+}
+.pPgmPopDescription{
+    white-space: break-spaces;
+    font-weight: 350;
+    font-size: 21px;
+    line-height: 25px;
+
+    color: #878787;
+}
 
 
 
