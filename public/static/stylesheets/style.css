@@ -1347,7 +1347,7 @@ input[type=number] {
     font-size: 21px;
     line-height: 26px;
     color: #4A4A49;
-    padding-left: 24px;
+    padding-left: 48px;
     position: relative;
 }
 .pgmHeadDate:before{
