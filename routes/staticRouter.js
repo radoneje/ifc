@@ -16,7 +16,7 @@ const __dirname = path.dirname(__filename);
 router.get('/file/:id', async function (req, res, next) {
     try {
         let r = await req.knex("t_files").where({guid: req.params.id})
-        if (!r)
+        if (r.length==0)
             return res.sendStatus(404)
         if( req.query.params.open)
             return  res.sendFile(r[0].path)
@@ -33,7 +33,7 @@ router.get('/key/:key', async function (req, res, next) {
     try {
         console.log("-."+req.params.key+".-")
         let r = await req.knex("t_staticfiles").where({key: req.params.key})
-        if (!r)
+        if (r.length==0)
             return res.sendStatus(404)
         let url="/static/file/"+r[0].fileid
         if( req.query.params.open)
