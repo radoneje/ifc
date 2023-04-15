@@ -562,6 +562,14 @@
     .newsDecor2 {
         bottom: -58px;
     }
+    .pSpkPhotoWR {
+        width: 150px;
+        height: 150px;
+
+    }
+    .pSpkBody {
+        margin-top: 0px;
+    }
 
 
 }
