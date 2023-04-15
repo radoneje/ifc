@@ -534,7 +534,10 @@
         margin-top: 12px;
     }
     .oSessionScroll{
-
+        overflow-y: scroll;
+    }
+    .oSessionWr {
+        width: max-content;
     }
 
 
