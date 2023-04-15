@@ -31,7 +31,7 @@ router.get('/key/:key', async function (req, res, next) {
         let r = await req.knex("t_staticfiles").where({key: req.params.key})
         if (!r)
             return res.sendStatus(404)
-        res.redirect("/file/"+r[0].fileid)
+        res.redirect("/static/file/"+r[0].fileid)
     } catch (e) {
         console.error(e)
         res.sendStatus(500)
