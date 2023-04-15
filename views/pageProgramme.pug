@@ -13,6 +13,11 @@ block content
             .sectionTitle Программа
 
             .spkWr
+                each day in pgm
+                    .oNewsItem(id="day"+day.id)
+                        .newsHeadTitleBox
+                        .newsHeadDate #{day["title"+lang]}
+
 
 
 
