@@ -85,7 +85,7 @@ router.get('/popupSpeaker/:id/:lang', async function(req, res, next) {
     let speakers = await req.knex("t_pgm_spk").where({id:req.params.id})
     if(speakers.length==0)
       res.sendStatus(404);
-    for(spk of speakers)
+    for(let spk of speakers)
     {
       spk.sessions=await req.knex("v_pgm_sessions")
           .where({moderatorid:spk.id})
