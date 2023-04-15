@@ -22,7 +22,7 @@ block content
                                     .oTs.flex.left
                                         .oTsDate #{ts["title_"+lang]}
                                         if(ts.allTracks)
-                                            .oTrack.oAllTracks #{ts["descr_"+lang]}
+                                            .oTrack.oAllTracks(class=ts.isImpotant?"impotant":"") #{ts["descr_"+lang]}
                                         else
                                             .oTrack(class=ts.isImpotant?"impotant":"")
 
