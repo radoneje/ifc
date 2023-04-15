@@ -36,7 +36,7 @@ block content
                                                                             span.plenar  Пленарная сессия:&nbsp;
                                                                         span #{session["title_"+lang]}
 
-                                                                    .oSessionDetails подробнее
+                                                                    .oSessionDetails(onclick="showSession("+session.id+", '"+lang+"')") подробнее
                                                                     if session.moderators
                                                                         .oSessionSpkBox
                                                                             .oSessionSpkBoxTitle Модератор:
