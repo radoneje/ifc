@@ -1340,7 +1340,7 @@ input[type=number] {
 }
 .pgmWr{
     padding: 0 141px;
-    padding-top: 56px;
+  /* // padding-top: 56px;*/
 }
 .pgmHeadDate{
     font-weight: 500;
