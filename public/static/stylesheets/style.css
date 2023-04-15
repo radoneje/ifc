@@ -1481,6 +1481,17 @@ input[type=number] {
 
     color: #263378;
 }
+.up{
+    text-transform: uppercase;
+}
+.pPgmPopTitle{
+    margin-top:8px;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 26px;
+
+    color: #4A4A49;
+}
 
 
 
