@@ -1443,6 +1443,8 @@ input[type=number] {
     line-height: 20px;
     text-transform: uppercase;
     color: #878787;
+    padding-top: 4px;
+    cursor: pointer;
 }
 .oSessionSpkBoxPos{
     font-size: 16px;
