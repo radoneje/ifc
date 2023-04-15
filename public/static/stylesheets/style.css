@@ -1425,6 +1425,18 @@ input[type=number] {
     width: max-content;
     cursor:pointer;
 }
+.oSessionSpkBox{
+    margin-top: 20px;
+}
+.oSessionSpkBoxTitle{
+    font-weight: 350;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+
+
+    color: #878787;
+}
 
 
 

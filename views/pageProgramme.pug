@@ -33,7 +33,11 @@ block content
                                                                     .oSessionHallTitle #{session["halltitle_"+lang]}
                                                                     .oSessionTitle #{session["title_"+lang]}
                                                                     .oSessionDetails подробнее
-
+                                                                    if session.moderators
+                                                                        .oSessionSpkBox
+                                                                            .oSessionSpkBoxTitle Модератор:
+                                                                            .oSessionSpkBoxName #{session.moderators[0]["i"+lang]} #{session.moderators[0]["f"+lang]}
+                                                                                span.oSessionSpkBoxPos #{session.moderators[0]["company"+lang]}
 
 
 
