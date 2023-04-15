@@ -1408,6 +1408,9 @@ input[type=number] {
     line-height: 26px;
     color: #4A4A49;
 }
+.oSessionWr{
+    align-items: flex-start;
+}
 
 
 
