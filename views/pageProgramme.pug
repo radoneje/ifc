@@ -1,7 +1,7 @@
 extends layout
 
 block head
-    title="Спикеры"
+    title="Программа"
 block content
     include elems/internalHead
     .tower#newsPage
@@ -12,7 +12,7 @@ block content
                 include svg/newsDecor2.svg
             .sectionTitle Программа
 
-            .spkWr
+            .spkWr !{JSON.stringify(pgm)}
                 each day in pgm
                     .oNewsItem(id="day"+day.id)
                         .newsHeadTitleBox
