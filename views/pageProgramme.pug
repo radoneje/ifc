@@ -12,7 +12,7 @@ block content
                 include svg/newsDecor2.svg
             .sectionTitle Программа
 
-            .spkWr !{JSON.stringify(pgm)}
+            .pgmWr !{JSON.stringify(pgm)}
                 each day in pgm
                     .oPgmItem(id="day"+day.id)
                         .pgmHeadDate #{day["title"+lang]}
