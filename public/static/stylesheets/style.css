@@ -1520,6 +1520,19 @@ flex-wrap: wrap;
     margin: 0 auto;
     width: calc(100% - 48px);
 }
+.pSpkSessionsBox{
+    margin-top: 24px
+}
+.pSpkSessionsWr{
+    margin-left: 50px;
+}
+.pSpkSession{
+    font-weight: 350;
+    font-size: 21px;
+    line-height: 25px;
+    color: #878787;
+    margin-top:16px;
+}
 
 
 
