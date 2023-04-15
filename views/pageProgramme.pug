@@ -40,14 +40,16 @@ block content
                                                                     if session.moderators
                                                                         .oSessionSpkBox
                                                                             .oSessionSpkBoxTitle Модератор:
-                                                                            .oSessionSpkBoxName #{session.moderators[0]["i"+lang]} #{session.moderators[0]["f"+lang]}
-                                                                                .oSessionSpkBoxPos  #{session.moderators[0]["company"+lang]}
+                                                                            .oSpkBox(onclick="showSpeaker("+session.moderators[0].id+", '"+lang+"')")
+                                                                                .oSessionSpkBoxName #{session.moderators[0]["i"+lang]} #{session.moderators[0]["f"+lang]}
+                                                                                    .oSessionSpkBoxPos  #{session.moderators[0]["company"+lang]}
                                                                     if session.speakers
                                                                         .oSessionSpkBox
                                                                             .oSessionSpkBoxTitle Спикеры:
                                                                             each spk in session.speakers
-                                                                                .oSessionSpkBoxName #{spk["i" + lang]} #{spk["f" + lang]}
-                                                                                    .oSessionSpkBoxPos  #{spk["company" + lang]}
+                                                                                .oSpkBox(onclick="showSpeaker("+spk.id+", '"+lang+"')")
+                                                                                    .oSessionSpkBoxName #{spk["i" + lang]} #{spk["f" + lang]}
+                                                                                        .oSessionSpkBoxPos  #{spk["company" + lang]}
 
 
 
