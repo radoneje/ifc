@@ -1402,6 +1402,12 @@ input[type=number] {
     color: #263378;
     text-transform: uppercase;
 }
+.oSessionTitle{
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 26px;
+    color: #4A4A49;
+}
 
 
 
