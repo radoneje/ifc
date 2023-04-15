@@ -534,6 +534,9 @@
         margin-top: 12px;
 
     }
+    .oSessionWr{
+        align-items: normal;
+    }
     .oSessionScroll{
         overflow-y: scroll;
         width: 100%;
@@ -550,7 +553,7 @@
         padding-bottom: 12px;
         padding: 8px;
         margin-right: 16px;
-        background: #fafafa;
+        background: #f5f5f5;
     }
 
 
