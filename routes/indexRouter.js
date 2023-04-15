@@ -65,6 +65,20 @@ router.get('/speakers/:lang?', async function(req, res, next) {
    res.text("Ошибка")
  }
 });
+router.get('/programme/:lang?', async function(req, res, next) {
+  try {
+    if (!req.params.lang)
+      return res.redirect("/programme/ru")
+    if (!req.params.lang.match(/ru|en/))
+      res.redirect("/programme/ru")
+    let pgm = await req.knex("v_pgm")
+    res.render('pageProgramme', {lang: req.params.lang, ru: req.params.lang == "ru", pgm});
+  }
+  catch (e) {
+    console.warn(e)
+    res.text("Ошибка")
+  }
+});
 
 router.get('/popupSpeaker/:id/:lang', async function(req, res, next) {
   try {

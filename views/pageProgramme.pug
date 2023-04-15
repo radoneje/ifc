@@ -1,0 +1,26 @@
+extends layout
+
+block head
+    title="Спикеры"
+block content
+    include elems/internalHead
+    .tower#newsPage
+        .subTower
+            .oNewsDecor
+                include svg/newsDecor.svg
+            .newsDecor2
+                include svg/newsDecor2.svg
+            .sectionTitle Программа
+
+            .spkWr
+
+
+
+
+    include elems/footer
+    include elems/mobileMenu
+
+    script(src="/static/javascripts/utils.js")
+    script(src="/static/javascripts/mainScript.js")
+
+
