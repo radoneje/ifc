@@ -515,7 +515,8 @@
         line-height: 30px;
     }
     .pSpkBio {
-        max-height: calc(100vh - 560px);
+        /*max-height: calc(100vh - 560px);*/
+        padding-left: 0px;
     }
     .oTs{
         display: block;
@@ -571,7 +572,7 @@
         margin-top: 0px;
     }
     .pSpkSessionsWr {
-         margin-left: 0;
+        /* margin-left: 50px; */
     }
 
 
