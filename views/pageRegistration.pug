@@ -244,7 +244,7 @@ block content
                             .regCheckBoxBox
                         div
                             .regCheckBoxText СОГЛАШАЮСЬ НА ОБРАБОТКУ ПЕРСОНАЛЬНЫХ ДАННЫХ
-                                a.gray(onclick="event.preventDefault();window.open('/static/key/pers"+lang+"?open=open')")  (посмотреть)
+                                a.gray(   onclick="event.preventDefault();window.open('/static/key/pers"+lang+"?open=open')")  (посмотреть)
                     .reqRowErrorMessage(v-if="isTermsError && !user.isTerms") Cоглашение не принято
 
                 .regRow.desktop &nbsp;
