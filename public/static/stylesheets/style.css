@@ -1023,8 +1023,10 @@ input[type=number] {
     width: 40px;
     height: 40px;
     background: #E39A3F;
+    background-image: url('/static/images/close.svg');
+    background-size: cover;
     /* border-radius: 50%;*/
-    color: #BB3E3F;
+    color: #E39A3F;
 }
 
 .pUserPhoto {
