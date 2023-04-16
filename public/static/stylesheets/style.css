@@ -1024,9 +1024,11 @@ input[type=number] {
     height: 40px;
     background: #E39A3F;
     background-image: url('/static/images/close.svg');
-    background-size: cover;
     /* border-radius: 50%;*/
     color: #E39A3F;
+    background-position: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
 }
 
 .pUserPhoto {
