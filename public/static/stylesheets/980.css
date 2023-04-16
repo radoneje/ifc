@@ -601,6 +601,9 @@
     .pPgmPopUp .oSpkItem {
         width: 50%;
     }
+    .pPgmPopScroll {
+        height: calc(100vh - 183px);
+    }
 
 
 }
