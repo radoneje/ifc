@@ -545,14 +545,14 @@
         overflow-y: scroll;
         width: 100%;
     }
-    .oTrack:not(.impotant) .oSessionWr {
+    .pPgmPopUp .oTrack:not(.impotant) .oSessionWr {
         width: max-content;
     }
-    .oTrack:not(.impotant){
+    .pPgmPopUp .oTrack:not(.impotant){
         padding-left: 0;
         padding-right: 0;
     }
-    .oTrack:not(.impotant) .oSession {
+    .pPgmPopUp .oTrack:not(.impotant) .oSession {
         width: calc(100vw - 76px);
 
         padding: 8px;
