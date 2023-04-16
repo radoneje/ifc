@@ -19,7 +19,7 @@ const createPopUp = async (url, callback) => {
     close.classList.add("fullScreenCloseNotSave");
     close.classList.add("flex");
     close.classList.add("center");
-    close.innerHTML = "X"
+    //close.innerHTML = "X"
     box.appendChild(close)
 
     document.body.appendChild(elem)
