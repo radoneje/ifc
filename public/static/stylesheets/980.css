@@ -602,14 +602,14 @@
         width: 50%;
     }
     .pPgmPopScroll {
-        height: calc(100vh - 183px);
+        max-height: calc(100vh - 244px);
     }
     .fullScreencontent,.pPgmPopUp{
         height: 100%;
     }
     .pPgmPopUpWr{
         height: calc(100% - 50px);
-        background-color: greenyellow;
+
     }
 
 
