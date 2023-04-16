@@ -604,6 +604,13 @@
     .pPgmPopScroll {
         height: calc(100vh - 183px);
     }
+    .fullScreencontent,.pPgmPopUp{
+        height: 100%;
+    }
+    .pPgmPopUpWr{
+        height: calc(100% - 50px);
+        background-color: greenyellow;
+    }
 
 
 }
