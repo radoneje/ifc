@@ -101,7 +101,7 @@ router.get('/invoice/:guid', async function (req, res, next) {
             let filename=__dirname+"/../public/static/invoices/invoice_22.pdf"
             doc.pipe(fs.createWriteStream(filename));
             doc
-                .font("timesnewcyr.ttf")///var/fonts/OpenSans-Regular-2.ttf")
+                .font("/var/fonts/timesnewcyr.ttf")///var/fonts/OpenSans-Regular-2.ttf")
                 .fontSize(12)
                 .fillColor('#FF0000')
                 .text("dddddСчет номер 5Счет номер 5Счет номер 5Счет номер 5Счет номер 5Счет номер 5Счет номер 5Счет номер 5Счет номер 5Счет номер 5Счет номер 5Счет номер 5Счет номер 5Счет номер 5Счет номер 5Счет номер 5\nПлательщик 11", 100, 100,{
