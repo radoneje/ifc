@@ -102,7 +102,8 @@ router.get('/invoice/:guid', async function (req, res, next) {
             doc.pipe(fs.createWriteStream(filename));
             doc.text("bla-bla", 100, 100)
             doc.end();
-            return res.download(filename)
+            setTimeout(()=>{res.download(filename)},1000)
+
 
 
     } catch (e) {
