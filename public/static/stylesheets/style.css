@@ -1599,6 +1599,9 @@ input[type=number] {
 .faqText li{
     margin-top:8px;
 }
+.faqText a{
+    text-decoration: underline;
+}
 
 
 
