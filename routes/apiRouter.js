@@ -18,9 +18,7 @@ const __dirname = path.dirname(__filename);
 
 
 /* GET home page. */
-router.get('/', async function (req, res, next) {
 
-});
 router.post('/uploadFile', upload.single('file'),  async function (req, res, next) {
 
     let ext = path.extname(req.file.originalname)
@@ -210,11 +208,11 @@ router.post('/regUser2', async function (req, res, next) {
 
 
 async function addUser(req, user) {
-    let r = await req.knex("t_users").where({passportNumber: user.passportNumber})
-    if (r.length == 0 || user.passportNumber.length < 2)
+    //let r = await req.knex("t_users").where({passportNumber: user.passportNumber})
+    //if (r.length == 0 || user.passportNumber.length < 2)
         user = (await req.knex("t_users").insert(user, "*"))[0]
-    else
-        user = r[0]
+   // else
+    //    user = r[0]
     return user
 }
 
