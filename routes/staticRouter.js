@@ -97,14 +97,16 @@ router.get('/image/:size/:id', async function (req, res, next) {
 
 router.get('/invoice/:guid', async function (req, res, next) {
         try {
-            var doc = new PDFDocument({});
+            var doc = new PDFDocument({size: 'a4', layout: 'portrait'});
             let filename=__dirname+"/../public/static/invoices/invoice_22.pdf"
             doc.pipe(fs.createWriteStream(filename));
             doc
                 .font("/var/fonts/OpenSans-Regular-2.ttf")
                 .fontSize(10)
                 .fillColor('#FF0000')
-                .text("dddddСчет номер 5\nПлательщик 11", 100, 100)
+                .text("dddddСчет номер 5Счет номер 5Счет номер 5Счет номер 5Счет номер 5Счет номер 5Счет номер 5Счет номер 5Счет номер 5Счет номер 5Счет номер 5Счет номер 5Счет номер 5Счет номер 5Счет номер 5Счет номер 5\nПлательщик 11", 100, 100,{
+                width: 200
+            })
             doc.end();
             setTimeout(()=>{res.download(filename)},1000)
 
