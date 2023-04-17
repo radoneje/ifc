@@ -100,7 +100,11 @@ router.get('/invoice/:guid', async function (req, res, next) {
             var doc = new PDFDocument({bufferPages: true, encoding : 'UTF-8'});
             let filename=__dirname+"/../public/static/invoices/invoice_22.pdf"
             doc.pipe(fs.createWriteStream(filename));
-            doc.text("Счет номер 5\nПлательщик 11", 0, 0)
+            doc
+                .font("/var/fonts/OpenSans-Regular-2.ttf")
+                .fontSize(10)
+                .fillColor('#550000')
+                .text("Счет номер 5\nПлательщик 11", 0, 0)
             doc.end();
             setTimeout(()=>{res.download(filename)},1000)
 
