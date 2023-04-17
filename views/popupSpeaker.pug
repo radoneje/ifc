@@ -9,7 +9,7 @@
             .pSpkNameBox
                 .pSpkName #{spk["i"+lang]}
                 .pSpkName #{spk["f"+lang]}
-                .pSpkCompany  #{spk["company"+lang]}
+                .pSpkCompany  !{spk["company"+lang]}
 
     .pSpkBody
         if spk.sessions && spk.sessions.length > 0
