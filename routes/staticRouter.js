@@ -98,7 +98,7 @@ router.get('/image/:size/:id', async function (req, res, next) {
 router.get('/invoice/:guid', async function (req, res, next) {
         try {
             var doc = new PDFDocument({bufferPages: true});
-            let filename=__dirname+"../public/static/invoices/invoice_22.pdf"
+            let filename=__dirname+"/../public/static/invoices/invoice_22.pdf"
             doc.pipe(fs.createWriteStream(filename));
             doc.text("bla-bla", 100, 100)
             doc.end();
