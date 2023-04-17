@@ -10,6 +10,7 @@ import {fileURLToPath} from "url";
 import gm from 'gm'
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+import PDFDocument from 'pdfkit';
 
 
 /* GET home page. */
@@ -93,6 +94,23 @@ router.get('/image/:size/:id', async function (req, res, next) {
         res.sendStatus(500)
     }
 });
+
+router.get('/invoice/:guid', async function (req, res, next) {
+        try {
+            var myDoc = new PDFDocument({bufferPages: true});
+            let filename=__dirname+"../public/static/invoices/invoice_22.pdf"
+            doc.pipe(fs.createWriteStream(filename));
+            doc.text("bla-bla", 100, 100)
+            doc.end();
+            return res.download(filename)
+
+
+    } catch (e) {
+            console.error(e)
+            res.sendStatus(500)
+        }
+});
+
 
 
 export default router;
