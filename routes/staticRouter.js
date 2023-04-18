@@ -117,7 +117,7 @@ router.get('/invoice/:guid', async function (req, res, next) {
                 .fillColor('#000000')
                 .text( inv.id+" от " +moment(inv.date).format("DD.MM.YYYY")+"г.", /*x*/ 260 , /*y*/ 163,{width: 400})
                 .text( recvizit, /*x*/ 178 , /*y*/ 273,{width: 400})
-                .text( inv.user[0].id+" от " +moment(inv.user[0].date).format("DD.MM.YYYY")+"г.", /*x*/ 260 , /*y*/ 350,{width: 400})
+                .text( inv.user[0].id+" от " +moment(inv.user[0].date).format("DD.MM.YYYY")+"г.", /*x*/ 260 , /*y*/ 340,{width: 400})
             doc.addPage()
                 .image(__dirname+"/../forpdf/invoice/02.png",0,0,{width:600})
             doc.addPage()
