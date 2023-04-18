@@ -111,7 +111,7 @@ router.get('/invoice/:guid', async function (req, res, next) {
                 .font("/var/fonts/Arial.ttf")///var/fonts/OpenSans-Regular-2.ttf")
                 .fontSize(12)
                 .fillColor('#000000')
-                .text( inv.id+" от" +moment.format("DD.MM.YYYY")+" г.", /*x*/ 260 , /*y*/ 163,{width: 400})
+                .text( inv.id+" от" +moment(inv.date).format("DD.MM.YYYY")+" г.", /*x*/ 260 , /*y*/ 163,{width: 400})
             doc.addPage()
                 .image(__dirname+"/../forpdf/invoice/02.png",0,0,{width:600})
             doc.addPage()
