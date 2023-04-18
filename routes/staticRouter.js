@@ -107,7 +107,8 @@ router.get('/invoice/:guid', async function (req, res, next) {
                 .fontSize(12)
                 .fillColor('#000000')
                 .text("Счет22\nПлательщик 11", 100, 100,{width: 200})
-            doc.addPage();
+            doc.addPage()
+                .image(__dirname+"/../forpdf/invoice/02.png",0,0,{width:600})
             doc.addPage();
             doc.addPage();
 
