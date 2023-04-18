@@ -105,9 +105,10 @@ router.get('/invoice/:guid', async function (req, res, next) {
             let recvizit=inv.company[0].name+","
             recvizit+="\nИНН "+inv.company[0].inn+", КПП "+inv.company[0].kpp+","
             recvizit+="\n"+inv.company[0].address
-            if(inv.isPaySelf)
-                recvizit=inv.user[0].f+" "+inv.user[0].i+inv.user[0].o
-
+            if(inv.isPaySelf) {
+                recvizit = inv.user[0].f + " " + inv.user[0].i + " ", inv.user[0].o
+                recvizit += "\n паспорт:" +inv.user[0].passportSerial +" "+ inv.user[0].passportNumber +", выдан: "+ inv.user[0].passportDate+", код подразделения "+ inv.user[0].passportCode
+            }
             var doc = new PDFDocument({size: 'a4', layout: 'portrait'});
             let filename=__dirname+"/../public/static/invoices/invoice_22.pdf"
             doc.pipe(fs.createWriteStream(filename));
