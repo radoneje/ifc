@@ -1602,7 +1602,10 @@ input[type=number] {
 .faqText a{
     text-decoration: underline;
 }
-
+.regBox input::placeholder{
+    font-weight: 300;
+    font-size: 0.8em;
+}
 
 
 
