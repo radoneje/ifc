@@ -110,7 +110,7 @@ router.get('/invoiceshort/:guid', async function (req, res, next) {
             recvizit += "\nпаспорт:" +(inv.user[0].passportSerial || "")+" "+ inv.user[0].passportNumber +", выдан: "+ inv.user[0].passportDate+", код подразделения "+ inv.user[0].passportCode
         }
         var doc = new PDFDocument({size: 'a4', layout: 'portrait'});
-        let filename=__dirname+"/../public/static/invoices/invoice_22.pdf"
+        let filename=__dirname+"/../public/static/invoices/invoice_"+String(item.id).padStart(4, '0')+"_"+moment(inv.date).format("DD_MM_YYYY")+".pdf"
         doc.pipe(fs.createWriteStream(filename));
 
         doc
