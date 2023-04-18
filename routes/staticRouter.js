@@ -109,9 +109,9 @@ router.get('/invoice/:guid', async function (req, res, next) {
                 .text("22 от 22 02 2009г.", 200, 100,{width: 400})
             doc.addPage()
                 .image(__dirname+"/../forpdf/invoice/02.png",0,0,{width:600})
-            doc.addPage();
+            doc.addPage()
                 .image(__dirname+"/../forpdf/invoice/03.png",0,0,{width:600})
-            doc.addPage();
+            doc.addPage()
                 .image(__dirname+"/../forpdf/invoice/03.png",0,0,{width:600})
 
 
