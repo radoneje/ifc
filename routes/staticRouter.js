@@ -100,14 +100,16 @@ router.get('/invoice/:guid', async function (req, res, next) {
             var doc = new PDFDocument({size: 'a4', layout: 'portrait'});
             let filename=__dirname+"/../public/static/invoices/invoice_22.pdf"
             doc.pipe(fs.createWriteStream(filename));
+            doc.addPage();
+            doc.addPage();
+            doc.addPage();
             doc
+                .image(__dirname+"/../forpdf/invoce/01.png",0,0,{width:300})
                 .font("/var/fonts/Times_New_Roman.ttf")///var/fonts/OpenSans-Regular-2.ttf")
                 .fontSize(12)
                 .fillColor('#000000')
                 .text("Счет22\nПлательщик 11", 100, 100,{width: 200})
-            doc.addPage();
-            doc.addPage();
-            doc.addPage();
+
 
             doc.end();
             setTimeout(()=>{res.download(filename)},1000)
