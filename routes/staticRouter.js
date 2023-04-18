@@ -104,7 +104,7 @@ router.get('/invoice/:guid', async function (req, res, next) {
             doc.addPage();
             doc.addPage();
             doc
-                .image(__dirname+"/../forpdf/invoce/01.png",0,0,{width:300})
+                .image(__dirname+"/../forpdf/invoice/01.png",0,0,{width:300})
                 .font("/var/fonts/Times_New_Roman.ttf")///var/fonts/OpenSans-Regular-2.ttf")
                 .fontSize(12)
                 .fillColor('#000000')
