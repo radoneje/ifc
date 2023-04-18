@@ -54,19 +54,19 @@ block content
                 .regRow(v-bind:class="{error:errors.passportNumber}")
                     .regRowGroup.flex.left
                         .recLabel.reg287 паспорт серия номер
-                        input.reqInput(v-model="user.passportNumber" must name="passportNumber")
+                        input.reqInput(v-model="user.passportNumber" must name="passportNumber" placeholder="ФОРМАТ: С ПРОБЕЛОМ, КАК В ДОКУМЕНТЕ")
                 .regRow(v-bind:class="{error:errors.passportDate}")
                     .regRowGroup.flex.left
                         .recLabel.reg287 дата выдачи
-                        input.reqInput(v-model="user.passportDate" must name="passportDate")
+                        input.reqInput(v-model="user.passportDate" must name="passportDate" placeholder="ФОРМАТ: КАК В ДОКУМЕНТЕ")
                 .regRow(v-bind:class="{error:errors.passportCode}")
                     .regRowGroup.flex.left
                         .recLabel.reg287 код подразделения
-                        input.reqInput(v-model="user.passportCode" must name="passportCode")
+                        input.reqInput(v-model="user.passportCode" must name="passportCode" placeholder="ФОРМАТ: КАК В ДОКУМЕНТЕ")
                 .regRow(v-bind:class="{error:errors.address}")
                     .regRowGroup.flex.left
                         .recLabel.reg287 адрес регистрации
-                        input.reqInput(v-model="user.address" must name="address")
+                        input.reqInput(v-model="user.address" must name="address" placeholder="ФОРМАТ: КАК В ДОКУМЕНТЕ")
                 .regRow(v-bind:class="{error:errors.email}")
                     .regRowGroup.flex.left
                         .recLabel.reg287 email
@@ -74,7 +74,7 @@ block content
                 .regRow(v-bind:class="{error:errors.phone}")
                     .regRowGroup.flex.left
                         .recLabel.reg287 телефон
-                        input.reqInput(v-model="user.phone" must name="phone")
+                        input.reqInput(v-model="user.phone" must name="phone" placeholder="ФОРМАТ: +7 000 000 0000")
                 if !typeid && typeid!=4
                     .regRow
                         .regCheckBox.flex.left(v-bind:class="{active:user.isProxy}" v-on:click="user.isProxy=!user.isProxy")
@@ -95,7 +95,7 @@ block content
                         .regRow(v-bind:class="{error:errors.proxyphone}")
                             .regRowGroup.flex.left
                                 .recLabel.reg287 телефон
-                                input.reqInput(v-model="user.proxyphone" must name="proxyphone")
+                                input.reqInput(v-model="user.proxyphone" must name="proxyphone" placeholder="ФОРМАТ: +7 000 000 0000" )
                 if !typeid && typeid!=4
                     .regRow.topdivaider &nbsp;
                 else
@@ -119,9 +119,9 @@ block content
                             .FNSloader
                                 include svg/loader.svg
                         if typeid==4
-                            .regCheckBoxComment Для регистрации издания нажмите на кнопку
+                            .regCheckBoxComment Для запонения остальных полей загрузите данные из ФНС
                         else
-                            .regCheckBoxComment Для регистрации компании нажмите на кнопку
+                            .regCheckBoxComment Для запонения остальных полей загрузите данные из ФНС
                         .FNSloader.mobile.opacity0(v-bind:class="{opacity100:innStatus.state==1}")
                             include svg/loader.svg
 
@@ -148,7 +148,7 @@ block content
                 .regRow
                     .regRowGroup.flex.left
                         .recLabel.reg287 телефон
-                        input.reqInput( v-model="user.company.phone")
+                        input.reqInput( v-model="user.company.phone" placeholder="ФОРМАТ: +7 000 000 0000")
                 .regRow
                     .regRowGroup.flex.left
                         if typeid==4
