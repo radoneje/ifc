@@ -144,15 +144,7 @@ router.get('/invoiceshort/:guid', async function (req, res, next) {
         let invoices=await req.knex("v_invoice").where({guid:req.params.guid})
         if(invoices.length==0)
             return res.sendStatus(404);
-
-        let inv=invoices[0]
-        let filename="/var/ifc_data/invoices/short/invoice_short_"+String(inv.id).padStart(3, '0')+"___"+moment(inv.date).format("DD_MM_YYYY")+".pdf"
-        if (fs.existsSync(filename)) {
-            return res.download(filename);
-        }
-
-
-        setTimeout(()=>{res.download(filename)},1000)
+        res.download(await genShortInvoice(invoices[0]))
 
 
 
