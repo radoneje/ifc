@@ -96,6 +96,45 @@ router.get('/image/:size/:id', async function (req, res, next) {
     }
 });
 
+router.get('/invoiceshort/:guid', async function (req, res, next) {
+    try {
+        let invoices=await req.knex("v_invoice").where({guid:req.params.guid})
+        if(invoices.length==0)
+            return res.sendStatus(404);
+        let inv=invoices[0]
+        let recvizit=inv.company[0].name+","
+        recvizit+="\nИНН "+inv.company[0].inn+", КПП "+inv.company[0].kpp+","
+        recvizit+="\n"+inv.company[0].address
+        if(inv.isPaySelf) {
+            recvizit = inv.user[0].f + " " + inv.user[0].i + " "+ inv.user[0].o
+            recvizit += "\nпаспорт:" +(inv.user[0].passportSerial || "")+" "+ inv.user[0].passportNumber +", выдан: "+ inv.user[0].passportDate+", код подразделения "+ inv.user[0].passportCode
+        }
+        var doc = new PDFDocument({size: 'a4', layout: 'portrait'});
+        let filename=__dirname+"/../public/static/invoices/invoice_22.pdf"
+        doc.pipe(fs.createWriteStream(filename));
+
+        doc
+            .image(__dirname+"/../forpdf/invoice/01.png",0,0,{width:600})
+            .font("/var/fonts/Arial.ttf")///var/fonts/OpenSans-Regular-2.ttf")
+            .fontSize(12)
+            .fillColor('#000000')
+            .text( inv.id+" от " +moment(inv.date).format("DD.MM.YYYY")+"г.", /*x*/ 260 , /*y*/ 163,{width: 400})
+            .text( recvizit, /*x*/ 178 , /*y*/ 273,{width: 400})
+            .text( inv.user[0].id+" от " +moment(inv.user[0].date).format("DD.MM.YYYY")+"г.", /*x*/ 243 , /*y*/ 340,{width: 400})
+
+
+
+        doc.end();
+        setTimeout(()=>{res.download(filename)},1000)
+
+
+
+    } catch (e) {
+        console.error(e)
+        res.sendStatus(500)
+    }
+});
+
 router.get('/invoice/:guid', async function (req, res, next) {
         try {
             let invoices=await req.knex("v_invoice").where({guid:req.params.guid})
