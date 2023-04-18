@@ -104,9 +104,11 @@ router.get('/invoice/:guid', async function (req, res, next) {
                 .font("/var/fonts/Times_New_Roman.ttf")///var/fonts/OpenSans-Regular-2.ttf")
                 .fontSize(12)
                 .fillColor('#000000')
-                .text("Счет22\nПлательщик 11", 100, 100,{
-                width: 200
-            })
+                .text("Счет22\nПлательщик 11", 100, 100,{width: 200})
+            doc.addPage();
+            doc.addPage();
+            doc.addPage();
+
             doc.end();
             setTimeout(()=>{res.download(filename)},1000)
 
