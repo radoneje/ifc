@@ -105,7 +105,7 @@ router.get('/invoice/:guid', async function (req, res, next) {
                 return res.sendStatus(404);
 
             let inv=invoices[0]
-            let filename=__dirname+"/../public/static/invoices/invoice_"+String(item.id).padStart(4, '0')+"_"+moment(inv.date).format("DD_MM_YYYY")+".pdf"
+            let filename=__dirname+"/../public/static/invoices/invoice_"+String(inv.id).padStart(4, '0')+"_"+moment(inv.date).format("DD_MM_YYYY")+".pdf"
             if (fs.existsSync(filename)) {
                 return res.download(filename);
             }
