@@ -103,8 +103,8 @@ router.get('/invoice/:guid', async function (req, res, next) {
                 return res.sendStatus(404);
             let inv=invoices[0]
             let recvizit=inv.company[0].name+","
-            recvizit+="\r\nИНН "+inv.company[0].inn+", КПП "+inv.company[0].kpp+","
-            recvizit+=inv.company[0].address
+            recvizit+="\nИНН "+inv.company[0].inn+", КПП "+inv.company[0].kpp+","
+            recvizit+="\n"+inv.company[0].address
 
             var doc = new PDFDocument({size: 'a4', layout: 'portrait'});
             let filename=__dirname+"/../public/static/invoices/invoice_22.pdf"
@@ -116,7 +116,7 @@ router.get('/invoice/:guid', async function (req, res, next) {
                 .fontSize(12)
                 .fillColor('#000000')
                 .text( inv.id+" от " +moment(inv.date).format("DD.MM.YYYY")+"г.", /*x*/ 260 , /*y*/ 163,{width: 400})
-                .text( recvizit, /*x*/ 160 , /*y*/ 270,{width: 400})
+                .text( recvizit, /*x*/ 165 , /*y*/ 271,{width: 400})
             doc.addPage()
                 .image(__dirname+"/../forpdf/invoice/02.png",0,0,{width:600})
             doc.addPage()
