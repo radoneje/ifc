@@ -97,6 +97,9 @@ router.get('/image/:size/:id', async function (req, res, next) {
 
 router.get('/invoice/:guid', async function (req, res, next) {
         try {
+            let invoices=await req.knex("v_invoice").where({guid:req.params.guid})
+            if(invoices.length==0)
+                return res.sendStatus(404);
             var doc = new PDFDocument({size: 'a4', layout: 'portrait'});
             let filename=__dirname+"/../public/static/invoices/invoice_22.pdf"
             doc.pipe(fs.createWriteStream(filename));
