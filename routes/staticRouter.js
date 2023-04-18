@@ -105,6 +105,8 @@ router.get('/invoice/:guid', async function (req, res, next) {
             let recvizit=inv.company[0].name+","
             recvizit+="\nИНН "+inv.company[0].inn+", КПП "+inv.company[0].kpp+","
             recvizit+="\n"+inv.company[0].address
+            if(inv.isPaySelf)
+                recvizit=inv.user[0].f+" "+inv.user[0].i+inv.user[0].o
 
             var doc = new PDFDocument({size: 'a4', layout: 'portrait'});
             let filename=__dirname+"/../public/static/invoices/invoice_22.pdf"
@@ -117,7 +119,7 @@ router.get('/invoice/:guid', async function (req, res, next) {
                 .fillColor('#000000')
                 .text( inv.id+" от " +moment(inv.date).format("DD.MM.YYYY")+"г.", /*x*/ 260 , /*y*/ 163,{width: 400})
                 .text( recvizit, /*x*/ 178 , /*y*/ 273,{width: 400})
-                .text( inv.user[0].id+" от " +moment(inv.user[0].date).format("DD.MM.YYYY")+"г.", /*x*/ 243 , /*y*/ 341,{width: 400})
+                .text( inv.user[0].id+" от " +moment(inv.user[0].date).format("DD.MM.YYYY")+"г.", /*x*/ 243 , /*y*/ 340,{width: 400})
             doc.addPage()
                 .image(__dirname+"/../forpdf/invoice/02.png",0,0,{width:600})
             doc.addPage()
