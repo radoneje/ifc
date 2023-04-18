@@ -103,7 +103,7 @@ router.get('/invoiceshort/:guid', async function (req, res, next) {
             return res.sendStatus(404);
 
         let inv=invoices[0]
-        let filename="/var/ifc_data/invoices/short/invoice_"+String(inv.id).padStart(3, '0')+"___"+moment(inv.date).format("DD_MM_YYYY")+".pdf"
+        let filename="/var/ifc_data/invoices/short/invoice_short_"+String(inv.id).padStart(3, '0')+"___"+moment(inv.date).format("DD_MM_YYYY")+".pdf"
         if (fs.existsSync(filename)) {
             return res.download(filename);
         }
@@ -127,12 +127,7 @@ router.get('/invoiceshort/:guid', async function (req, res, next) {
             .text( inv.id+" от " +moment(inv.date).format("DD.MM.YYYY")+"г.", /*x*/ 260 , /*y*/ 163,{width: 400})
             .text( recvizit, /*x*/ 178 , /*y*/ 273,{width: 400})
             .text( inv.user[0].id+" от " +moment(inv.user[0].date).format("DD.MM.YYYY")+"г.", /*x*/ 243 , /*y*/ 340,{width: 400})
-        doc.addPage()
-            .image(__dirname+"/../forpdf/invoice/02.png",0,0,{width:600})
-        doc.addPage()
-            .image(__dirname+"/../forpdf/invoice/03.png",0,0,{width:600})
-        doc.addPage()
-            .image(__dirname+"/../forpdf/invoice/04.png",0,0,{width:600})
+
 
 
         doc.end();
