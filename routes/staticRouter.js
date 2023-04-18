@@ -11,6 +11,7 @@ import gm from 'gm'
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 import PDFDocument from 'pdfkit';
+import moment from 'moment'
 
 
 /* GET home page. */
@@ -100,6 +101,7 @@ router.get('/invoice/:guid', async function (req, res, next) {
             let invoices=await req.knex("v_invoice").where({guid:req.params.guid})
             if(invoices.length==0)
                 return res.sendStatus(404);
+            let inv=invoices[0]
             var doc = new PDFDocument({size: 'a4', layout: 'portrait'});
             let filename=__dirname+"/../public/static/invoices/invoice_22.pdf"
             doc.pipe(fs.createWriteStream(filename));
@@ -109,7 +111,7 @@ router.get('/invoice/:guid', async function (req, res, next) {
                 .font("/var/fonts/Arial.ttf")///var/fonts/OpenSans-Regular-2.ttf")
                 .fontSize(12)
                 .fillColor('#000000')
-                .text("22 от 22 02 2009г.", /*x*/ 260 , /*y*/ 163,{width: 400})
+                .text( inv.id+" от" +moment.format("DD.MM.YYYY")+" г.", /*x*/ 260 , /*y*/ 163,{width: 400})
             doc.addPage()
                 .image(__dirname+"/../forpdf/invoice/02.png",0,0,{width:600})
             doc.addPage()
