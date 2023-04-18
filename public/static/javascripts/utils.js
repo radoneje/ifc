@@ -140,7 +140,7 @@ const getPhoto = async (aspectRatio = 4 / 5) => {
                         aspectRatio: aspectRatio,//1,//    9/16
                         viewMode: 1,
                         autoCropArea: 1,
-                        zoomable: false,
+                        zoomable: true,
                     });
                     photoSaveBtn.onclick = () => {
                         if (photoSaveBtn.classList.contains("loading"))
