@@ -106,7 +106,7 @@ router.get('/invoice/:guid', async function (req, res, next) {
                 .font("/var/fonts/Arial.ttf")///var/fonts/OpenSans-Regular-2.ttf")
                 .fontSize(12)
                 .fillColor('#000000')
-                .text("22 от 22 02 2009г.", /*x*/ 260 , /*y*/ 150,{width: 400})
+                .text("22 от 22 02 2009г.", /*x*/ 260 , /*y*/ 155,{width: 400})
             doc.addPage()
                 .image(__dirname+"/../forpdf/invoice/02.png",0,0,{width:600})
             doc.addPage()
