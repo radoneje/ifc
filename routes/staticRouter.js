@@ -112,7 +112,7 @@ router.get('/invoice/:guid', async function (req, res, next) {
             doc.addPage()
                 .image(__dirname+"/../forpdf/invoice/03.png",0,0,{width:600})
             doc.addPage()
-                .image(__dirname+"/../forpdf/invoice/03.png",0,0,{width:600})
+                .image(__dirname+"/../forpdf/invoice/04.png",0,0,{width:600})
 
 
             doc.end();
