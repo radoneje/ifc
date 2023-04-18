@@ -103,7 +103,7 @@ router.get('/invoiceshort/:guid', async function (req, res, next) {
             return res.sendStatus(404);
 
         let inv=invoices[0]
-        let filename=__dirname+"/var/ifc_data/invoices/short/invoice_"+String(inv.id).padStart(3, '0')+"___"+moment(inv.date).format("DD_MM_YYYY")+".pdf"
+        let filename="/var/ifc_data/invoices/short/invoice_"+String(inv.id).padStart(3, '0')+"___"+moment(inv.date).format("DD_MM_YYYY")+".pdf"
         if (fs.existsSync(filename)) {
             return res.download(filename);
         }
@@ -153,7 +153,7 @@ router.get('/invoice/:guid', async function (req, res, next) {
                 return res.sendStatus(404);
 
             let inv=invoices[0]
-            let filename=__dirname+"/var/ifc_data/invoices/all/invoice_"+String(inv.id).padStart(3, '0')+"___"+moment(inv.date).format("DD_MM_YYYY")+".pdf"
+            let filename="/var/ifc_data/invoices/all/invoice_"+String(inv.id).padStart(3, '0')+"___"+moment(inv.date).format("DD_MM_YYYY")+".pdf"
             if (fs.existsSync(filename)) {
                 return res.download(filename);
             }
