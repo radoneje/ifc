@@ -1679,6 +1679,21 @@ body {
     width: min(1800px, calc(100% - 240px));
 
 }
+.menu.vtoroe{
+    position: absolute;
+    bottom: 106px;
+    left: 60%;
+}
+.vtoroe .menuItem{
+    margin-bottom: 12px;
+}
+.vtoroe. .menu.menuItemBox{
+    background-color:#E39A3F;
+}
+.vtoroe. .menuItemText{
+    color:white;
+    margin-top:12px
+}
 @media all and (max-width: 1600px){
     .mainMenuItem{
 
