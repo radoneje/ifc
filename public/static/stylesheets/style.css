@@ -1646,10 +1646,10 @@ input[type=number] {
 .participaintRow a.regSubmit{
     text-decoration: none;
 }
-#mainPageTower{
+.ushi{
     position: relative;
 }
-#mainPageTower:after{
+.ushi:after{
     position: absolute;
     content: '';
     width: 523px;
@@ -1659,7 +1659,7 @@ input[type=number] {
     background-repeat-x: no-repeat;
     background-image: url(/static/images/01_main_1904_USHI_right.svg);
 }
-#mainPageTower:before{
+.ushi:before{
     position: absolute;
     content: '';
     width: 500px;
