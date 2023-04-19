@@ -321,7 +321,7 @@ h2 {
 }
 
 .newsItem {
-    width: calc(20% - 40px);
+    width: calc(25% - 40px);
     background: #F1CCA7;
     padding: 48px 38px;
     padding-bottom: 84px;
