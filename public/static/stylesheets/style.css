@@ -1646,40 +1646,8 @@ input[type=number] {
 .participaintRow a.regSubmit{
     text-decoration: none;
 }
-.ushi{
-    position: relative;
-}
-.ushi:after{
-    position: absolute;
-    content: '';
-    width: 523px;
-    height: 100vw;
-    right: -523px;
-    top: 0;
-    background-repeat-x: no-repeat;
-    background-image: url(/static/images/01_main_1904_USHI_right.svg);
-}
-.ushi:before{
-    position: absolute;
-    content: '';
-    width: 500px;
-    height: 100vw;
-    left: -500px;
-    top: 0;
-    background-repeat-x: no-repeat;
-    background-position: right;
-    background-size: contain;
-    background-image: url(/static/images/01_main_1904_USHI_left.svg);
-}
-body {
-    max-width: 100%;
-    overflow-x: clip;
-    //background: #eee;
-}
-.tower {
-    width: min(1800px, calc(100% - 240px));
 
-}
+
 .menu.vtoroe{
     position: absolute;
     bottom:57px;
