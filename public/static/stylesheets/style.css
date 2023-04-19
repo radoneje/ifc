@@ -201,6 +201,7 @@ input {
     bottom: inherit;
     left: 80%;
     color:white;
+    top: 117px;
 
 }
 .mainImg2Wr  .mainTitle{
@@ -216,6 +217,14 @@ input {
     margin-top: 0px;
     padding: 6px 12px;
     display: block;
+    position: relative;
+}
+.mainImg2Wr .mainMenuItem:before{
+    width: 24px;
+    height: 24px;
+    content: '';
+    background: #FFFFFF;
+    left: -36px;
 }
 .mainImg2Wr .mainLogo {
     /* position: absolute; */
