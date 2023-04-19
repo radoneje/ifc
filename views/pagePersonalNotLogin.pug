@@ -16,7 +16,11 @@ block content
                     .menuItemBox
                     .menuItemText Введите e-mail, указанный при регистрации
                 .participaintRow
-                    div Если участник зарегистрирован, на указанный email будет отправлена персональная ссылка на личный кабинет
+                    div Если участник зарегистрирован, будет отправлена персональная ссылка на личный кабинет
+                .regRow()
+                    .regRowGroup.flex.left
+                        .recLabel.reg287 email
+                        input.reqInput( name="email" email type="email" )
 
     include elems/footer
         include elems/mobileMenu
