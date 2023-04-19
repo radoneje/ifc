@@ -23,11 +23,11 @@ block content
                         input.reqInput( name="email" email type="email" )
 
                 .participaintRow
-                        .regSubmit#send Отправить ссылку
-                .participaintRow&nbsp;
+                    .regSubmit#send Отправить ссылку
+                .participaintRow    &nbsp;
                 .participaintRow#confirm(style="display:none")
-                            div Eсли e-mail зарегистрирован, ссылка отправлена.
-                            div Спаисибо!
+                    div Eсли e-mail зарегистрирован, ссылка отправлена.
+                    div Спаисибо!
 
 
     include elems/footer
@@ -36,13 +36,13 @@ block content
     script(src="/static/javascripts/utils.js")
     script(src="/static/javascripts/mainScript.js")
     script.
-        send.onclick=()=>{
-            if(! send.value || send.value.length<4){
+        send.onclick = () => {
+            if (!send.value || send.value.length < 4) {
                 send.focus();
                 send.parentNode.parentNode.classList.add("error")
                 return;
             }
             send.parentNode.parentNode.classList.remove("error")
-            send.style.display="none"
-            confirm.style.display="block"
+            send.style.display = "none"
+            confirm.style.display = "block"
         }
