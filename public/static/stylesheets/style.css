@@ -1752,6 +1752,14 @@ input[type=number] {
     color:#F1CCA7;
 
 }
+@media all and (max-width: 1700px){
+
+    .mainImg2Wr .menuItem:last-child{
+        position: absolute;
+        top: 40px;
+        left: 337px;
+    }
+}
 @media all and (max-width: 1600px){
     .mainImg2Wr h2.desktop {
         position: absolute;
@@ -1762,11 +1770,7 @@ input[type=number] {
         color: #FFFFFF;
         padding-left: 48px;
     }
-    .mainImg2Wr .menuItem:last-child{
-        position: absolute;
-        top: 40px;
-        left: 337px;
-    }
+
 }
 
 
