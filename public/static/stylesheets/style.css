@@ -220,12 +220,20 @@ input {
     position: relative;
 }
 .mainImg2Wr .mainMenuItem:before{
-    width: 24px;
-    height: 24px;
+    width: 16px;
+    height: 17px;
     content: '';
     background: #FFFFFF;
-    left: -36px;
+    left: -18px;
+    top: 9px;
+    position: absolute;
 }
+.mainImg2Wr .mainMenuItem:hover:before{
+
+    background: #F1CCA7;
+
+}
+
 .mainImg2Wr .mainLogo {
     /* position: absolute; */
     top: 7%;
