@@ -92,6 +92,7 @@ body {
     line-height: 1;
     font-family: 'Stem', SansSerif;
     /*background-image: url('/static/images/0_fon_02.svg');*/
+    /*background-image: url('/static/images/01_main_ushi.svg');*/
 }
 
 ol, ul {
@@ -1645,6 +1646,19 @@ input[type=number] {
 .participaintRow a.regSubmit{
     text-decoration: none;
 }
+#mainPageTower{
+    position: relative;
+}
+#mainPageTower:after{
+    position: absolute;
+    content: '';
+    width: 300px;
+    height: 100vw;
+    right: -300px;
+    background-image: url('/static/images/uhor.svg');
+}
+
+
 
 
 
