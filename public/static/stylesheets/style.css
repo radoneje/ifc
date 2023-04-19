@@ -1637,6 +1637,9 @@ input[type=number] {
 .participaintRow .regSubmit{
     display: block;
 }
+.participaintRow a{
+    text-decoration: underline;
+}
 
 
 
