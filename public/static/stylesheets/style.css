@@ -180,6 +180,11 @@ input {
     left: 48px;
     width: 100%;
 }
+.mainTitle h2.desktop{
+    position: absolute;
+    left: 48px;
+    bottom:12px;
+}
 .mainImg2Wr{
     width: 100%;
     position: relative;
