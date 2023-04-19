@@ -1183,7 +1183,7 @@ input[type=number] {
     width: 100%;
 }
 
-#newsPage, .participantsPage {
+#newsPage, #participantsPage {
     position: relative;
     padding-top: 56px;
     padding-bottom: 56px;
