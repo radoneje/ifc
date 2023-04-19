@@ -275,10 +275,11 @@
     }
 
     #mobileMenu .mainMenuItem{
-        text-align: center;
+        text-align: left;
         cursor: pointer;
         color: #FFFFFF;
         padding: 10px;
+        padding-left: 36px;
     }
     #mobileMenu .menuItemText{
         color: #FFFFFF;
@@ -291,6 +292,7 @@
     }
     .mobileMenuSiteItems{
         margin-top: 12px;
+        padding-left:36px;
     }
     .mobileMenuLangMenu{
         margin-top: 36px;
