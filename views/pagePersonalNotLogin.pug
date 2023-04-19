@@ -1,0 +1,21 @@
+block content
+    include elems/internalHead
+    .tower#participantsPage
+        .subTower
+            .oNewsDecor
+                include svg/pgmDecor.svg
+            .newsDecor2
+                include svg/pgmDecor2.svg
+            .sectionTitle Вход в личный кабинет
+            .regBox.participaintHead
+                .menuItem.flex.center.left
+                    .menuItemBox
+                    .menuItemText Введите e-mail, указанный при регистрации
+                .participaintRow
+                    div Если участник зарегистрирован, на указанный email будет отправлена персональная ссылка на личный кабинет
+
+    include elems/footer
+        include elems/mobileMenu
+
+        script(src="/static/javascripts/utils.js")
+        script(src="/static/javascripts/mainScript.js")
