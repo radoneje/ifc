@@ -520,7 +520,7 @@ h2 {
 }
 
 .faqItem {
-    width: calc(20% - 40px);
+    width: calc(25% - 40px);
     background: #BB3E3F;
     padding: 48px 38px;
     padding-bottom: 84px;
