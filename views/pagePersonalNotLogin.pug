@@ -37,8 +37,8 @@ block content
     script(src="/static/javascripts/mainScript.js")
     script.
         send.onclick = () => {
-            alert(123)
-            if (!send.value || send.value.length < 4) {
+
+            if (!(send.value && send.value.length )) {
                 send.focus();
                 send.parentNode.parentNode.classList.add("error")
                 return;
