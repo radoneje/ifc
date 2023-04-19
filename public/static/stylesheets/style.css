@@ -172,10 +172,10 @@ input {
 }
 .mainImg2Wr{
     width: 100%;
+    position: relative;
 }
 .mainImg2{
     width: 100%;
-    position: absolute;
 }
 
 .mainLogo {
