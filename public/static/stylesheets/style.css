@@ -170,6 +170,16 @@ input {
     top: 0;
     background-image: url('../images/01_main_1904.jpg');
 }
+.mainTitle {
+    justify-content: left;
+    box-sizing: border-box;
+    padding: 52px 56px;
+    color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 48px;
+    width: 100%;
+}
 .mainImg2Wr{
     width: 100%;
     position: relative;
