@@ -1640,6 +1640,9 @@ input[type=number] {
 .participaintRow a{
     text-decoration: underline;
 }
+.participaintRow a.regSubmit{
+    text-decoration: none;
+}
 
 
 
