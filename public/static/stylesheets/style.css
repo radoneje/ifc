@@ -256,9 +256,7 @@ input {
 .mainImg2Wr .menuItemText{
     color:white;
 }
-.mainImg2Wr .menuItemText:hover {
-    color: #F1CCA7 !important;
-}
+
 
 .mainLogo {
     /*position: absolute;*/
