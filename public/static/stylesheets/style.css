@@ -1624,12 +1624,12 @@ input[type=number] {
 .participaintRow ul li:before{
     position: absolute;
     content: '';
-    width: 4px;
-    height: 4px;
+    width: 8px;
+    height: 8px;
     background-color: #4A4A49;
     border-radius: 50%;
-    left: 0;
-    top:4px;
+    left: 0px;
+    top: 7px;
 }
 
 
