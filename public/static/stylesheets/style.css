@@ -1674,6 +1674,10 @@ body {
     max-width: 100%;
     overflow-x: clip;
 }
+.tower {
+    width: min(1800px, calc(100% - 240px));
+
+}
 
 
 
