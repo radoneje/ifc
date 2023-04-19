@@ -178,11 +178,10 @@ input {
     position: absolute;
     top: 0;
     left: 48px;
-    width: 100%;
 }
 .mainImg2Wr h2.desktop{
     position: absolute;
-    bottom: 68px;
+    bottom: 102px;
     left: 48px;
     right: inherit;
     top: inherit;
