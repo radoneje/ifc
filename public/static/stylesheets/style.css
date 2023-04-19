@@ -1652,19 +1652,22 @@ input[type=number] {
 #mainPageTower:after{
     position: absolute;
     content: '';
-    width: 500px;
+    width: 523px;
     height: 100vw;
-    right: 500px;
+    right: -523px;
     top: 0;
+    background-repeat-x: no-repeat;
     background-image: url(/static/images/01_main_1904_USHI_right.svg);
 }
 #mainPageTower:before{
     position: absolute;
     content: '';
-    width: 1048px;
+    width: 500px;
     height: 100vw;
-    left: -1048px;
+    left: -523px;
     top: 0;
+    background-repeat-x: no-repeat;
+    background-size: contain;
     background-image: url(/static/images/01_main_1904_USHI_left.svg);
 }
 
