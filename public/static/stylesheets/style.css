@@ -1692,32 +1692,14 @@ input[type=number] {
 
 }
 @media all and (max-width: 1600px){
-    .mainMenuItem{
-
-        font-size: 24px;
-        line-height: 24px;
-        padding: 6px 12px;
-    }
-    .mainMenu{
-        bottom: 53px;
-        left: 56px;
-    }
-    .menu.vtoroe{
+    .mainImg2Wr h2.desktop {
         position: absolute;
-        bottom:42px;
-        left: 60%;
-    }
-    .vtoroe .menuItemBox{
-    width: 22px;
-    height: 22px
-}
-    .vtoroe .menuItem{
-        margin-bottom: 16px;
-    }
-    .vtoroe .menuItemText{
-        color:white;
-        font-size: 19px;
-        line-height: 18px;
+        bottom: 66px;
+        left: 48px;
+        right: inherit;
+        top: inherit;
+        color: #FFFFFF;
+        padding-left: 48px;
     }
 }
 
