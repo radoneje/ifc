@@ -37,6 +37,11 @@
         padding: 40px 16px;
         left: 16px;
     }
+    .mobileMenuBtn {
+
+        top: 48px;
+
+    }
 
     .h1Wr {
         display: block;
@@ -262,6 +267,7 @@
     }
     #mobileMenu .mainTitle{
         padding-bottom: 24px;
+        position: inherit;
     }
 
     #mobileMenu .mainMenuItem{
