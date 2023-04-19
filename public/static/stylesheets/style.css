@@ -253,6 +253,9 @@ input {
     bottom: 35%;
     left: 91px;
 }
+.mainImg2Wr .menuItemText{
+    color:white;
+}
 
 .mainLogo {
     /*position: absolute;*/
