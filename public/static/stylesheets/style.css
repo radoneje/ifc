@@ -1631,6 +1631,9 @@ input[type=number] {
     left: 0px;
     top: 7px;
 }
+.participaintRow p{
+    margin-top:48px;
+}
 
 
 
