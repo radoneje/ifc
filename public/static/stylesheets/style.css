@@ -1709,6 +1709,19 @@ body {
         bottom: 53px;
         left: 56px;
     }
+    .menu.vtoroe{
+        position: absolute;
+        bottom:57px;
+        left: 60%;
+    }
+    .vtoroe .menuItem{
+        margin-bottom: 16px;
+    }
+    .vtoroe .menuItemText{
+        color:white;
+        font-size: 24px;
+        line-height: 24px;
+    }
 }
 
 
