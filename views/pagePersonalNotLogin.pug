@@ -40,10 +40,10 @@ block content
 
             if (!(send.value && send.value.length )) {
                 send.focus();
-                send.parentNode.parentNode.classList.add("error")
+                send.parentNode.classList.add("error")
                 return;
             }
-            send.parentNode.parentNode.classList.remove("error")
+            send.parentNode.classList.remove("error")
             send.style.display = "none"
             confirm.style.display = "block"
         }
