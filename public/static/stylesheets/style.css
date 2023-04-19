@@ -245,6 +245,14 @@ input {
     left: 41px;
 
 }
+.mainImg2Wr .menu {
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+    position: absolute;
+    bottom: 35%;
+    left: 91px;
+}
 
 .mainLogo {
     /*position: absolute;*/
