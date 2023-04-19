@@ -1687,14 +1687,14 @@ body {
 .vtoroe .menuItem{
     margin-bottom: 12px;
 }
-.vtoroe .menu.menuItemBox{
+.vtoroe .menu .menuItemBox{
     background-color:#E39A3F;
 }
 .vtoroe .menuItemText{
     color:white;
     margin-top:12px
 }
-.vtoroe .menuItemLhover .menuItemText{
+.vtoroe .menuItem:hover .menuItemText{
     color:#F1CCA7;
 
 }
