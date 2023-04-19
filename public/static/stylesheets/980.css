@@ -267,7 +267,11 @@
     }
     #mobileMenu .mainTitle{
         padding-bottom: 24px;
-        position: inherit;
+        position: absolute;
+
+    }
+    .mobileMenuItems{
+        padding-top: 140px;
     }
 
     #mobileMenu .mainMenuItem{
