@@ -203,6 +203,10 @@ input {
     color:white;
 
 }
+.mainImg2Wr  .mainTitle{
+    top: 17px;
+    left: 35px;
+}
 .mainImg2Wr .mainMenuItem {
     cursor: pointer;
     font-weight: 500;
@@ -217,7 +221,7 @@ input {
     /* position: absolute; */
     top: 7%;
     left: 7%;
-    width: 120px;
+    width: 138px;
 }
 
 .mainLogo {
