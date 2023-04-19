@@ -21,9 +21,26 @@ block content
                     .regRowGroup.flex.left
                         .recLabel.reg287 email
                         input.reqInput( name="email" email type="email" )
+                .participaintRow
+                        a.regSubmit#send(href="/registration/" + lang) Отправить ссылку
+                        div#confirm(style="display:none")
+                            div Eсли e-mail зарегистрирован, ссылка отправлена.
+                            div Спаисибо!
+
 
     include elems/footer
-        include elems/mobileMenu
+    include elems/mobileMenu
 
-        script(src="/static/javascripts/utils.js")
-        script(src="/static/javascripts/mainScript.js")
+    script(src="/static/javascripts/utils.js")
+    script(src="/static/javascripts/mainScript.js")
+    script.
+        send.onclick=()=>{
+            if(! send.value || send.value.length<4){
+                send.focus();
+                send.parentNode.parentNode.classList.add("error")
+                return;
+            }
+            send.parentNode.parentNode.classList.remove("error")
+            send.style.display="none"
+            confirm.style.display="block"
+        }
