@@ -251,6 +251,7 @@
         overflow-y: scroll;
         background-image: url('../images/IMAGE_TOP_BACK-min.png');
         background-size: cover;
+        background-position: center;
     }
     .mobileMenuWr{
         position: relative;
