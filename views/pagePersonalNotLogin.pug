@@ -24,7 +24,6 @@ block content
 
                 .participaintRow
                     .regSubmit#send Отправить ссылку
-                .participaintRow    &nbsp;
                 .participaintRow#confirm(style="display:none")
                     div Eсли введенный e-mail был зарегистрирован, ссылка отправлена.
                     div
@@ -39,7 +38,7 @@ block content
     script.
         send.onclick = () => {
 
-            if (!(emailInput.value && emailInput.value.length )) {
+            if (!(emailInput.value && emailInput.value.length && validateEmail(emailInput.value) )) {
                 emailInput.focus();
                 emailRow.classList.add("error")
                 return;
