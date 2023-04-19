@@ -1619,7 +1619,7 @@ input[type=number] {
 }
 .participaintRow ul li{
     padding-left:24px;
-    position: absolute;
+    position: relative;
 }
 .participaintRow ul li:before{
     position: absolute;
