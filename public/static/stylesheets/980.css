@@ -615,6 +615,9 @@
     .participaintHead{
         margin-top: 72px;
     }
+    .ushi:after, .ushi:before{
+        display: none;
+    }
 
 
 
