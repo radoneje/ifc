@@ -1652,9 +1652,9 @@ input[type=number] {
 #mainPageTower:after{
     position: absolute;
     content: '';
-    width: 1048px;
+    width: 500px;
     height: 100vw;
-    right: -1048px;
+    right: 500px;
     top: 0;
     background-image: url(/static/images/01_main_1904_USHI_right.svg);
 }
