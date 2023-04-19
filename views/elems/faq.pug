@@ -8,7 +8,7 @@
             .sectionTitle участникам
             .faqMenuItem.flex.left
                 .menuItemBox
-                .menuItemText ИНФОРМАЦИЯ ДЛЯ УЧАСТНИКОВ
+                a.menuItemText( href="/participants/"+lang) ИНФОРМАЦИЯ ДЛЯ УЧАСТНИКОВ
         .faqItemsWr
             .faqItemsBox
                 .faqItems.flex.center.beetwen
@@ -19,7 +19,7 @@
                                     li Очное участие
                                     li Оргкомитет подтверждает участие
                                     li Стоимость участия - XXXXXX руб.
-                            .newsButton.flex.center
+                            a.newsButton.flex.center( href="/participants/"+lang)
                                 include ../svg/arrowRightRed.svg
                         .faqItem
                             .faqTitle Как стать участником
@@ -30,7 +30,7 @@
                                     li Получить подтверждение
                                     li Оплатить участие
                                     li Посетить конгресс
-                            .newsButton.flex.center
+                            a.newsButton.flex.center( href="/participants/"+lang)
                                 include ../svg/arrowRightRed.svg
                         .faqItem
                             .faqTitle Аккредитпция СМИ

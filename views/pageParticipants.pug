@@ -1,0 +1,24 @@
+extends layout
+
+block head
+    title="Программа"
+block content
+    include elems/internalHead
+    .tower#participantsPage
+        .subTower
+            .oNewsDecor
+                include svg/pgmDecor.svg
+            .newsDecor2
+                include svg/pgmDecor2.svg
+            .sectionTitle Участникам
+
+
+
+
+    include elems/footer
+    include elems/mobileMenu
+
+    script(src="/static/javascripts/utils.js")
+    script(src="/static/javascripts/mainScript.js")
+
+

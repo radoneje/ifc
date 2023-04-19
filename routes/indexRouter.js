@@ -112,6 +112,21 @@ router.get('/popupSession/:id/:lang', async function(req, res, next) {
   }
 });
 
+router.get('/participants/:lang?', async function(req, res, next) {
+  try {
+    if (!req.params.lang)
+      return res.redirect("/participants/ru")
+    if (!req.params.lang.match(/ru|en/))
+      res.redirect("/participants/ru")
+
+    res.render('pageParticipants', {lang: req.params.lang, ru: req.params.lang == "ru"});
+  }
+  catch (e) {
+    console.warn(e)
+    res.text("Ошибка")
+  }
+});
+
 
 
 
