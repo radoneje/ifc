@@ -1658,6 +1658,15 @@ input[type=number] {
     top: 0;
     background-image: url(/static/images/01_main_1904_USHI_right.svg);
 }
+#mainPageTower:befor{
+    position: absolute;
+    content: '';
+    width: 1048px;
+    height: 100vw;
+    left: -1048px;
+    top: 0;
+    background-image: url(/static/images/01_main_1904_USHI_left.svg);
+}
 
 
 
