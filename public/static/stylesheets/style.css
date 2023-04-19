@@ -170,6 +170,14 @@ input {
     top: 0;
     background-image: url('../images/01_main_1904.jpg');
 }
+.mainImg2Wr{
+    width: 100%;
+    position: relative;
+}
+.mainImg2{
+    width: 100%;
+    position: absolute;
+}
 
 .mainLogo {
     /*position: absolute;*/
