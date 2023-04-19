@@ -1651,7 +1651,7 @@ input[type=number] {
 }
 .ushi:after{
     position: absolute;
-    /*content: '';*/
+    content: '';
     width: 523px;
     height: 100vw;
     right: -523px;
@@ -1661,7 +1661,7 @@ input[type=number] {
 }
 .ushi:before{
     position: absolute;
-    /*content: '';*/
+    content: '';
     width: 500px;
     height: 100vw;
     left: -500px;
@@ -1674,7 +1674,7 @@ input[type=number] {
 body {
     max-width: 100%;
     overflow-x: clip;
-    background: #eee;
+    //background: #eee;
 }
 .tower {
     width: min(1800px, calc(100% - 240px));
