@@ -26,13 +26,23 @@ block content
                     p
                         div Стоимость участия одного человека:150&nbsp;000&nbsp;рублей (НДС не облагается)
                     p
-                        a.regSubmit(href="/registration/"+lang) Подать заявку
+                        a.regSubmit(href="/registration/" + lang) Подать заявку
                 .participaintRow &nbsp;
-                .participaintRow &nbsp;
+
                 .participaintRow
                     .menuItem.flex.center.left
                         .menuItemBox
                         .menuItemText Как стать участником – порядок действий
+                .participaintRow
+                    p
+                        div Заполните на сайте <a href="registration/#{lang}">заявку</a> на участие
+                        ul
+                            li Введите основные регистрационные данные
+                            li Введите данные контактного лица, если все дальнейшие коммуникации с организаторами за участника будет осуществлять другой человек (например, референт).
+                            li Введите данные компании, которую представляет участник (достаточно ИНН, остальные данные загрузятся автоматически из базы ФНС).
+                            li Подтвердите принятие пользовательского соглашения и соглашения об обработке персональных данных.
+                            li Отправьте заявку.
+                            li На email, который указан в заявке, придет письмо-оповещение о получении заявки.
 
 
 
@@ -40,7 +50,9 @@ block content
 
 
 
-    include elems/footer
+
+
+include elems/footer
     include elems/mobileMenu
 
     script(src="/static/javascripts/utils.js")
