@@ -256,10 +256,8 @@ input {
 .mainImg2Wr .menuItemText{
     color:white;
 }
-.mainImg2Wr .menuItem:last-child{
-    position: absolute;
-    top: 40px;
-    left: 337px;
+.menuItemText:hover {
+    color: #F1CCA7;
 }
 
 .mainLogo {
