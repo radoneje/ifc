@@ -182,8 +182,11 @@ input {
 }
 .mainTitle h2.desktop{
     position: absolute;
+    bottom: 48px;
     left: 48px;
-    bottom:12px;
+    right: inherit;
+    top: inherit;
+    color: #FFFFFF;
 }
 .mainImg2Wr{
     width: 100%;
