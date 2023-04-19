@@ -257,7 +257,7 @@ input {
     color:white;
 }
 .mainImg2Wr .menuItemText:hover {
-    color: #F1CCA7;
+    color: #F1CCA7 !important;
 }
 
 .mainLogo {
