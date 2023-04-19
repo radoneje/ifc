@@ -257,7 +257,9 @@ input {
     color:white;
 }
 .mainImg2Wr .menuItem:last-child{
-    color:gray;
+    position: absolute;
+    top: 40px;
+    left: 337px;
 }
 
 .mainLogo {
@@ -1763,6 +1765,11 @@ input[type=number] {
         top: inherit;
         color: #FFFFFF;
         padding-left: 48px;
+    }
+    .mainImg2Wr .menuItem:last-child{
+        position: absolute;
+        top: 40px;
+        left: 337px;
     }
 }
 
