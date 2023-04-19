@@ -406,7 +406,7 @@ h2 {
 }
 
 .newsItem {
-    width: calc(25% - 40px);
+    width: calc(20% - 40px);
     background: #F1CCA7;
     padding: 48px 38px;
     padding-bottom: 84px;
@@ -605,7 +605,7 @@ h2 {
 }
 
 .faqItem {
-    width: calc(25% - 40px);
+    width: calc(20% - 40px);
     background: #BB3E3F;
     padding: 48px 38px;
     padding-bottom: 84px;
