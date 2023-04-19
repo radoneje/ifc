@@ -1681,7 +1681,7 @@ body {
 }
 .menu.vtoroe{
     position: absolute;
-    bottom: 94pcpx;
+    bottom: 64px;
     left: 60%;
 }
 .vtoroe .menuItem{
