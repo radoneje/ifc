@@ -1681,18 +1681,18 @@ body {
 }
 .menu.vtoroe{
     position: absolute;
-    bottom:47px;
+    bottom:57px;
     left: 60%;
 }
 .vtoroe .menuItem{
-    margin-bottom: 12px;
+    margin-bottom: 16px;
 }
 .vtoroe .menuItemBox{
     background-color:#E39A3F;
 }
 .vtoroe .menuItemText{
     color:white;
-    margin-top:12px
+
 }
 .vtoroe .menuItem:hover .menuItemText{
     color:#F1CCA7;
