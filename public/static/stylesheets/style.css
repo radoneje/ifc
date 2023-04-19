@@ -186,6 +186,8 @@ input {
     right: inherit;
     top: inherit;
     color: #FFFFFF;
+    padding-left: 48px;
+
 }
 .mainImg2Wr{
     width: 100%;
