@@ -196,6 +196,13 @@ input {
 .mainImg2{
     width: 100%;
 }
+.mainImg2Wr .mainMenu {
+    position: absolute;
+    bottom: inherit;
+    left: 80%;
+    color:white;
+
+}
 
 .mainLogo {
     /*position: absolute;*/
