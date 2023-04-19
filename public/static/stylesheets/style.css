@@ -403,6 +403,7 @@ h2 {
     box-sizing: border-box;
     padding: 14px 0;
     cursor: pointer;
+    display: none !important;
 }
 
 .quotesArrow svg {
