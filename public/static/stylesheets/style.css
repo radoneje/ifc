@@ -1609,10 +1609,13 @@ input[type=number] {
 }
 .participaintRow{
     font-size: 18px;
-    margin-top: 21px;
+    margin-top: 22px;
     color: #4A4A49;
     font-weight: 300;
     line-height: 26px;
+}
+.participaintRow ul{
+    margin-top: 22px;
 }
 .participaintRow ul li{
     margin-left:24px;
