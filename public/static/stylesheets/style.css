@@ -256,6 +256,9 @@ input {
 .mainImg2Wr .menuItemText{
     color:white;
 }
+.mainImg2Wr .menuItem:last-child{
+    color:gray;
+}
 
 .mainLogo {
     /*position: absolute;*/
