@@ -1667,6 +1667,7 @@ input[type=number] {
     left: -500px;
     top: 0;
     background-repeat-x: no-repeat;
+    background-position: right;
     background-size: contain;
     background-image: url(/static/images/01_main_1904_USHI_left.svg);
 }
