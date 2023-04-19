@@ -1664,11 +1664,15 @@ input[type=number] {
     content: '';
     width: 500px;
     height: 100vw;
-    left: -523px;
+    left: -500px;
     top: 0;
     background-repeat-x: no-repeat;
     background-size: contain;
     background-image: url(/static/images/01_main_1904_USHI_left.svg);
+}
+body {
+    max-width: 100%;
+    overflow-x: clip;
 }
 
 
