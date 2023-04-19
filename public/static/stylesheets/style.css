@@ -1694,6 +1694,10 @@ body {
     color:white;
     margin-top:12px
 }
+.vtoroe .menuItemLhover .menuItemText{
+    color:#F1CCA7;
+
+}
 @media all and (max-width: 1600px){
     .mainMenuItem{
 
