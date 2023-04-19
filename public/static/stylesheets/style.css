@@ -1618,7 +1618,18 @@ input[type=number] {
     margin-top: 22px;
 }
 .participaintRow ul li{
-    margin-left:24px;
+    padding-left:24px;
+    position: absolute;
+}
+.participaintRow ul li:before{
+    position: absolute;
+    content: '';
+    width: 4px;
+    height: 4px;
+    background-color: #4A4A49;
+    border-radius: 50%;
+    left: 0;
+    top:4px;
 }
 
 
