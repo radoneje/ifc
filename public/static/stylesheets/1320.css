@@ -38,4 +38,10 @@
     .oSpkItem {
         width: 25%;
     }
+    .ushi:after, .ushi:before{
+        display: none;
+    }
+    .tower{
+        width: 100%;
+    }
 }
