@@ -277,13 +277,7 @@ h2 {
     left: 56px;
     align-items: flex-start;
 }
-.mainMenu {
-    position: absolute;
-    /* bottom: 64px; */
-    top: 336px;
-    left: 43px;
-    align-items: flex-start;
-}
+
 
 .subTower {
     padding: 0 56px
