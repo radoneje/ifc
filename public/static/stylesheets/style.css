@@ -1728,6 +1728,7 @@ input[type=number] {
     font-weight: 350;
     font-size: 21px;
     line-height: 26px;
+
 }
 .oTrack li{
     font-weight: 350;
@@ -1752,6 +1753,7 @@ input[type=number] {
 }
 #participantsPage .oTrack.impotant{
    padding: 32px 28px;
+    color: #878787;
 }
 
 
