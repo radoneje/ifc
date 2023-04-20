@@ -1796,6 +1796,13 @@ input[type=number] {
         color: #FFFFFF;
         padding-left: 48px;
     }
+    .participaintRowHead{
+        background: #E0E0E0;
+        padding: 16px 20px;
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 28px;
+    }
 
 }
 
