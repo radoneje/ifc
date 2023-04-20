@@ -1709,7 +1709,7 @@ input[type=number] {
     margin-top: 22px;
 }
 .participaintRow ul li, .oTrack ul li{
-    padding-left:32px;
+    padding-left:38px;
     position: relative;
 }
 .participaintRow ul li:before, .oTrack  ul li:before{
@@ -1719,7 +1719,7 @@ input[type=number] {
     height: 4px;
     background-color: #878787;
     border-radius: 50%;
-    left: 11px;
+    left: 22px;
     top: 10px;
 }
 
