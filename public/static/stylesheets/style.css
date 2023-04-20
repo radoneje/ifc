@@ -1798,6 +1798,10 @@ input[type=number] {
 .participaintRowContent {
     padding-left : 36px;
 }
+.participaintRowImpotant{
+    padding: 28px 32px;
+    background-color: #F8DEE1;
+}
 
 
 
