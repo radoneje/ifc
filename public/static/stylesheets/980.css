@@ -651,6 +651,18 @@
     .mainLogo {
         width: 36px;
     }
+    .reqMenu{
+        margin-top:30px;
+    }
+    .reqMenuBox{
+        width: 100%;
+        overflow-y: scroll;
+    }
+    .reqMenu{
+        flex-wrap: nowrap;
+        width: max-content;
+
+    }
 
 
 
