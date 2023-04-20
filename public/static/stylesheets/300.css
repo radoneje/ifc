@@ -3,9 +3,10 @@
         font-size: 14px;
         line-height: 20px;
     }
-    h1, .h2 {
+    h1, h2 {
         font-size: 16px;
         line-height: 20px;
+        left: 12px;
     }
     .regSubmit {
         font-size: 14px;
