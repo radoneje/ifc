@@ -63,6 +63,7 @@
         position: absolute;
         bottom: 19px;
         left: 16px;
+        top:inherit;
     }
 
     .mainMenu {
