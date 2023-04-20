@@ -411,6 +411,8 @@ h2 {
     padding: 48px 38px;
     padding-bottom: 84px;
     position: relative;
+    min-height: 5em;
+
 }
 
 .newsDate {

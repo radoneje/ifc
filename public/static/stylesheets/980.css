@@ -99,6 +99,7 @@
         margin-right: 24px;
         width: calc(100vw - 128px);
         overflow: hidden;
+        min-height: inherit;
     }
     .newsItems{
         display: flex;
