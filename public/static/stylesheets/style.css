@@ -1738,6 +1738,9 @@ input[type=number] {
 .oTrack .regSubmit{
     display: block;
 }
+.oTrack .oSessionTitle {
+    text-transform: uppercase;
+}
 .participaintRow .regSubmit{
     display: block;
 }
