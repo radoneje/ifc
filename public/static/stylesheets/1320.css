@@ -70,4 +70,16 @@
         padding-bottom: 84px;
 
     }
+    .internalHeadLogo{
+        width: 60px;
+    }
+    .internalHeadH1 {
+
+        font-size: 30px;
+        line-height: 32px;
+        margin-left: 17px;
+    }
+    .internalHeadMenu {
+        margin-left: 100px;
+    }
 }
