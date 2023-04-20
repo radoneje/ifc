@@ -1802,6 +1802,10 @@ input[type=number] {
         font-weight: 500;
         font-size: 21px;
         line-height: 28px;
+        margin-top: 48px;
+    }
+    .participaintRowBody{
+
     }
 
 }
