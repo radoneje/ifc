@@ -1705,14 +1705,14 @@ input[type=number] {
     font-weight: 300;
     line-height: 26px;
 }
-.participaintRow ul{
+.participaintRow ul, .oTrack ul{
     margin-top: 22px;
 }
-.participaintRow ul li{
+.participaintRow ul li, .oTrack ul li{
     padding-left:24px;
     position: relative;
 }
-.participaintRow ul li:before{
+.participaintRow ul li:before, .oTrack  ul li:before{
     position: absolute;
     content: '';
     width: 8px;
@@ -1724,6 +1724,10 @@ input[type=number] {
 }
 .participaintRow p, .oTrack p{
     margin-top:24px;
+    color:#878787
+    font-weight: 350;
+    font-size: 21px;
+    line-height: 26px;
 }
 .participaintRow .regSubmit{
     display: block;
