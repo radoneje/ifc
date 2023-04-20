@@ -734,7 +734,9 @@ h2 {
 .internalHead {
     position: relative;
 }
-
+.internalHeadImage{
+    background: #4d59a0;
+}
 .internalHeadImage img {
     width: 100%;
     height: auto;
