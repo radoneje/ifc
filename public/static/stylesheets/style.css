@@ -195,6 +195,7 @@ input {
 }
 .mainImg2{
     width: 100%;
+    height: auto;
 }
 .mainImg2Wr .mainMenu {
     position: absolute;
