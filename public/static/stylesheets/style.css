@@ -1722,7 +1722,7 @@ input[type=number] {
     left: 0px;
     top: 7px;
 }
-.participaintRow p{
+.participaintRow p, .oTrack p{
     margin-top:24px;
 }
 .participaintRow .regSubmit{
