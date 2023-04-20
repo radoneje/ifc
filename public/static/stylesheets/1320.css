@@ -44,4 +44,20 @@
     .tower{
         width: 100%;
     }
+    .mainImg2Wr .menuItem:last-child {
+
+        top: 40px;
+        left: 306px;
+    }
+    .mainImg2Wr .mainLogo {
+        width: 100px;
+    }
+    h1, h2 {
+        font-size: 32px;
+        line-height: 32px;
+    }
+    .mainImg2Wr .mainMenuItem{
+        font-size: 21px;
+        line-height: 24px;
+    }
 }

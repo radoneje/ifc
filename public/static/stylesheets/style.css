@@ -1757,7 +1757,7 @@ input[type=number] {
     .mainImg2Wr .menuItem:last-child{
         position: absolute;
         top: 40px;
-        left: 337px;
+        left: 338px;
     }
 }
 @media all and (max-width: 1600px){
