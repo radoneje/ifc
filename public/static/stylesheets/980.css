@@ -253,7 +253,7 @@
         margin-top:24px;
     }
     #mobileMenu{
-        background: linear-gradient(180deg, rgba(38, 51, 121, 0.4) 0%, #BB3E3F 100%), #BB3E3F;
+        background: linear-gradient(180deg, #4a569e 0%, #6e1e21 100%);
         position: fixed;
         top:0;
         left: 0;
