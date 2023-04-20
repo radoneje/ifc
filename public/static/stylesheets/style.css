@@ -1791,6 +1791,10 @@ input[type=number] {
     background-color: #F1CCA7;
     text-decoration: none;
 }
+.participaintRowBodySubTitle{
+    text-transform: uppercase;
+    padding-left: 20px;
+}
 
 
 
