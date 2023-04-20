@@ -673,6 +673,13 @@
     }
     .participaintRow ul li {
             padding-left: 20px;
+        margin-top: 16px;
+    }
+    .participaintRowBodySubTitle {
+        padding-left: 16px;
+    }
+    .participaintRowBodySubTitle{
+        padding-left: 20px;
     }
 
 
