@@ -64,4 +64,10 @@
         width: 100%;
         height: auto;
     }
+    .newsItem {
+
+        padding: 32px 24px;
+        padding-bottom: 84px;
+
+    }
 }
