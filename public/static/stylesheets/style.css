@@ -1750,7 +1750,7 @@ input[type=number] {
 .participaintRow a.regSubmit{
     text-decoration: none;
 }
-.participantsPage .oTrack.impotant{
+#participantsPage .oTrack.impotant{
    padding: 32px 28px;
 }
 
