@@ -14,10 +14,10 @@ block content
             .regBox
                 .reqMenuBox
                     .reqMenu.flex.left
-                        .regMenuItem Формат и стоимость участия
-                        .regMenuItem Как стать участником - порядок действий
-                        .regMenuItem Информация для СМИ
-                        .regMenuItem О Личном Кабинете
+                        a.regMenuItem(href="#uslovia") Формат и стоимость участия
+                        a.regMenuItem(href="#kakstatuchastnikon") Как стать участником - порядок действий
+                        a.regMenuItem(href="#smi") Информация для СМИ
+                        a.regMenuItem(href="#lk") О Личном Кабинете
             .regBox#uslovia
                 .participaintRow
                     .menuItem.flex.center.left
@@ -39,7 +39,7 @@ block content
                             p
                                 .participaintRowBodySubTitle
                                     a.regSubmit(href="/registration/" + lang) Подать заявку
-            .regBox
+            .regBox#kakstatuchastnikon
                 .participaintRow
                     .menuItem.flex.center.left
                         .menuItemBox
@@ -139,7 +139,7 @@ block content
                         .participaintRowBodySubTitle
                             a.regSubmit(href="/smi/" + lang) Аккредитовать представителя СМИ
                 .participaintRow &nbsp;
-                .participaintRow
+                .participaintRow#lk
                     .menuItem.flex.center.left
                         .menuItemBox
                         .menuItemText Личный кабинет
