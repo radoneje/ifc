@@ -1787,7 +1787,7 @@ input[type=number] {
     margin-top: 48px;
 }
 .participaintRow a{
-    padding: 8px 2px;
+    padding:  2px 8px;
     background-color: #F1CCA7;
     text-decoration: none;
 }
