@@ -99,7 +99,7 @@
         margin-right: 24px;
         width: calc(100vw - 128px);
         overflow: hidden;
-        min-height: inherit;
+
     }
     .newsItems{
         display: flex;
@@ -113,6 +113,9 @@
     .newsTitle, .newsText, .faqTitle, .faqText{
         font-size: 18px;
         line-height: 24px;
+    }
+    .newsTitle{
+        min-height: inherit;
     }
     .newsBlockDecor {
         position: absolute;

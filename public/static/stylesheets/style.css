@@ -411,7 +411,7 @@ h2 {
     padding: 48px 38px;
     padding-bottom: 84px;
     position: relative;
-    min-height: 5em;
+
 
 }
 
@@ -430,7 +430,7 @@ h2 {
     /* or 124% */
     margin-top: 2px;
     text-transform: uppercase;
-
+    min-height: 5em;
     color: #000000;
 }
 
