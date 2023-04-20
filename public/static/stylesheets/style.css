@@ -1778,6 +1778,22 @@ input[type=number] {
     color:#F1CCA7;
 
 }
+.participaintRowHead{
+    background: #E0E0E0;
+    padding: 16px 20px;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 28px;
+    margin-top: 48px;
+}
+.participaintRow a{
+    padding: 8px 2px;
+    background-color: #F1CCA7;
+    text-decoration: none;
+}
+
+
+
 @media all and (max-width: 1700px){
 
     .mainImg2Wr .menuItem:last-child{
@@ -1796,17 +1812,8 @@ input[type=number] {
         color: #FFFFFF;
         padding-left: 48px;
     }
-    .participaintRowHead{
-        background: #E0E0E0;
-        padding: 16px 20px;
-        font-weight: 500;
-        font-size: 21px;
-        line-height: 28px;
-        margin-top: 48px;
-    }
-    .participaintRowBody{
 
-    }
+    .
 
 }
 
