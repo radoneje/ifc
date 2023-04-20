@@ -1715,13 +1715,14 @@ input[type=number] {
 .participaintRow ul li:before, .oTrack  ul li:before{
     position: absolute;
     content: '';
-    width: 8px;
-    height: 8px;
-    background-color: #4A4A49;
+    width: 4px;
+    height: 4px;
+    background-color: #878787;
     border-radius: 50%;
-    left: 0px;
-    top: 7px;
+    left: 11px;
+    top: 10px;
 }
+
 .participaintRow p, .oTrack p{
     margin-top:24px;
     color:#878787;
@@ -1735,6 +1736,7 @@ input[type=number] {
     font-size: 21px;
     line-height: 26px;
     margin-top:12px;
+    padding-left: 32px;
 }
 .oTrack .regSubmit{
     display: block;
