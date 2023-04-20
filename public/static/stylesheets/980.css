@@ -668,6 +668,12 @@
     .participaintRowImpotant {
         padding: 16px;
     }
+    .participaintRow ul li:before{
+        left: 0;
+    }
+    .participaintRow ul li {
+            padding-left: 20px;
+    }
 
 
 
