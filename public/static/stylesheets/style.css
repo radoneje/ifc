@@ -1734,6 +1734,9 @@ input[type=number] {
     font-size: 21px;
     line-height: 26px;
 }
+.oTrack .regSubmit{
+    display: block;
+}
 .participaintRow .regSubmit{
     display: block;
 }
