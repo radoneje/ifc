@@ -21,10 +21,11 @@ const __dirname = path.dirname(__filename);
 /* GET home page. */
 router.get('/info/:lang?', async function(req, res, next) {
     try {
-        if(!req.query.token)
-            return res.redirect("/personal/"+req.params.lang)
         if(!req.params.lang.match(/ru|en/))
             req.params.lang="ru";
+        if(!req.query.token)
+            return res.redirect("/personal/"+req.params.lang)
+
 
         res.json("info")
 
@@ -35,8 +36,11 @@ router.get('/info/:lang?', async function(req, res, next) {
     }
 });
 
-router.get('/:lang', async function(req, res, next) {
+router.get('/:lang?', async function(req, res, next) {
     try {
+        if(!req.params.lang.match(/ru|en/))
+            req.params.lang="ru";
+
         if(!(req.query.token || req.session.token))
             return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
         if(req.query.token)
