@@ -681,7 +681,7 @@
         padding-right: 20px;
     }
     .mobileMenuVisible{
-        display: block;
+        display: block !important;
     }
 
 
