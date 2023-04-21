@@ -46,6 +46,6 @@ block content
 
             emailRow.classList.remove("error")
             send.style.display = "none"
-            await postJson('/api/loginToLK',{email:emailInput.value})
+            await postJson('https://api.ifcongress.ru/api/loginToLK',{email:emailInput.value})
             document.getElementById("confirm").style.display = "block"
         }
