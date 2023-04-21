@@ -1710,6 +1710,9 @@ input[type=number] {
     font-weight: 300;
     line-height: 26px;
 }
+.participaintRow .oSessionTitle{
+    cursor: pointer;
+}
 .participaintRow ul, .oTrack ul{
     margin-top: 22px;
 }
