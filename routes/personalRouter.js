@@ -19,16 +19,41 @@ const __dirname = path.dirname(__filename);
 
 
 /* GET home page. */
-
-
-router.get('/', async function(req, res, next) {
+router.get('/info/:lang?', async function(req, res, next) {
     try {
+        if(!req.query.token)
+            return res.redirect("/personal/"+req.params.lang)
+        if(!req.params.lang.match(/ru|en/))
+            req.params.lang="ru";
 
-        res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
+        res.json("info")
+
     }
     catch (e) {
         console.warn(e)
-        res.text("Ошибка")
+        return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
+    }
+});
+
+router.get('/:lang', async function(req, res, next) {
+    try {
+        if(!(req.query.token || req.session.token))
+            return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
+        if(req.query.token)
+        {
+            req.session.token=null;
+            let usr=await ret.knex("v_lk_access").where({guid:req.query.token})
+            if(usr.length==0)
+                return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
+            else {
+                req.session.token = usr[0]
+                return res.redirect("/personal/info")
+            }
+        }
+    }
+    catch (e) {
+        console.warn(e)
+        return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
     }
 });
 
