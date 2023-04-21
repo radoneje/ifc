@@ -31,7 +31,7 @@ block content
                                                             each session in ts.sessions
                                                                 .oSession
                                                                     .oSessionHallTitle #{session["halltitle_"+lang]}
-                                                                    .oSessionTitle(onclick="showSession("+session.id+", '"+lang+"')")
+                                                                    .oSessionTitle
                                                                         if ts.isImpotant
                                                                             span.plenar  Пленарная сессия:&nbsp;
                                                                         span #{session["title_"+lang]}

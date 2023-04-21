@@ -656,11 +656,11 @@
         margin-bottom: 40px;
 
     }
-    /*.reqMenuBox{
+    reqMenuBox{
         width: 100%;
         overflow-y: scroll;
         padding-bottom: 4px
-    }*/
+    }
     .regMenuItem{
         font-size: 16px;
         line-height: 22px;
