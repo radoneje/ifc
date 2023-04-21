@@ -42,7 +42,7 @@ router.get('/:lang?', async function(req, res, next) {
         if(!(req.params.lang && req.params.lang.match(/ru|en/)))
             req.params.lang="ru";
 
-        if(!(req.query.token || req.session.token || req.session.token.match(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i)))
+        if(!(req.query.token && req.session.token && req.session.token.match(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i)))
             return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
         if(req.query.token)
         {
