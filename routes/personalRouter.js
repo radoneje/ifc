@@ -46,12 +46,12 @@ router.get('/:lang?', async function(req, res, next) {
         if(req.query.token)
         {
             req.session.token=null;
-            let usr=await ret.knex("v_lk_access").where({guid:req.query.token})
+            let usr=await req.knex("v_lk_access").where({guid:req.query.token})
             if(usr.length==0)
                 return res.redirect("/personal/"+req.params.lang)
             else {
                 req.session.token = usr[0]
-                return res.redirect("/personal/info")
+                return res.redirect("/personal/info/"+req.params.lang)
             }
         }
     }
