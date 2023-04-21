@@ -652,15 +652,14 @@
         width: 36px;
     }
     .reqMenu{
-        margin-top:30px;
-        flex-wrap: nowrap;
-        width: max-content;
+        margin-top:67px;
+
     }
-    .reqMenuBox{
+    /*.reqMenuBox{
         width: 100%;
         overflow-y: scroll;
         padding-bottom: 4px
-    }
+    }*/
     .regMenuItem{
         font-size: 16px;
         line-height: 22px;
