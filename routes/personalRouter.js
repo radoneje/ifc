@@ -21,7 +21,7 @@ const __dirname = path.dirname(__filename);
 /* GET home page. */
 
 
-router.get('/personal/', async function(req, res, next) {
+router.get('/', async function(req, res, next) {
     try {
 
         res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
