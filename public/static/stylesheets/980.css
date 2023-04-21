@@ -653,6 +653,7 @@
     }
     .reqMenu{
         margin-top:67px;
+        margin-bottom: 40px;
 
     }
     /*.reqMenuBox{
@@ -663,6 +664,10 @@
     .regMenuItem{
         font-size: 16px;
         line-height: 22px;
+        width: 100%;
+        margin-top: 16px;
+        text-align: center;
+        margin-right: 0;
     }
     .participaintRowImpotant {
         padding: 16px;
