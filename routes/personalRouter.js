@@ -38,7 +38,7 @@ router.get('/info/:lang?', async function(req, res, next) {
 
 router.get('/:lang?', async function(req, res, next) {
     try {
-        if(!req.params.lang.match(/ru|en/))
+        if(!(req.params.lang && req.params.lang.match(/ru|en/)))
             req.params.lang="ru";
 
         if(!(req.query.token || req.session.token))
