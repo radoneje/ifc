@@ -429,7 +429,7 @@ router.get('/userToApprove/:guid', async function (req, res, next) {
         res.sendStatus(500)
     }
 });
-router.get('/loginToLK/', async function(req, res, next) {
+router.post('/loginToLK/', async function(req, res, next) {
     try {
         res.json(1)
 
