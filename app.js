@@ -25,6 +25,7 @@ import indexRouter from'./routes/indexRouter.js'
 import apiRouter from'./routes/apiRouter.js'
 import staticRouter from'./routes/staticRouter.js'
 import testRouter from'./routes/testRouter.js'
+import personalRouter from'./routes/personalRouter.js'
 
 var app = express();
 
@@ -61,6 +62,8 @@ app.use('/', indexRouter);
 app.use('/api', apiRouter);
 app.use('/static', staticRouter);
 app.use('/test', testRouter);
+app.use('/personal', personalRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -124,16 +124,7 @@ router.get('/participants/:lang?', async function(req, res, next) {
     res.text("Ошибка")
   }
 });
-router.get('/personal/', async function(req, res, next) {
-  try {
 
-    res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
-  }
-  catch (e) {
-    console.warn(e)
-    res.text("Ошибка")
-  }
-});
 
 
 
