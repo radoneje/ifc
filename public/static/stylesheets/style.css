@@ -1527,7 +1527,8 @@ input[type=number] {
     font-size: 21px;
     line-height: 26px;
     color: #4A4A49;
-    margin-top: 12px
+    margin-top: 12px;
+    cursor: pointer;
 }
 
 .oSessionWr {
@@ -1747,6 +1748,7 @@ input[type=number] {
 }
 .oTrack .oSessionTitle {
     text-transform: uppercase;
+    cursor: inherit;
 }
 .participaintRow .regSubmit{
     display: block;

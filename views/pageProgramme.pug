@@ -30,8 +30,8 @@ block content
                                                         if ts.sessions
                                                             each session in ts.sessions
                                                                 .oSession
-                                                                    .oSessionHallTitle(onclick="showSession("+session.id+", '"+lang+"')") #{session["halltitle_"+lang]}
-                                                                    .oSessionTitle
+                                                                    .oSessionHallTitle #{session["halltitle_"+lang]}
+                                                                    .oSessionTitle(onclick="showSession("+session.id+", '"+lang+"')")
                                                                         if ts.isImpotant
                                                                             span.plenar  Пленарная сессия:&nbsp;
                                                                         span #{session["title_"+lang]}
