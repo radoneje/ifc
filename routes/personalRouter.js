@@ -23,6 +23,7 @@ router.get('/info/:lang?', async function(req, res, next) {
     try {
         if(!req.params.lang.match(/ru|en/))
             req.params.lang="ru";
+        console.log("here",req.query.token )
         if(!req.query.token)
             return res.redirect("/personal/"+req.params.lang)
 
