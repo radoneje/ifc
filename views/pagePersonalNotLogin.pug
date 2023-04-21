@@ -36,7 +36,7 @@ block content
     script(src="/static/javascripts/utils.js")
     script(src="/static/javascripts/mainScript.js")
     script.
-        send.onclick = () => {
+        send.onclick =async  () => {
 
             if (!(emailInput.value && emailInput.value.length && validateEmail(emailInput.value) )) {
                 emailInput.focus();
@@ -45,5 +45,6 @@ block content
             }
             emailRow.classList.remove("error")
             send.style.display = "none"
+            await postJson('/api/loginToLK',{email:emailInput.value})
             document.getElementById("confirm").style.display = "block"
         }

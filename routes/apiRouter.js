@@ -15,7 +15,13 @@ import moment from "moment";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
+const validateEmail = (email) => {
+    return String(email)
+        .toLowerCase()
+        .match(
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        );
+};
 
 /* GET home page. */
 
@@ -130,6 +136,8 @@ router.post('/regUser2', async function (req, res, next) {
         let types = user.types;
         delete user.types
         delete user.companyPay;
+        if(user.email)
+            user.email=user.email.toLowerCase();
 
         company = await addCompany(req, company)
 
@@ -419,6 +427,28 @@ router.get('/userToApprove/:guid', async function (req, res, next) {
     } catch (e) {
         console.warn(e)
         res.sendStatus(500)
+    }
+});
+router.get('/loginToLK/', async function(req, res, next) {
+    try {
+        res.json(1)
+
+       let email=req.body.email;
+        if(!email)
+            return
+        email=email.trim().toLowerCase();
+        if(!validateEmail(email))
+            return;
+        let users=await req.knex("v_lk_access").where({email:email})
+
+        for(let user of users){
+            let r=await req.knex("t_email_messages").insert({subj:"",text:"/var/www/ifcAdmin/views/emails/300_link_to_lk.pug", userid:user.id})
+        }
+
+    }
+    catch (e) {
+        console.warn(e)
+        //res.text("Ошибка")
     }
 });
 
