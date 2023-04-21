@@ -47,11 +47,13 @@ router.get('/:lang?', async function(req, res, next) {
             return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
         if(req.query.token)
         {
+            console.log("user have a token")
             req.session.token=null;
             let usr=await req.knex("v_lk_access").where({guid:req.query.token})
             if(usr.length==0)
                 return res.redirect("/personal/"+req.params.lang)
             else {
+                console.log("user is OK")
                 req.session.token = usr[0]
                 return res.redirect("/personal/info/"+req.params.lang)
             }
