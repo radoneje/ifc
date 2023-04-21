@@ -31,7 +31,10 @@ html(lang="ru")
             script let lang=''
 
     body
-        div personal
+        #loader.prcLoaderWr.flex.center
+            .prcLoader
+                include ../svg/loader.svg
+        #app(style="display:none")
         script(src="/static/lib/vue.min.js")
         script(src="/static/javascripts/utils.js")
         script(src="/static/javascripts/personalScript.js")

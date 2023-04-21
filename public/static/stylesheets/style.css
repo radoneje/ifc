@@ -1835,6 +1835,18 @@ input[type=number] {
 .mobileMenuVisible{
     display: none;
 }
+.prcLoaderWr{
+    width: 100%;
+    height: 100%;
+}
+.prcLoaderWr{
+    width: 100px;
+}
+.prcLoaderWr svg{
+    width: 100%;
+    height: auto;
+}
+
 
 @media all and (max-width: 1700px){
 
