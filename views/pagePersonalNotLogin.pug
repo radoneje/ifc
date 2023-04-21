@@ -43,6 +43,7 @@ block content
                 emailRow.classList.add("error")
                 return;
             }
+
             emailRow.classList.remove("error")
             send.style.display = "none"
             await postJson('/api/loginToLK',{email:emailInput.value})
