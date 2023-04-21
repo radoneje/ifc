@@ -295,10 +295,10 @@ const register = async () => {
 }
 const showMobileMenu=()=>{
     document.body.style.overflow="hidden"
-    mobileMenu.style.display="block"
+    mobileMenu.classList.add("mobileMenuVisible")
 }
 const closeMobileMenu=()=>{
     console.log(11)
-    mobileMenu.style.display="none"
+    mobileMenu.classList.remove("mobileMenuVisible")
     document.body.style.overflow=null
 }
