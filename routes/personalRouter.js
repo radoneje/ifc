@@ -26,9 +26,7 @@ router.get('/info/:lang?', async function(req, res, next) {
         console.log("here",req.query.token )
         if(!req.session.token)
             return res.redirect("/personal/"+req.params.lang)
-
-
-        res.json("info")
+        res.render("personal/layout")
 
     }
     catch (e) {
