@@ -1822,7 +1822,9 @@ input[type=number] {
     text-decoration: none;
 }
 
-
+#mobileMenu{
+    display: none;
+}
 .mobileMenuVisible{
     display: none;
 }
