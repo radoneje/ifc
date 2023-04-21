@@ -1748,7 +1748,7 @@ input[type=number] {
 }
 .oTrack .oSessionTitle {
     text-transform: uppercase;
-    cursor: inherit;
+
 }
 .participaintRow .regSubmit{
     display: block;
