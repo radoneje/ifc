@@ -442,7 +442,7 @@ router.get('/loginToLK/', async function(req, res, next) {
         let users=await req.knex("v_lk_access").where({email:email})
 
         for(let user of users){
-            let r=await req.knex("t_email_messages").insert({subj:"",text:"/var/www/ifcAdmin/views/emails/300_link_to_lk.pug", userid:user.id})
+            let r=await req.knex("t_email_messages").insert({subj:"Финансовый конгресс 2023: доступ к лисному кабинету",text:"/var/www/ifcAdmin/views/emails/300_link_to_lk.pug", userid:user.id})
         }
 
     }
