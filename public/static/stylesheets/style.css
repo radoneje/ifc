@@ -1968,7 +1968,8 @@ input[type=number] {
     cursor: pointer;
     text-transform: uppercase;
     background: #BB3E3F;
-    margin-top:12px
+    margin-top:12px;
+    display: block;
 }
 
 
