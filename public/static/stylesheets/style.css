@@ -1867,6 +1867,9 @@ input[type=number] {
     width: 100%;
     height: auto;
 }
+.persHeadRow{
+    margin:24px 120px;
+}
 .persHeadLogo{
     width: 40px;
 }
