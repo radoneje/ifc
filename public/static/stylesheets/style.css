@@ -1888,6 +1888,14 @@ input[type=number] {
     color:#FFFFFF;
     text-transform: uppercase;
 }
+.upBtn{
+    width: 24px;
+    height: 24px;
+    position: fixed;
+    bottom:32px;
+    right: 32px;
+    background: yellow;
+}
 
 
 @media all and (max-width: 1700px){

@@ -265,5 +265,17 @@ const clickMenuItem=(elemSelector, redirectPage, lang=null)=>{
         document.location.href=redirectPage
     }
 }
-
+let head=document.querySelector(".mainImg2Wr")
+let upBtn=document.querySelector(".upBtn")
+if(head && upBtn){
+    let options = {
+        root: null,//элемент, который выступает в роли области просмотра для target (предок целевого элемента или null для viewport)
+        rootMargin: '0',//отступы вокруг root
+        threshold: 0
+    }
+    let observer = new IntersectionObserver((entries, observer)=>{
+        console.log(entries)
+    }, options)
+        observer.observe(head)
+}
 
