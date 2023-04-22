@@ -18,11 +18,11 @@ div(v-if="user.statusid==65 && user.isPaySelf")
             .partSelectFormItem.active физическое лицо
     .participaintRow &nbsp;
     .participaintRow
-        .participaintRowBodySubTitle Сумма к оплате: <b>{{user.price}} рублей</b>
+        .participaintRowBodySubTitle Сумма к оплате: <b>{{user.price}} 000 рублей</b>
     .participaintRow
         .participaintRowBodySubTitle
             form(method='POST' action='https://demo.paykeeper.ru/create/')
-                input( type='hidden' name='sum' value='100')
+                input( type='hidden' name='sum' :value='user.price*1000')
                 input(type='hidden' name='orderid' value='123456')
                 input(type='hidden' name='service_name' value='Оказание услуг по организации участия представителя Заказчика в конгрессе «Финансовый конгресс Банка России» 6-7 июля 2023 года в городе Санкт-Петербург.')
                 input.regSubmit(type='submit' value='Перейти к оплате')
