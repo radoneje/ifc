@@ -22,7 +22,7 @@ div(v-if="user.statusid==65 && user.isPaySelf")
             form(method='POST' action='https://demo.paykeeper.ru/create/')
                 input( type='hidden' name='sum' value='100')
                 input(type='hidden' name='orderid' value='123456')
-                input(type='text' name='service_name' value='Оказание услуг по организации участия представителя Заказчика в конгрессе «Финансовый конгресс Банка России» 6-7 июля 2023 года в городе Санкт-Петербург.')
+                input(type='hidden' name='service_name' value='Оказание услуг по организации участия представителя Заказчика в конгрессе «Финансовый конгресс Банка России» 6-7 июля 2023 года в городе Санкт-Петербург.')
                 input.regSubmit(type='submit' value='Перейти к оплате')
     .participaintRow &nbsp;
     .participaintRow
