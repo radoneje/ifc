@@ -127,7 +127,7 @@ router.post('/changeUser', async function(req, res, next) {
         return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
     }
 });
-router.post('/changeUser', async function(req, res, next) {
+router.post('/setPaySelf', async function(req, res, next) {
     try {
         if(!req.session.token)
             return res.sendStatus(401)
