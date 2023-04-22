@@ -96,7 +96,7 @@ router.post('/changeUser', async function(req, res, next) {
         if(!req.session.token)
             return res.sendStatus(401)
         if(!(req.body.photoid && req.body.companyShort && req.body.phone && req.body.email))
-            return res.sendStatus(422)
+            return res.sendStatus(421)
 
         req.body.email= validator.trim(req.body.email);
         req.body.email= validator.normalizeEmail(req.body.email)
@@ -105,11 +105,11 @@ router.post('/changeUser', async function(req, res, next) {
         if(validator.isUUID(req.body.photoid))
             return res.sendStatus(422)
         if(req.body.companyShort.length>128)
-            return res.sendStatus(422)
+            return res.sendStatus(423)
         if(req.phone.companyShort.length>50)
-            return res.sendStatus(422)
+            return res.sendStatus(424)
         if(validator.isUUID(req.body.photoid))
-            return res.sendStatus(422)
+            return res.sendStatus(425)
 
         let r= await req.knex("t_users")
             .update({photoid:req.body.photoid,companyShort:req.body.companyShort,phone:req.body.phone,email:req.body.phone  })
