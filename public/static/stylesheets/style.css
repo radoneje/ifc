@@ -1896,6 +1896,7 @@ input[type=number] {
     right: 32px;
     background: yellow;
    /* display: none;*/
+    cursor: pointer;
 }
 .upBtn.active{
     display: block;
