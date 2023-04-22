@@ -1986,7 +1986,9 @@ input[type=number] {
     color: #4A4A49;
     padding: 12px 16px;
     width: 268px;
-    border:1px solid #E39A4F
+    border:1px solid #E39A4F;
+    text-align: center;
+    cursor: pointer;
 }
 .partSelectFormItem.active{
     background: #E39A4F88;
