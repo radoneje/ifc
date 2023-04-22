@@ -1846,6 +1846,10 @@ input[type=number] {
     width: 100%;
     height: auto;
 }
+.persHead{
+height: 134px;
+    background:linear-gradient(to bottom, #263379,#49569c);
+}
 
 
 @media all and (max-width: 1700px){
