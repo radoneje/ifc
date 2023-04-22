@@ -29,6 +29,8 @@ router.get('/data', async function(req, res, next) {
         if(!req.session.token)
             return res.sendStatus(401)
         let r=await req.knex("v_personal_data").where({guid:req.session.token.guid})
+
+
         res.json(r[0])
 
     }
@@ -80,7 +82,10 @@ router.get('/:lang?', async function(req, res, next) {
             if(usr.length==0)
                 return res.redirect("/personal/"+req.params.lang)
             else {
-                console.log("user is OK")
+
+                if(usr[0].statusid<60)
+                    return res.sendStatus(401)
+
                 req.session.token = usr[0]
                 return res.redirect("/personal/info/"+req.params.lang)
             }
@@ -113,6 +118,8 @@ router.post('/changeUser', async function(req, res, next) {
         let r= await req.knex("t_users")
             .update({photoid:req.body.photoid,companyShort:req.body.companyShort,phone:req.body.phone,email:req.body.email  })
             .where({guid:req.session.token.guid})
+
+
         res.json(r)
     }
     catch (e) {
