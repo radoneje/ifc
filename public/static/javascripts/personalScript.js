@@ -1,6 +1,6 @@
 console.log("mounted")
 let personalApp=new Vue({
-    app:"#app",
+    el:"#app",
     data:{
         user:{}
     },
