@@ -8,6 +8,6 @@ let personalApp=new Vue({
     mounted:async function(){
         //this.user=await getJson("/personal/data")
         loader.style.display="none"
-        loader.style.display="block"
+        app.style.display="block"
     }
 })
