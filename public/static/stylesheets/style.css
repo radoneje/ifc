@@ -1850,6 +1850,15 @@ input[type=number] {
     height: 134px;
     background:linear-gradient(to bottom, #263379,#49569c);
     position: relative;
+
+}
+.persHead:before{
+    content: '';
+    position: absolute;
+    top:0;
+    height: 100%;
+    right: 0;
+    width: 332px;
     background-image: url('/static/images/personalHeadBg.svg');
 }
 
