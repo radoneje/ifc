@@ -1855,8 +1855,10 @@ input[type=number] {
 .persHead:before{
     content: '';
     position: absolute;
-    top:0;
+    top: 0;
+    background-position: top;
     height: 100%;
+    background-repeat: no-repeat;
     right: 0;
     width: 332px;
     background-image: url('/static/images/personalHeadBg.svg');
