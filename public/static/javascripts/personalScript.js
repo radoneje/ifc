@@ -6,6 +6,8 @@ let personalApp=new Vue({
     methods:{},
     watch:{},
     mounted:async function(){
-        this.user=await getJson("/personal/data")
+        //this.user=await getJson("/personal/data")
+        loader.style.display="none"
+        loader.style.display="block"
     }
 })
