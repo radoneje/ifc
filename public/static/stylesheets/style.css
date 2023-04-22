@@ -1894,7 +1894,8 @@ input[type=number] {
     position: fixed;
     bottom:32px;
     right: 32px;
-    background: yellow;
+    background: #e39a3f;
+    boder:1px solid #bb3e3f;
     display: none;
     cursor: pointer;
 }
