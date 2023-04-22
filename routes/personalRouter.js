@@ -136,6 +136,7 @@ router.post('/changeUser', async function(req, res, next) {
         let r= await req.knex("t_users")
             .update({isPaySelf:req.body.isPaySelf, statusid:req.body.isPaySelf?65:60 })
             .where({guid:req.session.token.guid})
+        res.json(r)
     }
     catch (e) {
         console.warn(e)
