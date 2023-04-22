@@ -1847,8 +1847,10 @@ input[type=number] {
     height: auto;
 }
 .persHead{
-height: 134px;
+    height: 134px;
     background:linear-gradient(to bottom, #263379,#49569c);
+    position: relative;
+    background-image: url('/static/images/personalHeadBg.svg');
 }
 
 
