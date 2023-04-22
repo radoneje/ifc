@@ -1567,6 +1567,9 @@ input[type=number] {
     color: #878787;
 }
 
+.participaintRow img{
+    max-width: min(300px, 100%);
+}
 .oSessionSpkBoxName {
     font-weight: 500;
     font-size: 18px;
