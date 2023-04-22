@@ -18,8 +18,7 @@ div(v-if="user.statusid==65 && user.isPaySelf")
             .partSelectFormItem.active физическое лицо
     .participaintRow &nbsp;
     .participaintRow
-        .participaintRowBodySubTitle
-            b Сумма к оплате: {{user.price}} рублей
+        .participaintRowBodySubTitle Сумма к оплате: <b>{{user.price}} рублей</b>
     .participaintRow
         .participaintRowBodySubTitle
             form(method='POST' action='https://demo.paykeeper.ru/create/')
