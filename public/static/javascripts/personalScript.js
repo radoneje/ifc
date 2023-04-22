@@ -14,7 +14,7 @@ let personalApp=new Vue({
         setPaySelf:async function(isPaySelf) {
             let res = await postJson("/personal/setPaySelf",{isPaySelf})
             this.user.isPaySelf=isPaySelf;
-            this.user.statusid=isPaySelf?65:60;
+            this.user=res;
         },
         saveUser:async function() {
             if(this.isLoading)

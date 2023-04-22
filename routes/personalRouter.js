@@ -64,7 +64,9 @@ router.post('/setPaySelf', async function(req, res, next) {
         let r= await req.knex("t_users")
             .update({isPaySelf:req.body.isPaySelf, statusid:req.body.isPaySelf?65:60 })
             .where({guid:req.session.token.guid})
-        res.json(r)
+        r=await req.knex("v_personal_data").where({guid:req.session.token.guid})
+        res.json(r[0])
+
     }
     catch (e) {
         console.warn(e)
