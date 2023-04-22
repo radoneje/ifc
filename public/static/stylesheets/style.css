@@ -1977,6 +1977,21 @@ input[type=number] {
     font-weight: 300;
     color:#4A4A49;
 }
+.partSelectFormItem{
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 26px;
+    text-transform: uppercase;
+
+    color: #4A4A49;
+    padding: 12px 16px;
+    width: 268px;
+    border:1px solid #E39A4F
+}
+.partSelectFormItem.active{
+    background: #E39A4F;
+}
+
 
 
 @media all and (max-width: 1700px){
