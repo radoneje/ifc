@@ -1888,6 +1888,7 @@ input[type=number] {
     color:#FFFFFF;
     text-transform: uppercase;
 }
+
 .upBtn{
     width: 36px;
     height: 36px;
@@ -1899,9 +1900,12 @@ input[type=number] {
     display: none;
     cursor: pointer;
     padding: 4px;
+    opacity: 1;
+    transition: opacity 2s ease;
 }
 .upBtn.active{
     display: block;
+    opacity: 1;
 }
 .upBtn svg{
     transform: rotate(-90deg);
