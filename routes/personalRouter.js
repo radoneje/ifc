@@ -24,6 +24,53 @@ const checkAccess=(req, res, next)=>{
     next();
 }
 /* GET home page. */
+router.post('/changeUser', async function(req, res, next) {
+    try {
+        if(!req.session.token)
+            return res.sendStatus(401)
+        if(!(req.body.photoid && req.body.companyShort && req.body.phone && req.body.email))
+            return res.sendStatus(422)
+
+        req.body.email= validator.trim(req.body.email);
+        //req.body.email= validator.normalizeEmail(req.body.email)
+
+
+        if(!req.body.photoid.match(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i))
+            return res.sendStatus(422)
+        if(req.body.companyShort.length>128)
+            return res.sendStatus(422)
+        if(req.body.phone.length>50)
+            return res.sendStatus(422)
+
+
+        let r= await req.knex("t_users")
+            .update({photoid:req.body.photoid,companyShort:req.body.companyShort,phone:req.body.phone,email:req.body.email  })
+            .where({guid:req.session.token.guid})
+
+
+        res.json(r)
+    }
+    catch (e) {
+        console.warn(e)
+        return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
+    }
+});
+router.post('/setPaySelf', async function(req, res, next) {
+    try {
+        if(!req.session.token)
+            return res.sendStatus(401)
+
+        req.body.isPaySelf=req.body.isPaySelf?true:false;
+        let r= await req.knex("t_users")
+            .update({isPaySelf:req.body.isPaySelf, statusid:req.body.isPaySelf?65:60 })
+            .where({guid:req.session.token.guid})
+        res.json(r)
+    }
+    catch (e) {
+        console.warn(e)
+        return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
+    }
+});
 router.get('/data', async function(req, res, next) {
     try {
         if(!req.session.token)
@@ -96,53 +143,7 @@ router.get('/:lang?', async function(req, res, next) {
         return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
     }
 });
-router.post('/changeUser', async function(req, res, next) {
-    try {
-        if(!req.session.token)
-            return res.sendStatus(401)
-        if(!(req.body.photoid && req.body.companyShort && req.body.phone && req.body.email))
-            return res.sendStatus(422)
 
-        req.body.email= validator.trim(req.body.email);
-        //req.body.email= validator.normalizeEmail(req.body.email)
-
-
-        if(!req.body.photoid.match(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i))
-            return res.sendStatus(422)
-        if(req.body.companyShort.length>128)
-            return res.sendStatus(422)
-        if(req.body.phone.length>50)
-            return res.sendStatus(422)
-
-
-        let r= await req.knex("t_users")
-            .update({photoid:req.body.photoid,companyShort:req.body.companyShort,phone:req.body.phone,email:req.body.email  })
-            .where({guid:req.session.token.guid})
-
-
-        res.json(r)
-    }
-    catch (e) {
-        console.warn(e)
-        return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
-    }
-});
-router.post('/setPaySelf', async function(req, res, next) {
-    try {
-        if(!req.session.token)
-            return res.sendStatus(401)
-
-        req.body.isPaySelf=req.body.isPaySelf?true:false;
-        let r= await req.knex("t_users")
-            .update({isPaySelf:req.body.isPaySelf, statusid:req.body.isPaySelf?65:60 })
-            .where({guid:req.session.token.guid})
-        res.json(r)
-    }
-    catch (e) {
-        console.warn(e)
-        return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
-    }
-});
 
 
 
