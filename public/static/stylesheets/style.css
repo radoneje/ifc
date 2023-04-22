@@ -1851,13 +1851,13 @@ input[type=number] {
     width: 100%;
     height: auto;
 }
-.persHead{
+.persHead, .persFooter{
     height: 134px;
     background:linear-gradient(to bottom, #263379,#49569c);
     position: relative;
 
 }
-.persHead:before{
+.persHead:before, .persFooter:before{
     content: '';
     position: absolute;
     top: 0;
