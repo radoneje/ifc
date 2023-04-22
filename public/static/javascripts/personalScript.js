@@ -13,7 +13,7 @@ let personalApp=new Vue({
         setTimeout(()=>{
             loader.style.display="none"
             app.style.display="block"
-        },200)
+        },1000)
 
     }
 })
