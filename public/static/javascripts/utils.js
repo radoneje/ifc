@@ -276,9 +276,9 @@ if(head && upBtn){
     let observer = new IntersectionObserver((entries, observer)=>{
         //console.log(entries[0], entries[0].isVisible)
         if(entries[0].isIntersecting)
-            upBtn.classList.add("active")
-        else
             upBtn.classList.remove("active")
+        else
+            upBtn.classList.add("active")
     }, options)
         observer.observe(head)
 }
