@@ -17,8 +17,9 @@ div(v-if="user.statusid==65 && user.isPaySelf")
             .partSelectFormItem(v-on:click="setPaySelf(false)") юридическое лицо
             .partSelectFormItem.active физическое лицо
     .participaintRow &nbsp;
+    .participaintRow Сумма к оплате: {{user.price}} рублей
     .participaintRow
-        .participaintRowBodySubTitle
+
             form(method='POST' action='https://demo.paykeeper.ru/create/')
                 input( type='hidden' name='sum' value='100')
                 input(type='hidden' name='orderid' value='123456')
@@ -27,8 +28,7 @@ div(v-if="user.statusid==65 && user.isPaySelf")
     .participaintRow &nbsp;
     .participaintRow
         p#paykeeper
-            .participaintRowBodySubTitle
-                b  Оплата по банковской карте или по QR-коду Системы Быстрых Платежей:
+            .participaintRowBodySubTitle Оплата производится по банковской карте или по QR-коду Системы Быстрых Платежей:
             p
                 ul
                     li Осуществляется через Платежную платформу <a class="inline" href="https://paykeeper.ru/" target="_blank">PayKeeper</a>;
