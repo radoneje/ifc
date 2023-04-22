@@ -1913,6 +1913,10 @@ input[type=number] {
     width: calc(100%);
     height: calc(100%);;
 }
+.persMenuExit{
+    cursor: pointer;
+    margin-left: 8px;
+}
 
 
 @media all and (max-width: 1700px){
