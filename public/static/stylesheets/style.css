@@ -1956,6 +1956,12 @@ input[type=number] {
 .persNavItem.active, .persNavItem:hover{
     background: rgba(224, 224, 224, 0.6);
 }
+.persNav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
 
 
 @media all and (max-width: 1700px){
