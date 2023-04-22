@@ -36,7 +36,7 @@ block content
 
 
                 .persBodyR
-                    .persSection(v-if="section=='pay'")
+                    .persSection(v-if="section=='pay' && user.isPay")
                         include sectPay
                     .persSection(v-if="section=='info'")
                         include sectInfo
