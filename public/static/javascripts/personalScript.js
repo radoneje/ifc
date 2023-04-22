@@ -2,6 +2,7 @@ console.log("mounted")
 let personalApp=new Vue({
     el:"#app",
     data:{
+        section:"info",
         user:{}
     },
     methods:{},

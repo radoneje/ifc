@@ -25,14 +25,14 @@ block content
             .persBody.flex
                 .persBodyL
                     .persNav
-                        .persNavItem Оплата
-                        .persNavItem Информация
-                        .persNavItem Профиль
-                        .persNavItem Документы
-                        .persNavItem Отели
-                        .persNavItem.active Трансферы
-                        .persNavItem Место проведения
-                        .persNavItem Обратная связь
+                        .persNavItem(v-on:click="section='pay'" v-bind:class="{active:section=='pay'}") Оплата
+                        .persNavItem(v-on:click="section='info'" v-bind:class="{active:section=='info'}") Информация
+                        .persNavItem(v-on:click="section='profile'" v-bind:class="{active:section=='profile'}") Профиль
+                        .persNavItem(v-on:click="section='doc'" v-bind:class="{active:section=='doc'}") Документы
+                        .persNavItem(v-on:click="section='hotel'" v-bind:class="{active:section=='hotel'}") Отели
+                        .persNavItem(v-on:click="section='transfer'" v-bind:class="{active:section=='transfer'}") Трансферы
+                        .persNavItem(v-on:click="section='place'" v-bind:class="{active:section=='place'}") Место проведения
+                        .persNavItem(v-on:click="section='feedback'" v-bind:class="{active:section=='feedback'}") Обратная связь
 
 
                 .persBodyR
