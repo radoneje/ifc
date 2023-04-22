@@ -1915,7 +1915,15 @@ input[type=number] {
 }
 .persMenuExit{
     cursor: pointer;
-    margin-left: 8px;
+    margin-left: 16px;
+}
+.persMenuFio{
+    font-size: 21px;
+    line-height: 26px;
+    /* identical to box height, or 124% */
+
+    text-transform: uppercase;
+    color: #FFFFFF;
 }
 
 
