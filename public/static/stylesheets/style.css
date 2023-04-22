@@ -1911,6 +1911,7 @@ input[type=number] {
 .upBtn svg{
     transform: rotate(-90deg);
     width: calc(100%);
+    height: calc(100%);;
 }
 
 
