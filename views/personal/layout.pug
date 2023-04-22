@@ -32,11 +32,27 @@ block content
                         .persNavItem(v-on:click="section='hotel'" v-bind:class="{active:section=='hotel'}") Отели
                         .persNavItem(v-on:click="section='transfer'" v-bind:class="{active:section=='transfer'}") Трансферы
                         .persNavItem(v-on:click="section='place'" v-bind:class="{active:section=='place'}") Место проведения
-                        .persNavItem(v-on:click="section='feedback'" v-bind:class="{active:section=='feedback'}") Обратная связь
+                        .persNavItem(v-on:click="section='feedback'" v-bind:class="{active:section=='place'}") Обратная связь
 
 
                 .persBodyR
-                    div ggg
+                    .persSection(v-if="section=='pay'")
+                        include sectPay
+                    .persSection(v-if="section=='info'")
+                        include sectInfo
+                    .persSection(v-if="section=='profile'")
+                        include sectProfile
+                    .persSection(v-if="section=='doc'")
+                        include sectDoc
+                    .persSection(v-if="section=='hotel'")
+                        include sectHotel
+                    .persSection(v-if="section=='transfer'")
+                        include sectTransfer
+                    .persSection(v-if="section=='place'")
+                        include sectPlace
+                    .persSection(v-if="section=='place'")
+                        include sectFeedback
+
             .persFooter.flex.center
                 .persHeadRow.flex.center.beetwen
                     .persHeadLogoWr.flex.center(onclick="document.location.href='/'")
