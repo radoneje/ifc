@@ -3,8 +3,8 @@
         .menuItemBox
         .menuItemText Оплата
     .participaintRowHead Здесь будет информация об оплате
-div(v-if="user.statusid==60")
-    .participaintRow
+
+.participaintRow(v-if="user.statusid==60")
         .partSelectForm.flex.center
             .partSelectFormItem.active юридическое лицо
             .partSelectFormItem физическое лицо
