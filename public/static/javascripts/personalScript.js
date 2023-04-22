@@ -34,7 +34,7 @@ let personalApp=new Vue({
             })
             setTimeout(async ()=>{
                 let arr = []
-                arr.push(...req.body.querySelectorAll(".persBodyR .regRow.error"));
+                arr.push(...document.body.querySelectorAll(".persBodyR .regRow.error"));
 
                 if (arr.length > 0) {
                     arr[0].scrollIntoView({
