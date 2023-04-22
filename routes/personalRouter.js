@@ -1,5 +1,6 @@
 import express from 'express'
 import axios from 'axios'
+import validator from 'validator';
 
 
 const router = express.Router();
@@ -23,7 +24,7 @@ const checkAccess=(req, res, next)=>{
     next();
 }
 /* GET home page. */
-router.get('/data',checkAccess, async function(req, res, next) {
+router.get('/data', async function(req, res, next) {
     try {
         if(!req.session.token)
             return res.sendStatus(401)
@@ -90,5 +91,36 @@ router.get('/:lang?', async function(req, res, next) {
         return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
     }
 });
+router.post('/changeUser', async function(req, res, next) {
+    try {
+        if(!req.session.token)
+            return res.sendStatus(401)
+        if(!(req.body.photoid && req.body.companyShort && req.body.phone && req.body.email))
+            return res.sendStatus(422)
+
+        req.body.email= validator.trim(req.body.email);
+        req.body.email= validator.normalizeEmail(req.body.email)
+
+
+        if(validator.isUUID(req.body.photoid))
+            return res.sendStatus(422)
+        if(req.body.companyShort.length>128)
+            return res.sendStatus(422)
+        if(req.phone.companyShort.length>50)
+            return res.sendStatus(422)
+        if(validator.isUUID(req.body.photoid))
+            return res.sendStatus(422)
+
+        let r= await req.knex("t_users")
+            .update({photoid:req.body.photoid,companyShort:req.body.companyShort,phone:req.body.phone,email:req.body.phone  })
+            .where({guid:req.session.token.guid})
+        res.json(r)
+    }
+    catch (e) {
+        console.warn(e)
+        return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
+    }
+});
+
 
 export default router;
