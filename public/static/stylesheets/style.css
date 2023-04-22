@@ -1921,7 +1921,7 @@ input[type=number] {
     font-size: 21px;
     line-height: 26px;
     /* identical to box height, or 124% */
-
+    font-weight: 400;
     text-transform: uppercase;
     color: #FFFFFF;
 }
