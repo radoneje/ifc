@@ -274,7 +274,11 @@ if(head && upBtn){
         threshold: 0
     }
     let observer = new IntersectionObserver((entries, observer)=>{
-        console.log(entries)
+      //  console.log(entries)
+        if(entries[0].isVisible)
+            upBtn.classList.add("active")
+        else
+            upBtn.classList.remove("active")
     }, options)
         observer.observe(head)
 }
