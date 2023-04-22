@@ -127,6 +127,22 @@ router.post('/changeUser', async function(req, res, next) {
         return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
     }
 });
+router.post('/changeUser', async function(req, res, next) {
+    try {
+        if(!req.session.token)
+            return res.sendStatus(401)
+
+        req.body.isPaySelf=req.body.isPaySelf?true:false;
+        let r= await req.knex("t_users")
+            .update({isPaySelf:req.body.isPaySelf, statusid:req.body.isPaySelf?65:60 })
+            .where({guid:req.session.token.guid})
+    }
+    catch (e) {
+        console.warn(e)
+        return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
+    }
+});
+
 
 
 export default router;
