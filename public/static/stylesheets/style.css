@@ -1926,6 +1926,9 @@ input[type=number] {
     color: #FFFFFF;
     margin-left: 16px;
 }
+.persBody{
+    min-height: calc(100vh - 268px);
+}
 
 
 @media all and (max-width: 1700px){
