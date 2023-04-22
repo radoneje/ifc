@@ -810,7 +810,7 @@ h2 {
 }
 
 .reg287 {
-    width: 287px;
+    width: 315px;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -927,7 +927,7 @@ h2 {
 }
 
 .reqInput {
-    width: calc(100% - 287px);
+    width: calc(100% - 315px);
     font-size: 21px;
     box-sizing: border-box;
     padding: 7px 12px;
