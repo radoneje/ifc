@@ -1963,6 +1963,13 @@ input[type=number] {
     justify-content: flex-end;
     align-items: flex-start;
 }
+.pBtnChange{
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    background: #BB3E3F;
+    margin-top:12px
+}
 
 
 @media all and (max-width: 1700px){
