@@ -43,7 +43,7 @@ let personalApp=new Vue({
                     return
                 }
                 this.isLodinng = true
-                let res = await postJson(apiUrl + "/personal/changeUser", {photoid:this.user.photoid, companyShort:this.user.companyShort,phone:this.user.phone, email:this.user.email})
+                let res = await postJson("/personal/changeUser", {photoid:this.user.photoid, companyShort:this.user.companyShort,phone:this.user.phone, email:this.user.email})
                 if (!res) {
                     alert("Произошла ошибка, попробуйте позже")
                     this.isLodinng = false
