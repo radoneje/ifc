@@ -41,7 +41,7 @@ router.get('/info/:lang?', checkAccess, async function(req, res, next) {
         if(!req.params.lang.match(/ru|en/))
             req.params.lang="ru";
 
-        res.render("personal/layout", {lang:req.params.lang, frontUrl:config.frotnUrl})
+        res.render("personal/layout", {lang:req.params.lang, frontUrl:config.frontUrl})
 
     }
     catch (e) {
