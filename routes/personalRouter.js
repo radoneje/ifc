@@ -48,6 +48,16 @@ router.get('/info/:lang?', checkAccess, async function(req, res, next) {
     }
 });
 
+router.get('/exit/:lang?', async function(req, res, next) {
+    try {
+        req.session.token=null;
+        res.redirect("/")
+    }
+    catch (e) {
+            console.warn(e)
+            return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
+        }
+    });
 router.get('/:lang?', async function(req, res, next) {
     try {
         console.log(req.params.lang)
