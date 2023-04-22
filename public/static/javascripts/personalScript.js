@@ -18,7 +18,7 @@ let personalApp=new Vue({
                     .replace(/^([^.]*\.)|\./g, '$1') // remove all dots except first one
                     .replace(/(?!^)-/g, '') // remove all hyphens except first one
 
-            let elems = registration.querySelectorAll("input[must]");
+            let elems = document.querySelector(".persBodyR").querySelectorAll("input[must]");
             elems.forEach(e => {
                 let sect = e.getAttribute("name")
                 if (!this.user[sect]) {
