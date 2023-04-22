@@ -7,7 +7,7 @@ let personalApp=new Vue({
     },
     methods:{
         uploadPhoto:async function(){
-            let photoid=await getPhoto(3/4)
+            let photoid=await getPhoto(4/5)
             if(photoid)
                 this.user.photoid=photoid;
         },
