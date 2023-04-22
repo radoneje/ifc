@@ -265,9 +265,13 @@ const clickMenuItem=(elemSelector, redirectPage, lang=null)=>{
         document.location.href=redirectPage
     }
 }
-let head=document.querySelector(".mainImg2Wr")
+let head=document.querySelector(".upTarget")
 let upBtn=document.querySelector(".upBtn")
 if(head && upBtn){
+    upBtn.addEventListener("click",()=>{
+        head.scrollIntoView({behavior: "smooth"})
+    })
+
     let options = {
         root: null,//элемент, который выступает в роли области просмотра для target (предок целевого элемента или null для viewport)
         rootMargin: '0px',//отступы вокруг root
