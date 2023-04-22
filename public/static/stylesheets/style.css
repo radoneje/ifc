@@ -906,6 +906,7 @@ h2 {
     padding-bottom: 125%;
     height: 0;
     width: 100%;
+    cursor: pointer;
 }
 
 .reqPhotoBox2Photo {
@@ -1195,6 +1196,7 @@ input[type=number] {
     bottom: 12%;
     left: 0;
     text-align: center;
+    cursor: pointer;
 }
 
 .regSubmit svg {
