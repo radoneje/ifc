@@ -1,5 +1,6 @@
 import express from 'express'
 import axios from 'axios'
+import config from "../config.js"
 
 const router = express.Router();
 import {faker} from '@faker-js/faker/locale/ru';
@@ -40,7 +41,7 @@ router.get('/info/:lang?', checkAccess, async function(req, res, next) {
         if(!req.params.lang.match(/ru|en/))
             req.params.lang="ru";
 
-        res.render("personal/layout", {lang:req.params.lang})
+        res.render("personal/layout", {lang:req.params.lang, frontUrl:config.frotnUrl})
 
     }
     catch (e) {
