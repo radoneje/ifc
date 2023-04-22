@@ -10,7 +10,10 @@ let personalApp=new Vue({
     mounted:async function(){
         console.log("mounted 1")
         this.user=await getJson("/personal/data")
-        loader.style.display="none"
-        app.style.display="block"
+        setTimeout(()=>{
+            loader.style.display="none"
+            app.style.display="block"
+        },200)
+
     }
 })
