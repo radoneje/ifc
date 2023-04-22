@@ -1924,6 +1924,7 @@ input[type=number] {
     font-weight: 400;
     text-transform: uppercase;
     color: #FFFFFF;
+    margin-left: 16px;
 }
 
 
