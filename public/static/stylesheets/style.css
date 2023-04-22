@@ -1932,7 +1932,7 @@ input[type=number] {
 .persBodyL{
     box-sizing: border-box;
     width: 400px;
-    border-right: 1px solid #D9D9D9;
+    border-right: 2px solid #D9D9D9;
 }
 .persBodyR{
     box-sizing: border-box;
