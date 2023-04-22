@@ -12,6 +12,8 @@ let personalApp=new Vue({
     },
     methods:{
         saveUser:async function() {
+            if(this.isLoading)
+                return;
             this.errors = {company: {}, payCompany: {}}
             if(this.user.phone)
                 this.user.phone = this.user.phone.replace(/[^\d.-]+/g, '') // remove all non-digits except - and .
@@ -42,11 +44,11 @@ let personalApp=new Vue({
                     });
                     return
                 }
-                this.isLodinng = true
+                this.isLoading = true
                 let res = await postJson("/personal/changeUser", {photoid:this.user.photoid, companyShort:this.user.companyShort,phone:this.user.phone, email:this.user.email})
                 if (!res) {
                     alert("Произошла ошибка, попробуйте позже")
-                    this.isLodinng = false
+                    this.isLoading = false
                     return
                 }
 

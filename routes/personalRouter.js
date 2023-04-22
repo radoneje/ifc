@@ -99,7 +99,7 @@ router.post('/changeUser', async function(req, res, next) {
             return res.sendStatus(422)
 
         req.body.email= validator.trim(req.body.email);
-        req.body.email= validator.normalizeEmail(req.body.email)
+        //req.body.email= validator.normalizeEmail(req.body.email)
 
 
         if(!req.body.photoid.match(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i))
@@ -108,6 +108,7 @@ router.post('/changeUser', async function(req, res, next) {
             return res.sendStatus(422)
         if(req.body.phone.length>50)
             return res.sendStatus(422)
+
 
         let r= await req.knex("t_users")
             .update({photoid:req.body.photoid,companyShort:req.body.companyShort,phone:req.body.phone,email:req.body.email  })

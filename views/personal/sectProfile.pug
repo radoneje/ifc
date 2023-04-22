@@ -48,7 +48,9 @@
     .regRowGroup.flex.left
         .recLabel.reg287 телефон
         input.reqInput(v-model="user.phone" must name="phone" placeholder="ФОРМАТ: +7 000 000 0000")
-.regRow()
-
+.regRow(v-if="isLodinng")
+    .regSubmit()
+        include svg/loader.svg
+.regRow(v-else )
     .regSubmit(v-on:click="saveUser()") Сохранить изменения
 
