@@ -11,44 +11,44 @@
 .regRow()
     .regRowGroup.readonly.flex.left
         .recLabel.reg287 Фамилия
-        input.reqInput(readonly v-model="user.f" must name="f")
+        input.reqInput(readonly v-model="user.f"  name="f")
 .regRow()
     .regRowGroup.readonly.flex.left
         .recLabel.reg287 Имя
-        input.reqInput(readonly v-model="user.i" must name="i")
+        input.reqInput(readonly v-model="user.i"  name="i")
 .regRow()
     .regRowGroup.readonly.flex.left
         .recLabel.reg287 Отчество
-        input.reqInput(readonly v-model="user.o" must name="o")
-.regRow()
+        input.reqInput(readonly v-model="user.o"  name="o")
+.regRow(v-bind:class="{error:errors.companyShort}")
     .regRowGroup.flex.left
         .recLabel.reg287 Комания на бейдже
         input.reqInput(v-model="user.companyShort" must name="companyShort" placeholder="")
 .regRow()
     .regRowGroup.readonly.flex.left
-        .recLabel.reg287 паспорт серия номер
-        input.reqInput(readonly v-model="user.passportNumber" must name="passportNumber" placeholder="ФОРМАТ: С ПРОБЕЛОМ, КАК В ДОКУМЕНТЕ")
+        .recLabel.reg287  Cерия, номер паспорта
+        input.reqInput(readonly v-model="user.passportNumber"  name="passportNumber" placeholder="ФОРМАТ: С ПРОБЕЛОМ, КАК В ДОКУМЕНТЕ")
 .regRow()
     .regRowGroup.readonly.flex.left
         .recLabel.reg287 дата выдачи
-        input.reqInput(readonly v-model="user.passportDate" must name="passportDate" placeholder="ФОРМАТ: КАК В ДОКУМЕНТЕ")
+        input.reqInput(readonly v-model="user.passportDate"  name="passportDate" placeholder="ФОРМАТ: КАК В ДОКУМЕНТЕ")
 .regRow()
     .regRowGroup.readonly.flex.left
         .recLabel.readonly.reg287 код подразделения
-        input.reqInput(readonly v-model="user.passportCode" must name="passportCode" placeholder="ФОРМАТ: КАК В ДОКУМЕНТЕ")
+        input.reqInput(readonly v-model="user.passportCode"  name="passportCode" placeholder="ФОРМАТ: КАК В ДОКУМЕНТЕ")
 .regRow()
     .regRowGroup.readonly.flex.left
         .recLabel.readonly.reg287 адрес регистрации
-        input.reqInput(readonly v-model="user.address" must name="address" placeholder="ФОРМАТ: КАК В ДОКУМЕНТЕ")
-.regRow()
+        input.reqInput(readonly v-model="user.address"  name="address" placeholder="ФОРМАТ: КАК В ДОКУМЕНТЕ")
+.regRow(v-bind:class="{error:errors.email}")
     .regRowGroup.flex.left
         .recLabel.reg287 email
         input.reqInput(v-model="user.email" must name="email" email )
-.regRow()
+.regRow(v-bind:class="{error:errors.phone}")
     .regRowGroup.flex.left
         .recLabel.reg287 телефон
         input.reqInput(v-model="user.phone" must name="phone" placeholder="ФОРМАТ: +7 000 000 0000")
 .regRow()
 
-    .regSubmit(v-on:click="regUser()") Сохранить изменения
+    .regSubmit(v-on:click="saveUser()") Сохранить изменения
 
