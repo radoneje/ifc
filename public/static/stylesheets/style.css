@@ -1896,12 +1896,13 @@ input[type=number] {
     bottom:32px;
     right: 32px;
     background: #e39a3f;
-    boder:1px solid #bb3e3f;
+    border:1px solid #bb3e3f;
     display: none;
     cursor: pointer;
     padding: 4px;
     opacity: 1;
     transition: opacity 2s ease;
+    z-index: 1;
 }
 .upBtn.active{
     display: block;
