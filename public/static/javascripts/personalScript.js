@@ -9,7 +9,7 @@ let personalApp=new Vue({
         uploadPhoto:async function(){
             let photoid=await getPhoto(3/4)
             if(photoid)
-                user.photoid=photoid;
+                this.user.photoid=photoid;
         },
     },
     watch:{},
