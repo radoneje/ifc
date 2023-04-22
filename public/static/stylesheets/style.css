@@ -1939,6 +1939,7 @@ input[type=number] {
 .persBodyR{
     box-sizing: border-box;
     width: calc(100% - 400px);
+    padding: 56px 100px;
 }
 .persNavItem{
     margin-bottom: 8px;
