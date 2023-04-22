@@ -7,4 +7,4 @@
         .reqPhotoBox2
             .reqPhotoBox2Photo
                 img(v-if="user.photoid" :src="'/static/image/middle/'+user.photoid")
-    .reg287.mt2.pBtnChange Изменить фото
+    .reg287.mt2.pBtnChange(v-on:click="uploadPhoto()") Изменить фото

@@ -5,7 +5,13 @@ let personalApp=new Vue({
         section:"profile",
         user:{}
     },
-    methods:{},
+    methods:{
+        uploadPhoto:async function(){
+            let photoid=await getPhoto(3/4)
+            if(photoid)
+                user.photoid=photoid;
+        },
+    },
     watch:{},
     mounted:async function(){
         console.log("mounted 1")
