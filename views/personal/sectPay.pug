@@ -17,6 +17,9 @@ div(v-if="user.statusid==65 && user.isPaySelf")
             .partSelectFormItem(v-on:click="setPaySelf(false)") юридическое лицо
             .partSelectFormItem.active физическое лицо
     .participaintRow
+        .participaintRowBodySubTitle
+            a.regSubmit.mt-3 Перейти к оплате
+    .participaintRow
         p#paykeeper
             .participaintRowBodySubTitle
                 b  Оплата по банковской карте или по QR-коду Системы Быстрых Платежей:
