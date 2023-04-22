@@ -106,10 +106,9 @@ router.post('/changeUser', async function(req, res, next) {
             return res.sendStatus(426)
         if(req.body.companyShort.length>128)
             return res.sendStatus(423)
-        if(req.body.companyShort.length>50)
+        if(req.body.phone.length>50)
             return res.sendStatus(424)
-        if(validator.isUUID(req.body.photoid))
-            return res.sendStatus(425)
+
 
         let r= await req.knex("t_users")
             .update({photoid:req.body.photoid,companyShort:req.body.companyShort,phone:req.body.phone,email:req.body.phone  })
