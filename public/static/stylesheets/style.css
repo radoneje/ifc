@@ -1874,12 +1874,14 @@ input[type=number] {
 }
 .persHeadLogo{
     width: 40px;
+    cursor: pointer;
 }
 
 .persHeadText{
     margin-left:12px;
     font-weight: 300;
     color:#FFFFFF;
+    text-transform: uppercase;
 }
 
 
