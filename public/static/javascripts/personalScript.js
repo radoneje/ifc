@@ -9,7 +9,7 @@ let personalApp=new Vue({
     watch:{},
     mounted:async function(){
         console.log("mounted 1")
-        //this.user=await getJson("/personal/data")
+        this.user=await getJson("/personal/data")
         loader.style.display="none"
         app.style.display="block"
     }

@@ -25,8 +25,9 @@ const checkAccess=(req, res, next)=>{
 router.get('/data',checkAccess, async function(req, res, next) {
     try {
         if(!req.session.token)
-            return res.redirect("/personal/"+req.params.lang)
-        res.render("personal/layout")
+            return res.sendStatus(401)
+        let r=await req.knex("v_personal_data").where({guid:req.session.token.guid})
+        res.json(r[0])
 
     }
     catch (e) {
