@@ -1929,6 +1929,15 @@ input[type=number] {
 .persBody{
     min-height: calc(100vh - 268px);
 }
+.persBodyL{
+    box-sizing: border-box;
+    width: 400px;
+    border-right: 1px solid #D9D9D9;
+}
+.persBodyR{
+    box-sizing: border-box;
+    width: calc(100% - 400px);
+}
 
 
 @media all and (max-width: 1700px){
