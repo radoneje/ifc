@@ -16,9 +16,11 @@ div(v-if="user.statusid==65 && user.isPaySelf")
         .partSelectForm.flex.center
             .partSelectFormItem(v-on:click="setPaySelf(false)") юридическое лицо
             .partSelectFormItem.active физическое лицо
+    .participaintRow &nbsp;
     .participaintRow
         .participaintRowBodySubTitle
             a.regSubmit.mt-3 Перейти к оплате
+    .participaintRow &nbsp;
     .participaintRow
         p#paykeeper
             .participaintRowBodySubTitle
