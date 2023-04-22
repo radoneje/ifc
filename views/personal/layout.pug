@@ -25,7 +25,7 @@ block content
             .persBody.flex
                 .persBodyL
                     .persNav
-                        .persNavItem(v-on:click="section='pay'" v-bind:class="{active:section=='pay'}") Оплата
+                        .persNavItem(v-on:click="section='pay'" v-bind:class="{active:section=='pay'}" v-if="user.isPay") Оплата
                         .persNavItem(v-on:click="section='info'" v-bind:class="{active:section=='info'}") Информация
                         .persNavItem(v-on:click="section='profile'" v-bind:class="{active:section=='profile'}") Профиль
                         .persNavItem(v-on:click="section='doc'" v-bind:class="{active:section=='doc'}") Документы
@@ -36,7 +36,7 @@ block content
 
 
                 .persBodyR
-                    .persSection(v-if="section=='pay' && user.isPay")
+                    .persSection(v-if="section=='pay'")
                         include sectPay
                     .persSection(v-if="section=='info'")
                         include sectInfo
