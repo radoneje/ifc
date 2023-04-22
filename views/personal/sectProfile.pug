@@ -29,11 +29,11 @@
         .recLabel.reg287 дата выдачи
         input.reqInput(readonly v-model="user.passportDate" must name="passportDate" placeholder="ФОРМАТ: КАК В ДОКУМЕНТЕ")
 .regRow()
-    .regRowGroup.flex.left
+    .regRowGroup.readonly.flex.left
         .recLabel.readonly.reg287 код подразделения
         input.reqInput(readonly v-model="user.passportCode" must name="passportCode" placeholder="ФОРМАТ: КАК В ДОКУМЕНТЕ")
 .regRow()
-    .regRowGroup.flex.left
+    .regRowGroup.readonly.flex.left
         .recLabel.readonly.reg287 адрес регистрации
         input.reqInput(readonly v-model="user.address" must name="address" placeholder="ФОРМАТ: КАК В ДОКУМЕНТЕ")
 .regRow()
@@ -44,4 +44,7 @@
     .regRowGroup.flex.left
         .recLabel.reg287 телефон
         input.reqInput(v-model="user.phone" must name="phone" placeholder="ФОРМАТ: +7 000 000 0000")
+.regRow()
+
+    .regSubmit(v-on:click="regUser()") Изменить информацию
 
