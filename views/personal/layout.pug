@@ -1,1 +1,12 @@
+extends ../layout
+block head
+    title="Финансовый Конгресс Банка России: Личный кабинет"
+block content
 
+    #loader.prcLoaderWr.flex.center
+        .prcLoader
+            include ../svg/loader.svg
+    #app()
+    script(src="/static/lib/vue.min.js")
+    script(src="/static/javascripts/utils.js")
+    script(src="/static/javascripts/personalScript.js")
