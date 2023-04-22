@@ -102,7 +102,7 @@ router.post('/changeUser', async function(req, res, next) {
         req.body.email= validator.normalizeEmail(req.body.email)
 
 
-        if(validator.isUUID(req.body.photoid,[v4]))
+        if(validator.isUUID(req.body.photoid,"v4"))
             return res.sendStatus(426)
         if(req.body.companyShort.length>128)
             return res.sendStatus(423)
