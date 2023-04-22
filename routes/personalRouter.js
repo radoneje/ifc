@@ -16,17 +16,30 @@ import get  from "async-get-file"
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
-
+const checkAccess=(req, res, next)=>{
+    if(!req.session.token)
+        return res.redirect("/personal/"+req.params.lang)
+    next();
+}
 /* GET home page. */
-router.get('/info/:lang?', async function(req, res, next) {
+router.get('/data',checkAccess, async function(req, res, next) {
     try {
-        if(!req.params.lang.match(/ru|en/))
-            req.params.lang="ru";
-        console.log("here",req.query.token )
         if(!req.session.token)
             return res.redirect("/personal/"+req.params.lang)
         res.render("personal/layout")
+
+    }
+    catch (e) {
+        console.warn(e)
+        return res.json("error")
+    }
+});
+router.get('/info/:lang?', checkAccess, async function(req, res, next) {
+    try {
+        if(!req.params.lang.match(/ru|en/))
+            req.params.lang="ru";
+
+        res.render("personal/layout", {lang:req.params.lang})
 
     }
     catch (e) {
@@ -40,7 +53,7 @@ router.get('/:lang?', async function(req, res, next) {
         console.log(req.params.lang)
         if(!(req.params.lang && req.params.lang.match(/ru|en/)))
             req.params.lang="ru";
-        console.log("user check", req.query.token, )
+
         if(req.session.token)
             return res.redirect("/personal/info/"+req.params.lang)
 
@@ -48,7 +61,7 @@ router.get('/:lang?', async function(req, res, next) {
             return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
         if(req.query.token)
         {
-            console.log("user have a token")
+
             req.session.token=null;
             let usr=await req.knex("v_lk_access").where({guid:req.query.token})
             if(usr.length==0)
