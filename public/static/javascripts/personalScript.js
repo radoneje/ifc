@@ -18,7 +18,7 @@ let personalApp=new Vue({
                     .replace(/^([^.]*\.)|\./g, '$1') // remove all dots except first one
                     .replace(/(?!^)-/g, '') // remove all hyphens except first one
 
-            let elems = document.querySelector(".persBodyR").querySelectorAll("input[must]");
+            let elems = document.body.querySelectorAll(".persBodyR input[must]");
             elems.forEach(e => {
                 let sect = e.getAttribute("name")
                 if (!this.user[sect]) {
@@ -32,6 +32,17 @@ let personalApp=new Vue({
                     this.errors[sect] = true;
                 }
             })
+            setTimeout(async ()=>{
+                let arr = []
+                arr.push(...req.body.querySelectorAll(".persBodyR .regRow.error"));
+
+                if (arr.length > 0) {
+                    arr[0].scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    return
+                }
+            },0)
         },
 
         uploadPhoto:async function(){
