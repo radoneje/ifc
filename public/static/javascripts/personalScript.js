@@ -25,7 +25,7 @@ let personalApp=new Vue({
                     this.errors[sect] = true;
                 }
             })
-            elems = registration.querySelectorAll(".persBodyR input[email]");
+            elems = document.body.querySelectorAll(".persBodyR input[email]");
             elems.forEach(e => {
                 let sect = e.getAttribute("name")
                 if (!(this.user[sect] && validateEmail(this.user[sect]))) {
