@@ -2,4 +2,8 @@
     .menuItem.flex.center.left
         .menuItemBox
         .menuItemText Профиль
-    .participaintRowHead Здесь будет возможность изменить ваш профиль
+.regRow
+    .reqPhoto2.reg287(v-on:click="uploadPhoto()")
+        .reqPhotoBox2
+            .reqPhotoBox2Photo
+                img(v-if="user.photoid" :src="'/static/image/middle/'+user.photoid")
