@@ -1895,6 +1895,10 @@ input[type=number] {
     bottom:32px;
     right: 32px;
     background: yellow;
+   /* display: none;*/
+}
+.upBtn.active{
+    display: block;
 }
 
 
