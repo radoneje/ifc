@@ -1898,13 +1898,14 @@ input[type=number] {
     boder:1px solid #bb3e3f;
     display: none;
     cursor: pointer;
+    padding: 4px;
 }
 .upBtn.active{
     display: block;
 }
 .upBtn svg{
     transform: rotate(-90deg);
-    width: calc(100% - 4px);
+    width: calc(100%);
 }
 
 
