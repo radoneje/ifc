@@ -51,6 +51,8 @@
 .regRow(v-if="isLoading")
     .regSubmit()
         include ../svg/loader.svg
+.regRow(v-else-if="isComplite")
+    div Изменения сохранены.
 .regRow(v-else )
     .regSubmit(v-on:click="saveUser()") Сохранить изменения
 

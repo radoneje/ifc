@@ -51,6 +51,14 @@ let personalApp=new Vue({
                     this.isLoading = false
                     return
                 }
+                setTimeout(()=>{
+                    this.isLoading = false
+                    this.isComplite=true;
+                    setTimeout(()=>{
+                        this.isComplite=false;
+                    },4000)
+
+                },2000)
 
             },0)
         },
