@@ -125,6 +125,16 @@ router.get('/participants/:lang?', async function(req, res, next) {
     res.text("Ошибка")
   }
 });
+router.all('/pay_result/', async function(req, res, next) {
+  try {
+   res.json("ok")
+  }
+  catch (e) {
+    console.warn(e)
+    res.text("Ошибка")
+  }
+});
+
 
 
 
