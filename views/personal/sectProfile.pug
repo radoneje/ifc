@@ -21,6 +21,10 @@
         .recLabel.reg287 Отчество
         input.reqInput(readonly v-model="user.o" must name="o")
 .regRow()
+    .regRowGroup.flex.left
+        .recLabel.reg287 Комания на бейдже
+        input.reqInput(v-model="user.companyShort" must name="phone" placeholder="ФОРМАТ: +7 000 000 0000")
+.regRow()
     .regRowGroup.readonly.flex.left
         .recLabel.reg287 паспорт серия номер
         input.reqInput(readonly v-model="user.passportNumber" must name="passportNumber" placeholder="ФОРМАТ: С ПРОБЕЛОМ, КАК В ДОКУМЕНТЕ")
