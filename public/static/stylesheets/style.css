@@ -1971,7 +1971,7 @@ text-decoration: none !important;
     box-sizing: border-box;
     width: calc(100% - 400px);
     padding: 56px 100px;
-    max-height: calc(100vh - 44px);
+    max-height: calc(100vh - 88px);
     overflow-y: scroll;
 }
 .wordWrap{
