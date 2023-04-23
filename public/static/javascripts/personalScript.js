@@ -38,7 +38,7 @@ let personalApp=new Vue({
             await postJson("/personal/feedbackMessage", msg)
             this.feedback={text:"", files:[]}
             alert("сообщение отправлено")
-            this.isLoading=true;
+            this.isLoading=false;
         },
         feedbackAddFile:async function(){
             let inp = document.createElement("input")
