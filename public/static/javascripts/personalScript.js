@@ -85,6 +85,9 @@ let personalApp=new Vue({
                 inn.focus();
             },0)
         },
+        changePayCompanyEdo:function(){
+            this.user.company.isEdo= this.user.payCompany.isEdo?false:true
+        },
         changeCompanyEdo:function(){
           this.user.company.isEdo= this.user.company.isEdo?false:true
         },
