@@ -219,6 +219,9 @@ router.get('/:lang?', async function(req, res, next) {
         if(!(req.params.lang && req.params.lang.match(/ru|en/)))
             req.params.lang="ru";
 
+        if(req.session.token && req.query.token)
+            req.session.token=null;
+
         if(req.session.token)
             return res.redirect("/personal/info/"+req.params.lang)
 
@@ -237,7 +240,8 @@ router.get('/:lang?', async function(req, res, next) {
                     return res.sendStatus(401)
 
                 req.session.token = usr[0]
-                return res.redirect("/personal/info/"+req.params.lang)
+                return res.render("personal/layout", {lang:req.params.lang, apiUrl:config.apiUrl});
+                //return res.redirect("/personal/info/"+req.params.lang)
             }
         }
     }
