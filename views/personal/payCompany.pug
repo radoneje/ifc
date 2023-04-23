@@ -13,3 +13,36 @@
                         include ../svg/loader.svg
                 .FNSloader.mobile.opacity0(v-bind:class="{opacity100:innStatus.state==1}")
                     include ../svg/loader.svg
+    div(v-if="user.payCompany.name")
+        .regRow
+            .regRowGroup.readonly.flex.left()
+                .recLabel.reg287 Название
+                input.reqInput(readonly v-model="user.payCompany.name"  )
+        .regRow
+            .regRowGroup.readonly.flex.left()
+                .recLabel.reg287 КПП
+                input.reqInput(readonly v-model="user.payCompany.kpp"  type="number")
+        .regRow
+            .regRowGroup.readonly.flex.left()
+                .recLabel.reg287 ОГРН
+                input.reqInput(readonly v-model="user.payCompany.ogrn"  type="number")
+        .regRow
+            .regRowGroup.readonly.flex.left()
+                .recLabel.reg287 Адрес
+                input.reqInput(readonly v-model="user.payCompany.address"  )
+        .regRow
+            .regRowGroup.readonly.flex.left()
+                .recLabel.reg287  Руководитель
+                input.reqInput(readonly v-model="user.payCompany.director"  )
+        .regRow
+            .regRowGroup.flex.left
+                .recLabel.reg287 телефон
+                input.reqInput( v-model="user.payCompany.phone" placeholder="ФОРМАТ: +7 000 000 0000" must name="phone")
+        .regRow
+            .regRowGroup.flex.left
+                .recLabel.reg287 Кто подписывает
+                input.reqInput( v-model="user.payCompany.signater" placeholder="ФИО сотрудника, на основании чего действует" must name="signater")
+        .regRow
+            .regCheckBox.green.flex.left(v-on:click="changePayCompanyEdo()" v-bind:class="{active:user.company.isEdo}")
+                .regCheckBoxBox
+                .regCheckBoxText Компания использует электронный докуметооборот
