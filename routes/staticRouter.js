@@ -180,9 +180,10 @@ router.get('/invoice/:guid', async function (req, res, next) {
 
             let inv=invoices[0]
             let filename="/var/ifc_data/invoices/all/invoice_"+String(inv.id).padStart(3, '0')+"___"+moment(inv.date).format("DD_MM_YYYY")+".pdf"
-           /* if (fs.existsSync(filename)) {
-                return res.download(filename);
-            }*/
+            if (fs.existsSync(filename)) {
+               // return res.download(filename);
+                fs.rmSync(filename)
+            }
 
             let recvizit=inv.company[0].name+","
             recvizit+="\nИНН "+inv.company[0].inn+", КПП "+inv.company[0].kpp+","
