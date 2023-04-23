@@ -14,8 +14,9 @@ div(v-if="user.statusid==60")
                         .partSelectFormItem(v-on:click="setPaySelf(true)") физическое лицо
         .partMainCompanyPay(v-if="!user.copmanyPay")
             .participaintRow &nbsp;
-            .participaintRowTextUp
-                b Пожалуйста, проверьте данные компании, которую Вы представляете
+            .participaintRow
+                .participaintRowTextUp
+                    b Пожалуйста, проверьте данные компании, которую Вы представляете
                 .regRow
 
                     .regRowGroup.readonly.flex.left()
