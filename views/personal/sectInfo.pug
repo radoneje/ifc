@@ -4,4 +4,5 @@
         .menuItemText Информация
 .participaintRow(v-for="item in user.info")
     .participaintRowHead {{item.titleru}}
-    .participaintRowContent.wordWrap {{item.textru}}
+    .participaintRowBody
+        .participaintRowContent.wordWrap {{item.textru}}
