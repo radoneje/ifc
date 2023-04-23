@@ -29,7 +29,7 @@ router.post('/feedbackMessage', async function(req, res, next) {
     try {
         if(!req.session.token)
             return res.sendStatus(401)
-        let r=await req.knex("t_feedback").insert({userid:req.session.token.userid, files:req.body.files, text:req.body.text})
+        let r=await req.knex("t_feedback").insert({userid:req.session.token.id, files:req.body.files, text:req.body.text})
         res.json(r)
     }
     catch (e) {
