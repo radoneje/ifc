@@ -1061,7 +1061,7 @@ input[type=number] {
 }
 .participaintRowBtnGroup a{
     display: block;
-    padding: 8px 4px;
+    padding: 12px 8px;
     cursor: pointer;
     background: #E39A4F88;
     font-weight: 500;
@@ -1070,6 +1070,7 @@ input[type=number] {
     /* identical to box height, or 133% */
     color: #4A4A49;
     margin-right: 12px;
+    text-decoration: none;
 }
 
 .regRow.divaider {
