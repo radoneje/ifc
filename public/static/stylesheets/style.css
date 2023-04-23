@@ -2057,7 +2057,7 @@ text-decoration: none !important;
 .feedBackUpload{
     display: flex;
     align-items: flex-start;
-    justify-content: right;
+    justify-content: space-between;
 }
 .feedBackFileLoading{
     width: 18px;
