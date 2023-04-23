@@ -8,7 +8,7 @@
 .participaintRow
 
     .participaintRowContent.feedBackUpload
-        .feedBackUploadBtn Приложить файлы
+        .feedBackUploadBtn(v-on:click="feedbackAddFile()") Приложить файлы
 
 .regRow(v-if="!isLoading")
     .participaintRowContent

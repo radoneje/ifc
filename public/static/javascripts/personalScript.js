@@ -12,6 +12,22 @@ let personalApp=new Vue({
         feedback:{text:"", files:[]}
     },
     methods:{
+        feedbackAddFile:async function(){
+            let inp = document.createElement("input")
+            inp.type = "file"
+            inp.accept = "image/*"
+
+            inp.style.display = "none"
+            document.body.appendChild(inp)
+            inp.click()
+            inp.addEventListener("change", ()=>{
+                for(let file of inp.files){
+                    console.log(file)
+                    this.feedback.files.push(file)
+                }
+            });
+
+        },
         returnToPaymentSelect:async function(){
             this.isLoading=true
             try {
