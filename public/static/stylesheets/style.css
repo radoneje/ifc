@@ -2038,6 +2038,22 @@ text-decoration: none !important;
     line-height: 28px;
 
 }
+.feedBackUploadBtn{
+    background-color: #E39A3F;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 28px;
+    padding: 8px 12px;
+}
+.feedBackUpload{
+    display: flex;
+    align-items: flex-start;
+    justify-content: right;
+}
 
 
 
