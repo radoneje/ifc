@@ -203,7 +203,7 @@ router.get('/invoice/:guid', async function (req, res, next) {
                 pricetxt="Сто пять"
             if(price==90)
                 pricetxt="Девяносто"
-            if(price==90)
+            if(price==75)
                 pricetxt="Семьдесят пять"
 
             doc.pipe(fs.createWriteStream(filename));
