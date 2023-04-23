@@ -12,7 +12,7 @@ let personalApp=new Vue({
     },
     methods:{
         isPayCompany: function (){
-            this.user.copmanyPay={}
+            this.user.payCompany={}
             this.$forceUpdate();
             setTimeout(()=>{
                 document.querySelector(".partSecondCompanyPay").scrollIntoView();
