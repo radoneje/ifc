@@ -6,12 +6,15 @@
     .participaintRowContent
         textarea.personalFeedback(v-model="feedback.text" placeholder="Напишите здесь Ваше сообщение")
 .participaintRow
+
     .participaintRowContent.feedBackUpload
         .feedBackUploadBtn Приложить файлы
 
 .regRow(v-if="!isLoading")
-    .regSubmit(v-on:click="sendFeedback()" ) Отправить сообщение организаторам
+    .participaintRowContent
+        .regSubmit(v-on:click="sendFeedback()" ) Отправить сообщение организаторам
 .regRow(v-if="isLoading")
-    .regSubmit()
-        include ../svg/loader.svg
+    .participaintRowContent
+        .regSubmit()
+            include ../svg/loader.svg
 
