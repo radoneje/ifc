@@ -1814,6 +1814,13 @@ input[type=number] {
     text-transform: uppercase;
 
 }
+.regSubmit.yellow{
+    background: #E39A4F;
+}
+.participaintRowBtnGrpups.regSubmit{
+    margin-right: 24px;
+    width: 600px;
+}
 .participaintRowContent {
     padding-left : 36px;
 }
