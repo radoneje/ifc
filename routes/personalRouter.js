@@ -193,7 +193,7 @@ router.get('/data', async function(req, res, next) {
         let r=await req.knex("v_personal_data").where({guid:req.session.token.guid})
 
         if(r[0].info)
-        r[0].info.sort((a,b)=>{return a.id-b.id})
+        r[0].info.sort((a,b)=>{return b.id-a.id})
 
         res.json(r[0])
 
