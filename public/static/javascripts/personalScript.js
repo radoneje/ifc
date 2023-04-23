@@ -12,7 +12,7 @@ let personalApp = new Vue({
         feedback: {text: "", files: []}
     },
     methods: {
-        getHtml: async function (txt) {
+        getHtml: function (txt) {
             if (txt) {
                 txt.replace(/<[^>]*>?/gm, '');
                 return urlify(txt)
