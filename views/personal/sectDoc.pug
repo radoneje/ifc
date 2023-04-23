@@ -4,6 +4,10 @@
         .menuItemText Документы
 .participaintRow
     .participaintDocs
+        .participaintDocsItem.flex.center.beetwen(v-if="f in uder.files")
+            .participaintDocTitle  {{f.name}}
+            a.participaintDocBtn( :href="'/static/file/'+f.guid" :download="f.name") Скачать
+
         .participaintDocsItem.flex.center.beetwen
             .participaintDocTitle  Согласие на обработку персональных данных
             a.participaintDocBtn( href="/personal/personalDataAgreement" download="personalDataAgreement.pdf") Скачать
