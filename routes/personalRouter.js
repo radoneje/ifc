@@ -50,10 +50,10 @@ router.post('/getDocumentsFromPayCompany', async function(req, res, next) {
         if(!req.session.token)
             return res.sendStatus(401)
 
-        let r = await req.knex("t_company").where({inn: company.inn})
+        let r = await req.knex("t_company").where({inn: req.body.payCompany.inn})
         let company={}
         if (r.length == 0)
-            company = (await req.knex("t_company").insert(company, "*"))[0]
+            company = (await req.knex("t_company").insert(req.body.payCompany, "*"))[0]
         else
             company = r[0]
 
