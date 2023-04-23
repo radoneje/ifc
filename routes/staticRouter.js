@@ -111,7 +111,8 @@ router.get('/geninvoiceshort/:guid', async function (req, res, next) {
 async function genShortInvoice(inv, req){
     let filename="/var/ifc_data/invoices/short/invoice_short_"+String(inv.id).padStart(3, '0')+"___"+moment(inv.date).format("DD_MM_YYYY")+".pdf"
     if (fs.existsSync(filename)) {
-        return filename;
+        //return filename;
+        fs.rmSync(filename)
     }
     let recvizit=inv.company[0].name+","
     recvizit+="\nИНН "+inv.company[0].inn+", КПП "+inv.company[0].kpp+","
