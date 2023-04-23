@@ -46,7 +46,7 @@ let personalApp=new Vue({
                 this.user.payCompany = data.dt;
                 this.user.payCompany.phone = this.user.phone
                 this.user.payCompany.signater = this.user.payCompany.director + " на основании Устава"
-                //this.user.company.isEdo=edo
+                this.user.company.isEdo=false
                 this.innError=false;
                 state.state = 2
 
