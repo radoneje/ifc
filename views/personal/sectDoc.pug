@@ -5,7 +5,16 @@
 .participaintRow
     .participaintDocs
         .participaintDocsItem.flex.center.beetwen
-            .participaintDocTitle  файл
-            .participaintDocBtn Скачать
+            .participaintDocTitle  Согласие на обработку персональных данных
+            a.participaintDocBtn( href="/personal/personalDataAgreement" download="personalDataAgreement.pdf") Скачать
+
+        .participaintDocsItem.flex.center.beetwen(v-if="user.isPay && user.statusid>=70")
+                .participaintDocTitle  Счет-Договор
+                .participaintDocBtn Скачать
+        .participaintDocsItem.flex.center.beetwen(v-if="user.isPay")
+                .participaintDocTitle  Соглашение об ЭДО
+                .participaintDocBtn Скачать
+
+
 
 
