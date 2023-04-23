@@ -249,7 +249,7 @@ router.get('/personalDataAgreement/:userguid', async function (req, res, next) {
         let users=await req.knex("t_users").where({guid:req.params.userguid})
         let u=users[0];
         let filename="/var/ifc_data/personalDataAgreements/personalDataAgreement_"+u.guid+".pdf"
-        let fio= u.f+" " + u.i+ " "+ u.o+" "
+        let fio= u.f+" " + u.i+ " "+ u.o
         var doc = new PDFDocument({size: 'a4', layout: 'portrait'});
         doc.pipe(fs.createWriteStream(filename));
         doc
@@ -257,8 +257,10 @@ router.get('/personalDataAgreement/:userguid', async function (req, res, next) {
             .font("/var/fonts/Arial_regular.ttf")///var/fonts/OpenSans-Regular-2.ttf")
             .fontSize(10)
             .fillColor('#000000')
-            .text( "Я, "+fio+"паспорт: "+ u.passportNumber + ", выдан: "+ u.passportDate+", код подразделения: "+ u.passportCode+", адрес регистрации: "+ u.address+",",
+            .text( "Я, "+fio+", паспорт: "+ u.passportNumber + ", выдан: "+ u.passportDate+", код подразделения: "+ u.passportCode+", адрес регистрации: "+ u.address+",",
                 /*x*/ 59 , /*y*/ 152,{width: 500})
+            .text( "Я, "+fio+", ",
+                /*x*/ 59 , /*y*/ 552,{width: 500})
 
         doc.end();
         setTimeout(()=>{res.download(filename)},1000)
