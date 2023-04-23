@@ -2065,6 +2065,23 @@ text-decoration: none !important;
 .feedBackFile{
     margin-bottom: 8px;
 }
+.participaintDocTitle{
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 26px;
+    /* identical to box height */
+    color: #4A4A49;
+}
+.participaintDocBtn{
+    padding: 12px 56px;
+    color:#FFFFFF;
+    background-color: #BB3E3F;
+    cursor: pointer;
+    padding: 36px 0;
+}
+.participaintDocsItem:not(:last-child){
+    border-bottom: 1px solid #D9D9D9;
+}
 
 
 
