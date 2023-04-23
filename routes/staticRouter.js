@@ -180,9 +180,9 @@ router.get('/invoice/:guid', async function (req, res, next) {
 
             let inv=invoices[0]
             let filename="/var/ifc_data/invoices/all/invoice_"+String(inv.id).padStart(3, '0')+"___"+moment(inv.date).format("DD_MM_YYYY")+".pdf"
-            if (fs.existsSync(filename)) {
+           /* if (fs.existsSync(filename)) {
                 return res.download(filename);
-            }
+            }*/
 
             let recvizit=inv.company[0].name+","
             recvizit+="\nИНН "+inv.company[0].inn+", КПП "+inv.company[0].kpp+","
@@ -192,6 +192,7 @@ router.get('/invoice/:guid', async function (req, res, next) {
                 recvizit += "\nпаспорт:" +(inv.user[0].passportSerial || "")+" "+ inv.user[0].passportNumber +", выдан: "+ inv.user[0].passportDate+", код подразделения "+ inv.user[0].passportCode
             }
             var doc = new PDFDocument({size: 'a4', layout: 'portrait'});
+            let price=150-(150*(inv.user[0].discount/100))
 
             doc.pipe(fs.createWriteStream(filename));
 
@@ -203,6 +204,7 @@ router.get('/invoice/:guid', async function (req, res, next) {
                 .text( inv.id+" от " +moment(inv.date).format("DD.MM.YYYY")+"г.", /*x*/ 260 , /*y*/ 163,{width: 400})
                 .text( recvizit, /*x*/ 178 , /*y*/ 273,{width: 400})
                 .text( inv.user[0].id+" от " +moment(inv.user[0].date).format("DD.MM.YYYY")+"г.", /*x*/ 243 , /*y*/ 340,{width: 400})
+                .text( price+"000.00", /*x*/ 178 , /*y*/ 373,{width: 400})
             doc.addPage()
                 .image(__dirname+"/../forpdf/invoice/02.png",0,0,{width:600})
             doc.addPage()

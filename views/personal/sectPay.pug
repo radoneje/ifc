@@ -94,7 +94,7 @@ div(v-if="user.statusid==65 && !user.isPaySelf")
             .participaintRow
                 .participaintRowContent
                     div {{user.payCompany?user.payCompany.name:user.company.name }}
-                    div ИНН/КПП {{user.payCompany?user.payCompany.inn:user.company.inn }} / {{user.payCompany?user.payCompany.kpp:user.company.kpp }}
+                    div ИНН/КПП: {{user.payCompany?user.payCompany.inn:user.company.inn }} / {{user.payCompany?user.payCompany.kpp:user.company.kpp }}
                     div {{user.payCompany?user.payCompany.address:user.company.address }}
     .participaintRow &nbsp;
     .participaintRow
