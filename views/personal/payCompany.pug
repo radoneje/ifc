@@ -5,7 +5,7 @@
         .regRowGroup.flex.left()
             .recLabel.reg287 ИНН
             input#inn.reqInput( v-model="user.payCompany.inn"  type="number")
-            .reqRowErrorMessage(v-if="innStatus.message") {{innStatus.message}}
+        .reqRowErrorMessage(v-if="innStatus.message") {{innStatus.message}}
         .regCheckBox.green.flex.mobileWrap.left(v-on:click="loadInn( innStatus)" v-bind:class="{active:innStatus.state==2,loading:innStatus.state==1}" style="margin-top: 6px;" )
                 .regCheckBoxText(style="margin-left:0") <span class="innBtn">Загрузить из ФНС </span>
                 .regCheckBoxBox.desktop.opacity0(v-bind:class="{opacity100:innStatus.state==1}")
