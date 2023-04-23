@@ -146,8 +146,8 @@ async function genShortInvoice(inv, req){
         .text( "ФК-"+ inv.id+" от " +moment(inv.date).format("DD.MM.YYYY")+"г.", /*x*/ 260 , /*y*/ 163,{width: 400})
         .text( recvizit, /*x*/ 178 , /*y*/ 273,{width: 400})
         .text( inv.user[0].id+" от " +moment(inv.user[0].date).format("DD.MM.YYYY")+"г.", /*x*/ 243 , /*y*/ 340,{width: 400})
-        .text( price+" 000.00", /*x*/ 510 , /*y*/ 410,{width: 400})
-        .text( price+" 000.00", /*x*/ 510 , /*y*/ 490,{width: 400})
+        .text( price+" 000.00", /*x*/ 508 , /*y*/ 410,{width: 400})
+        .text( price+" 000.00", /*x*/ 508 , /*y*/ 490,{width: 400})
         .text( pricetxt+" тысяч рублей 00 копеек, НДС не облагается \n(ст 346.12 и 346.13 гл. 26.2 НК РФ)", /*x*/ 92 , /*y*/ 512,{width: 400})
     doc.end();
     return filename;
@@ -223,8 +223,8 @@ router.get('/invoice/:guid', async function (req, res, next) {
                 .text( "ФК-"+inv.id+" от " +moment(inv.date).format("DD.MM.YYYY")+"г.", /*x*/ 260 , /*y*/ 163,{width: 400})
                 .text( recvizit, /*x*/ 178 , /*y*/ 273,{width: 400})
                 .text( inv.user[0].id+" от " +moment(inv.user[0].date).format("DD.MM.YYYY")+"г.", /*x*/ 243 , /*y*/ 340,{width: 400})
-                .text( price+" 000.00", /*x*/ 510 , /*y*/ 410,{width: 400})
-                .text( price+" 000.00", /*x*/ 510 , /*y*/ 490,{width: 400})
+                .text( price+" 000.00", /*x*/ 508 , /*y*/ 410,{width: 400})
+                .text( price+" 000.00", /*x*/ 508 , /*y*/ 490,{width: 400})
                 .text( pricetxt+" тысяч рублей 00 копеек, НДС не облагается \n(ст 346.12 и 346.13 гл. 26.2 НК РФ)", /*x*/ 92 , /*y*/ 512,{width: 400})
             doc.addPage()
                 .image(__dirname+"/../forpdf/invoice/02.png",0,0,{width:600})
