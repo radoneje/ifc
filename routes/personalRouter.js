@@ -201,6 +201,14 @@ router.get('/data', async function(req, res, next) {
             let f=await req.knex("t_files").where({guid})
             r[0].files.push({name:f[0].originalname, guid})
         }
+        let companyid=r[0].companyid;
+        delete r[0].companyid
+
+        let c=await req.knex("t_company").where({id:companyid})
+        for(let guid of c[0].filesid) {
+            let f=await req.knex("t_files").where({guid})
+            r[0].files.push({name:f[0].originalname, guid})
+        }
 
         res.json(r[0])
 
