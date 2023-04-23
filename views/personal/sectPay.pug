@@ -13,7 +13,12 @@ div(v-if="user.statusid==60")
                         .partSelectFormItem.active юридическое лицо
                         .partSelectFormItem(v-on:click="setPaySelf(true)") физическое лицо
         .partMainCompanyPay(v-if="!user.copmanyPay")
-            .participaintRow Оплата с основного юр лица
+            .participaintRow &nbsp;
+                .regRow.readonly
+                    .regRowGroup.flex.left()
+                        .recLabel.reg287 ИНН
+                        input#inn.reqInput(readonly v-model="user.company.inn"  type="number")
+
         .partSecondCompanyPay(v-if="user.copmanyPay")
             .participaintRow Оплата с доп юр лица
 
