@@ -249,6 +249,10 @@ router.get('/personalDataAgreement/:userguid', async function (req, res, next) {
         let users=await req.knex("t_users").where({guid:req.params.userguid})
         let u=users[0];
         let filename="/var/ifc_data/personalDataAgreements/personalDataAgreement_"+u.guid+".pdf"
+        if (fs.existsSync(filename)) {
+            return res.download(filename);
+            //fs.rmSync(filename)
+        }
         let fio= u.f+" " + u.i+ " "+ u.o
         var doc = new PDFDocument({size: 'a4', layout: 'portrait'});
         doc.pipe(fs.createWriteStream(filename));
