@@ -25,7 +25,18 @@ const checkAccess=(req, res, next)=>{
 }
 /* GET home page. */
 
-
+router.post('/feedbackMessage', async function(req, res, next) {
+    try {
+        if(!req.session.token)
+            return res.sendStatus(401)
+        let r=await req.knex("t_feedback").insert({userid:req.session.token.userid, files:req.body.files, text:req.body.text})
+        res.json(r)
+    }
+    catch (e) {
+        console.warn(e)
+        return res.json("error")
+    }
+});
 router.post('/returnToPaymentSelect', async function(req, res, next) {
     try {
         if(!req.session.token)

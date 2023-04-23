@@ -15,6 +15,11 @@ let personalApp=new Vue({
         sendFeedback:async function(){
             if(this.isLodinng)
                 return
+            if(this.feedback.text.length<2)
+            {
+                document.querySelector(".personalFeedback").focus();
+                return;
+            }
             let filesguid=[]
             let err=false;
             this.feedback.files.forEach(f=>{
