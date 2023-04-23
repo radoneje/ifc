@@ -11,11 +11,17 @@ let personalApp=new Vue({
 
     },
     methods:{
+        getDocumentsFromMainCompany:async function(){
+            this.loading=true
+            let res = await postJson("/personal/getDocumentsFromMainCompany",{isPaySelf})
+            this.loading=false
+        },
         isPayCompany: function (){
             this.user.payCompany={}
             this.$forceUpdate();
             setTimeout(()=>{
                 document.querySelector(".persHead").scrollIntoView();
+                inn.focus();
             },0)
         },
         changeCompanyEdo:function(){

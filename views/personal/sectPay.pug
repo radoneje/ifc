@@ -55,13 +55,16 @@ div(v-if="user.statusid==60")
                         .regCheckBoxBox
                         .regCheckBoxText Компания использует электронный докуметооборот
             .participaintRow &nbsp;
-            .participaintRow
-
-                .regSubmit.w630(v-on:click="" ) Получить документы на оплату
-            .participaintRow
-                .regSubmit.w630.yellow(v-on:click="isPayCompany()" ) Плательщик – другая организация
+            div(v-if="!isLoading")
+                .participaintRow
+                    .regSubmit.w630(v-on:click="getDocumentsFromMainCompany()" ) Получить документы на оплату
+                .participaintRow
+                    .regSubmit.w630.yellow(v-on:click="isPayCompany()" ) Плательщик – другая организация
+            .regRow(v-if="isLoading")
+                .regSubmit()
+                    include ../svg/loader.svg
         .partSecondCompanyPay(v-if="user.payCompany")
-            .participaintRow Оплата с доп юр лица
+
             .participaintRow
                 .participaintRowTextUp
                     b Пожалуйста, введите ИНН компании-плательщика и нажмите "загрузить данные из ФНС"
