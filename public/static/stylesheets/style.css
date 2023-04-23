@@ -1921,10 +1921,10 @@ text-decoration: none !important;
 }
 
 .upBtn{
-    width: 36px;
-    height: 36px;
+    width: 56px;
+    height: 56px;
     position: fixed;
-    bottom:32px;
+    bottom: 50%;
     right: 32px;
     background: #e39a3f;
     border:1px solid #bb3e3f;

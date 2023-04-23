@@ -688,10 +688,10 @@
         display: block !important;
     }
     .upBtn {
-        width: 16px;
-        height: 16px;
+        width: 18px;
+        height: 18px;
         position: fixed;
-        bottom: 16px;
+        bottom: 50%;
         right:8px;
     }
 
