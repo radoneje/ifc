@@ -60,6 +60,23 @@ let personalApp=new Vue({
 
 
         },
+        getDocumentsFromPayCompany:async function(){
+            this.isLoading=true
+            try {
+                let res = await postJson("/personal/getDocumentsFromPayCompany", {
+                    payCompany:this.user.payCompany()
+                })
+                setTimeout(() => {
+                    this.user = res;
+                    this.isLoading = false
+                }, 2000)
+            }
+            catch (e){
+                alert("произошла ошибка, попробуйте позже")
+                this.isLoading = false
+            }
+
+        },
         getDocumentsFromMainCompany:async function(){
             this.isLoading=true
             try {

@@ -44,6 +44,29 @@ router.post('/getDocumentsFromMainCompany', async function(req, res, next) {
         return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
     }
 });
+
+router.post('/getDocumentsFromPayCompany', async function(req, res, next) {
+    try {
+        if(!req.session.token)
+            return res.sendStatus(401)
+
+        let r = await req.knex("t_company").where({inn: company.inn})
+        let company={}
+        if (r.length == 0)
+            company = (await req.knex("t_company").insert(company, "*"))[0]
+        else
+            company = r[0]
+
+
+        r=await req.knex("t_users").update({statusid:65, payCompanyId:company.id}).where({guid:req.session.token.guid})
+        r=await req.knex("v_personal_data").where({guid:req.session.token.guid})
+        res.json(r[0])
+    }
+    catch (e) {
+        console.warn(e)
+        return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
+    }
+});
 router.post('/changeUser', async function(req, res, next) {
     try {
         if(!req.session.token)
