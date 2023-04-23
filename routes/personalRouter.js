@@ -26,7 +26,7 @@ const checkAccess=(req, res, next)=>{
 /* GET home page. */
 
 
-router.get('/returnToPaymentSelect', async function(req, res, next) {
+router.post('/returnToPaymentSelect', async function(req, res, next) {
     try {
         if(!req.session.token)
             return res.sendStatus(401)
