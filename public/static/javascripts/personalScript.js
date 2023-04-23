@@ -34,7 +34,7 @@ let personalApp=new Vue({
                 return;
             }
             this.isLoading=true;
-            let msg={text:feedback.text, files:filesguid}
+            let msg={text:this.feedback.text, files:filesguid}
             await postJson("/personal/feedbackMessage", msg)
             this.feedback={text:"", files:[]}
             alert("сообщение отправлено")
