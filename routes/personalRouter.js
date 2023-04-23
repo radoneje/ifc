@@ -201,6 +201,7 @@ router.get('/data', async function(req, res, next) {
             let f=await req.knex("t_files").where({guid})
             r[0].files.push({name:f[0].originalname, guid})
         }
+        delete r[0].filesid;
         let companyid=r[0].companyid;
         delete r[0].companyid
 
