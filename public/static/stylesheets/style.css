@@ -2078,7 +2078,7 @@ text-decoration: none !important;
     background-color: #BB3E3F;
     cursor: pointer;
     display: block;
-    text-decoration: none;
+    text-decoration: none !important;
 
 }
 .participaintDocBtn:hover{
