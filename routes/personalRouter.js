@@ -197,6 +197,7 @@ router.get('/data', async function(req, res, next) {
 
         r[0].files=[]
         for(let guid of r[0].filesid){
+            console.log(guid)
             let f=req.knex("t_files").where({guid})
             r[0].files.push({name:f[0].originalname, guid})
         }
