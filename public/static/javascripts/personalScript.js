@@ -12,7 +12,7 @@ let personalApp=new Vue({
     },
     methods:{
         changeCompanyEdo:function(){
-          user.company.isEdo= user.company.isEdo?false:true
+          this.user.company.isEdo= this.user.company.isEdo?false:true
         },
         setPaySelf:async function(isPaySelf) {
             let res = await postJson("/personal/setPaySelf",{isPaySelf})
