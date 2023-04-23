@@ -6,10 +6,19 @@
 
 // Смена плательщика юриком
 div(v-if="user.statusid==60")
-    .participaintRow
-            .partSelectForm.flex.center
-                .partSelectFormItem.active юридическое лицо
-                .partSelectFormItem(v-on:click="setPaySelf(true)") физическое лицо
+    .partUrPay
+        .partMenyPay
+            .participaintRow
+                    .partSelectForm.flex.center
+                        .partSelectFormItem.active юридическое лицо
+                        .partSelectFormItem(v-on:click="setPaySelf(true)") физическое лицо
+        .partMainCompanyPay(v-if="!user.copmanyPay")
+            .participaintRow Оплата с основного юр лица
+        .partSecondCompanyPay(v-if="!user.copmanyPay")
+            .participaintRow Оплата с доп юр лица
+
+
+
 // Оплата Физикоm
 div(v-if="user.statusid==65 && user.isPaySelf")
     .participaintRow
