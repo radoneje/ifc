@@ -9,11 +9,11 @@
             a.participaintDocBtn( href="/personal/personalDataAgreement" download="personalDataAgreement.pdf") Скачать
 
         .participaintDocsItem.flex.center.beetwen(v-if="user.isPay && user.statusid>=70")
-                .participaintDocTitle  Счет-Договор
-                .participaintDocBtn Скачать
-        .participaintDocsItem.flex.center.beetwen(v-if="user.isPay")
-                .participaintDocTitle  Соглашение об ЭДО
-                .participaintDocBtn Скачать
+            .participaintDocTitle  Счет-Договор
+            a.participaintDocBtn( href="/personal/invoice" download="invoice.pdf") Скачать
+        .participaintDocsItem.flex.center.beetwen(v-if="(user.payCompany && user.payCompany.isEdo) || (!user.payCompany && user.company.isEdo)")
+            .participaintDocTitle  Соглашение об ЭДО
+            a.participaintDocBtn( href="/personal/edoAgreement" download="EdoAgreement.pdf") Скачать
 
 
 
