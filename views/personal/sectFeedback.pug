@@ -7,12 +7,13 @@
         textarea.personalFeedback(v-model="feedback.text" placeholder="Напишите здесь Ваше сообщение")
 .participaintRow
     .feedBackUpload.flex.beetwen
-        .feedBackUploadBtn(v-on:click="feedbackAddFile()") Приложить файлы
+
         .feedBackFiles
             .feedBackFile.flex.center.left(v-for="file in feedback.files")
                 .feedBackFileName {{file.name}}
                 .feedBackFileLoading(v-if="file.loading")
                     include ../svg/loader.svg
+        .feedBackUploadBtn(v-on:click="feedbackAddFile()") Приложить файлы
 
 .regRow(v-if="!isLoading")
     .participaintRowContent
