@@ -8,8 +8,8 @@
             .menu.desktop
                 include menuItems
 
-        .mainImageWr.mobile
-            img.mainImg2(src="/static/images/mainImageMobile.png")
+        .mainImageWr.mobile(onclick="document.location.hres='/'")
+            img.mainImg2(src="/static/images/mainImageMobile.png" )
 
             include mainTitle
             .mobileMenuBtn.mobile(onclick="showMobileMenu()")
