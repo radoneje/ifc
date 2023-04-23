@@ -253,7 +253,7 @@ router.get('/personalDataAgreement/:userguid', async function (req, res, next) {
         var doc = new PDFDocument({size: 'a4', layout: 'portrait'});
         doc.pipe(fs.createWriteStream(filename));
         doc
-            .image(__dirname+"/../forpdf/invoice/01.png",0,0,{width:600})
+            .image(__dirname+"/../forpdf/pd/01.png",0,0,{width:600})
             .font("/var/fonts/Arial_regular.ttf")///var/fonts/OpenSans-Regular-2.ttf")
             .fontSize(10)
             .fillColor('#000000')
