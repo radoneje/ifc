@@ -13,12 +13,23 @@ let personalApp=new Vue({
     methods:{
         getDocumentsFromMainCompany:async function(){
             this.isLoading=true
-            let res = await postJson("/personal/getDocumentsFromMainCompany",{
-                isEdo:this.user.company.isEdo,
-                phone:this.user.company.phone,
-                signater:this.user.company.signater
-            })
-            this.isLoading=false
+            try {
+                let res = await postJson("/personal/getDocumentsFromMainCompany", {
+                    isEdo: this.user.company.isEdo,
+                    phone: this.user.company.phone,
+                    signater: this.user.company.signater,
+                    companyguid: this.user.company.guid
+                })
+                setTimeout(() => {
+                    this.user = res;
+                    this.isLoading = false
+                }, 2000)
+            }
+            catch (e){
+                alert("произошла ошибка, попробуйте позже")
+                this.isLoading = false
+            }
+
         },
         isPayCompany: function (){
             this.user.payCompany={}

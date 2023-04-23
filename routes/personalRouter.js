@@ -24,6 +24,26 @@ const checkAccess=(req, res, next)=>{
     next();
 }
 /* GET home page. */
+
+
+router.post('/getDocumentsFromMainCompany', async function(req, res, next) {
+    try {
+        if(!req.session.token)
+            return res.sendStatus(401)
+
+        let r=await req.knex("t_company")
+            .update({isEdo:req.body.isEdo,phone:req.body.phone,signater:req.body.signater})
+            .where({guid:req.body.companyguid})
+
+        r=await req.knex("t_users").update({statusid:65}).where({guid:req.session.token.guid})
+        r=await req.knex("v_personal_data").where({guid:req.session.token.guid})
+        res.json(r[0])
+    }
+    catch (e) {
+        console.warn(e)
+        return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
+    }
+});
 router.post('/changeUser', async function(req, res, next) {
     try {
         if(!req.session.token)
