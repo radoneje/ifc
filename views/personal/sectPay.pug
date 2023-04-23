@@ -76,7 +76,8 @@ div(v-if="user.statusid==65 && !user.isPaySelf")
         .participaintRowBtnGroup.flex.center.left
                 a( :href="apiUrl" download="invoice.pdf") Счет на оплату
                 a( :href="apiUrl" download="personalDataAgreement.pdf") Согласие на обработку персональных данных
-                a( :href="apiUrl" download="personalDataAgreement.pdf") Соглашение об ЭДО
+                div(v-if="(user.payCompany && user.payCompany.isEdo) || (!user.payCompany && user.company.isEdo)")
+                    a( :href="apiUrl" download="personalDataAgreement.pdf") Соглашение об ЭДО
 // Оплата Физикоm
 div(v-if="user.statusid==65 && user.isPaySelf")
     .participaintRow
