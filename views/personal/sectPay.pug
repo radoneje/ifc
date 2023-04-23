@@ -9,9 +9,9 @@ div(v-if="user.statusid==60")
     .partUrPay
         .partMenyPay
             .participaintRow
-                    .partSelectForm.flex.center
-                        .partSelectFormItem.active юридическое лицо
-                        .partSelectFormItem(v-on:click="setPaySelf(true)") физическое лицо
+                .partSelectForm.flex.center
+                    .partSelectFormItem.active юридическое лицо
+                    .partSelectFormItem(v-on:click="setPaySelf(true)") физическое лицо
         .partMainCompanyPay(v-if="!user.payCompany")
             .participaintRow &nbsp;
             .participaintRow
@@ -74,10 +74,10 @@ div(v-if="user.statusid==60")
 div(v-if="user.statusid==65 && !user.isPaySelf")
     .participaintRow &nbsp;
         .participaintRowBtnGroup.flex.center.left
-                a( href="/personal/invoice" download="invoice.pdf") Счет на оплату
-                a( href="/personal/personalDataAgreement" download="personalDataAgreement.pdf") Согласие на обработку персональных данных
-                div(v-if="(user.payCompany && user.payCompany.isEdo) || (!user.payCompany && user.company.isEdo)")
-                    a( href="/personal/edoAgreement" download="EdoAgreement.pdf") Соглашение об ЭДО
+            a( href="/personal/invoice" download="invoice.pdf") Счет на оплату
+            a( href="/personal/personalDataAgreement" download="personalDataAgreement.pdf") Согласие на обработку персональных данных
+            div(v-if="(user.payCompany && user.payCompany.isEdo) || (!user.payCompany && user.company.isEdo)")
+                a( href="/personal/edoAgreement" download="EdoAgreement.pdf") Соглашение об ЭДО
     .participaintRow &nbsp;
     .participaintRow
         .participaintRowTextUp
@@ -97,8 +97,8 @@ div(v-if="user.statusid==65 && !user.isPaySelf")
                     div ИНН/КПП {{user.payCompany?user.payCompany.inn:user.company.inn }} / {{user.payCompany?user.payCompany.kpp:user.company.kpp }}
                     div {{user.payCompany?user.payCompany.address:user.company.address }}
     .participaintRow &nbsp;
-        .participaintRow
-            .participaintRowTextUp Стоимость участия: <b>{{user.price}} 0000 рублей</b> (НДС не облагается)
+    .participaintRow
+        .participaintRowTextUp Стоимость участия: <b>{{user.price}} 0000 рублей</b> (НДС не облагается)
 
 
 
