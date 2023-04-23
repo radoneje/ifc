@@ -5,4 +5,5 @@
 .participaintRow(v-for="item in user.info")
     .participaintRowHead {{item.titleru}}
     .participaintRowBody
-        .participaintRowContent.wordWrap(v-html="getHtml(item.textru)")
+        ul
+            .wordWrap(v-html="getHtml(item.textru)")
