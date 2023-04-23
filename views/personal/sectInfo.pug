@@ -2,4 +2,6 @@
     .menuItem.flex.center.left
         .menuItemBox
         .menuItemText Информация
-    .participaintRowHead Здесь будет информация
+.participaintRow(v-for="item in info")
+    .participaintRowHead {{item.titleru}}
+    .participaintRowContent.wordWrap {{item.textru}}

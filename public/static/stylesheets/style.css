@@ -1972,6 +1972,9 @@ text-decoration: none !important;
     width: calc(100% - 400px);
     padding: 56px 100px;
 }
+.wordWrap{
+    white-space: break-spaces;
+}
 .persNavItem{
     margin-bottom: 8px;
     width: 244px;
