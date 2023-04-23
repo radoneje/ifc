@@ -9,6 +9,7 @@ let personalApp=new Vue({
         errors: {company: {}, payCompany: {}},
         innStatus: {state: 0, message: "", isInnReadony: false},
         innError:false,
+        feedback:{text:"", files:[]}
     },
     methods:{
         returnToPaymentSelect:async function(){

@@ -2024,6 +2024,20 @@ text-decoration: none !important;
 .partSelectFormItem.active{
     background: #E39A4F88;
 }
+.personalFeedback{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 16px;
+    font-size: 18px;
+    resize: none;
+    height: 9em;
+    font-family: 'Stem';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 28px;
+
+}
 
 
 
