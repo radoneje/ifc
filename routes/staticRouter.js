@@ -163,14 +163,7 @@ router.get('/edoAgreement/:companyguid', async function (req, res, next) {
     }
 });
 
-router.get('/personalDataAgreement/:userguid', async function (req, res, next) {
-    try {
-        res.json("personalDataAgreement")
-    } catch (e) {
-        console.error(e)
-        res.sendStatus(500)
-    }
-});
+
 router.get('/invoiceshort/:guid', async function (req, res, next) {
     try {
         let invoices=await req.knex("v_invoice").where({guid:req.params.guid})
@@ -250,6 +243,29 @@ router.get('/invoice/:guid', async function (req, res, next) {
             console.error(e)
             res.sendStatus(500)
         }
+});
+router.get('/personalDataAgreement/:userguid', async function (req, res, next) {
+    try {
+        let users=await req.knex("t_user").where({guid:req.params.guid})
+        let u=users[0];
+        let filename="/var/ifc_data/personalDataAgreements/personalDataAgreement_"+u.guid+".pdf"
+        let fio= u.f+" " + u.i+ " "+ u.o+" "
+        var doc = new PDFDocument({size: 'a4', layout: 'portrait'});
+        doc.pipe(fs.createWriteStream(filename));
+        doc
+            .image(__dirname+"/../forpdf/invoice/01.png",0,0,{width:600})
+            .font("/var/fonts/Arial_regular.ttf")///var/fonts/OpenSans-Regular-2.ttf")
+            .fontSize(10)
+            .fillColor('#000000')
+            .text( fio+"паспорт: "+ u.passportNumber + ", выдан: "+ u.passportDate+", код подразделения: "+ u.passportCode+", адрес регистрации: "+ u.address, /*x*/ 30 , /*y*/ 50,{width: 500})
+
+        doc.end();
+        setTimeout(()=>{res.download(filename)},1000)
+
+    } catch (e) {
+        console.error(e)
+        res.sendStatus(500)
+    }
 });
 
 
