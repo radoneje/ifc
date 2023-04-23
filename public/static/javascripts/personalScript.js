@@ -7,7 +7,7 @@ let personalApp=new Vue({
         isLoading:false,
         isComplite:false,
         errors: {company: {}, payCompany: {}},
-
+        innStatus: {state: 0, message: "", isInnReadony: false},
 
     },
     methods:{

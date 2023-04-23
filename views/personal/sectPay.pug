@@ -67,15 +67,8 @@ div(v-if="user.statusid==60")
                 .regSubmit()
                     include ../svg/loader.svg
         .partSecondCompanyPay(v-if="user.payCompany")
+            include payCompany
 
-            .participaintRow
-                .participaintRowTextUp
-                    b Пожалуйста, введите ИНН компании-плательщика и нажмите "загрузить данные из ФНС"
-                .regRow
-
-                    .regRowGroup.flex.left()
-                        .recLabel.reg287 ИНН
-                        input#inn.reqInput( v-model="user.payCompany.inn"  type="number")
 
 // счет на оплату
 div(v-if="user.statusid==65 && !user.isPaySelf")
