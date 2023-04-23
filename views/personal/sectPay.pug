@@ -87,6 +87,16 @@ div(v-if="user.statusid==65 && !user.isPaySelf")
             div 1. Скачайте документы.
             div 2. Счет-Договор отдайте на оплату.
             div 3  Подпишите и возьмите с собой на Конгресс Соглашение о ЭДО.
+    .participaintRow &nbsp;
+    .participaintRow
+        .participaintRowTextUp
+            b Документы выписаны по реквизитам:
+            .participaintRow
+                .participaintRowContent
+                    div {{user.payCompany?user.payCompany.name:user.company.name }}
+                    div ИНН/КПП {{user.payCompany?user.payCompany.name:user.company.name }} / {{user.payCompany?user.payCompany.kpp:user.company.kpp }}
+                    div ИНН/КПП {{user.payCompany?user.payCompany.address:user.company.address }}
+
 
 
 // Оплата Физикоm
