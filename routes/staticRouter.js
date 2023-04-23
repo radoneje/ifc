@@ -120,6 +120,19 @@ async function genShortInvoice(inv, req){
         recvizit = inv.user[0].f + " " + inv.user[0].i + " "+ inv.user[0].o
         recvizit += "\nпаспорт:" +(inv.user[0].passportSerial || "")+" "+ inv.user[0].passportNumber +", выдан: "+ inv.user[0].passportDate+", код подразделения "+ inv.user[0].passportCode
     }
+    let price=150-(150*(inv.user[0].discount/100))
+    let pricetxt="Сто пятьдесят"
+    if(price==135)
+        pricetxt="Сто тридцать пять"
+    if(price==120)
+        pricetxt="Сто двадцать"
+    if(price==105)
+        pricetxt="Сто пять"
+    if(price==90)
+        pricetxt="Девяносто"
+    if(price==75)
+        pricetxt="Семьдесят пять"
+
     var doc = new PDFDocument({size: 'a4', layout: 'portrait'});
 
     doc.pipe(fs.createWriteStream(filename));
@@ -132,9 +145,9 @@ async function genShortInvoice(inv, req){
         .text( inv.id+" от " +moment(inv.date).format("DD.MM.YYYY")+"г.", /*x*/ 260 , /*y*/ 163,{width: 400})
         .text( recvizit, /*x*/ 178 , /*y*/ 273,{width: 400})
         .text( inv.user[0].id+" от " +moment(inv.user[0].date).format("DD.MM.YYYY")+"г.", /*x*/ 243 , /*y*/ 340,{width: 400})
-
-
-
+        .text( price+"000.00", /*x*/ 510 , /*y*/ 410,{width: 400})
+        .text( price+"000.00", /*x*/ 510 , /*y*/ 490,{width: 400})
+        .text( pricetxt+" тысяч рублей 00 копеек, без налога(НДС)", /*x*/ 92 , /*y*/ 512,{width: 400})
     doc.end();
     return filename;
 }
