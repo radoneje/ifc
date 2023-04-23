@@ -2079,6 +2079,12 @@ text-decoration: none !important;
     cursor: pointer;
 
 }
+.participaintDocBtn:hover{
+
+    color:#F1CCA7;
+
+
+}
 .participaintDocsItem{
     padding: 36px 0;
 }
