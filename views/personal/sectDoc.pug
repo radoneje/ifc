@@ -4,7 +4,7 @@
         .menuItemText Документы
 .participaintRow
     .participaintDocs
-        .participaintDocsItem.flex.center.beetwen(v-if="f in uder.files")
+        .participaintDocsItem.flex.center.beetwen(v-if="f in user.files")
             .participaintDocTitle  {{f.name}}
             a.participaintDocBtn( :href="'/static/file/'+f.guid" :download="f.name") Скачать
 
