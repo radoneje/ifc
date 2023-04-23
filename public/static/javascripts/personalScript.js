@@ -34,7 +34,7 @@ let personalApp=new Vue({
 
                     if (ret.ok)
                         fileItem.guid=(await ret.json())
-                    fileItem.loading=false
+                   // fileItem.loading=false
                 }
             });
 
