@@ -1047,6 +1047,11 @@ input[type=number] {
     color: #EEB3BA;
     font-size: 12px;
 }
+.participaintRow .regRow.error:after, .participaintRow .reqRowErrorMessage {
+
+    bottom: -24px;
+
+}
 
 .reqRowErrorMessage {
 
