@@ -12,7 +12,7 @@ div(v-if="user.statusid==60")
                     .partSelectForm.flex.center
                         .partSelectFormItem.active юридическое лицо
                         .partSelectFormItem(v-on:click="setPaySelf(true)") физическое лицо
-        .partMainCompanyPay(v-if="!user.copmanyPay")
+        .partMainCompanyPay(v-if="!user.payCompany")
             .participaintRow &nbsp;
             .participaintRow
                 .participaintRowTextUp
