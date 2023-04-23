@@ -31,7 +31,7 @@ router.post('/returnToPaymentSelect', async function(req, res, next) {
         if(!req.session.token)
             return res.sendStatus(401)
 
-        await req.knex("t_user").update({payCompanyId:null, statusid:60}).where({id:req.session.token.id})
+        await req.knex("t_users").update({payCompanyId:null, statusid:60}).where({id:req.session.token.id})
         let r=await req.knex("v_personal_data").where({guid:req.session.token.guid})
         res.json(r[0])
     }
