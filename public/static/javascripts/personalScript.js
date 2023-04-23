@@ -64,7 +64,7 @@ let personalApp=new Vue({
             this.isLoading=true
             try {
                 let res = await postJson("/personal/getDocumentsFromPayCompany", {
-                    payCompany:this.user.payCompany()
+                    payCompany:this.user.payCompany
                 })
                 setTimeout(() => {
                     this.user = res;
@@ -74,6 +74,7 @@ let personalApp=new Vue({
             catch (e){
                 alert("произошла ошибка, попробуйте позже")
                 this.isLoading = false
+                console.warn(e)
             }
 
         },
