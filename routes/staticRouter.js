@@ -194,6 +194,17 @@ router.get('/invoice/:guid', async function (req, res, next) {
             }
             var doc = new PDFDocument({size: 'a4', layout: 'portrait'});
             let price=150-(150*(inv.user[0].discount/100))
+            let pricetxt="Сто пятьдесят"
+            if(price==135)
+                pricetxt="Сто тридцать пять"
+            if(price==120)
+                pricetxt="Сто двадцать"
+            if(price==105)
+                pricetxt="Сто пять"
+            if(price==90)
+                pricetxt="Девяносто"
+            if(price==90)
+                pricetxt="Семьдесят пять"
 
             doc.pipe(fs.createWriteStream(filename));
 
@@ -206,6 +217,7 @@ router.get('/invoice/:guid', async function (req, res, next) {
                 .text( recvizit, /*x*/ 178 , /*y*/ 273,{width: 400})
                 .text( inv.user[0].id+" от " +moment(inv.user[0].date).format("DD.MM.YYYY")+"г.", /*x*/ 243 , /*y*/ 340,{width: 400})
                 .text( price+"000.00", /*x*/ 510 , /*y*/ 410,{width: 400})
+                .text( price+"000.00", /*x*/ 610 , /*y*/ 410,{width: 400})
             doc.addPage()
                 .image(__dirname+"/../forpdf/invoice/02.png",0,0,{width:600})
             doc.addPage()
