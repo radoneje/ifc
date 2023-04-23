@@ -1059,6 +1059,18 @@ input[type=number] {
     background: white;
     z-index: 100;
 }
+.participaintRowBtnGroup a{
+    display: block;
+    padding: 8px 4px;
+    cursor: pointer;
+    background: #E39A4F88;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 28px;
+    /* identical to box height, or 133% */
+    color: #4A4A49;
+    margin-right: 12px;
+}
 
 .regRow.divaider {
     border-bottom: 1px solid #E39A3F;
