@@ -15,9 +15,39 @@ div(v-if="user.statusid==60")
         .partMainCompanyPay(v-if="!user.copmanyPay")
             .participaintRow &nbsp;
                 .regRow
+
                     .regRowGroup.readonly.flex.left()
                         .recLabel.reg287 ИНН
-                        input#inn.reqInput(readonly v-model="user.company.inn"  type="number")
+                        input.reqInput(readonly v-model="user.company.inn"  type="number")
+                .regRow
+                    .regRowGroup.readonly.flex.left()
+                        .recLabel.reg287 Название
+                        input.reqInput(readonly v-model="user.company.name"  )
+                .regRow
+                    .regRowGroup.readonly.flex.left()
+                        .recLabel.reg287 КПП
+                        input.reqInput(readonly v-model="user.company.kpp"  type="number")
+                .regRow
+                    .regRowGroup.readonly.flex.left()
+                        .recLabel.reg287 ОГРН
+                        input.reqInput(readonly v-model="user.company.ogrn"  type="number")
+                .regRow
+                    .regRowGroup.readonly.flex.left()
+                        .recLabel.reg287 Адрес
+                        input.reqInput(readonly v-model="user.company.address"  type="number")
+                .regRow
+                    .regRowGroup.readonly.flex.left()
+                        .recLabel.reg287  Руководитель
+                        input.reqInput(readonly v-model="user.company.director"  type="number")
+                .regRow
+                    .regRowGroup.flex.left
+                        .recLabel.reg287 телефон
+                        input.reqInput( v-model="user.company.phone" placeholder="ФОРМАТ: +7 000 000 0000" must name="phone")
+                .regRow
+                    .regRowGroup.flex.left
+                        .recLabel.reg287 Кто подписывает
+                        input.reqInput( v-model="user.company.phone" placeholder="ФОРМАТ: +7 000 000 0000" must name="phone")
+
 
         .partSecondCompanyPay(v-if="user.copmanyPay")
             .participaintRow Оплата с доп юр лица
