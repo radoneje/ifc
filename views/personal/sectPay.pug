@@ -73,7 +73,7 @@ div(v-if="user.statusid==60")
 // счет на оплату
 div(v-if="user.statusid==65 && !user.isPaySelf")
     .participaintRow &nbsp;
-    .participaintRow Счет на оплату
+    .participaintRow <a :href="apiUrl" dounload="invoice"></a>Счет на оплату
 // Оплата Физикоm
 div(v-if="user.statusid==65 && user.isPaySelf")
     .participaintRow
