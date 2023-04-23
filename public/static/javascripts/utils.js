@@ -1,3 +1,7 @@
+const urlify=(text) =>{
+    var urlRegex = /(https?:\/\/[^\s]+)/g;
+    return text.replace(urlRegex, '<a href="$1">$1</a>')
+}
 const createPopUp = async (url, callback) => {
 
     let elem = document.createElement("div")

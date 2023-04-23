@@ -1,46 +1,52 @@
 console.log("mounted")
-let personalApp=new Vue({
-    el:"#app",
-    data:{
-        section:"profile",
-        user:{},
-        isLoading:false,
-        isComplite:false,
+let personalApp = new Vue({
+    el: "#app",
+    data: {
+        section: "profile",
+        user: {},
+        isLoading: false,
+        isComplite: false,
         errors: {company: {}, payCompany: {}},
         innStatus: {state: 0, message: "", isInnReadony: false},
-        innError:false,
-        feedback:{text:"", files:[]}
+        innError: false,
+        feedback: {text: "", files: []}
     },
-    methods:{
-        sendFeedback:async function(){
-            if(this.isLodinng)
+    methods: {
+        getHtml: async function (txt) {
+            if (txt) {
+                txt.replace(/<[^>]*>?/gm, '');
+                return urlify(txt)
+            } else
+                return ""
+
+        },
+        sendFeedback: async function () {
+            if (this.isLodinng)
                 return
-            if(this.feedback.text.length<2)
-            {
+            if (this.feedback.text.length < 2) {
                 document.querySelector(".personalFeedback").focus();
                 return;
             }
-            let filesguid=[]
-            let err=false;
-            this.feedback.files.forEach(file=>{
-                if(file.loading)
-                    err=true
-                if(file.guid)
+            let filesguid = []
+            let err = false;
+            this.feedback.files.forEach(file => {
+                if (file.loading)
+                    err = true
+                if (file.guid)
                     filesguid.push(file.guid)
             })
-            if(err)
-            {
+            if (err) {
                 alert("Не все файлы загружены, подождите")
                 return;
             }
-            this.isLoading=true;
-            let msg={text:this.feedback.text, files:filesguid}
+            this.isLoading = true;
+            let msg = {text: this.feedback.text, files: filesguid}
             await postJson("/personal/feedbackMessage", msg)
-            this.feedback={text:"", files:[]}
+            this.feedback = {text: "", files: []}
             alert("сообщение отправлено")
-            this.isLoading=false;
+            this.isLoading = false;
         },
-        feedbackAddFile:async function(){
+        feedbackAddFile: async function () {
             let inp = document.createElement("input")
             inp.type = "file"
             inp.accept = "image/*"
@@ -48,10 +54,10 @@ let personalApp=new Vue({
             inp.style.display = "none"
             document.body.appendChild(inp)
             inp.click()
-            inp.addEventListener("change", async ()=>{
+            inp.addEventListener("change", async () => {
 
-                for(let file of inp.files){
-                    let fileItem={name:file.name, guid:null, loading:true}
+                for (let file of inp.files) {
+                    let fileItem = {name: file.name, guid: null, loading: true}
                     this.feedback.files.push(fileItem)
                     let formData = new FormData()
                     formData.append('file', file, 'userPhoto.png');
@@ -61,38 +67,37 @@ let personalApp=new Vue({
                     })
 
                     if (ret.ok)
-                        fileItem.guid=(await ret.json())
-                    fileItem.loading=false
+                        fileItem.guid = (await ret.json())
+                    fileItem.loading = false
                 }
             });
 
         },
-        returnToPaymentSelect:async function(){
-            this.isLoading=true
+        returnToPaymentSelect: async function () {
+            this.isLoading = true
             try {
                 let res = await postJson("/personal/returnToPaymentSelect", {})
                 setTimeout(() => {
                     this.user = res;
                     this.isLoading = false
                 }, 2000)
-            }
-            catch (e){
+            } catch (e) {
                 alert("произошла ошибка, попробуйте позже")
                 this.isLoading = false
                 console.warn(e)
             }
         },
-        changePayCompanyInn:function(){
-            this.user.payCompany.name=null;
+        changePayCompanyInn: function () {
+            this.user.payCompany.name = null;
         },
-        loadInn:async function(state){
+        loadInn: async function (state) {
             if (state.state == 1)
                 return;
 
             state.state = 1
             state.message = ""
             const error = () => {
-                this.innError= true;
+                this.innError = true;
                 state.state = -1
                 this.$forceUpdate();
                 document.getElementById("inn").focus();
@@ -117,8 +122,8 @@ let personalApp=new Vue({
                 this.user.payCompany = data.dt;
                 this.user.payCompany.phone = this.user.phone
                 this.user.payCompany.signater = this.user.payCompany.director + " на основании Устава"
-                this.user.company.isEdo=false
-                this.innError=false;
+                this.user.company.isEdo = false
+                this.innError = false;
                 state.state = 2
 
 
@@ -131,26 +136,25 @@ let personalApp=new Vue({
 
 
         },
-        getDocumentsFromPayCompany:async function(){
-            this.isLoading=true
+        getDocumentsFromPayCompany: async function () {
+            this.isLoading = true
             try {
                 let res = await postJson("/personal/getDocumentsFromPayCompany", {
-                    payCompany:this.user.payCompany
+                    payCompany: this.user.payCompany
                 })
                 setTimeout(() => {
                     this.user = res;
                     this.isLoading = false
                 }, 2000)
-            }
-            catch (e){
+            } catch (e) {
                 alert("произошла ошибка, попробуйте позже")
                 this.isLoading = false
                 console.warn(e)
             }
 
         },
-        getDocumentsFromMainCompany:async function(){
-            this.isLoading=true
+        getDocumentsFromMainCompany: async function () {
+            this.isLoading = true
             try {
                 let res = await postJson("/personal/getDocumentsFromMainCompany", {
                     isEdo: this.user.company.isEdo,
@@ -162,38 +166,37 @@ let personalApp=new Vue({
                     this.user = res;
                     this.isLoading = false
                 }, 2000)
-            }
-            catch (e){
+            } catch (e) {
                 alert("произошла ошибка, попробуйте позже")
                 this.isLoading = false
             }
 
         },
-        isPayCompany: function (){
-            this.user.payCompany={}
+        isPayCompany: function () {
+            this.user.payCompany = {}
             this.$forceUpdate();
-            setTimeout(()=>{
+            setTimeout(() => {
                 document.querySelector(".persHead").scrollIntoView();
                 inn.focus();
-            },0)
+            }, 0)
         },
-        changePayCompanyEdo:function(){
-            this.user.payCompany.isEdo= this.user.payCompany.isEdo?false:true
+        changePayCompanyEdo: function () {
+            this.user.payCompany.isEdo = this.user.payCompany.isEdo ? false : true
             this.$forceUpdate();
         },
-        changeCompanyEdo:function(){
-          this.user.company.isEdo= this.user.company.isEdo?false:true
+        changeCompanyEdo: function () {
+            this.user.company.isEdo = this.user.company.isEdo ? false : true
         },
-        setPaySelf:async function(isPaySelf) {
-            let res = await postJson("/personal/setPaySelf",{isPaySelf})
+        setPaySelf: async function (isPaySelf) {
+            let res = await postJson("/personal/setPaySelf", {isPaySelf})
 
-            this.user=res;
+            this.user = res;
         },
-        saveUser:async function() {
-            if(this.isLoading)
+        saveUser: async function () {
+            if (this.isLoading)
                 return;
             this.errors = {company: {}, payCompany: {}}
-            if(this.user.phone)
+            if (this.user.phone)
                 this.user.phone = this.user.phone.replace(/[^\d.-]+/g, '') // remove all non-digits except - and .
                     .replace(/^([^.]*\.)|\./g, '$1') // remove all dots except first one
                     .replace(/(?!^)-/g, '') // remove all hyphens except first one
@@ -212,7 +215,7 @@ let personalApp=new Vue({
                     this.errors[sect] = true;
                 }
             })
-            setTimeout(async ()=>{
+            setTimeout(async () => {
                 let arr = []
                 arr.push(...document.body.querySelectorAll(".persBodyR .regRow.error"));
 
@@ -223,38 +226,43 @@ let personalApp=new Vue({
                     return
                 }
                 this.isLoading = true
-                let res = await postJson("/personal/changeUser", {photoid:this.user.photoid, companyShort:this.user.companyShort,phone:this.user.phone, email:this.user.email})
+                let res = await postJson("/personal/changeUser", {
+                    photoid: this.user.photoid,
+                    companyShort: this.user.companyShort,
+                    phone: this.user.phone,
+                    email: this.user.email
+                })
                 if (!res) {
                     alert("Произошла ошибка, попробуйте позже")
                     this.isLoading = false
                     return
                 }
-                setTimeout(()=>{
+                setTimeout(() => {
                     this.isLoading = false
-                    this.isComplite=true;
-                    setTimeout(()=>{
-                        this.isComplite=false;
-                    },4000)
+                    this.isComplite = true;
+                    setTimeout(() => {
+                        this.isComplite = false;
+                    }, 4000)
 
-                },2000)
+                }, 2000)
 
-            },0)
+            }, 0)
         },
 
-        uploadPhoto:async function(){
-            let photoid=await getPhoto(4/5)
-            if(photoid)
-                this.user.photoid=photoid;
+        uploadPhoto: async function () {
+            let photoid = await getPhoto(4 / 5)
+            if (photoid)
+                this.user.photoid = photoid;
         },
     },
-    watch:{},
-    mounted:async function(){
+    watch: {},
+    mounted: async function () {
         console.log("mounted 1")
-        this.user=await getJson("/personal/data")
-        setTimeout(()=>{
-            loader.style.display="none"
-            app.style.display="block"
-        },500)
+        this.user = await getJson("/personal/data")
+        setTimeout(() => {
+            loader.style.display = "none"
+            app.style.display = "block"
+        }, 500)
 
     }
 })
