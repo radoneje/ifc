@@ -26,7 +26,7 @@ let personalApp=new Vue({
                     let fileItem={name:file.name, guid:null, loading:true}
                     this.feedback.files.push(fileItem)
                     let formData = new FormData()
-                    formData.append('file', blob, 'userPhoto.png');
+                    formData.append('file', file, 'userPhoto.png');
                     let ret = await fetch(apiUrl + "/api/uploadFile", {
                         method: 'post',
                         body: formData,
