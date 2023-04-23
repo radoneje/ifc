@@ -30,7 +30,7 @@ block content
                         .persNavItem(v-on:click="section='profile'" v-bind:class="{active:section=='profile'}") Профиль
                         .persNavItem(v-on:click="section='doc'" v-bind:class="{active:section=='doc'}") Документы
                         .persNavItem(v-on:click="section='hotel'" v-bind:class="{active:section=='hotel'}") Отели
-                        .persNavItem(v-on:click="section='transfer'" v-bind:class="{active:section=='transfer'}") Трансферы
+                        //.persNavItem(v-on:click="section='transfer'" v-bind:class="{active:section=='transfer'}") Трансферы
                         .persNavItem(v-on:click="section='place'" v-bind:class="{active:section=='place'}") Место проведения
                         .persNavItem(v-on:click="section='feedback'" v-bind:class="{active:section=='feedback'}") Обратная связь
 
@@ -53,7 +53,7 @@ block content
                     .persSection(v-if="section=='feedback'")
                         include sectFeedback
 
-            .persFooter.flex.center
+            //.persFooter.flex.center
                 .persHeadRow.flex.center.beetwen
                     .persHeadLogoWr.flex.center(onclick="document.location.href='/'")
                         .persHeadLogo.svg100
