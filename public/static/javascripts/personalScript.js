@@ -8,7 +8,7 @@ let personalApp=new Vue({
         isComplite:false,
         errors: {company: {}, payCompany: {}},
         innStatus: {state: 0, message: "", isInnReadony: false},
-
+        innError:false,
     },
     methods:{
         loadInn:async function(state){
@@ -18,7 +18,7 @@ let personalApp=new Vue({
             state.state = 1
             state.message = ""
             const error = () => {
-                //this.errors[sect].inn = true;
+                this.innError= true;
                 state.state = -1
                 this.$forceUpdate();
                 document.getElementById("inn").focus();
@@ -44,7 +44,7 @@ let personalApp=new Vue({
                 this.user.payCompany.phone = this.user.phone
                 this.user.payCompany.signater = this.user[sect].director + " на основании Устава"
                 //this.user.company.isEdo=edo
-
+                this.innError=false;
                 state.state = 2
 
 

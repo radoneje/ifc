@@ -1,7 +1,7 @@
 .participaintRow
     .participaintRowTextUp
         b Пожалуйста, введите ИНН компании-плательщика и нажмите "загрузить данные из ФНС"
-    .regRow
+    .regRow(v-bind:class="{error:innError}")
         .regRowGroup.flex.left()
             .recLabel.reg287 ИНН
             input#inn.reqInput( v-model="user.payCompany.inn"  type="number")
