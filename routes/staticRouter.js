@@ -217,7 +217,7 @@ router.get('/invoice/:guid', async function (req, res, next) {
                 .text( recvizit, /*x*/ 178 , /*y*/ 273,{width: 400})
                 .text( inv.user[0].id+" от " +moment(inv.user[0].date).format("DD.MM.YYYY")+"г.", /*x*/ 243 , /*y*/ 340,{width: 400})
                 .text( price+"000.00", /*x*/ 510 , /*y*/ 410,{width: 400})
-                .text( price+"000.00", /*x*/ 510 , /*y*/ 510,{width: 400})
+                .text( price+"000.00", /*x*/ 510 , /*y*/ 490,{width: 400})
             doc.addPage()
                 .image(__dirname+"/../forpdf/invoice/02.png",0,0,{width:600})
             doc.addPage()
