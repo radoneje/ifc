@@ -12,9 +12,7 @@ let personalApp=new Vue({
     },
     methods:{
         isPayCompany: function (){
-            console.log(this.user.copmanyPay)
             this.user.copmanyPay={}
-            console.log(this.user.copmanyPay)
             this.$forceUpdate();
             setTimeout((inn.focus()),0)
         },
