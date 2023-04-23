@@ -1070,7 +1070,7 @@ input[type=number] {
     /* identical to box height, or 133% */
     color: #4A4A49;
     margin-right: 12px;
-    text-decoration: none;
+text-decoration: none !important;
 }
 
 .regRow.divaider {
