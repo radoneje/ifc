@@ -11,6 +11,21 @@ let personalApp=new Vue({
         innError:false,
     },
     methods:{
+        returnToPaymentSelect:async function(){
+            this.isLoading=true
+            try {
+                let res = await postJson("/personal/returnToPaymentSelect", {})
+                setTimeout(() => {
+                    this.user = res;
+                    this.isLoading = false
+                }, 2000)
+            }
+            catch (e){
+                alert("произошла ошибка, попробуйте позже")
+                this.isLoading = false
+                console.warn(e)
+            }
+        },
         changePayCompanyInn:function(){
             this.user.payCompany.name=null;
         },

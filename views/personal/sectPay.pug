@@ -100,9 +100,11 @@ div(v-if="user.statusid==65 && !user.isPaySelf")
     .participaintRow
         .participaintRowTextUp Стоимость участия: <b>{{user.price}} 0000 рублей</b> (НДС не облагается)
     .participaintRow &nbsp;
-    .participaintRow
-        .regSubmit(v-on:click="getDocumentsFromMainCompany()" ) Изменить реквизиты и получить новый счет
-
+    .regRow(v-if="!isLoading")
+        .regSubmit(v-on:click="returnToPaymentSelect()" ) Изменить реквизиты и получить новый счет
+    .regRow(v-if="isLoading")
+        .regSubmit()
+            include ../svg/loader.svg
 
 
 

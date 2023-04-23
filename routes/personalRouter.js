@@ -26,6 +26,20 @@ const checkAccess=(req, res, next)=>{
 /* GET home page. */
 
 
+router.get('/returnToPaymentSelect', async function(req, res, next) {
+    try {
+        if(!req.session.token)
+            return res.sendStatus(401)
+
+        await req.knex("t_user").update({payCompanyId:null, statusid:60}).where({id:req.session.token.id})
+        let r=await req.knex("v_personal_data").where({guid:req.session.token.guid})
+        res.json(r[0])
+    }
+    catch (e) {
+        console.warn(e)
+        return res.json("error")
+    }
+});
 router.get('/personalDataAgreement', async function(req, res, next) {
     try {
         if(!req.session.token)
