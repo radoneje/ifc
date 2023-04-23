@@ -44,10 +44,7 @@ router.post('/returnToPaymentSelect', async function(req, res, next) {
 
         await req.knex("t_users").update({payCompanyId:null, statusid:60}).where({id:req.session.token.id})
         let r=await req.knex("v_personal_data").where({guid:req.session.token.guid})
-        for(let rr of r){
-            if(rr.info)
-                rr.info.sort((a,b)=>{return a.id-b.id})
-        }
+
         res.json(r[0])
     }
     catch (e) {
@@ -195,6 +192,8 @@ router.get('/data', async function(req, res, next) {
             return res.sendStatus(401)
         let r=await req.knex("v_personal_data").where({guid:req.session.token.guid})
 
+        if(r[0].info)
+        r[0].info.sort((a,b)=>{return a.id-b.id})
 
         res.json(r[0])
 
