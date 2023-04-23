@@ -260,7 +260,7 @@ router.get('/personalDataAgreement/:userguid', async function (req, res, next) {
             .text( "Я, "+fio+", паспорт: "+ u.passportNumber + ", выдан: "+ u.passportDate+", код подразделения: "+ u.passportCode+", адрес регистрации: "+ u.address+",",
                 /*x*/ 59 , /*y*/ 152,{width: 500})
             .text( "Я, "+fio+", ",
-                /*x*/ 59 , /*y*/ 595,{width: 500})
+                /*x*/ 59 , /*y*/ 597,{width: 500})
 
         doc.end();
         setTimeout(()=>{res.download(filename)},1000)
