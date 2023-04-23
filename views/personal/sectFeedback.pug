@@ -6,9 +6,15 @@
     .participaintRowContent
         textarea.personalFeedback(v-model="feedback.text" placeholder="Напишите здесь Ваше сообщение")
 .participaintRow
-
     .participaintRowContent.feedBackUpload
         .feedBackUploadBtn(v-on:click="feedbackAddFile()") Приложить файлы
+.participaintRow
+    .participaintRowContent
+        .feedBackFiles
+            .feedBackFile.flex.left(v-for="file in feedback.files")
+                .feedBackFileName file.name
+                .feedBackFileLoading(v-if="file.loading")
+                    include ../svg/loader.svg
 
 .regRow(v-if="!isLoading")
     .participaintRowContent

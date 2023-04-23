@@ -20,10 +20,21 @@ let personalApp=new Vue({
             inp.style.display = "none"
             document.body.appendChild(inp)
             inp.click()
-            inp.addEventListener("change", ()=>{
+            inp.addEventListener("change", async ()=>{
+
                 for(let file of inp.files){
-                    console.log(file)
-                    this.feedback.files.push(file)
+                    let fileItem={name:file.name, guid:null, loading:true}
+                    this.feedback.files.push(fileItem)
+                    let formData = new FormData()
+                    formData.append('file', blob, 'userPhoto.png');
+                    let ret = await fetch(apiUrl + "/api/uploadFile", {
+                        method: 'post',
+                        body: formData,
+                    })
+
+                    if (ret.ok)
+                        fileItem.guid=(await ret.json())
+                    fileItem.loading=false
                 }
             });
 
