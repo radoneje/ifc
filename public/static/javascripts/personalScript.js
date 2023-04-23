@@ -16,6 +16,7 @@ let personalApp=new Vue({
             this.user.copmanyPay={}
             console.log(this.user.copmanyPay)
             this.$forceUpdate();
+            setTimeout((inn.focus()),0)
         },
         changeCompanyEdo:function(){
           this.user.company.isEdo= this.user.company.isEdo?false:true

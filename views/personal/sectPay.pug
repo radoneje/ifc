@@ -62,6 +62,14 @@ div(v-if="user.statusid==60")
                 .regSubmit.w630.yellow(v-on:click="isPayCompany()" ) Плательщик – другая организация
         .partSecondCompanyPay(v-if="user.copmanyPay")
             .participaintRow Оплата с доп юр лица
+            .participaintRow
+                .participaintRowTextUp
+                    b Пожалуйста, введите ИНН компании-плательщика и нажмите "загрузить данные из ФНС"
+                .regRow
+
+                    .regRowGroup.flex.left()
+                        .recLabel.reg287 ИНН
+                        input#inn.reqInput( v-model="user.payCompany.inn"  type="number")
 
 
 
