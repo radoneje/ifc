@@ -90,6 +90,7 @@ let personalApp=new Vue({
         },
         changePayCompanyEdo:function(){
             this.user.payCompany.isEdo= this.user.payCompany.isEdo?false:true
+            this.$forceUpdate();
         },
         changeCompanyEdo:function(){
           this.user.company.isEdo= this.user.company.isEdo?false:true
