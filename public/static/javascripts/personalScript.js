@@ -11,6 +11,9 @@ let personalApp=new Vue({
         innError:false,
     },
     methods:{
+        changePayCompanyInn:function(){
+            this.user.payCompany.name=null;
+        },
         loadInn:async function(state){
             if (state.state == 1)
                 return;
@@ -86,7 +89,7 @@ let personalApp=new Vue({
             },0)
         },
         changePayCompanyEdo:function(){
-            this.user.company.isEdo= this.user.payCompany.isEdo?false:true
+            this.user.payCompany.isEdo= this.user.payCompany.isEdo?false:true
         },
         changeCompanyEdo:function(){
           this.user.company.isEdo= this.user.company.isEdo?false:true
