@@ -3,13 +3,11 @@
         .menuItemBox
         .menuItemText Обратная связь
 .participaintRow
-    .participaintRowContent
+
         textarea.personalFeedback(v-model="feedback.text" placeholder="Напишите здесь Ваше сообщение")
 .participaintRow
-    .participaintRowContent.feedBackUpload
+    .feedBackUpload.flex.beetwen
         .feedBackUploadBtn(v-on:click="feedbackAddFile()") Приложить файлы
-
-    .participaintRowContent
         .feedBackFiles
             .feedBackFile.flex.center.left(v-for="file in feedback.files")
                 .feedBackFileName {{file.name}}
