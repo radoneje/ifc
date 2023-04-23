@@ -1005,6 +1005,7 @@ h2 {
     font-size: 26px;
     line-height: 32px;
     border:none;
+    text-align: center;
 }
 
 .regRow.error .reqInput {
