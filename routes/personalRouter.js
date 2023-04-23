@@ -223,7 +223,8 @@ router.get('/:lang?', async function(req, res, next) {
             req.session.token=null;
 
         if(req.session.token)
-            return res.redirect("/personal/info/"+req.params.lang)
+            return res.render("personal/layout", {lang:req.params.lang, apiUrl:config.apiUrl});
+            //return res.redirect("/personal/info/"+req.params.lang)
 
         if(!(req.query.token && req.query.token.match(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i)))
             return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
@@ -240,8 +241,8 @@ router.get('/:lang?', async function(req, res, next) {
                     return res.sendStatus(401)
 
                 req.session.token = usr[0]
-                return res.render("personal/layout", {lang:req.params.lang, apiUrl:config.apiUrl});
-                //return res.redirect("/personal/info/"+req.params.lang)
+                //return res.render("personal/layout", {lang:req.params.lang, apiUrl:config.apiUrl});
+                //return res.redirect("/personal/"+req.params.lang)
             }
         }
     }
