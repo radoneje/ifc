@@ -11,6 +11,52 @@ let personalApp=new Vue({
 
     },
     methods:{
+        loadInn:async function(state){
+            if (state.state == 1)
+                return;
+
+            state.state = 1
+            state.message = ""
+            const error = () => {
+                //this.errors[sect].inn = true;
+                state.state = -1
+                this.$forceUpdate();
+                document.getElementById("inn").focus();
+            }
+            if (!this.user.payCompany.inn)
+                return error();
+            if (this.userpayCompany.inn.length < 10)
+                return error();
+            try {
+                let res = await fetch(apiUrl + "/api/loadCompanyByINN/" + this.user.payCompany.inn)
+                if (!res.ok) {
+                    state.message = "Компания не найдена, проверьте ИНН"
+                    return error();
+                }
+                let data = await res.json();
+                if (data.count < 1) {
+                    state.message = "Компания не найдена, проверьте ИНН"
+                    return error();
+                }
+
+                //let edo=this.user.company.isEdo || false;
+                this.user.payCompany = data.dt;
+                this.user.payCompany.phone = this.user.phone
+                this.user.payCompany.signater = this.user[sect].director + " на основании Устава"
+                //this.user.company.isEdo=edo
+
+                state.state = 2
+
+
+                state.isInnReadony = true;
+                this.$forceUpdate();
+            } catch (e) {
+                state.message = "Произошла ошибка, проверьте ИНН"
+                return error()
+            }
+
+
+        },
         getDocumentsFromMainCompany:async function(){
             this.isLoading=true
             try {
