@@ -262,7 +262,7 @@ router.get('/personalDataAgreement/:userguid', async function (req, res, next) {
             .text( "Я, "+fio+", ",
                 /*x*/ 59 , /*y*/ 597,{width: 500})
             .text( moment().format("DD.MM.YYYY г."),
-                /*x*/ 79 , /*y*/ 760,{width: 500})
+                /*x*/ 79 , /*y*/ 660,{width: 500})
 
         doc.end();
         setTimeout(()=>{res.download(filename)},1000)
