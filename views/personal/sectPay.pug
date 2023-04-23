@@ -14,8 +14,8 @@ div(v-if="user.statusid==60")
                         .partSelectFormItem(v-on:click="setPaySelf(true)") физическое лицо
         .partMainCompanyPay(v-if="!user.copmanyPay")
             .participaintRow &nbsp;
-                .regRow.readonly
-                    .regRowGroup.flex.left()
+                .regRow
+                    .regRowGroup.readonly.flex.left()
                         .recLabel.reg287 ИНН
                         input#inn.reqInput(readonly v-model="user.company.inn"  type="number")
 
