@@ -78,6 +78,16 @@ div(v-if="user.statusid==65 && !user.isPaySelf")
                 a( href="/personal/personalDataAgreement" download="personalDataAgreement.pdf") Согласие на обработку персональных данных
                 div(v-if="(user.payCompany && user.payCompany.isEdo) || (!user.payCompany && user.company.isEdo)")
                     a( href="/personal/edoAgreement" download="EdoAgreement.pdf") Соглашение об ЭДО
+    .participaintRow &nbsp;
+    .participaintRow
+        .participaintRowTextUp
+            b Документы так же доступны для скачивания в разделе «документы»
+    .participaintRow
+        div 1. Скачайте документы.
+        div 2. Счет-Договор отдайте на оплату.
+        div 3  Подпишите и возьмите с собой на Конгресс Соглашение о ЭДО.
+
+
 // Оплата Физикоm
 div(v-if="user.statusid==65 && user.isPaySelf")
     .participaintRow
