@@ -106,6 +106,22 @@ div(v-if="user.statusid==65 && !user.isPaySelf")
         .regSubmit()
             include ../svg/loader.svg
 
+// счет оплачен
+div(v-if="user.statusid>=70")
+    .participaintRow &nbsp;
+        .participaintRowBtnGroup.flex.center.left
+            a( href="/personal/invoice" download="invoice.pdf") Счет на оплату
+            a( href="/personal/personalDataAgreement" download="personalDataAgreement.pdf") Согласие на обработку персональных данных
+            div(v-if="(user.payCompany && user.payCompany.isEdo) || (!user.payCompany && user.company.isEdo)")
+                a( href="/personal/edoAgreement" download="EdoAgreement.pdf") Соглашение об ЭДО
+    .participaintRow &nbsp;
+    .participaintRow
+        .participaintRowTextUp
+            b Документы так же доступны для скачивания в разделе «документы»
+    .participaintRow &nbsp;
+    .participaintRow
+        .participaintRowTextUp
+            b Документы так же доступны для скачивания в разделе «документы»
 
 
 // Оплата Физикоm
