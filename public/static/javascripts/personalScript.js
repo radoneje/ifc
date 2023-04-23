@@ -25,7 +25,7 @@ let personalApp=new Vue({
             }
             if (!this.user.payCompany.inn)
                 return error();
-            if (this.userpayCompany.inn.length < 10)
+            if (this.user.payCompany.inn.length < 10)
                 return error();
             try {
                 let res = await fetch(apiUrl + "/api/loadCompanyByINN/" + this.user.payCompany.inn)
