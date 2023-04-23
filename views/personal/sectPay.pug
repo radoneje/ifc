@@ -55,6 +55,9 @@ div(v-if="user.statusid==60")
                         .regCheckBoxBox
                         .regCheckBoxText Компания использует электронный докуметооборот
             .participaintRow &nbsp;
+            .participaintRow
+                .participaintRow
+                    .participaintRowTextUp Сумма к оплате {{user.price}} 0000 рублей
             div(v-if="!isLoading")
                 .participaintRow
                     .regSubmit.w630(v-on:click="getDocumentsFromMainCompany()" ) Получить документы на оплату
