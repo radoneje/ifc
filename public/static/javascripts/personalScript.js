@@ -11,6 +11,9 @@ let personalApp=new Vue({
 
     },
     methods:{
+        isPayCompany: function (){
+            this.user.copmanyPay={}
+        },
         changeCompanyEdo:function(){
           this.user.company.isEdo= this.user.company.isEdo?false:true
         },

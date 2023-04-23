@@ -59,7 +59,7 @@ div(v-if="user.statusid==60")
 
                 .regSubmit.w630(v-on:click="" ) Получить документы на оплату
             .participaintRow
-                .regSubmit.w630.yellow(v-on:click="user.copmanyPay={}" ) Плательщик – другая организация
+                .regSubmit.w630.yellow(v-on:click="isPayCompany()" ) Плательщик – другая организация
         .partSecondCompanyPay(v-if="user.copmanyPay")
             .participaintRow Оплата с доп юр лица
 
