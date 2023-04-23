@@ -9,3 +9,9 @@
     .participaintRowContent.feedBackUpload
         .feedBackUploadBtn Приложить файлы
 
+.regRow(v-if="!isLoading")
+    .regSubmit(v-on:click="sendFeedback()" ) Отправить сообщение организаторам
+.regRow(v-if="isLoading")
+    .regSubmit()
+        include ../svg/loader.svg
+
