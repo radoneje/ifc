@@ -1736,7 +1736,7 @@ text-decoration: none !important;
     line-height: 26px;
 }
 .participaintRow .oSessionTitle{
-    cursor: pointer;
+    cursor: inherit;
 }
 .participaintRow ul, .oTrack ul{
     margin-top: 22px;
