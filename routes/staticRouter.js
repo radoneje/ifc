@@ -257,8 +257,8 @@ router.get('/personalDataAgreement/:userguid', async function (req, res, next) {
             .font("/var/fonts/Arial_regular.ttf")///var/fonts/OpenSans-Regular-2.ttf")
             .fontSize(10)
             .fillColor('#000000')
-            .text( "Я, "+fio+"паспорт: "+ u.passportNumber + ", выдан: "+ u.passportDate+", код подразделения: "+ u.passportCode+", адрес регистрации: "+ u.address,
-                /*x*/ 60 , /*y*/ 150,{width: 500})
+            .text( "Я, "+fio+"паспорт: "+ u.passportNumber + ", выдан: "+ u.passportDate+", код подразделения: "+ u.passportCode+", адрес регистрации: "+ u.address+",",
+                /*x*/ 60 , /*y*/ 152,{width: 500})
 
         doc.end();
         setTimeout(()=>{res.download(filename)},1000)
