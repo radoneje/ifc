@@ -1958,7 +1958,7 @@ text-decoration: none !important;
     margin-left: 16px;
 }
 .persBody{
-    min-height: calc(100vh - 268px);
+    min-height: calc(100vh - 134px);
 }
 .persBodyL{
     box-sizing: border-box;
