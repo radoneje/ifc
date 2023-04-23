@@ -74,8 +74,10 @@ div(v-if="user.statusid==60")
                         .recLabel.reg287 ИНН
                         input#inn.reqInput( v-model="user.payCompany.inn"  type="number")
 
-
-
+// счет на оплату
+div(v-if="user.statusid==65 && !user.isPaySelf")
+    .participaintRow &nbsp;
+    .participaintRow Счет на оплату
 // Оплата Физикоm
 div(v-if="user.statusid==65 && user.isPaySelf")
     .participaintRow
