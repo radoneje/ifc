@@ -246,7 +246,7 @@ router.get('/invoice/:guid', async function (req, res, next) {
 });
 router.get('/personalDataAgreement/:userguid', async function (req, res, next) {
     try {
-        let users=await req.knex("t_user").where({guid:req.params.guid})
+        let users=await req.knex("t_user").where({guid:req.params.userguid})
         let u=users[0];
         let filename="/var/ifc_data/personalDataAgreements/personalDataAgreement_"+u.guid+".pdf"
         let fio= u.f+" " + u.i+ " "+ u.o+" "
