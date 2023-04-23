@@ -22,7 +22,7 @@ let personalApp=new Vue({
             }
             let filesguid=[]
             let err=false;
-            this.feedback.files.forEach(f=>{
+            this.feedback.files.forEach(file=>{
                 if(file.loading)
                     err=true
                 if(file.guid)
