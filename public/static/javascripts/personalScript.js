@@ -13,7 +13,11 @@ let personalApp=new Vue({
     methods:{
         getDocumentsFromMainCompany:async function(){
             this.loading=true
-            let res = await postJson("/personal/getDocumentsFromMainCompany",{isPaySelf})
+            let res = await postJson("/personal/getDocumentsFromMainCompany",{
+                isEdo:this.user.company.isEdo,
+                phone:this.user.company.phone,
+                signater:this.user.company.signater
+            })
             this.loading=false
         },
         isPayCompany: function (){
