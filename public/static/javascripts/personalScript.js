@@ -12,6 +12,29 @@ let personalApp=new Vue({
         feedback:{text:"", files:[]}
     },
     methods:{
+        sendFeedback:async function(){
+            if(this.isLodinng)
+                return
+            let filesguid=[]
+            let err=false;
+            this.feedback.files.forEach(f=>{
+                if(file.loading)
+                    err=true
+                if(file.guid)
+                    filesguid.push(file.guid)
+            })
+            if(err)
+            {
+                alert("Не все файлы загружены, подождите")
+                return;
+            }
+            this.isLoading=true;
+            let msg={text:feedback.text, files:filesguid}
+            await postJson("/personal/feedbackMessage", msg)
+            this.feedback={text:"", files:[]}
+            alert("сообщение отправлено")
+            this.isLoading=true;
+        },
         feedbackAddFile:async function(){
             let inp = document.createElement("input")
             inp.type = "file"
