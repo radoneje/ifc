@@ -15,7 +15,7 @@ let personalApp=new Vue({
             this.user.payCompany={}
             this.$forceUpdate();
             setTimeout(()=>{
-                document.querySelector(".partSecondCompanyPay").scrollIntoView();
+                document.querySelector(".persHead").scrollIntoView();
             },0)
         },
         changeCompanyEdo:function(){
