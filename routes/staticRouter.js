@@ -139,6 +139,24 @@ async function genShortInvoice(inv, req){
     return filename;
 }
 
+
+router.get('/edoAgreement/:companyguid', async function (req, res, next) {
+    try {
+        res.json("edoAgreement")
+    } catch (e) {
+        console.error(e)
+        res.sendStatus(500)
+    }
+});
+
+router.get('/personalDataAgreement/:userguid', async function (req, res, next) {
+    try {
+        res.json("personalDataAgreement")
+    } catch (e) {
+        console.error(e)
+        res.sendStatus(500)
+    }
+});
 router.get('/invoiceshort/:guid', async function (req, res, next) {
     try {
         let invoices=await req.knex("v_invoice").where({guid:req.params.guid})

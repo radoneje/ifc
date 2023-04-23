@@ -25,6 +25,39 @@ const checkAccess=(req, res, next)=>{
 }
 /* GET home page. */
 
+
+router.get('/personalDataAgreement', async function(req, res, next) {
+    try {
+        if(!req.session.token)
+            return res.sendStatus(401)
+
+        res.redirect("/static/personalDataAgreement/"+req.session.token.guid);
+    }
+    catch (e) {
+        console.warn(e)
+        return res.json("error")
+    }
+});
+
+router.get('/edoAgreement', async function(req, res, next) {
+    try {
+        if(!req.session.token)
+            return res.sendStatus(401)
+        let r=await req.knex("t_users").where({id:req.session.token.id});
+        let companyid=""
+        if(r[0].payCompany)
+            companyid=r[0].payCompanyId
+        else
+            companyid=r[0].companyid
+        r=await req.knex("t_company").where({id:r[0].id});
+
+        res.redirect("/static/edoAgreement/"+r[0].guid);
+    }
+    catch (e) {
+        console.warn(e)
+        return res.json("error")
+    }
+});
 router.get('/invoice', async function(req, res, next) {
     try {
         if(!req.session.token)
