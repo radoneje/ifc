@@ -195,6 +195,12 @@ router.get('/data', async function(req, res, next) {
         if(r[0].info)
         r[0].info.sort((a,b)=>{return b.id-a.id})
 
+        r[0].files=[]
+        for(let guid of r[o].filesid){
+            let f=req.knex("t_files").where({guid})
+            r[0].files.push({name:f.originalname, guid})
+        }
+
         res.json(r[0])
 
     }
