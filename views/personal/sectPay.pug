@@ -96,6 +96,9 @@ div(v-if="user.statusid==65 && !user.isPaySelf")
                     div {{user.payCompany?user.payCompany.name:user.company.name }}
                     div ИНН/КПП {{user.payCompany?user.payCompany.inn:user.company.inn }} / {{user.payCompany?user.payCompany.kpp:user.company.kpp }}
                     div {{user.payCompany?user.payCompany.address:user.company.address }}
+    .participaintRow &nbsp;
+        .participaintRow
+            .participaintRowTextUp Стоимость участия: <b>{{user.price}} 0000 рублей</b> (НДС не облагается)
 
 
 
