@@ -50,7 +50,10 @@ div(v-if="user.statusid==60")
                     .regRowGroup.flex.left
                         .recLabel.reg287 Кто подписывает
                         input.reqInput( v-model="user.company.signater" placeholder="ФИО сотрудника, на основании чего действует" must name="signater")
-
+                .regRow
+                    .regCheckBox.green.flex.left(v-on:click="user.company.idEdo=user.company.idEdo?false:true" v-bind:class="{active:user.company.isEdo}")
+                        .regCheckBoxBox
+                        .regCheckBoxText Компания использует электронный докуметооборот
 
         .partSecondCompanyPay(v-if="user.copmanyPay")
             .participaintRow Оплата с доп юр лица
