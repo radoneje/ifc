@@ -504,7 +504,7 @@ h2 {
 #place{
     padding-top: 112px;
     position: relative;
-    padding-bottom: 125px;
+    padding-bottom: 0px;
 }
 .placeDecor{
     position: absolute;
