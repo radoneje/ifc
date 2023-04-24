@@ -810,6 +810,15 @@
     .hotelDescrWr{
         display: block;
     }
+    .hotelImage{
+        width: 100%;
+    }
+    .hotelDescrBox {
+
+        width: 100%;
+        padding-right: 0;
+        margin-top:24px;
+    }
 
 
 
