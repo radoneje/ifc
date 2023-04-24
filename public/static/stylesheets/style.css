@@ -2097,6 +2097,7 @@ text-decoration: none !important;
 }
 .hotelDescrWr{
     margin-top: 32px;
+    align-items: flex-start;
 }
 .hotelDescr{
     white-space: break-spaces;
@@ -2154,6 +2155,9 @@ text-decoration: none !important;
     font-weight: 350;
     font-size: 18px;
     line-height: 21px;
+}
+.hotelAddress{
+    margin-top:16px;
 }
 
 
