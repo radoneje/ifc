@@ -2099,9 +2099,12 @@ text-decoration: none !important;
     margin-top: 32px;
     align-items: flex-start;
 }
+.hotelDescrBox{
+    width: calc(100% - 300px);
+}
 .hotelDescr{
     white-space: break-spaces;
-    width: calc(100% - 300px);
+
 }
 .hotelImage{
 
