@@ -13,6 +13,14 @@
 
 each hotel in hotels
     .participaintRow
-        .participaintRowHead #{hotel['name'+lang]}
+        .participaintRowHead
+            .hotelHead.flex.beetwen
+                .hotelName #{hotel['name'+lang]}
+                .hotelStarsWr.flex.cener
+                    .hotelStars #{hotel.stars} звезд
+                    .hotelLink
+                        a.inline(href="" target="_blank") Сайт отеля
+
+
 
 
