@@ -12,6 +12,10 @@ let personalApp = new Vue({
         feedback: {text: "", files: []}
     },
     methods: {
+        personalMobileMenuClose:function(){
+            document.body.style.overflow=null;
+            document.querySelector(".persBodyL").classList.remove("persMobileMenu")
+        },
         personalMobileMenuShow:function(){
             document.body.style.overflow="hidden"
             document.querySelector(".persBodyL").classList.add("persMobileMenu")
