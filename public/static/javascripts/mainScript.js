@@ -336,6 +336,7 @@ if(placeArrowR)
 if(placeArrowL)
     placeArrowL.onclick=()=>{movePlaceImg(false)}
 
-
-
+if(placePhotoBox){
+    placePhotoBox.onclick=()=>{movePlaceImg(true)}
+}
 
