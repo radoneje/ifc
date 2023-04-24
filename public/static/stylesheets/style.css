@@ -2104,6 +2104,7 @@ text-decoration: none !important;
 .hotelImage{
 
     width: 300px;
+    height: auto;
 }
 .hotelImage img{
     width: 100%;
