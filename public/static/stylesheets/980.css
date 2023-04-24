@@ -726,6 +726,15 @@
         font-size: 14px;
         line-height: 17px;
     }
+    .persBody{
+        min-height: inherit;
+    }
+    .persBodyR {
+
+        max-height: inherit;
+        overflow-y: inherit;
+        padding: 24px 8px;
+    }
 
 
 
