@@ -12,6 +12,9 @@ let personalApp = new Vue({
         feedback: {text: "", files: []}
     },
     methods: {
+        bookRoom:async function (roomid) {
+            this.user.roomid=roomid;
+        },
         getHtml: function (txt) {
             if (txt) {
                 txt.replace(/<[^>]*>?/gm, '');
