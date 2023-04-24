@@ -766,6 +766,12 @@
         color: #FFFFFF;
         text-align: center;
     }
+    .participaintRowBtnGroup{
+        display: block;
+    }
+    .participaintRowBtnGroup a{
+        margin-bottom: 8px;
+    }
 
 
 
