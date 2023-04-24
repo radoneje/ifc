@@ -37,8 +37,8 @@ router.post('/hotelRoom', async function(req, res, next) {
 
         let text="Добрый день!<br><br>"
         text+=user.f+" " + user.i +" " + user.o+" хочет забронировать номер категории "+ room.titleru +" по цене " + room.price+"р. <br><br>"
-        text+="Контакты участника: "+ user.isProxy?("(его референта "+user.proxyi+") +"+user.proxyphone+", "+ user.proxyemail):("+"+user.phone+", "+ user.email)
-        text+="<br><br>C уважением,</br>Оргкомитет Финансового конгресса Банка России<br>8 800 300-69-23<br>INFO@IFCONGRESS.RU"
+        text+="Контакты участника: "+ (user.isProxy?("(его референта "+user.proxyi+") +"+user.proxyphone+", "+ user.proxyemail):("+"+user.phone+", "+ user.email))
+        text+="<br><br>C уважением,</br>Оргкомитет <br>Финансового конгресса Банка России<br>8 800 300-69-23<br>INFO@IFCONGRESS.RU"
         let subj="Заявка на бронирование: Финансовый конгресс Банка России"
         await req.knex("t_email_messages_to_another_person").insert({email:hotel.email,subj,text })
         res.json(1)
