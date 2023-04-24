@@ -97,12 +97,16 @@
     }
     .placeDecor{
         width: 30%;
+        top:100px
     }
     #news, #place{
         padding-top:48px;
         padding-bottom: 24px;
     /*    margin-bottom: 24px;*/
         overflow: hidden;
+    }
+    .placeWr{
+        display: block;
     }
     .newsItemsBox{
         width: 100%;
