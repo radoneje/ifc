@@ -14,6 +14,7 @@ let personalApp = new Vue({
     methods: {
         bookRoom:async function (roomid) {
             this.user.roomid=roomid;
+            await postJson("/personal/hotelRoom/",{roomid})
         },
         getHtml: function (txt) {
             if (txt) {

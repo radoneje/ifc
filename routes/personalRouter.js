@@ -25,6 +25,29 @@ const checkAccess=(req, res, next)=>{
 }
 /* GET home page. */
 
+router.post('/hotelRoom', async function(req, res, next) {
+    try {
+        if(!req.session.token)
+            return res.sendStatus(401)
+
+        let user=await req.knex("t_users").update({roomid:req.body.roomid},"*").where({id:req.session.token.id})
+        let room=(await req.knex("t_hotels_room").where({id:req.body.roomid}))[0]
+        let hotel=(await req.knex("t_hotel").where({id:room.hotelid}))[0]
+
+
+        let text="Добрый день!<br><br>"
+        text+=user.f+" " + user.i +" " + user.o+" хочет забронировать номер категории "+ room.titleru +" по цене " + room.price+"р. <br><br>"
+        text+="Котакты участника: "+ user.isProxy?("(его референта "+user.proxyname+") +"+user.proxyphone+", "+ user.proxyemail):("+"+user.phone+", "+ user.email)
+        text+="<br></br>C уважением,</br>Оргмомитет Финансового конгресса Банка России<br>8 800 300-69-23<br>INFO@IFCONGRESS.RU"
+        let subj="Заявка на бронирование: Финансовый конгресс Банка России"
+        await req.knex("t_email_messages_to_another_person").insert({email:hotel.email,subj,text })
+        res.json(r)
+    }
+    catch (e) {
+        console.warn(e)
+        return res.json("error")
+    }
+});
 router.post('/feedbackMessage', async function(req, res, next) {
     try {
         if(!req.session.token)
