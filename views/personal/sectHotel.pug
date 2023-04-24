@@ -17,7 +17,11 @@ each hotel in hotels
             .hotelHead.flex.beetwen
                 .hotelName #{hotel['name'+lang]}
                 .hotelStarsWr.flex.cener
-                    .hotelStars #{hotel.stars} звезд
+                    .hotelStars
+                    - var n = 0;
+                    while n< hotel.stars
+                        - n++;
+                            span *&nbsp;
                     .hotelLink
                         a.inline(href="" target="_blank") На сайт отеля
 
