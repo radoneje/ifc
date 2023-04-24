@@ -505,6 +505,11 @@ h2 {
     position: relative;
     padding-bottom: 125px;
 }
+.placeDecor{
+    position: absolute;
+    left: 0;
+    top: 182px;
+}
 
 
 .quotesArrow svg {
