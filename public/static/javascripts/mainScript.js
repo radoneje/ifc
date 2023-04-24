@@ -304,6 +304,13 @@ const closeMobileMenu=()=>{
 }
 let placeImageArray=["/static/images/place02.png","/static/images/place03.png","/static/images/place04.png"]
 let placePhotoBox=document.getElementById("placePhotoBox")
+if(placePhotoBox) {
+    placeImageArray.push(placePhotoBox.lastChild.src);
+    let item= placeImageArray[parseInt(Math.random()*3)]
+    placeImageArray=placeImageArray.filter(i=>i!=item);
+    placePhotoBox.lastChild.src=item;
+}
+
 function movePlaceImg(dir=true){
     if(placePhotoBox) {
         let item =""
