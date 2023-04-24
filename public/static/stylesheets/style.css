@@ -500,6 +500,11 @@ h2 {
 .placeWr .quotesArrow{
     display: block !important;
 }
+#place{
+    padding-top: 112px;
+    position: relative;
+    padding-bottom: 125px;
+}
 
 
 .quotesArrow svg {
