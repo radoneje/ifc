@@ -524,8 +524,10 @@ h2 {
     padding: 24px;
     background-image: url('/static/images/placePhotoBg.svg');
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
+    text-align: center;
+
 }
 .placeTextWr{
     width: 50%;
