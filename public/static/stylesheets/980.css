@@ -832,6 +832,12 @@
     .hotelRoom>div{
         display: block;
     }
+    .roomDescr{
+        display: none;
+    }
+    .roomBookWr{
+        margin-top: 24px;
+    }
 
 
 
