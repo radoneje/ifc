@@ -106,6 +106,9 @@
     .placeTextWr{
         width: 100%;
     }
+    .placeWr .quotesArrow {
+        display: none !important;
+    }
     #news, #place{
         padding-top:48px;
         padding-bottom: 24px;
