@@ -772,6 +772,9 @@
     .participaintRowBtnGroup a{
         margin-bottom: 8px;
     }
+    .participaintDocsItem{
+        display: block;
+    }
 
 
 
