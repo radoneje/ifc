@@ -32,7 +32,7 @@ router.post('/hotelRoom', async function(req, res, next) {
 
         let user=await req.knex("t_users").update({roomid:req.body.roomid},"*").where({id:req.session.token.id})
         let room=(await req.knex("t_hotel_rooms").where({id:req.body.roomid}))[0]
-        let hotel=(await req.knex("t_hotel").where({id:room.hotelid}))[0]
+        let hotel=(await req.knex("t_hotels").where({id:room.hotelid}))[0]
 
 
         let text="Добрый день!<br><br>"
