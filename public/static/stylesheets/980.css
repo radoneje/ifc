@@ -719,7 +719,7 @@
     .persBodyL{
         display: none;
     }
-    .persMenuAlert, persMenuExit{
+    .persMenuAlert, .persMenuExit{
         display: none;
     }
     .persMenuFio{
@@ -738,6 +738,9 @@
     }
     .reg287{
         width: 100%;
+    }
+    .persHead:before, .persFooter:before {
+        width: 50%;
     }
 
 
