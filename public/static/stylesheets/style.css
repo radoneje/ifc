@@ -484,6 +484,9 @@ h2 {
 .quotesWr {
     background: #BB3E3F;
 }
+.placeWr{
+    background: #FFFFFF;
+}
 
 .quotesArrow {
     width: 88px;
@@ -492,8 +495,12 @@ h2 {
     box-sizing: border-box;
     padding: 14px 0;
     cursor: pointer;
-    display: none !important;
+   display: none !important;
 }
+.placeWr .quotesArrow{
+    display: block !important;
+}
+
 
 .quotesArrow svg {
     height: 100%;
