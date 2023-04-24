@@ -716,6 +716,16 @@
         top:32px;
         right:8px;
     }
+    .persBodyL{
+        display: none;
+    }
+    .persMenuAlert, persMenuExit{
+        display: none;
+    }
+    .persMenuFio{
+        font-size: 14px;
+        line-height: 17px;
+    }
 
 
 
