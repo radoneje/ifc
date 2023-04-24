@@ -304,13 +304,15 @@ const closeMobileMenu=()=>{
 }
 let placePhotoBox=document.getElementById("placePhotoBox")
 if(placePhotoBox){
-    let arr=['/static/images/place01.png',"/static/images/place02.png","/static/images/place03.png","/static/images/place04.png"]
+    let arr=["/static/images/place02.png","/static/images/place03.png","/static/images/place04.png", '/static/images/place01.png']
     document.querySelector("#placeArrowR").onclick=()=>{
         let item=arr.shift()
         let elem=document.createElement("img")
         elem.src=item;
         elem.loading="lazy"
-        placePhotoBox.appendChild(elem);
+        //placePhotoBox.appendChild(elem);
+        placePhotoBox.insertBefore(newFirstElement, placePhotoBox.firstChild);
+        placePhotoBox.removeChild(placePhotoBox.lastChild)
         arr.push(item)
     }
 }
