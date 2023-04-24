@@ -14,7 +14,7 @@ let personalApp = new Vue({
     methods: {
         personalMobileMenuShow:function(){
             document.body.style.overflow="hidden"
-            document.querySelector(".persBodyL").classList.add(".persMobileMenu")
+            document.querySelector(".persBodyL").classList.add("persMobileMenu")
         },
         bookRoom:async function (roomid) {
             this.user.roomid=roomid;
