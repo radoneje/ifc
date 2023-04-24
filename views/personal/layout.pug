@@ -21,7 +21,7 @@ block content
                         .persMenuFio {{user.i}} {{user.f}}
                         a.persMenuExit(href="/personal/exit/"+lang)
                             include ../svg/personalExitIco.svg
-                        a.persMenuMomileMenu.mobile
+                        a.persMenuMomileMenu.mobile(v-on:click="personalMobileMenuShow()")
                             include ../svg/mobileMenuBtn.svg
 
             .persBody.flex

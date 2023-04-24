@@ -746,6 +746,16 @@
         margin: 0px 24px;
         width: 100%;
     }
+    .persMobileMenu{
+        position: fixed;
+        display: block;
+        background:yellow;
+        top:0;
+        left: 0;
+        width: 100%;
+        overflow: scroll;
+        padding: 24px 8px;
+    }
 
 
 

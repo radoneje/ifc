@@ -12,6 +12,10 @@ let personalApp = new Vue({
         feedback: {text: "", files: []}
     },
     methods: {
+        personalMobileMenuShow:function(){
+            document.body.style.overflow="hidden"
+            document.querySelector(".persBodyL").classList.add(".persMobileMenu")
+        },
         bookRoom:async function (roomid) {
             this.user.roomid=roomid;
             await postJson("/personal/hotelRoom/",{roomid})
