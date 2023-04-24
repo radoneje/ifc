@@ -309,10 +309,11 @@ if(placePhotoBox) {
     let item= placeImageArray[parseInt(Math.random()*3)]
     placeImageArray=placeImageArray.filter(i=>i!=item);
     placePhotoBox.lastChild.style.opacity=0;
+
+    placePhotoBox.lastChild.src=item;
     placePhotoBox.lastChild.onload=()=>{
         placePhotoBox.lastChild.style.opacity=1;
     }
-    placePhotoBox.lastChild.src=item;
 }
 
 function movePlaceImg(dir=true){
