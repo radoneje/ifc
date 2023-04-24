@@ -496,6 +496,7 @@ h2 {
     padding: 14px 0;
     cursor: pointer;
    display: none !important;
+    text-align: center;
 }
 .placeWr .quotesArrow{
     display: block !important;
@@ -509,6 +510,11 @@ h2 {
     position: absolute;
     left: 0;
     top: 182px;
+}
+.placeTextItem{
+    color:#4A4A49;
+    font-weight: 400;
+    font-size: 21px;
 }
 
 
