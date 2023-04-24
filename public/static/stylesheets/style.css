@@ -521,13 +521,16 @@ h2 {
 .placePhotoWr{
     width: 50%;
     box-sizing: border-box;
-    padding: 24px;
     background-image: url('/static/images/placePhotoBg.svg');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     text-align: center;
-
+    padding: 36px;
+}
+.placePhotoWr img{
+    width: 100%;
+    height: auto;
 }
 .placeTextWr{
     width: 50%;
