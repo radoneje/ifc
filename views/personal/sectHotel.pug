@@ -32,7 +32,7 @@ each hotel in hotels
                 .hotelRoom.flex.center.beetwen
                     .roomNameWr
                         .roomName #{room["title"+lang]}
-                        .roomPrice #{room.price}
+                        .roomPrice !{String(room.price).replace(/000$/," 000")} &#8381;
                     .roomBookWr
                         .roomBookBtn Забронировать
 

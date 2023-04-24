@@ -2122,6 +2122,23 @@ text-decoration: none !important;
 .hotelRoom:not(:last-child){
     border-bottom: 1px solid #D9D9D9;
 }
+.roomName{
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 26px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+}
+.roomPrice{
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 26px;
+    /* identical to box height */
+
+
+    color: #BB3E3F;
+}
 
 
 
