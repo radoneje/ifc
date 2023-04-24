@@ -749,12 +749,22 @@
     .persMobileMenu{
         position: fixed;
         display: block;
-        background:yellow;
-        top:0;
+        top: 0;
         left: 0;
         width: 100%;
         overflow: scroll;
         padding: 24px 8px;
+        z-index: 1000;
+        min-height: 100vh;
+        margin-top: 0;
+        background: linear-gradient(180deg, #4a569e 0%, #6e1e21 100%), #4a569e;
+    }
+    .persNavItem {
+        margin-bottom: 8px;
+        padding: 16px 12px;
+        width: 100%;
+        color: #FFFFFF;
+        text-align: center;
     }
 
 
