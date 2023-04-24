@@ -42,7 +42,9 @@ each hotel in hotels
                             .roomBookWr(v-if="user.roomid!="+room.id)
                                 .roomBookBtn(v-on:click="bookRoom("+room.id+")") Забронировать
                             .roomBookWr(v-else)
-                                .roomBookConfirm Заявка на бронирование в отель отправлена.
+                                .roomBookConfirmWr.flex.center
+                                    .roomBookConfirm Ваша заявка отправлена в отель,<br>менеджер с вами свяжется.
+                                    .roomBookBtn.roomBookConfirmBtn Ваш выбор
                         .roomDescr #{room["descr"+lang]}
 
 

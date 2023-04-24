@@ -2131,6 +2131,19 @@ text-decoration: none !important;
     width: 300px;
     text-align: center;
 }
+.roomBookConfirmBtn{
+    background-color:   #E0E0E0;
+    color:#4A4A49;
+    cursor: inherit;
+}
+.roomBookConfirm{
+    font-weight: 350;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #878787;
+    margin-right: 24px;
+}
 .hotelRoom{
     padding-bottom: 24px;
     margin-top:32px;
