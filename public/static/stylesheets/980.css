@@ -101,6 +101,10 @@
     }
     .placePhotoWr{
         width: 100%;
+        padding: 20%;
+    }
+    .placeTextWr{
+        width: 100%;
     }
     #news, #place{
         padding-top:48px;
