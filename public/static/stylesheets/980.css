@@ -775,6 +775,13 @@
     .participaintDocsItem{
         display: block;
     }
+    .participaintDocTitle{
+        margin-bottom: 16px;
+    }
+    .participaintDocBtn {
+        padding: 12px 24px;
+        width: max-content;
+    }
 
 
 
