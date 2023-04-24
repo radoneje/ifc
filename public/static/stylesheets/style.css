@@ -2156,7 +2156,7 @@ text-decoration: none !important;
 .hotelDescrBox{
     width: calc(100% - 300px);
     box-sizing: border-box;
-    padding-right: 32px;
+    padding-left: 32px;
 }
 .hotelDescr{
     white-space: break-spaces;
