@@ -777,6 +777,7 @@
     }
     .participaintDocTitle{
         margin-bottom: 16px;
+        word-break: break-all;
     }
     .participaintDocBtn {
         padding: 12px 24px;
