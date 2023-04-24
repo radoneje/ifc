@@ -1978,7 +1978,7 @@ text-decoration: none !important;
     width: 56px;
     height: 56px;
     position: fixed;
-    bottom: 50%;
+    top: 32px;
     right: 32px;
     background: #e39a3f;
 
