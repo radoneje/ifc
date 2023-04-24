@@ -513,8 +513,10 @@ h2 {
 }
 .placeTextItem{
     color:#4A4A49;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 21px;
+    line-height: 26px;
+    margin-bottom: 24px;
 }
 
 
