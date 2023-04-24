@@ -782,6 +782,22 @@
         padding: 12px 24px;
         width: max-content;
     }
+    .feedBackUpload{
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    .feedBackFiles{
+        margin-top:12px;
+
+    }
+    .feedBackUploadBtn {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    .participaintRowContent{
+        padding-left: 0;
+    }
 
 
 
