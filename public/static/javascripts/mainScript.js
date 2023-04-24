@@ -311,7 +311,7 @@ if(placePhotoBox){
         elem.src=item;
         elem.loading="lazy"
         //placePhotoBox.appendChild(elem);
-        placePhotoBox.insertBefore(newFirstElement, placePhotoBox.firstChild);
+        placePhotoBox.insertBefore(elem, placePhotoBox.firstChild);
         placePhotoBox.removeChild(placePhotoBox.lastChild)
         arr.push(item)
     }
