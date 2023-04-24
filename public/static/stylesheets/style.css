@@ -518,6 +518,16 @@ h2 {
     line-height: 26px;
     margin-bottom: 24px;
 }
+.placePhotoWr{
+    width: 50%;
+    box-sizing: border-box;
+    padding:24px;
+}
+.placeTextWr{
+    width: 50%;
+    box-sizing: border-box;
+    padding:24px;
+}
 
 
 .quotesArrow svg {
