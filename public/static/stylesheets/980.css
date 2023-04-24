@@ -99,6 +99,9 @@
         width: 30%;
         top:100px
     }
+    .placePhotoWr{
+        width: 100%;
+    }
     #news, #place{
         padding-top:48px;
         padding-bottom: 24px;
