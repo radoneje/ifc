@@ -23,7 +23,9 @@ each hotel in hotels
                         - n++;
                             include ../svg/hotelStar.svg
                     .hotelLink
-                        a.inline(href="" target="_blank") На сайт отеля
+                        a.inline(href=hotel.link target="_blank") На сайт отеля
+        .hotelImage
+            img(src="/static/images/middle/"+hotel.photoid width="487" height="92" loading="lazy")
 
 
 

@@ -2095,6 +2095,12 @@ text-decoration: none !important;
 .hotelLink{
     margin-left: 24px;
 }
+.hotelImage{
+    margin-top: 32px;
+}
+.hotelImage img{
+    width: 100%;
+}
 
 
 
