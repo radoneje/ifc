@@ -26,11 +26,12 @@ each hotel in hotels
                     .hotelLink
                         a.inline(href=hotel.link target="_blank") На сайт отеля
         .hotelDescrWr.flex.center.beetwen
+            .hotelImage
+                img(src="/static/image/middle/" + hotel.photoid  loading="lazy")
             .hotelDescrBox
                 .hotelDescr #{hotel["descr"+lang]}
                 .hotelAddress #{hotel["address"+lang]}
-            .hotelImage
-                img(src="/static/image/middle/" + hotel.photoid  loading="lazy")
+
         .hotelRooms
             each room in hotel.rooms
                 if room.isEnabled

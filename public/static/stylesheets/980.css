@@ -799,6 +799,17 @@
     .participaintRowContent{
         padding-left: 0;
     }
+    .partSelectForm{
+        max-width: 100%;
+        overflow: hidden;
+    }
+    .partSelectFormItem {
+        font-size: 18px;
+        line-height: 23px;
+    }
+    .hotelDescrWr{
+        display: block;
+    }
 
 
 
