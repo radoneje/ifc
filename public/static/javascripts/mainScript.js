@@ -313,7 +313,11 @@ if(placePhotoBox){
         //placePhotoBox.appendChild(elem);
         placePhotoBox.insertBefore(elem, placePhotoBox.firstChild);
         elem.onload=()=>{
-            placePhotoBox.removeChild(placePhotoBox.lastChild)
+            placePhotoBox.lastChild.style.opacity=0;
+            setTimeout(()=>{
+                placePhotoBox.removeChild(placePhotoBox.lastChild)
+            },1000)
+
         }
 
         arr.push(item)
