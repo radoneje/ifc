@@ -302,7 +302,7 @@ const closeMobileMenu=()=>{
     mobileMenu.classList.remove("mobileMenuVisible")
     document.body.style.overflow=null
 }
-let placeImageArray=["/static/images/place02.png","/static/images/place03.png","/static/images/place04.png", '/static/images/place01.png']
+let placeImageArray=["/static/images/place02.png","/static/images/place03.png","/static/images/place04.png"]
 let placePhotoBox=document.getElementById("placePhotoBox")
 function movePlaceImg(dir=true){
     if(placePhotoBox) {
