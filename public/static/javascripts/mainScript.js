@@ -334,7 +334,7 @@ function movePlaceImg(dir=true){
 if(placeArrowR)
     placeArrowR.onclick=()=>{movePlaceImg(true)}
 if(placeArrowL)
-    placeArrowR.onclick=()=>{movePlaceImg(false)}
+    placeArrowL.onclick=()=>{movePlaceImg(false)}
 
 
 
