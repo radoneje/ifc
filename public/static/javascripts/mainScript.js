@@ -304,9 +304,14 @@ const closeMobileMenu=()=>{
 }
 let placeImageArray=["/static/images/place02.png","/static/images/place03.png","/static/images/place04.png", '/static/images/place01.png']
 let placePhotoBox=document.getElementById("placePhotoBox")
-function movePlaceImg(dir=false){
+function movePlaceImg(dir=true){
     if(placePhotoBox) {
-        let item = placeImageArray.shift()
+        let item =""
+        if(dir)
+            item=placeImageArray.shift()
+        else
+            item=placeImageArray.pop()
+
         let elem = document.createElement("img")
         elem.src = item;
         elem.loading = "lazy"
@@ -315,15 +320,21 @@ function movePlaceImg(dir=false){
         elem.onload = () => {
             placePhotoBox.lastChild.style.opacity = 0;
             setTimeout(() => {
+                if(dir)
+                    placeImageArray.push(placePhotoBox.lastChild.src)
+                else
+                    placeImageArray.unshift(placePhotoBox.lastChild.src)
                 placePhotoBox.removeChild(placePhotoBox.lastChild)
             }, 1000)
 
         }
-        placeImageArray.push(item)
+
     }
 }
 if(placeArrowR)
-    placeArrowR.onclick=()=>{movePlaceImg()}
+    placeArrowR.onclick=()=>{movePlaceImg(true)}
+if(placeArrowL)
+    placeArrowR.onclick=()=>{movePlaceImg(false)}
 
 
 
