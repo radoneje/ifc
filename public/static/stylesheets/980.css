@@ -91,6 +91,13 @@
         font-size: 18px;
         line-height: 21px;
     }
+    .placeDecor svg{
+        width: 100%;
+        height: auto;
+    }
+    .placeDecor{
+        width: 30%;
+    }
     #news, #place{
         padding-top:48px;
         padding-bottom: 24px;
