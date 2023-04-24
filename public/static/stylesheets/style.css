@@ -2101,6 +2101,18 @@ text-decoration: none !important;
 .hotelImage img{
     width: 100%;
 }
+.roomBookBtn{
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 26px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+    padding: 12px 58px;
+    cursor: pointer;
+    background: #BB3E3F;
+}
 
 
 
