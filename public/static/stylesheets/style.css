@@ -528,9 +528,18 @@ h2 {
     text-align: center;
     padding: 10%;
 }
-.placePhotoWr img{
+.placePhotoBox{
+    position: relative;
     width: 100%;
-    height: auto;
+    height: 0;
+    padding-bottom: 100%;
+}
+.placePhotoBox img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
 }
 .placeTextWr{
     width: 50%;
