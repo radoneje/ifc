@@ -2114,6 +2114,14 @@ text-decoration: none !important;
     background: #BB3E3F;
     text-transform: uppercase;
 }
+.hotelRoom{
+    padding-bottom: 24px;
+    margin-top:32px;
+    color: #4A4A49;
+}
+.hotelRoom:not(:last-child){
+    border-bottom: 1px solid #D9D9D9;
+}
 
 
 
