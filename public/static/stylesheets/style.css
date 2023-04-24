@@ -2101,6 +2101,7 @@ text-decoration: none !important;
 }
 .hotelDescr{
     white-space: break-spaces;
+    width: calc(100% - 300px);
 }
 .hotelImage{
 
