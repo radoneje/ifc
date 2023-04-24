@@ -819,6 +819,19 @@
         padding-right: 0;
         margin-top:24px;
     }
+    .hotelHead{
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    .hotelStarsWr{
+        justify-content: space-between;
+    }
+    .roomBookConfirmWr{
+        display: block;
+    }
+    .hotelRoom>div{
+        display: block;
+    }
 
 
 
