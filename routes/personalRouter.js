@@ -224,7 +224,7 @@ router.get('/info/:lang?', checkAccess, async function(req, res, next) {
         if(!req.params.lang.match(/ru|en/))
             req.params.lang="ru";
 
-        let hotels=await req.knex("v_hotels").where({isEnabled:true, isDeleted:false}).orderBy("stars").orderBy("nameru")
+        let hotels=await req.knex("v_hotels").where({isEnabled:true}).orderBy("stars").orderBy("nameru")
         res.render("personal/layout", {lang:req.params.lang, apiUrl:config.apiUrl, hotels}, )
 
     }
