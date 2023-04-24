@@ -29,12 +29,14 @@ each hotel in hotels
             img(src="/static/image/middle/" + hotel.photoid width="487" height="92" loading="lazy")
         .hotelRooms
             each room in hotel.rooms
-                .hotelRoom.flex.center.beetwen
-                    .roomNameWr
-                        .roomName #{room["title"+lang]}
-                        .roomPrice !{String(room.price).replace(/000$/," 000")} &#8381;
-                    .roomBookWr
-                        .roomBookBtn Забронировать
+                .hotelRoom
+                    .flex.center.beetwen
+                        .roomNameWr
+                            .roomName #{room["title"+lang]}
+                            .roomPrice !{String(room.price).replace(/000$/," 000")} &#8381;
+                        .roomBookWr
+                            .roomBookBtn Забронировать
+                    .roomDescr #{room["descr"+lang]}
 
 
 

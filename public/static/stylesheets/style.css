@@ -2139,6 +2139,12 @@ text-decoration: none !important;
 
     color: #BB3E3F;
 }
+.roomDescr{
+    margin-top:16px;
+    font-weight: 350;
+    font-size: 18px;
+    line-height: 21px;
+}
 
 
 
