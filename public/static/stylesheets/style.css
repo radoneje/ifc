@@ -2122,7 +2122,7 @@ text-decoration: none !important;
     line-height: 26px;
     /* identical to box height */
 
-
+    box-sizing: border-box;
     color: #FFFFFF;
     padding: 12px 24px;
     cursor: pointer;

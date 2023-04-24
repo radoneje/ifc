@@ -39,8 +39,10 @@ each hotel in hotels
                             .roomNameWr
                                 .roomName #{room["title"+lang]}
                                 .roomPrice !{String(room.price).replace(/000$/," 000")} &#8381;
-                            .roomBookWr
+                            .roomBookWr(v-if="user.roomid!="+room.id)
                                 .roomBookBtn Забронировать
+                            .roomBookWr(v-else)
+                                .roomBookConfirm Заявка на бронирование в отель отправлена
                         .roomDescr #{room["descr"+lang]}
 
 
