@@ -2095,8 +2095,15 @@ text-decoration: none !important;
 .hotelLink{
     margin-left: 24px;
 }
-.hotelImage{
+.hotelDescrWr{
     margin-top: 32px;
+}
+.hotelDescr{
+    white-space: break-spaces;
+}
+.hotelImage{
+
+    width: 300px;
 }
 .hotelImage img{
     width: 100%;
@@ -2109,10 +2116,12 @@ text-decoration: none !important;
 
 
     color: #FFFFFF;
-    padding: 12px 58px;
+    padding: 12px 24px;
     cursor: pointer;
     background: #BB3E3F;
     text-transform: uppercase;
+    width: 300px;
+    text-align: center;
 }
 .hotelRoom{
     padding-bottom: 24px;

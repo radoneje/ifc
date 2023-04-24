@@ -25,8 +25,12 @@ each hotel in hotels
                             include ../svg/hotelStar.svg
                     .hotelLink
                         a.inline(href=hotel.link target="_blank") На сайт отеля
-        .hotelImage
-            img(src="/static/image/middle/" + hotel.photoid width="487" height="92" loading="lazy")
+        .hotelDescrWr.flex.center.beetwen
+            .hotelDescrBox
+                .hotelDescr #{hotel["descr"]+lang}
+                .hotelAddress #{hotel["address"]+lang}
+            .hotelImage
+                img(src="/static/image/middle/" + hotel.photoid width="487" height="92" loading="lazy")
         .hotelRooms
             each room in hotel.rooms
                 .hotelRoom
