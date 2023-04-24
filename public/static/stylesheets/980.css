@@ -742,6 +742,10 @@
     .persHead:before, .persFooter:before {
         width: 50%;
     }
+    .persHeadRow {
+        margin: 0px 24px;
+        width: 100%;
+    }
 
 
 
