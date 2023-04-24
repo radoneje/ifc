@@ -31,7 +31,7 @@ router.post('/hotelRoom', async function(req, res, next) {
             return res.sendStatus(401)
 
         let user=await req.knex("t_users").update({roomid:req.body.roomid},"*").where({id:req.session.token.id})
-        let room=(await req.knex("t_hotels_room").where({id:req.body.roomid}))[0]
+        let room=(await req.knex("t_hotel_rooms").where({id:req.body.roomid}))[0]
         let hotel=(await req.knex("t_hotel").where({id:room.hotelid}))[0]
 
 
