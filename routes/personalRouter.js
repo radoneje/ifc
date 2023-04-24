@@ -41,7 +41,7 @@ router.post('/hotelRoom', async function(req, res, next) {
         text+="<br></br>C уважением,</br>Оргмомитет Финансового конгресса Банка России<br>8 800 300-69-23<br>INFO@IFCONGRESS.RU"
         let subj="Заявка на бронирование: Финансовый конгресс Банка России"
         await req.knex("t_email_messages_to_another_person").insert({email:hotel.email,subj,text })
-        res.json(r)
+        res.json(1)
     }
     catch (e) {
         console.warn(e)
