@@ -734,6 +734,7 @@
         max-height: inherit;
         overflow-y: inherit;
         padding: 24px 8px;
+        width: 100%;
     }
 
 
