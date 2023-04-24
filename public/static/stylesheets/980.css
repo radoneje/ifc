@@ -712,7 +712,8 @@
         width: 18px;
         height: 18px;
         position: fixed;
-        bottom: 50%;
+        bottom: inherit;
+        top:32px
         right:8px;
     }
 
