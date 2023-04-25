@@ -2251,6 +2251,9 @@ text-decoration: none !important;
     font-weight: 300;
     margin-top: 32px;
 }
+.quote2ItemPhoto{
+    margin: 0;
+}
 
 
 @media all and (max-width: 1700px){
