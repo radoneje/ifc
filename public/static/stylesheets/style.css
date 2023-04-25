@@ -2237,6 +2237,7 @@ text-decoration: none !important;
 }
 .quote2Item{
     width: 50%;
+    margin:64px 0;
 }.quote2Text{
     color:#FFFFFF;
     font-size:21px;
