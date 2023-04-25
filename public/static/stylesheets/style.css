@@ -2235,6 +2235,9 @@ text-decoration: none !important;
 .persMenuAlert{
     display: none;
 }
+.quote2Item{
+    width: 50%;
+}.quote2Text{}
 
 
 @media all and (max-width: 1700px){
