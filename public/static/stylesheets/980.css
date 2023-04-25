@@ -844,6 +844,9 @@
     .quote2Item{
         width: 100%;
     }
+    .quote2ItemImgWr img{
+        width: 100%;
+    }
 
 
 
