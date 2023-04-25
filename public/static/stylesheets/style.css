@@ -2237,7 +2237,12 @@ text-decoration: none !important;
 }
 .quote2Item{
     width: 50%;
-}.quote2Text{}
+}.quote2Text{
+    color:#FFFFFF;
+    font-size:21px;
+    line-height: 28px;
+    font-weight: 400;
+ }
 
 
 @media all and (max-width: 1700px){
