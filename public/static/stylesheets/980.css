@@ -855,7 +855,7 @@
         background-image: inherit;
     }
     #quotes{
-        background-image: url(/static/images/quote2bg.svg);
+        background-image: url('/static/images/quote2bg.svg');
         background-position-x: right;
         background-position-y: 24%;
         background-size: 100%;
