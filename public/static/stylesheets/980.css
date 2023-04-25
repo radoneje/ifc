@@ -852,7 +852,8 @@
     }
     .quotesCtrl{display: none !important;}
     .quotesCenter{
-        background-image: inherit;
+        background-image: none;
+        margin-bottom: 0;
     }
     #quotes{
         background-image: url('/static/images/quote2bg.svg');
