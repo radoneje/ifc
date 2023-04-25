@@ -570,6 +570,12 @@ h2 {
     width: calc(100% - (88px * 2));
     padding: 44px;
     box-sizing: border-box;
+    background-image: url(/static/images/quote2bg.svg);
+    background-position-x: right;
+    background-position-y: bottom;
+    background-size: 65%;
+    background-repeat: no-repeat;
+    margin-bottom: 56px;
 }
 
 .quoteImg {
