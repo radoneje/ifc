@@ -847,6 +847,10 @@
     .quote2ItemImgWr img{
         width: 100%;
     }
+    .quteBodyBox {
+        flex-direction: column-reverse;
+    }
+    .quotesCtrl{display: none !important;}
 
 
 
