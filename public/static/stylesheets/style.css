@@ -2243,6 +2243,13 @@ text-decoration: none !important;
     line-height: 28px;
     font-weight: 400;text-transform: uppercase;
  }
+.quote2Fio{
+    color:#FFFFFF;
+    font-size:21px;
+    line-height: 25px;
+    font-weight: 300;
+    margin-top: 32px;
+}
 
 
 @media all and (max-width: 1700px){
