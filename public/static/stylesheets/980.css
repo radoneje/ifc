@@ -120,7 +120,7 @@
     }
     .newsItemsBox{
         width: 100%;
-        overflow-y: scroll;
+        overflow-y: auto;
     }
     .newsItem{
         padding: 40px 24px;
@@ -281,7 +281,7 @@
         bottom: 0;
         right: 0;
         z-index: 1000;
-        overflow-y: scroll;
+        overflow-y: auto;
         background-image: url('../images/IMAGE_TOP_BACK-min.png');
         background-size: cover;
         background-position: center;
@@ -592,7 +592,7 @@
         padding-bottom: 24px;
     }
     .oSessionScroll{
-        overflow-y: scroll;
+        overflow-y: auto;
         width: 100%;
     }
     .oTrack:not(.impotant) .oSessionWr {
@@ -679,7 +679,7 @@
     }
     reqMenuBox{
         width: 100%;
-        overflow-y: scroll;
+        overflow-y: auto;
         padding-bottom: 4px
     }
     .regMenuItem{

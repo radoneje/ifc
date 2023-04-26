@@ -1730,7 +1730,7 @@ text-decoration: none !important;
 
 .pPgmPopScroll {
     margin-top: 12px;
-    overflow-y: scroll;
+    overflow-y: auto;
     max-height: calc(100vh - 312px);
 
 }
@@ -1775,7 +1775,7 @@ text-decoration: none !important;
 
 .pSpkBody {
     max-height: calc(100vh - 440px);
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 .pSpkBio{
     padding-left: 50px;

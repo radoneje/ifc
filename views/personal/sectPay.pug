@@ -24,7 +24,7 @@ div(v-if="user.statusid==60")
                         input.reqInput(readonly v-model="user.company.inn"  type="number")
                 .regRow
                     .regRowGroup.readonly.flex.left()
-                        .recLabel.reg287 Название
+                        .recLabel.reg287 Наименование
                         input.reqInput(readonly v-model="user.company.name"  )
                 .regRow
                     .regRowGroup.readonly.flex.left()
@@ -44,7 +44,7 @@ div(v-if="user.statusid==60")
                         input.reqInput(readonly v-model="user.company.director"  )
                 .regRow
                     .regRowGroup.flex.left
-                        .recLabel.reg287 телефон
+                        .recLabel.reg287 Телефон
                         input.reqInput( v-model="user.company.phone" placeholder="ФОРМАТ: +7 000 000 0000" must name="phone")
                 .regRow
                     .regRowGroup.flex.left
@@ -53,7 +53,7 @@ div(v-if="user.statusid==60")
                 .regRow
                     .regCheckBox.green.flex.left(v-on:click="changeCompanyEdo()" v-bind:class="{active:user.company.isEdo}")
                         .regCheckBoxBox
-                        .regCheckBoxText Компания использует электронный докуметооборот
+                        .regCheckBoxText Компания использует электронный документооборот
             .participaintRow &nbsp;
             .participaintRow
                 .participaintRow
