@@ -338,9 +338,9 @@ function movePlaceImg(dir=true){
 
     }
 }
-if(placeArrowR)
+if(typeof (placeArrowR)!="undefined")
     placeArrowR.onclick=()=>{movePlaceImg(true)}
-if(placeArrowL)
+if(typeof (placeArrowL)!="undefined")
     placeArrowL.onclick=()=>{movePlaceImg(false)}
 
 if(placePhotoBox){
