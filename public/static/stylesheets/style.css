@@ -709,6 +709,8 @@ h2 {
 
 .faqMenuItem {
     cursor: pointer;
+    position: absolute;
+    right: 61px;
 }
 
 .faqBg {

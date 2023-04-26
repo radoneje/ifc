@@ -92,7 +92,7 @@ const register = async () => {
                             company.address = att[2]
                             company.director = att[0]
                         }
-                        card.innerHTML = '<div><input type="text" id="companyPayName" name="companyPayName" placeholder="Название компании"/></div>'
+                        card.innerHTML = '<div><input type="text" id="companyPayName" name="companyPayName" placeholder="Наименование компании"/></div>'
                         card.innerHTML += '<div><input type="text"  id="companyPayOgrn" name="companyPayOgrn" placeholder="ОГРН КПП"/></div>'
                         card.innerHTML += '<div><input type="text" id="companyPayAddress" name="companyPayAddress" placeholder="Адрес компании"/></div>'
                         card.innerHTML += '<div><input type="text"  id="companyPayDirector" name="companyPayDirector" placeholder="ФИО Руковоителя" /></div>'

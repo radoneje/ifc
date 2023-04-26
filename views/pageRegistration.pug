@@ -118,16 +118,16 @@ block content
                         .regCheckBoxBox.desktop.opacity0(v-bind:class="{opacity100:innStatus.state==1}")
                             .FNSloader
                                 include svg/loader.svg
-                        if typeid==4
-                            .regCheckBoxComment Для запонения остальных полей загрузите данные из ФНС
-                        else
-                            .regCheckBoxComment Для запонения остальных полей загрузите данные из ФНС
+                        //if typeid==4
+                        //    .regCheckBoxComment Нажмите «Загрузить из ФНС», чтобы автоматически заполнить остальные реквизиты
+
+                        .regCheckBoxComment Нажмите «Загрузить из ФНС», чтобы автоматически заполнить остальные реквизиты
                         .FNSloader.mobile.opacity0(v-bind:class="{opacity100:innStatus.state==1}")
                             include svg/loader.svg
 
                 .regRow
                     .regRowGroup.readonly.flex.left
-                        .recLabel.reg287 Название
+                        .recLabel.reg287 Наименование
                         input.reqInput( readonly v-model="user.company.name")
                 .regRow
                     .regRowGroup.readonly.flex.left
@@ -154,7 +154,7 @@ block content
                         if typeid==4
                             .recLabel.reg287  Название издания
                         else
-                            .recLabel.reg287  Короткое название
+                            .recLabel.reg287  Короткое наименование
                         input.reqInput( v-model="user.company.shortName" )
                 //.regRow
                     .regRowGroup.flex.left
