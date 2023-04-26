@@ -9,8 +9,8 @@ router.get('/demo/:lang?', async function(req, res, next) {
     return res.redirect("/demo/ru")
   if(!req.params.lang.match(/ru|en/))
     res.redirect("/demo/ru")
-  let news=await req.knex("t_news").where({status:2}).orderBy("sort","desc").limit(4);
-  news.sort((a,b)=>a.sort-b.sort);
+  let news=await req.knex("t_news").where({status:2}).orderBy("sort",).limit(4);
+ // news.sort((a,b)=>a.sort-b.sort);
   res.render('demo',{lang:req.params.lang, ru:req.params.lang=="ru", apiUrl:config.apiUrl, news} );
 });
 router.get('/registration/:lang?', async function(req, res, next) {
