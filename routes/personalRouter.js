@@ -188,7 +188,7 @@ router.post('/changeUser', async function(req, res, next) {
     }
     catch (e) {
         console.warn(e)
-        return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
+        return res.render('pagePersonalNotLogin', {lang: req.params.lang, apiUrl:config.apiUrl, ru: req.params.lang == "ru"});
     }
 });
 router.post('/setPaySelf', async function(req, res, next) {
