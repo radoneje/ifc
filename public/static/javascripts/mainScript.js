@@ -343,7 +343,7 @@ if(typeof (placeArrowR)!="undefined")
 if(typeof (placeArrowL)!="undefined")
     placeArrowL.onclick=()=>{movePlaceImg(false)}
 
-if(placePhotoBox){
+if(typeof (placePhotoBox)!="undefined"){
     placePhotoBox.onclick=()=>{movePlaceImg(true)}
 }
 
