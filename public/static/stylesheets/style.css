@@ -1836,6 +1836,7 @@ text-decoration: none !important;
 }
 .oTrack .oSessionTitle {
     text-transform: uppercase;
+    word-wrap: break-word;
 
 }
 .participaintRow .regSubmit{
