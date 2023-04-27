@@ -97,7 +97,7 @@
     }
     .placeDecor{
         width: 30%;
-        top:100px
+        top:48px;
     }
     .placePhotoWr{
         width: 100%;
@@ -877,7 +877,9 @@
     .quote2ItemImgWr{
         width: 60%;
     }
-
+    #place {
+        padding-top: 0px;
+    }
 
 
 }
