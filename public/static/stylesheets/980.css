@@ -101,7 +101,9 @@
     }
     .placePhotoWr{
         width: 100%;
-        padding: 20%;
+        padding: 22px 20%;
+        padding-bottom: 22px;
+        margin-top: 45px;
     }
     .placeTextWr{
         width: 100%;
