@@ -48,8 +48,9 @@
     }
 
     h1 {
-        font-size: 20px;
-        line-height: 24px;
+        font-size: 18px;
+        line-height: 21px;
+        margin-left: 16px;
     }
     .mainLogo {
 
