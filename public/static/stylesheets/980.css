@@ -846,6 +846,7 @@
     }
     .quote2Item{
         width: 100%;
+        margin-bottom: 0;
     }
     .quote2ItemImgWr img{
         width: 100%;
