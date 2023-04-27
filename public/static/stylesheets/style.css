@@ -514,7 +514,7 @@ h2 {
 .placeTextItem{
     color:#4A4A49;
     margin-bottom: 24px;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 18px;
     line-height: 21px;
     text-transform: uppercase;
@@ -578,6 +578,9 @@ h2 {
     background-repeat: no-repeat;
     margin-bottom: 56px;
     padding-top: 90px;
+}
+#place .quotesCenter{
+    background-image: none;
 }
 
 .quoteImg {
