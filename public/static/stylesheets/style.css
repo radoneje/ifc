@@ -513,10 +513,11 @@ h2 {
 }
 .placeTextItem{
     color:#4A4A49;
-    font-weight: 500;
-    font-size: 21px;
-    line-height: 26px;
     margin-bottom: 24px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: uppercase;
 }
 .placePhotoWr{
     width: 50%;
