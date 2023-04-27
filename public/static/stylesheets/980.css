@@ -867,7 +867,15 @@
     }
     .quotesWr{
         background: inherit;
-        padding-bottom: 24px;
+        padding-top: 44px;
+        background-position-y: 120px;
+    }
+    .quote2Text{
+    font-size: 16px;
+    line-height: 24px;
+}
+    .quote2ItemImgWr{
+        width: 60%;
     }
 
 
