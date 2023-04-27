@@ -63,11 +63,12 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use('/', indexRouter);
+
 app.use('/api', apiRouter);
 app.use('/static', staticRouter);
 app.use('/test', testRouter);
 app.use('/personal', personalRouter);
+app.use('/', indexRouter);
 
 
 // catch 404 and forward to error handler
