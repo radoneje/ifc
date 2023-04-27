@@ -137,7 +137,7 @@ router.all('/pay_result/', async function(req, res, next) {
 });
 router.get('/:lang?', async function(req, res, next) {
   if(!req.params.lang)
-    return res.redirect("/demo/ru")
+    return res.redirect("/ru")
   if(!req.params.lang.match(/ru|en/))
     res.redirect("/ru")
   let news=await req.knex("t_news").where({status:2}).orderBy("sort","desc").limit(4);
