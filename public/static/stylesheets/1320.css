@@ -82,4 +82,10 @@
     .internalHeadMenu {
         margin-left: 100px;
     }
+    .quteBodyBox{
+        align-items: stretch;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
