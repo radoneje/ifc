@@ -89,9 +89,5 @@
         justify-content: center;
         flex-direction: column-reverse;
     }
-    .quotesWr {
-        background: inherit;
 
-        background-position-y: 120px;
-    }
 }
