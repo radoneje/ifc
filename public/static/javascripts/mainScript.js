@@ -339,11 +339,11 @@ function movePlaceImg(dir=true){
     }
 }
 if(typeof (placeArrowR)!="undefined")
-    placeArrowR.onclick=()=>{movePlaceImg(true)}
+    placeArrowR.onclick=()=>{clearInterval(photoInreval);movePlaceImg(true)}
 if(typeof (placeArrowL)!="undefined")
-    placeArrowL.onclick=()=>{movePlaceImg(false)}
+    placeArrowL.onclick=()=>{clearInterval(photoInreval);movePlaceImg(false)}
 
 if(typeof (placePhotoBox)!="undefined" && placePhotoBox){
-    placePhotoBox.onclick=()=>{movePlaceImg(true)}
+    placePhotoBox.onclick=()=>{clearInterval(photoInreval); movePlaceImg(true)}
 }
-
+let photoInreval=setInterval(movePlaceImg,4000)
