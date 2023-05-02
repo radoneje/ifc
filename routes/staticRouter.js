@@ -160,7 +160,7 @@ router.get('/edoAgreement/:invoiceguid', async function (req, res, next) {
 
         let invoices=await req.knex("v_invoice").where({guid:req.params.invoiceguid});
         let inv=invoices[0]
-        let filename="/var/ifc_data/edo/edo_aggr_"+String(inv.id).padStart(3, '0')+"___"+moment(inv.date).format("DD_MM_YYYY")+Math.random()+".pdf"
+        let filename="/var/ifc_data/edo/edo_aggr_"+String(inv.id).padStart(3, '0')+"___"+moment(inv.date).format("DD_MM_YYYY")+".pdf"
         if (fs.existsSync(filename)) {
             //return filename;
             fs.rmSync(filename)
