@@ -182,8 +182,8 @@ router.get('/edoAgreement/:invoiceguid', async function (req, res, next) {
             .font("/var/fonts/Arial_regular.ttf")///var/fonts/OpenSans-Regular-2.ttf")
             .fontSize(12)
             .fillColor('#000000')
-            .text( moment(inv.date).format("DD.MM.YYYY")+"г.", /*x*/ 490 , /*y*/ 110,{width: 400})
-            .text( recvizit, /*x*/ 70 , /*y*/ 300,{width: 400})
+            .text( moment(inv.date).format("DD.MM.YYYY")+"г.", /*x*/ 490 , /*y*/ 120,{width: 400})
+            .text( recvizit, /*x*/ 73 , /*y*/ 200,{width: 400})
             //.text( moment(inv.date).format("DD.MM.YYYY")+"г.", /*x*/ 60 , /*y*/ 300,{width: 400})
             //.text( "ФК-"+inv.id+" от " +moment(inv.date).format("DD.MM.YYYY")+"г.", /*x*/ 260 , /*y*/ 163,{width: 400})
 
