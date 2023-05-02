@@ -2276,6 +2276,10 @@ text-decoration: none !important;
     width: 600px;
     margin: 36px auto;
 }
+.footerVisaItem svg{
+    width: 100%;
+    height: auto;
+}
 
 
 @media all and (max-width: 1700px){
