@@ -167,7 +167,7 @@ router.get('/edoAgreement/:invoiceguid', async function (req, res, next) {
         }
 
         let recvizit=inv.company[0].name+","
-        recvizit+="\nИНН "+inv.company[0].inn+", ОГРН "+inv.company[0].ogrn+","
+        recvizit+="\nИНН: "+inv.company[0].inn+", ОГРН: "+inv.company[0].ogrn+","
             //recvizit+="\n"+inv.company[0].address
         if(inv.isPaySelf) {
             recvizit = inv.user[0].f + " " + inv.user[0].i + " "+ inv.user[0].o
