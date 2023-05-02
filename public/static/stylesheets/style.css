@@ -1644,6 +1644,9 @@ text-decoration: none !important;
     cursor: pointer;
 
 }
+.oSessionDetails:hover{
+    color: #FFFFFF;
+}
 
 .oSessionSpkBox {
     margin-top: 20px;
