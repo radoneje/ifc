@@ -156,8 +156,28 @@ async function genShortInvoice(inv, req){
 
 router.get('/edoAgreement/:invoiceguid', async function (req, res, next) {
     try {
+
+
         let invoices=await req.knex("v_invoice").where({guid:req.params.invoiceguid});
         let inv=invoices[0]
+        let filename="/var/ifc_data/edo/edo_aggr_"+String(inv.id).padStart(3, '0')+"___"+moment(inv.date).format("DD_MM_YYYY")+".pdf"
+        if (fs.existsSync(filename)) {
+            //return filename;
+            fs.rmSync(filename)
+        }
+
+        var doc = new PDFDocument({size: 'a4', layout: 'portrait'});
+
+        doc.pipe(fs.createWriteStream(filename));
+        doc
+            .image(__dirname+"/../forpdf/edo/01.png",0,0,{width:600})
+        doc.addPage()
+        doc
+            .image(__dirname+"/../forpdf/edo/02.png",0,0,{width:600})
+        doc.end();
+        setTimeout(()=>{res.download(filename)},1000)
+
+
         res.json(inv);
 
 
