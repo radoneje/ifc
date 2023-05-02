@@ -101,10 +101,12 @@
         top:48px;
     }
     .placePhotoWr{
-        width: 100%;
-        padding: 22px 20%;
-        padding-bottom: 22px;
+        width: 60%;
+        margin-left: 12px;
+        padding: 12px;
+        padding-bottom: 0;
         margin-top: 45px;
+        box-sizing: border-box;
     }
     .placeTextWr{
         width: 100%;
