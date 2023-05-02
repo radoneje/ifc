@@ -154,9 +154,13 @@ async function genShortInvoice(inv, req){
 }
 
 
-router.get('/edoAgreement/:companyguid', async function (req, res, next) {
+router.get('/edoAgreement/:invoiceguid', async function (req, res, next) {
     try {
-        res.json("edoAgreement")
+        let invoices=await req.knex("v_invoice").where({guid:req.params.invoiceguid});
+        let inv=invoices[0]
+        res.json(inv);
+
+
     } catch (e) {
         console.error(e)
         res.sendStatus(500)

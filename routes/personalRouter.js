@@ -89,23 +89,19 @@ router.get('/personalDataAgreement', async function(req, res, next) {
 });
 
 router.get('/edoAgreement', async function(req, res, next) {
+
     try {
         if(!req.session.token)
             return res.sendStatus(401)
-        let r=await req.knex("t_users").where({id:req.session.token.id});
-        let companyid=""
-        if(r[0].payCompany)
-            companyid=r[0].payCompanyId
-        else
-            companyid=r[0].companyid
-        r=await req.knex("t_company").where({id:r[0].id});
-
+        let r=await req.knex("t_invoces").where({userid:req.session.token.id}).orderBy("id","desc")
         res.redirect("/static/edoAgreement/"+r[0].guid);
     }
     catch (e) {
         console.warn(e)
-        return res.json("error")
+        return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
     }
+
+
 });
 router.get('/invoice', async function(req, res, next) {
     try {
