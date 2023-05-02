@@ -885,8 +885,7 @@
         padding-top: 0px;
     }
     .footerVisaItem {
-        width: 80%;
-
+        width: min(80%, 300px);
     }
 
 
