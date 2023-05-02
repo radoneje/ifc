@@ -167,7 +167,7 @@ router.get('/edoAgreement/:invoiceguid', async function (req, res, next) {
         }
 
         let recvizit=inv.company[0].name+","
-        recvizit+="\nИНН: "+inv.company[0].inn+", ОГРН: "+inv.company[0].ogrn+","
+        recvizit+="\nИНН: "+inv.company[0].inn+", ОГРН: "+inv.company[0].ogrn+""
             //recvizit+="\n"+inv.company[0].address
         if(inv.isPaySelf) {
             recvizit = inv.user[0].f + " " + inv.user[0].i + " "+ inv.user[0].o
@@ -184,13 +184,14 @@ router.get('/edoAgreement/:invoiceguid', async function (req, res, next) {
             .fillColor('#000000')
             .text( moment(inv.date).format("DD.MM.YYYY")+"г.", /*x*/ 490 , /*y*/ 120,{width: 400})
             .text( recvizit, /*x*/ 73 , /*y*/ 212,{width: 600})
-            .text( "Счета-Договора № ФК-"+inv.id+" от " +moment(inv.date).format("DD.MM.YYYY")+"г.", /*x*/ 73 , /*y*/ 295,{width: 600})
+            .text( "Счета-Договора на оплату  № ФК-"+inv.id+" от " +moment(inv.date).format("DD.MM.YYYY")+"г.", /*x*/ 73 , /*y*/ 280,{width: 600})
             //.text( moment(inv.date).format("DD.MM.YYYY")+"г.", /*x*/ 60 , /*y*/ 300,{width: 400})
             //.text( "ФК-"+inv.id+" от " +moment(inv.date).format("DD.MM.YYYY")+"г.", /*x*/ 260 , /*y*/ 163,{width: 400})
 
         doc.addPage()
         doc
             .image(__dirname+"/../forpdf/edo/02.png",0,0,{width:600})
+            .text( "Счета-Договора на оплату  № ФК-"+inv.id+" от " +moment(inv.date).format("DD.MM.YYYY")+"г.", /*x*/ 73 , /*y*/ 212,{width: 600})
         doc.addPage()
         doc
             .image(__dirname+"/../forpdf/edo/03.png",0,0,{width:600})
