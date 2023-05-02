@@ -2028,6 +2028,9 @@ text-decoration: none !important;
     width: calc(100%);
     height: calc(100%);;
 }
+.upBtn:hover svg path{
+    stroke: #FFFFFF;
+}
 .persMenuExit{
     cursor: pointer;
     margin-left: 16px;
