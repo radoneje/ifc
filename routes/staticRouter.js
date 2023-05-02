@@ -178,7 +178,7 @@ router.get('/edoAgreement/:invoiceguid', async function (req, res, next) {
         setTimeout(()=>{res.download(filename)},1000)
 
 
-        res.json(inv);
+        //res.json(inv);
 
 
     } catch (e) {
