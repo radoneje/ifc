@@ -179,10 +179,10 @@ router.get('/edoAgreement/:invoiceguid', async function (req, res, next) {
         doc.pipe(fs.createWriteStream(filename));
         doc
             .image(__dirname+"/../forpdf/edo/01.png",0,0,{width:600})
-            .font("/var/fonts/Arial.ttf")///var/fonts/OpenSans-Regular-2.ttf")
+            .font("/var/fonts/Arial_regular.ttf")///var/fonts/OpenSans-Regular-2.ttf")
             .fontSize(12)
             .fillColor('#000000')
-            .text( moment(inv.date).format("DD.MM.YYYY")+"г.", /*x*/ 300 , /*y*/ 60,{width: 400})
+            .text( moment(inv.date).format("DD.MM.YYYY")+"г.", /*x*/ 500 , /*y*/ 140,{width: 400})
             //.text( moment(inv.date).format("DD.MM.YYYY")+"г.", /*x*/ 60 , /*y*/ 300,{width: 400})
             //.text( "ФК-"+inv.id+" от " +moment(inv.date).format("DD.MM.YYYY")+"г.", /*x*/ 260 , /*y*/ 163,{width: 400})
 
