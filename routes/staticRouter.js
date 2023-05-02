@@ -191,7 +191,7 @@ router.get('/edoAgreement/:invoiceguid', async function (req, res, next) {
         doc.addPage()
         doc
             .image(__dirname+"/../forpdf/edo/02.png",0,0,{width:600})
-            .text( "ФК-"+inv.id+" от " +moment(inv.date).format("DD.MM.YYYY")+"г.", /*x*/ 273 , /*y*/ 245,{width: 600})
+            .text( "ФК-"+inv.id+" от " +moment(inv.date).format("DD.MM.YYYY")+"г.", /*x*/ 250 , /*y*/ 248,{width: 600})
         doc.addPage()
         doc
             .image(__dirname+"/../forpdf/edo/03.png",0,0,{width:600})
