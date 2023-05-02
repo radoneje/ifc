@@ -498,7 +498,7 @@ h2 {
     text-align: center;
 }
 .placeWr .quotesArrow{
-    display: block !important;
+    display: none !important;
 }
 #place{
     padding-top: 112px;
