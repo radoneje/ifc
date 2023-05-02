@@ -278,9 +278,8 @@ h1 {
     font-weight: 300;
     font-size: 48px;
     line-height: 46px;
-    margin-left: 4%;
     margin-right: 20%;
-
+    margin-left: 36px;
 }
 
 h2 {
@@ -529,7 +528,7 @@ h2 {
     background-size: contain;
     background-repeat: no-repeat;
     text-align: center;
-    padding:  10%;
+    padding:  36px 10%;
 }
 .placePhotoBox{
     position: relative;
@@ -834,7 +833,7 @@ h2 {
     color: #FFFFFF;
     font-size: 36px;
     line-height: 42px;
-    margin-left: 48px;
+    margin-left: 36px;
     font-weight: 300;
     text-transform: uppercase;
     cursor: pointer;
@@ -1894,8 +1893,12 @@ text-decoration: none !important;
 }
 .participaintRow a.inline{
     padding:  2px 8px;
-    background-color: #F1CCA7;
+    background-color: #F1CCA799;
     text-decoration: none;
+}
+.participaintRow a.inline:hover{
+    background-color: #F1CCA7;
+    color: #FFFFFF;
 }
 .participaintRowBodySubTitle{
     text-transform: uppercase;
