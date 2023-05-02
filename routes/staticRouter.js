@@ -207,6 +207,7 @@ router.get('/edoAgreement/:invoiceguid', async function (req, res, next) {
         doc.addPage()
         doc
             .image(__dirname+"/../forpdf/edo/07.png",0,0,{width:600})
+            .text( moment(inv.date).format("DD.MM.YYYY")+"г.", /*x*/ 490 , /*y*/ 190,{width: 400})
         doc.end();
         setTimeout(()=>{res.download(filename)},1000)
 
