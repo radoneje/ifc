@@ -160,10 +160,18 @@ router.get('/edoAgreement/:invoiceguid', async function (req, res, next) {
 
         let invoices=await req.knex("v_invoice").where({guid:req.params.invoiceguid});
         let inv=invoices[0]
-        let filename="/var/ifc_data/edo/edo_aggr_"+String(inv.id).padStart(3, '0')+"___"+moment(inv.date).format("DD_MM_YYYY")+".pdf"
+        let filename="/var/ifc_data/edo/edo_aggr_"+String(inv.id).padStart(3, '0')+"___"+moment(inv.date).format("DD_MM_YYYY")+Math.random()+".pdf"
         if (fs.existsSync(filename)) {
             //return filename;
             fs.rmSync(filename)
+        }
+
+        let recvizit=inv.company[0].name+","
+        recvizit+="\nИНН "+inv.company[0].inn+", КПП "+inv.company[0].kpp+","
+        recvizit+="\n"+inv.company[0].address
+        if(inv.isPaySelf) {
+            recvizit = inv.user[0].f + " " + inv.user[0].i + " "+ inv.user[0].o
+            recvizit += "\nпаспорт:" +(inv.user[0].passportSerial || "")+" "+ inv.user[0].passportNumber +", выдан: "+ inv.user[0].passportDate+", код подразделения "+ inv.user[0].passportCode
         }
 
         var doc = new PDFDocument({size: 'a4', layout: 'portrait'});
@@ -171,9 +179,30 @@ router.get('/edoAgreement/:invoiceguid', async function (req, res, next) {
         doc.pipe(fs.createWriteStream(filename));
         doc
             .image(__dirname+"/../forpdf/edo/01.png",0,0,{width:600})
+            .font("/var/fonts/Arial.ttf")///var/fonts/OpenSans-Regular-2.ttf")
+            .fontSize(12)
+            .fillColor('#000000')
+            .text( moment(inv.date).format("DD.MM.YYYY")+"г.", /*x*/ 60 , /*y*/ 300,{width: 400})
+            //.text( "ФК-"+inv.id+" от " +moment(inv.date).format("DD.MM.YYYY")+"г.", /*x*/ 260 , /*y*/ 163,{width: 400})
+
         doc.addPage()
         doc
             .image(__dirname+"/../forpdf/edo/02.png",0,0,{width:600})
+        doc.addPage()
+        doc
+            .image(__dirname+"/../forpdf/edo/03.png",0,0,{width:600})
+        doc.addPage()
+        doc
+            .image(__dirname+"/../forpdf/edo/04.png",0,0,{width:600})
+        doc.addPage()
+        doc
+            .image(__dirname+"/../forpdf/edo/05.png",0,0,{width:600})
+        doc.addPage()
+        doc
+            .image(__dirname+"/../forpdf/edo/06.png",0,0,{width:600})
+        doc.addPage()
+        doc
+            .image(__dirname+"/../forpdf/edo/07.png",0,0,{width:600})
         doc.end();
         setTimeout(()=>{res.download(filename)},1000)
 
