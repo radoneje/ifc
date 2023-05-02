@@ -2272,6 +2272,10 @@ text-decoration: none !important;
 .quote2ItemPhoto{
     margin: 0;
 }
+.footerVisaItem{
+    width: 600px;
+    margin: 36px auto;
+}
 
 
 @media all and (max-width: 1700px){
