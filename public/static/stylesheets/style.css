@@ -231,7 +231,7 @@ input {
 }
 .mainImg2Wr .mainMenuItem:hover:before{
 
-    background: #F1CCA7;
+    background: #F1CCA7 ;
 
 }
 
@@ -348,7 +348,7 @@ h2 {
 }
 
 .mainMenuItem:hover {
-    color: #F1CCA7
+    color: #F1CCA7 !important;
 }
 
 .h1Wr {
