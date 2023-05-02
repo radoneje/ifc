@@ -108,6 +108,7 @@
         margin-top: 48px;
         box-sizing: border-box;
         padding-right: 34%;
+        background-position-y: bottom;
     }
     .placeTextWr{
         width: 100%;
