@@ -550,7 +550,9 @@ h2 {
     box-sizing: border-box;
     padding:24px;
 }
-
+.quotesArrow{
+    display: none;
+}
 
 .quotesArrow svg {
     height: 100%;
