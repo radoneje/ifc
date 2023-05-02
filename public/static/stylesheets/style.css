@@ -2289,6 +2289,9 @@ text-decoration: none !important;
     width: 100%;
     height: auto;
 }
+img[src='undefined']{
+    display: none;
+}
 
 @media all and (max-width: 1700px){
 
