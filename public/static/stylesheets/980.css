@@ -108,7 +108,9 @@
         margin-top: 48px;
         box-sizing: border-box;
         padding-right: 34%;
-        background-position-y: bottom;
+        background-position-y: center;
+        background-position-x: center;
+        background-size: contain;
     }
     .placeTextWr{
         width: 100%;
@@ -133,7 +135,7 @@
         padding: 40px 24px;
         padding-bottom: 84px;
         margin-right: 24px;
-        width: calc(100vw - 128px);
+        width: calc(100vw - 112px);
         overflow: hidden;
 
     }

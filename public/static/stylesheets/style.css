@@ -525,10 +525,13 @@ h2 {
     box-sizing: border-box;
     background-image: url('/static/images/placePhotoBg.svg');
     background-position: center;
-    background-size: contain;
+
+
     background-repeat: no-repeat;
     text-align: center;
     padding:  36px 7%;
+    background-position-x: -56px;
+    background-size: calc(100% + 56px);
 }
 .placePhotoBox{
     position: relative;
