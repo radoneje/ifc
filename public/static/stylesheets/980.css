@@ -737,7 +737,7 @@
     .persBodyL{
         display: none;
     }
-    .persMenuAlert, .persMenuExit{
+     .persMenuExit{
         display: none;
     }
     .persMenuFio{
