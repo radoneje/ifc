@@ -139,7 +139,7 @@ router.get('/:lang?', async function(req, res, next) {
   if(!req.params.lang)
     return res.redirect("/ru")
   if(!req.params.lang.match(/ru|en/))
-    res.redirect("/ru")
+    return res.redirect("/ru")
   let news=await req.knex("t_news").where({status:2}).orderBy("sort","desc").limit(4);
   news.sort((a,b)=>{return b.sort-a.sort});
   res.render('demo',{lang:req.params.lang, ru:req.params.lang=="ru", apiUrl:config.apiUrl, news} );

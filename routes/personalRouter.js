@@ -44,7 +44,7 @@ router.post('/hotelRoom', async function(req, res, next) {
       //  await req.knex("t_email_messages_to_another_person").insert({email:hotel.email,subj,text })
 
         let filename=__dirname+"/../views/emails/310_hotel_confirm.pug"
-        text= pug.renderFile(filename, {user, hotel:hotel.titleru})
+        text= pug.renderFile(filename, {user, hotel:hotel.nameru})
         /*text="Добрый день!<br><br>"
         text+=user.f+" " + user.i +" " + user.o+" запрашивает бронирование номера категории "+ room.titleru +" по цене " + room.price+"р. <br><br>"
         text+="Контакты участника: "+ (user.isProxy?("(его референта "+user.proxyi+") +"+user.proxyphone+", "+ user.proxyemail):("+"+user.phone+", "+ user.email))
