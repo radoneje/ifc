@@ -2270,6 +2270,7 @@ text-decoration: none !important;
 }
 .persMenuAlert{
    /*// display: none;*/
+    cursor: pointer;
 }
 .quote2Item{
     width: 50%;
