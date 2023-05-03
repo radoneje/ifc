@@ -2084,9 +2084,9 @@ text-decoration: none !important;
 .persNavItemBage{
     position: absolute;
     right: 0;
-    top:0;
-    width: 20px;
-    height: 20px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
     background: #E39A3F;
     color: #FFFFFF;
     display: flex;
