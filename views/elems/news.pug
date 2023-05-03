@@ -5,7 +5,7 @@
         .newsItemsBox
             .newsItems.flex.center.beetwen
                 each n in news
-                    .newsItem
+                    .newsItem(onclick="document.location.href='/news#news"+n.id+"'")
                         .newsDate #{n.date}
                         .newsTitle #{n.title}
                         .newsDecor
