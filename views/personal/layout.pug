@@ -30,6 +30,7 @@ block content
                         .persNavItem.mobile(onclick="document.location.href='/'") Главная
                         .persNavItem(v-on:click="personalMobileMenuClose();section='pay'" v-bind:class="{active:section=='pay'}" v-if="user.isPay") Оплата
                         .persNavItem(v-on:click="personalMobileMenuClose();section='info'" v-bind:class="{active:section=='info'}") Информация
+                            .persNavItemBage(v-if="newInfo>0") {{newInfo}}
                         .persNavItem(v-on:click="personalMobileMenuClose();section='profile'" v-bind:class="{active:section=='profile'}") Профиль
                         .persNavItem(v-on:click="personalMobileMenuClose();section='doc'" v-bind:class="{active:section=='doc'}") Документы
                         .persNavItem(v-on:click="personalMobileMenuClose();section='hotel'" v-bind:class="{active:section=='hotel'}") Отели
