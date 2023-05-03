@@ -272,7 +272,13 @@ let personalApp = new Vue({
                 this.user.photoid = photoid;
         },
     },
-    watch: {},
+    watch: {
+        section: function(){
+            if(this.section=="info"){
+                console.log("section is info");
+            }
+        }
+    },
     mounted: async function () {
         console.log("mounted 1")
         this.user = await getJson("/personal/data")
