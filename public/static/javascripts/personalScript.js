@@ -275,7 +275,7 @@ let personalApp = new Vue({
     watch: {
         section: function(){
             if(this.section=="info"){
-                console.log("section is info");
+                console.log("section is info", this.user.info);
             }
         }
     },
