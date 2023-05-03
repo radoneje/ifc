@@ -41,7 +41,7 @@ router.post('/hotelRoom', async function(req, res, next) {
         text+="Контакты участника: "+ (user.isProxy?("(его референта "+user.proxyi+") +"+user.proxyphone+", "+ user.proxyemail):("+"+user.phone+", "+ user.email))
         text+="<br><br>C уважением,<br>Оргкомитет <br>Финансового конгресса Банка России<br>8 800 300-69-23<br>INFO@IFCONGRESS.RU"
         let subj="Заявка на бронирование: Финансовый конгресс Банка России"
-      //  await req.knex("t_email_messages_to_another_person").insert({email:hotel.email,subj,text })
+        await req.knex("t_email_messages_to_another_person").insert({email:hotel.email,subj,text })
 
         let filename=__dirname+"/../views/emails/310_hotel_confirm.pug"
         text= pug.renderFile(filename, {user, hotel:hotel.nameru})
@@ -50,9 +50,9 @@ router.post('/hotelRoom', async function(req, res, next) {
         text+="Контакты участника: "+ (user.isProxy?("(его референта "+user.proxyi+") +"+user.proxyphone+", "+ user.proxyemail):("+"+user.phone+", "+ user.email))
         text+="<br><br>C уважением,<br>Оргкомитет <br>Финансового конгресса Банка России<br>8 800 300-69-23<br>INFO@IFCONGRESS.RU"*/
         subj="Заявка на бронирование отеля: Финансовый конгресс Банка России"
-        await req.knex("t_email_messages_to_another_person").insert({email:/*user.email*/'den.shevchenko@gmail.com',subj,text })
-       // if(user.isProxy)
-       //     await req.knex("t_email_messages_to_another_person").insert({email:user.proxyemail,subj,text })
+        await req.knex("t_email_messages_to_another_person").insert({email:user.email,subj,text })
+        if(user.isProxy)
+            await req.knex("t_email_messages_to_another_person").insert({email:user.proxyemail,subj,text })
 
 
 
