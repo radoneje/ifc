@@ -53,6 +53,15 @@ router.post('/feedbackMessage', async function(req, res, next) {
         if(!req.session.token)
             return res.sendStatus(401)
         let r=await req.knex("t_feedback").insert({userid:req.session.token.id, files:req.body.files, text:req.body.text})
+
+        let tgUsers=await req.knex("t_bot_users").where({isOperatorUsers:true})
+        for(let tg of tgUsers){
+            await req.knex("t_sysbot_messagesstack").insert({
+                to:tg.tgid,
+                message:"Новый вопрос с сайта\n\n <a href='https://ifca.usermod.ru/feedback'>посмотреть</a>"
+            })
+        }
+        //t_sysbot_messagesstack
         res.json(r)
     }
     catch (e) {
