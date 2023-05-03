@@ -10,22 +10,22 @@ let personalApp = new Vue({
         innStatus: {state: 0, message: "", isInnReadony: false},
         innError: false,
         feedback: {text: "", files: []},
-        newInfo:0,
+        newInfo: 0,
     },
     methods: {
-        checkIsOld:function(infoItem){
+        checkIsOld: function (infoItem) {
             console.log("checkIsOld", infoItem)
         },
-        personalMobileMenuClose:function(){
-            document.body.style.overflow=null;
+        personalMobileMenuClose: function () {
+            document.body.style.overflow = null;
             document.querySelector(".persBodyL").classList.remove("persMobileMenu")
         },
-        personalMobileMenuShow:function(){
-            document.body.style.overflow="hidden"
+        personalMobileMenuShow: function () {
+            document.body.style.overflow = "hidden"
             document.querySelector(".persBodyL").classList.add("persMobileMenu")
         },
-        bookRoom:async function (roomid, hotel) {
-            if(confirm("Вы хотите подать заявку на бронирование номера в отеле "+ hotel+"?")) {
+        bookRoom: async function (roomid, hotel) {
+            if (confirm("Вы хотите подать заявку на бронирование номера в отеле " + hotel + "?")) {
                 this.user.roomid = roomid;
                 await postJson("/personal/hotelRoom/", {roomid})
             }
@@ -67,7 +67,7 @@ let personalApp = new Vue({
         feedbackAddFile: async function () {
             let inp = document.createElement("input")
             inp.type = "file"
-           // inp.accept = "*"
+            // inp.accept = "*"
 
             inp.style.display = "none"
             document.body.appendChild(inp)
@@ -274,26 +274,29 @@ let personalApp = new Vue({
         },
     },
     watch: {
-        section: function(){
-            if(this.section=="info"){
+        section: function () {
+            if (this.section == "info") {
 
-                this.newInfo=0
-                this.user.info.forEach(i=>{
-
+                this.newInfo = 0
+                this.user.info.forEach(i => {
+                    try {
+                        localStorage.setItem("info_" + i.id, new Date())
+                    } catch (e) {
+                        console.warn(e)
+                    }
                 })
             }
         }
     },
     mounted: async function () {
-        console.log("mounted 1")
+
         this.user = await getJson("/personal/data")
-        this.user.info.forEach(i=>{
+        this.user.info.forEach(i => {
             try {
                 let storage = localStorage.getItem("info_" + i.id)
                 if (!storage)
                     this.newInfo++;
-            }
-            catch (e) {
+            } catch (e) {
                 console.warn(e)
                 this.newInfo++;
             }
