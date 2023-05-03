@@ -20,9 +20,11 @@ let personalApp = new Vue({
             document.body.style.overflow="hidden"
             document.querySelector(".persBodyL").classList.add("persMobileMenu")
         },
-        bookRoom:async function (roomid) {
-            this.user.roomid=roomid;
-            await postJson("/personal/hotelRoom/",{roomid})
+        bookRoom:async function (roomid, hotel) {
+            if(confirm("Вы хотите подать заявку на бронирование номера в отеле "+ hotel+"?")) {
+                this.user.roomid = roomid;
+                await postJson("/personal/hotelRoom/", {roomid})
+            }
         },
         getHtml: function (txt) {
             if (txt) {
