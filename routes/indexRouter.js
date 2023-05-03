@@ -4,7 +4,9 @@ import config from "../config.js";
 const router = express.Router();
 
 /* GET home page. */
-
+router.get("/undefined",(req, res)=>{
+  res.sendStatus(401)
+})
 router.get('/demo/:lang?', async function(req, res, next) {
   if(!req.params.lang)
     return res.redirect("/demo/ru")
