@@ -61,7 +61,7 @@ let personalApp = new Vue({
         feedbackAddFile: async function () {
             let inp = document.createElement("input")
             inp.type = "file"
-            inp.accept = "image/*"
+           // inp.accept = "*"
 
             inp.style.display = "none"
             document.body.appendChild(inp)
