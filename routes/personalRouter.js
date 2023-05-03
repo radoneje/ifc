@@ -45,10 +45,6 @@ router.post('/hotelRoom', async function(req, res, next) {
 
         let filename=__dirname+"/../views/emails/310_hotel_confirm.pug"
         text= pug.renderFile(filename, {user, hotel:hotel.nameru})
-        /*text="Добрый день!<br><br>"
-        text+=user.f+" " + user.i +" " + user.o+" запрашивает бронирование номера категории "+ room.titleru +" по цене " + room.price+"р. <br><br>"
-        text+="Контакты участника: "+ (user.isProxy?("(его референта "+user.proxyi+") +"+user.proxyphone+", "+ user.proxyemail):("+"+user.phone+", "+ user.email))
-        text+="<br><br>C уважением,<br>Оргкомитет <br>Финансового конгресса Банка России<br>8 800 300-69-23<br>INFO@IFCONGRESS.RU"*/
         subj="Заявка на бронирование отеля: Финансовый конгресс Банка России"
         await req.knex("t_email_messages_to_another_person").insert({email:user.email,subj,text })
         if(user.isProxy)
