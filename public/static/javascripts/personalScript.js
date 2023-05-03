@@ -12,6 +12,9 @@ let personalApp = new Vue({
         feedback: {text: "", files: []}
     },
     methods: {
+        checkIsOld:function(infoItem){
+            console.log("checkIsOld", infoItem)
+        },
         personalMobileMenuClose:function(){
             document.body.style.overflow=null;
             document.querySelector(".persBodyL").classList.remove("persMobileMenu")

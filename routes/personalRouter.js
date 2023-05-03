@@ -50,8 +50,6 @@ router.post('/hotelRoom', async function(req, res, next) {
         if(user.isProxy)
             await req.knex("t_email_messages_to_another_person").insert({email:user.proxyemail,subj,text })
 
-
-
         res.json(1)
     }
     catch (e) {

@@ -3,7 +3,7 @@
         .menuItemBox
         .menuItemText Информация
 .participaintRow(v-for="item in user.info")
-    .participaintRowHead {{item.titleru}}
+    .participaintRowHead(v-on:load="checkIsOld(item)") {{item.titleru}}
     .participaintRowBody
         .participaintRowContent
             ul
