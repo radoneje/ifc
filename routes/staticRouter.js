@@ -15,6 +15,9 @@ import moment from 'moment'
 
 
 /* GET home page. */
+router.get("/undefined",(req, res)=>{
+    res.sendStatus(401)
+})
 router.get('/file/:id', async function (req, res, next) {
     try {
         let r = await req.knex("t_files").where({guid: req.params.id})
