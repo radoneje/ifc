@@ -12,7 +12,7 @@
             .participaintDocTitle  Согласие на обработку персональных данных
             a.participaintDocBtn( href="/personal/personalDataAgreement" download="personalDataAgreement.pdf") Скачать
 
-        .participaintDocsItem.flex.center.beetwen(v-if="user.isPay && user.statusid>=70")
+        .participaintDocsItem.flex.center.beetwen(v-if="user.isPay && user.statusid>=65")
             .participaintDocTitle  Счет-Договор
             a.participaintDocBtn( href="/personal/invoice" download="invoice.pdf") Скачать
         .participaintDocsItem.flex.center.beetwen(v-if="user.isPay && ((user.payCompany && user.payCompany.isEdo) || (!user.payCompany && user.company.isEdo))")
