@@ -16,7 +16,7 @@ block content
                         .persHeadText.flex.center
                             .persHeadH1 Финансовый<br>конгресс<br>Банка&nbsp;России
                     .persMenu.flex.center
-                        a.persMenuAlert
+                        a.persMenuAlert(v-if="newInfo>0")
                             include ../svg/personalNewMessageIco.svg
                         .persMenuFio {{user.i}} {{user.f}}
                         a.persMenuExit(href="/personal/exit/"+lang)

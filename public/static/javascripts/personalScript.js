@@ -9,7 +9,8 @@ let personalApp = new Vue({
         errors: {company: {}, payCompany: {}},
         innStatus: {state: 0, message: "", isInnReadony: false},
         innError: false,
-        feedback: {text: "", files: []}
+        feedback: {text: "", files: []},
+        newInfo:0,
     },
     methods: {
         checkIsOld:function(infoItem){
@@ -275,13 +276,29 @@ let personalApp = new Vue({
     watch: {
         section: function(){
             if(this.section=="info"){
-                console.log("section is info", this.user.info);
+
+                this.newInfo=0
+                this.user.info.forEach(i=>{
+
+                })
             }
         }
     },
     mounted: async function () {
         console.log("mounted 1")
         this.user = await getJson("/personal/data")
+        this.user.info.forEach(i=>{
+            try {
+                let storage = localStorage.getItem("info_" + i.id)
+                if (!storage)
+                    this.newInfo++;
+            }
+            catch (e) {
+                console.warn(e)
+                this.newInfo++;
+            }
+        })
+
         setTimeout(() => {
             loader.style.display = "none"
             app.style.display = "block"
