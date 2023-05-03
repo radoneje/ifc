@@ -625,6 +625,9 @@
         margin-right: 16px;
         background: #f5f5f5;
     }
+    .oTrack:not(.impotant) .oSession:first-child {
+        padding-left:24px
+    }
     .newsDecor2 {
         bottom: -58px;
     }
