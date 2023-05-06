@@ -171,7 +171,7 @@ router.post('/regUser2Smi', async function (req, res, next) {
         delete user.company;
         delete user.typeid
 
-        let types = user.types;
+       delete user.types;
 
         if(user.email)
             user.email=user.email.toLowerCase();
