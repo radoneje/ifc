@@ -1356,7 +1356,7 @@ text-decoration: none !important;
     padding-left: .5em;
 }
 .newsBodyText li:before{
-    content: '&#x2022;';
+    content: '\2022';
     position: absolute;
     left:0;
     top:.2em;
