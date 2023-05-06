@@ -175,7 +175,7 @@ router.post('/regUser2Smi', async function (req, res, next) {
         if(user.email)
             user.email=user.email.toLowerCase();
 
-
+        console.log(company);
         company = (await req.knex("t_company").insert({company}))[0] //await addCompany(req, company)
 
 
