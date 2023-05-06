@@ -105,8 +105,11 @@ let regApp = new Vue({
                 if (this.isPersonalAgreementError || this.isTermsError)
                     return;
 
-                if(typeof( type)!="undefined")
-                    this.user.types=[{id:type}]
+                if(typeof( type)!="undefined") {
+                    this.user.types = [{id: type}]
+                    this.user.typeid=type;
+                }
+
 
 
 
