@@ -35,11 +35,11 @@ router.get('/smi/:lang?', async function(req, res, next) {
     res.redirect("/smi/ru")
   res.render('pageRegistration',{lang:req.params.lang, ru:req.params.lang=="ru", apiUrl:config.apiUrl, typeid:4} );
 });
-router.get('/sponsor/:lang?', async function(req, res, next) {
+router.get('/partner/:lang?', async function(req, res, next) {
   if(!req.params.lang)
-    return res.redirect("/sponsor/ru")
+    return res.redirect("/partner/ru")
   if(!req.params.lang.match(/ru|en/))
-    res.redirect("/sponsor/ru")
+    res.redirect("/partner/ru")
   res.render('pageRegistration',{lang:req.params.lang, ru:req.params.lang=="ru", apiUrl:config.apiUrl, typeid:9} );
 });
 
