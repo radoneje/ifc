@@ -139,7 +139,6 @@ router.post('/regUser2', async function (req, res, next) {
            types = [{id: user.typeid}]
            delete user.typeid
        }
-
         delete user.companyPay;
         if(user.email)
             user.email=user.email.toLowerCase();
