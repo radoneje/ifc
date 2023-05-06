@@ -8,6 +8,7 @@ let regApp = new Vue({
             isProxy: false,
             isPersonalAgreement: false,
             isTerms: false,
+            typeid:1
 
         },
         isPayCompany: false,
