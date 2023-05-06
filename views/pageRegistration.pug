@@ -75,6 +75,11 @@ block content
                     .regRowGroup.flex.left
                         .recLabel.reg287 телефон
                         input.reqInput(v-model="user.phone" must name="phone" placeholder="ФОРМАТ: +7 000 000 0000")
+                .regRow(v-bind:class="{error:errors.phone}")
+                    .regRowGroup.flex.left
+                        .recLabel.reg287 должность
+                        input.reqInput(v-model="user.position" must name="phone" placeholder="ФОРМАТ: +7 000 000 0000")
+
                 if !typeid && typeid!=4
                     .regRow
                         .regCheckBox.flex.left(v-bind:class="{active:user.isProxy}" v-on:click="user.isProxy=!user.isProxy")
@@ -104,10 +109,10 @@ block content
                     .regRow
                         .menuItem.flex.center.left
                             .menuItemBox
-                            .menuItemText СМИ, которую вы&nbsp;представляете
+                            .menuItemText СМИ, которое вы&nbsp;представляете
                     .regRow
                         .regRowGroup.readonly.flex.left
-                            .recLabel.reg287 Название издания
+                            .recLabel.reg287 Название
                             input.reqInput( readonly v-model="user.company.name")
                     .regRow
                         .regRowGroup.flex.left
@@ -115,7 +120,7 @@ block content
                             input.reqInput( v-model="user.company.site" placeholder="")
                     .regRow
                         .regRowGroup.flex.left
-                            .recLabel.reg287 Tektajy
+                            .recLabel.reg287 Телефон
                             input.reqInput( v-model="user.company.phone" placeholder="ФОРМАТ: +7 000 000 0000")
 
                 else
