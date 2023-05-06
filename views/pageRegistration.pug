@@ -101,6 +101,23 @@ block content
                 else
                     .regRow &nbsp;
                 if typeid==4
+                    .regRow
+                        .menuItem.flex.center.left
+                            .menuItemBox
+                            .menuItemText СМИ, которую вы&nbsp;представляете
+                    .regRow
+                        .regRowGroup.readonly.flex.left
+                            .recLabel.reg287 Название издания
+                            input.reqInput( readonly v-model="user.company.name")
+                    .regRow
+                        .regRowGroup.flex.left
+                            .recLabel.reg287 Сайт
+                            input.reqInput( v-model="user.company.phone" placeholder="")
+                    .regRow
+                        .regRowGroup.flex.left
+                            .recLabel.reg287 Tektajy
+                            input.reqInput( v-model="user.company.phone" placeholder="ФОРМАТ: +7 000 000 0000")
+
                 else
                     .regRow
                         .menuItem.flex.center.left
