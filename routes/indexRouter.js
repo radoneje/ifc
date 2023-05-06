@@ -7,6 +7,11 @@ const router = express.Router();
 router.get("/undefined",(req, res)=>{
   res.sendStatus(401)
 })
+
+router.get("/hotelconfirm/guid",async (req, res)=>{
+  await req.knex("t_hotel_log").update({confirmDate:new Date()}).where({guid:req.params.guid})
+  res.render("hotelconfirm",{lang:"ru", ru:true})
+})
 router.get('/demo/:lang?', async function(req, res, next) {
   if(!req.params.lang)
     return res.redirect("/demo/ru")
