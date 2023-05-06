@@ -123,15 +123,12 @@ block content
                     .regRow
                         .regRowGroup.flex.left
                             .recLabel.reg287 Название
-                            input.reqInput( v-model="user.company.name")
+                            input.reqInput( v-model="user.company.name" must)
                     .regRow
                         .regRowGroup.flex.left
                             .recLabel.reg287 Сайт
-                            input.reqInput( v-model="user.company.site" placeholder="")
-                    .regRow
-                        .regRowGroup.flex.left
-                            .recLabel.reg287 Телефон
-                            input.reqInput( v-model="user.company.phone" placeholder="ФОРМАТ: +7 000 000 0000")
+                            input.reqInput( v-model="user.company.address" placeholder="" must)
+
 
                 else
                     .regRow
@@ -216,8 +213,10 @@ block content
                     .regSubmit()
                         include svg/loader.svg
                 .regRow(v-else)
-
-                    .regSubmit(v-on:click="regUser()" v-if="!isRegSuccess") подать заявку
+                    if typeid==4
+                        .regSubmit(v-on:click="regUser()" v-if="!isRegSuccess") подать заявку
+                    else
+                        .regSubmit(v-on:click="regSmi()" v-if="!isRegSuccess") подать заявку
                     .regSuccess.flex.left(v-else)
                         .regCheckBox.success.flex.left()
                             .regCheckBoxBox
