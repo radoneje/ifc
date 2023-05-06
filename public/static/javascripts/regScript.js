@@ -8,6 +8,7 @@ let regApp = new Vue({
             isProxy: false,
             isPersonalAgreement: false,
             isTerms: false,
+            typeid:1
 
         },
         isPayCompany: false,
@@ -116,6 +117,74 @@ let regApp = new Vue({
                 }
 
                  res = await getJson(apiUrl + "/api/userToApprove/"+ res.user.guid)
+                setTimeout(() => {
+                    this.isLodinng = false
+                    this.isRegSuccess = true;
+                }, 2000)
+
+            }, 0)
+        },
+
+        regSmi: async function () {
+            this.errors = {company: {}, payCompany: {}}
+
+
+            if (!this.user.photoid) {
+                this.photoError = true;
+                document.querySelector(".reqPhoto2").scrollIntoView({
+                    behavior: 'smooth'
+                });
+                return;
+            }
+
+            if(this.user.phone)
+                this.user.phone = this.user.phone.replace(/[^\d.-]+/g, '') // remove all non-digits except - and .
+                    .replace(/^([^.]*\.)|\./g, '$1') // remove all dots except first one
+                    .replace(/(?!^)-/g, '') // remove all hyphens except first one
+
+            let elems = registration.querySelectorAll("input[must]");
+            elems.forEach(e => {
+                let sect = e.getAttribute("name")
+                if (!this.user[sect]) {
+                    this.errors[sect] = true;
+                }
+            })
+            elems = registration.querySelectorAll("input[email]");
+            elems.forEach(e => {
+                let sect = e.getAttribute("name")
+                if (!this.user[sect] || !validateEmail(this.user[sect])) {
+                    this.errors[sect] = true;
+                }
+            })
+
+            setTimeout(async () => {
+                let arr = []
+                arr.push(...registration.querySelectorAll(".regRow.error"));
+
+                if (arr.length > 0) {
+                    arr[0].scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    return
+                }
+                this.isPersonalAgreementError = this.user.isPersonalAgreement ? false : true
+
+                this.isTermsError = this.user.isTerms ? false : true
+                if (this.isPersonalAgreementError || this.isTermsError)
+                    return;
+
+                if(typeof( type)!="undefined")
+                    this.user.types=[{id:2}] /// СМИ!!!!
+                //////////сюда вставляем код регистрации
+                this.isLodinng = true
+                let res = await postJson(apiUrl + "/api/regUser2Smi", this.user)
+                if (!res) {
+                    alert("Произошла ошибка, попробуйте позже")
+                    this.isLodinng = false
+                    return
+                }
+
+                res = await getJson(apiUrl + "/api/userToApprove/"+ res.user.guid)
                 setTimeout(() => {
                     this.isLodinng = false
                     this.isRegSuccess = true;

@@ -162,6 +162,41 @@ router.post('/regUser2', async function (req, res, next) {
     }
 });
 
+router.post('/regUser2Smi', async function (req, res, next) {
+    try {
+        let user = req.body;
+        let company = user.company;
+        company.inn="SMI_"+moment().unix();
+        company.shortName=company.name;
+        delete user.company;
+        delete user.typeid
+
+       delete user.types;
+
+        if(user.email)
+            user.email=user.email.toLowerCase();
+
+        console.log(company);
+        company = (await req.knex("t_company").insert(company, "*"))[0] //await addCompany(req, company)
+
+
+
+        user.companyShort = company.shortName
+        user = await addUser(req, user)
+        user = (await req.knex("t_users").update({
+            companyid: company.id,
+        }, "*").where({id: user.id}))[0]
+
+       // for (let type of types) {
+            await addUserToType(req, user.id, 4)
+       // }
+        res.json({user:{guid:user.guid}});
+    } catch (e) {
+        console.error(e)
+        res.sendStatus(500)
+    }
+});
+
 
 /*
 {
