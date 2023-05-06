@@ -214,9 +214,9 @@ block content
                         include svg/loader.svg
                 .regRow(v-else)
                     if typeid==4
-                        .regSubmit(v-on:click="regUser()" v-if="!isRegSuccess") подать заявку
-                    else
                         .regSubmit(v-on:click="regSmi()" v-if="!isRegSuccess") подать заявку
+                    else
+                        .regSubmit(v-on:click="regUser()" v-if="!isRegSuccess") подать заявку
                     .regSuccess.flex.left(v-else)
                         .regCheckBox.success.flex.left()
                             .regCheckBoxBox
