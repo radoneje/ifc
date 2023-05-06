@@ -1357,6 +1357,9 @@ text-decoration: none !important;
     background-color: #F1CCA7;
     color: #FFFFFF;
 }
+.newsText a{
+    text-decoration: underline;
+}
 .newsBodyText p, .newsBodyText ul{
     margin-bottom:1em;
 }
