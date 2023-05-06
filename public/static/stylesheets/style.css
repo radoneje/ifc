@@ -1348,6 +1348,9 @@ text-decoration: none !important;
     color: #878787;
     white-space: pre-wrap;
 }
+.newsBodyText p{
+    margin-bottom:1em;
+}
 
 .newsHeadPhoto {
     width: 200px;
