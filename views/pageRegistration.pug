@@ -29,7 +29,7 @@ block content
                             .reqPhotoBox2Photo
                                 img(v-if="user.photoid" :src="'/static/image/middle/'+user.photoid")
                                 #noFoto(v-else)
-                                    div Загрузить фото<br>для регистрации
+                                    div Загрузить фото<br>для пропуска
                         .reqRowErrorMessage(v-if="photoError") Фотография должна быть загружена
 
                 //.regRow
