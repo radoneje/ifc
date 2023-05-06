@@ -9,7 +9,7 @@ block content
             .partnersDecor
                 include svg/regDecor.svg
             if typeid==4
-                .sectionTitle Аккредитация 2
+                .sectionTitle Аккредитация
             else
                 .sectionTitle Заявка на участие
             .regBox
@@ -100,136 +100,65 @@ block content
                     .regRow.topdivaider &nbsp;
                 else
                     .regRow &nbsp;
-                .regRow
-                    .menuItem.flex.center.left
-                        .menuItemBox
-                        if typeid==4
-                            .menuItemText СМИ, которое вы&nbsp;представляете
-                        else
+                if typeid==4
+                else
+                    .regRow
+                        .menuItem.flex.center.left
+                            .menuItemBox
                             .menuItemText Компания, которую вы&nbsp;представляете
-                .regRow(v-bind:class="{error:errors.company.inn}")
-                    .regRowGroup.flex.left()
-                        .recLabel.reg287 ИНН
-                        input#inn.reqInput(v-on:change="if(innStatus.state==2) clear('company')" v-model="user.company.inn"  type="number")
-                    .reqRowErrorMessage(v-if="innStatus.message") {{innStatus.message}}
+                    .regRow(v-bind:class="{error:errors.company.inn}")
+                        .regRowGroup.flex.left()
+                            .recLabel.reg287 ИНН
+                            input#inn.reqInput(v-on:change="if(innStatus.state==2) clear('company')" v-model="user.company.inn"  type="number")
+                        .reqRowErrorMessage(v-if="innStatus.message") {{innStatus.message}}
 
-                    .regCheckBox.green.flex.mobileWrap.left(v-on:click="loadInn('company', innStatus)" v-bind:class="{active:innStatus.state==2,loading:innStatus.state==1}" style="margin-top: 6px;" )
-                        .regCheckBoxText(style="margin-left:0") <span class="innBtn">Загрузить из ФНС </span>
-                        .regCheckBoxBox.desktop.opacity0(v-bind:class="{opacity100:innStatus.state==1}")
-                            .FNSloader
-                                include svg/loader.svg
-                        //if typeid==4
-                        //    .regCheckBoxComment Нажмите «Загрузить из ФНС», чтобы автоматически заполнить остальные реквизиты
-
-                        .regCheckBoxComment Нажмите «Загрузить из ФНС», чтобы автоматически заполнить остальные реквизиты
-                        .FNSloader.mobile.opacity0(v-bind:class="{opacity100:innStatus.state==1}")
-                            include svg/loader.svg
-
-                .regRow
-                    .regRowGroup.readonly.flex.left
-                        .recLabel.reg287 Наименование
-                        input.reqInput( readonly v-model="user.company.name")
-                .regRow
-                    .regRowGroup.readonly.flex.left
-                        .recLabel.reg287 КПП
-                        input.reqInput(readonly v-model="user.company.kpp")
-                .regRow
-                    .regRowGroup.readonly.flex.left
-                        .recLabel.reg287 ОГРН
-                        input.reqInput(readonly v-model="user.company.ogrn")
-                .regRow
-                    .regRowGroup.readonly.flex.left
-                        .recLabel.reg287 адрес
-                        input.reqInput(readonly v-model="user.company.address")
-                .regRow
-                    .regRowGroup.readonly.flex.left
-                        .recLabel.reg287 руководитель
-                        input.reqInput(readonly v-model="user.company.director")
-                .regRow
-                    .regRowGroup.flex.left
-                        .recLabel.reg287 телефон
-                        input.reqInput( v-model="user.company.phone" placeholder="ФОРМАТ: +7 000 000 0000")
-                .regRow
-                    .regRowGroup.flex.left
-                        if typeid==4
-                            .recLabel.reg287  Название издания
-                        else
-                            .recLabel.reg287  Короткое наименование
-                        input.reqInput( v-model="user.company.shortName" )
-                //.regRow
-                    .regRowGroup.flex.left
-                        .recLabel.reg287 кто подписывает
-                        input.reqInput( v-model="user.company.signater")
-                //.regRow
-                    .regCheckBox.green.flex.left(v-on:click="changeEdo()" v-bind:class="{active:user.company.isEdo}")
-                        .regCheckBoxBox
-                        .regCheckBoxText использует ЭДО
-                //.regRow.divaider
-                    span &nbsp;
-                //.reqRow
-                    .menuItem.flex.center.left.mt-4
-                        .menuItemBox
-                        .menuItemText плательщик&nbsp;<span class="gray">(отметьте нужный пункт)</span>
-                //.regRow
-                    .regCheckBox.flex.left(v-on:click="user.isPaySelf=false;isPayCompany=false" v-bind:class="{active:!isPayCompany && !user.isPaySelf}")
-                        .regCheckBoxBox
-                        .regCheckBoxText оплачивает компания, которую представляю
-                //.regRow
-                    .regCheckBox.flex.left(v-on:click="if(!user.isPaySelf) {user.isPaySelf=true;isPayCompany=false}" v-bind:class="{active:user.isPaySelf}" )
-                        .regCheckBoxBox
-                        .regCheckBoxText оплачиваю как физическое лицо
-
-                //.regRow
-                    .regCheckBox.flex.left(v-on:click="if(!isPayCompany) {user.isPaySelf=false;isPayCompany=true;}" v-bind:class="{active:isPayCompany}")
-                        .regCheckBoxBox
-                        .regCheckBoxText оплачивает другая компания
-                //.regProxyGroup(v-if="isPayCompany")
-                    .regRow(v-bind:class="{error:errors.payCompany.inn}")
-                        .regRowGroup.flex.left(v-bind:class="{readonly:innPayStatus.isInnReadony}")
-                            .recLabel.reg287 ИНН плательщика
-                            input#payInn.reqInput(v-on:change="if(innPayStatus.state==2) clear('payCompany')" v-model="user.payCompany.inn"  type="number")
-                        .reqRowErrorMessage(v-if="innPayStatus.message") {{innPayStatus.message}}
-                        .regCheckBox.flex.left(v-on:click="loadInn('payCompany', innPayStatus, 'payInn')" v-bind:class="{active:innPayStatus.state==2,loading:innPayStatus.state==1}" style="margin-top: 6px;")
+                        .regCheckBox.green.flex.mobileWrap.left(v-on:click="loadInn('company', innStatus)" v-bind:class="{active:innStatus.state==2,loading:innStatus.state==1}" style="margin-top: 6px;" )
                             .regCheckBoxText(style="margin-left:0") <span class="innBtn">Загрузить из ФНС </span>
-                            .regCheckBoxBox(v-if="innPayStatus.state==1")
-                                div()
+                            .regCheckBoxBox.desktop.opacity0(v-bind:class="{opacity100:innStatus.state==1}")
+                                .FNSloader
                                     include svg/loader.svg
+                            //if typeid==4
+                            //    .regCheckBoxComment Нажмите «Загрузить из ФНС», чтобы автоматически заполнить остальные реквизиты
+
+                            .regCheckBoxComment Нажмите «Загрузить из ФНС», чтобы автоматически заполнить остальные реквизиты
+                            .FNSloader.mobile.opacity0(v-bind:class="{opacity100:innStatus.state==1}")
+                                include svg/loader.svg
 
                     .regRow
                         .regRowGroup.readonly.flex.left
-                            .recLabel.reg287 Название
-                            input.reqInput(readonly v-model="user.payCompany.name")
+                            .recLabel.reg287 Наименование
+                            input.reqInput( readonly v-model="user.company.name")
                     .regRow
                         .regRowGroup.readonly.flex.left
                             .recLabel.reg287 КПП
-                            input.reqInput(readonly v-model="user.payCompany.kpp")
+                            input.reqInput(readonly v-model="user.company.kpp")
                     .regRow
                         .regRowGroup.readonly.flex.left
                             .recLabel.reg287 ОГРН
-                            input.reqInput(readonly v-model="user.payCompany.ogrn")
+                            input.reqInput(readonly v-model="user.company.ogrn")
                     .regRow
                         .regRowGroup.readonly.flex.left
                             .recLabel.reg287 адрес
-                            input.reqInput(readonly v-model="user.payCompany.address")
+                            input.reqInput(readonly v-model="user.company.address")
                     .regRow
                         .regRowGroup.readonly.flex.left
                             .recLabel.reg287 руководитель
-                            input.reqInput(readonly v-model="user.payCompany.director")
+                            input.reqInput(readonly v-model="user.company.director")
                     .regRow
-                        .regRowGroup.readonly.flex.left
+                        .regRowGroup.flex.left
                             .recLabel.reg287 телефон
-                            input.reqInput(readonly v-model="user.payCompany.phone")
+                            input.reqInput( v-model="user.company.phone" placeholder="ФОРМАТ: +7 000 000 0000")
                     .regRow
                         .regRowGroup.flex.left
-                            .recLabel.reg287 короткое название
-                            input.reqInput(v-model="user.payCompany.shortName")
-                    //.regRow
-                        .regRowGroup.flex.left
-                            .recLabel.reg287 кто подписывает
-                            input.reqInput(v-model="user.payCompany.signater")
+                            if typeid==4
+                                .recLabel.reg287  Название издания
+                            else
+                                .recLabel.reg287  Короткое наименование
+                            input.reqInput( v-model="user.company.shortName" )
 
-                .regRow &nbsp;
 
+                    .regRow &nbsp;
+                ////////////////
                 .regRow.checkBox
                     .regCheckBox.green.flex.left(v-on:click="user.isPersonalAgreement=!user.isPersonalAgreement" v-bind:class="{active:user.isPersonalAgreement}")
                         div
