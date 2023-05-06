@@ -136,7 +136,7 @@ router.post('/regUser2', async function (req, res, next) {
         let types = user.types;
         delete user.types
        if(user.typeid) {
-           types = [{id: typeid}]
+           types = [{id: user.typeid}]
            delete user.typeid
        }
        console.log(types)
