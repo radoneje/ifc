@@ -107,10 +107,7 @@ let regApp = new Vue({
 
                 if(typeof( type)!="undefined")
                     this.user.types=[{id:type}]
-                else if(this.user.typeid) {
-                    this.user.types = [{id: this.user.typeid}]
 
-                }
 
 
                 //////////сюда вставляем код регистрации

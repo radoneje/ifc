@@ -135,7 +135,12 @@ router.post('/regUser2', async function (req, res, next) {
             companyPay = user.companyPay
         let types = user.types;
         delete user.types
-        delete user.typeid
+       if(user.typeid) {
+           types = [{id: typeid}]
+           delete user.typeid
+       }
+       console.log(types)
+        return res.send(405)
         delete user.companyPay;
         if(user.email)
             user.email=user.email.toLowerCase();
@@ -146,6 +151,7 @@ router.post('/regUser2', async function (req, res, next) {
         if (companyPay && companyPay.inn && companyPay.name)
             companyPay = await addCompany(req, companyPay)
         user.companyShort = company.shortName
+
         user = await addUser(req, user)
         user = (await req.knex("t_users").update({
             companyid: company.id,
