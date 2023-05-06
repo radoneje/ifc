@@ -188,7 +188,7 @@ router.post('/regUser2Smi', async function (req, res, next) {
         }, "*").where({id: user.id}))[0]
 
        // for (let type of types) {
-            await addUserToType(req, user.id, 2)
+            await addUserToType(req, user.id, 4)
        // }
         res.json({user:{guid:user.guid}});
     } catch (e) {
