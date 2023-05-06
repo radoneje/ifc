@@ -1348,6 +1348,15 @@ text-decoration: none !important;
     color: #878787;
     white-space: pre-wrap;
 }
+.newsBodyText a {
+    padding: 2px 8px;
+    background-color: #F1CCA799;
+    text-decoration: none;
+}
+.newsBodyText a:hover{
+    background-color: #F1CCA7;
+    color: #FFFFFF;
+}
 .newsBodyText p, .newsBodyText ul{
     margin-bottom:1em;
 }
