@@ -135,6 +135,7 @@ router.post('/regUser2', async function (req, res, next) {
             companyPay = user.companyPay
         let types = user.types;
         delete user.types
+        delete user.typeid
         delete user.companyPay;
         if(user.email)
             user.email=user.email.toLowerCase();
