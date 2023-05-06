@@ -1348,8 +1348,18 @@ text-decoration: none !important;
     color: #878787;
     white-space: pre-wrap;
 }
-.newsBodyText p{
+.newsBodyText p, .newsBodyText ul{
     margin-bottom:1em;
+}
+.newsBodyText li{
+    position:relative;
+    padding-left: .5em;
+}
+.newsBodyText li:before{
+    content: '&#x2022;';
+    position: absolute;
+    left:0;
+    top:.2em;
 }
 
 .newsHeadPhoto {
