@@ -169,6 +169,7 @@ router.post('/regUser2Smi', async function (req, res, next) {
         company.inn="SMI_"+moment().unix();
         company.shortName=company.name;
         delete user.company;
+        delete user.typeid
 
         let types = user.types;
 
