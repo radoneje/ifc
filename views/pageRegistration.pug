@@ -43,6 +43,15 @@ block content
                     .regRowGroup.flex.left
                         .recLabel.reg287 Фамилия
                         input.reqInput(v-model="user.f" must name="f")
+                if !typeid && typeid!=4
+                    .regRow.checkBox
+                        .regCheckBox.green.flex.left(v-on:click="user.typeid=user.typeid==1?3:1" v-bind:class="{active:user.typeid==3}")
+                            div
+                                .regCheckBoxBox
+                            div
+                                .regCheckBoxText( ) ПРИНИМАЮ ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ
+                                    a.gray(onclick="event.preventDefault();window.open('/static/key/agr" + lang + "?open=open')")  (посмотреть)
+
                 .regRow(v-bind:class="{error:errors.i}")
                     .regRowGroup.flex.left
                         .recLabel.reg287 Имя
@@ -179,8 +188,9 @@ block content
                             input.reqInput( v-model="user.company.shortName" )
 
 
-                    .regRow &nbsp;
+
                 ////////////////
+                .regRow &nbsp;
                 .regRow.checkBox
                     .regCheckBox.green.flex.left(v-on:click="user.isPersonalAgreement=!user.isPersonalAgreement" v-bind:class="{active:user.isPersonalAgreement}")
                         div
