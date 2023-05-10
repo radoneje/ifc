@@ -48,6 +48,10 @@
     .regRowGroup.flex.left
         .recLabel.reg287 телефон
         input.reqInput(v-model="user.phone" must name="phone" placeholder="ФОРМАТ: +7 000 000 0000")
+.regRow(v-bind:class="{error:errors.position}")
+    .regRowGroup.flex.left
+        .recLabel.reg287 должность
+        input.reqInput(v-model="user.position" must name="position" placeholder="")
 .regRow(v-if="isLoading")
     .regSubmit()
         include ../svg/loader.svg
