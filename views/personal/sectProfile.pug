@@ -55,7 +55,7 @@
 .regRow(v-bind:class="{error:errors.postAddress}")
     .regRowGroup.flex.left
         .recLabel.reg287(style="font-size: 0.8em;") Почтовый адрес для документов
-        input.reqInput(v-model="user.postAddress" must name="postAddress" placeholder="")
+        input.reqInput(v-model="user.postAddress"  name="postAddress" placeholder="")
 
 .regRow(v-if="isLoading")
     .regSubmit()
