@@ -248,7 +248,8 @@ let personalApp = new Vue({
                     photoid: this.user.photoid,
                     companyShort: this.user.companyShort,
                     phone: this.user.phone,
-                    email: this.user.email
+                    email: this.user.email,
+                    position: this.user.position
                 })
                 if (!res) {
                     alert("Произошла ошибка, попробуйте позже")
