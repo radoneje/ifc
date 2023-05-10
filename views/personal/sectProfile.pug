@@ -52,6 +52,11 @@
     .regRowGroup.flex.left
         .recLabel.reg287 должность
         input.reqInput(v-model="user.position" must name="position" placeholder="")
+.regRow(v-bind:class="{error:errors.postAddress}")
+    .regRowGroup.flex.left
+        .recLabel.reg287 Почтовый адрес для документов
+        input.reqInput(v-model="user.postAddress" must name="postAddress" placeholder="")
+
 .regRow(v-if="isLoading")
     .regSubmit()
         include ../svg/loader.svg

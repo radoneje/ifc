@@ -196,10 +196,13 @@ router.post('/changeUser', async function(req, res, next) {
             return res.sendStatus(422)
         if(req.body.position.length>1024)
             return res.sendStatus(422)
+        if(req.body.postAddress.length>2048)
+            return res.sendStatus(422)
+
 
 
         let r= await req.knex("t_users")
-            .update({position:req.body.position, photoid:req.body.photoid,companyShort:req.body.companyShort,phone:req.body.phone,email:req.body.email  })
+            .update({postAddress:req.body.postAddress,position:req.body.position, photoid:req.body.photoid,companyShort:req.body.companyShort,phone:req.body.phone,email:req.body.email  })
             .where({guid:req.session.token.guid})
 
 
