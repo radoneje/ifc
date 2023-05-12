@@ -2387,6 +2387,8 @@ img[src='undefined']{
     background: #BB3E3F;
     padding: 8px 16px;
     text-align: center;
+    box-sizing: border-box;
+    margin-top:16px;
 }
 
 @media all and (max-width: 1700px){
