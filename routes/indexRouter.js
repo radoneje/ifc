@@ -11,7 +11,8 @@ router.get("/undefined",(req, res)=>{
 router.get("/tgpgm/:id",async (req, res)=>{
   try {
    let timeslots= await req.knex("v_pgm_timeslots").where({dayid:req.params.id})
-    res.render("tgpgm", {lang: "ru", ru: true, timeslots })
+    let day={id:req.params.id,timeslots }
+    res.render("tgpgm", {lang: "ru", ru: true, day })
   }
   catch (e){
     console.warn(e)
