@@ -9,11 +9,13 @@ block content
     script(src="/static/javascripts/utils.js")
     script(src="/static/javascripts/mainScript.js")
     script.
-        document.querySelectorAll(".pqmQBtn").forEach(async(btn)=>{
-            let box=btn.parentNode;
-            let inp=box.querySelector("textarea")
-            if(inp.value.length<5)
-                return inp.focus();
-            btn.style.display="node";
+        document.querySelectorAll(".pqmQBtn").forEach( btn=>{
+            btn.onclick=async()=> {
+                let box = btn.parentNode;
+                let inp = box.querySelector("textarea")
+                if (inp.value.length < 5)
+                    return inp.focus();
+                btn.style.display = "node";
+            }
         })
 
