@@ -15,9 +15,11 @@ block content
                 console.log("btn click")
                 let box = btn.parentNode;
                 let inp = box.querySelector("textarea")
+                let loader=box.querySelector(".pgmQloader")
                 if (inp.value.length < 5)
                     return inp.focus();
                 btn.style.display = "none";
+                loader.style.display = "block";
             }
         })
 
