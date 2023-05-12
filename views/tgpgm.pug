@@ -10,7 +10,9 @@ block content
     script(src="/static/javascripts/mainScript.js")
     script.
         document.querySelectorAll(".pqmQBtn").forEach( btn=>{
+            console.log(btn)
             btn.onclick=async()=> {
+                console.log("btn click")
                 let box = btn.parentNode;
                 let inp = box.querySelector("textarea")
                 if (inp.value.length < 5)
