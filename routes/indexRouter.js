@@ -8,6 +8,16 @@ router.get("/undefined",(req, res)=>{
   res.sendStatus(401)
 })
 
+router.get("/tgpgm/:id",async (req, res)=>{
+  try {
+   let timeslots= await req.knex("v_pgm_timeslots").where({dayid:req.params.id})
+    res.render("tgpgm", {lang: "ru", ru: true, timeslots })
+  }
+  catch (e){
+    console.warn(e)
+    res.sendStatus(500)
+  }
+})
 router.get("/hotelconfirm/:guid",async (req, res)=>{
   await req.knex("t_hotel_log").update({confirmDate:new Date()}).where({guid:req.params.guid})
   res.render("hotelconfirm",{lang:"ru", ru:true})
@@ -158,6 +168,7 @@ router.get('/:lang?', async function(req, res, next) {
   news.sort((a,b)=>{return b.sort-a.sort});
   res.render('demo',{lang:req.params.lang, ru:req.params.lang=="ru", apiUrl:config.apiUrl, news} );
 });
+
 
 
 
