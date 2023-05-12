@@ -2349,6 +2349,24 @@ img[src='undefined']{
 .tgPgm .oTrack:not(.impotant) .oSession {
     width: calc(100vw - 72px);
 }
+.pgmQBox{
+    display: none;
+}
+.tgPgm .pgmQBox{
+    display: block;
+}
+.pgmQBox textarea{
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #878787;
+    resize: none;
+    height: 8em;
+    font-size: 16px;
+    line-height: 21px;
+    font-family: 'Stem';
+    color:#4A4A49;
+}
 
 @media all and (max-width: 1700px){
 
