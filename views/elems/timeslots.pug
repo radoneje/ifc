@@ -30,7 +30,7 @@ each ts in day.timeslots
                                                 .oSpkBox(onclick="showSpeaker("+spk.id+", '"+lang+"')")
                                                     .oSessionSpkBoxName #{spk["i" + lang]} #{spk["f" + lang]}
                                                         .oSessionSpkBoxPos  #{spk["company" + lang]}
-                                    .oSessionSpkBox.pgmQBox
+                                    .oSessionSpkBox.pgmQBox(sessionid=session.id)
                                         textarea(placeholder="Напишите вопрос здесь")
                                         .pqmQBtn задать вопрос
 

@@ -2375,6 +2375,7 @@ img[src='undefined']{
     padding: 8px 16px;
     text-align: center;
     background: #BB3E3F;
+    text-transform: uppercase;
 }
 
 @media all and (max-width: 1700px){
