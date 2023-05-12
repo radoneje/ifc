@@ -2344,6 +2344,7 @@ img[src='undefined']{
 }
 .tgPgm{
     padding: 0 24px;
+    margin-bottom: 24px;
 }
 .tgPgm .oTrack:not(.impotant) .oSession {
     width: calc(100vw - 72px);
