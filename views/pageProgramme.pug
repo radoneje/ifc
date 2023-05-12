@@ -18,40 +18,7 @@ block content
                         .pgmHeadDate #{day["title_"+lang]}
                         .oTimeslots
                             if day.timeslots
-                                each ts in day.timeslots
-                                    .oTs.flex.left
-                                        .oTsDate #{ts["title_"+lang]}
-                                        if(ts.allTracks)
-                                            .oTrack.oAllTracks(class=ts.isImpotant?"impotant":"") #{ts["descr_"+lang]}
-                                        else
-                                            .oTrack(class=ts.isImpotant?"impotant":"")
-                                                .oSessionScroll
-                                                    .oSessionWr.flex.left
-                                                        if ts.sessions
-                                                            each session in ts.sessions
-                                                                .oSession
-                                                                    .oSessionHallTitle #{session["halltitle_"+lang]}
-                                                                    .oSessionTitle
-                                                                        if ts.isImpotant
-                                                                            span.plenar  Пленарная сессия:&nbsp;
-                                                                        span #{session["title_"+lang]}
-
-                                                                    .oSessionDetails(onclick="showSession("+session.id+", '"+lang+"')") подробнее
-                                                                    if session.moderators
-                                                                        .oSessionSpkBox
-                                                                            .oSessionSpkBoxTitle Модератор:
-                                                                            .oSpkBox(onclick="showSpeaker("+session.moderators[0].id+", '"+lang+"')")
-                                                                                .oSessionSpkBoxName #{session.moderators[0]["i"+lang]} #{session.moderators[0]["f"+lang]}
-                                                                                    .oSessionSpkBoxPos  #{session.moderators[0]["company"+lang]}
-                                                                    if session.speakers
-                                                                        .oSessionSpkBox
-                                                                            .oSessionSpkBoxTitle Спикеры:
-                                                                            each spk in session.speakers
-                                                                                .oSpkBox(onclick="showSpeaker("+spk.id+", '"+lang+"')")
-                                                                                    .oSessionSpkBoxName #{spk["i" + lang]} #{spk["f" + lang]}
-                                                                                        .oSessionSpkBoxPos  #{spk["company" + lang]}
-
-
+                                include elems/timeslots
 
 
 
