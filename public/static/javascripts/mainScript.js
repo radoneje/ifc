@@ -381,4 +381,7 @@ function scroolRiht(ctrl){
     console.log(track.scrollLeft, sessWr.scrollLeft)
     sessWr.scrollLeft=0-width;
     //sessWr.scrollLeft = topPos;(sessWr.getBoundingClientRect().x-width)
+
+
+    sessWr.scrollLeft=-300;
 }
