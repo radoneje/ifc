@@ -112,7 +112,14 @@ let regApp = new Vue({
 
 
 
-
+                try{
+                    let adv=localStorage.getItem("adv")
+                    if(adv)
+                        this.user.adv=adv;
+                }
+                catch (e) {
+                    console.warn(e)
+                }
                 //////////сюда вставляем код регистрации
                 this.isLodinng = true
                 let res = await postJson(apiUrl + "/api/regUser2", this.user)
