@@ -374,5 +374,5 @@ try {
 }
 
 function scroolRiht(ctrl){
-    console.log(ctrl.parent.parent.querySelector(".oTrack"))
+    console.log(ctrl.parentNode.parentNode.querySelector(".oTrack"))
 }
