@@ -618,7 +618,7 @@
         padding-right: 0;
     }
      .oTrack:not(.impotant) .oSession {
-        width: calc(100vw - 40px);
+        width: calc(100vw - 32px);
 
         padding: 8px;
         padding-bottom: 24px;
