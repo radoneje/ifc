@@ -36,8 +36,9 @@ each ts in day.timeslots
                                         .pgmQloader
                                             include ../svg/loader.svg
                                         .pgmQSuccess Вопрос передан организаторам
-            .flex.beetwen
-                        .leftBtn
-                            include ../svg/arrowRightRed.svg
-                        .rigthBtn
-                            include ../svg/arrowRightRed.svg
+            if !ts.isImpotant
+                .flex.beetwen
+                            .leftBtn
+                                include ../svg/arrowRightRed.svg
+                            .rigthBtn
+                                include ../svg/arrowRightRed.svg
