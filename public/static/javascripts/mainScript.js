@@ -365,7 +365,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
 };
 try {
 
-    var c = getUrlParameter("adv");
+    const adv = getUrlParameter("adv");
     localStorage.setItem("adv", adv)
 }catch (e){
     console.warn(e)
