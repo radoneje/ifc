@@ -376,7 +376,7 @@ try {
 function scroolRiht(ctrl){
     let track=ctrl.parentNode.parentNode.querySelector(".oTrack")
     let sessWr=track.querySelector(".oSessionScroll")
-    let width=window.innerWidth-32;
+    let width=window.innerWidth-16;
 
     console.log(track.scrollLeft, sessWr.scrollLeft)
     sessWr.scrollLeft+=width;
