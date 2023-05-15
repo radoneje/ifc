@@ -161,10 +161,19 @@ router.all('/pay_result/', async function(req, res, next) {
   }
 });
 router.get('/:lang?', async function(req, res, next) {
-  if(!req.params.lang)
-    return res.redirect("/ru")
-  if(!req.params.lang.match(/ru|en/))
-    return res.redirect("/ru")
+  if(!req.params.lang) {
+   let url="/ru"
+    if(req.query.adv)
+      url+='?adv='+req.query.adv
+    return res.redirect(url)
+
+  }
+  if(!req.params.lang.match(/ru|en/)) {
+    let url="/ru"
+    if(req.query.adv)
+      url+='?adv='+req.query.adv
+    return res.redirect(url)
+  }
   let news=await req.knex("t_news").where({status:2}).orderBy("sort","desc").limit(4);
   news.sort((a,b)=>{return b.sort-a.sort});
   res.render('demo',{lang:req.params.lang, ru:req.params.lang=="ru", apiUrl:config.apiUrl, news} );
