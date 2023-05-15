@@ -605,10 +605,12 @@
     .oSessionScroll{
         overflow-y: auto;
         width: 100%;
+
     }
     .oTrack:not(.impotant) .oSessionScroll {
         width: calc(100% + 48px);
         margin-left:-24px;
+        scroll-behavior: smooth;
     }
     .oTrack:not(.impotant) .oSessionWr {
         width: max-content;
