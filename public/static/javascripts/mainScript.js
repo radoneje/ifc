@@ -374,5 +374,8 @@ try {
 }
 
 function scroolRiht(ctrl){
-    console.log(ctrl.parentNode.parentNode.querySelector(".oTrack"))
+    let track=ctrl.parentNode.parentNode.querySelector(".oTrack")
+    let sessWr=track.querySelector(".oSessionWr")
+
+    console.log(track.scrollLeft, sessWr.scrollLeft)
 }
