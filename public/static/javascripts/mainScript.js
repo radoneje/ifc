@@ -379,7 +379,7 @@ function scroolRiht(ctrl){
     let width=window.innerWidth-64;
 
     console.log(track.scrollLeft, sessWr.scrollLeft)
-    sessWr.scrollLef+=width;
+    sessWr.scrollLeft+=width;
     //sessWr.scrollLeft = topPos;(sessWr.getBoundingClientRect().x-width)
    // sessWr.scrollLeft=-300;
 }
