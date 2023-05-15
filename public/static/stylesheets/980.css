@@ -927,6 +927,7 @@
         height: 100%;
         width: auto;
     }
+    .leftBtn svg{transform: rotate(180deg);}
 
 }
 @media all and (max-width: 300px) {
