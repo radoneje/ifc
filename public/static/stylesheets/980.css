@@ -919,6 +919,9 @@
         background: #e39a3f;
         cursor: pointer;
     }
+    .leftBtn svg, .rigthBtn svg{
+        width: 100%;
+    }
 
 }
 @media all and (max-width: 300px) {
