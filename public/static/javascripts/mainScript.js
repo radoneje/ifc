@@ -363,6 +363,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
     }
     return false;
 };
+
 try {
 
     const adv = getUrlParameter("adv");
