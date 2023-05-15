@@ -918,6 +918,7 @@
         height: 18px;
         background: #e39a3f;
         cursor: pointer;
+        padding: 4px;
     }
     .leftBtn svg, .rigthBtn svg{
         height: 100%;
