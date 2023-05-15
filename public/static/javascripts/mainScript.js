@@ -378,6 +378,6 @@ function scroolRiht(ctrl){
     let sessWr=track.querySelector(".oSessionWr")
     let width=window.innerWidth;
 
-    console.log(track.getBoundingClientRect(), sessWr.getBoundingClientRect())
-    sessWr.scrollTo(sessWr.getBoundingClientRect().x-width)
+    console.log(track.scrollLeft, sessWr.scrollLeft)
+  //  sessWr.scrollLeft = topPos;(sessWr.getBoundingClientRect().x-width)
 }
