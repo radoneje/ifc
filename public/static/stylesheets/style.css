@@ -2390,6 +2390,9 @@ img[src='undefined']{
     box-sizing: border-box;
     margin-top:16px;
 }
+.leftBtn, .rigthBtn{
+    display: none;
+}
 
 @media all and (max-width: 1700px){
 
