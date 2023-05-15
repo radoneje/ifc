@@ -372,3 +372,7 @@ try {
 }catch (e){
     console.warn(e)
 }
+
+function scroolRiht(ctrl){
+    console.log(ctrl)
+}
