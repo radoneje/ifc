@@ -38,7 +38,7 @@ each ts in day.timeslots
                                         .pgmQSuccess Вопрос передан организаторам
             if !ts.isImpotant
                 .flex.beetwen
-                            .leftBtn
+                            .leftBtn(onclick="scroolLeft(this)")
                                 include ../svg/arrowRightRed.svg
                             .rigthBtn(onclick="scroolRiht(this)")
                                 include ../svg/arrowRightRed.svg
