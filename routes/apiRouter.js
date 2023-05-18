@@ -402,9 +402,13 @@ router.get('/loadCompanyByINN/:inn', async function (req, res, next) {
         let ret={}
         if(cmp.type=="U"){
             console.log(cmp.dt)
+            let n=cmp.dt["НаимСокрЮЛ"]
+            if(!n || n.length<3)
+                n=cmp.dt["НаимПолнЮЛ"]
+
             ret= {
                 name: cmp.dt["НаимСокрЮЛ"],
-                shortName: (cmp.dt["НаимСокрЮЛ"]).replace(/^МУП|ОП|ЗАО|ОАО|ПАО|АО|ООО|ФГУП|ИП|ТСЖ|НКО|ГУП/, "").replace(/\(\)/,"").trim().replace(/^\"/,"").replace(/\"$/, "").trim(),
+                shortName: (n).replace(/^МУП|ОП|ЗАО|ОАО|ПАО|АО|ООО|ФГУП|ИП|ТСЖ|НКО|ГУП/, "").replace(/\(\)/,"").trim().replace(/^\"/,"").replace(/\"$/, "").trim(),
                 ogrn: cmp.dt["ОГРН"],
                 "director": cmp.dt["Руководитель"]["Должн"]+": "+ cmp.dt["Руководитель"]["ФИОПолн"],
                 "address": cmp.dt["Адрес"]["АдресПолн"],
