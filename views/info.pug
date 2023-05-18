@@ -1,0 +1,15 @@
+extends layout
+block head
+    title="Финансовый конгресс Банка России"
+block content
+
+    include elems/news
+
+
+
+
+
+    script.
+        let apiUrl = !{JSON.stringify(apiUrl)}
+    script(src="/static/javascripts/utils.js")
+    script(src="/static/javascripts/mainScript.js")

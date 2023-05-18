@@ -160,6 +160,21 @@ router.all('/pay_result/', async function(req, res, next) {
     res.text("Ошибка")
   }
 });
+router.get('/info/:lang?', async function(req, res, next) {
+  if(!req.params.lang)
+    return res.redirect("/info/ru")
+  if(!req.params.lang.match(/ru|en/))
+    res.redirect("/info/ru")
+
+  res.render('info',{lang:req.params.lang, ru:req.params.lang=="ru", apiUrl:config.apiUrl, news} );
+});
+router.get('/registration/:lang?', async function(req, res, next) {
+  if(!req.params.lang)
+    return res.redirect("/registration/ru")
+  if(!req.params.lang.match(/ru|en/))
+    res.redirect("/registration/ru")
+  res.render('pageRegistration',{lang:req.params.lang, ru:req.params.lang=="ru", apiUrl:config.apiUrl} );
+});
 router.get('/:lang?', async function(req, res, next) {
   if(!req.params.lang) {
    let url="/ru"
