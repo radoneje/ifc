@@ -401,6 +401,7 @@ router.get('/loadCompanyByINN/:inn', async function (req, res, next) {
 
         let ret={}
         if(cmp.type=="U"){
+            console.log(cmp.dt)
             ret= {
                 name: cmp.dt["НаимСокрЮЛ"],
                 shortName: (cmp.dt["НаимСокрЮЛ"]).replace(/^МУП|ОП|ЗАО|ОАО|ПАО|АО|ООО|ФГУП|ИП|ТСЖ|НКО|ГУП/, "").replace(/\(\)/,"").trim().replace(/^\"/,"").replace(/\"$/, "").trim(),
