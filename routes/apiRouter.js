@@ -406,8 +406,10 @@ router.get('/loadCompanyByINN/:inn', async function (req, res, next) {
             if(!n || n.length<3)
                 n=cmp.dt["НаимПолнЮЛ"]
 
+
+
             ret= {
-                name: cmp.dt["НаимСокрЮЛ"],
+                name: n,
                 shortName: (n).replace(/^МУП|ОП|ЗАО|ОАО|ПАО|АО|ООО|ФГУП|ИП|ТСЖ|НКО|ГУП/, "").replace(/\(\)/,"").trim().replace(/^\"/,"").replace(/\"$/, "").trim(),
                 ogrn: cmp.dt["ОГРН"],
                 "director": cmp.dt["Руководитель"]["Должн"]+": "+ cmp.dt["Руководитель"]["ФИОПолн"],
