@@ -1,9 +1,15 @@
 .tower#footer
     .footerWr.flex.center
         .footerItem
-            include ../svg/footerLogo.svg
+            if ru
+                include ../svg/footerLogo.svg
+            else
+                include ../svg/footerLogo.svg
         .footerItem.mobile(style="text-align: right;")
-            include ../svg/brLogo.svg
+            if ru
+                include ../svg/brLogo.svg
+            else
+                include ../svg/brLogoEn.svg
         .footerItem.centerfooterItem
             if ru
                 .footerItemRow <a href="mailto:INFO@IFCONGRESS.RU">INFO@IFCONGRESS.RU</a><br><a href="tel:8 800 300-69-23">8&nbsp;800&nbsp;300-69-23</a>
@@ -15,6 +21,10 @@
                     .footerItemRow © 2023 ALL RIGHTS RESERVED<br><u><a href="https://tmproject.ru" target="_blank">EFFECTCOM&nbsp;LLC</a></u>
 
         .footerItem.desktop(style="text-align: right;")
-            include ../svg/brLogo.svg
+            if ru
+                include ../svg/brLogo.svg
+            else
+                include ../svg/brLogoEn.svg
+
     .footerVisaItem
         include ../svg/visaMain.svg
