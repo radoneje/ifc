@@ -8,7 +8,10 @@
             .internalHeadLogo(onclick="document.location.href='/'")
                 include ../svg/mainlogo.svg
             .internalHeadText.flex.center
-                .internalHeadH1(onclick="document.location.href='/'") Финансовый<br>конгресс<br>Банка&nbsp;России
+                if ru
+                    .internalHeadH1(onclick="document.location.href='/'") Финансовый<br>конгресс<br>Банка&nbsp;России
+                else
+                    .internalHeadH1(onclick="document.location.href='/'") Финансовый<br>конгресс<br>Банка&nbsp;России
                 .internalHeadMenu
                     include mainMenuItems
         .internalH1Wr.mobile
@@ -16,8 +19,14 @@
                 .mainLogo(onclick="document.location.href='/'")
                     include ../svg/mainlogo.svg
                 .h1Wr.flex
-                    h1(onclick="document.location.href='/'") ФИНАНСОВЫЙ<br>КОНГРЕСС<br>БАНКА&nbsp;РОССИИ
-                    h2.desktop 6-7 июля 2023<br>Санкт-петербург
+                    if ru
+                        h1(onclick="document.location.href='/'") ФИНАНСОВЫЙ<br>КОНГРЕСС<br>БАНКА&nbsp;РОССИИ
+                        h2.desktop 6-7 июля 2023<br>Санкт-петербург
+                    else
+                        h1(onclick="document.location.href='/'") FINANCIAL<br>CONGRESS<br>OF&nbsp;THE&nbsp;BANK&nbsp;OF&nbsp;RUSSIA
+                        h2.desktop 6–7 JULY 2023<br>ST.PETERSBURG
+
+
             .mobileMenuCloseBtn(onclick="showMobileMenu()")
                 include ../svg/mobileMenuBtn.svg
 .desktop
