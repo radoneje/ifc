@@ -5,13 +5,13 @@
         .newsItemsBox
             .newsItems.flex.center.beetwen
                 each n in news
-                    .newsItem(onclick="document.location.href='/news#news"+n.id+"'")
+                    .newsItem(onclick="document.location.href='/news/"+lang+"#news"+n.id+"'")
                         .newsDate #{n.date}
                         .newsTitle #{n.title}
                         .newsDecor
                             include ../svg/newsDecor.svg
                         .newsText.truncateText !{n.lid}
-                        a.newsButton.flex.center(href="/news#news"+n.id)
+                        a.newsButton.flex.center(href="/news/"+lang+"#news"+n.id)
                             include ../svg/arrowRightRed.svg
 
 
