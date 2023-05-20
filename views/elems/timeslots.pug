@@ -16,10 +16,12 @@ each ts in day.timeslots
                                             if ru
                                                 span.plenar  Пленарная сессия:&nbsp;
                                             else
-                                                span.plenar  Plenary session:&nbsp;
+                                                span.plenar  PLENARY session:&nbsp;
                                         span #{session["title_"+lang]}
-
-                                    .oSessionDetails(onclick="showSession("+session.id+", '"+lang+"')") подробнее
+                                    if ru
+                                        .oSessionDetails(onclick="showSession("+session.id+", '"+lang+"')") подробнее
+                                    else
+                                        .oSessionDetails(onclick="showSession("+session.id+", '"+lang+"')") details
                                     if session.moderators
                                         .oSessionSpkBox
                                             if ru
