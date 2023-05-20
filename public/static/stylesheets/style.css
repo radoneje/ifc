@@ -2391,6 +2391,11 @@ img[src='undefined']{
     box-sizing: border-box;
     margin-top:16px;
 }
+.brLogoWr svg{
+    width: 271px;
+    height: auto;
+}
+
 
 @media all and (max-width: 1700px){
 
