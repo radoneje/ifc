@@ -5,25 +5,25 @@
             img.mobile(src="/static/images/internalHaedBgMobile.png" width="375" height="160")
 
         .internalHeadLogoWr.flex.center
-            .internalHeadLogo(onclick="document.location.href='/'"+lang)
+            .internalHeadLogo(onclick="document.location.href='/"+lang+"'")
                 include ../svg/mainlogo.svg
             .internalHeadText.flex.center
                 if ru
-                    .internalHeadH1(onclick="document.location.href='/'"+lang) Финансовый<br>конгресс<br>Банка&nbsp;России
+                    .internalHeadH1(onclick="document.location.href='/"+lang+"'") Финансовый<br>конгресс<br>Банка&nbsp;России
                 else
-                    .internalHeadH1(onclick="document.location.href='/'"+lang) FINANCIAL<br>CONGRESS<br>OF&nbsp;THE&nbsp;BANK&nbsp;OF&nbsp;RUSSIA
+                    .internalHeadH1(onclick="document.location.href='/"+lang+"'") FINANCIAL<br>CONGRESS<br>OF&nbsp;THE&nbsp;BANK&nbsp;OF&nbsp;RUSSIA
                 .internalHeadMenu
                     include mainMenuItems
         .internalH1Wr.mobile
             .mainTitle.flex.center
-                .mainLogo(onclick="document.location.href='/'")
+                .mainLogo(onclick="document.location.href='/"+lang+"'")
                     include ../svg/mainlogo.svg
                 .h1Wr.flex
                     if ru
-                        h1(onclick="document.location.href='/'"+lang) ФИНАНСОВЫЙ<br>КОНГРЕСС<br>БАНКА&nbsp;РОССИИ
+                        h1(onclick="document.location.href='/"+lang+"'") ФИНАНСОВЫЙ<br>КОНГРЕСС<br>БАНКА&nbsp;РОССИИ
                         h2.desktop 6-7 июля 2023<br>Санкт-петербург
                     else
-                        h1(onclick="document.location.href='/'"+lang) FINANCIAL<br>CONGRESS<br>OF&nbsp;THE&nbsp;BANK&nbsp;OF&nbsp;RUSSIA
+                        h1(onclick="document.location.href='/"+lang+"'") FINANCIAL<br>CONGRESS<br>OF&nbsp;THE&nbsp;BANK&nbsp;OF&nbsp;RUSSIA
                         h2.desktop 6–7 JULY 2023<br>ST.PETERSBURG
 
 
