@@ -5,51 +5,100 @@
         include ../svg/faqBg.svg
     .subTower
         .faqLink.flex.center.beetwen
-            .sectionTitle участникам
+            if ru
+                .sectionTitle участникам
+            else
+                .sectionTitle  УЧАСТНИКАМ
             .faqMenuItem.flex.left
                 .menuItemBox
-                a.menuItemText( href="/participants/"+lang) ИНФОРМАЦИЯ ДЛЯ УЧАСТНИКОВ
+                if ru
+                    a.menuItemText( href="/participants/"+lang) ИНФОРМАЦИЯ ДЛЯ УЧАСТНИКОВ
+                else
+                    a.menuItemText( href="/participants/"+lang) INFORMATION FOR PARTICIPANTS
         .faqItemsWr
             .faqItemsBox
                 .faqItems.flex.center.beetwen
                         .faqItem
-                            .faqTitle Условия участия
+                            if ru
+                                .faqTitle УСЛОВИЯ УЧАСТИЯ
+                            else
+                                .faqTitle TERMS OF PARTICIPATION
+
                             .faqText
-                                ul
-                                    li Очное участие
-                                    li Подтверждение от Оргкомитета
-                                    li Стоимость участия - 150&nbsp;000&nbsp;руб.
+                                if ru
+                                    ul
+                                        li In-person participation
+                                        li Подтверждение от Оргкомитета
+                                        li Стоимость участия - 150&nbsp;000&nbsp;руб.
+                                else
+                                    ul
+                                        li Очное участие
+                                        li Confirmation from the Organizing Committee
+                                        li Participation fee: RUB 150,000
+
+
                             a.newsButton.flex.center( href="/participants/"+lang+"/#uslovia")
                                 include ../svg/arrowRightRed.svg
                         .faqItem
-                            .faqTitle Как стать участником
-                            .faqText
-                                ul
-                                    li
-                                        a(href="/registration/"+lang) Подайте заявку
-                                    li Получите подтверждение
-                                    li Оплатите участие
-                                    li Посетите Конгресс
+                            if ru
+                                .faqTitle Как стать участником
+                                .faqText
+                                    ul
+                                        li
+                                            a(href="/registration/"+lang) Подайте заявку
+                                        li Получите подтверждение
+                                        li Оплатите участие
+                                        li Посетите Конгресс
+                            else
+                                .faqTitle HOW TO TAKE PART
+                                .faqText
+                                        ul
+                                            li
+                                                a(href="/registration/" + lang) Submit an application
+                                            li Get confirmation
+                                            li Pay the participation fee
+                                            li Visit the Congress
+
                             a.newsButton.flex.center( href="/participants/"+lang+"#howtobecome")
                                 include ../svg/arrowRightRed.svg
                         .faqItem
-                            .faqTitle Аккредитация СМИ
-                            .faqText
-                                ul
-                                    li
-                                        a(href="/smi/"+lang) Подайте заявку
-                                    li Получите подтверждение
-                                    li <a href='mailto:info@ifcongress.ru'>Отправьте</a> в пресс-службу запрос на интервью
+                            if ru
+                                .faqTitle Аккредитация СМИ
+                                .faqText
+                                    ul
+                                        li
+                                            a(href="/smi/"+lang) Подайте заявку
+                                        li Получите подтверждение
+                                        li <a href='mailto:info@ifcongress.ru'>Отправьте</a> в пресс-службу запрос на интервью
+                            else
+                                .faqTitle MEDIA ACCREDITATION
+                                .faqText
+                                        ul
+                                            li
+                                                a(href="/smi/" + lang) Submit an application
+                                            li Get confirmation
+                                            li <a href='mailto:info@ifcongress.ru'>Send</a> an interview request to the Press Office
+
+
                             a.newsButton.flex.center( href="/participants/"+lang+"/#smi")
                                 include ../svg/arrowRightRed.svg
                         .faqItem
-                            .faqTitle Личный кабинет
-                            .faqText
-                                ul
-                                    li Информация и новости
-                                    li Транcферы
-                                    li Бронирование отелей
-                                    li Документооборот
+                            if ru
+                                .faqTitle Личный кабинет
+                                .faqText
+                                    ul
+                                        li Информация и новости
+                                        li Транcферы
+                                        li Бронирование отелей
+                                        li Документооборот
+                            else
+                                .faqTitle PERSONAL ACCOUNT
+                                    .faqText
+                                        ul
+                                            li Information and news
+                                            li Transfers
+                                            li Hotel reservations
+                                            li Documents
 
                             a.newsButton.flex.center( href="/personal/")
                                 include ../svg/arrowRightRed.svg
