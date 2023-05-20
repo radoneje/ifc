@@ -388,5 +388,14 @@ if(ts){
             }
 
         }
+        let prevBtn=s.querySelector(".pagenatorPrev")
+        if(prevBtn)
+        {
+            prevBtn.onclick=()=>{
+                console.log(s.parentNode.parentNode.scrollTo({left: window.innerWidth*(s.getAttribute( 'hallNumber')-1)-(16*(s.getAttribute( 'hallNumber')-1)),behavior: 'smooth'}))
+            }
+
+        }
+
     })
 }
