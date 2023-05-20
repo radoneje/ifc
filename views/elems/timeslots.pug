@@ -6,12 +6,7 @@ each ts in day.timeslots
         else
             .oTrack(class=ts.isImpotant?"impotant":"")
                 .oSessionScroll
-                    if(!ts.isImpotant)
-                        .oSessionPageWr
-                            if ts.sessions
-                                each session in ts.sessions
-                                    if(session["halltitle_"+lang])
-                                        .oSessionPage #{session["halltitle_"+lang].replace(/hall /i,"").replace(/зал /i,"")}
+
 
                     .oSessionWr.flex.left
                         if ts.sessions
@@ -57,5 +52,10 @@ each ts in day.timeslots
                                             .pgmQloader
                                                 include ../svg/loader.svg
                                             .pgmQSuccess Вопрос передан организаторам
-
+                    if(!ts.isImpotant)
+                        .oSessionPageWr
+                            if ts.sessions
+                                each session in ts.sessions
+                                    if(session["halltitle_" + lang])
+                                        .oSessionPage #{session["halltitle_" + lang].replace(/hall /i, "").replace(/зал /i, "")}
 
