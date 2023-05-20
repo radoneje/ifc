@@ -2406,13 +2406,17 @@ img[src='undefined']{
     position: absolute;
     top: 68px;
     left: calc( 80% - 18px);
-    z-index: 100;
+    z-index: 200;
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
     font-weight: 300;
     font-size: 21px;
 
+}
+#internalPageTower .langSelector{
+    top: 44px;
+    right: 64px;
 }
 .langSelectorItem{
     cursor: pointer;
