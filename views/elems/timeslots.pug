@@ -6,12 +6,6 @@ each ts in day.timeslots
         else
             .oTrack(class=ts.isImpotant?"impotant":"")
 
-                if(!ts.isImpotant)
-                    .oSessionPageWr
-                        if ts.sessions
-                            each session in ts.sessions
-                                if(session["halltitle_" + lang])
-                                    .oSessionPage #{session["halltitle_" + lang].replace(/hall /i, "").replace(/зал /i, "")}
 
                 .oSessionScroll
 
@@ -21,6 +15,13 @@ each ts in day.timeslots
                             each session in ts.sessions
                                 if session["halltitle_"+lang]
                                     .oSession(hallNummer=session["halltitle_"+lang].replace(/hall /i,"").replace(/зал /i,""))
+                                        if(!ts.isImpotant)
+                                            .oSessionPageWr
+                                                if ts.sessions
+                                                    each sessionPage in ts.sessions
+                                                        if(sessionPage["halltitle_" + lang])
+                                                            .oSessionPage #{sessionPage["halltitle_" + lang].replace(/hall /i, "").replace(/зал /i, "")}
+
                                         .oSessionHallTitle #{session["halltitle_"+lang]}
                                         .oSessionTitle
                                             if ts.isImpotant
