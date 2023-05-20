@@ -939,6 +939,18 @@
     .oSessionPage.active{
         background: #BB3E3F;
     }
+    .pagenatorNext{
+        background: #E39A4F;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        box-sizing: border-box;
+        padding: 4px;
+    }
+    .pagenatorNext svg{
+        width: 100%;
+        height: auto;
+    }
 
 
 
