@@ -5,9 +5,15 @@
         .footerItem.mobile(style="text-align: right;")
             include ../svg/brLogo.svg
         .footerItem.centerfooterItem
-            .footerItemRow <a href="mailto:INFO@IFCONGRESS.RU">INFO@IFCONGRESS.RU</a><br><a href="tel:8 800 300-69-23">8&nbsp;800&nbsp;300-69-23</a>
-            .footerItemRow.footerItemRowLink(onclick="window.open('/static/key/agr"+lang+"?open=open')") ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ
-            .footerItemRow © 2023 ВСЕ ПРАВА ЗАЩИЩЕНЫ <u><a href="https://tmproject.ru" target="_blank">ООО&nbsp;«ЭФФЕКТКОММ»</a></u> <br>ИНН 7716792536
+            if ru
+                .footerItemRow <a href="mailto:INFO@IFCONGRESS.RU">INFO@IFCONGRESS.RU</a><br><a href="tel:8 800 300-69-23">8&nbsp;800&nbsp;300-69-23</a>
+                .footerItemRow.footerItemRowLink(onclick="window.open('/static/key/agr"+lang+"?open=open')") ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ
+                .footerItemRow © 2023 ВСЕ ПРАВА ЗАЩИЩЕНЫ <u><a href="https://tmproject.ru" target="_blank">ООО&nbsp;«ЭФФЕКТКОММ»</a></u> <br>ИНН 7716792536
+            else
+                .footerItemRow <a href="mailto:INFO@IFCONGRESS.RU">INFO@IFCONGRESS.RU</a><br><a href="tel:8 800 300-69-23">8&nbsp;800&nbsp;300-69-23</a>
+                    .footerItemRow.footerItemRowLink(onclick="window.open('/static/key/agr" + lang + "?open=open')") TERMS OF SERVICE
+                    .footerItemRow © 2023 ALL RIGHTS RESERVED <u><a href="https://tmproject.ru" target="_blank">EFFECTCOM&nbsp;LLC</a></u>
+
         .footerItem.desktop(style="text-align: right;")
             include ../svg/brLogo.svg
     .footerVisaItem
