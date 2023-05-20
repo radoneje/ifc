@@ -918,6 +918,17 @@
         align-items: flex-start;
         justify-content: right;
     }
+    .oSessionPageWr{
+        position: absolute;
+
+
+    }
+    .oSessionPage{
+        width: 16px;
+        height: 16px;
+        margin-left: 8px;
+        background: #878787;
+    }
 
 
 
