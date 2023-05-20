@@ -2416,6 +2416,7 @@ img[src='undefined']{
 .langSelectorItem{
     cursor: pointer;
     color:#FFFFFF;
+    margin-right: 24px;
 }
 .langSelectorItem.active{
 
