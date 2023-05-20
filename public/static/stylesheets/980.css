@@ -951,6 +951,9 @@
         width: 100%;
         height: auto;
     }
+    .oSession:last-child .pagenatorNext{
+        display: none;
+    }
 
 
 
