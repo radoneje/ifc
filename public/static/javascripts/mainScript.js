@@ -376,9 +376,17 @@ if(ts){
     let sessions=ts.querySelectorAll(".oSession")
     sessions.forEach(s=>{
         s.querySelectorAll(".paginator").forEach(p=>{
-            console.log(p.innerHTML, s.getAttribute( 'hallNumber'))
+
             if(p.innerHTML==s.getAttribute( 'hallNumber'))
                 p.classList.add("active")
         })
+        let nextBtn=s.querySelector(".pagenatorNext")
+        if(nextBtn)
+        {
+            nextBtn.onclick=()=>{
+                console.log(s.parentNode)
+            }
+
+        }
     })
 }
