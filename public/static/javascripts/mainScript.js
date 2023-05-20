@@ -376,7 +376,7 @@ if(ts){
     let sessions=ts.querySelectorAll(".oSession")
     sessions.forEach(s=>{
         s.querySelectorAll(".paginator").forEach(p=>{
-            console.log(p.innerHTML, s.hallNummer)
+            console.log(p.innerHTML, s.getAttribute( 'hallNumber'))
         })
     })
 }

@@ -15,7 +15,7 @@
                             if ts.sessions
                                 each session in ts.sessions
                                     if session["halltitle_"+lang]
-                                        .oSession(hallNummer=session["halltitle_"+lang].replace(/hall /i,"").replace(/зал /i,""))
+                                        .oSession(hallNumber=session["halltitle_"+lang].replace(/hall /i,"").replace(/зал /i,""))
                                             if(!ts.isImpotant)
                                                 .oSessionPageWr
                                                     if ts.sessions
