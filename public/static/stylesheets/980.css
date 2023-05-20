@@ -934,6 +934,7 @@
         background: #878787;
         color:#FFFFFF;
         font-weight: 300;
+        color: transparent;
     }
     .oSessionPage.active{
         background: #BB3E3F;
