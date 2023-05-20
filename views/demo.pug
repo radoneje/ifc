@@ -1,6 +1,9 @@
 extends layout
 block head
-    title="Финансовый конгресс Банка России"
+    if ru
+        title="Финансовый конгресс Банка России"
+    else
+        title="FINANCIAL CONGRESS OF THE BANK OF RUSSIA"
 block content
     include elems/mainPage
     //include elems/menu

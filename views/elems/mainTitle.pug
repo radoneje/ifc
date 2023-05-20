@@ -2,6 +2,14 @@
     .mainLogo
         include ../svg/mainlogo.svg
     .h1Wr.flex
-        h1 ФИНАНСОВЫЙ<br>КОНГРЕСС<br>БАНКА&nbsp;РОССИИ
-h2.desktop 6-7 июля 2023<br>Санкт-Петербург
-h2.mobile 6-7 июля 2023<br>Санкт-Петербург
+        if ru
+            h1 ФИНАНСОВЫЙ<br>КОНГРЕСС<br>БАНКА&nbsp;РОССИИ
+        else
+            h1 FINANCIAL<br>CONGRESS<br>OF&nbsp;THE&nbsp;BANK&nbsp;OF&nbsp;RUSSIA
+if ru
+    h2.desktop 6-7 июля 2023<br>Санкт-Петербург
+    h2.mobile 6-7 июля 2023<br>Санкт-Петербург
+else
+    h2.desktop 6–7 JULY 2023<br>ST. PETERSBURG
+    h2.mobile 6–7 JULY 2023<br>ST. PETERSBURG
+

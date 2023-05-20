@@ -1,9 +1,18 @@
 a.menuItem.flex.center.left(href="/registration/"+lang)
     .menuItemBox
-    .menuItemText ЗАЯВКА НА УЧАСТИЕ
+    if ru
+        .menuItemText ЗАЯВКА НА УЧАСТИЕ
+    else
+        .menuItemText  APPLICATION FORM
 a.menuItem.flex.center.left(href="/smi/"+lang)
     .menuItemBox
-    .menuItemText Аккредитация СМИ
+    if ru
+        .menuItemText Аккредитация СМИ
+    else
+        .menuItemText APPLICATION FORM
 a.menuItem.flex.center.left(href="/personal/")
     .menuItemBox
-    .menuItemText Личный кабинет
+    if ru
+        .menuItemText Личный кабинет
+    else
+        .menuItemText PERSONAL ACCOUNT

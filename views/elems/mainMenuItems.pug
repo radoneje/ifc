@@ -4,5 +4,8 @@
     .mainMenuItem(onclick="document.location.href='/participants/"+lang+"'") Участникам
 
 .mainMenuGroup
-    a.mainMenuItem(href="/programme/"+lang) Программа
+    if ru
+        a.mainMenuItem(href="/programme/"+lang) Программа
+    else
+        a.mainMenuItem(href="/programme/"+lang) Programme
     //a.mainMenuItem(href="/speakers/"+lang) Спикеры
