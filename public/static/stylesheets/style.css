@@ -2398,9 +2398,10 @@ img[src='undefined']{
     width: 271px;
     height: auto;
 }
-#mainPageTower{
+#mainPageTower, #internalPageTower{
     position: relative;
 }
+
 .langSelector{
     position: absolute;
     top: 68px;
