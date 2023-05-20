@@ -609,6 +609,7 @@
     .oTrack:not(.impotant) .oSessionScroll {
         width: calc(100% + 48px);
         margin-left:-24px;
+        position: relative;
     }
     .oTrack:not(.impotant) .oSessionWr {
         width: max-content;
