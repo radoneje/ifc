@@ -2398,6 +2398,20 @@ img[src='undefined']{
     width: 271px;
     height: auto;
 }
+.langSelector{
+
+}
+.langSelectorItem{
+    cursor: pointer;
+    color:#FFFFFF;
+}
+.langSelectorItem.active{
+
+    color:#BB3E3F;
+}
+.langSelectorItem:not(.active):hover{
+    color: #F1CCA7 ;
+}
 
 
 @media all and (max-width: 1700px){
