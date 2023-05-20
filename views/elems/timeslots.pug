@@ -8,9 +8,10 @@ each ts in day.timeslots
                 .oSessionScroll
                     if(!ts.isImpotant)
                         .oSessionPageWr
-                            each session in ts.sessions
-                                if(session["halltitle_"+lang])
-                                    .oSessionPage -!{session["halltitle_"+lang].replace(/hall /i,"").replace(/зал /i,"")}
+                            if ts.sessions
+                                each session in ts.sessions
+                                    if(session["halltitle_"+lang])
+                                        .oSessionPage -!{session["halltitle_"+lang].replace(/hall /i,"").replace(/зал /i,"")}
 
                     .oSessionWr.flex.left
                         if ts.sessions
