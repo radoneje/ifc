@@ -594,6 +594,7 @@
         padding: 8px;
         box-sizing: border-box;
         margin-top: 12px;
+        position: relative;
 
     }
     .oSessionWr{
@@ -918,10 +919,10 @@
         display: flex;
         align-items: flex-start;
         justify-content: right;
-    }
-    .oSessionPageWr{
-        position: absolute;
 
+        position: absolute;
+        top: 12px;
+        right: 32px;
 
     }
     .oSessionPage{

@@ -5,6 +5,14 @@ each ts in day.timeslots
             .oTrack.oAllTracks(class=ts.isImpotant?"impotant":"") #{ts["descr_"+lang]}
         else
             .oTrack(class=ts.isImpotant?"impotant":"")
+
+                if(!ts.isImpotant)
+                    .oSessionPageWr
+                        if ts.sessions
+                            each session in ts.sessions
+                                if(session["halltitle_" + lang])
+                                    .oSessionPage #{session["halltitle_" + lang].replace(/hall /i, "").replace(/зал /i, "")}
+
                 .oSessionScroll
 
 
@@ -52,10 +60,4 @@ each ts in day.timeslots
                                             .pgmQloader
                                                 include ../svg/loader.svg
                                             .pgmQSuccess Вопрос передан организаторам
-                    if(!ts.isImpotant)
-                        .oSessionPageWr
-                            if ts.sessions
-                                each session in ts.sessions
-                                    if(session["halltitle_" + lang])
-                                        .oSessionPage #{session["halltitle_" + lang].replace(/hall /i, "").replace(/зал /i, "")}
 
