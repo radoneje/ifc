@@ -2,7 +2,7 @@ extends layout
 
 block head
     if ru
-        title="Финансовый Когресс Банка России:  Программа"
+        title="Финансовый Когресс Банка России: Программа"
     else
         title="FINANCIAL CONGRESS OF THE BANK OF RUSSIA: Programme"
 block content
@@ -14,9 +14,9 @@ block content
             .newsDecor2
                 include svg/pgmDecor2.svg
             if ru
-            .sectionTitle Программа
+                .sectionTitle Программа
             else
-            .sectionTitle  PROGRAM
+                .sectionTitle  Programme
 
             .pgmWr
                 each day in pgm
