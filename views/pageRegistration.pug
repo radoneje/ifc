@@ -53,10 +53,10 @@ block content
                                 #noFoto(v-else)
                                     if ru
                                         div Загрузить фото<br>для пропуска
-                                        div(style="font-size: .8em; margin-top: 4px;") анфас, на светлом фоне
+                                        div(style="font-size: .8em; margin-top: 4px;") анфас,<br>на светлом фоне
                                     else
                                         div PLEASE UPLOAD A PHOTO<br>FOR YOUR BADGE
-                                        div(style="font-size: .8em; margin-top: 4px;") FORWARD-FACING, LIGHT BACKGROUND
+                                        div(style="font-size: .8em; margin-top: 4px;") FORWARD-FACING,<br>LIGHT BACKGROUND
 
                         .reqRowErrorMessage(v-if="photoError") Фотография должна быть загружена
 
@@ -200,60 +200,69 @@ block content
 
 
                 else
-                    .regRow
-                        .menuItem.flex.center.left
-                            .menuItemBox
-                            .menuItemText Компания, которую вы&nbsp;представляете
-                    .regRow(v-bind:class="{error:errors.company.inn}")
-                        .regRowGroup.flex.left()
-                            .recLabel.reg287 ИНН
-                            input#inn.reqInput(v-on:change="if(innStatus.state==2) clear('company')" v-model="user.company.inn"  type="number")
-                        .reqRowErrorMessage(v-if="innStatus.message") {{innStatus.message}}
+                    if ru
+                        .regRow
+                            .menuItem.flex.center.left
+                                .menuItemBox
+                                .menuItemText Компания, которую вы&nbsp;представляете
+                        .regRow(v-bind:class="{error:errors.company.inn}")
+                            .regRowGroup.flex.left()
+                                .recLabel.reg287 ИНН
+                                input#inn.reqInput(v-on:change="if(innStatus.state==2) clear('company')" v-model="user.company.inn"  type="number")
+                            .reqRowErrorMessage(v-if="innStatus.message") {{innStatus.message}}
 
-                        .regCheckBox.green.flex.mobileWrap.left(v-on:click="loadInn('company', innStatus)" v-bind:class="{active:innStatus.state==2,loading:innStatus.state==1}" style="margin-top: 6px;" )
-                            .regCheckBoxText(style="margin-left:0") <span class="innBtn">Загрузить из ФНС </span>
-                            .regCheckBoxBox.desktop.opacity0(v-bind:class="{opacity100:innStatus.state==1}")
-                                .FNSloader
+                            .regCheckBox.green.flex.mobileWrap.left(v-on:click="loadInn('company', innStatus)" v-bind:class="{active:innStatus.state==2,loading:innStatus.state==1}" style="margin-top: 6px;" )
+                                .regCheckBoxText(style="margin-left:0") <span class="innBtn">Загрузить из ФНС </span>
+                                .regCheckBoxBox.desktop.opacity0(v-bind:class="{opacity100:innStatus.state==1}")
+                                    .FNSloader
+                                        include svg/loader.svg
+                                //if typeid==4
+                                //    .regCheckBoxComment Нажмите «Загрузить из ФНС», чтобы автоматически заполнить остальные реквизиты
+
+                                .regCheckBoxComment Нажмите «Загрузить из ФНС», чтобы автоматически заполнить остальные реквизиты
+                                .FNSloader.mobile.opacity0(v-bind:class="{opacity100:innStatus.state==1}")
                                     include svg/loader.svg
-                            //if typeid==4
-                            //    .regCheckBoxComment Нажмите «Загрузить из ФНС», чтобы автоматически заполнить остальные реквизиты
 
-                            .regCheckBoxComment Нажмите «Загрузить из ФНС», чтобы автоматически заполнить остальные реквизиты
-                            .FNSloader.mobile.opacity0(v-bind:class="{opacity100:innStatus.state==1}")
-                                include svg/loader.svg
-
-                    .regRow
-                        .regRowGroup.readonly.flex.left
-                            .recLabel.reg287 Наименование
-                            input.reqInput( readonly v-model="user.company.name")
-                    .regRow
-                        .regRowGroup.readonly.flex.left
-                            .recLabel.reg287 КПП
-                            input.reqInput(readonly v-model="user.company.kpp")
-                    .regRow
-                        .regRowGroup.readonly.flex.left
-                            .recLabel.reg287 ОГРН
-                            input.reqInput(readonly v-model="user.company.ogrn")
-                    .regRow
-                        .regRowGroup.readonly.flex.left
-                            .recLabel.reg287 адрес
-                            input.reqInput(readonly v-model="user.company.address")
-                    .regRow
-                        .regRowGroup.readonly.flex.left
-                            .recLabel.reg287 руководитель
-                            input.reqInput(readonly v-model="user.company.director")
-                    .regRow
-                        .regRowGroup.flex.left
-                            .recLabel.reg287 телефон
-                            input.reqInput( v-model="user.company.phone" placeholder="ФОРМАТ: +7 000 000 0000")
-                    .regRow
-                        .regRowGroup.flex.left
-                            if typeid==4
-                                .recLabel.reg287  Название издания
-                            else
-                                .recLabel.reg287  Короткое наименование
-                            input.reqInput( v-model="user.company.shortName" )
-
+                        .regRow
+                            .regRowGroup.readonly.flex.left
+                                .recLabel.reg287 Наименование
+                                input.reqInput( readonly v-model="user.company.name")
+                        .regRow
+                            .regRowGroup.readonly.flex.left
+                                .recLabel.reg287 КПП
+                                input.reqInput(readonly v-model="user.company.kpp")
+                        .regRow
+                            .regRowGroup.readonly.flex.left
+                                .recLabel.reg287 ОГРН
+                                input.reqInput(readonly v-model="user.company.ogrn")
+                        .regRow
+                            .regRowGroup.readonly.flex.left
+                                .recLabel.reg287 адрес
+                                input.reqInput(readonly v-model="user.company.address")
+                        .regRow
+                            .regRowGroup.readonly.flex.left
+                                .recLabel.reg287 руководитель
+                                input.reqInput(readonly v-model="user.company.director")
+                        .regRow
+                            .regRowGroup.flex.left
+                                .recLabel.reg287 телефон
+                                input.reqInput( v-model="user.company.phone" placeholder="ФОРМАТ: +7 000 000 0000")
+                        .regRow
+                            .regRowGroup.flex.left
+                                if typeid==4
+                                    .recLabel.reg287  Название издания
+                                else
+                                    .recLabel.reg287  Короткое наименование
+                                input.reqInput( v-model="user.company.shortName" )
+                    else
+                        .regRow
+                            .menuItem.flex.center.left
+                                .menuItemBox
+                                .menuItemText COMPANY THAT YOU REPRESENT
+                        .regRow
+                            .regRowGroup.flex.left
+                                .recLabel.reg287 COMPANY NAME
+                                input.reqInput( v-model="user.company.name" )
 
 
                 ////////////////
@@ -263,16 +272,25 @@ block content
                         div
                             .regCheckBoxBox
                         div
-                            .regCheckBoxText( ) ПРИНИМАЮ ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ
-                                a.gray(onclick="event.preventDefault();window.open('/static/key/agr"+lang+"?open=open')")  (посмотреть)
+                            if ru
+                                .regCheckBoxText( ) ПРИНИМАЮ ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ
+                                    a.gray(onclick="event.preventDefault();window.open('/static/key/agr"+lang+"?open=open')")  (посмотреть)
+                            else
+                                .regCheckBoxText( )  I HEREBY ACCEPT THE TERMS OF SERVICE
+                                    a.gray(onclick="event.preventDefault();window.open('/static/key/agr"+lang+"?open=open')") (SEE DETAILS)
+
                     .reqRowErrorMessage(v-if="isPersonalAgreementError && !user.isPersonalAgreement") Cоглашение не принято
                 .regRow.checkBox
                     .regCheckBox.green.flex.left(v-on:click="user.isTerms=!user.isTerms" v-bind:class="{active:user.isTerms}")
                         div
                             .regCheckBoxBox
                         div
-                            .regCheckBoxText СОГЛАШАЮСЬ НА ОБРАБОТКУ ПЕРСОНАЛЬНЫХ ДАННЫХ
-                                a.gray(   onclick="event.preventDefault();window.open('/static/key/pers"+lang+"?open=open')")  (посмотреть)
+                            if ru
+                                .regCheckBoxText I HEREBY AGREE TO HAVE MY PERSONAL DATA PROCESSED
+                                    a.gray(   onclick="event.preventDefault();window.open('/static/key/pers"+lang+"?open=open')")  (посмотреть)
+                            else
+                                .regCheckBoxText СОГЛАШАЮСЬ НА ОБРАБОТКУ ПЕРСОНАЛЬНЫХ ДАННЫХ
+                                    a.gray(   onclick="event.preventDefault();window.open('/static/key/pers" + lang + "?open=open')")  (SEE DETAILS)
                     .reqRowErrorMessage(v-if="isTermsError && !user.isTerms") Cоглашение не принято
 
                 .regRow.desktop &nbsp;
