@@ -377,6 +377,8 @@ if(ts){
     sessions.forEach(s=>{
         s.querySelectorAll(".paginator").forEach(p=>{
             console.log(p.innerHTML, s.getAttribute( 'hallNumber'))
+            if(p.innerHTML==s.getAttribute( 'hallNumber'))
+                p.classList.add("active")
         })
     })
 }

@@ -935,6 +935,9 @@
         color:#FFFFFF;
         font-weight: 300;
     }
+    .oSessionPage.active{
+        background: #BB3E3F;
+    }
 
 
 
