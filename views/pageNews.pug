@@ -10,7 +10,10 @@ block content
                 include svg/newsDecor.svg
             .newsDecor2
                 include svg/newsDecor2.svg
-            .sectionTitle Новости
+            if ru
+                .sectionTitle Новости
+            else
+                .sectionTitle News
 
             .newsWr
                 each n in news
