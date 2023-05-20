@@ -939,7 +939,7 @@
     .oSessionPage.active{
         background: #BB3E3F;
     }
-    .pagenatorNext, pagenatorPrev{
+    .pagenatorNext, .pagenatorPrev{
         background: #E39A4F;
         display: flex;
         align-items: center;
