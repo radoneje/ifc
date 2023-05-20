@@ -939,7 +939,7 @@
     .oSessionPage.active{
         background: #BB3E3F;
     }
-    .pagenatorNext{
+    .pagenatorNext, pagenatorPrev{
         background: #E39A4F;
         display: flex;
         align-items: center;
@@ -947,13 +947,20 @@
         box-sizing: border-box;
         padding: 4px;
     }
-    .pagenatorNext svg{
+    .pagenatorNext svg, .pagenatorPrev svg{
         width: 100%;
         height: auto;
+    }
+    .pagenatorPrev svg{
+        transform: rotate(180deg);
     }
     .oSession:last-child .pagenatorNext{
         display: none;
     }
+    .oSession:first-child .pagenatorPrev{
+        display: none;
+    }
+
 
 
 
