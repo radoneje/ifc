@@ -913,6 +913,11 @@
     .langSelector{
         display: none;
     }
+    .oSessionPageWr{
+        display: flex;
+        align-items: flex-start;
+        justify-content: right;
+    }
 
 
 

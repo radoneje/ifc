@@ -2431,6 +2431,9 @@ img[src='undefined']{
 .langSelectorItem:not(.active):hover{
     color: #F1CCA7 ;
 }
+.oSessionPageWr{
+    display: none;
+}
 
 
 @media all and (max-width: 1700px){
