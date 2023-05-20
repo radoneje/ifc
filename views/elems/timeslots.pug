@@ -16,45 +16,46 @@ each ts in day.timeslots
                     .oSessionWr.flex.left
                         if ts.sessions
                             each session in ts.sessions
-                                .oSession(hallNummer=session["halltitle_"+lang].replace(/hall /i,"").replace(/зал /i,""))
-                                    .oSessionHallTitle #{session["halltitle_"+lang]}
-                                    .oSessionTitle
-                                        if ts.isImpotant
-                                            if ru
-                                                span.plenar  Пленарная сессия:&nbsp;
-                                            else
-                                                span.plenar  PLENARY session:&nbsp;
-                                        span #{session["title_"+lang]}
-                                    if ru
-                                        .oSessionDetails(onclick="showSession("+session.id+", '"+lang+"')") подробнее
-                                    else
-                                        .oSessionDetails(onclick="showSession("+session.id+", '"+lang+"')") details
-                                    if session.moderators
-                                        .oSessionSpkBox
-                                            if ru
-                                                .oSessionSpkBoxTitle Модератор:
-                                            else
-                                                .oSessionSpkBoxTitle Moderator:
+                                if session["halltitle_"+lang]
+                                    .oSession(hallNummer=session["halltitle_"+lang].replace(/hall /i,"").replace(/зал /i,""))
+                                        .oSessionHallTitle #{session["halltitle_"+lang]}
+                                        .oSessionTitle
+                                            if ts.isImpotant
+                                                if ru
+                                                    span.plenar  Пленарная сессия:&nbsp;
+                                                else
+                                                    span.plenar  PLENARY session:&nbsp;
+                                            span #{session["title_"+lang]}
+                                        if ru
+                                            .oSessionDetails(onclick="showSession("+session.id+", '"+lang+"')") подробнее
+                                        else
+                                            .oSessionDetails(onclick="showSession("+session.id+", '"+lang+"')") details
+                                        if session.moderators
+                                            .oSessionSpkBox
+                                                if ru
+                                                    .oSessionSpkBoxTitle Модератор:
+                                                else
+                                                    .oSessionSpkBoxTitle Moderator:
 
-                                            .oSpkBox(onclick="showSpeaker("+session.moderators[0].id+", '"+lang+"')")
-                                                .oSessionSpkBoxName #{session.moderators[0]["i"+lang]} #{session.moderators[0]["f"+lang]}
-                                                    .oSessionSpkBoxPos  #{session.moderators[0]["company"+lang]}
-                                    if session.speakers
-                                        .oSessionSpkBox
-                                            if ru
-                                                .oSessionSpkBoxTitle Спикеры:
-                                            else
-                                                .oSessionSpkBoxTitle Speakers:
+                                                .oSpkBox(onclick="showSpeaker("+session.moderators[0].id+", '"+lang+"')")
+                                                    .oSessionSpkBoxName #{session.moderators[0]["i"+lang]} #{session.moderators[0]["f"+lang]}
+                                                        .oSessionSpkBoxPos  #{session.moderators[0]["company"+lang]}
+                                        if session.speakers
+                                            .oSessionSpkBox
+                                                if ru
+                                                    .oSessionSpkBoxTitle Спикеры:
+                                                else
+                                                    .oSessionSpkBoxTitle Speakers:
 
-                                            each spk in session.speakers
-                                                .oSpkBox(onclick="showSpeaker("+spk.id+", '"+lang+"')")
-                                                    .oSessionSpkBoxName #{spk["i" + lang]} #{spk["f" + lang]}
-                                                        .oSessionSpkBoxPos  #{spk["company" + lang]}
-                                    .oSessionSpkBox.pgmQBox(sessionid=session.id)
-                                        textarea(placeholder="Напишите вопрос здесь")
-                                        .pqmQBtn задать вопрос
-                                        .pgmQloader
-                                            include ../svg/loader.svg
-                                        .pgmQSuccess Вопрос передан организаторам
+                                                each spk in session.speakers
+                                                    .oSpkBox(onclick="showSpeaker("+spk.id+", '"+lang+"')")
+                                                        .oSessionSpkBoxName #{spk["i" + lang]} #{spk["f" + lang]}
+                                                            .oSessionSpkBoxPos  #{spk["company" + lang]}
+                                        .oSessionSpkBox.pgmQBox(sessionid=session.id)
+                                            textarea(placeholder="Напишите вопрос здесь")
+                                            .pqmQBtn задать вопрос
+                                            .pgmQloader
+                                                include ../svg/loader.svg
+                                            .pgmQSuccess Вопрос передан организаторам
 
 
