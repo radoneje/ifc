@@ -2398,7 +2398,19 @@ img[src='undefined']{
     width: 271px;
     height: auto;
 }
+#mainPageTower{
+    position: relative;
+}
 .langSelector{
+    position: absolute;
+    top: 68px;
+    right: 253px;
+    z-index: 100;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    font-weight: 300;
+    font-size: 21px;
 
 }
 .langSelectorItem{
