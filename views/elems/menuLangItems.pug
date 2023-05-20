@@ -1,2 +1,7 @@
-a.LangMenuItem(class=ru?"":"active" onclick="closeMobileMenu();") RUS
-a.LangMenuItem(class=ru?"active":"" onclick="closeMobileMenu();") ENG
+if ru
+    a.LangMenuItem.active( onclick="closeMobileMenu();") РУС
+    a.LangMenuItem(class=ru?"active":"" onclick="closeMobileMenu();") ENG
+else
+    a.LangMenuItem( href="ru") РУС
+    a.LangMenuItem.active(href="en") ENG
+
