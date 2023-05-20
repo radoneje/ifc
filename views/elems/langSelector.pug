@@ -1,3 +1,7 @@
 .langSelector
-    a.langSelectorItem.active(href="ru") RUS
-    a.langSelectorItem(href="en") ENG
+    if ru
+        a.langSelectorItem.active(href="ru") RUS
+        a.langSelectorItem(href="en") ENG
+    else
+        a.langSelectorItem(href="ru") RUS
+        a.langSelectorItem.active(href="en") ENG
