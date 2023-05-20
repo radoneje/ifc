@@ -16,7 +16,7 @@ each ts in day.timeslots
                     .oSessionWr.flex.left
                         if ts.sessions
                             each session in ts.sessions
-                                .oSession
+                                .oSession(hallNummer=session["halltitle_"+lang].replace(/hall /i,"").replace(/зал /i,""))
                                     .oSessionHallTitle #{session["halltitle_"+lang]}
                                     .oSessionTitle
                                         if ts.isImpotant
