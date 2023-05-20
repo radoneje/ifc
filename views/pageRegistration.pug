@@ -1,36 +1,63 @@
 extends layout
 
 block head
-    title="Финансовый Когресс Банка России:  Регистрация"
+    if ru
+        title="Финансовый Когресс Банка России:  Регистрация"
+    else
+        title="FINANCIAL CONGRESS OF THE BANK OF RUSSIA:  APPLICATION FORM"
+
 block content
     include elems/internalHead
     .tower#registration
         .subTower
             .partnersDecor
                 include svg/regDecor.svg
-            if typeid==4
-                .sectionTitle Аккредитация
-            else if typeid==9
-                .sectionTitle Заявка на регистрацию
+            if ru
+                if typeid==4
+                    .sectionTitle Аккредитация
+                else if typeid==9
+                    .sectionTitle Заявка на регистрацию
+                else
+                    .sectionTitle Заявка на участие
             else
-                .sectionTitle Заявка на участие
+                if typeid == 4
+                    .sectionTitle APPLICATION FORM
+                else if typeid == 9
+                    .sectionTitle APPLICATION FORM
+                else
+                    .sectionTitle APPLICATION FORM
+
             .regBox
                 .menuItem.flex.center.left.mt-4
                     .menuItemBox
-                    if typeid==4
-                        .menuItemText Представитель СМИ
-                    else if typeid==9
-                        .menuItemText Представитель партнеров конгресса
+                    if ru
+                        if typeid==4
+                            .menuItemText Представитель СМИ
+                        else if typeid==9
+                            .menuItemText Представитель партнеров конгресса
+                        else
+                            .menuItemText Участник
                     else
-                        .menuItemText Участник
+                        if typeid == 4
+                            .menuItemText PARTICIPANT
+                        else if typeid == 9
+                            .menuItemText PARTICIPANT
+                        else
+                            .menuItemText PARTICIPANT
+
                 .regRow
                     .reqPhoto2.reg287(v-on:click="uploadPhoto()" v-bind:class="{errorPhoto:photoError}")
                         .reqPhotoBox2
                             .reqPhotoBox2Photo
                                 img(v-if="user.photoid" :src="'/static/image/middle/'+user.photoid")
                                 #noFoto(v-else)
-                                    div Загрузить фото<br>для пропуска
-                                    div(style="font-size: .8em; margin-top: 4px;") анфас, на светлом фоне
+                                    if ru
+                                        div Загрузить фото<br>для пропуска
+                                        div(style="font-size: .8em; margin-top: 4px;") анфас, на светлом фоне
+                                    else
+                                        div PLEASE UPLOAD A PHOTO<br>FOR YOUR BADGE
+                                        div(style="font-size: .8em; margin-top: 4px;") FORWARD-FACING, LIGHT BACKGROUND
+
                         .reqRowErrorMessage(v-if="photoError") Фотография должна быть загружена
 
                 //.regRow
@@ -51,48 +78,75 @@ block content
                             div
                                 .regCheckBoxBox
                             div
-                                .regCheckBoxText( ) Я приглашен организаторами в качестве спикера
+                                if ru
+                                    .regCheckBoxText( ) Я приглашен организаторами в качестве спикера
+                                else
+                                    .regCheckBoxText I HAVE BEEN INVITED AS A SPEAKER
 
 
                 .regRow(v-bind:class="{error:errors.f}")
                     .regRowGroup.flex.left
-                        .recLabel.reg287 Фамилия
+                        if ru
+                            .recLabel.reg287 Фамилия
+                        else
+                            .recLabel.reg287 LAST NAME
                         input.reqInput(v-model="user.f" must name="f")
                 .regRow(v-bind:class="{error:errors.i}")
                     .regRowGroup.flex.left
-                        .recLabel.reg287 Имя
+                        if ru
+                            .recLabel.reg287 Имя
+                        else
+                            .recLabel.reg287 FIRST NAME
                         input.reqInput(v-model="user.i" must name="i")
-                .regRow(v-bind:class="{error:errors.o}")
-                    .regRowGroup.flex.left
-                        .recLabel.reg287 Отчество
-                        input.reqInput(v-model="user.o" must name="o")
+                if ru
+                    .regRow(v-bind:class="{error:errors.o}")
+                        .regRowGroup.flex.left
+                            .recLabel.reg287 Отчество
+                            input.reqInput(v-model="user.o" must name="o")
                 .regRow(v-bind:class="{error:errors.passportNumber}")
                     .regRowGroup.flex.left
-                        .recLabel.reg287  Серия и номер паспорта
-                        input.reqInput(v-model="user.passportNumber" must name="passportNumber" placeholder="ФОРМАТ: С ПРОБЕЛОМ, КАК В ДОКУМЕНТЕ")
-                .regRow(v-bind:class="{error:errors.passportDate}")
+                        if ru
+                            .recLabel.reg287  Серия и номер паспорта
+                            input.reqInput(v-model="user.passportNumber" must name="passportNumber" placeholder="ФОРМАТ: С ПРОБЕЛОМ, КАК В ДОКУМЕНТЕ")
+                        else
+                            .recLabel.reg287 PASSPORT NUMBER
+                            input.reqInput(v-model="user.passportNumber" must name="passportNumber" placeholder="FORMAT: EXACTLY AS IN THE DOCUMENT")
+                if ru
+                    .regRow(v-bind:class="{error:errors.passportDate}")
                     .regRowGroup.flex.left
                         .recLabel.reg287 дата выдачи
                         input.reqInput(v-model="user.passportDate" must name="passportDate" placeholder="ФОРМАТ: КАК В ДОКУМЕНТЕ")
-                .regRow(v-bind:class="{error:errors.passportCode}")
-                    .regRowGroup.flex.left
-                        .recLabel.reg287 код подразделения
-                        input.reqInput(v-model="user.passportCode" must name="passportCode" placeholder="ФОРМАТ: КАК В ДОКУМЕНТЕ")
+                    .regRow(v-bind:class="{error:errors.passportCode}")
+                        .regRowGroup.flex.left
+                            .recLabel.reg287 код подразделения
+                            input.reqInput(v-model="user.passportCode" must name="passportCode" placeholder="ФОРМАТ: КАК В ДОКУМЕНТЕ")
                 .regRow(v-bind:class="{error:errors.address}")
                     .regRowGroup.flex.left
-                        .recLabel.reg287 адрес регистрации
-                        input.reqInput(v-model="user.address" must name="address" placeholder="ФОРМАТ: КАК В ДОКУМЕНТЕ")
+                        if ru
+                            .recLabel.reg287 адрес регистрации
+                            input.reqInput(v-model="user.address" must name="address" placeholder="ФОРМАТ: КАК В ДОКУМЕНТЕ")
+                        else
+                            .recLabel.reg287 Страна
+                            input.reqInput(v-model="user.address" must name="address" placeholder="")
+
+
                 .regRow(v-bind:class="{error:errors.email}")
                     .regRowGroup.flex.left
                         .recLabel.reg287 email
                         input.reqInput(v-model="user.email" must name="email" email )
                 .regRow(v-bind:class="{error:errors.phone}")
                     .regRowGroup.flex.left
-                        .recLabel.reg287 телефон
-                        input.reqInput(v-model="user.phone" must name="phone" placeholder="ФОРМАТ: +7 000 000 0000")
+                        if ru
+                            .recLabel.reg287 телефон
+                        else
+                            .recLabel.reg287 PHONE NUMBER
+                        input.reqInput(v-model="user.phone" must name="phone" placeholder="ФОРМАТ: +X 000 000 0000")
                 .regRow(v-bind:class="{error:errors.position}")
                     .regRowGroup.flex.left
-                        .recLabel.reg287 должность
+                        if ru
+                            .recLabel.reg287 должность
+                        else
+                            .recLabel.reg287 POSITION
                         input.reqInput(v-model="user.position" must  name="position" placeholder="" )
 
                 if !typeid && typeid!=4
@@ -101,12 +155,18 @@ block content
                             div
                                 .regCheckBoxBox
                             div
-                                .regCheckBoxText есть Контактное лицо
+                                if ru
+                                    .regCheckBoxText есть Контактное лицо
+                                else
+                                    .regCheckBoxText CONTACT PERSON’S DETAILS (IF APPLICABLE)
 
                     .regIsProxy(v-if="user.isProxy")
                         .regRow(v-bind:class="{error:errors.proxyi}")
                             .regRowGroup.flex.left
-                                .recLabel.reg287 Имя
+                                if ru
+                                    .recLabel.reg287 Имя
+                                else
+                                    .recLabel.reg287 Name
                                 input.reqInput(v-model="user.proxyi" must name="proxyi")
                         .regRow(v-bind:class="{error:errors.proxyemail}")
                             .regRowGroup.flex.left
@@ -114,8 +174,12 @@ block content
                                 input.reqInput(v-model="user.proxyemail" must email name="proxyemail")
                         .regRow(v-bind:class="{error:errors.proxyphone}")
                             .regRowGroup.flex.left
-                                .recLabel.reg287 телефон
-                                input.reqInput(v-model="user.proxyphone" must name="proxyphone" placeholder="ФОРМАТ: +7 000 000 0000" )
+                                if ru
+                                    .recLabel.reg287 телефон
+                                    input.reqInput(v-model="user.proxyphone" must name="proxyphone" placeholder="ФОРМАТ: +7 000 000 0000" )
+                                else
+                                    .recLabel.reg287 PHONE NUMBER
+                                        input.reqInput(v-model="user.proxyphone" must name="proxyphone" placeholder="FORMAT: +X 000 000 0000" )
                 if !typeid && typeid!=4
                     .regRow.topdivaider &nbsp;
                 else

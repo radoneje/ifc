@@ -1,7 +1,10 @@
 extends layout
 
 block head
-    title="Финансовый Когресс Банка России:  Программа"
+    if ru
+        title="Финансовый Когресс Банка России:  Программа"
+    else
+        title="FINANCIAL CONGRESS OF THE BANK OF RUSSIA: Programme"
 block content
     include elems/internalHead
     .tower#newsPage
