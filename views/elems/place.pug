@@ -2,7 +2,10 @@
     .subTower
         .placeDecor
             include ../svg/partnersDecor.svg
-        .sectionTitle площадка
+        if ru
+            .sectionTitle VENUE
+        else
+
     .placeWr.flex.center
         .quotesArrow.l.flex.center.desktop#placeArrowL
             include ../svg/arrowRightRed.svg
@@ -13,8 +16,12 @@
                         img(src="/static/images/place01.png" loading="lazy")
                 .placeTextWr
                     .placeText
-                        .placeTextItem Финансовый конгресс Банка&nbsp;России в&nbsp;2023&nbsp;году пройдёт на&nbsp;уникальной площадке – Новой&nbsp;сцене&nbsp;Мариинского&nbsp;театра, ставшей узнаваемым символом Санкт-Петербурга&nbsp;XXI&nbsp;века.
-                        .placeTextItem Локациями для деловой программы конгресса станут основной и&nbsp;камерный залы Мариинского-2, его репетиционные сцены и&nbsp;классы, открытые террасы с&nbsp;панорамными видами на&nbsp;город и&nbsp;знаменитые многоуровневые гостевые зоны со&nbsp;стенами, отделанными прозрачным ониксом.
+                        if ru
+                            .placeTextItem Финансовый конгресс Банка&nbsp;России в&nbsp;2023&nbsp;году пройдёт на&nbsp;уникальной площадке – Новой&nbsp;сцене&nbsp;Мариинского&nbsp;театра, ставшей узнаваемым символом Санкт-Петербурга&nbsp;XXI&nbsp;века.
+                            .placeTextItem Локациями для деловой программы конгресса станут основной и&nbsp;камерный залы Мариинского-2, его репетиционные сцены и&nbsp;классы, открытые террасы с&nbsp;панорамными видами на&nbsp;город и&nbsp;знаменитые многоуровневые гостевые зоны со&nbsp;стенами, отделанными прозрачным ониксом.
+                        else
+                            .placeTextItem The 2023 Financial Congress of the&nbsp;Bank&nbsp;of&nbsp;Russia will be held at a unique venue – the New&nbsp;Stage of the Mariinsky&nbsp;Theatre, which has become a landmark of the&nbsp;21st&nbsp;century St.&nbsp;Petersburg.
+                            .placeTextItem The business program of the Congress will take place in the Main Hall and the Chamber Hall of Mariinsky II, in its rehearsal halls and classrooms, on the open terraces with panoramic views of the city, and in the famous multilevel pre-function areas where walls are paneled with translucent onyx.
 
         .quotesArrow.r.flex.center.desktop#placeArrowR
             include ../svg/arrowRightRed.svg
