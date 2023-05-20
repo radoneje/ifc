@@ -910,7 +910,9 @@
     .persMenuAlert {
         margin-right: 18px;
     }
-
+    .langSelector{
+        display: none;
+    }
 
 
 
