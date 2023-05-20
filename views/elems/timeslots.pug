@@ -6,6 +6,11 @@ each ts in day.timeslots
         else
             .oTrack(class=ts.isImpotant?"impotant":"")
                 .oSessionScroll
+                    if(!ts.isImpotant)
+                        .oSessionPageWr
+                            each session, sessNumber in ts.sessions
+                                .oSessionPage -#{sessNumber}
+
                     .oSessionWr.flex.left
                         if ts.sessions
                             each session in ts.sessions
