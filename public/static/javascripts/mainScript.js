@@ -384,7 +384,7 @@ if(ts){
         if(nextBtn)
         {
             nextBtn.onclick=()=>{
-                console.log(s.parentNode.parentNode.scrollTo({left: window.innerWidth*s.getAttribute( 'hallNumber'),behavior: 'smooth'}))
+                console.log(s.parentNode.parentNode.scrollTo({left: window.innerWidth*s.getAttribute( 'hallNumber')-(16*s.getAttribute( 'hallNumber')),behavior: 'smooth'}))
             }
 
         }
