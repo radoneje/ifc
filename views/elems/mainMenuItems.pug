@@ -1,7 +1,18 @@
 .mainMenuGroup
-    .mainMenuItem(onclick="document.location.href='/news/"+lang+"'") Новости
-    .mainMenuItem(onclick="clickMenuItem('#place','/demo/#place')") Площадка
-    .mainMenuItem(onclick="document.location.href='/participants/"+lang+"'") Участникам
+    if ru
+        .mainMenuItem(onclick="document.location.href='/news/"+lang+"'") Новости
+    esle
+        .mainMenuItem(onclick="document.location.href='/news/"+lang+"'") Новости
+
+    if ru
+        .mainMenuItem(onclick="clickMenuItem('#place','/demo/#place')") Площадка
+    else
+        .mainMenuItem(onclick="clickMenuItem('#place','/demo/#place')") VENUE
+
+    if ru
+        .mainMenuItem(onclick="document.location.href='/participants/"+lang+"'") PARTICIPANT AREA
+    else
+        .mainMenuItem(onclick="document.location.href='/participants/"+lang+"'") Участникам
 
 .mainMenuGroup
     if ru
