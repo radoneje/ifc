@@ -392,7 +392,7 @@ if(ts){
         if(prevBtn)
         {
             prevBtn.onclick=()=>{
-                console.log(s.parentNode.parentNode.scrollTo({left: window.innerWidth*(s.getAttribute( 'hallNumber')-1)-(16*(s.getAttribute( 'hallNumber')-1)),behavior: 'smooth'}))
+                console.log(s.parentNode.parentNode.scrollTo({left: window.innerWidth*(s.getAttribute( 'hallNumber')-2)-(16*(s.getAttribute( 'hallNumber')-2)),behavior: 'smooth'}))
             }
 
         }
