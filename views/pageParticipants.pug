@@ -1,7 +1,10 @@
 extends layout
 
 block head
-    title="Финансовый Когресс Банка России: Участникам"
+    if ru
+        title="Финансовый Когресс Банка России: Участникам"
+    else
+        title="FINANCIAL CONGRESS OF THE BANK OF RUSSIA: PARTICIPANT AREA"
 block content
     include elems/internalHead
     .tower#participantsPage
@@ -10,132 +13,221 @@ block content
                 include svg/pgmDecor.svg
             .newsDecor2
                 include svg/pgmDecor2.svg
-            .sectionTitle Участникам
+            if ru
+                .sectionTitle Участникам
+            else
+                .sectionTitle INFORMATION FOR PARTICIPANTS
             .regBox
                 .reqMenuBox
                     .reqMenu.flex.left
-                        a.regMenuItem(onclick="uslovia.scrollIntoView({behavior:'smooth'})") Формат и стоимость участия
-                        a.regMenuItem(onclick="kakstatuchastnikon.scrollIntoView({behavior:'smooth'})") Как стать участником
-                        a.regMenuItem(onclick="smi.scrollIntoView({behavior:'smooth'})") Информация для СМИ
-                        a.regMenuItem(onclick="lk.scrollIntoView({behavior:'smooth'})") О Личном Кабинете
+                        if ru
+                            a.regMenuItem(onclick="uslovia.scrollIntoView({behavior:'smooth'})") Формат и стоимость участия
+                            a.regMenuItem(onclick="kakstatuchastnikon.scrollIntoView({behavior:'smooth'})") Как стать участником
+                            a.regMenuItem(onclick="smi.scrollIntoView({behavior:'smooth'})") Информация для СМИ
+                            a.regMenuItem(onclick="lk.scrollIntoView({behavior:'smooth'})") О Личном Кабинете
+                        else
+                            a.regMenuItem(onclick="uslovia.scrollIntoView({behavior:'smooth'})") PARTICIPATION FORMAT AND FEES
+                            a.regMenuItem(onclick="kakstatuchastnikon.scrollIntoView({behavior:'smooth'})") HOW TO TAKE PART
+                            a.regMenuItem(onclick="smi.scrollIntoView({behavior:'smooth'})") MEDIA INFORMATION
+                            a.regMenuItem(onclick="lk.scrollIntoView({behavior:'smooth'})") ABOUT YOUR PERSONAL ACCOUNT
             .regBox#uslovia
                 .participaintRow
                     .menuItem.flex.center.left
                         .menuItemBox
-                        .menuItemText Условия участия
+                        if ru
+                            .menuItemText Условия участия
+                        else
+                            .menuItemText TERMS OF PARTICIPATION
                 .participaintRow
                     .participaintRowImpotant
-                        .oSessionHallTitle.impotant Формат участия очный
-                            .oSessionTitle Статус “Участник” предусматривает:
+                        if ru
+                            .oSessionHallTitle.impotant Формат участия очный
+                                .oSessionTitle Статус “Участник” предусматривает:
+                        else
+                            .oSessionHallTitle.impotant PARTICIPATION FORMAT: IN PERSON
+                                .oSessionTitle THE "PARTICIPANT" STATUS OFFERS:
+
                         .participaintRowBody
-                            ul
-                                li Участие во всех мероприятиях деловой и культурной программ Конгресса (кроме мероприятий по специальным приглашениям);
-                                li Обеды и кофе-брейки в дни проведения деловой программы Конгресса;
-                                li Комплект информационных материалов и памятные сувениры Конгресса;
-                                li Специальные условия бронирования номеров в официальных отелях Конгресса;
-                                li Трансферы из официальных отелей Конгресса на площадку проведения деловой программы и обратно;
-                                li Трансферы из аэропорта “Пулково” и от Московского вокзала в официальные отели Конгресса и на площадку проведения деловой программы 5 и 6 июля и обратно - 7 и 8 июля.
-                            p
-                                .participaintRowBodySubTitle
-                                    b Стоимость участия одного человека: 150&nbsp;000&nbsp;рублей (НДС не облагается)
-                            p
-                                .participaintRowBodySubTitle
-                                    a.regSubmit(href="/registration/" + lang) Подать заявку
+                            if ru
+                                ul
+                                    li Участие во всех мероприятиях деловой и культурной программ Конгресса (кроме мероприятий по специальным приглашениям);
+                                    li Обеды и кофе-брейки в дни проведения деловой программы Конгресса;
+                                    li Комплект информационных материалов и памятные сувениры Конгресса;
+                                    li Специальные условия бронирования номеров в официальных отелях Конгресса;
+                                    li Трансферы из официальных отелей Конгресса на площадку проведения деловой программы и обратно;
+                                    li Трансферы из аэропорта “Пулково” и от Московского вокзала в официальные отели Конгресса и на площадку проведения деловой программы 5 и 6 июля и обратно - 7 и 8 июля.
+                                p
+                                    .participaintRowBodySubTitle
+                                        b Стоимость участия одного человека: 150&nbsp;000&nbsp;рублей (НДС не облагается)
+                                p
+                                    .participaintRowBodySubTitle
+                                        a.regSubmit(href="/registration/" + lang) Подать заявку
+                            else
+                                ul
+                                    li Participation in all events of the Congress business and cultural programs (except for events by special invitation);
+                                    li Lunches and coffee breaks during the business program;
+                                    li A set of information materials and souvenirs;
+                                    li Special room rates at the official hotels of the Congress;
+                                    li Transfers from the official hotels of the Congress to the business program venue and back;
+                                    li Transfers from the Pulkovo Airport and the Moskovsky Railway Station to the official hotels of the Congress and to the business program venue on 5–6 July, and back on 7–8 July.
+                                p
+                                    .participaintRowBodySubTitle
+                                        b PARTICIPATION FEE PER PERSON: RUB&nbsp;150,000 (VAT EXEMPT)
+                                p
+                                    .participaintRowBodySubTitle
+                                        a.regSubmit(href="/registration/" + lang) SUBMIT APPLICATION
             .regBox#kakstatuchastnikon
                 .participaintRow#howtobecome
                     .menuItem.flex.center.left
                         .menuItemBox
-                        .menuItemText Как стать участником – порядок действий
-                    .participaintRowContent(style="margin-top:24px") Если от одной компании планируется участие нескольких человек, то на каждого представителя компании заполняется отдельная заявка и счет-договор на оплату выставляется отдельно на каждого участника.
-                    .participaintRowHead 1. Заполните на сайте заявку на участие
-                    .participaintRowBody
-                        ul
-                            li Введите основные регистрационные данные;
-                            li Введите данные контактного лица, если все дальнейшие коммуникации с организаторами за участника будет осуществлять другой человек (например, референт);
-                            li Введите данные компании, которую представляет участник (достаточно ИНН, остальные данные загрузятся автоматически из базы ФНС);
-                            li Подтвердите принятие пользовательского соглашения и соглашения об обработке персональных данных;
-                            li Отправьте заявку;
-                            li На email, который указан в заявке, придет письмо-оповещение о получении заявки.
-                    .participaintRowBodySubTitle
-                        a.regSubmit.mt-3(href="/registration/" + lang) Подать заявку
-
-                .participaintRow
-                    .participaintRowHead 2. Дождитесь подтверждения вашей заявки оргкомитетом Конгресса
-                    .participaintRowBody
-                        ul
-                            li На email, указанный в заявке, придет уведомление о подтверждении и ссылка на Личный кабинет;
-                            li Если в заявке указано контактное лицо участника, то уведомление придет на email контактного лица.
-                .participaintRow
-                    .participaintRowHead 3. Оплатите участие через  Личный кабинет
-                    .participaintRowBody
-                        ul
-                            li Войдите в Личный кабинет (ЛК) по уникальной ссылке, присланной на электронную почту;
-                            li Если необходимо, запросите доступ повторно: нажмите в меню сайта кнопку “Личный кабинет” и введите email, указанный вами при регистрации. На этот адрес придет сообщение со ссылкой;
-                            li В ЛК пройдите в раздел “Оплата”;
-                            li Выберите способ оплаты - как юридическое лицо по счету-договору или физическое лицо с оплатой по банковской карте или Системе Быстрых Платежей (QR-коду).
-                    p
-                        .participaintRowBodySubTitle
-                            b Оплата от юридического лица:
-                        ul
-                            li В реквизитах компании плательщика по умолчанию указаны данные вашей компании из заявки;
-                            li Если счет оплачивает другая организация - введите ее ИНН и нажмите “Загрузить из ФНС”, чтобы автоматически заполнить остальные реквизиты;
-                            li Нажмите “Получить счет”;
-                            li Загрузите электронный документ Счета-Договора из ЛК и передайте его на оплату;
-
-                            li После того, как оплату подтвердят организаторы, вам придет email на адрес, указанный в заявке, о подтверждении статуса Участника;
-                            li Вам будут предоставлены все возможности личного кабинета.
-                    p
-                        .participaintRowContent Справочно: реквизиты получателя платежа размещены <a href="/static/key/payRules?open=open" class="inline"> здесь</a>.
-
-                    p#paykeeper
-                        .participaintRowBodySubTitle
-                            b  Оплата по банковской карте или по QR-коду Системы Быстрых Платежей:
-                        p
+                        if ru
+                            .menuItemText Как стать участником – порядок действий
+                        else
+                            .menuItemText HOW TO TAKE PART: FOLLOW THESE STEPS
+                    if ru
+                        .participaintRowContent(style="margin-top:24px") Если от одной компании планируется участие нескольких человек, то на каждого представителя компании заполняется отдельная заявка и счет-договор на оплату выставляется отдельно на каждого участника.
+                        .participaintRowHead 1. Заполните на сайте заявку на участие
+                        .participaintRowBody
                             ul
-                                li Осуществляется через Платежную платформу <a class="inline" href="https://paykeeper.ru/" target="_blank">PayKeeper</a>;
-                                li Для оплаты банковской картой при оформлении заказа выберите способ оплаты: банковской картой;
-                                li К оплате принимаются платежные карты: МИР, VISA, MasterCard, выпущенные российскими банками.
-                        p
-                            .participaintRowContent
-                                div.
-                                    При оплате заказа банковской картой обработка платежа происходит на авторизационной странице банка, где Вам необходимо ввести данные Вашей банковской карты.
-
-                                div <br>Если Ваша карта подключена к услуге 3D-Secure, Вы будете автоматически переадресованы на страницу банка, выпустившего карту, для прохождения процедуры аутентификации;
-                                div <br>Информацию о правилах и методах дополнительной идентификации уточняйте в Банке, выдавшем Вам банковскую карту.
-                                div <br>Безопасность обработки интернет-платежей через платежный шлюз банка гарантирована международным сертификатом безопасности PCI DSS. Передача информации происходит с применением технологии шифрования TLS.  Эта информация недоступна посторонним лицам;
-                                div <br>Для оплаты через Систему Быстрых Платежей отсканируйте банковским приложением предоставленный QR-код. Далее следуйте инструкциям вашего банка.
-                        //p
-                            .participaintRowContent
-                                img(src="/static/images/visa.png" loading="lazy")
-
-
+                                li Введите основные регистрационные данные;
+                                li Введите данные контактного лица, если все дальнейшие коммуникации с организаторами за участника будет осуществлять другой человек (например, референт);
+                                li Введите данные компании, которую представляет участник (достаточно ИНН, остальные данные загрузятся автоматически из базы ФНС);
+                                li Подтвердите принятие пользовательского соглашения и соглашения об обработке персональных данных;
+                                li Отправьте заявку;
+                                li На email, который указан в заявке, придет письмо-оповещение о получении заявки.
+                        .participaintRowBodySubTitle
+                            a.regSubmit.mt-3(href="/registration/" + lang) Подать заявку
+                    else
+                            .participaintRowContent(style="margin-top:24px") Please note that if several persons from the same company plan to attend the Congress, a separate application form shall be completed for each representative, and separate invoice and contract will be issued for each attendee.
+                            .participaintRowHead 1. Fill in the application form on the website
+                            .participaintRowBody
+                                ul
+                                    li Enter main registration details as requested.
+                                    li Enter the details of a contact person in case someone other than the participant will handle further communication with the organizers (e.g. a personal assistant).
+                                    li Enter the details of the company that the attendee will represent.
+                                    li Confirm acceptance of the Terms of Service and the Personal Data Processing Agreement.
+                                    li Submit the application.
+                                    li A confirmation email will be sent to the address indicated in the application.
+                            .participaintRowBodySubTitle
+                                a.regSubmit.mt-3(href="/registration/" + lang) SUBMIT APPLICATION
 
                 .participaintRow
-                    .participaintRowHead 4. Отказ от участия
-                    .participaintRowBody
-                        ul
-                            li До 22 июня 2023 года Вы можете отказаться от участия с полным возвратом денежных средств;
-                            li Для извещения организаторов об отказе воспользуйтесь формой обратной связи в личном кабинете или известите организаторов по электронной почте.
+                    if ru
+                        .participaintRowHead 2. Дождитесь подтверждения вашей заявки оргкомитетом Конгресса
+                        .participaintRowBody
+                            ul
+                                li На email, указанный в заявке, придет уведомление о подтверждении и ссылка на Личный кабинет;
+                                li Если в заявке указано контактное лицо участника, то уведомление придет на email контактного лица.
+                    else
+                        .participaintRowHead 2. Wait for the confirmation of your registration from the Organizing Committee
+                        .participaintRowBody
+                            ul
+                                li You will receive a confirmation email and a link to your Personal Account at the address provided in the application.
+                                li If a contact person has been indicated, the confirmation will be sent to their email address.
                 .participaintRow
-                    .participaintRowHead 5. Замена участника
-                    .participaintRowBody
-                        ul
-                            li Вы можете заменить участника не позднее 22&nbsp;июня&nbsp;2023&nbsp;года, связавшись с организаторами по электронной почте или через чат-бот Конгресса.
-                .participaintRow
-                    .participaintRowHead  6. Получение бэйджа
-                    .participaintRowBody
-                        p
-                            .participaintRowContent Получить бэйдж участника можно:
-                        ul
-                            li В Москве, курьерской доставкой – с&nbsp;26&nbsp;июня по&nbsp;4&nbsp;июля;
-                            li В Санкт-Петербурге, на стойках регистрации в официальных- отелях-Конгресса – с&nbsp;5&nbsp;июля;
-                            li В Санкт-Петербурге, на площадке деловой программы Конгресса – 6&nbsp;и&nbsp;7&nbsp;июля.
-                        p
-
-                            .participaintRowContent Подробная информация о сроках доставки бейджей и порядке работы пунктов регистрации будет опубликована дополнительно.
+                    if ru
+                        .participaintRowHead 3. Оплатите участие через  Личный кабинет
+                        .participaintRowBody
+                            ul
+                                li Войдите в Личный кабинет (ЛК) по уникальной ссылке, присланной на электронную почту;
+                                li Если необходимо, запросите доступ повторно: нажмите в меню сайта кнопку “Личный кабинет” и введите email, указанный вами при регистрации. На этот адрес придет сообщение со ссылкой;
+                                li В ЛК пройдите в раздел “Оплата”;
+                                li Выберите способ оплаты - как юридическое лицо по счету-договору или физическое лицо с оплатой по банковской карте или Системе Быстрых Платежей (QR-коду).
                         p
                             .participaintRowBodySubTitle
-                                a.regSubmit(href="/registration/" + lang) Подать заявку
+                                b Оплата от юридического лица:
+                            ul
+                                li В реквизитах компании плательщика по умолчанию указаны данные вашей компании из заявки;
+                                li Если счет оплачивает другая организация - введите ее ИНН и нажмите “Загрузить из ФНС”, чтобы автоматически заполнить остальные реквизиты;
+                                li Нажмите “Получить счет”;
+                                li Загрузите электронный документ Счета-Договора из ЛК и передайте его на оплату;
+
+                                li После того, как оплату подтвердят организаторы, вам придет email на адрес, указанный в заявке, о подтверждении статуса Участника;
+                                li Вам будут предоставлены все возможности личного кабинета.
+                        p
+                            .participaintRowContent Справочно: реквизиты получателя платежа размещены <a href="/static/key/payRules?open=open" class="inline"> здесь</a>.
+
+                        p#paykeeper
+                            .participaintRowBodySubTitle
+                                b  Оплата по банковской карте или по QR-коду Системы Быстрых Платежей:
+                            p
+                                ul
+                                    li Осуществляется через Платежную платформу <a class="inline" href="https://paykeeper.ru/" target="_blank">PayKeeper</a>;
+                                    li Для оплаты банковской картой при оформлении заказа выберите способ оплаты: банковской картой;
+                                    li К оплате принимаются платежные карты: МИР, VISA, MasterCard, выпущенные российскими банками.
+                            p
+                                .participaintRowContent
+                                    div.
+                                        При оплате заказа банковской картой обработка платежа происходит на авторизационной странице банка, где Вам необходимо ввести данные Вашей банковской карты.
+
+                                    div <br>Если Ваша карта подключена к услуге 3D-Secure, Вы будете автоматически переадресованы на страницу банка, выпустившего карту, для прохождения процедуры аутентификации;
+                                    div <br>Информацию о правилах и методах дополнительной идентификации уточняйте в Банке, выдавшем Вам банковскую карту.
+                                    div <br>Безопасность обработки интернет-платежей через платежный шлюз банка гарантирована международным сертификатом безопасности PCI DSS. Передача информации происходит с применением технологии шифрования TLS.  Эта информация недоступна посторонним лицам;
+                                    div <br>Для оплаты через Систему Быстрых Платежей отсканируйте банковским приложением предоставленный QR-код. Далее следуйте инструкциям вашего банка.
+                            //p
+                                .participaintRowContent
+                                    img(src="/static/images/visa.png" loading="lazy")
+
+
+                .participaintRow
+                    if ru
+                        .participaintRowHead 4. Отказ от участия
+                            .participaintRowBody
+                                ul
+                                    li До 22 июня 2023 года Вы можете отказаться от участия с полным возвратом денежных средств;
+                                    li Для извещения организаторов об отказе воспользуйтесь формой обратной связи в личном кабинете или известите организаторов по электронной почте.
+                    else
+                        .participaintRowHead 3. Отказ от участия
+                        .participaintRowBody
+                            ul
+                                li If you cancel your participation before 22 June 2023, your fee will be refunded in full.
+                                li If you decide to cancel your participation, please use the feedback form on your “Personal Account” page or notify the organizers by email.
+
+
+                .participaintRow
+                    if ru
+                        .participaintRowHead 5. Замена участника
+                        .participaintRowBody
+                            ul
+                                li Вы можете заменить участника не позднее 22&nbsp;июня&nbsp;2023&nbsp;года, связавшись с организаторами по электронной почте или через чат-бот Конгресса.
+                    else
+                        .participaintRowHead 4. Substituting a participant
+                        .participaintRowBody
+                            ul
+                                li You may substitute a participant no later than 22 June 2023. To do that, please contact the organizers by email or via the Congress chatbot.
+
+                .participaintRow
+                    if ru
+                        .participaintRowHead  6. Получение бэйджа
+                        .participaintRowBody
+                            p
+                                .participaintRowContent Получить бэйдж участника можно:
+                            ul
+                                li В Москве, курьерской доставкой – с&nbsp;26&nbsp;июня по&nbsp;4&nbsp;июля;
+                                li В Санкт-Петербурге, на стойках регистрации в официальных- отелях-Конгресса – с&nbsp;5&nbsp;июля;
+                                li В Санкт-Петербурге, на площадке деловой программы Конгресса – 6&nbsp;и&nbsp;7&nbsp;июля.
+                            p
+
+                                .participaintRowContent Подробная информация о сроках доставки бейджей и порядке работы пунктов регистрации будет опубликована дополнительно.
+                            p
+                                .participaintRowBodySubTitle
+                                    a.regSubmit(href="/registration/" + lang) Подать заявку
+                    else
+                        .participaintRowHead  5. Receiving a badge
+                            .participaintRowBody
+                                p
+                                    .participaintRowContent You can get your participant badge:
+                                ul
+                                    li In Moscow, by courier delivery – from 26 June to 4 July;
+                                    li In St. Petersburg, at check-in desks located at the official hotels of the Congress – from 5 July;
+                                    li In St. Petersburg, at the business program venue – on 6-7 July.
+                                p
+
+                                    .participaintRowContent Detailed information on badge delivery times and  the opening hours of the registration points will be published later.
+                                p
+                                    .participaintRowBodySubTitle
+                                        a.regSubmit(href="/registration/" + lang) SUBMIT APPLICATION
+
                 .participaintRow &nbsp;
 
                 .participaintRow#smi
