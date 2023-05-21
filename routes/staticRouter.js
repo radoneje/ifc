@@ -347,7 +347,7 @@ router.get('/akt/:guid', async function (req, res, next) {
         let inv=invoices[0]
             //return res.json(inv)
 
-        let filename="/var/ifc_data/acts/act_"+String(inv.id).padStart(3, '0')+String(Math.random())+".pdf"
+        let filename="/var/ifc_data/acts/act_"+String(inv.id).padStart(3, '0')+String(moment().unix())+".pdf"
         if (fs.existsSync(filename)) {
             //return res.download(filename);
             fs.rmSync(filename)
