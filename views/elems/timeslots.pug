@@ -17,6 +17,7 @@
                                     if session["halltitle_"+lang]
                                         .oSession(hallNumber=session["halltitle_"+lang].replace(/hall /i,"").replace(/зал /i,""))
                                             if(!ts.isImpotant)
+                                                .oSessionNextBtn
                                                 .oSessionPageWr
                                                     if ts.sessions
                                                         .oSessionPage.pagenatorPrev

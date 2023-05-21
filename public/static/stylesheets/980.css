@@ -960,6 +960,9 @@
     .oSession:first-child .pagenatorPrev{
         display: none;
     }
+    .oSessionNextBtn{
+        display: none;
+    }
 
 
 
