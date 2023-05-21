@@ -302,8 +302,10 @@ block content
                             else
                                 .regCheckBoxText I HEREBY AGREE TO HAVE MY PERSONAL DATA PROCESSED
                                     a.gray(   onclick="event.preventDefault();window.open('/static/key/pers" + lang + "?open=open')")  &nbsp;(SEE DETAILS)
-
-                    .reqRowErrorMessage(v-if="isTermsError && !user.isTerms") Cоглашение не принято
+                    if ru
+                        .reqRowErrorMessage(v-if="isTermsError && !user.isTerms") Cоглашение не принято
+                    else
+                        .reqRowErrorMessage(v-if="isTermsError && !user.isTerms") Please tick the box to accept the agreement
 
                 .regRow.desktop &nbsp;
                 .regRow &nbsp;
@@ -316,7 +318,7 @@ block content
                     if ru
                         .regSubmit(v-on:click="regSmi()" v-if="!isRegSuccess") подать заявку
                     else
-                        .regSubmit(v-on:click="regUser()" v-if="!isRegSuccess") submit form
+                        .regSubmit(v-on:click="regUser(false)" v-if="!isRegSuccess") submit form
                     .regSuccess.flex.left(v-else)
                         .regCheckBox.success.flex.left()
                             .regCheckBoxBox

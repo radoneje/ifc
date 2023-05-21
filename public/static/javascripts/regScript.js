@@ -46,7 +46,7 @@ let regApp = new Vue({
                 this.innPayStatus = {state: 0, message: "", isInnReadony: false}
             //this.$forceUpdate();
         },
-        regUser: async function () {
+        regUser: async function (ru=true) {
             this.errors = {company: {}, payCompany: {}}
 
 
@@ -57,17 +57,19 @@ let regApp = new Vue({
                 });
                 return;
             }
-            if (this.innStatus.state != 2) {
+            if(!ru) {
+                if (this.innStatus.state != 2) {
 
-                this.innStatus = {state: 0, message: "Загрузите дынные из ФНС"};
-                document.getElementById("inn").focus();
-                return;
-            }
-            if (this.isPayCompany && this.innPayStatus.state != 2) {
+                    this.innStatus = {state: 0, message: "Загрузите дынные из ФНС"};
+                    document.getElementById("inn").focus();
+                    return;
+                }
+                if (this.isPayCompany && this.innPayStatus.state != 2) {
 
-                this.innPayStatus = {state: 0, message: "Загрузите дынные из ФНС"};
-                document.getElementById("payInn").focus();
-                return;
+                    this.innPayStatus = {state: 0, message: "Загрузите дынные из ФНС"};
+                    document.getElementById("payInn").focus();
+                    return;
+                }
             }
             if(this.user.phone)
             this.user.phone = this.user.phone.replace(/[^\d.-]+/g, '') // remove all non-digits except - and .
@@ -124,7 +126,10 @@ let regApp = new Vue({
                 this.isLodinng = true
                 let res = await postJson(apiUrl + "/api/regUser2", this.user)
                 if (!res) {
+                    if(ru)
                     alert("Произошла ошибка, попробуйте позже")
+                    else
+                        alert("An error has occurred")
                     this.isLodinng = false
                     return
                 }
