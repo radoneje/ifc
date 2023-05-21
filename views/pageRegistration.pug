@@ -8,7 +8,7 @@ block head
 
 block content
     include elems/internalHead
-    .tower#registration
+    .tower#registration(class=ru?"":"en")
         .subTower
             .partnersDecor
                 include svg/regDecor.svg
@@ -57,8 +57,10 @@ block content
                                     else
                                         div PLEASE UPLOAD A PHOTO<br>FOR YOUR BADGE
                                         div(style="font-size: .8em; margin-top: 4px;") FORWARD-FACING,<br>LIGHT BACKGROUND
-
-                        .reqRowErrorMessage(v-if="photoError") Фотография должна быть загружена
+                        if ru
+                            .reqRowErrorMessage(v-if="photoError") Фотография должна быть загружена
+                        else
+                            .reqRowErrorMessage(v-if="photoError") Please upload your photo
 
                 //.regRow
                     .reqPhoto.reg287(v-on:click="uploadPhoto()" v-bind:class="{errorPhoto:photoError}")
