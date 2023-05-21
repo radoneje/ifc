@@ -5,16 +5,7 @@
             if(ts.allTracks)
                 .oTrack.oAllTracks(class=ts.isImpotant?"impotant":"") #{ts["descr_"+lang]}
             else
-                //if(!ts.isImpotant)
-                        .oSessionTopPageWr
-                            if ts.sessions
-                                .oSessionPage.pagenatorPrev
-                                    include ../svg/arrowRightRed.svg
-                                each sessionPage in ts.sessions
-                                    if(sessionPage["halltitle_" + lang])
-                                        .oSessionPage.paginator #{sessionPage["halltitle_" + lang].replace(/hall /i, "").replace(/зал /i, "")}
-                                .oSessionPage.pagenatorNext
-                                    include ../svg/arrowRightRed.svg
+
                 .oTrack(class=ts.isImpotant?"impotant":"")
 
 
