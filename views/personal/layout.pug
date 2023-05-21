@@ -38,7 +38,7 @@ block content
                         if ru
                             .persNavItem.mobile(onclick="document.location.href='/'") Главная
                         else
-                            .persNavItem.mobile(onclick="document.location.href='/'") mainPage
+                            .persNavItem.mobile(onclick="document.location.href='/'") main Page
                         if ru
                             .persNavItem(v-on:click="personalMobileMenuClose();section='pay'" v-bind:class="{active:section=='pay'}" v-if="user.isPay") Оплата
                             .persNavItem(v-on:click="personalMobileMenuClose();section='info'" v-bind:class="{active:section=='info'}") Информация
@@ -63,6 +63,9 @@ block content
                             .persNavItem(v-on:click="personalMobileMenuClose();section='place'" v-bind:class="{active:section=='place'}") VENUE
                             .persNavItem(v-on:click="personalMobileMenuClose();section='feedback'" v-bind:class="{active:section=='feedback'}") FEEDBACK
                             .persN
+                        .mobileMenuLangMenu
+                            .mobileMenuLangMenuWr.flex.center
+                                include ../elems/menuLangItems
 
                 .persBodyR
                     .persSection(v-if="section=='pay'")

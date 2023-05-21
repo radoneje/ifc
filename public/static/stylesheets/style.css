@@ -1135,6 +1135,7 @@ input[type=number] {
 
 }
 
+
 .reqRowErrorMessage {
 
     left: 10px;
@@ -2446,7 +2447,11 @@ img[src='undefined']{
 .oSessionNext2{
     display: none;
 }
-
+.personalLangMenuWr .langSelector{
+    top: 24px;
+    left: inherit;
+    right: 156px
+}
 
 @media all and (max-width: 1700px){
 
