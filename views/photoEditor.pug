@@ -1,7 +1,10 @@
 .fullScreenBox
     .menuItem.flex.left
         .menuItemBox
-        .menuItemText кадрирование фото
+        if ru
+            .menuItemText кадрирование фото
+        else
+            .menuItemText crop you image
 
 
     .fullScreencontent.mt-3
@@ -9,7 +12,10 @@
         .photoEditorImageBox
             img#photoEditorImage
         .flex.left.mt-3
-            .btn.btn-small.btn-success#photoSaveBtn Сохранить
+            if ru
+                .btn.btn-small.btn-success#photoSaveBtn Сохранить
+            else
+                .btn.btn-small.btn-success#photoSaveBtn Crop
     .fullScreenCloseNotSave.flex.center
         iconify-icon(icon="material-symbols:close")
 
