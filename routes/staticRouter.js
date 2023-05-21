@@ -381,6 +381,8 @@ router.get('/akt/:guid', async function (req, res, next) {
             .fontSize(14)
             .fillColor('#000000')
             .text( "ФК-"+inv.id, /*x*/ 95 , /*y*/ 122,{width: 400})
+            .fontSize(10)
+            .text( recvizit, /*x*/ 95 , /*y*/ 240,{width: 400})
         doc.end();
         setTimeout(()=>{res.download(filename)},1000)
 
