@@ -2440,6 +2440,9 @@ img[src='undefined']{
 .oSessionTopPageWr{
     display: none;
 }
+.oSessionNext2{
+    display: none;
+}
 
 
 @media all and (max-width: 1700px){
