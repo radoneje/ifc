@@ -1126,6 +1126,9 @@ input[type=number] {
     color: #EEB3BA;
     font-size: 12px;
 }
+.en .regRow.error:after, .en .reqRowErrorMessage {
+    content: "Please fill in this field";
+}
 .participaintRow .regRow.error:after, .participaintRow .reqRowErrorMessage {
 
     bottom: -26px;

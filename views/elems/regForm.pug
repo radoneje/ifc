@@ -1,4 +1,4 @@
-
+.regForm(class=ru?"":"en")
     .menuItem.flex.center.left.mt-4
         .menuItemBox
         .menuItemText Участник
@@ -10,7 +10,10 @@
                 include ../svg/userAvatarWhiteWithBorder.svg
                 //.photoLoader(v-if="photoIsLoading")
                         include ../svg/loader.svg
-        .reqRowErrorMessage(v-if="photoError") Фотография должна быть загружена
+        if ru
+            .reqRowErrorMessage(v-if="photoError") Фотография должна быть загружена
+        else
+            .reqRowErrorMessage(v-if="photoError") Please upload your photo
 
     .regRow(v-bind:class="{error:errors.f}")
         .regRowGroup.flex.left
