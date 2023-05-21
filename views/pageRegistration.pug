@@ -286,11 +286,12 @@ block content
                             .regCheckBoxBox
                         div
                             if ru
-                                .regCheckBoxText I HEREBY AGREE TO HAVE MY PERSONAL DATA PROCESSED
-                                    a.gray(   onclick="event.preventDefault();window.open('/static/key/pers"+lang+"?open=open')")  (посмотреть)
-                            else
                                 .regCheckBoxText СОГЛАШАЮСЬ НА ОБРАБОТКУ ПЕРСОНАЛЬНЫХ ДАННЫХ
-                                    a.gray(   onclick="event.preventDefault();window.open('/static/key/pers" + lang + "?open=open')")  (SEE DETAILS)
+                                    a.gray(   onclick="event.preventDefault();window.open('/static/key/pers" + lang + "?open=open')")  &nbsp;(SEE DETAILS)
+                            else
+                                .regCheckBoxText I HEREBY AGREE TO HAVE MY PERSONAL DATA PROCESSED
+                                    a.gray(   onclick="event.preventDefault();window.open('/static/key/pers" + lang + "?open=open')")  &nbsp;(посмотреть)
+
                     .reqRowErrorMessage(v-if="isTermsError && !user.isTerms") Cоглашение не принято
 
                 .regRow.desktop &nbsp;
@@ -303,7 +304,7 @@ block content
                     if typeid==4
                         .regSubmit(v-on:click="regSmi()" v-if="!isRegSuccess") подать заявку
                     else
-                        .regSubmit(v-on:click="regUser()" v-if="!isRegSuccess") подать заявку
+                        .regSubmit(v-on:click="regUser()" v-if="!isRegSuccess") submit form
                     .regSuccess.flex.left(v-else)
                         .regCheckBox.success.flex.left()
                             .regCheckBoxBox
