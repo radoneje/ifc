@@ -21,6 +21,8 @@ block content
                                 .persHeadH1 Финансовый<br>конгресс<br>Банка&nbsp;России
                             else
                                 .persHeadH1 Financial<br>Congress<br>of the Bank<br>of Russia
+                    .personalLangMenuWr
+                        include ../elems/langSelector
                     .persMenu.flex.center
                         a.persMenuAlert(v-if="newInfo>0" v-on:click="personalMobileMenuClose();section='info'")
                             include ../svg/personalNewMessageIco.svg
