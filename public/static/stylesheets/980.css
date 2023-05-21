@@ -1222,6 +1222,9 @@
         width: 9px;
         margin-left: 8px;
     }
+    .persNav .mobileMenuLangMenu{
+        width: 100%;
+    }
 
 }
 
