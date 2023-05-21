@@ -188,14 +188,23 @@ block content
                     .regRow
                         .menuItem.flex.center.left
                             .menuItemBox
-                            .menuItemText СМИ, которое вы&nbsp;представляете
+                            if ru
+                                .menuItemText СМИ, которое вы&nbsp;представляете
+                            else
+                                .menuItemText MEDIA THAT YOU REPRESENT
                     .regRow
                         .regRowGroup.flex.left
-                            .recLabel.reg287 Название
+                            if ru
+                                .recLabel.reg287 Название
+                            else
+                                .recLabel.reg287 Name
                             input.reqInput( v-model="user.company.name" must)
                     .regRow
                         .regRowGroup.flex.left
-                            .recLabel.reg287 Сайт
+                            if ru
+                                .recLabel.reg287 Сайт
+                            else
+                                .recLabel.reg287 web site
                             input.reqInput( v-model="user.company.address" placeholder="" must)
 
 
