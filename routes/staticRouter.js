@@ -384,7 +384,7 @@ router.get('/akt/:guid', async function (req, res, next) {
             .text( "ФК-"+inv.id, /*x*/ 95 , /*y*/ 122,{width: 400})
             .fontSize(10)
             .text( recvizit, /*x*/ 108 , /*y*/ 225,{width: 400})
-            .text( "ЗАЯВКА № "+inv.user[0].id+"от "+ moment(inv.user[0].date).format("DD.MM.YYYY г."), /*x*/ 108 , /*y*/ 270,{width: 400})
+            .text( "ЗАЯВКА № "+inv.user[0].id+"от "+ moment(inv.user[0].date).format("DD.MM.YYYY г."), /*x*/ 108 , /*y*/ 272,{width: 400})
         doc.end();
         setTimeout(()=>{res.download(filename)},1000)
 
