@@ -21,22 +21,20 @@
     }
 
 
-
-
-
     .mainImageWr {
         padding-bottom: 120%;
     }
 
     .mainImage {
         background-image: url(../images/mainImageMobile.png);
-       /* background-color: yellow;*/
+        /* background-color: yellow;*/
     }
 
     .mainTitle {
         padding: 40px 16px;
         left: 16px;
     }
+
     .mobileMenuBtn {
 
         top: 48px;
@@ -52,6 +50,7 @@
         line-height: 21px;
         margin-left: 16px;
     }
+
     .mainLogo {
 
         width: 52px;
@@ -64,7 +63,7 @@
         position: absolute;
         bottom: 19px;
         left: 16px;
-        top:inherit;
+        top: inherit;
     }
 
     .mainMenu {
@@ -92,15 +91,18 @@
         font-size: 18px;
         line-height: 21px;
     }
-    .placeDecor svg{
+
+    .placeDecor svg {
         width: 100%;
         height: auto;
     }
-    .placeDecor{
+
+    .placeDecor {
         width: 30%;
-        top:48px;
+        top: 48px;
     }
-    .placePhotoWr{
+
+    .placePhotoWr {
         width: 90%;
         margin-left: 12px;
         padding: 12px;
@@ -112,26 +114,32 @@
         background-position-x: center;
         background-size: contain;
     }
-    .placeTextWr{
+
+    .placeTextWr {
         width: 100%;
     }
+
     .placeWr .quotesArrow {
         display: none !important;
     }
-    #news, #place{
-        padding-top:48px;
+
+    #news, #place {
+        padding-top: 48px;
         padding-bottom: 24px;
-    /*    margin-bottom: 24px;*/
+        /*    margin-bottom: 24px;*/
         overflow: hidden;
     }
-    .placeWr{
+
+    .placeWr {
         display: block;
     }
-    .newsItemsBox{
+
+    .newsItemsBox {
         width: 100%;
         overflow-y: auto;
     }
-    .newsItem{
+
+    .newsItem {
         padding: 40px 24px;
         padding-bottom: 84px;
         margin-right: 24px;
@@ -139,22 +147,27 @@
         overflow: hidden;
 
     }
-    .newsItems{
+
+    .newsItems {
         display: flex;
         width: max-content;
     }
-    .newsDate{
+
+    .newsDate {
         font-weight: 300;
         font-size: 15px;
         line-height: 17px;
     }
-    .newsTitle, .newsText, .faqTitle, .faqText{
+
+    .newsTitle, .newsText, .faqTitle, .faqText {
         font-size: 18px;
         line-height: 24px;
     }
-    .newsTitle{
+
+    .newsTitle {
         min-height: inherit;
     }
+
     .newsBlockDecor {
         position: absolute;
         bottom: -3px;
@@ -162,130 +175,160 @@
         left: -547px;
         width: auto;
     }
+
     .newsBlockDecor svg {
         width: auto;
         height: 100%;
     }
-    #news .subTower{
+
+    #news .subTower {
         padding: 0 0px;
     }
-    .newsItem:first-child{
+
+    .newsItem:first-child {
         margin-left: 24px;
     }
-    .quotesWr{
+
+    .quotesWr {
         display: block;
     }
-    .quotesWr{
+
+    .quotesWr {
         padding: 80px 24px;
     }
-    .quotesCenter{
+
+    .quotesCenter {
         width: 100%;
         padding: 0;
     }
+
     .quoteTextWr {
         width: 100%;
         padding-left: 0%;
     }
+
     .quoteTextTitle {
         font-size: 32px;
         line-height: 40px;
     }
-    .quoteImg{
+
+    .quoteImg {
         width: 100%;
         flex: 1 2 100%;
         order: 1;
     }
+
     .quoteTextWr {
         flex: 1 1 100%;
         order: 2;
     }
-    .quoteText{
+
+    .quoteText {
         height: auto;
         font-size: 32px;
         line-height: 40px;
         padding-top: 38px;
     }
+
     .quoteTextDivaider {
-       display: none;
+        display: none;
     }
+
     .quteBodyBox {
         align-items: stretch;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
-    .quotesCtrl{
-        margin-top:96px
+
+    .quotesCtrl {
+        margin-top: 96px
     }
-    .quotesArrow{
+
+    .quotesArrow {
         width: 56px;
         height: 56px;
     }
-    .quotesCtrlBox{
+
+    .quotesCtrlBox {
         justify-content: space-around;
     }
+
     #partners {
         padding-top: 56px;
     }
+
     .sectionTitle {
         font-size: 32px;
         line-height: 40px;
     }
+
     .partnersDecor, .faqDecor {
         width: 150px;
         top: 100px;
     }
-    .partnersDecor svg, .faqDecor svg{
+
+    .partnersDecor svg, .faqDecor svg {
         width: 100%;
         height: auto;
     }
-    #faq{
+
+    #faq {
         padding-top: 72px;
         width: 100%;
         overflow: hidden;
         padding-bottom: 48px;
     }
+
     .faqDecor {
 
         top: 120px;
     }
+
     .faqMenuItem {
         margin-top: 72px;
     }
-    #faq .menuItemText{
+
+    #faq .menuItemText {
         font-size: 17px;
         line-height: 21px;
     }
-    .faqItems{
-        margin-top:48px;
+
+    .faqItems {
+        margin-top: 48px;
     }
-    .faqItemsBox{
+
+    .faqItemsBox {
         width: max-content;
     }
-    .faqItemsWr{
-        width: calc( 100% + 48px);
+
+    .faqItemsWr {
+        width: calc(100% + 48px);
         overflow-x: scroll;
         margin-left: -24px
     }
 
-    .faqItem{
+    .faqItem {
         width: calc(100vw - 110px);
         margin-left: 24px;
         padding: 40px 24px;
         padding-bottom: 92px;
     }
-    .footerWr{
+
+    .footerWr {
         flex-wrap: wrap;
     }
-    .footerItem{
+
+    .footerItem {
         width: 100%;
         text-align: center !important;
-        margin-top:24px;
+        margin-top: 24px;
     }
-    #mobileMenu{
-        background: linear-gradient(180deg, #4a569e 0%, #6e1e21 100%), #4a569e ;
+
+    #mobileMenu {
+        background: linear-gradient(180deg, #4a569e 0%, #6e1e21 100%), #4a569e;
         position: fixed;
-        top:0;
+        top: 0;
         left: 0;
         bottom: 0;
         right: 0;
@@ -295,55 +338,66 @@
         background-size: cover;
         background-position: center;
     }
-    .mobileMenuWr{
+
+    .mobileMenuWr {
         position: relative;
     }
-    #mobileMenu h1, #mobileMenu h2{
+
+    #mobileMenu h1, #mobileMenu h2 {
         color: #FFFFFF;
     }
-    .mobileMenuCloseBtn{
+
+    .mobileMenuCloseBtn {
         position: absolute;
         right: 26px;
-        top:48px
+        top: 48px
     }
-    #mobileMenu .mainMenuGroup{
+
+    #mobileMenu .mainMenuGroup {
         margin-right: 0px;
         width: 100%;
     }
-    #mobileMenu .mainTitle{
+
+    #mobileMenu .mainTitle {
         padding-bottom: 24px;
         position: absolute;
 
     }
-    .mobileMenuItems{
+
+    .mobileMenuItems {
         padding-top: 140px;
     }
 
-    #mobileMenu .mainMenuItem{
+    #mobileMenu .mainMenuItem {
         text-align: left;
         cursor: pointer;
         color: #FFFFFF;
         padding: 10px;
         padding-left: 36px;
     }
-    #mobileMenu .menuItemText{
+
+    #mobileMenu .menuItemText {
         color: #FFFFFF;
 
 
     }
-    #mobileMenu .menuItem{
+
+    #mobileMenu .menuItem {
         margin-top: 0px;
         padding: 8px 0px;
     }
-    .mobileMenuSiteItems{
+
+    .mobileMenuSiteItems {
         margin-top: 12px;
-        padding-left:36px;
+        padding-left: 36px;
     }
-    .mobileMenuLangMenu{
+
+    .mobileMenuLangMenu {
         margin-top: 36px;
         padding-bottom: 36px;
     }
-    .LangMenuItem{
+
+    .LangMenuItem {
         color: #FFFFFF;
         font-weight: 400;
         font-size: 22px;
@@ -351,44 +405,57 @@
         padding: 10px 24px;
         background-color: #878787;
     }
-    .LangMenuItem.active{
+
+    .LangMenuItem.active {
         background-color: #BB3E3F;
     }
-    .LangMenuItem:first-child{
+
+    .LangMenuItem:first-child {
         margin-right: 12px;
     }
-    .LangMenuItem:last-child{
+
+    .LangMenuItem:last-child {
         margin-right: 12px;
     }
-    .regCheckBox.mobileWrap{
+
+    .regCheckBox.mobileWrap {
         flex-wrap: wrap;
         position: relative;
     }
+
     .regBox {
         padding: 0;
     }
-    .regRowGroup{
+
+    .regRowGroup {
         display: block;
     }
-    .recLabel{
+
+    .recLabel {
         font-size: 16px;
         line-height: 22px;
     }
+
     .regRow {
         margin-top: 14px;
     }
-    .regBox .menuItemText{
+
+    .regBox .menuItemText {
         width: calc(100% - 50px);
     }
-    .recLabel, .regRowGroup input{
+
+    .recLabel, .regRowGroup input {
         width: 100% !important;
     }
-    .regRowGroup input{
+
+    .regRowGroup input {
         font-size: 18px;
     }
-    .regCheckBoxText{
+
+    .regCheckBoxText {
         width: 100%;
     }
+
     .innBtn {
         width: 100%;
         box-sizing: border-box;
@@ -397,73 +464,90 @@
         padding-bottom: 32px;
     }
 
-    .regCheckBox{
+    .regCheckBox {
         align-items: flex-start;
     }
-    #registration{
+
+    #registration {
         padding-bottom: 56px;
         padding-top: 46px;
     }
+
     .regBox {
         margin-top: 0;
     }
-    #registration .sectionTitle{
+
+    #registration .sectionTitle {
         font-size: 22px;
     }
+
     #registration .partnersDecor {
         top: 86px;
     }
-    .regCheckBoxText{
+
+    .regCheckBoxText {
         font-size: 16px;
         line-height: 20px;
     }
-    .internalHead{
+
+    .internalHead {
         margin: -2px 0;
     }
+
     .internalHeadLogo {
         width: 42px;
     }
+
     .internalHeadH1 {
         font-size: 18px;
         line-height: 22px;
         margin-left: 23px;
     }
-    .internalHeadLogoWr{
+
+    .internalHeadLogoWr {
         left: 24px;
     }
-    .internalHeadMenu{
+
+    .internalHeadMenu {
         margin: 0;
         padding-left: calc(100vw - 304px);
     }
-    .internalH1Wr{
+
+    .internalH1Wr {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        color:#ffffff;
+        color: #ffffff;
     }
-    .internalHeadLogoWr{
+
+    .internalHeadLogoWr {
         display: none;
     }
-    .reqInput{
+
+    .reqInput {
         margin-top: -2px;
     }
-    #noFoto{
+
+    #noFoto {
 
         font-size: 14px;
         bottom: 34px;
         line-height: 16px;
 
     }
-    .reqPhoto2 .reqRowErrorMessage{
+
+    .reqPhoto2 .reqRowErrorMessage {
         line-height: 14px;
         padding: 4px 0;
         padding-top: 2px;
     }
-    .reqPhoto{
+
+    .reqPhoto {
         width: 50%;
     }
-    .regSubmit{
+
+    .regSubmit {
         background: #BB3E3F;
         padding: 18px 56px;
         cursor: pointer;
@@ -476,24 +560,29 @@
         box-sizing: border-box;
         text-align: center;
     }
+
     #footer {
         padding-top: 8px;
         padding-bottom: 62px;
         margin-top: 54px;
     }
-    .footerItem svg{
+
+    .footerItem svg {
         width: 189px;
         height: auto;
         margin-bottom: 1px;
     }
-    .footerItemRow{
+
+    .footerItemRow {
         font-size: 12px;
         line-height: 18px;
         margin-top: 7px;
     }
+
     .reqPhoto2.reg287 {
         width: 50%;
     }
+
     .regCheckBoxComment {
         margin-top: -24px;
 
@@ -505,7 +594,8 @@
         color: white;
 
     }
-    .FNSloader{
+
+    .FNSloader {
         width: 30px;
         height: 30px;
         box-sizing: border-box;
@@ -516,149 +606,184 @@
         left: 8px;
         z-index: 100;
     }
+
     .newsWr {
         padding: 0;
-        padding-left:40px;
+        padding-left: 40px;
         padding-top: 56px;
     }
-    .newsBodyRow{
+
+    .newsBodyRow {
         display: block;
     }
-.newsHeadTitle{
-    font-size: 18px;
-    line-height: 22px;
-}
-    .newsBodyText{
+
+    .newsHeadTitle {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .newsBodyText {
         width: 100%;
         margin-top: 14px;
         font-size: 16px;
         line-height: 19px;
 
     }
+
     .withPhoto {
         width: 100%;
     }
+
     .newsDecor2 {
         bottom: -36px;
     }
 
-    .oNewsDecor{
+    .oNewsDecor {
         width: 30%;
     }
-    .spkNameWr{
+
+    .spkNameWr {
         font-size: 18px;
         line-height: 22px;
     }
-    .spkCompamy{
+
+    .spkCompamy {
         font-size: 18px;
         line-height: 22px;
     }
+
     .oSpkItem {
         width: 50%;
         padding: 24px 8px;
     }
-    .pSpkTower{
+
+    .pSpkTower {
         padding: 0;
     }
-    .pSpkHead{
+
+    .pSpkHead {
         display: block;
     }
-    .pSpkNameWR{
+
+    .pSpkNameWR {
         width: 100%;
     }
+
     .pSpkNameBox {
         padding-left: 0;
         padding-top: 24px;
     }
-    .pSpkName{
+
+    .pSpkName {
         font-size: 26px;
         line-height: 30px;
     }
+
     .pSpkBio {
         /*max-height: calc(100vh - 560px);*/
         padding-left: 0px;
     }
-    .oTs{
+
+    .oTs {
         display: block;
         position: relative;
     }
-    .pgmHeadDate{
+
+    .pgmHeadDate {
         margin-left: 0;
     }
-    .oTsDate{
+
+    .oTsDate {
         width: 100%;
         text-align: left;
         padding-left: 0;
     }
+
     .oTrack {
-        width: calc(100% );
+        width: calc(100%);
         padding: 8px;
         box-sizing: border-box;
         margin-top: 12px;
         position: relative;
 
     }
-    .oSessionWr{
+
+    .oSessionWr {
         align-items: normal;
     }
-    .oSession{
+
+    .oSession {
         padding-bottom: 24px;
         position: relative;
     }
-    .oSessionScroll{
+
+    .oSessionScroll {
         overflow-y: auto;
         width: 100%;
     }
+
     .oTrack:not(.impotant) .oSessionScroll {
         width: calc(100% + 48px);
-        margin-left:-24px;
+        margin-left: -24px;
         position: relative;
     }
+
     .oTrack:not(.impotant) .oSessionWr {
         width: max-content;
     }
-    .pPgmPopUp .oTrack:not(.impotant){
+
+    .pPgmPopUp .oTrack:not(.impotant) {
         padding-left: 0;
         padding-right: 0;
     }
-     .oTrack:not(.impotant) .oSession {
+
+    .oTrack:not(.impotant) .oSession {
         width: calc(100vw - 32px);
         padding: 8px;
         padding-bottom: 24px;
         margin-right: 16px;
         background: #f5f5f5;
-         position: relative;
+        position: relative;
     }
+
     .oTrack:not(.impotant) .oSession:first-child {
-        margin-left:16px
+        margin-left: 16px
     }
+
     .newsDecor2 {
         bottom: -58px;
     }
+
     .pSpkPhotoWR {
         width: 150px;
         height: 150px;
 
     }
+
     .pSpkBody {
         margin-top: 0px;
     }
+
     .pSpkSessionsWr {
-         margin-left: 0px;
+        margin-left: 0px;
     }
-    .pSpkSession{
+
+    .pSpkSession {
         font-size: 18px;
         line-height: 21px;
         margin-top: 12px
     }
+
     .pSpkBody {
         max-height: calc(100vh - 377px);
         padding-right: 4px;
 
     }
-    .fullScreenBox{
+
+    .fullScreenBox {
         padding: 16px;
     }
+
     .fullScreenBox {
         position: absolute;
         top: 0;
@@ -666,45 +791,54 @@
         width: 100%;
         height: 100%;
     }
+
     .pPgmPopUpWr {
         margin-left: 0;
 
     }
+
     .pPgmPopUp .oSpkItem {
         width: 50%;
     }
+
     .pPgmPopScroll {
         max-height: calc(100vh - 244px);
     }
-    .fullScreencontent,.pPgmPopUp{
+
+    .fullScreencontent, .pPgmPopUp {
         height: 100%;
     }
-    .pPgmPopUpWr{
+
+    .pPgmPopUpWr {
         height: calc(100% - 50px);
 
     }
-    .participaintHead{
+
+    .participaintHead {
         margin-top: 72px;
     }
 
-    .vtoroe{
+    .vtoroe {
         display: none;
     }
 
     .mainLogo {
         width: 36px;
     }
-    .reqMenu{
-        margin-top:67px;
+
+    .reqMenu {
+        margin-top: 67px;
         margin-bottom: 40px;
 
     }
-    reqMenuBox{
+
+    reqMenuBox {
         width: 100%;
         overflow-y: auto;
         padding-bottom: 4px
     }
-    .regMenuItem{
+
+    .regMenuItem {
         font-size: 16px;
         line-height: 22px;
         width: 100%;
@@ -712,46 +846,56 @@
         text-align: center;
         margin-right: 0;
     }
+
     .participaintRowImpotant {
         padding: 16px;
     }
-    .participaintRow ul li:before{
+
+    .participaintRow ul li:before {
         left: 0;
     }
+
     .participaintRow ul li {
-            padding-left: 20px;
+        padding-left: 20px;
         margin-top: 16px;
     }
 
-    .participaintRowBodySubTitle{
+    .participaintRowBodySubTitle {
         padding-left: 20px;
         padding-right: 20px;
     }
-    .mobileMenuVisible{
+
+    .mobileMenuVisible {
         display: block !important;
     }
+
     .upBtn {
         width: 18px;
         height: 18px;
         position: fixed;
         bottom: inherit;
-        top:32px;
-        right:8px;
+        top: 32px;
+        right: 8px;
     }
-    .persBodyL{
+
+    .persBodyL {
         display: none;
     }
-     .persMenuExit{
+
+    .persMenuExit {
         display: none;
     }
-    .persMenuFio{
+
+    .persMenuFio {
         font-size: 14px;
         line-height: 17px;
         display: none;
     }
-    .persBody{
+
+    .persBody {
         min-height: inherit;
     }
+
     .persBodyR {
 
         max-height: inherit;
@@ -759,17 +903,21 @@
         padding: 24px 8px;
         width: 100%;
     }
-    .reg287{
+
+    .reg287 {
         width: 100%;
     }
+
     .persHead:before, .persFooter:before {
         width: 50%;
     }
+
     .persHeadRow {
         margin: 0px 24px;
         width: 100%;
     }
-    .persMobileMenu{
+
+    .persMobileMenu {
         position: fixed;
         display: block;
         top: 0;
@@ -782,6 +930,7 @@
         margin-top: 0;
         background: linear-gradient(180deg, #4a569e 0%, #6e1e21 100%), #4a569e;
     }
+
     .persNavItem {
         margin-bottom: 8px;
         padding: 16px 12px;
@@ -789,97 +938,126 @@
         color: #FFFFFF;
         text-align: center;
     }
-    .participaintRowBtnGroup{
+
+    .participaintRowBtnGroup {
         display: block;
     }
-    .participaintRowBtnGroup a{
+
+    .participaintRowBtnGroup a {
         margin-bottom: 8px;
     }
-    .participaintDocsItem{
+
+    .participaintDocsItem {
         display: block;
     }
-    .participaintDocTitle{
+
+    .participaintDocTitle {
         margin-bottom: 16px;
         word-break: break-word;
     }
+
     .participaintDocBtn {
         padding: 12px 24px;
         width: max-content;
     }
-    .feedBackUpload{
+
+    .feedBackUpload {
         flex-wrap: wrap;
         flex-direction: column-reverse;
     }
-    .feedBackFiles{
-        margin-top:12px;
+
+    .feedBackFiles {
+        margin-top: 12px;
 
     }
+
     .feedBackUploadBtn {
         width: 100%;
         box-sizing: border-box;
         text-align: center;
     }
-    .participaintRowContent{
+
+    .participaintRowContent {
         padding-left: 0;
     }
-    .partSelectForm{
+
+    .partSelectForm {
         max-width: 100%;
         overflow: hidden;
     }
+
     .partSelectFormItem {
         font-size: 18px;
         line-height: 23px;
     }
-    .hotelDescrWr{
+
+    .hotelDescrWr {
         display: block;
     }
-    .hotelImage{
+
+    .hotelImage {
         width: 100%;
     }
+
     .hotelDescrBox {
 
         width: 100%;
         padding-right: 0;
-        margin-top:24px;
+        margin-top: 24px;
     }
-    .hotelHead{
+
+    .hotelHead {
         flex-wrap: wrap;
         flex-direction: column-reverse;
     }
-    .hotelStarsWr{
+
+    .hotelStarsWr {
         justify-content: space-between;
     }
-    .roomBookConfirmWr{
+
+    .roomBookConfirmWr {
         display: block;
     }
-    .hotelRoom>div{
+
+    .hotelRoom > div {
         display: block;
     }
-    .roomDescr{
+
+    .roomDescr {
         display: none;
     }
-    .roomBookWr{
+
+    .roomBookWr {
         margin-top: 24px;
     }
-    .roomBookBtn{
+
+    .roomBookBtn {
         width: 100%;
     }
-    .quote2Item{
+
+    .quote2Item {
         width: 100%;
         margin-bottom: 0;
     }
-    .quote2ItemImgWr img{
+
+    .quote2ItemImgWr img {
         width: 100%;
     }
+
     .quteBodyBox {
         flex-direction: column-reverse;
     }
-    .quotesCtrl{display: none !important;}
-    .quotesCenter{
+
+    .quotesCtrl {
+        display: none !important;
+    }
+
+    .quotesCenter {
         background-image: none;
         margin-bottom: 0;
     }
-    #quotes{
+
+    #quotes {
         background-image: url('/static/images/quote2bg.svg');
         background-position-x: right;
         background-position-y: 24%;
@@ -888,36 +1066,45 @@
         margin-bottom: 56px;
         background-color: #BB3E3F;
     }
-    .quotesWr{
+
+    .quotesWr {
         background: inherit;
         padding-top: 44px;
         background-position-y: 120px;
     }
-    .quote2Text{
-    font-size: 16px;
-    line-height: 24px;
-}
-    .quote2ItemImgWr{
+
+    .quote2Text {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .quote2ItemImgWr {
         width: 60%;
     }
+
     #place {
         padding-top: 0px;
     }
+
     .footerVisaItem {
         width: min(80%, 300px);
     }
+
     .placeTextItem {
         font-size: 16px;
         line-height: 24px;
         margin-top: 24px;
     }
+
     .persMenuAlert {
         margin-right: 18px;
     }
-    .langSelector{
+
+    .langSelector {
         display: none;
     }
-    .oSessionPageWr{
+
+    .oSessionPageWr {
         display: flex;
         align-items: flex-start;
         justify-content: right;
@@ -928,19 +1115,22 @@
         right: 12px;
 
     }
-    .oSessionPage{
+
+    .oSessionPage {
         width: 20px;
         height: 20px;
         margin-left: 8px;
         background: #878787;
-        color:#FFFFFF;
+        color: #FFFFFF;
         font-weight: 300;
         color: transparent;
     }
-    .oSessionPage.active{
+
+    .oSessionPage.active {
         background: #BB3E3F;
     }
-    .pagenatorNext, .pagenatorPrev{
+
+    .pagenatorNext, .pagenatorPrev {
         background: #E39A4F;
         display: flex;
         align-items: center;
@@ -948,20 +1138,25 @@
         box-sizing: border-box;
         padding: 4px;
     }
-    .pagenatorNext svg, .pagenatorPrev svg{
+
+    .pagenatorNext svg, .pagenatorPrev svg {
         width: 100%;
         height: auto;
     }
-    .pagenatorPrev svg{
+
+    .pagenatorPrev svg {
         transform: rotate(180deg);
     }
-    .oSession:last-child .pagenatorNext{
+
+    .oSession:last-child .pagenatorNext {
         display: none;
     }
-    .oSession:first-child .pagenatorPrev{
+
+    .oSession:first-child .pagenatorPrev {
         display: none;
     }
-    .oSessionNextBtn{
+
+    .oSessionNextBtn {
         display: flex;
         position: absolute;
         background: #BB3E3F;
@@ -974,17 +1169,21 @@
         box-sizing: border-box;
         padding: 4px;
     }
-    .oSession:last-child .oSessionNextBtn{
+
+    .oSession:last-child .oSessionNextBtn {
         display: none;
     }
-    .oSessionNextBtn svg{
+
+    .oSessionNextBtn svg {
         width: 100%;
         height: auto;
     }
-    .oSessionNextBtn svg path{
-        stroke: #E39A4F ;
+
+    .oSessionNextBtn svg path {
+        stroke: #E39A4F;
     }
-    .oSessionTopPageWr{
+
+    .oSessionTopPageWr {
         display: flex;
         align-items: flex-start;
         justify-content: right;
@@ -995,7 +1194,8 @@
         right: 4px;
 
     }
-    .oSessionNext2{
+
+    .oSessionNext2 {
         display: flex;
         justify-content: right;
         position: absolute;
@@ -1010,19 +1210,30 @@
         width: max-content;
         color: white;
         font-size: 14px;
+        font-weight: 200;
+        text-transform: uppercase;
+    }
+
+    .oSessionNext2 svg {
+        height: auto;
+        width: 9px;
+        margin-left: 8px;
     }
 
 }
+
 @media all and (max-width: 300px) {
     .newsTitle, .newsText, .faqTitle, .faqText {
         font-size: 14px;
         line-height: 20px;
     }
+
     h1, h2 {
         font-size: 16px;
         line-height: 20px;
         left: 12px;
     }
+
     .regSubmit {
         font-size: 14px;
         line-height: 20px;
