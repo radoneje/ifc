@@ -1,6 +1,9 @@
 extends ../layout
 block head
-    title="Финансовый Конгресс Банка России: Личный кабинет"
+    if ru
+        title="Финансовый Конгресс Банка России: Личный кабинет"
+    else
+        title="Financial Congress of the Bank of Russia: Personal account"
 block content
 
     #loader.prcLoaderWr.flex.center
@@ -14,7 +17,10 @@ block content
                         .persHeadLogo.svg100
                             include ../svg/mainlogo.svg
                         .persHeadText.flex.center
-                            .persHeadH1 Финансовый<br>конгресс<br>Банка&nbsp;России
+                            if ru
+                                .persHeadH1 Финансовый<br>конгресс<br>Банка&nbsp;России
+                            else
+                                .persHeadH1 Financial<br>Congress<br>of the Bank<br>of Russia
                     .persMenu.flex.center
                         a.persMenuAlert(v-if="newInfo>0" v-on:click="personalMobileMenuClose();section='info'")
                             include ../svg/personalNewMessageIco.svg
@@ -27,18 +33,34 @@ block content
             .persBody.flex
                 .persBodyL
                     .persNav
-                        .persNavItem.mobile(onclick="document.location.href='/'") Главная
-                        .persNavItem(v-on:click="personalMobileMenuClose();section='pay'" v-bind:class="{active:section=='pay'}" v-if="user.isPay") Оплата
-                        .persNavItem(v-on:click="personalMobileMenuClose();section='info'" v-bind:class="{active:section=='info'}") Информация
-                            .persNavItemBage(v-if="newInfo>0")
-                                .persNavItemBageText {{newInfo}}
-                        .persNavItem(v-on:click="personalMobileMenuClose();section='profile'" v-bind:class="{active:section=='profile'}") Профиль
-                        .persNavItem(v-on:click="personalMobileMenuClose();section='doc'" v-bind:class="{active:section=='doc'}") Документы
-                        .persNavItem(v-on:click="personalMobileMenuClose();section='hotel'" v-bind:class="{active:section=='hotel'}") Отели
-                        //.persNavItem(v-on:click="section='transfer'" v-bind:class="{active:section=='transfer'}") Трансферы
-                        .persNavItem(v-on:click="personalMobileMenuClose();section='place'" v-bind:class="{active:section=='place'}") Место проведения
-                        .persNavItem(v-on:click="personalMobileMenuClose();section='feedback'" v-bind:class="{active:section=='feedback'}") Обратная связь
-                        .persNavItem.mobile(href="/personal/exit/"+lang) выход
+                        if ru
+                            .persNavItem.mobile(onclick="document.location.href='/'") Главная
+                        else
+                            .persNavItem.mobile(onclick="document.location.href='/'") mainPage
+                        if ru
+                            .persNavItem(v-on:click="personalMobileMenuClose();section='pay'" v-bind:class="{active:section=='pay'}" v-if="user.isPay") Оплата
+                            .persNavItem(v-on:click="personalMobileMenuClose();section='info'" v-bind:class="{active:section=='info'}") Информация
+                                .persNavItemBage(v-if="newInfo>0")
+                                    .persNavItemBageText {{newInfo}}
+                            .persNavItem(v-on:click="personalMobileMenuClose();section='profile'" v-bind:class="{active:section=='profile'}") Профиль
+                            .persNavItem(v-on:click="personalMobileMenuClose();section='doc'" v-bind:class="{active:section=='doc'}") Документы
+                            .persNavItem(v-on:click="personalMobileMenuClose();section='hotel'" v-bind:class="{active:section=='hotel'}") Отели
+                            //.persNavItem(v-on:click="section='transfer'" v-bind:class="{active:section=='transfer'}") Трансферы
+                            .persNavItem(v-on:click="personalMobileMenuClose();section='place'" v-bind:class="{active:section=='place'}") Место проведения
+                            .persNavItem(v-on:click="personalMobileMenuClose();section='feedback'" v-bind:class="{active:section=='feedback'}") Обратная связь
+                            .persNavItem.mobile(href="/personal/exit/"+lang) выход
+                        else
+
+                            .persNavItem(v-on:click="personalMobileMenuClose();section='info'" v-bind:class="{active:section=='info'}") INFORMATION
+                                .persNavItemBage(v-if="newInfo>0")
+                                    .persNavItemBageText {{newInfo}}
+                            .persNavItem(v-on:click="personalMobileMenuClose();section='profile'" v-bind:class="{active:section=='profile'}") PROFILE
+                            .persNavItem(v-on:click="personalMobileMenuClose();section='doc'" v-bind:class="{active:section=='doc'}") DOCUMENTS
+                            .persNavItem(v-on:click="personalMobileMenuClose();section='hotel'" v-bind:class="{active:section=='hotel'}") ACCOMODATION
+                            //.persNavItem(v-on:click="section='transfer'" v-bind:class="{active:section=='transfer'}") Трансферы
+                            .persNavItem(v-on:click="personalMobileMenuClose();section='place'" v-bind:class="{active:section=='place'}") VENUE
+                            .persNavItem(v-on:click="personalMobileMenuClose();section='feedback'" v-bind:class="{active:section=='feedback'}") FEEDBACK
+                            .persN
 
                 .persBodyR
                     .persSection(v-if="section=='pay'")

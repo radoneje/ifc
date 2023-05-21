@@ -38,9 +38,14 @@ block content
                     else
                         .regSubmit#send  GET A PERSONAL LINK
                 .participaintRow#confirm(style="display:none")
-                    div Eсли введенный email был зарегистрирован, ссылка доступа в личный кабинет отправлена.
-                    div
-                        b Спасибо!
+                    if ru
+                        div Eсли введенный email был зарегистрирован, ссылка доступа в личный кабинет отправлена.
+                        div
+                            b Спасибо!
+                    else
+                        div If a participant with such an email address is registered, the individual link has been sent to that address.
+                        div
+                            b Thank you!
 
 
     include elems/footer
