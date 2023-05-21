@@ -971,7 +971,7 @@
         align-items: center;
         justify-items: center;
         box-sizing: border-box;
-        padding: 2px;
+        padding: 4px;
     }
     .oSession:last-child .oSessionNextBtn{
         display: none;
