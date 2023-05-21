@@ -377,8 +377,9 @@ router.get('/akt/:guid', async function (req, res, next) {
         doc
             .image(__dirname+"/../forpdf/act/01.png",0,0,{width:600})
             .font("/var/fonts/Arial_regular.ttf")///var/fonts/OpenSans-Regular-2.ttf")
-            .fontSize(10)
+            .fontSize(14)
             .fillColor('#000000')
+            .text( "ФК-"+inv.id, /*x*/ 60 , /*y*/ 60,{width: 400})
         doc.end();
         setTimeout(()=>{res.download(filename)},1000)
 
