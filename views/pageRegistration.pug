@@ -21,7 +21,7 @@ block content
                     .sectionTitle Заявка на участие
             else
                 if typeid == 4
-                    .sectionTitle APPLICATION FORM
+                    .sectionTitle MEDIA REPRESENTATIVE
                 else if typeid == 9
                     .sectionTitle APPLICATION FORM
                 else
@@ -39,7 +39,7 @@ block content
                             .menuItemText Участник
                     else
                         if typeid == 4
-                            .menuItemText PARTICIPANT
+                            .menuItemText MEDIA REPRESENTATIVE
                         else if typeid == 9
                             .menuItemText PARTICIPANT
                         else
@@ -126,7 +126,7 @@ block content
                             .recLabel.reg287 адрес регистрации
                             input.reqInput(v-model="user.address" must name="address" placeholder="ФОРМАТ: КАК В ДОКУМЕНТЕ")
                         else
-                            .recLabel.reg287 Страна
+                            .recLabel.reg287 COUNTRY
                             input.reqInput(v-model="user.address" must name="address" placeholder="")
 
 
