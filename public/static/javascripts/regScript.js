@@ -57,7 +57,7 @@ let regApp = new Vue({
                 });
                 return;
             }
-            if(!ru) {
+            if(ru) {
                 if (this.innStatus.state != 2) {
 
                     this.innStatus = {state: 0, message: "Загрузите дынные из ФНС"};
