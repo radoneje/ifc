@@ -971,6 +971,9 @@
         align-items: center;
         justify-items: center;
     }
+    .oSession:last-child .oSessionNextBtn{
+        display: none;
+    }
 
 
 
