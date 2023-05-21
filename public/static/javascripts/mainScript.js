@@ -397,11 +397,15 @@ if(ts){
 
         }
         let  oSessionNextBtn=s.querySelector(".oSessionNextBtn")
-        console.log(oSessionNextBtn, )
+
         if(oSessionNextBtn){
             oSessionNextBtn.onclick=()=>{
                s.parentNode.parentNode.scrollTo({left: window.innerWidth*s.getAttribute( 'hallNumber')-(16*s.getAttribute( 'hallNumber')),behavior: 'smooth'})
             }
+        }
+    let oSessionNext2=s.querySelector(".oSessionNext2")
+        if(oSessionNext2){
+            oSessionNext2.querySelector("span").innerHTML=(lang=="ru"?"зал ":"hall ") + s.getAttribute( 'hallNumber')+1
         }
 
     })
