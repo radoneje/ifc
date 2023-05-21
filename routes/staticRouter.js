@@ -386,7 +386,7 @@ router.get('/akt/:guid', async function (req, res, next) {
             .text( recvizit, /*x*/ 108 , /*y*/ 225,{width: 400})
             .text( "ЗАЯВКА № "+inv.user[0].id+"от "+ moment(inv.user[0].date).format("DD.MM.YYYY г."), /*x*/ 108 , /*y*/ 272,{width: 400})
             .fontSize(8)
-            .text( price+" 000.00", /*x*/ 400 , /*y*/ 290,{width: 200})
+            .text( price+" 000.00", /*x*/ 400 , /*y*/ 291,{width: 200})
         doc.end();
         setTimeout(()=>{res.download(filename)},1000)
 
