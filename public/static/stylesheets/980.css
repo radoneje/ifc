@@ -995,7 +995,22 @@
         right: 4px;
 
     }
-
+    .oSessionNext2{
+        display: flex;
+        justify-content: right;
+        position: absolute;
+        z-index: 200;
+        top: 72px;
+        right: 12px;
+        background: #E39A4F;
+        align-items: center;
+        justify-items: center;
+        box-sizing: border-box;
+        padding: 4px 8px;
+        width: max-content;
+        color: white;
+        font-size: 14px;
+    }
 
 }
 @media all and (max-width: 300px) {
