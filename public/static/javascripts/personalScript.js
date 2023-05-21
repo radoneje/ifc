@@ -293,6 +293,7 @@ let personalApp = new Vue({
     mounted: async function () {
 
         this.user = await getJson("/personal/data")
+        if(this.user.info)
         this.user.info.forEach(i => {
             try {
                 let storage = localStorage.getItem("info_" + i.id)
