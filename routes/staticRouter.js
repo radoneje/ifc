@@ -379,7 +379,7 @@ router.get('/akt/:guid', async function (req, res, next) {
             .font("/var/fonts/Arial_regular.ttf")///var/fonts/OpenSans-Regular-2.ttf")
             .fontSize(14)
             .fillColor('#000000')
-            .text( "ФК-"+inv.id, /*x*/ 60 , /*y*/ 60,{width: 400})
+            .text( "ФК-"+inv.id, /*x*/ 100 , /*y*/ 120,{width: 400})
         doc.end();
         setTimeout(()=>{res.download(filename)},1000)
 
