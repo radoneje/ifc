@@ -970,6 +970,8 @@
         top: 0;
         align-items: center;
         justify-items: center;
+        box-sizing: border-box;
+        padding: 2px;
     }
     .oSession:last-child .oSessionNextBtn{
         display: none;
@@ -977,6 +979,9 @@
     .oSessionNextBtn svg{
         width: 100%;
         height: auto;
+    }
+    .oSessionNextBtn svg path{
+        stroke: #E39A4F ;
     }
 
 
