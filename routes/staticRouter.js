@@ -338,6 +338,54 @@ router.get('/personalDataAgreement/:userguid', async function (req, res, next) {
     }
 });
 
+router.get('/akt/:userguid', async function (req, res, next) {
+    try {
+        let users=await req.knex("t_users").where({guid:req.params.userguid})
+        let u=users[0];
+        let filename="/var/ifc_data/acts/act_"+u.guid+".pdf"
+        if (fs.existsSync(filename)) {
+            //return res.download(filename);
+            fs.rmSync(filename)
+        }
+        let recvizit=inv.company[0].name+","
+        recvizit+="\nИНН "+inv.company[0].inn+", КПП "+inv.company[0].kpp+","
+        recvizit+="\n"+inv.company[0].address
+        if(inv.isPaySelf) {
+            recvizit = inv.user[0].f + " " + inv.user[0].i + " "+ inv.user[0].o
+            recvizit += "\nпаспорт:" +(inv.user[0].passportSerial || "")+" "+ inv.user[0].passportNumber +", выдан: "+ inv.user[0].passportDate+", код подразделения "+ inv.user[0].passportCode
+        }
+        var doc = new PDFDocument({size: 'a4', layout: 'portrait'});
+        let price=150-(150*(inv.user[0].discount/100))
+        let pricetxt="Сто пятьдесят"
+        if(price==135)
+            pricetxt="Сто тридцать пять"
+        if(price==120)
+            pricetxt="Сто двадцать"
+        if(price==105)
+            pricetxt="Сто пять"
+        if(price==90)
+            pricetxt="Девяносто"
+        if(price==75)
+            pricetxt="Семьдесят пять"
+
+        doc.pipe(fs.createWriteStream(filename));
+
+        doc
+            .image(__dirname+"/../forpdf/act/01.png",0,0,{width:600})
+            .font("/var/fonts/Arial_regular.ttf")///var/fonts/OpenSans-Regular-2.ttf")
+            .fontSize(10)
+            .fillColor('#000000')
+        doc.end();
+        setTimeout(()=>{res.download(filename)},1000)
+
+
+    } catch (e) {
+        console.error(e)
+        res.sendStatus(500)
+    }
+});
+
+
 
 
 export default router;
