@@ -39,7 +39,10 @@ each hotel in hotels
                         - n++;
                             include ../svg/hotelStar.svg
                     .hotelLink
-                        a.inline(href=hotel.link target="_blank") На сайт отеля
+                        if ru
+                            a.inline(href=hotel.link target="_blank") На сайт отеля
+                        else
+                            a.inline(href=hotel.link target="_blank") Holel site
         .hotelDescrWr.flex.center.beetwen
             .hotelImage
                 img(src="/static/image/middle/" + hotel.photoid  loading="lazy")
@@ -56,11 +59,18 @@ each hotel in hotels
                                 .roomName #{room["title"+lang]}
                                 .roomPrice !{String(room.price).replace(/000$/," 000")} &#8381;
                             .roomBookWr(v-if="user.roomid!="+room.id)
-                                .roomBookBtn(v-on:click="bookRoom("+room.id+", '"+hotel['name' + lang]+"')") Забронировать
+                                if ru
+                                    .roomBookBtn(v-on:click="bookRoom("+room.id+", '"+hotel['name' + lang]+"')") Забронировать
+                                else
+                                    .roomBookBtn(v-on:click="bookRoom("+room.id+", '"+hotel['name' + lang]+"')") Book Hotel
                             .roomBookWr(v-else)
                                 .roomBookConfirmWr.flex.center
-                                    .roomBookConfirm Ваша заявка отправлена в отель,<br>менеджер с вами свяжется.
-                                    .roomBookBtn.roomBookConfirmBtn Ваш выбор
+                                    if ru
+                                        .roomBookConfirm Ваша заявка отправлена в отель,<br>менеджер с вами свяжется.
+                                        .roomBookBtn.roomBookConfirmBtn Ваш выбор
+                                    else
+                                        .roomBookConfirm Your request will go to the booking service of the hotel you have selected.
+                                        .roomBookBtn.roomBookConfirmBtn Your choice
                         .roomDescr #{room["descr"+lang]}
 
 
