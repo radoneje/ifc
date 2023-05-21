@@ -580,6 +580,7 @@
     }
     .oTs{
         display: block;
+        position: relative;
     }
     .pgmHeadDate{
         margin-left: 0;
