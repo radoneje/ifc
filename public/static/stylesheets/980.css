@@ -983,6 +983,17 @@
     .oSessionNextBtn svg path{
         stroke: #E39A4F ;
     }
+    .oSessionTopPageWr{
+        display: flex;
+        align-items: flex-start;
+        justify-content: right;
+
+        position: absolute;
+        z-index: 200;
+        top: 12px;
+        right: 12px;
+
+    }
 
 
 }

@@ -2437,6 +2437,9 @@ img[src='undefined']{
 .oSessionNextBtn{
     display: none;
 }
+.oSessionTopPageWr{
+    display: none;
+}
 
 
 @media all and (max-width: 1700px){
