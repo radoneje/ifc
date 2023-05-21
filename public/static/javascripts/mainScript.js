@@ -406,6 +406,12 @@ if(ts){
     let oSessionNext2=s.querySelector(".oSessionNext2")
         if(oSessionNext2){
             oSessionNext2.querySelector("span").innerHTML=(lang=="ru"?"зал ":"hall ") + (parseInt(s.getAttribute( 'hallNumber'))+1)
+            oSessionNext2.onclick=()=> {
+                s.parentNode.parentNode.scrollTo({
+                    left: window.innerWidth * s.getAttribute('hallNumber') - (16 * s.getAttribute('hallNumber')),
+                    behavior: 'smooth'
+                })
+            }
         }
 
     })
