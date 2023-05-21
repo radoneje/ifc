@@ -2441,7 +2441,7 @@ img[src='undefined']{
     .mainImg2Wr .menuItem:last-child{
         position: absolute;
         top: 40px;
-        left: 338px;
+        left: 350px;
     }
 }
 @media all and (max-width: 1600px){
