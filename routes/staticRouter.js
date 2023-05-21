@@ -340,9 +340,13 @@ router.get('/personalDataAgreement/:userguid', async function (req, res, next) {
 
 router.get('/akt/:userguid', async function (req, res, next) {
     try {
-        let users=await req.knex("t_users").where({guid:req.params.userguid})
-        let u=users[0];
-        let filename="/var/ifc_data/acts/act_"+u.guid+".pdf"
+        let invoices=await req.knex("v_invoice").where({guid:req.params.guid})
+        if(invoices.length==0)
+            return res.sendStatus(404);
+
+        let inv=invoices[0]
+
+        let filename="/var/ifc_data/acts/act_"+String(inv.id).padStart(3, '0')+".pdf"
         if (fs.existsSync(filename)) {
             //return res.download(filename);
             fs.rmSync(filename)
