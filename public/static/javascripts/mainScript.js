@@ -384,7 +384,7 @@ if(ts){
         if(nextBtn)
         {
             nextBtn.onclick=()=>{
-                console.log(s.parentNode.parentNode.scrollTo({left: window.innerWidth*s.getAttribute( 'hallNumber')-(16*s.getAttribute( 'hallNumber')),behavior: 'smooth'}))
+                s.parentNode.parentNode.scrollTo({left: window.innerWidth*s.getAttribute( 'hallNumber')-(16*s.getAttribute( 'hallNumber')),behavior: 'smooth'})
             }
 
         }
@@ -395,6 +395,12 @@ if(ts){
                 console.log(s.parentNode.parentNode.scrollTo({left: window.innerWidth*(s.getAttribute( 'hallNumber')-2)-(16*(s.getAttribute( 'hallNumber')-2)),behavior: 'smooth'}))
             }
 
+        }
+        let  oSessionNextBtn=s.querySelector(".oSessionNextBtn")
+        if(oSessionNextBtn){
+            oSessionNextBtn.onclick=()=>{
+               s.parentNode.scrollTo({left: window.innerWidth*s.getAttribute( 'hallNumber')-(16*s.getAttribute( 'hallNumber')),behavior: 'smooth'})
+            }
         }
 
     })
