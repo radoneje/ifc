@@ -274,10 +274,10 @@ block content
                         div
                             if ru
                                 .regCheckBoxText( ) ПРИНИМАЮ ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ
-                                    a.gray(onclick="event.preventDefault();window.open('/static/key/agr"+lang+"?open=open')")  (посмотреть)
+                                    a.gray(onclick="event.preventDefault();window.open('/static/key/agr"+lang+"?open=open')")  &nbsp;(посмотреть)
                             else
                                 .regCheckBoxText( )  I HEREBY ACCEPT THE TERMS OF SERVICE
-                                    a.gray(onclick="event.preventDefault();window.open('/static/key/agr"+lang+"?open=open')") (SEE DETAILS)
+                                    a.gray(onclick="event.preventDefault();window.open('/static/key/agr"+lang+"?open=open')") &nbsp;(SEE DETAILS)
 
                     .reqRowErrorMessage(v-if="isPersonalAgreementError && !user.isPersonalAgreement") Cоглашение не принято
                 .regRow.checkBox
@@ -301,7 +301,8 @@ block content
                     .regSubmit()
                         include svg/loader.svg
                 .regRow(v-else)
-                    if typeid==4
+                    //if typeid==4
+                    if ru
                         .regSubmit(v-on:click="regSmi()" v-if="!isRegSuccess") подать заявку
                     else
                         .regSubmit(v-on:click="regUser()" v-if="!isRegSuccess") submit form
