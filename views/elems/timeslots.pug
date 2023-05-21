@@ -5,8 +5,7 @@
             if(ts.allTracks)
                 .oTrack.oAllTracks(class=ts.isImpotant?"impotant":"") #{ts["descr_"+lang]}
             else
-                if ts.sessions
-                    if(!ts.isImpotant)
+                if(!ts.isImpotant)
                         .oSessionTopPageWr
                             if ts.sessions
                                 .oSessionPage.pagenatorPrev
