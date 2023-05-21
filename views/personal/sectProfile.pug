@@ -1,67 +1,102 @@
 .participaintRow
     .menuItem.flex.center.left
         .menuItemBox
-        .menuItemText Профиль
+        if ru
+            .menuItemText Профиль
+        else
+            .menuItemText Profile
 .regRow
     .reqPhoto2.reg287(v-on:click="uploadPhoto()")
         .reqPhotoBox2
             .reqPhotoBox2Photo
                 img(v-if="user.photoid" :src="'/static/image/middle/'+user.photoid")
-    .reg287.mt2.pBtnChange(v-on:click="uploadPhoto()") Изменить фото
+    if ru
+        .reg287.mt2.pBtnChange(v-on:click="uploadPhoto()") Изменить фото
+    else
+        .reg287.mt2.pBtnChange(v-on:click="uploadPhoto()") CHANGE THE PHOTO
 .regRow()
     .regRowGroup.readonly.flex.left
-        .recLabel.reg287 Фамилия
+        if ru
+            .recLabel.reg287 Фамилия
+        else
+            .recLabel.reg287 LAST NAME
         input.reqInput(readonly v-model="user.f"  name="f")
 .regRow()
     .regRowGroup.readonly.flex.left
-        .recLabel.reg287 Имя
+        if ru
+            .recLabel.reg287 Имя
+        else
+            .recLabel.reg287 FIRST NAME
         input.reqInput(readonly v-model="user.i"  name="i")
-.regRow()
-    .regRowGroup.readonly.flex.left
-        .recLabel.reg287 Отчество
-        input.reqInput(readonly v-model="user.o"  name="o")
+if ru
+    .regRow()
+        .regRowGroup.readonly.flex.left
+            .recLabel.reg287 Отчество
+            input.reqInput(readonly v-model="user.o"  name="o")
 .regRow(v-bind:class="{error:errors.companyShort}")
     .regRowGroup.flex.left
-        .recLabel.reg287 Компания на бейдже
+        if ru
+            .recLabel.reg287 Компания на бейдже
+        else
+            .recLabel.reg287 COMPANY NAME FOR YOUR BADGE
         input.reqInput(v-model="user.companyShort" must name="companyShort" placeholder="")
 .regRow()
     .regRowGroup.readonly.flex.left
-        .recLabel.reg287  Cерия и номер паспорта
+        if ru
+            .recLabel.reg287  Cерия и номер паспорта
+        else
+            .recLabel.reg287  PASSPORT NUMBER
         input.reqInput(readonly v-model="user.passportNumber"  name="passportNumber" placeholder="ФОРМАТ: С ПРОБЕЛОМ, КАК В ДОКУМЕНТЕ")
-.regRow()
-    .regRowGroup.readonly.flex.left
-        .recLabel.reg287 дата выдачи
-        input.reqInput(readonly v-model="user.passportDate"  name="passportDate" placeholder="ФОРМАТ: КАК В ДОКУМЕНТЕ")
-.regRow()
-    .regRowGroup.readonly.flex.left
-        .recLabel.readonly.reg287 код подразделения
-        input.reqInput(readonly v-model="user.passportCode"  name="passportCode" placeholder="ФОРМАТ: КАК В ДОКУМЕНТЕ")
-.regRow()
-    .regRowGroup.readonly.flex.left
-        .recLabel.readonly.reg287 адрес регистрации
-        input.reqInput(readonly v-model="user.address"  name="address" placeholder="ФОРМАТ: КАК В ДОКУМЕНТЕ")
+if ru
+    .regRow()
+        .regRowGroup.readonly.flex.left
+            .recLabel.reg287 дата выдачи
+            input.reqInput(readonly v-model="user.passportDate"  name="passportDate" placeholder="ФОРМАТ: КАК В ДОКУМЕНТЕ")
+    .regRow()
+        .regRowGroup.readonly.flex.left
+            .recLabel.readonly.reg287 код подразделения
+            input.reqInput(readonly v-model="user.passportCode"  name="passportCode" placeholder="ФОРМАТ: КАК В ДОКУМЕНТЕ")
+    .regRow()
+        .regRowGroup.readonly.flex.left
+            .recLabel.readonly.reg287 адрес регистрации
+            input.reqInput(readonly v-model="user.address"  name="address" placeholder="ФОРМАТ: КАК В ДОКУМЕНТЕ")
 .regRow(v-bind:class="{error:errors.email}")
     .regRowGroup.flex.left
         .recLabel.reg287 email
         input.reqInput(v-model="user.email" must name="email" email )
 .regRow(v-bind:class="{error:errors.phone}")
     .regRowGroup.flex.left
-        .recLabel.reg287 телефон
-        input.reqInput(v-model="user.phone" must name="phone" placeholder="ФОРМАТ: +7 000 000 0000")
+        if ru
+            .recLabel.reg287 телефон
+            input.reqInput(v-model="user.phone" must name="phone" placeholder="ФОРМАТ: +7 000 000 0000")
+        else
+            .recLabel.reg287 PHONE NUMBER
+            input.reqInput(v-model="user.phone" must name="phone" placeholder="FORMAT: +X 000 000 0000")
+
 .regRow(v-bind:class="{error:errors.position}")
     .regRowGroup.flex.left
-        .recLabel.reg287 должность
+        if ru
+            .recLabel.reg287 должность
+        else
+            .recLabel.reg287 POSITION
         input.reqInput(v-model="user.position" must name="position" placeholder="")
-.regRow(v-bind:class="{error:errors.postAddress}")
-    .regRowGroup.flex.left
-        .recLabel.reg287(style="font-size: 0.8em;") Почтовый адрес для документов
-        input.reqInput(v-model="user.postAddress"  name="postAddress" placeholder="")
+if ru
+    .regRow(v-bind:class="{error:errors.postAddress}")
+        .regRowGroup.flex.left
+            .recLabel.reg287(style="font-size: 0.8em;") Почтовый адрес для документов
+            input.reqInput(v-model="user.postAddress"  name="postAddress" placeholder="")
 
 .regRow(v-if="isLoading")
     .regSubmit()
         include ../svg/loader.svg
 .regRow(v-else-if="isComplite")
-    .changeSuccess Изменения сохранены.
+    if ru
+        .changeSuccess Изменения сохранены.
+    else
+        .changeSuccess Success.
 .regRow(v-else )
-    .regSubmit(v-on:click="saveUser()") Сохранить изменения
+    if ru
+        .regSubmit(v-on:click="saveUser()") Сохранить изменения
+    else
+        .regSubmit(v-on:click="saveUser()") SAVE CHANGES
 
