@@ -397,9 +397,10 @@ if(ts){
 
         }
         let  oSessionNextBtn=s.querySelector(".oSessionNextBtn")
+        console.log(oSessionNextBtn, )
         if(oSessionNextBtn){
             oSessionNextBtn.onclick=()=>{
-               s.parentNode.scrollTo({left: window.innerWidth*s.getAttribute( 'hallNumber')-(16*s.getAttribute( 'hallNumber')),behavior: 'smooth'})
+               s.parentNode.parentNode.scrollTo({left: window.innerWidth*s.getAttribute( 'hallNumber')-(16*s.getAttribute( 'hallNumber')),behavior: 'smooth'})
             }
         }
 
