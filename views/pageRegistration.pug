@@ -140,9 +140,10 @@ block content
                     .regRowGroup.flex.left
                         if ru
                             .recLabel.reg287 телефон
+                            input.reqInput(v-model="user.phone" must name="phone" placeholder="ФОРМАТ: +7 000 000 0000")
                         else
                             .recLabel.reg287 PHONE NUMBER
-                        input.reqInput(v-model="user.phone" must name="phone" placeholder="ФОРМАТ: +X 000 000 0000")
+                            input.reqInput(v-model="user.phone" must name="phone" placeholder="FORMAT: +X 000 000 0000")
                 .regRow(v-bind:class="{error:errors.position}")
                     .regRowGroup.flex.left
                         if ru
@@ -289,8 +290,10 @@ block content
                             else
                                 .regCheckBoxText( )  I HEREBY ACCEPT THE TERMS OF SERVICE
                                     a.gray(onclick="event.preventDefault();window.open('/static/key/agr"+lang+"?open=open')") &nbsp;(SEE DETAILS)
-
-                    .reqRowErrorMessage(v-if="isPersonalAgreementError && !user.isPersonalAgreement") Cоглашение не принято
+                    if ru
+                        .reqRowErrorMessage(v-if="isPersonalAgreementError && !user.isPersonalAgreement") Cоглашение не принято
+                    else
+                        .reqRowErrorMessage(v-if="isPersonalAgreementError && !user.isPersonalAgreement") Please tick the box to accept the agreement
                 .regRow.checkBox
                     .regCheckBox.green.flex.left(v-on:click="user.isTerms=!user.isTerms" v-bind:class="{active:user.isTerms}")
                         div
@@ -323,8 +326,14 @@ block content
                         .regCheckBox.success.flex.left()
                             .regCheckBoxBox
                                 include svg/acceptGreen.svg
-                            .regCheckBoxText ваша заявка успешно отправлена
-                        .regSubmit(v-on:click="document.location.reload()" ) Создать новую заявку
+                            if ru
+                                .regCheckBoxText ваша заявка успешно отправлена
+                            else
+                                .regCheckBoxText Your application is successfully sent
+                        if ru
+                            .regSubmit(v-on:click="document.location.reload()" ) Создать новую заявку
+                        else
+                            .regSubmit(v-on:click="document.location.reload()" ) Create new application
 
     include elems/footer
     include elems/mobileMenu
