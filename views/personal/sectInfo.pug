@@ -1,8 +1,11 @@
 .participaintRow
     .menuItem.flex.center.left
         .menuItemBox
+        if ru
+            .menuItemText Информация
+        info
+            .menuItemText Information
 
-        .menuItemText Информация
 .participaintRow(v-for="item in user.info")
     .participaintRowHead {{item.titleru}}
     .participaintRowBody

@@ -1,13 +1,25 @@
 .participaintRow
     .menuItem.flex.center.left
         .menuItemBox
-        .menuItemText Место проведения
+        if ru
+            .menuItemText Место проведения
+        else
+            .menuItemText Место проведения
 .participaintRow
     .participaintRowBodySubTitle
-        b Новая сцена Мариинского театра
+        if ru
+            b Новая сцена Мариинского театра
+        else
+            b NEW STAGE OF THE MARIINSKY THEATRE
 .participaintRow
-    .participaintRowBodySubTitle  г. Санкт-Петербург, ул. Декабристов, дом 34
+    if ru
+        .participaintRowBodySubTitle  г. Санкт-Петербург, ул. Декабристов, дом 34
+    else
+        .participaintRowBodySubTitle  34 DEKABRISTOV STREET, SAINT PETERSBURG, RUSSIA
 .participaintRow
     .participaintRowContent
-        <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a><a href="https://yandex.ru/maps/2/saint-petersburg/?feedback=object%2Fadd&feedback-context=map.context&ll=30.295843%2C59.924962&utm_medium=mapframe&utm_source=maps&z=16.69" style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/?feedback=object%2Fadd&feedback-context=map.context&ll=30.295843%2C59.924962&z=16.69" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+        if ru
+            <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a><a href="https://yandex.ru/maps/2/saint-petersburg/?feedback=object%2Fadd&feedback-context=map.context&ll=30.295843%2C59.924962&utm_medium=mapframe&utm_source=maps&z=16.69" style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекc Карты</a><iframe src="https://yandex.ru/map-widget/v1/?feedback=object%2Fadd&feedback-context=map.context&ll=30.295843%2C59.924962&z=16.69" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+        else
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1971.875308945255!2d30.291187664438162!3d59.925477425402924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469630e39a320317%3A0xad9b1da8327b803b!2z0YPQuy4g0JTQtdC60LDQsdGA0LjRgdGC0L7Qsiwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MDEyMQ!5e0!3m2!1sru!2sru!4v1684694756385!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 

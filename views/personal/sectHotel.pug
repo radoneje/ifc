@@ -1,16 +1,30 @@
 .participaintRow
     //.participaintRowBody
-    .participaintRowBodySubTitle
-        b БРОНИРОВАНИЕ ОТЕЛЕЙ:
-    .participaintRowBody
-        ul
-            li Выберите отель и категорию номера;
-            li Нажмите «Забронировать»;
-            li Ваша заявка поступит в службу бронирования выбранного отеля;
-            li Отель свяжется с Вами для уточнения информации и подтверждения бронирования;
-            li Дальнейшая коммуникация и оплата проживания происходит напрямую между Вами и отелем.
-        p
-            .participaintRowContent Количество номеров для бронирования по специальным тарифам ограничено.
+    if ru
+        .participaintRowBodySubTitle
+            b БРОНИРОВАНИЕ ОТЕЛЕЙ:
+        .participaintRowBody
+            ul
+                li Выберите отель и категорию номера;
+                li Нажмите «Забронировать»;
+                li Ваша заявка поступит в службу бронирования выбранного отеля;
+                li Отель свяжется с Вами для уточнения информации и подтверждения бронирования;
+                li Дальнейшая коммуникация и оплата проживания происходит напрямую между Вами и отелем.
+            p
+                .participaintRowContent Количество номеров для бронирования по специальным тарифам ограничено.
+    else
+        .participaintRowBodySubTitle
+            b ACCOMODATION BOOKING:
+        .participaintRowBody
+            ul
+                li Please select a hotel and a room type,
+                li Press “Book” button,
+                li Your request will go to the booking service of the hotel you have selected,
+                li The hotel representative will contact you to check the details and confirm your booking,
+                li You will further communicate with the hotel representative directly, and make payment for the room to the hotel.
+            p
+                .participaintRowContent Please note that the number of the rooms available for booking at special rates is limited.
+
 
 each hotel in hotels
 
