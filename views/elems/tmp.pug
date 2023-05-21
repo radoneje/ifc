@@ -1,0 +1,12 @@
+if(!ts.isImpotant)
+                                               .oSessionNextBtn
+                                                   include ../svg/arrowRightRed.svg
+                                               .oSessionPageWr
+                                                   if ts.sessions
+                                                       .oSessionPage.pagenatorPrev
+                                                           include ../svg/arrowRightRed.svg
+                                                       each sessionPage in ts.sessions
+                                                           if(sessionPage["halltitle_" + lang])
+                                                               .oSessionPage.paginator #{sessionPage["halltitle_" + lang].replace(/hall /i, "").replace(/зал /i, "")}
+                                                       .oSessionPage.pagenatorNext
+                                                           include ../svg/arrowRightRed.svg
