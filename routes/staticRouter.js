@@ -345,6 +345,7 @@ router.get('/akt/:guid', async function (req, res, next) {
             return res.sendStatus(404);
 
         let inv=invoices[0]
+        return res.json(inv)
 
         let filename="/var/ifc_data/acts/act_"+String(inv.id).padStart(3, '0')+String(Math.random())+".pdf"
         if (fs.existsSync(filename)) {
@@ -382,7 +383,8 @@ router.get('/akt/:guid', async function (req, res, next) {
             .fillColor('#000000')
             .text( "ФК-"+inv.id, /*x*/ 95 , /*y*/ 122,{width: 400})
             .fontSize(10)
-            .text( recvizit, /*x*/ 110 , /*y*/ 220,{width: 400})
+            .text( recvizit, /*x*/ 108 , /*y*/ 225,{width: 400})
+            .text( "ЗАЯВКА № "++"от "+, /*x*/ 108 , /*y*/ 225,{width: 400})
         doc.end();
         setTimeout(()=>{res.download(filename)},1000)
 
