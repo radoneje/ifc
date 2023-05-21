@@ -405,7 +405,7 @@ if(ts){
         }
     let oSessionNext2=s.querySelector(".oSessionNext2")
         if(oSessionNext2){
-            oSessionNext2.querySelector("span").innerHTML=(lang=="ru"?"зал ":"hall ") + s.getAttribute( 'hallNumber')+1
+            oSessionNext2.querySelector("span").innerHTML=(lang=="ru"?"зал ":"hall ") + (parseInt(s.getAttribute( 'hallNumber'))+1)
         }
 
     })
