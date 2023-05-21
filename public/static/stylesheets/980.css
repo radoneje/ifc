@@ -1208,10 +1208,13 @@
         box-sizing: border-box;
         padding: 4px 8px;
         width: max-content;
-        color: white;
+        color: #BB3E3F;
         font-size: 14px;
         font-weight: 200;
         text-transform: uppercase;
+    }
+    .oSession:last-child .oSessionNext2 {
+        display: none;
     }
 
     .oSessionNext2 svg {
