@@ -338,7 +338,7 @@ router.get('/personalDataAgreement/:userguid', async function (req, res, next) {
     }
 });
 
-router.get('/akt/:userguid', async function (req, res, next) {
+router.get('/akt/:guid', async function (req, res, next) {
     try {
         let invoices=await req.knex("v_invoice").where({guid:req.params.guid})
         if(invoices.length==0)
