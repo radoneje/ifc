@@ -38,7 +38,7 @@ let personalApp = new Vue({
                 return ""
 
         },
-        sendFeedback: async function () {
+        sendFeedback: async function (ru=true) {
             if (this.isLodinng)
                 return
             if (this.feedback.text.length < 2) {
@@ -54,14 +54,21 @@ let personalApp = new Vue({
                     filesguid.push(file.guid)
             })
             if (err) {
+                if(ru)
                 alert("Не все файлы загружены, подождите")
+                else
+                    alert("Any files is loading, pleas wailt")
                 return;
             }
             this.isLoading = true;
             let msg = {text: this.feedback.text, files: filesguid}
             await postJson("/personal/feedbackMessage", msg)
             this.feedback = {text: "", files: []}
-            alert("сообщение отправлено")
+            if(ru)
+            alert("Сообщение отправлено")
+            else
+                alert("The message is send successfully")
+
             this.isLoading = false;
         },
         feedbackAddFile: async function () {

@@ -1,10 +1,13 @@
 .participaintRow
     .menuItem.flex.center.left
         .menuItemBox
-        .menuItemText Обратная связь
+        if ru
+            .menuItemText Обратная связь
+        else
+            .menuItemText Feedback
 .participaintRow
 
-        textarea.personalFeedback(v-model="feedback.text" placeholder="Напишите здесь Ваше сообщение")
+        textarea.personalFeedback(v-model="feedback.text" placeholder=ru?"Напишите здесь Ваше сообщение":"Specify your message here")
 .participaintRow
     .feedBackUpload.flex.beetwen
 
@@ -13,11 +16,17 @@
                 .feedBackFileName {{file.name}}
                 .feedBackFileLoading(v-if="file.loading")
                     include ../svg/loader.svg
-        .feedBackUploadBtn(v-on:click="feedbackAddFile()") Приложить файлы
+        if ru
+            .feedBackUploadBtn(v-on:click="feedbackAddFile()") Приложить файлы
+        else
+            .feedBackUploadBtn(v-on:click="feedbackAddFile()") ADD ATTACHMENTS
 
 .regRow(v-if="!isLoading")
     .participaintRowContent
-        .regSubmit(v-on:click="sendFeedback()" ) Отправить сообщение организаторам
+        if ru
+            .regSubmit(v-on:click="sendFeedback()" ) Отправить сообщение организаторам
+        else
+            .regSubmit(v-on:click="sendFeedback(false)" ) SEND A MESSAGE TO THE ORGANISING COMMITTEE
 .regRow(v-if="isLoading")
     .participaintRowContent
         .regSubmit()
