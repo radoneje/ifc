@@ -654,7 +654,7 @@ h2 {
     margin-top: 102px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
 }
 .partner{
