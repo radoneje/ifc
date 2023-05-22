@@ -2,7 +2,10 @@
     .subTower
         .partnersDecor
             include ../svg/partnersDecor.svg
-        .sectionTitle партнеры
+        if ru
+            .sectionTitle партнеры
+        else
+            .sectionTitle partners
         .partnersBox
                 .generalPartner.partner(onclick="window.open('http://vtb.ru')")
                     include ../partners/vtb.svg
@@ -27,7 +30,11 @@
                 .ordinaryPartner.partner
                     include  ../partners/ordynaryPartner.svg
 
-        .sectionTitle.partnerTitle2 ИНФОРМАЦИОННЫЕ ПАРТНЕРЫ
+        if ru
+            .sectionTitle ИНФОРМАЦИОННЫЕ ПАРТНЕРЫ
+        else
+            .sectionTitle media partners
+
         .partnersDecor2
             <svg width="265" height="67" viewBox="0 0 265 67" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 58.8184L264.98 26.3184L261.87 0.968506L0 33.0884V58.8184Z" fill="#E69B4E"/>
