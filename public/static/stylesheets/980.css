@@ -1237,6 +1237,9 @@
         width:calc(50% - 6px);
         margin-bottom: 12px;
     }
+    .partnerTitle2{
+        margin-top: 56px;
+    }
 
 }
 
