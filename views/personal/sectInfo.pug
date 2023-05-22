@@ -5,10 +5,16 @@
             .menuItemText Информация
         else
             .menuItemText Information
-.participaintRow
-    .participaintRowHead Сообщение от организаторов
-    .participaintRowContent
-        .wordWrap В этом разделе будут появляться важные сообщения для зарегистрированных участников, ответы на ваши вопросы, заданные через форму обратной связи , а также обращения Организационного комитета Конгресса к Вам лично.
+if ru
+    .participaintRow(if=" user.info && user.info.length==0")
+        .participaintRowHead Сообщение от организаторов
+        .participaintRowContent.mt-2
+            .wordWrap Добро пожаловать!<br>В этом разделе будут появляться важные сообщения для зарегистрированных участников, ответы на ваши вопросы, заданные через форму обратной связи , а также обращения Организационного комитета Конгресса к Вам лично.
+else
+    .participaintRow(if=" user.info && user.info.length==0")
+        .participaintRowHead A message from the Organisation Committee
+        .participaintRowContent.mt-2
+            .wordWrap Welcome!<br>In this section, you will get important messages regarding your participation in the Congress, and responses to the questions you might have asked via feedback form.
 
 
 .participaintRow(v-for="item in user.info")
