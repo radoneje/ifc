@@ -1225,6 +1225,18 @@
     .persNav .mobileMenuLangMenu{
         width: 100%;
     }
+    .generalPartner{
+        width: 100%;
+        margin-bottom: 12px;
+    }
+    .oficialPartner{
+        width: 100%;
+        margin-bottom: 12px;
+    }
+    .ordinaryPartner{
+        width:calc(50% - 6px);
+        margin-bottom: 12px;
+    }
 
 }
 
