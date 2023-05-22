@@ -652,6 +652,29 @@ h2 {
 
 .partnersBox {
     margin-top: 102px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.partner{
+    cursor:pointer;
+}
+.partner svg{
+    width: 100%;
+    height: auto;
+}
+.generalPartner{
+    width: calc(50% - 20px);
+    margin-bottom: 40px;
+}
+.oficialPartner{
+    width: calc(25% - 20px);
+    margin-bottom: 40px;
+}
+.ordinaryPartner{
+    width: calc(25% - 20px);
+    margin-bottom: 40px;
 }
 
 .partnersBox img {
