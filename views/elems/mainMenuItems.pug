@@ -4,10 +4,14 @@
     else
         .mainMenuItem(onclick="document.location.href='/news/"+lang+"'") News
 
-    if ru
+    // if ru
         .mainMenuItem(onclick="clickMenuItem('#place','/ru/#place')") Площадка
-    else
+    // else
         .mainMenuItem(onclick="clickMenuItem('#place','/en/#place')") VENUE
+    if ru
+        .mainMenuItem(onclick="clickMenuItem('#place','/ru/#partners')") Партнеры
+    else
+     .mainMenuItem(onclick="clickMenuItem('#place','/en/#partners')") Partners
 
     if ru
         .mainMenuItem(onclick="document.location.href='/participants/"+lang+"'") Участникам
