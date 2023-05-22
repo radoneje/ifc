@@ -5,14 +5,14 @@
             .menuItemText Информация
         else
             .menuItemText Information
+.participaintRow
+    .participaintRowHead Сообщение от организаторов
+    .participaintRowContent
+        .wordWrap В этом разделе будут появляться важные сообщения для зарегистрированных участников, ответы на ваши вопросы, заданные через форму обратной связи , а также обращения Организационного комитета Конгресса к Вам лично.
+
 
 .participaintRow(v-for="item in user.info")
     .participaintRowHead {{item.titleru}}
-    .participaintRowBody
-        .participaintRowText
-            div Добро пожаловать!
-            div В этом разделе будут появляться важные сообщения для зарегистрированных участников, ответы на ваши вопросы, заданные через форму обратной связи , а также обращения Организационного комитета Конгресса к Вам лично.
-
         .participaintRowContent
             ul
                 .wordWrap(v-html="getHtml(item.textru)")
