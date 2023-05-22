@@ -4,7 +4,7 @@
             include ../svg/partnersDecor.svg
         .sectionTitle партнеры
         .partnersBox
-                .generalPartner.partner
+                .generalPartner.partner(onclick="window.open('http://vtb.ru')")
                     include ../partners/vtb.svg
                 .generalPartner.partner
                     include  ../partners/generalPartner.svg
@@ -35,21 +35,23 @@
             </svg>
         .partnersBox
             .oficialPartner.partner
-                include  ../partners/oficialPartner.svg
+                include  ../partners/generalInfoPartner.svg
             .oficialPartner.partner
-                include  ../partners/oficialPartner.svg
+                include  ../partners/generalInfoPartner.svg
             .oficialPartner.partner
-                include  ../partners/oficialPartner.svg
+                include  ../partners/generalInfoPartner.svg
             .oficialPartner.partner
-                include  ../partners/oficialPartner.svg
-            .ordinaryPartner.partner
-                include  ../partners/ordynaryPartner.svg
-            .ordinaryPartner.partner
-                include  ../partners/ordynaryPartner.svg
-            .ordinaryPartner.partner
-                include  ../partners/ordynaryPartner.svg
-            .ordinaryPartner.partner
-                include  ../partners/ordynaryPartner.svg
+                include  ../partners/generalInfoPartner.svg
+            .ordinaryPartner.partner(onclick="window.open('http://interfax.ru')")
+                include  ../partners/interfax_ru.svg
+            .ordinaryPartner.partner(onclick="window.open('http://https://1prime.ru/')")
+                include  ../partners/prime_ru.svg
+            .ordinaryPartner.partner(onclick="window.open('http://cbons.ru')")
+                include  ../partners/cbons_ru.svg
+            .ordinaryPartner.partner(onclick="window.open('http://bo.ru')")
+                include  ../partners/bo_ru.svg
+            .ordinaryPartner.partner(onclick="window.open('http://dp.ru')")
+                include  ../partners/businessPiter_ru.svg
 
 
 
