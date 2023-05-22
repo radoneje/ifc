@@ -676,6 +676,9 @@ h2 {
     width: calc(20% - 20px);
     margin-bottom: 40px;
 }
+.partnersDecor2{
+    margin-left: -56px;
+}
 
 .partnersBox img {
     width: 100%;
