@@ -2481,6 +2481,23 @@ img[src='undefined']{
     left: inherit;
     right: 156px
 }
+.pgmDownloadBtnWr{
+    display: flex;
+    justify-content: right;
+    background: #BB3E3F;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 23px;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 13px 24px;
+}
+.pgmDownloadBtnWr:hover{
+    color:#F1CCA7;
+
+    /* or 110% */
+}
 
 
 @media all and (max-width: 1700px){
