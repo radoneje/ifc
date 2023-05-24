@@ -128,8 +128,8 @@ block content
                             .recLabel.reg287 адрес регистрации
                             input.reqInput(v-model="user.address" must name="address" placeholder="ФОРМАТ: КАК В ДОКУМЕНТЕ")
                         else
-                            .recLabel.reg287 COUNTRY
-                            input.reqInput(v-model="user.address" must name="address" placeholder="")
+                            .recLabel.reg287 ADDRESS
+                            input.reqInput(v-model="user.address" must name="address" placeholder="Street address, city and country of residence, and ZIP code")
 
 
                 .regRow(v-bind:class="{error:errors.email}")
