@@ -122,8 +122,11 @@ let regApp = new Vue({
                 catch (e) {
                     console.warn(e)
                 }
+                if(!this.user.o)
+                    this.user.o="";
                 //////////сюда вставляем код регистрации
                 this.isLodinng = true
+
 
                 let url="/api/regUser2"
                 if(!ru)
