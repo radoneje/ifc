@@ -343,7 +343,6 @@ router.get('/akt/:guid', async function (req, res, next) {
         let invoices=await req.knex("v_invoice").where({guid:req.params.guid})
         if(invoices.length==0)
             return res.sendStatus(404);
-
         let inv=invoices[0]
             //return res.json(inv)
 
