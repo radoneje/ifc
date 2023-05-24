@@ -1240,6 +1240,18 @@
     .partnerTitle2{
         margin-top: 56px;
     }
+    .pgmDownloadBtnWr{
+        margin-top: 12px;
+    }
+    .pgmDownload{
+        padding: 8px 19px;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .pgmDownloadIco svg{
+        height: 33px;
+        width: auto;
+    }
 
 }
 
