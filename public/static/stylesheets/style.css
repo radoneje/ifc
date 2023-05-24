@@ -2496,6 +2496,9 @@ img[src='undefined']{
     cursor: pointer;
     padding: 13px 24px;
 }
+.pgmDownloadText{
+    margin-right: 12px;
+}
 .pgmDownloadBtnWr:hover{
     color:#F1CCA7;
 
