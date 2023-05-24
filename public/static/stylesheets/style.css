@@ -2484,6 +2484,9 @@ img[src='undefined']{
 .pgmDownloadBtnWr{
     display: flex;
     justify-content: right;
+
+}
+.pgmDownload{
     background: #BB3E3F;
     color: #FFFFFF;
     font-weight: 700;
