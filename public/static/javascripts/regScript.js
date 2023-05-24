@@ -124,7 +124,11 @@ let regApp = new Vue({
                 }
                 //////////сюда вставляем код регистрации
                 this.isLodinng = true
-                let res = await postJson(apiUrl + "/api/regUser2", this.user)
+                regUser2En
+                let url="/api/regUser2"
+                if(!ru)
+                    url="/api/regUser2En"
+                let res = await postJson(apiUrl + url, this.user)
                 if (!res) {
                     if(ru)
                     alert("Произошла ошибка, попробуйте позже")
