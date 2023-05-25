@@ -17,6 +17,8 @@ block content
                     .sectionTitle Аккредитация
                 else if typeid==9
                     .sectionTitle Заявка на регистрацию
+                else if typeid==6
+                    .sectionTitle Регистрация подрядчика
                 else
                     .sectionTitle Заявка на участие
             else
@@ -35,6 +37,8 @@ block content
                             .menuItemText Представитель СМИ
                         else if typeid==9
                             .menuItemText Представитель партнеров конгресса
+                        else if typeid == 6
+                            .menuItemText Ответсвенный от компании
                         else
                             .menuItemText Участник
                     else
@@ -44,7 +48,9 @@ block content
                             .menuItemText PARTICIPANT
                         else
                             .menuItemText PARTICIPANT
-
+                if typeid == 6
+                    .regRow
+                        .alert.alert-war
                 .regRow
                     .reqPhoto2.reg287(v-on:click="uploadPhoto()" v-bind:class="{errorPhoto:photoError}")
                         .reqPhotoBox2

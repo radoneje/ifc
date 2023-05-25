@@ -53,6 +53,14 @@ router.get('/partner/:lang?', async function(req, res, next) {
     res.redirect("/partner/ru")
   res.render('pageRegistration',{lang:req.params.lang, ru:req.params.lang=="ru", apiUrl:config.apiUrl, typeid:9} );
 });
+router.get('/contractor/:lang?', async function(req, res, next) {
+  if(!req.params.lang)
+    return res.redirect("/contractor/ru")
+  if(!req.params.lang.match(/ru|en/))
+    res.redirect("/contractor/ru")
+  res.render('pageRegistration',{lang:req.params.lang, ru:req.params.lang=="ru", apiUrl:config.apiUrl, typeid:6} );
+});
+
 
 router.get('/news/:lang?', async function(req, res, next) {
   if(!req.params.lang)

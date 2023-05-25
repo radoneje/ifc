@@ -198,11 +198,14 @@ let regApp = new Vue({
                 if (this.isPersonalAgreementError || this.isTermsError)
                     return;
 
-                if(typeof( type)!="undefined")
-                    this.user.types=[{id:2}] /// СМИ!!!!
+                let url="/api/regUser2"
+                if(typeof( type)!="undefined") {
+                    this.user.types = [{id: 2}] /// СМИ!!!!
+                    url="/api/regUser2Smi"
+                }
                 //////////сюда вставляем код регистрации
                 this.isLodinng = true
-                let res = await postJson(apiUrl + "/api/regUser2Smi", this.user)
+                let res = await postJson(apiUrl + url, this.user)
                 if (!res) {
                     alert("Произошла ошибка, попробуйте позже")
                     this.isLodinng = false

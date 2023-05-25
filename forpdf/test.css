@@ -1,0 +1,92 @@
+/*.BETowerLR {
+    display:none
+}
+.BEpanel {
+width:100%;
+padding-right:10px;
+box-sizing:border-box;
+}
+.chernovik {
+    display:none !important;
+}
+.BEshowChernovik {
+    display: none !important;
+}
+.BEhistoryWr {
+    left:auto !important;
+
+}*/
+#printBlock{
+    font-size:22px !important;
+    line-height:28px !important;
+}
+.inplaceBlockEditorMenu{
+    right: inherit;
+    left: 4px;
+}
+.inplaceBlockEditor{
+    resize: vertical;
+    margin-bottom: 24px;
+    font-size: 16px;
+}
+
+#AddFormBlocksBox{
+    max-height: calc(100vh - 250px);
+    overflow: auto;
+}
+#AddFormMoveBlockBtn{
+    display:none !important;
+}
+.subBlockText{
+    font-size:16px;
+}
+.NewsGroup {
+    background: linear-gradient(to bottom, rgb(244 255 80 / 97%), #fff);
+    margin-left: -12px;
+    padding-left: 6px;
+    border-left: 0;
+    text-transform: uppercase;
+}
+.BlockNameControl{
+    color:black;
+    font-size: 16px;
+}
+
+@media  screen and (max-width: 960px) {
+    #AddProgBtn:has(.btn-group){
+        display:none;
+    }
+    .NewsCell{
+        padding:0;
+
+    }
+    .CenralTowerLCol {
+        width: 30%;}
+    .CenralTowerCCol{
+        width: 70%;
+    }
+    .NewsContent{
+        font-size: 12px;
+    }
+    .CenralTowerLCol .panel-body, .CenralTowerLCol .panel-heading {
+        padding:4px;
+    }
+    .NewsGroup{
+        margin:0;
+    }
+    .NewsContent h5{
+        font-size:12px;
+    }
+    #ProgramDropDown{
+        font-size:12px;
+        padding:4px;
+    }
+    #bpNewsName{
+        font-size:14px;}
+
+
+#bBlockAdd{
+    display: none;
+}
+
+}
