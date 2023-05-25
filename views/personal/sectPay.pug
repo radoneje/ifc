@@ -54,6 +54,10 @@ div(v-if="user.statusid==60")
                     .regCheckBox.green.flex.left(v-on:click="changeCompanyEdo()" v-bind:class="{active:user.company.isEdo}")
                         .regCheckBoxBox
                         .regCheckBoxText Компания использует электронный документооборот
+                .regRow(v-if="user.company.isEdo")
+                    .participaintRow
+                        .participaintRowContent Для получения документов на оплату через ЭДО, пожалуйста, направьте в системе ЭДО приглашение к обмену документами ООО "ЭФФЕКТКОММ" ИНН 7716792536.
+
             .participaintRow &nbsp;
             .participaintRow
                 .participaintRow
