@@ -47,8 +47,8 @@
                 .regCheckBoxBox
                 .regCheckBoxText Компания использует электронный докуметооборот
 
-        .participaintRow
-                .participaintRowContent Для получения документов на оплату через ЭДО, пожалуйста, направьте в системе ЭДО приглашение к обмену документами ООО "ЭФФЕКТКОММ" ИНН 7716792536.
+        .participaintRow(v-if="user.payCompany.isEdo")
+                .participaintRowTextUp Для получения документов на оплату через ЭДО, пожалуйста, направьте в системе ЭДО приглашение к обмену документами ООО "ЭФФЕКТКОММ" ИНН 7716792536.
 
         .participaintRow &nbsp;
             .participaintRow
