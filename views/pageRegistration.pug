@@ -323,11 +323,17 @@ block content
                     .regSubmit()
                         include svg/loader.svg
                 .regRow(v-else)
-                    //if typeid==4
-                    if ru
-                        .regSubmit(v-on:click="regSmi()" v-if="!isRegSuccess") подать заявку
+                    if typeid==4
+                        if ru
+                            .regSubmit(v-on:click="regSmi(true)" v-if="!isRegSuccess") подать заявку
+                        else
+                            .regSubmit(v-on:click="regSmi(false)" v-if="!isRegSuccess") submit form
                     else
-                        .regSubmit(v-on:click="regUser(false)" v-if="!isRegSuccess") submit form
+                        if ru
+                            .regSubmit(v-on:click="regUser(true)" v-if="!isRegSuccess") подать заявку
+                        else
+                            .regSubmit(v-on:click="regUser(false)" v-if="!isRegSuccess") submit form
+
                     .regSuccess.flex.left(v-else)
                         .regCheckBox.success.flex.left()
                             .regCheckBoxBox
