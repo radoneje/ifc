@@ -101,7 +101,9 @@ div(v-if="user.statusid==65 && !user.isPaySelf")
         .participaintRowTextUp Стоимость участия: <b>{{user.price}} 0000 рублей</b> (НДС не облагается)
     .participaintRow &nbsp;
     .regRow(v-if="!isLoading")
-        .regSubmit(v-on:click="returnToPaymentSelect()" ) Изменить реквизиты и получить новый счет
+        .participaintRow Если Вы хотели бы изменить реквизиты — сообщите об этом на официальную почту Финансового Конгресса: <a hrerf="mailto:info@incongress.ru">info@incongress.ru</a>
+            .participaintRowContent
+        //.regSubmit(v-on:click="returnToPaymentSelect()" ) Изменить реквизиты и получить новый счет
     .regRow(v-if="isLoading")
         .regSubmit()
             include ../svg/loader.svg
