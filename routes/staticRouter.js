@@ -399,6 +399,7 @@ router.get('/akt/:guid', async function (req, res, next) {
         setTimeout(()=>{res.download(filename)},1000)
 
 
+
     } catch (e) {
         console.error(e)
         res.sendStatus(500)
