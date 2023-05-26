@@ -393,7 +393,7 @@ router.get('/akt/:guid', async function (req, res, next) {
             .text( pricetxt+" тысяч рублей 00 копеек, НДС не облагается (ст 346.12 и 346.13 гл. 26.2 НК РФ)", /*x*/ 45 , /*y*/ 426,{width: 600})
             .fontSize(10)
             .text( name, /*x*/ 310 , /*y*/ 510,{width: 300})
-            .text( "ООО \"ЭФФЕКТИВНЫЕ КОММУНИКАЦИИ\"\n\n\n\nКорнелюк О.Д.", /*x*/ 45 , /*y*/ 510,{width: 300})
+            .text( "ООО \"ЭФФЕКТИВНЫЕ КОММУНИКАЦИИ\"\n\n\n\n                 Корнелюк О.Д.", /*x*/ 45 , /*y*/ 510,{width: 300})
 
         doc.end();
         setTimeout(()=>{res.download(filename)},1000)
