@@ -11,3 +11,5 @@ onclick="DeleteBlock(1086437101, 0, event)"
 display:none;
 }
 
+
+/edoAgreement/:invoiceguid

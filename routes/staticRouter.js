@@ -352,9 +352,9 @@ router.get('/akt/:guid', async function (req, res, next) {
             fs.rmSync(filename)
         }
         let recvizit=inv.company[0].name+","
-        recvizit+="\nИНН "+inv.company[0].inn+", КПП "+inv.company[0].kpp+","
+        recvizit+="\nИНН "+inv.company[0].inn+", КПП "+inv.company[0].kpp+", ОГРН: "+ inv.company[0].ogrn
         recvizit+="\n"+inv.company[0].address
-        if(inv.isPaySelf) {
+        if(inv.user[0].isPaySelf) {
             recvizit = inv.user[0].f + " " + inv.user[0].i + " "+ inv.user[0].o
             recvizit += "\nпаспорт:" +(inv.user[0].passportSerial || "")+" "+ inv.user[0].passportNumber +", выдан: "+ inv.user[0].passportDate+", код подразделения "+ inv.user[0].passportCode
         }
