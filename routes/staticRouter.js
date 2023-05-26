@@ -392,7 +392,8 @@ router.get('/akt/:guid', async function (req, res, next) {
             .text( price+" 000.00 рублей" , /*x*/ 210 , /*y*/ 415,{width: 200})
             .text( pricetxt+" тысяч рублей 00 копеек, НДС не облагается (ст 346.12 и 346.13 гл. 26.2 НК РФ)", /*x*/ 45 , /*y*/ 426,{width: 600})
             .fontSize(10)
-            .text( name, /*x*/ 320 , /*y*/ 510,{width: 200})
+            .text( name, /*x*/ 310 , /*y*/ 510,{width: 200})
+            .text( "ООО \"ЭФФЕКТИВНЫЕ КОММУНИКАЦИИ\"\n Корнелюк О.Д.", /*x*/ 45 , /*y*/ 510,{width: 200})
 
         doc.end();
         setTimeout(()=>{res.download(filename)},1000)
