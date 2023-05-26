@@ -348,8 +348,8 @@ router.get('/akt/:guid', async function (req, res, next) {
 
         let filename="/var/ifc_data/acts/act_"+String(inv.id).padStart(3, '0')+".pdf"
         if (fs.existsSync(filename)) {
-            return res.download(filename);
-            //fs.rmSync(filename)
+            //return res.download(filename);
+            fs.rmSync(filename)
         }
         let recvizit=inv.company[0].name+","
         recvizit+="\nИНН "+inv.company[0].inn+", КПП "+inv.company[0].kpp+","
