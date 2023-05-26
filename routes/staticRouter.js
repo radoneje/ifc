@@ -230,7 +230,10 @@ router.get('/invoiceshort/:guid', async function (req, res, next) {
         let invoices=await req.knex("v_invoice").where({guid:req.params.guid})
         if(invoices.length==0)
             return res.sendStatus(404);
-        res.download(await genShortInvoice(invoices[0]))
+
+        let file=await genShortInvoice(invoices[0])
+        res.json(file)
+       // res.download()
 
 
 
