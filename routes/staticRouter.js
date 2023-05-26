@@ -232,8 +232,8 @@ router.get('/invoiceshort/:guid', async function (req, res, next) {
             return res.sendStatus(404);
 
         let file=await genShortInvoice(invoices[0])
-        //res.json(file)
-        res.download(file)
+        res.json(file)
+        //res.download(file)
 
 
 
