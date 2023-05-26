@@ -382,7 +382,7 @@ router.get('/akt/:guid', async function (req, res, next) {
             .font("/var/fonts/Arial.ttf")///var/fonts/OpenSans-Regular-2.ttf")
             .fontSize(14)
             .fillColor('#000000')
-            .text( "ФК-"+inv.id, /*x*/ 95 , /*y*/ 122,{width: 400})
+            .text( "ФК-"+inv.id+" от 07 июля 2023 г.", /*x*/ 95 , /*y*/ 122,{width: 400})
             .fontSize(10)
             .text( recvizit, /*x*/ 108 , /*y*/ 225,{width: 400})
             .text( "ЗАЯВКА № "+inv.user[0].id+" от "+ moment(inv.user[0].date).format("DD.MM.YYYY г."), /*x*/ 108 , /*y*/ 272,{width: 400})
@@ -393,7 +393,7 @@ router.get('/akt/:guid', async function (req, res, next) {
             .text( pricetxt+" тысяч рублей 00 копеек, НДС не облагается (ст 346.12 и 346.13 гл. 26.2 НК РФ)", /*x*/ 45 , /*y*/ 426,{width: 600})
             .fontSize(10)
             .text( name, /*x*/ 310 , /*y*/ 510,{width: 300})
-            .text( "ООО \"ЭФФЕКТИВНЫЕ КОММУНИКАЦИИ\"\n\n\n\n                                          Корнелюк О.Д.", /*x*/ 45 , /*y*/ 510,{width: 300})
+            .text( "ООО \"ЭФФЕКТИВНЫЕ КОММУНИКАЦИИ\"\n\n\n                                                Корнелюк О.Д.", /*x*/ 45 , /*y*/ 510,{width: 300})
 
         doc.end();
         setTimeout(()=>{res.download(filename)},1000)
