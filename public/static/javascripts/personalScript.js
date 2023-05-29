@@ -13,6 +13,11 @@ let personalApp = new Vue({
         newInfo: 0,
     },
     methods: {
+        closeBageDialog: function (event) {
+            document.querySelectorAll(".bageInput").forEach(e=>{
+                e.classList.rebpve("active")
+            })
+        },
         showBageDialog: function (event) {
             event.target.closest(".bageInput").classList.add("active")
         },

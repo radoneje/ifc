@@ -41,7 +41,7 @@
                         input.bageInputCtrl.select(placeholder="ВЫБЕРИТЕ ДАТУ")
                     .bageInputDialog
                         .bageInputDialogCloseBtnWr
-                            .bageInputDialogCloseBtn
+                            .bageInputDialogCloseBtn(v-on:click="closeBageDialog($event)")
                                 include ../svg/closeBtn.svg
 
                         .bageInputDialogItem 26 июня, понедельник

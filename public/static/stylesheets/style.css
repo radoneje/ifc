@@ -2608,9 +2608,15 @@ img[src='undefined']{
     display: block;
 }
 .bageInputDialogCloseBtnWr{
-
+    display: flex;
+    justify-content: end;
 }
 .bageInputDialogCloseBtn{
+    width: 20px;
+    height: 20px;
+    background: red;
+    cursor: pointer;
+    border-radius: 50%;
 
 }
 .bageInputDialogCloseBtn svg{
