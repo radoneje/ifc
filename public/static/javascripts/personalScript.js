@@ -18,7 +18,9 @@ let personalApp = new Vue({
             dateDelivery:"",
             timeDelivery:"",
             otherParticipaintsNames:""
-        }
+        },
+        transfers:{arrival:{},departure:{}}
+
     },
     methods: {
         sendBadgeDelivery: async function (event) {
@@ -39,6 +41,15 @@ let personalApp = new Vue({
             this.badgeDelivery=await postJson("/personal/badgeDelivery",this.badgeDelivery)
             console.log(this.badgeDelivery)
             setTimeout(()=>{this.isLoading=false}, 2000)
+
+        },
+        showTransferDialog: function (event) {
+            let box=event.target.closest(".bageInput")
+            let input=box.querySelector("input")
+
+            this.badgeDelivery[input.getAttribute("field")][input.getAttribute("subfield")]=event.target.innerText;
+
+            this.closeBageDialog(event);
 
         },
         selectBageDialog: function (event) {
