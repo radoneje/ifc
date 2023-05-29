@@ -2525,8 +2525,17 @@ img[src='undefined']{
     text-transform: uppercase;
     padding: 8px 12px;
     color: #FFFFFF;
-    background: #BB3E3F;
-    cursor: pointer;
+    background: #E39A3F;
+    width: 220px;
+    box-sizing: border-box;
+    font-weight: 400;
+}
+.bageInput .input{
+    font-size: 18px;
+    border: 1px solid #E39A3F;
+    box-sizing: border-box;
+    padding: 10px 16px;
+    width: calc(100% - 240px);
 }
 
 
