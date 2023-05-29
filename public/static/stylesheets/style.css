@@ -2635,7 +2635,11 @@ img[src='undefined']{
     justify-items: left;
     margin-bottom: 24px;
     cursor: pointer;
+    padding: 8px;
 
+}
+.coleguesRow:hover{
+    background: #E0E0E0;
 }
 .coleguesRowInternal{
     margin-right: 16px;
