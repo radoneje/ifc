@@ -359,7 +359,7 @@ let personalApp = new Vue({
         setTimeout(async () => {
             loader.style.display = "none"
             app.style.display = "block";
-             let r= await getJson("/personal/bageDelivery")
+             let r= await getJson("/personal/badgeDelivery")
             if(r)
                 this.badgeDelivery=r;
         }, 500)
