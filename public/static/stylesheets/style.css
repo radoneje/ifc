@@ -2581,6 +2581,26 @@ img[src='undefined']{
     top: 8px;
     cursor: pointer;
 }
+.bageInputDialog{
+    background: white;
+    position: absolute;
+    z-index: 100;
+    padding: 16px;
+    border: 1px solid #E39A3F;
+    top: 0;
+    right: 20px;
+    width: calc(100% - 275px);
+}
+.bageInputDialogItem{
+    font-weight: 400;
+    font-size: 18px;
+    padding: 4px 8px;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+.bageInputDialogItem:hover{
+    background: #E0E0E0;
+}
 
 
 
