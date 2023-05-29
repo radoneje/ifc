@@ -53,7 +53,7 @@
                         .bageInputDialogItem(v-on:click="selectBageDialog($event)") 04 июля, вторник
 
                 .bageInput.select
-                    .bageInputCtrlGroup
+                    .bageInputCtrlGroup(v-on:click="showBageDialog($event)")
                         .bageInputLabel Время доставки
                         input.bageInputCtrl(placeholder="ВЫБЕРИТЕ ВРЕМЯ")
                     .bageInputDialog.select
