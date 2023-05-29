@@ -2563,12 +2563,12 @@ img[src='undefined']{
     padding: 7px 16px;
 
 }
-.bageInput.select{
+.bageInputCtrl.select{
     position: relative;
     cursor: pointer;
 
 }
-.bageInput.select:after{
+.bageInputCtrl.select:after{
     content: '>';
     font-weight: bold;
     color:#878787;
