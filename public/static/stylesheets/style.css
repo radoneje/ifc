@@ -2563,6 +2563,20 @@ img[src='undefined']{
     padding: 7px 16px;
 
 }
+.bageInput.select{
+    position: relative;
+    cursor: pointer;
+
+}
+.bageInput.select:after{
+    content: '>';
+    font-weight: bold;
+    color:#878787;
+    font-size: 18px;
+    transform: rotate(90deg);
+    right: 20px;
+    top: 10px;
+}
 
 
 
