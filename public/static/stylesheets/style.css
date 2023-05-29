@@ -2615,7 +2615,7 @@ img[src='undefined']{
 .bageInputDialogCloseBtn{
     width: 20px;
     height: 20px;
-    background: red;
+    background: #BB3E3F;
     cursor: pointer;
     border-radius: 50%;
 
@@ -2633,6 +2633,8 @@ img[src='undefined']{
     display: flex;
     align-items: center;
     justify-items: left;
+    margin-bottom: 24px;
+
 }
 .coleguesRowInternal{
     margin-right: 16px;
@@ -2644,6 +2646,15 @@ img[src='undefined']{
 .coleguesRowImage image{
     height: 80px;
     width: auto;
+}
+.btnRegAdd{
+    cursor: pointer;
+    padding: 8px 16px ;
+    width: max-content;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: #BB3E3F;
 }
 
 
