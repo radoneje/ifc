@@ -36,7 +36,7 @@
                     input.bageInputCtrl(placeholder="УЛИЦА, ДОМ, ОФИС, КАК ВОЙТИ")
             .bageInputGroup
                 .bageInput.select
-                    .bageInputCtrlGroup
+                    .bageInputCtrlGroup(v-on:click="showBageDialog($event)")
                         .bageInputLabel Дата доставки
                         input.bageInputCtrl.select(placeholder="ВЫБЕРИТЕ ДАТУ")
                     .bageInputDialog

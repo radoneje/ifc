@@ -13,6 +13,9 @@ let personalApp = new Vue({
         newInfo: 0,
     },
     methods: {
+        showBageDialog: function (event) {
+            console.log("showBageDialog", event.target, event)
+        },
         checkIsOld: function (infoItem) {
             console.log("checkIsOld", infoItem)
         },
