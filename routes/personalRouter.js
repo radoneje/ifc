@@ -27,7 +27,7 @@ const checkAccess=(req, res, next)=>{
 /* GET home page. */
 router.post('/badgeDelivery', async function(req, res, next) {
     try {
-
+        console.log("here",req.session.token)
         if(!req.session.token)
             return res.sendStatus(401)
 
