@@ -37,7 +37,7 @@ router.get('/badgeDelivery', async function(req, res, next) {
         delete r["userid"]
         delete r["dateCreate"]
 
-        return r;
+         res.json(r);
     }
     catch (e) {
         console.warn(e)
