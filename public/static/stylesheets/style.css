@@ -2601,6 +2601,12 @@ img[src='undefined']{
 .bageInputDialogItem:hover{
     background: #E0E0E0;
 }
+.bageInputDialog{
+    display: none;
+}
+.bageInput.active{
+    display: block;
+}
 
 
 
