@@ -99,7 +99,7 @@
             .bageInput
                 .bageInputCtrlGroup(v-if="!isLoading")
                     .regSubmit(v-on:click="sendBadgeDelivery()")
-                        span(v-if="transfers.id") ОТПРАВИТЬ ЗАЯВКУ
+                        span(v-if="!transfers.id") ОТПРАВИТЬ ЗАЯВКУ
                         span(v-else) ИЗМЕНИТЬ ЗАЯВКУ
                 .bageInputCtrlGroup(v-else)
                     .regSubmit()
