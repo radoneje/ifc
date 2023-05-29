@@ -13,6 +13,19 @@ let personalApp = new Vue({
         newInfo: 0,
     },
     methods: {
+        sendBadgeDelivery: function (event) {
+            let error=false
+            document.querySelectorAll(".bageInput.must").forEach(box=>{
+                box.classList.remove("error")
+                let input=box.querySelector("input")
+                if(!input.value || input.value.length==0)
+                {
+                    error=true;
+                    box.classList.add("error")
+                }
+            })
+
+        },
         selectBageDialog: function (event) {
             let box=event.target.closest(".bageInput")
             box.querySelector("input").value=event.target.innerText;
