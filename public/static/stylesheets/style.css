@@ -2537,6 +2537,13 @@ img[src='undefined']{
     padding: 10px 16px;
     width: calc(100% - 240px);
 }
+ .bageInputDescription{
+     font-size: 14px;
+ }
+ .bageBtn{
+     cursor: pointer;
+     background: #BB3E3F;
+ }
 
 
 @media all and (max-width: 1700px){
