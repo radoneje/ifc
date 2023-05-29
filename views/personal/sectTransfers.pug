@@ -27,7 +27,7 @@
                 .bageInput.select.must
                         .bageInputCtrlGroup(v-on:click="showBageDialog($event)")
                             .bageInputLabel Ваш отель
-                            input.bageInputCtrl(v-model="transfers.arrival.from" field="arrival" subfield="hotel" placeholder="ВЫБЕРИТЕ ОТЕЛЬ")
+                            input.bageInputCtrl(v-model="transfers.arrival.hotel" field="arrival" subfield="hotel" placeholder="ВЫБЕРИТЕ ОТЕЛЬ")
                         .bageInputDialog.select
                             .bageInputDialogCloseBtnWr
                                 .bageInputDialogCloseBtn(v-on:click="closeBageDialog($event)")
