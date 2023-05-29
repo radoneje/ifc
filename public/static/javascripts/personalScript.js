@@ -19,7 +19,7 @@ let personalApp = new Vue({
             timeDelivery:"",
             otherParticipaintsNames:""
         },
-        transfers:{arrival:{},departure:{}}
+        transfers:{arrival:{from:""},departure:{from:""}}
 
     },
     methods: {
@@ -47,7 +47,7 @@ let personalApp = new Vue({
             let box=event.target.closest(".bageInput")
             let input=box.querySelector("input")
 
-            this.badgeDelivery[input.getAttribute("field")][input.getAttribute("subfield")]=event.target.innerText;
+            this.transfers[input.getAttribute("field")][input.getAttribute("subfield")]=event.target.innerText;
 
             this.closeBageDialog(event);
 
