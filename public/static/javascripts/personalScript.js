@@ -35,8 +35,9 @@ let personalApp = new Vue({
             if(error)
                 return document.querySelector(".bageInput.must.error input").focus()
             this.isLoading=true;
+            console.log(this.badgeDelivery)
             this.badgeDelivery=await postJson("/personal/badgeDelivery",this.badgeDelivery)
-
+            console.log(this.badgeDelivery)
             setTimeout(()=>{this.isLoading=false}, 2000)
 
         },
