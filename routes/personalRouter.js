@@ -34,7 +34,7 @@ router.get('/colleguesDialog', async function(req, res, next) {
 
 
         req.body.userid=req.session.token.id;
-        let r=await req.knex("v_users").where({companyid:req.session.token.companyid}).orderBy("f").orderBy("i")
+        let r=await req.knex("t_users").where({companyid:req.session.token.companyid}).orderBy("f").orderBy("i")
         return res.render('/personal/colleguesDialog', {users:r, lang: req.params.lang, ru: req.params.lang == "ru"});
     }
     catch (e) {
