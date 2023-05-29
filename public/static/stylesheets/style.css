@@ -2504,6 +2504,20 @@ img[src='undefined']{
 
     /* or 110% */
 }
+.bageInputGroup{
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+}
+.bageInputGroup .bageInput{
+    box-sizing: border-box;
+    width: 50%;
+}
+.bageInput{
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+}
 
 
 @media all and (max-width: 1700px){
