@@ -34,7 +34,8 @@ router.post('/badgeDelivery', async function(req, res, next) {
         delete req.body.id;
         req.body.userid=req.session.token.id;
         let r=await req.knex("t_bage_delivery").insert(req.body, "*")
-        return r.json;
+        res.json( r[0]);
+
 
 
     }
