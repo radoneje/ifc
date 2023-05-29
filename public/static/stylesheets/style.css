@@ -2563,12 +2563,15 @@ img[src='undefined']{
     padding: 7px 16px;
 
 }
-.bageInputCtrl.select{
+.bageInput.select{
     position: relative;
-    cursor: pointer;
+
 
 }
-.bageInputCtrl.select:after{
+.bageInput .bageInputCtrl{
+    cursor: pointer;
+}
+.bageInput.select:after{
     content: '>';
     font-weight: bold;
     color:#878787;
