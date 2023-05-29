@@ -2551,9 +2551,10 @@ img[src='undefined']{
 }
  .bageInput.error:after{
      content: "ПОЛE ДОЛЖНО БЫТЬ ЗАПОЛНЕНО";
-     сolor:#BB3E3F;
+     color:#BB3E3F;
+     font-weight: bold;
      position: absolute;
-     bottom: -12px;
+     bottom: -24px;
      font-size: 14px;
  }
 .bageInput.error .bageInputCtrl{
