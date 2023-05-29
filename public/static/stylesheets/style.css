@@ -2607,6 +2607,16 @@ img[src='undefined']{
 .bageInput.active .bageInputDialog{
     display: block;
 }
+.bageInputDialogCloseBtnWr{
+
+}
+.bageInputDialogCloseBtn{
+
+}
+.bageInputDialogCloseBtn svg{
+    width: 100%;
+    height: auto;
+}
 
 
 
