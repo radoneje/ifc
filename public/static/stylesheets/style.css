@@ -2573,12 +2573,12 @@ img[src='undefined']{
 }
 .bageInput.select:after{
     content: '>';
-    font-weight: bold;
-    color:#878787;
-    font-size: 18px;
-    transform: rotate(90deg);
-    right: 20px;
-    top: 10px;
+    color: #878787;
+    font-size: 31px;
+    position: absolute;
+    transform: rotate(88deg);
+    right: 32px;
+    top: 8px;
 }
 
 
