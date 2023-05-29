@@ -2505,13 +2505,13 @@ img[src='undefined']{
     /* or 110% */
 }
 .bageInputGroup{
-    display: flex;
+    display: block/*flex*/;
     align-items: flex-start;
     justify-content: left;
 }
 .bageInputGroup .bageInput{
     box-sizing: border-box;
-    width: 50%;
+    width:/* 50*/100%;
 }
 .bageInput{
    margin-bottom: 32px;
