@@ -42,7 +42,7 @@
                         input.bageInputCtrl(v-model="transfers.arrival.no" field="arrival" subfield="time" placeholder="НОМЕР ПОЕЗДА ИЛИ РЕЙС САМОЛЕТА")
 
 
-                    .bageInput.select.must
+                .bageInput.select.must
                         .bageInputCtrlGroup(v-on:click="showBageDialog($event)")
                             .bageInputLabel Дата прибытия
                             input.bageInputCtrl(v-model="transfers.arrival.date" field="arrival" subfield="date" placeholder="ВЫБЕРИТЕ ДАТУ")
