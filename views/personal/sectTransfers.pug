@@ -66,14 +66,14 @@
 
 .participaintRow
     .regRow.checkBox
-        .regCheckBox.green.flex.left(v-on:click="user.isTerms=!user.isTerms" v-bind:class="{active:user.isTerms}")
+        .regCheckBox.green.flex.left(v-on:click="transfers.isDeparture=!transfers.isDeparture" v-bind:class="{active:transfers.isDeparture}")
             div
                 .regCheckBoxBox
             div
             .regCheckBoxText МНЕ НУЖЕН ТРАНСФЕР ОБРАТНО
-.participaintRow
+.participaintRow(v-if="transfers.isDeparture")
     .participaintRowHead Отправление
-.participaintRow
+.participaintRow(v-if="transfers.isDeparture")
     .participaintRowContent
         .badgeForm
 

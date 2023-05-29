@@ -19,7 +19,7 @@ let personalApp = new Vue({
             timeDelivery:"",
             otherParticipaintsNames:""
         },
-        transfers:{arrival:{from:"", hotel:"", date:"", time:""},departure:{from:"", date:"", time:""}}
+        transfers:{arrival:{from:"", hotel:"", date:"", time:""},departure:{from:"", date:"", time:""}, isDeparture:true}
 
     },
     methods: {
