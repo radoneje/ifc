@@ -14,7 +14,7 @@
     .participaintRowHead Прибытие
 .participaintRow
         .badgeForm
-            .bageInputGroup
+
                 .bageInput.select.must
                     .bageInputCtrlGroup(v-on:click="showBageDialog($event)")
                         .bageInputLabel Ваш отель
@@ -25,7 +25,7 @@
                                 include ../svg/closeBtn.svg
                         .bageInputDialogItem(v-on:click="selectTransferDialog($event)") blaя
                         .bageInputDialogItem(v-on:click="selectTransferDialog($event)") bla
-            .bageInputGroup
+
                 .bageInput.select.must
                     .bageInputCtrlGroup(v-on:click="showBageDialog($event)")
                         .bageInputLabel Место прибытия
@@ -41,7 +41,7 @@
                         .bageInputLabel Номер рейса
                         input.bageInputCtrl(v-model="transfers.arrival.no" field="arrival" subfield="time" placeholder="НОМЕР ПОЕЗДА ИЛИ РЕЙС САМОЛЕТА")
 
-            .bageInputGroup
+
                     .bageInput.select.must
                         .bageInputCtrlGroup(v-on:click="showBageDialog($event)")
                             .bageInputLabel Дата прибытия
@@ -62,7 +62,7 @@
     .participaintRowHead Отправление
 .participaintRow
         .badgeForm
-            .bageInputGroup
+
                             .bageInput.select.must
                                 .bageInputCtrlGroup(v-on:click="showBageDialog($event)")
                                     .bageInputLabel Место отправления
@@ -78,7 +78,7 @@
                                     .bageInputLabel Номер рейса
                                     input.bageInputCtrl(v-model="transfers.departure.no" field="departure" subfield="time" placeholder="НОМЕР ПОЕЗДА ИЛИ РЕЙС САМОЛЕТА")
 
-            .bageInputGroup
+
                             .bageInput.select.must
                                 .bageInputCtrlGroup(v-on:click="showBageDialog($event)")
                                     .bageInputLabel Дата отправления
