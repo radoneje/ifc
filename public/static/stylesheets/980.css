@@ -1277,11 +1277,10 @@
         width: 100%;
         box-sizing: border-box;
     }
-    .bageInput.error:after{top: 42px;
-    right: 0;
-    /* left: 0; */
-    width: 100%;
-    box-sizing: border-box;}
+    .bageInput.error:after{
+        left: 4px;
+        bottom: -18px;
+    }
 
 }
 
