@@ -2604,7 +2604,7 @@ img[src='undefined']{
 .bageInputDialog{
     display: none;
 }
-.bageInput.active{
+.bageInput.active .bageInputDialog{
     display: block;
 }
 
