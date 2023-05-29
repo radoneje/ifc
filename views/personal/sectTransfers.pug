@@ -40,22 +40,22 @@
                         input.bageInputCtrl(v-model="transfers.arrival.no" field="arrival" subfield="time" placeholder="НОМЕР ПОЕЗДА ИЛИ РЕЙС САМОЛЕТА")
 .participaintRow
         .participaintRowHead трансфер обратно
-
-        .bageInputGroup
-                .bageInput.select.must
-                    .bageInputCtrlGroup(v-on:click="showBageDialog($event)")
-                        .bageInputLabel Дата прибытия
-                        input.bageInputCtrl(v-model="transfers.arrival.date" field="arrival" subfield="date" placeholder="ВЫБЕРИТЕ ДАТУ")
-                    .bageInputDialog.select
-                        .bageInputDialogCloseBtnWr
-                            .bageInputDialogCloseBtn(v-on:click="closeBageDialog($event)")
-                                include ../svg/closeBtn.svg
-                        .bageInputDialogItem(v-on:click="selectTransferDialog($event)") 05 июля
-                        .bageInputDialogItem(v-on:click="selectTransferDialog($event)") 06 июля
-                .bageInput.must
-                    .bageInputCtrlGroup
-                        .bageInputLabel Время прибытия
-                        input.bageInputCtrl(v-model="transfers.arrival.time" field="arrival" subfield="time" placeholder="ФОРМАТ ЧЧ:MM")
+        .participaintRowContent
+            .bageInputGroup
+                    .bageInput.select.must
+                        .bageInputCtrlGroup(v-on:click="showBageDialog($event)")
+                            .bageInputLabel Дата прибытия
+                            input.bageInputCtrl(v-model="transfers.arrival.date" field="arrival" subfield="date" placeholder="ВЫБЕРИТЕ ДАТУ")
+                        .bageInputDialog.select
+                            .bageInputDialogCloseBtnWr
+                                .bageInputDialogCloseBtn(v-on:click="closeBageDialog($event)")
+                                    include ../svg/closeBtn.svg
+                            .bageInputDialogItem(v-on:click="selectTransferDialog($event)") 05 июля
+                            .bageInputDialogItem(v-on:click="selectTransferDialog($event)") 06 июля
+                    .bageInput.must
+                        .bageInputCtrlGroup
+                            .bageInputLabel Время прибытия
+                            input.bageInputCtrl(v-model="transfers.arrival.time" field="arrival" subfield="time" placeholder="ФОРМАТ ЧЧ:MM")
 
             ////////////////////////
 
