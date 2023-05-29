@@ -27,8 +27,7 @@ const checkAccess=(req, res, next)=>{
 /* GET home page. */
 
 router.get('/badgeDelivery', async function(req, res, next) {
-    try {}
-    catch (e) {
+    try {
         if(!req.session.token)
             return res.sendStatus(401)
         let r=await req.knex("t_bage_delivery").where({userid:req.session.token.id}).orderBy("id", "desc")
@@ -39,6 +38,10 @@ router.get('/badgeDelivery', async function(req, res, next) {
         delete r["dateCreate"]
 
         return r;
+    }
+    catch (e) {
+        console.warn(e)
+        return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
     }
 });
 router.post('/badgeDelivery', async function(req, res, next) {
