@@ -25,6 +25,9 @@ let personalApp = new Vue({
     methods: {
         colleguesDialogShow: async function (event) {
           let elem=await createPopUp("/personal/colleguesDialog")  ;
+          elem.querySelector("#btnRegAdd").onclick=async()=>{
+              closePopUp();
+          }
         },
         sendTransfers: async function (event) {
             let error=false
