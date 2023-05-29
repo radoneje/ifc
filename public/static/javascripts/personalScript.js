@@ -393,7 +393,7 @@ let personalApp = new Vue({
                 this.badgeDelivery=r;
             r=await getJson("/personal/transfers",this.transfers)
             if(r)
-                this.transfers
+                this.transfers=r;
         }, 500)
 
     }
