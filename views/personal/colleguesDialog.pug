@@ -1,6 +1,6 @@
 .coleguesWr
     if users.length==0
         .coleguesRowCap Только Вы представляете компанию
-
-    each u in users
-    .coleguesRow u.i, u.o
+    else
+        each u in users
+        .coleguesRow u.i, u.o
