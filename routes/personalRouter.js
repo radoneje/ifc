@@ -25,9 +25,25 @@ const checkAccess=(req, res, next)=>{
     next();
 }
 /* GET home page. */
+
+router.get('/badgeDelivery', async function(req, res, next) {
+    try {}
+    catch (e) {
+        if(!req.session.token)
+            return res.sendStatus(401)
+        let r=await req.knex("t_bage_delivery").where({userid:req.session.token.id}).orderBy("id", "desc")
+        if(r.length==0)
+            return res.json(false)
+        r=r[0];
+        delete r["userid"]
+        delete r["dateCreate"]
+
+        return r;
+    }
+});
 router.post('/badgeDelivery', async function(req, res, next) {
     try {
-        console.log("here",req.session.token)
+
         if(!req.session.token)
             return res.sendStatus(401)
 
