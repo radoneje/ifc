@@ -13,6 +13,12 @@ let personalApp = new Vue({
         newInfo: 0,
     },
     methods: {
+        selectBageDialog: function (event) {
+            let box=event.target.closest(".bageInput")
+            box.querySelector("input").value=event.target.innerText;
+            this.closeBageDialog(event);
+
+        },
         closeBageDialog: function (event) {
             document.querySelectorAll(".bageInput").forEach(e=>{
                 e.classList.remove("active")
