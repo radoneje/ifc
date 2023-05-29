@@ -2514,14 +2514,19 @@ img[src='undefined']{
     width: 50%;
 }
 .bageInput{
-    display: flex;
-    align-items: flex-start;
-    justify-content: left;
+   margin-bottom: 32px;
 }
 .bageInputCtrlGroup{
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: left;
+}
+.bageInputLabel{
+    text-transform: uppercase;
+    padding: 8px 12px;
+    color: #FFFFFF;
+    background: #BB3E3F;
+    cursor: pointer;
 }
 
 
