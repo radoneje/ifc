@@ -24,8 +24,9 @@
                     .bageInputDialogCloseBtnWr
                         .bageInputDialogCloseBtn(v-on:click="closeBageDialog($event)")
                             include ../svg/closeBtn.svg
-                    .bageInputDialogItem(v-on:click="selectTransferDialog($event)") blaя
-                    .bageInputDialogItem(v-on:click="selectTransferDialog($event)") bla
+                    each hotel in hotels
+                        .bageInputDialogItem(v-on:click="selectTransferDialog($event)") #{hotel.nameru}
+
 
             .bageInput.select.must
                 .bageInputCtrlGroup(v-on:click="showBageDialog($event)")
