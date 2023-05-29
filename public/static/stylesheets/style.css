@@ -2543,6 +2543,7 @@ img[src='undefined']{
  .bageBtn{
      cursor: pointer;
      background: #BB3E3F;
+     text-align: center;
  }
 
 
