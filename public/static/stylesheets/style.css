@@ -2518,6 +2518,11 @@ img[src='undefined']{
     align-items: flex-start;
     justify-content: left;
 }
+.bageInputCtrlGroup{
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+}
 
 
 @media all and (max-width: 1700px){
