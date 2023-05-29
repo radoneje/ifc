@@ -65,12 +65,12 @@
             ////////////////////////
 
 .participaintRow
-        .regRow.checkBox
-            .regCheckBox.green.flex.left(v-on:click="user.isTerms=!user.isTerms" v-bind:class="{active:user.isTerms}")
-                div
-                    .regCheckBoxBox
-                div
-                .regCheckBoxText МНЕ НУЖЕН ТРАНСФЕР ОБРАТНО
+    .regRow.checkBox
+        .regCheckBox.green.flex.left(v-on:click="user.isTerms=!user.isTerms" v-bind:class="{active:user.isTerms}")
+            div
+                .regCheckBoxBox
+            div
+            .regCheckBoxText МНЕ НУЖЕН ТРАНСФЕР ОБРАТНО
 .participaintRow
     .participaintRowHead Отправление
 .participaintRow
@@ -108,14 +108,16 @@
                 .bageInputCtrlGroup
                     .bageInputLabel Время отправления
                     input.bageInputCtrl(v-model="transfers.departure.time" field="departure" subfield="time" placeholder="ФОРМАТ ЧЧ:MM")
-            .bageInput
-                .bageInputCtrlGroup(v-if="!isLoading")
-                    .regSubmit(v-on:click="sendBadgeDelivery()")
-                        span(v-if="!transfers.id") ОТПРАВИТЬ ЗАЯВКУ
-                        span(v-else) ИЗМЕНИТЬ ЗАЯВКУ
-                .bageInputCtrlGroup(v-else)
-                    .regSubmit()
-                        include ../svg/loader.svg
+.participaintRow
+    .regRow
+        .bageInput
+            .bageInputCtrlGroup(v-if="!isLoading")
+                .regSubmit(v-on:click="sendBadgeDelivery()")
+                    span(v-if="!transfers.id") ОТПРАВИТЬ ЗАЯВКУ
+                    span(v-else) ИЗМЕНИТЬ ЗАЯВКУ
+            .bageInputCtrlGroup(v-else)
+                .regSubmit()
+                    include ../svg/loader.svg
 
 .participaintRow
     .participaintRowHead Трансферы из официальных отелей Конгресса
