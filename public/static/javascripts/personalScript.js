@@ -37,15 +37,14 @@ let personalApp = new Vue({
             this.isLoading=true;
             this.badgeDelivery=await postJson("/personal/badgeDelivery",this.badgeDelivery)
 
-            this.isLoading=false
             setTimeout(()=>{this.isLoading=false}, 2000)
 
         },
         selectBageDialog: function (event) {
             let box=event.target.closest(".bageInput")
-            console.log(box.querySelector("input").getAttribute("field"))
+
             this.badgeDelivery[box.querySelector("input").getAttribute("field")]=event.target.innerText;
-            console.log(this.badgeDelivery)
+
             this.closeBageDialog(event);
 
         },

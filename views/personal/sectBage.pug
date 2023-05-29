@@ -70,7 +70,10 @@
                 .bageInputDescription МОЖНО ДОБАВИТЬ ДРУГИХ УЧАСТНИКОВ, КОМУ ВЫДАТЬ БЕЙДЖИ КРОМЕ ВАС.
             .bageInput
                 .bageInputCtrlGroup(v-if="!isLoading")
-                    .regSubmit(v-on:click="sendBadgeDelivery()") ОТПРАВИТЬ ЗАЯВКУ
+                    .regSubmit(v-on:click="sendBadgeDelivery()")
+                        span(v-if="this.badgeDelivery") ОТПРАВИТЬ ЗАЯВКУ
+                        span(v-else) ИЗМЕНИТЬ ЗАЯВКУ
+
                 .bageInputCtrlGroup(v-else)
                     .regSubmit()
                         include ../svg/loader.svg
