@@ -2638,7 +2638,12 @@ img[src='undefined']{
     margin-right: 16px;
 }
 .coleguesRowName{
-    font-weight: 18px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.coleguesRowImage image{
+    height: 80px;
+    width: auto;
 }
 
 
