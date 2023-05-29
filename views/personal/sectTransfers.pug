@@ -38,9 +38,7 @@
                     .bageInputCtrlGroup
                         .bageInputLabel Номер рейса
                         input.bageInputCtrl(v-model="transfers.arrival.no" field="arrival" subfield="time" placeholder="НОМЕР ПОЕЗДА ИЛИ РЕЙС САМОЛЕТА")
-.participaintRow
-        .participaintRowHead трансфер обратно
-        .participaintRowContent
+
             .bageInputGroup
                     .bageInput.select.must
                         .bageInputCtrlGroup(v-on:click="showBageDialog($event)")
@@ -58,7 +56,10 @@
                             input.bageInputCtrl(v-model="transfers.arrival.time" field="arrival" subfield="time" placeholder="ФОРМАТ ЧЧ:MM")
 
             ////////////////////////
-
+.participaintRow
+    .participaintRowHead трансфер обратно
+    .participaintRowContent
+        .badgeForm
             .bageInputGroup
                             .bageInput.select.must
                                 .bageInputCtrlGroup(v-on:click="showBageDialog($event)")
