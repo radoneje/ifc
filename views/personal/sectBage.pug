@@ -25,20 +25,20 @@
                 .bageInput.must
                     .bageInputCtrlGroup
                         .bageInputLabel Имя получателя
-                        input.bageInputCtrl(placeholder="КТО ПОЛУЧИТ ВАШ БЕЙДЖ")
+                        input.bageInputCtrl(v-model="badgeDelivery.nameRecipient" placeholder="КТО ПОЛУЧИТ ВАШ БЕЙДЖ")
                 .bageInput.must
                     .bageInputCtrlGroup
                         .bageInputLabel Телефон
-                        input.bageInputCtrl(placeholder="ФОРМАТ +7 XXX XX XX")
+                        input.bageInputCtrl(v-model="badgeDelivery.phone" placeholder="ФОРМАТ +7 XXX XX XX")
             .bageInput.must
                 .bageInputCtrlGroup
                     .bageInputLabel Адрес доставки
-                    input.bageInputCtrl(placeholder="УЛИЦА, ДОМ, ОФИС, КАК ВОЙТИ")
+                    input.bageInputCtrl(v-model="badgeDelivery.address" placeholder="УЛИЦА, ДОМ, ОФИС, КАК ВОЙТИ")
             .bageInputGroup
                 .bageInput.select.must
                     .bageInputCtrlGroup(v-on:click="showBageDialog($event)")
                         .bageInputLabel Дата доставки
-                        input.bageInputCtrl.select(placeholder="ВЫБЕРИТЕ ДАТУ")
+                        input.bageInputCtrl.select(v-model="badgeDelivery.dateDelivery" placeholder="ВЫБЕРИТЕ ДАТУ")
                     .bageInputDialog
                         .bageInputDialogCloseBtnWr
                             .bageInputDialogCloseBtn(v-on:click="closeBageDialog($event)")
@@ -55,7 +55,7 @@
                 .bageInput.select.must
                     .bageInputCtrlGroup(v-on:click="showBageDialog($event)")
                         .bageInputLabel Время доставки
-                        input.bageInputCtrl(placeholder="ВЫБЕРИТЕ ВРЕМЯ")
+                        input.bageInputCtrl(v-model="badgeDelivery.timeDelivery" placeholder="ВЫБЕРИТЕ ВРЕМЯ")
                     .bageInputDialog.select
                         .bageInputDialogCloseBtnWr
                             .bageInputDialogCloseBtn(v-on:click="closeBageDialog($event)")
@@ -66,10 +66,10 @@
             .bageInput
                 .bageInputCtrlGroup
                     .bageInputLabel Имена участников
-                    input.bageInputCtrl(placeholder="ФАМИЛИЯ И ИМЯ")
+                    input.bageInputCtrl(v-model="badgeDelivery.otherParticipaintsNames" placeholder="ФАМИЛИЯ И ИМЯ")
                 .bageInputDescription МОЖНО ДОБАВИТЬ ДРУГИХ УЧАСТНИКОВ, КОМУ ВЫДАТЬ БЕЙДЖИ КРОМЕ ВАС.
             .bageInput
-                .bageInputCtrlGroup(v-if="isLoading")
+                .bageInputCtrlGroup(v-if="!isLoading")
                     .regSubmit(v-on:click="sendBadgeDelivery()") ОТПРАВИТЬ ЗАЯВКУ
                 .bageInputCtrlGroup(v-else)
                     .regSubmit()

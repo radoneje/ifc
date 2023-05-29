@@ -291,7 +291,7 @@ router.get('/exit/:lang?', async function(req, res, next) {
     });
 router.get('/:lang?', async function(req, res, next) {
     try {
-        console.log(req.params.lang)
+
         if(!(req.params.lang && req.params.lang.match(/ru|en/)))
             req.params.lang="ru";
 
@@ -319,6 +319,23 @@ router.get('/:lang?', async function(req, res, next) {
                 return res.redirect("/personal/info/"+req.params.lang)
             }
         }
+    }
+    catch (e) {
+        console.warn(e)
+        return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
+    }
+});
+
+router.post('/badgeDelivery', async function(req, res, next) {
+    try {
+
+        if(!req.session.token)
+            return res.redirect("/personal/"+req.params.lang)
+        delete req.body.id;
+        req.body.userid=req.session.token.id;
+        let r=await req.knex("t_bage_delivery").insert(req.body, "*")
+        return r.json;
+
     }
     catch (e) {
         console.warn(e)

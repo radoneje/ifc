@@ -11,9 +11,17 @@ let personalApp = new Vue({
         innError: false,
         feedback: {text: "", files: []},
         newInfo: 0,
+        badgeDelivery:{
+            nameRecipient:"",
+            phone:"",
+            address:"",
+            dateDelivery:"",
+            timeDelivery:"",
+            otherParticipaintsNames:""
+        }
     },
     methods: {
-        sendBadgeDelivery: function (event) {
+        sendBadgeDelivery: async function (event) {
             let error=false
             document.querySelectorAll(".bageInput.must").forEach(box=>{
                 box.classList.remove("error")
@@ -27,6 +35,7 @@ let personalApp = new Vue({
             if(error)
                 return document.querySelector(".bageInput.must.error input").focus()
             this.isLoading=true;
+            let res=await postJson("/personal/badgeDelivery",this.badgeDelivery, ()=>{})
 
             setTimeout(()=>{this.isLoading=false}, 2000)
 
