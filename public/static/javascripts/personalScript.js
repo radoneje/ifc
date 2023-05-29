@@ -45,6 +45,7 @@ let personalApp = new Vue({
             let box=event.target.closest(".bageInput")
             console.log(box.querySelector("input").getAttribute("field"))
             this.badgeDelivery[box.querySelector("input").getAttribute("fileld")]=event.target.innerText;
+            console.log(this.badgeDelivery)
             this.closeBageDialog(event);
 
         },
