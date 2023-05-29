@@ -1252,6 +1252,9 @@
         height: 33px;
         width: auto;
     }
+    .bageInputGroup{
+        display: block;
+    }
 
 }
 
