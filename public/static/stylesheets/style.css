@@ -2624,6 +2624,16 @@ img[src='undefined']{
     width: 100%;
     height: auto;
 }
+.coleguesWr{
+    min-height: 25vh;
+    padding: 24px;
+
+}
+.coleguesRow{
+    display: flex;
+    align-items: center;
+    justify-items: left;
+}
 
 
 

@@ -3,4 +3,9 @@
         .coleguesRowCap Только Вы представляете компанию
     else
         each u in users
-            .coleguesRow #{u.f} #{u.i} #{u.o}
+            .coleguesRow
+                .coleguesRowCB
+                    .regCheckBox.green.flex.left()
+                        div
+                            .regCheckBoxBox
+                .coleguesRowName #{u.f} #{u.i} #{u.o}
