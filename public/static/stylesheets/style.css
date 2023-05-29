@@ -2634,6 +2634,12 @@ img[src='undefined']{
     align-items: center;
     justify-items: left;
 }
+.coleguesRowInternal{
+    margin-right: 16px;
+}
+.coleguesRowName{
+    font-weight: 18px;
+}
 
 
 
