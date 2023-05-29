@@ -1260,6 +1260,13 @@
     }
     .bageInput{
         width: 100% !important;
+        margin-bottom: 16px;
+    }
+    .bageInputLabel{
+        width: 100%;
+    }
+    .bageInputCtrl{
+        width: 100%;
     }
 
 }
