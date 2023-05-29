@@ -25,6 +25,22 @@ const checkAccess=(req, res, next)=>{
     next();
 }
 /* GET home page. */
+router.post('/badgeDelivery', async function(req, res, next) {
+    try {
+
+        if(!req.session.token)
+            return res.redirect("/personal/"+req.params.lang)
+        delete req.body.id;
+        req.body.userid=req.session.token.id;
+        let r=await req.knex("t_bage_delivery").insert(req.body, "*")
+        return r.json;
+
+    }
+    catch (e) {
+        console.warn(e)
+        return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
+    }
+});
 
 router.post('/hotelRoom', async function(req, res, next) {
     try {
@@ -326,22 +342,7 @@ router.get('/:lang?', async function(req, res, next) {
     }
 });
 
-router.post('/badgeDelivery', async function(req, res, next) {
-    try {
 
-        if(!req.session.token)
-            return res.redirect("/personal/"+req.params.lang)
-        delete req.body.id;
-        req.body.userid=req.session.token.id;
-        let r=await req.knex("t_bage_delivery").insert(req.body, "*")
-        return r.json;
-
-    }
-    catch (e) {
-        console.warn(e)
-        return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
-    }
-});
 
 
 
