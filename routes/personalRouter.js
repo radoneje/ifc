@@ -36,6 +36,7 @@ router.post('/badgeDelivery', async function(req, res, next) {
         let r=await req.knex("t_bage_delivery").insert(req.body, "*")
         return r.json;
 
+
     }
     catch (e) {
         console.warn(e)
