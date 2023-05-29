@@ -1,0 +1,17 @@
+.participaintRow
+    .menuItem.flex.center.left
+        .menuItemBox
+        if ru
+            .menuItemText Получение бейджа
+
+.participaintRow
+    .participaintDocs
+        .participaintDocsItem.flex.center.beetwen(v-for="f in user.files")
+            .participaintDocTitle  {{f.name}}
+            a.participaintDocBtn( :href="'/static/file/'+f.guid" :download="f.name") Скачать доверенность на получение
+.participaintRow
+    .participaintRowHead Курьерская доставка бейджей в Москве
+
+
+
+

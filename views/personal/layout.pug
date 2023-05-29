@@ -44,6 +44,7 @@ block content
                             .persNavItem(v-on:click="personalMobileMenuClose();section='info'" v-bind:class="{active:section=='info'}") Информация
                                 .persNavItemBage(v-if="newInfo>0")
                                     .persNavItemBageText {{newInfo}}
+                            .persNavItem(v-on:click="personalMobileMenuClose();section='profile'" v-bind:class="{active:section=='bage'}") Бейдж
                             .persNavItem(v-on:click="personalMobileMenuClose();section='profile'" v-bind:class="{active:section=='profile'}") Профиль
                             .persNavItem(v-on:click="personalMobileMenuClose();section='doc'" v-bind:class="{active:section=='doc'}") Документы
                             .persNavItem(v-on:click="personalMobileMenuClose();section='hotel'" v-bind:class="{active:section=='hotel'}") Отели
@@ -72,6 +73,8 @@ block content
                         include sectPay
                     .persSection(v-if="section=='info'")
                         include sectInfo
+                    .persSection(v-if="section=='profile'")
+                        include sectBage
                     .persSection(v-if="section=='profile'")
                         include sectProfile
                     .persSection(v-if="section=='doc'")
