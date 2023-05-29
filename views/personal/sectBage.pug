@@ -38,7 +38,7 @@
                 .bageInput.select.must
                     .bageInputCtrlGroup(v-on:click="showBageDialog($event)")
                         .bageInputLabel Дата доставки
-                        input.bageInputCtrl.select(v-model="badgeDelivery.dateDelivery" placeholder="ВЫБЕРИТЕ ДАТУ")
+                        input.bageInputCtrl.select(v-model="badgeDelivery.dateDelivery" field="dateDelivery" placeholder="ВЫБЕРИТЕ ДАТУ")
                     .bageInputDialog
                         .bageInputDialogCloseBtnWr
                             .bageInputDialogCloseBtn(v-on:click="closeBageDialog($event)")
@@ -55,7 +55,7 @@
                 .bageInput.select.must
                     .bageInputCtrlGroup(v-on:click="showBageDialog($event)")
                         .bageInputLabel Время доставки
-                        input.bageInputCtrl(v-model="badgeDelivery.timeDelivery" placeholder="ВЫБЕРИТЕ ВРЕМЯ")
+                        input.bageInputCtrl(v-model="badgeDelivery.timeDelivery" field="timeDelivery" placeholder="ВЫБЕРИТЕ ВРЕМЯ")
                     .bageInputDialog.select
                         .bageInputDialogCloseBtnWr
                             .bageInputDialogCloseBtn(v-on:click="closeBageDialog($event)")
@@ -66,7 +66,7 @@
             .bageInput
                 .bageInputCtrlGroup
                     .bageInputLabel Имена участников
-                    input.bageInputCtrl(v-model="badgeDelivery.otherParticipaintsNames" placeholder="ФАМИЛИЯ И ИМЯ")
+                    input.bageInputCtrl(v-model="badgeDelivery.otherParticipaintsNames"  placeholder="ФАМИЛИЯ И ИМЯ")
                 .bageInputDescription МОЖНО ДОБАВИТЬ ДРУГИХ УЧАСТНИКОВ, КОМУ ВЫДАТЬ БЕЙДЖИ КРОМЕ ВАС.
             .bageInput
                 .bageInputCtrlGroup(v-if="!isLoading")
