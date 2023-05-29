@@ -1279,7 +1279,7 @@
     }
     .bageInput.error:after{
         left: 4px;
-        bottom: -18px;
+        bottom: -20px;
     }
 
 }

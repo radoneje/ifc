@@ -69,8 +69,11 @@
                     input.bageInputCtrl(placeholder="ФАМИЛИЯ И ИМЯ")
                 .bageInputDescription МОЖНО ДОБАВИТЬ ДРУГИХ УЧАСТНИКОВ, КОМУ ВЫДАТЬ БЕЙДЖИ КРОМЕ ВАС.
             .bageInput
-                .bageInputCtrlGroup
+                .bageInputCtrlGroup(v-if="isLoading")
                     .regSubmit(v-on:click="sendBadgeDelivery()") ОТПРАВИТЬ ЗАЯВКУ
+                .bageInputCtrlGroup(v-else)
+                    .regSubmit()
+                        include ../svg/loader.svg
 
 
 

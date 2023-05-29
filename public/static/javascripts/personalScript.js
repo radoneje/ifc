@@ -26,6 +26,9 @@ let personalApp = new Vue({
             })
             if(error)
                 return document.querySelector(".bageInput.must.error input").focus()
+            this.isLoading=true;
+
+            setTimeout(()=>{this.isLoading=false}, 2000)
 
         },
         selectBageDialog: function (event) {
