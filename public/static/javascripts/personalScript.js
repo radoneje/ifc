@@ -24,6 +24,8 @@ let personalApp = new Vue({
                     box.classList.add("error")
                 }
             })
+            if(error)
+                return document.querySelector(".bageInput.must.error input").focus()
 
         },
         selectBageDialog: function (event) {
