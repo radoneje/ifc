@@ -34,6 +34,7 @@ router.post('/transfers', async function(req, res, next) {
             return res.sendStatus(401)
 
         delete req.body.id;
+        req.body.createDate=new Date();
         req.body.userid=req.session.token.id;
         let r=await req.knex("t_transfers").insert(req.body, "*")
         res.json( r[0]);
