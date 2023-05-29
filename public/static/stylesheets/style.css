@@ -2579,6 +2579,7 @@ img[src='undefined']{
     transform: rotate(88deg);
     right: 32px;
     top: 8px;
+    cursor: pointer;
 }
 
 
