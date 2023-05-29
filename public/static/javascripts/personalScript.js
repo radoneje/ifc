@@ -23,6 +23,26 @@ let personalApp = new Vue({
 
     },
     methods: {
+        sendTransfers: async function (event) {
+            let error=false
+            document.querySelectorAll(".bageInput.must").forEach(box=>{
+                box.classList.remove("error")
+                let input=box.querySelector("input")
+                if(!input.value || input.value.length==0)
+                {
+                    error=true;
+                    box.classList.add("error")
+                }
+            })
+            if(error)
+                return document.querySelector(".bageInput.must.error input").focus()
+            this.isLoading=true;
+
+            this.transfers=await postJson("/personal/transfers",this.transfers)
+
+            setTimeout(()=>{this.isLoading=false}, 2000)
+
+        },
         sendBadgeDelivery: async function (event) {
             let error=false
             document.querySelectorAll(".bageInput.must").forEach(box=>{
@@ -371,6 +391,9 @@ let personalApp = new Vue({
              let r= await getJson("/personal/badgeDelivery")
             if(r)
                 this.badgeDelivery=r;
+            r=await getJson("/personal/transfers",this.transfers)
+            if(r)
+                this.transfers
         }, 500)
 
     }

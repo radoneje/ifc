@@ -26,6 +26,43 @@ const checkAccess=(req, res, next)=>{
 }
 /* GET home page. */
 
+
+router.post('/transfers', async function(req, res, next) {
+    try {
+
+        if(!req.session.token)
+            return res.sendStatus(401)
+
+        delete req.body.id;
+        req.body.userid=req.session.token.id;
+        let r=await req.knex("t_transfers").insert(req.body, "*")
+        res.json( r[0]);
+
+    }
+    catch (e) {
+        console.warn(e)
+        return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
+    }
+});
+router.get('/transfers', async function(req, res, next) {
+    try {
+        if(!req.session.token)
+            return res.sendStatus(401)
+
+
+        req.body.userid=req.session.token.id;
+        let r=await req.knex("t_transfers").where({userid:req.session.token.id}).orderBy("id","desc")
+        if(r.length==0)
+            return res.json(false)
+        res.json( r[0]);
+
+    }
+    catch (e) {
+        console.warn(e)
+        return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
+    }
+});
+
 router.get('/badgeDelivery', async function(req, res, next) {
     try {
         if(!req.session.token)
