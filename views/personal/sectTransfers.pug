@@ -108,11 +108,17 @@
         .bageInput
             .bageInputCtrlGroup(v-if="!isLoading")
                 .regSubmit(v-on:click="sendTransfers()")
-                    span(v-if="!transfers.id") ОТПРАВИТЬ ЗАЯВКУ
-                    span(v-else) ИЗМЕНИТЬ ЗАЯВКУ
+                    span(v-if="!transfers.id") ОТПРАВИТЬ
+                    span(v-else) ИЗМЕНИТЬ
             .bageInputCtrlGroup(v-else)
                 .regSubmit()
                     include ../svg/loader.svg
+        .bageInput(v-if="this.transfers.id")
+            .participaintRowText
+                div Спасибо за информацию!
+                div Ждем Вас в Санкт-Петербурге!
+
+
 
 .participaintRow
     .participaintRowHead Трансферы из официальных отелей Конгресса
