@@ -1255,6 +1255,12 @@
     .bageInputGroup{
         display: block;
     }
+    .bageInputCtrlGroup{
+        display:block;
+    }
+    .bageInput{
+        width: 100%;
+    }
 
 }
 
