@@ -23,6 +23,34 @@
                                 include ../svg/closeBtn.svg
                         .bageInputDialogItem(v-on:click="selectTransferDialog($event)") аэропорт "Пулково"
                         .bageInputDialogItem(v-on:click="selectTransferDialog($event)") Московский вокзал
+
+                .bageInput.select.must
+                        .bageInputCtrlGroup(v-on:click="showBageDialog($event)")
+                            .bageInputLabel Ваш отель
+                            input.bageInputCtrl(v-model="transfers.arrival.from" field="arrival" subfield="hotel" placeholder="ВЫБЕРИТЕ ОТЕЛЬ")
+                        .bageInputDialog.select
+                            .bageInputDialogCloseBtnWr
+                                .bageInputDialogCloseBtn(v-on:click="closeBageDialog($event)")
+                                    include ../svg/closeBtn.svg
+                            .bageInputDialogItem(v-on:click="selectTransferDialog($event)") blaя
+                            .bageInputDialogItem(v-on:click="selectTransferDialog($event)") bla
+            .bageInputGroup
+                .bageInput.select.must
+                    .bageInputCtrlGroup
+                        .bageInputLabel Дата прибытия
+                        input.bageInputCtrl(v-model="transfers.arrival.date" field="arrival" subfield="date" placeholder="ВЫБЕРИТЕ ДАТУ")
+                    .bageInputDialog.select
+                        .bageInputDialogCloseBtnWr
+                            .bageInputDialogCloseBtn(v-on:click="closeBageDialog($event)")
+                                include ../svg/closeBtn.svg
+                        .bageInputDialogItem(v-on:click="selectTransferDialog($event)") 05 июля
+                        .bageInputDialogItem(v-on:click="selectTransferDialog($event)") 06 июля
+                .bageInput.must
+                    .bageInputCtrlGroup
+                        .bageInputLabel Время прибытия
+                        input.bageInputCtrl(v-model="transfers.arrival.time" field="arrival" subfield="time" placeholder="ФОРМАТ ЧЧ:MM")
+
+
 .participaintRow
     .participaintRowHead Трансферы из официальных отелей Конгресса
     .participaintRowContent
