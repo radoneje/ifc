@@ -64,7 +64,7 @@
                         .bageInputDialogItem(v-on:click="selectBageDialog($event)") 14:00 - 18:00
 
             .bageInput
-                input(type="button" v-on:click="colleguesDialogShow()" value="Добавить коллег из моей компании")
+                .btnRegAdd( v-on:click="colleguesDialogShow()") Добавить коллег из моей компании"
                 ///.bageInputCtrlGroup
                     .bageInputLabel Имена участников
                     input.bageInputCtrl(v-model="badgeDelivery.otherParticipaintsNames"  placeholder="ФАМИЛИЯ И ИМЯ")
