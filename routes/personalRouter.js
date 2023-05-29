@@ -27,6 +27,21 @@ const checkAccess=(req, res, next)=>{
 /* GET home page. */
 
 
+router.get('/colleguesDialog', async function(req, res, next) {
+    try {
+        if(!req.session.token)
+            return res.sendStatus(401)
+
+
+        req.body.userid=req.session.token.id;
+        let r=await req.knex("v_users").where({companyid:req.session.token.companyid}).orderBy("f").orderBy("i")
+        return res.render('/personal/colleguesDialog', {users:r, lang: req.params.lang, ru: req.params.lang == "ru"});
+    }
+    catch (e) {
+        console.warn(e)
+        return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
+    }
+});
 router.post('/transfers', async function(req, res, next) {
     try {
 

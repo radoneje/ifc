@@ -23,6 +23,9 @@ let personalApp = new Vue({
 
     },
     methods: {
+        colleguesDialogShow: async function (event) {
+          let elem=await createPopUp("/personal/colleguesDialog")  ;
+        },
         sendTransfers: async function (event) {
             let error=false
             document.querySelectorAll(".bageInput.must").forEach(box=>{

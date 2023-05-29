@@ -64,10 +64,12 @@
                         .bageInputDialogItem(v-on:click="selectBageDialog($event)") 14:00 - 18:00
 
             .bageInput
-                .bageInputCtrlGroup
+                input(type="button" v-on:click="colleguesDialogShow()") Добавить коллег из моей компании
+                //.bageInputCtrlGroup
                     .bageInputLabel Имена участников
                     input.bageInputCtrl(v-model="badgeDelivery.otherParticipaintsNames"  placeholder="ФАМИЛИЯ И ИМЯ")
                 .bageInputDescription МОЖНО ДОБАВИТЬ ДРУГИХ УЧАСТНИКОВ, КОМУ ВЫДАТЬ БЕЙДЖИ КРОМЕ ВАС.
+
             .bageInput
                 .bageInputCtrlGroup(v-if="!isLoading")
                     .regSubmit(v-on:click="sendBadgeDelivery()")
