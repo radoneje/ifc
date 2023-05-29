@@ -43,15 +43,7 @@ let personalApp = new Vue({
             setTimeout(()=>{this.isLoading=false}, 2000)
 
         },
-        showTransferDialog: function (event) {
-            let box=event.target.closest(".bageInput")
-            let input=box.querySelector("input")
 
-            this.transfers[input.getAttribute("field")][input.getAttribute("subfield")]=event.target.innerText;
-
-            this.closeBageDialog(event);
-
-        },
         selectBageDialog: function (event) {
             let box=event.target.closest(".bageInput")
 

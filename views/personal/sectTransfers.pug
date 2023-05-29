@@ -14,7 +14,7 @@
         .badgeForm
             .bageInputGroup
                 .bageInput.select.must
-                    .bageInputCtrlGroup(v-on:click="showTransferDialog($event)")
+                    .bageInputCtrlGroup(v-on:click="showBageDialog($event)")
                         .bageInputLabel Место прибытия
                         input.bageInputCtrl(v-model="transfers.arrival.from" field="arrival" subfield="from" placeholder="ВЫБЕРИТЕ MECTO")
                     .bageInputDialog.select
