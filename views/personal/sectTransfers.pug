@@ -66,7 +66,7 @@
             div
                 .regCheckBoxBox
             div
-            .regCheckBoxText забронировать обратный трансфер
+            .regCheckBoxText мне нужен обратный трансфер
 
 .participaintRow(v-if="transfers.isDeparture")
     .participaintRowContent
@@ -107,7 +107,7 @@
     .regRow
         .bageInput
             .bageInputCtrlGroup(v-if="!isLoading")
-                .regSubmit(v-on:click="sendBadgeDelivery()")
+                .regSubmit(v-on:click="sendTransfers()")
                     span(v-if="!transfers.id") ОТПРАВИТЬ ЗАЯВКУ
                     span(v-else) ИЗМЕНИТЬ ЗАЯВКУ
             .bageInputCtrlGroup(v-else)
