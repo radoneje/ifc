@@ -2515,6 +2515,7 @@ img[src='undefined']{
 }
 .bageInput{
    margin-bottom: 32px;
+    position: relative;
 }
 .bageInputCtrlGroup{
     display: flex;
@@ -2545,6 +2546,19 @@ img[src='undefined']{
      background: #BB3E3F;
      text-align: center;
  }
+.bageInput.error{
+
+}
+ .bageInput.error:after{
+     content: "ПОЛE ДОЛЖНО БЫТЬ ЗАПОЛНЕНО";
+     сolor:#BB3E3F;
+     position: absolute;
+     bottom: -12px;
+     font-size: 14px;
+ }
+.bageInput.error .bageInputCtrl{
+    border: 4px solid #EEB3BA;
+}
 
 
 @media all and (max-width: 1700px){
