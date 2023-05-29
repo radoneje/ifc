@@ -1268,6 +1268,15 @@
     .bageInputCtrl{
         width: 100%;
     }
+    .bageInput.select:before {
+        right: 16px;
+    }
+    .bageInputDialog{
+        top: 42px;
+        right: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
 
 }
 
