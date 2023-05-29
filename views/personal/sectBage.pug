@@ -71,8 +71,13 @@
             .bageInput
                 .bageInputCtrlGroup(v-if="!isLoading")
                     .regSubmit(v-on:click="sendBadgeDelivery()")
-                        span(v-if="this.badgeDelivery") ОТПРАВИТЬ ЗАЯВКУ
+                        span(v-if="this.badgeDelivery.id") ОТПРАВИТЬ ЗАЯВКУ
                         span(v-else) ИЗМЕНИТЬ ЗАЯВКУ
+            .bageInput(v-if="this.badgeDelivery.id")
+                .participaintRowContent
+                    div Курьер свяжется с получателем по контактному телефону в день передачи бейджа.
+                    div Пожалуйста, обратите внимание:  выдача бейджей третьим лицам осуществляется только при наличии оригиналов доверенности и согласий участников Конгресса на обработку ПД.
+                    div Благодарим за обращение!
 
                 .bageInputCtrlGroup(v-else)
                     .regSubmit()
