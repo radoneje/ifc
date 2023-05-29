@@ -10,6 +10,9 @@
     .participaintRowContent
         p Трансферы из аэропорта “Пулково” и от Московского вокзала в официальные отели Конгресса и на площадку проведения деловой программы будут организованы 5 и 6 июля и обратно - 7 и 8 июля.
         p Для получения гарантированного места, пожалуйста, укажите даные в форме ниже:
+
+
+
 .participaintRow
     .participaintRowHead Прибытие
 .participaintRow
@@ -60,6 +63,14 @@
                     input.bageInputCtrl(v-model="transfers.arrival.time" field="arrival" subfield="time" placeholder="ФОРМАТ ЧЧ:MM")
 
             ////////////////////////
+
+.participaintRow
+        .regRow.checkBox
+            .regCheckBox.green.flex.left(v-on:click="user.isTerms=!user.isTerms" v-bind:class="{active:user.isTerms}")
+                div
+                    .regCheckBoxBox
+                div
+                .regCheckBoxText МНЕ НУЖЕН ТРАНСФЕР ОБРАТНО
 .participaintRow
     .participaintRowHead Отправление
 .participaintRow
