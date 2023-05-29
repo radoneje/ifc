@@ -46,14 +46,14 @@ let personalApp = new Vue({
         selectTransferDialog: function (event) {
             let box=event.target.closest(".bageInput")
             let input=box.querySelector("input")
-            this.badgeDelivery[input.getAttribute("field")][input.getAttribute("subfield")]=event.target.innerText;
+            this.transfers[input.getAttribute("field")][input.getAttribute("subfield")]=event.target.innerText;
             this.closeBageDialog(event);
 
         },
         selectBageDialog: function (event) {
             let box=event.target.closest(".bageInput")
 
-            this.transfers[box.querySelector("input").getAttribute("field")]=event.target.innerText;
+            this.badgeDelivery[box.querySelector("input").getAttribute("field")]=event.target.innerText;
 
             this.closeBageDialog(event);
 
