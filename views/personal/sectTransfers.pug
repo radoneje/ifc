@@ -13,6 +13,11 @@
 .participaintRow
         .badgeForm
             .bageInputGroup
+                .bageInput.must
+                    .bageInputCtrlGroup
+                        .bageInputLabel Номер рейса
+                        input.bageInputCtrl(v-model="transfers.arrival.no" field="arrival" subfield="time" placeholder="Номер поезда или рейс самолета")
+            .bageInputGroup
                 .bageInput.select.must
                     .bageInputCtrlGroup(v-on:click="showBageDialog($event)")
                         .bageInputLabel Место прибытия
