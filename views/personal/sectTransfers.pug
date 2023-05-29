@@ -36,7 +36,7 @@
                             .bageInputDialogItem(v-on:click="selectTransferDialog($event)") bla
             .bageInputGroup
                 .bageInput.select.must
-                    .bageInputCtrlGroup
+                    .bageInputCtrlGroup(v-on:click="showBageDialog($event)")
                         .bageInputLabel Дата прибытия
                         input.bageInputCtrl(v-model="transfers.arrival.date" field="arrival" subfield="date" placeholder="ВЫБЕРИТЕ ДАТУ")
                     .bageInputDialog.select
