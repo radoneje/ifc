@@ -53,7 +53,7 @@ let personalApp = new Vue({
         selectBageDialog: function (event) {
             let box=event.target.closest(".bageInput")
 
-            this.badgeDelivery[box.querySelector("input").getAttribute("field")]=event.target.innerText;
+            this.transfers[box.querySelector("input").getAttribute("field")]=event.target.innerText;
 
             this.closeBageDialog(event);
 
