@@ -29,7 +29,8 @@ router.post('/badgeDelivery', async function(req, res, next) {
     try {
 
         if(!req.session.token)
-            return res.redirect("/personal/"+req.params.lang)
+            return res.sendStatus(401)
+
         delete req.body.id;
         req.body.userid=req.session.token.id;
         let r=await req.knex("t_bage_delivery").insert(req.body, "*")
