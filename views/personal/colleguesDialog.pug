@@ -3,11 +3,13 @@
         .coleguesRowCap Только Вы представляете компанию
     else
         each u in users
-            .coleguesRow
-                .coleguesRowCB.coleguesRowInternal
-                    .regCheckBox.green.flex.left()
-                        div
-                            .regCheckBoxBox
-                .coleguesRowImage.coleguesRowInternal
-                    image(src="https://ifcongress.ru/static/image/small/620d11e2-9590-4a88-a769-75aa56cd0685")
-                .coleguesRowName.coleguesRowInternal #{u.f} #{u.i} #{u.o}
+            each t in [1,2,3]
+                .coleguesRow(userid=u.id onclick="this.querySelector('.regCheckBox').classList.toggle('active')")
+                    .coleguesRowCB.coleguesRowInternal
+                        .regCheckBox.green.flex.left()
+                            div
+                                .regCheckBoxBox
+                    .coleguesRowImage.coleguesRowInternal
+                        image(src="https://ifcongress.ru/static/image/small/620d11e2-9590-4a88-a769-75aa56cd0685")
+                    .coleguesRowName.coleguesRowInternal #{u.f} #{u.i} #{u.o}
+
