@@ -2530,7 +2530,7 @@ img[src='undefined']{
     box-sizing: border-box;
     font-weight: 400;
 }
-.bageInput .input{
+ .bageInputCtrl{
     font-size: 18px;
     border: 1px solid #E39A3F;
     box-sizing: border-box;
