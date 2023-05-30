@@ -403,7 +403,7 @@ router.get('/akt/:guid', async function (req, res, next) {
             .text( name, /*x*/ 310 , /*y*/ 510,{width: 300})
             .text( "ООО \"ЭФФЕКТИВНЫЕ КОММУНИКАЦИИ\"", /*x*/ 45 , /*y*/ 510,{width: 300})
             .text( "Генеральный Директор\nКорнелюк О.А.", /*x*/ 130 , /*y*/ 540,{width: 300})
-            .text( "________________", /*x*/ 300 , /*y*/ 560,{width: 300})
+            .text( "________________", /*x*/ 320 , /*y*/ 560,{width: 300})
 
         doc.end();
         setTimeout(()=>{res.download(filename)},1000)
