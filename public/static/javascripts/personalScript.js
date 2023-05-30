@@ -26,8 +26,14 @@ let personalApp = new Vue({
         colleguesDialogShow: async function (event) {
           let elem=await createPopUp("/personal/colleguesDialog")  ;
           elem.querySelector("#btnRegAdd").onclick=async()=>{
-              let elems=document.querySelectorAll(".coleguesRow .regCheckBox.active")
-              console.log(elems);
+              let arr=[]
+              document.querySelectorAll(".coleguesRow .regCheckBox.active").forEach(elem=>{
+                  let box=elem.closest(".coleguesRow")
+                  let userid=box.getAttribute("userid")
+                  let name=box.querySelector(".coleguesRowName").innerText;
+                  arr.push({userid, name})
+              })
+              this.transfers.collegues.push(arr);
               closePopUp();
           }
         },
