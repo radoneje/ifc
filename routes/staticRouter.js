@@ -402,7 +402,7 @@ router.get('/akt/:guid', async function (req, res, next) {
             .fontSize(10)
             .text( name, /*x*/ 310 , /*y*/ 510,{width: 300})
             .text( "ООО \"ЭФФЕКТИВНЫЕ КОММУНИКАЦИИ\"", /*x*/ 45 , /*y*/ 510,{width: 300})
-            .text( "Генеральный Директор\nКорнелюк О.А.", /*x*/ 300 , /*y*/ 540,{width: 300})
+            .text( "Генеральный Директор\nКорнелюк О.А.", /*x*/ 100 , /*y*/ 540,{width: 300})
 
         doc.end();
         setTimeout(()=>{res.download(filename)},1000)
