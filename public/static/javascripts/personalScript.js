@@ -25,7 +25,18 @@ let personalApp = new Vue({
     },
     methods: {
         colleguesDialogShow: async function (event) {
-          let elem=await createPopUp("/personal/colleguesDialog")  ;
+          let elem=await createPopUp("/personal/colleguesDialog") ;
+          if(this.badgeDelivery.collegues.length>0){
+              document.querySelectorAll(".coleguesRow").forEach(ctrl=>{
+                  let userid=ctrl.getAttribute("userid")
+                  let cb=ctrl.querySelector(".regCheckBox")
+                  if(this.badgeDelivery.collegues.filter(i=>{i.userid==userid}).length>0)
+                      cb.classList.add("active")
+                  else
+                      cb.classList.remove("active")
+              })
+
+          }
           elem.querySelector("#btnRegAdd").onclick=async()=>{
               let arr=[]
               document.querySelectorAll(".coleguesRow .regCheckBox.active").forEach(elem=>{
