@@ -19,13 +19,15 @@ let personalApp = new Vue({
             timeDelivery:"",
             otherParticipaintsNames:""
         },
-        transfers:{arrival:{from:"", hotel:"", date:"", time:""},departure:{from:"", date:"", time:""}, isDeparture:true}
+        transfers:{collegues:[],arrival:{from:"", hotel:"", date:"", time:""},departure:{from:"", date:"", time:""}, isDeparture:true}
 
     },
     methods: {
         colleguesDialogShow: async function (event) {
           let elem=await createPopUp("/personal/colleguesDialog")  ;
           elem.querySelector("#btnRegAdd").onclick=async()=>{
+              let elems=document.querySelectorAll(".coleguesRow .regCheckBox.active")
+              console.log(elems);
               closePopUp();
           }
         },
