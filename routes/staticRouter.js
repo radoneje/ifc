@@ -366,7 +366,7 @@ router.get('/akt/:guid', async function (req, res, next) {
         if(inv.user[0].isPaySelf) {
             recvizit = inv.user[0].f + " " + inv.user[0].i + " "+ inv.user[0].o
             recvizit += "\nпаспорт:" +(inv.user[0].passportSerial || "")+" "+ inv.user[0].passportNumber +", выдан: "+ inv.user[0].passportDate+", код подразделения "+ inv.user[0].passportCode
-            +"адрес регистрации: "+inv.user[0].address
+            +", адрес регистрации: "+inv.user[0].address
             name= inv.user[0].f + " " + inv.user[0].i + " "+ inv.user[0].o
         }
         var doc = new PDFDocument({size: 'a4', layout: 'portrait'});
