@@ -34,7 +34,7 @@ let personalApp = new Vue({
                   let name=box.querySelector(".coleguesRowName").innerText;
                   arr.push({userid, name})
               })
-              this.transfers.collegues.push(arr);
+              this.badgeDelivery.collegues.push(arr);
               closePopUp();
           }
         },
