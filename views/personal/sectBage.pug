@@ -65,7 +65,7 @@
 
             .bageInput(v-if="badgeDelivery.collegues.length>0")
                 ul Коллеги, получающие бейджи со мной
-                    li (v-for="item in badgeDelivery.collegues") {{item.name}}
+                    li(v-for="item in badgeDelivery.collegues") {{item.name}}
             .bageInput
                 .btnRegAdd( v-on:click="colleguesDialogShow()") Добавить коллег из моей компании
                 ///.bageInputCtrlGroup
