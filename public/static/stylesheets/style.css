@@ -2573,14 +2573,14 @@ img[src='undefined']{
     cursor: pointer;
 }
 .bageInput.select:before{
-    content: '>';
+   /* content: '>';
     color: #878787;
     font-size: 31px;
     position: absolute;
     transform: rotate(88deg);
     right: 32px;
     top: 8px;
-    cursor: pointer;
+    cursor: pointer;*/
 }
 .bageInputDialog{
     background: white;
