@@ -64,7 +64,7 @@
                         .bageInputDialogItem(v-on:click="selectBageDialog($event)") 14:00 - 18:00
 
             .bageInput(v-if="badgeDelivery.collegues.length>0")
-                .colleguesBadgeItem(v-for="item in badgeDelivery.collegues") {{badgeDelivery.collegues}}
+                .colleguesBadgeItem(v-for="item in badgeDelivery.collegues") {{item.name}}
             .bageInput
                 .btnRegAdd( v-on:click="colleguesDialogShow()") Добавить коллег из моей компании
                 ///.bageInputCtrlGroup
