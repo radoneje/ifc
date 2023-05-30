@@ -30,7 +30,8 @@ let personalApp = new Vue({
               document.querySelectorAll(".coleguesRow").forEach(ctrl=>{
                   let userid=ctrl.getAttribute("userid")
                   let cb=ctrl.querySelector(".regCheckBox")
-                  if(this.badgeDelivery.collegues.filter(i=>{i.userid==userid}).length>0)
+
+                  if(this.badgeDelivery.collegues.filter(i=>i.userid==userid).length>0)
                       cb.classList.add("active")
                   else
                       cb.classList.remove("active")
