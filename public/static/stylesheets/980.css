@@ -1063,7 +1063,7 @@
         background-position-y: 24%;
         background-size: 100%;
         background-repeat: no-repeat;
-        margin-bottom: 56px;
+        margin-bottom: 0px;
         background-color: #BB3E3F;
     }
 
@@ -1083,7 +1083,7 @@
     }
 
     #place {
-        padding-top: 0px;
+        padding-top:56px;
     }
 
     .footerVisaItem {
