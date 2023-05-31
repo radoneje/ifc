@@ -50,9 +50,15 @@
             //.oficialPartner.partner
                 include  ../partners/generalInfoPartner.svg
             .ordinaryPartner.partner(onclick="window.open('http://interfax.ru')")
-                include  ../partners/interfax_ru.svg
+                if ru
+                    include  ../partners/interfax_ru.svg
+                else
+                    include  ../partners/interfax_en.svg
             .ordinaryPartner.partner(onclick="window.open('https://1prime.ru/')")
-                include  ../partners/prime_ru.svg
+                if ru
+                    include  ../partners/prime_ru.svg
+                else
+                    include  ../partners/prime_en.svg
             .ordinaryPartner.partner(onclick="window.open('https://cbonds.ru/?show_main')")
                 include  ../partners/cbons_ru.svg
             .ordinaryPartner.partner(onclick="window.open('https://bosfera.ru/')")
