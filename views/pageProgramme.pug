@@ -2,7 +2,7 @@ extends layout
 
 block head
     if ru
-        title="Финансовый Когресс Банка России: Программа"
+        title="Финансовый Конгресс Банка России: Программа"
     else
         title="FINANCIAL CONGRESS OF THE BANK OF RUSSIA: Programme"
 block content
@@ -17,8 +17,8 @@ block content
                 .sectionTitle Программа
             else
                 .sectionTitle  Programme
-            if ru
-                .pgmDownloadBtnWr
+
+            .pgmDownloadBtnWr
                     .pgmDownload.flex.center(onclick="window.open('/static/key/pgm"+lang+"')")
                         if ru
                             .pgmDownloadText Скачать<br>программу
