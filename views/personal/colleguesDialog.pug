@@ -1,0 +1,14 @@
+.coleguesWr
+    if users.length==0
+        .coleguesRowCap Только Вы представляете компанию
+    else
+        each u in users
+            each t in [1,2,3]
+                .coleguesRow(userid=u.id onclick="this.querySelector('.regCheckBox').classList.toggle('active')")
+                    .coleguesRowCB.coleguesRowInternal
+                        .regCheckBox.green.flex.left.active()
+                            div
+                                .regCheckBoxBox
+                    .coleguesRowName.coleguesRowInternal #{u.f} #{u.i} #{u.o}
+        .btnRegAdd#btnRegAdd ДОБАВИТЬ ВЫБРАННЫХ КОЛЛЕГ
+

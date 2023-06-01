@@ -26,6 +26,98 @@ const checkAccess=(req, res, next)=>{
 }
 /* GET home page. */
 
+
+router.get('/colleguesDialog', async function(req, res, next) {
+    try {
+        if(!req.session.token)
+            return res.sendStatus(401)
+
+
+        req.body.userid=req.session.token.id;
+        let r=await req.knex("t_users").where({companyid:req.session.token.companyid}).orderBy("f").orderBy("i")
+        return res.render('personal/colleguesDialog', {users:r, lang: req.params.lang, ru: req.params.lang == "ru"});
+    }
+    catch (e) {
+        console.warn(e)
+        return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
+    }
+});
+router.post('/transfers', async function(req, res, next) {
+    try {
+
+        if(!req.session.token)
+            return res.sendStatus(401)
+
+        delete req.body.id;
+        req.body.createDate=new Date();
+        req.body.userid=req.session.token.id;
+        let r=await req.knex("t_transfers").insert(req.body, "*")
+        res.json( r[0]);
+
+    }
+    catch (e) {
+        console.warn(e)
+        return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
+    }
+});
+router.get('/transfers', async function(req, res, next) {
+    try {
+        if(!req.session.token)
+            return res.sendStatus(401)
+
+
+        req.body.userid=req.session.token.id;
+        let r=await req.knex("t_transfers").where({userid:req.session.token.id}).orderBy("id","desc")
+        if(r.length==0)
+            return res.json(false)
+        res.json( r[0]);
+
+    }
+    catch (e) {
+        console.warn(e)
+        return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
+    }
+});
+
+router.get('/badgeDelivery', async function(req, res, next) {
+    try {
+        if(!req.session.token)
+            return res.sendStatus(401)
+        let r=await req.knex("t_bage_delivery").where({userid:req.session.token.id}).orderBy("id", "desc")
+        if(r.length==0)
+            return res.json(false)
+        r=r[0];
+        delete r["userid"]
+        delete r["dateCreate"]
+
+         res.json(r);
+    }
+    catch (e) {
+        console.warn(e)
+        return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
+    }
+});
+router.post('/badgeDelivery', async function(req, res, next) {
+    try {
+
+        if(!req.session.token)
+            return res.sendStatus(401)
+
+        delete req.body.id;
+        req.body.collegues=JSON.stringify(req.body.collegues)
+        req.body.userid=req.session.token.id;
+        let r=await req.knex("t_bage_delivery").insert(req.body, "*")
+        res.json( r[0]);
+
+
+
+    }
+    catch (e) {
+        console.warn(e)
+        return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
+    }
+});
+
 router.post('/hotelRoom', async function(req, res, next) {
     try {
         if(!req.session.token)
@@ -291,7 +383,7 @@ router.get('/exit/:lang?', async function(req, res, next) {
     });
 router.get('/:lang?', async function(req, res, next) {
     try {
-        console.log(req.params.lang)
+
         if(!(req.params.lang && req.params.lang.match(/ru|en/)))
             req.params.lang="ru";
 
@@ -325,6 +417,8 @@ router.get('/:lang?', async function(req, res, next) {
         return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
     }
 });
+
+
 
 
 

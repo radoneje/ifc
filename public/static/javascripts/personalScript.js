@@ -11,8 +11,107 @@ let personalApp = new Vue({
         innError: false,
         feedback: {text: "", files: []},
         newInfo: 0,
+        badgeDelivery:{
+            nameRecipient:"",
+            phone:"",
+            address:"",
+            dateDelivery:"",
+            timeDelivery:"",
+            otherParticipaintsNames:"",
+            collegues:[]
+        },
+        transfers:{arrival:{from:"", hotel:"", date:"", time:""},departure:{from:"", date:"", time:""}, isDeparture:true}
+
     },
     methods: {
+        colleguesDialogShow: async function (event) {
+          let elem=await createPopUp("/personal/colleguesDialog") ;
+          if(this.badgeDelivery.collegues.length>0){
+              document.querySelectorAll(".coleguesRow").forEach(ctrl=>{
+                  let userid=ctrl.getAttribute("userid")
+                  let cb=ctrl.querySelector(".regCheckBox")
+                  if(this.badgeDelivery.collegues.filter(i=>i.userid==userid).length>0)
+                      cb.classList.add("active")
+                  else
+                      cb.classList.remove("active")
+              })
+
+          }
+          elem.querySelector("#btnRegAdd").onclick=async()=>{
+              let arr=[]
+              document.querySelectorAll(".coleguesRow .regCheckBox.active").forEach(elem=>{
+                  let box=elem.closest(".coleguesRow")
+                  let userid=box.getAttribute("userid")
+                  let name=box.querySelector(".coleguesRowName").innerText;
+                  arr.push({userid, name})
+              })
+              this.badgeDelivery.collegues=(arr);
+              closePopUp();
+          }
+        },
+        sendTransfers: async function (event) {
+            let error=false
+            document.querySelectorAll(".bageInput.must").forEach(box=>{
+                box.classList.remove("error")
+                let input=box.querySelector("input")
+                if(!input.value || input.value.length==0)
+                {
+                    error=true;
+                    box.classList.add("error")
+                }
+            })
+            if(error)
+                return document.querySelector(".bageInput.must.error input").focus()
+            this.isLoading=true;
+
+            this.transfers=await postJson("/personal/transfers",this.transfers)
+
+            setTimeout(()=>{this.isLoading=false}, 2000)
+
+        },
+        sendBadgeDelivery: async function (event) {
+            let error=false
+            document.querySelectorAll(".bageInput.must").forEach(box=>{
+                box.classList.remove("error")
+                let input=box.querySelector("input")
+                if(!input.value || input.value.length==0)
+                {
+                    error=true;
+                    box.classList.add("error")
+                }
+            })
+            if(error)
+                return document.querySelector(".bageInput.must.error input").focus()
+            this.isLoading=true;
+            console.log(this.badgeDelivery)
+            this.badgeDelivery=await postJson("/personal/badgeDelivery",this.badgeDelivery)
+            console.log(this.badgeDelivery)
+            setTimeout(()=>{this.isLoading=false}, 2000)
+
+        },
+        selectTransferDialog: function (event) {
+            let box=event.target.closest(".bageInput")
+            let input=box.querySelector("input")
+            this.transfers[input.getAttribute("field")][input.getAttribute("subfield")]=event.target.innerText;
+            this.closeBageDialog(event);
+
+        },
+        selectBageDialog: function (event) {
+            let box=event.target.closest(".bageInput")
+
+            this.badgeDelivery[box.querySelector("input").getAttribute("field")]=event.target.innerText;
+
+            this.closeBageDialog(event);
+
+        },
+        closeBageDialog: function (event) {
+            document.querySelectorAll(".bageInput").forEach(e=>{
+                e.classList.remove("active")
+            })
+        },
+        showBageDialog: function (event) {
+            event.target.closest(".bageInput").classList.add("active")
+        },
         checkIsOld: function (infoItem) {
             console.log("checkIsOld", infoItem)
         },
@@ -312,9 +411,15 @@ let personalApp = new Vue({
             }
         })
 
-        setTimeout(() => {
+        setTimeout(async () => {
             loader.style.display = "none"
-            app.style.display = "block"
+            app.style.display = "block";
+             let r= await getJson("/personal/badgeDelivery")
+            if(r)
+                this.badgeDelivery=r;
+            r=await getJson("/personal/transfers",this.transfers)
+            if(r)
+                this.transfers=r;
         }, 500)
 
     }

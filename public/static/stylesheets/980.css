@@ -1252,6 +1252,35 @@
         height: 33px;
         width: auto;
     }
+    .bageInputGroup{
+        display: block;
+    }
+    .bageInputCtrlGroup{
+        display:block;
+    }
+    .bageInput{
+        width: 100% !important;
+        margin-bottom: 16px;
+    }
+    .bageInputLabel{
+        width: 100%;
+    }
+    .bageInputCtrl{
+        width: 100%;
+    }
+    .bageInput.select:before {
+        right: 16px;
+    }
+    .bageInputDialog{
+        top: 42px;
+        right: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .bageInput.error:after{
+        left: 4px;
+        bottom: -20px;
+    }
 
 }
 

@@ -1,0 +1,236 @@
+.participaintRow
+    .menuItem.flex.center.left
+        .menuItemBox
+        if ru
+            .menuItemText Групповые трансферы
+
+
+.participaintRow
+    .participaintRowHead Трансферы из аэропорта Пулково и от Московского вокзала
+    .participaintRowContent
+        p Для удобства участников Конгресса организован трансфер от аэропорта Пулково и Московского вокзала:
+        p 5 июля до официальных отелей Конгресса:
+        ul
+            li с 15.00 до 01.30 – от аэропорта Пулково;
+            li с 17.30 до 01.00 – от Московского вокзала;
+        p 6 июля до площадки Конгресса - новой сцены Мариинского театра:
+            ul
+                li с 08.30 до 14.00 – от аэропорта Пулково;
+                li с 08.30 до 14.00 - от Московского вокзала;
+        p 6 июля от Исторической сцены Мариинского театра:
+            ul
+                li с 22.00 до 23.00 –до аэропорта Пулково;
+                li с 21.40 до 22.40 – до Московского вокзала;
+        p 7 июля до площадки Конгресса - новой сцены Мариинского театра:
+            ul
+                li с 08.30 до 11.00 - от аэропорта Пулково;
+                li 08.30 до 11.00 - от Московского вокзала;
+
+        p 7 июля от площадки Конгресса - новой сцены Мариинского театра:
+            ul
+                li с 17.30 до 18.30– до аэропорта Пулково;
+                li с 17.30 до 18.30 – до Московского вокзала;
+        p 8 июля от официальных отелей Конгресса:
+            ul
+                li с 07.00 до 15.00 до аэропорта Пулково;
+                li с 08.00 до 14.30 - до Московского вокзала;
+
+        p Для сокращения времени ожидания шаттла, пожалуйста, заполните форму:
+
+
+.participaintRow
+    .participaintRowContent
+        .badgeForm
+
+            .bageInput.select
+                .bageInputCtrlGroup(v-on:click="showBageDialog($event)")
+                    .bageInputLabel Ваш отель
+                    input.bageInputCtrl(v-model="transfers.arrival.hotel" field="arrival" subfield="hotel" placeholder="ВЫБЕРИТЕ ОТЕЛЬ")
+                .bageInputDialog.select
+                    .bageInputDialogCloseBtnWr
+                        .bageInputDialogCloseBtn(v-on:click="closeBageDialog($event)")
+                            include ../svg/closeBtn.svg
+                    each hotel in hotels
+                        .bageInputDialogItem(v-on:click="selectTransferDialog($event)") #{hotel.nameru}
+
+
+            .bageInput.select.must
+                .bageInputCtrlGroup(v-on:click="showBageDialog($event)")
+                    .bageInputLabel Место прибытия
+                    input.bageInputCtrl(v-model="transfers.arrival.from" field="arrival" subfield="from" placeholder="ВЫБЕРИТЕ MECTO")
+                .bageInputDialog.select
+                    .bageInputDialogCloseBtnWr
+                        .bageInputDialogCloseBtn(v-on:click="closeBageDialog($event)")
+                            include ../svg/closeBtn.svg
+                    .bageInputDialogItem(v-on:click="selectTransferDialog($event)") аэропорт "Пулково"
+                    .bageInputDialogItem(v-on:click="selectTransferDialog($event)") Московский вокзал
+            .bageInput.must
+                .bageInputCtrlGroup
+                    .bageInputLabel Номер рейса
+                    input.bageInputCtrl(v-model="transfers.arrival.no" field="arrival" subfield="time" placeholder="НОМЕР ПОЕЗДА ИЛИ РЕЙС САМОЛЕТА")
+
+
+            .bageInput.select.must
+                .bageInputCtrlGroup(v-on:click="showBageDialog($event)")
+                    .bageInputLabel Дата прибытия
+                    input.bageInputCtrl(v-model="transfers.arrival.date" field="arrival" subfield="date" placeholder="ВЫБЕРИТЕ ДАТУ")
+                .bageInputDialog.select
+                    .bageInputDialogCloseBtnWr
+                        .bageInputDialogCloseBtn(v-on:click="closeBageDialog($event)")
+                            include ../svg/closeBtn.svg
+                    .bageInputDialogItem(v-on:click="selectTransferDialog($event)") 05 июля
+                    .bageInputDialogItem(v-on:click="selectTransferDialog($event)") 06 июля
+            .bageInput.must
+                .bageInputCtrlGroup
+                    .bageInputLabel Время прибытия
+                    input.bageInputCtrl(v-model="transfers.arrival.time" field="arrival" subfield="time" placeholder="ФОРМАТ ЧЧ:MM")
+
+            ////////////////////////
+
+.participaintRow
+    .regRow.checkBox
+        .regCheckBox.green.flex.left(v-on:click="transfers.isDeparture=!transfers.isDeparture" v-bind:class="{active:transfers.isDeparture}")
+            div
+                .regCheckBoxBox
+            div
+            .regCheckBoxText мне нужен обратный трансфер
+
+.participaintRow(v-if="transfers.isDeparture")
+    .participaintRowContent
+        .badgeForm
+
+
+            .bageInput.select.must
+                .bageInputCtrlGroup(v-on:click="showBageDialog($event)")
+                    .bageInputLabel Место отправления
+                    input.bageInputCtrl(v-model="transfers.departure.from" field="departure" subfield="from" placeholder="ВЫБЕРИТЕ MECTO")
+                .bageInputDialog.select
+                    .bageInputDialogCloseBtnWr
+                        .bageInputDialogCloseBtn(v-on:click="closeBageDialog($event)")
+                            include ../svg/closeBtn.svg
+                    .bageInputDialogItem(v-on:click="selectTransferDialog($event)") аэропорт "Пулково"
+                    .bageInputDialogItem(v-on:click="selectTransferDialog($event)") Московский вокзал
+            .bageInput.must
+                .bageInputCtrlGroup
+                    .bageInputLabel Номер рейса
+                    input.bageInputCtrl(v-model="transfers.departure.no" field="departure" subfield="time" placeholder="НОМЕР ПОЕЗДА ИЛИ РЕЙС САМОЛЕТА")
+
+
+            .bageInput.select.must
+                .bageInputCtrlGroup(v-on:click="showBageDialog($event)")
+                    .bageInputLabel Дата отправления
+                    input.bageInputCtrl(v-model="transfers.departure.date" field="departure" subfield="date" placeholder="ВЫБЕРИТЕ ДАТУ")
+                .bageInputDialog.select
+                    .bageInputDialogCloseBtnWr
+                        .bageInputDialogCloseBtn(v-on:click="closeBageDialog($event)")
+                            include ../svg/closeBtn.svg
+                    .bageInputDialogItem(v-on:click="selectTransferDialog($event)") 06 июля
+                    .bageInputDialogItem(v-on:click="selectTransferDialog($event)") 07 июля
+                    .bageInputDialogItem(v-on:click="selectTransferDialog($event)") 08 июля
+            .bageInput.must
+                .bageInputCtrlGroup
+                    .bageInputLabel Время отправления
+                    input.bageInputCtrl(v-model="transfers.departure.time" field="departure" subfield="time" placeholder="ФОРМАТ ЧЧ:MM")
+.participaintRow
+    .regRow
+        .bageInput
+            .bageInputCtrlGroup(v-if="!isLoading")
+                .regSubmit(v-on:click="sendTransfers()")
+                    span(v-if="!transfers.id") ОТПРАВИТЬ
+                    span(v-else) ИЗМЕНИТЬ
+            .bageInputCtrlGroup(v-else)
+                .regSubmit()
+                    include ../svg/loader.svg
+        .bageInput(v-if="this.transfers.id")
+            .participaintRowText
+                div Спасибо за информацию!
+                div Ждем Вас в Санкт-Петербурге!
+
+
+
+.participaintRow
+    .participaintRowHead Трансферы из официальных отелей Конгресса
+    .participaintRowContent
+        p Трансферы из отелей на площадку проведения
+            ul
+                li Мариотт 10:00, 12:00, 15:00
+                li Астория 10:00, 12:00, 17:00
+        p Трансферы с площадки проведения в отели
+            ul
+                li Мариотт 19:00, 20:00, 21:00
+                li Астория 19:00, 20:00, 21:00
+
+        //.badgeForm
+            .bageInputGroup
+                .bageInput.must
+                    .bageInputCtrlGroup
+                        .bageInputLabel Имя получателя
+                        input.bageInputCtrl(v-model="badgeDelivery.nameRecipient" placeholder="КТО ПОЛУЧИТ ВАШ БЕЙДЖ")
+                .bageInput.must
+                    .bageInputCtrlGroup
+                        .bageInputLabel Телефон
+                        input.bageInputCtrl(v-model="badgeDelivery.phone" placeholder="ФОРМАТ +7 XXX XX XX")
+            .bageInput.must
+                .bageInputCtrlGroup
+                    .bageInputLabel Адрес доставки
+                    input.bageInputCtrl(v-model="badgeDelivery.address" placeholder="УЛИЦА, ДОМ, ОФИС, КАК ВОЙТИ")
+            .bageInputGroup
+                .bageInput.select.must
+                    .bageInputCtrlGroup(v-on:click="showBageDialog($event)")
+                        .bageInputLabel Дата доставки
+                        input.bageInputCtrl.select(v-model="badgeDelivery.dateDelivery" field="dateDelivery" placeholder="ВЫБЕРИТЕ ДАТУ")
+                    .bageInputDialog
+                        .bageInputDialogCloseBtnWr
+                            .bageInputDialogCloseBtn(v-on:click="closeBageDialog($event)")
+                                include ../svg/closeBtn.svg
+
+                        .bageInputDialogItem(v-on:click="selectBageDialog($event)") 26 июня, понедельник
+                        .bageInputDialogItem(v-on:click="selectBageDialog($event)") 27 июня, вторник
+                        .bageInputDialogItem(v-on:click="selectBageDialog($event)") 28 июня, среда
+                        .bageInputDialogItem(v-on:click="selectBageDialog($event)") 29 июня, четверг
+                        .bageInputDialogItem(v-on:click="selectBageDialog($event)") 30 июня, пятница
+                        .bageInputDialogItem(v-on:click="selectBageDialog($event)") 03 июля, понедельник
+                        .bageInputDialogItem(v-on:click="selectBageDialog($event)") 04 июля, вторник
+
+                .bageInput.select.must
+                    .bageInputCtrlGroup(v-on:click="showBageDialog($event)")
+                        .bageInputLabel Время доставки
+                        input.bageInputCtrl(v-model="badgeDelivery.timeDelivery" field="timeDelivery" placeholder="ВЫБЕРИТЕ ВРЕМЯ")
+                    .bageInputDialog.select
+                        .bageInputDialogCloseBtnWr
+                            .bageInputDialogCloseBtn(v-on:click="closeBageDialog($event)")
+                                include ../svg/closeBtn.svg
+                        .bageInputDialogItem(v-on:click="selectBageDialog($event)") 10:00 - 14:00
+                        .bageInputDialogItem(v-on:click="selectBageDialog($event)") 14:00 - 18:00
+
+            .bageInput
+                .bageInputCtrlGroup
+                    .bageInputLabel Имена участников
+                    input.bageInputCtrl(v-model="badgeDelivery.otherParticipaintsNames"  placeholder="ФАМИЛИЯ И ИМЯ")
+                .bageInputDescription МОЖНО ДОБАВИТЬ ДРУГИХ УЧАСТНИКОВ, КОМУ ВЫДАТЬ БЕЙДЖИ КРОМЕ ВАС.
+            .bageInput
+                .bageInputCtrlGroup(v-if="!isLoading")
+                    .regSubmit(v-on:click="sendBadgeDelivery()")
+                        span(v-if="!this.badgeDelivery.id") ОТПРАВИТЬ ЗАЯВКУ
+                        span(v-else) ИЗМЕНИТЬ ЗАЯВКУ
+                .bageInputCtrlGroup(v-else)
+                    .regSubmit()
+                        include ../svg/loader.svg
+            .bageInput(v-if="this.badgeDelivery.id")
+                .participaintRowText
+                    div Курьер свяжется с получателем по контактному телефону в день передачи бейджа.
+                    div Пожалуйста, обратите внимание:  выдача бейджей третьим лицам осуществляется только при наличии оригиналов доверенности и согласий участников Конгресса на обработку ПД.
+                    div Благодарим за обращение!
+
+
+
+
+
+
+
+
+
+
+
+
+
