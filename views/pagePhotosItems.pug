@@ -23,7 +23,7 @@ block content
             .photosWr
                 .photoFoldersHead.flex
                     .photoFoldersHeadTitleBox
-                        .photoFoldersHeadTitleDate 01 мая
+                        .photoFoldersHeadTitleDate !{folder.day.["title_"+lang]}
                         .photoFoldersHeadTitle !{folder["title"+lang]}
                     a.photoFoldersHeadRetBtn(href="/photos/"+lang) ВЕРНУТЬСЯ
                 .photoFolders

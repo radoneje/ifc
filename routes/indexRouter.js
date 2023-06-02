@@ -212,7 +212,8 @@ router.get('/photos/:id/:lang?', async function(req, res, next) {
     if (!req.params.lang.match(/ru|en/))
       res.redirect("/photos/" + req.prarams.id + "/ru")
     let f = (await req.knex("v_photo_folders").where({id: req.params.id}))[0];
-
+    let d = (await req.knex("t_pgm_days").where({id: f.dayid}))[0];
+    f.day=d
 
     if (!f.photos)
       f.photos = []
