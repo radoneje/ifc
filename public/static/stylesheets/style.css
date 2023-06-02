@@ -2662,8 +2662,31 @@ img[src='undefined']{
     background: #BB3E3F;
     font-weight: 300;
 }
-.photoFolder{
+.photoFolders{
     padding: 0;
+}
+.photoFolder{
+
+}
+
+.photoFolderBox{
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.7%;
+   background: #C2C2C2;
+
+}
+.photoFolderImage{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.photoFolderImage img{
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: contain;
 }
 
 

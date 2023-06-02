@@ -31,9 +31,11 @@ block content
 
                             .oTs.flex.left
                                 .oTsDate
-                                .oTrack.photoFolder
+                                .oTrack.photoFolders
                                     each folder in day.folders
-
+                                        .photoFolder
+                                            .photoFolderImage
+                                                img(src="/static/image/small/"+folder.coverphotoid loading="lazy")
                                         div #{folder["title"+lang]}
 
 
