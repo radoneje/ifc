@@ -141,15 +141,13 @@ div(v-if="user.statusid==65 && user.isPaySelf")
     .participaintRow
         .participaintRowBodySubTitle Сумма к оплате: <b>{{user.price}} 000 рублей</b>
 
-        .participaintRowContent
+        //.participaintRowContent
             p Оплата банковской картой и через Систему Быстрых Платежей будет доступна позже.
     .participaintRow
         .participaintRowBodySubTitle
             form(method='POST' action='https://ifcongress.server.paykeeper.ru/create/')
-                //input( type='hidden' name='sum' :value='user.price*1000')
-
-
-                input( type='hidden' name='sum' :value='1')
+                input( type='hidden' name='sum' :value='user.price*1000')
+                //input( type='hidden' name='sum' :value='1')
                 input( type='hidden' name='clientid' :value='user.f +" " +user.i +" " + user.o ')
                 input( type='hidden' name='client_email' :value='user.email')
                 input( type='hidden' name='client_phone' :value='user.phone')
