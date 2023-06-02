@@ -2692,6 +2692,19 @@ img[src='undefined']{
     object-position: center;
     object-fit: contain;
 }
+.photoDescrBox{
+    padding: 16px;
+    background: #F5F5F5;
+
+}
+.photoDescrBoxDate{
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 27px;
+    /* identical to box height */
+    color: #878787;
+
+}
 
 
 
