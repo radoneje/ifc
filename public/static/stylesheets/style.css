@@ -2769,6 +2769,7 @@ img[src='undefined']{
     /* identical to box height */
 
     text-transform: uppercase;
+    margin-right: 24px;
 
     color: #4A4A49;
 }
