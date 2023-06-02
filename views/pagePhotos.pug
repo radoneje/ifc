@@ -27,7 +27,13 @@ block content
                 each day in days
                     .oPgmItem(id="day"+day.id)
                         .pgmHeadDate #{day["title_"+lang]}
-                        .oTimeslots bla-bla
+                        .oTimeslots
+
+                            .oTs.flex.left
+                                .oTsDate
+                                .oTrack
+                                    each folder in day
+                                        div #{folder["title"+lang]}
 
 
 
