@@ -150,7 +150,7 @@ div(v-if="user.statusid==65 && user.isPaySelf")
 
                 input( type='hidden' name='sum' :value='1')
                 input( type='hidden' name='clientid' :value='user.id')
-                input( type='hidden' name='clientid' :value='user.email')
+                input( type='hidden' name='client_email' :value='user.email')
                 input( type='hidden' name='client_phone' :value='user.phone')
                 input( type='hidden' name='user_result_callback' value='https://ifcongress.ru/pay_result')
                 input(type='hidden' name='orderid' :value='user.invoice')
