@@ -194,12 +194,12 @@ router.get('/photos/:lang?', async function(req, res, next) {
   days.forEach(d=>{
     if(!d.folders)
       d.folders=[]
-    d.folders=d.folders.filter(dd=>dd.isEnabled && !dd.isDeleted);
+    d.folders=d.folders.filter(dd=>{return dd.isEnabled && !dd.isDeleted});
     d.folders.sort((a,b)=>{return a.sort-b.sort});
     d.folders.forEach(f=>{
       if(!f.photo)
         f.photo=[]
-      f.photo=f.photo.filter(dd=>dd.isEnabled && !dd.isDeleted);
+      f.photo=f.photo.filter(dd=>{return dd.isEnabled && !dd.isDeleted});
       f.photo.sort((a,b)=>{return a.sort-b.sort});
     })
   })
