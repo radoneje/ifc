@@ -189,7 +189,7 @@ router.get('/:lang?', async function(req, res, next) {
  console.log(req.headers.referer)
   if(req.headers.referer=="https://pay.vtb.ru/" && req.session.token){
    let r=await req.knex("t_users").update({statusid:70}).where({id:req.session.token})
-   return res.redirect("/personal?section=pay")
+   return res.redirect("/personal/info/ru?section=pay")
  }
   if(!req.params.lang) {
    let url="/ru"
