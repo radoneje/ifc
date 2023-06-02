@@ -25,7 +25,7 @@ block content
                     .photoFoldersHeadTitleBox
                         .photoFoldersHeadTitleDate !{folder.day["title_"+lang]}
                         .photoFoldersHeadTitle !{folder["title"+lang]}
-                    a.photoFoldersHeadRetBtn(href="/photos/"+lang) ВЕРНУТЬСЯ
+                    a.photoFoldersHeadRetBtn(href="/photos/"+lang+"#folder"+folder.id) ВЕРНУТЬСЯ
                 .photoFolders
                             each photo in folder.photos
                                 .photoFolder(href="")
