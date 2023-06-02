@@ -146,7 +146,13 @@ div(v-if="user.statusid==65 && user.isPaySelf")
         .participaintRowBodySubTitle
             form(method='POST' action='https://ifcongress.server.paykeeper.ru/create/')
                 //input( type='hidden' name='sum' :value='user.price*1000')
+
+
                 input( type='hidden' name='sum' :value='1')
+                input( type='hidden' name='clientid' :value='user.id')
+                input( type='hidden' name='clientid' :value='user.email')
+                input( type='hidden' name='client_phone' :value='user.phone')
+                input( type='hidden' name='user_result_callback' value='https://ifcongress.ru/pay_result')
                 input(type='hidden' name='orderid' :value='user.invoice')
                 input(type='hidden' name='service_name' :value="'Оказание услуг по организации участия представителя Заказчика в конгрессе «Финансовый конгресс Банка России» 6-7 июля 2023 года в городе Санкт-Петербург. Cчет-Договор ФК-'+user.invoice")
                 input.regSubmit(type='submit' value='Перейти к оплате')
