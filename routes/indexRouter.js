@@ -214,12 +214,12 @@ router.get('/photos/:id/:lang?', async function(req, res, next) {
     let f = (await req.knex("v_photo_folders").where({id: req.params.id}))[0];
 
 
-    if (!f.photo)
-      f.photo = []
-    f.photo = f.photo.filter(dd => {
+    if (!f.photos)
+      f.photos = []
+    f.photos = f.photos.filter(dd => {
       return dd.isEnabled && !dd.isDeleted
     });
-    f.photo.sort((a, b) => {
+    f.photos.sort((a, b) => {
       return a.sort - b.sort
     });
 
