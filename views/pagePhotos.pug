@@ -1,0 +1,45 @@
+extends layout
+
+block head
+    if ru
+        title="Финансовый Конгресс Банка России: Фото"
+    else
+        title="FINANCIAL CONGRESS OF THE BANK OF RUSSIA: Photos"
+block content
+    include elems/internalHead
+    .tower#newsPage
+        .subTower
+            .oNewsDecor
+                include svg/pgmDecor.svg
+            .newsDecor2
+                include svg/pgmDecor2.svg
+            if ru
+                .sectionTitle Фото
+            else
+                .sectionTitle  Photo
+
+            .pgmDownloadBtnWr
+
+
+
+
+            .pgmWr
+                each day in days
+                    .oPgmItem(id="day"+day.id)
+                        .pgmHeadDate #{day["title_"+lang]}
+                        .oTimeslots
+
+
+
+
+
+
+
+
+    include elems/footer
+    include elems/mobileMenu
+
+    script(src="/static/javascripts/utils.js")
+    script(src="/static/javascripts/mainScript.js")
+
+

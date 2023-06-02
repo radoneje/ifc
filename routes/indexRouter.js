@@ -185,6 +185,18 @@ router.get('/registration/:lang?', async function(req, res, next) {
     res.redirect("/registration/ru")
   res.render('pageRegistration',{lang:req.params.lang, ru:req.params.lang=="ru", apiUrl:config.apiUrl} );
 });
+router.get('/photos/:lang?', async function(req, res, next) {
+  if(!req.params.lang)
+    return res.redirect("/photos/ru")
+  if(!req.params.lang.match(/ru|en/))
+    res.redirect("/photos/ru")
+  let days=await req.knex("v_photo_days");
+  days.forEach(d=>{
+    d.folders=d.folders.filter(dd=>dd.isEnabled && !dd.isDeleted)
+  })
+  res.render('pagePhotos',{days, lang:req.params.lang, ru:req.params.lang=="ru", apiUrl:config.apiUrl} );
+});
+
 router.get('/:lang?', async function(req, res, next) {
  console.log(req.headers.referer)
   if(req.headers.referer=="https://pay.vtb.ru/" && req.session.token){
