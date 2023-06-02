@@ -2697,7 +2697,7 @@ img[src='undefined']{
     background: #F5F5F5;
 }
 .photoDescrBoxDate{
-    font-weight: 700;
+    font-weight: 300;
     font-size: 21px;
     line-height: 27px;
     /* identical to box height */
