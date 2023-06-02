@@ -195,12 +195,12 @@ router.get('/photos/:lang?', async function(req, res, next) {
     if(!d.folders)
       d.folders=[]
     d.folders=d.folders.filter(dd=>dd.isEnabled && !dd.isDeleted);
-    d.folders.sort((a,b)=>{return b.sort-a.sort});
+    d.folders.sort((a,b)=>{return a.sort-b.sort});
     d.folders.forEach(f=>{
       if(!f.photo)
         f.photo=[]
       f.photo=f.photo.filter(dd=>dd.isEnabled && !dd.isDeleted);
-      f.photo.sort((a,b)=>{return b.sort-a.sort});
+      f.photo.sort((a,b)=>{return a.sort-b.sort});
     })
   })
   res.render('pagePhotos',{days, lang:req.params.lang, ru:req.params.lang=="ru", apiUrl:config.apiUrl} );
