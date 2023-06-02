@@ -2721,6 +2721,20 @@ img[src='undefined']{
 .photosWr{
     margin-top: 128px;
 }
+.photoFolderCount{
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 8px;
+    background: #E39A4F;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 26px;
+    /* identical to box height */
+    text-align: center;
+    color: #BB3E3F;
+    width: min-content;
+}
 
 
 

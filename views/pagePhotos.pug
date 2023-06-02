@@ -32,6 +32,8 @@ block content
                                     .photoFolderBox
                                         .photoFolderImage
                                             img(src="/static/image/middle/" + folder.coverphotoid loading="lazy")
+                                        .photoFolderCount.flex.center
+                                            div !{folder.photos.length}
                                     .photoDescrBox
                                         .photoDescrBoxDate #{day["title_" + lang]}
                                         .photoDescrBoxTitle #{folder["title" + lang]}
