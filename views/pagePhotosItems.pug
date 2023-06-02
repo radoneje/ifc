@@ -25,7 +25,7 @@ block content
                     .photoFoldersHeadTitleBox
                         .photoFoldersHeadTitleDate 01 мая
                         .photoFoldersHeadTitle !{folder["title"+lang]}
-                    .photoFoldersHeadRetBtn ВЕРНУТЬСЯ
+                    a.photoFoldersHeadRetBtn(href="/photos/"+lang) ВЕРНУТЬСЯ
                 .photoFolders
                             each photo in folder.photos
                                 .photoFolder(href="")
