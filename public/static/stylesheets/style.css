@@ -2670,7 +2670,10 @@ img[src='undefined']{
     grid-row-gap: 40px;
 }
 .photoFolder{
-
+    cursor: pointer;
+}
+.photoFolder:hover .photoFolderImage img{
+ filter:brightness(1.1)
 }
 
 .photoFolderBox{
@@ -2691,6 +2694,7 @@ img[src='undefined']{
     height: 100%;
     object-position: center;
     object-fit: contain;
+    filter:brightness(0.9)
 }
 .photoDescrBox{
     padding: 16px;
@@ -2711,6 +2715,9 @@ img[src='undefined']{
 
     color: #4A4A49;
     margin-top: 12px;
+}
+.photosWr{
+    margin-top: 128px;
 }
 
 
