@@ -25,21 +25,16 @@ block content
 
             .pgmWr
                 each day in days
-                    .oPgmItem(id="day"+day.id)
-                        .pgmHeadDate #{day["title_"+lang]}
-                        .oTimeslots
-
-                            .oTs.flex.left
-                                .oTsDate
-                                .oTrack.photoFolders
-                                    each folder in day.folders
-                                        .photoFolder
-                                            .photoFolderBox
-                                                .photoFolderImage
-                                                    img(src="/static/image/middle/"+folder.coverphotoid loading="lazy")
-                                            .photoDescrBox
-                                                .photoDescrBoxDate #{day["title_"+lang]}
-                                                .photoDescrBoxTitle #{folder["title"+lang]}
+                    .photoDayItem(id="day" + day.id)
+                        .photoFolders
+                            each folder in day.folders
+                                .photoFolder
+                                    .photoFolderBox
+                                        .photoFolderImage
+                                            img(src="/static/image/middle/" + folder.coverphotoid loading="lazy")
+                                    .photoDescrBox
+                                        .photoDescrBoxDate #{day["title_" + lang]}
+                                        .photoDescrBoxTitle #{folder["title" + lang]}
 
 
 
