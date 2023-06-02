@@ -142,15 +142,16 @@ div(v-if="user.statusid==65 && user.isPaySelf")
 
         .participaintRowContent
             p Оплата банковской картой и через Систему Быстрых Платежей будет доступна позже.
-    //.participaintRow
+    .participaintRow
         .participaintRowBodySubTitle
-            form(method='POST' action='https://demo.paykeeper.ru/create/')
-                input( type='hidden' name='sum' :value='user.price*1000')
+            form(method='POST' action='https://ifcongress.server/paykeeper.ru/create/')
+                //input( type='hidden' name='sum' :value='user.price*1000')
+                input( type='hidden' name='sum' :value='1')
                 input(type='hidden' name='orderid' :value='user.invoice')
                 input(type='hidden' name='service_name' :value="'Оказание услуг по организации участия представителя Заказчика в конгрессе «Финансовый конгресс Банка России» 6-7 июля 2023 года в городе Санкт-Петербург. Cчет-Договор ФК-'+user.invoice")
                 input.regSubmit(type='submit' value='Перейти к оплате')
-    //.participaintRow &nbsp;
-    //.participaintRow
+    .participaintRow &nbsp;
+    .participaintRow
         p#paykeeper
             .participaintRowBodySubTitle Оплата производится по банковской карте или по QR-коду Системы Быстрых Платежей:
             p
