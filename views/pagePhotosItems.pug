@@ -19,9 +19,14 @@ block content
             else
                 .sectionTitle  Photo
 
-            .pgmDownloadBtnWr
+
             .photosWr
-                        .photoFolders
+                .photoFoldersHead.flex
+                    .photoFoldersHeadTitleBox
+                        .photoFoldersHeadTitleDate 01 мая
+                        .photoFoldersHeadTitle !{folder["title"+lang]}
+                    .photoFoldersHeadRetBtn ВЕРНУТЬСЯ
+                .photoFolders
                             each photo in folder.photos
                                 .photoFolder(href="")
                                     .photoFolderBox
