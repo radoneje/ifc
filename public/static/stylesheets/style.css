@@ -2752,6 +2752,9 @@ img[src='undefined']{
     align-items: center;
     justify-content: space-between;
 }
+a:focus a.active{
+    outline: none !important;
+}
 
 
 
