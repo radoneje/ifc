@@ -397,7 +397,8 @@ let personalApp = new Vue({
         }
     },
     mounted: async function () {
-
+        if(sect!="")
+            this.section=sect;
         this.user = await getJson("/personal/data")
         if(this.user.info)
         this.user.info.forEach(i => {

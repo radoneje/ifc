@@ -362,7 +362,11 @@ router.get('/info/:lang?', checkAccess, async function(req, res, next) {
             req.params.lang="ru";
 
         let hotels=await req.knex("v_hotels").where({isEnabled:true}).orderBy("stars").orderBy("nameru")
-        res.render("personal/layout", {lang:req.params.lang, ru:req.params.lang == "ru", apiUrl:config.apiUrl, hotels}, )
+        let section="";
+        if(req.query.section)
+            section=req.query.section;
+        res.render("personal/layout", {section, lang:req.params.lang, ru:req.params.lang == "ru", apiUrl:config.apiUrl, hotels}, )
+
 
     }
     catch (e) {
