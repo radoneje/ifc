@@ -2747,6 +2747,11 @@ img[src='undefined']{
 .photoFoldersHeadRetBtn:hover{
     color: #E39A4F;
 }
+.photoFoldersHead{
+
+    align-items: center;
+    justify-content: space-between;
+}
 
 
 
