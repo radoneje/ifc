@@ -2742,6 +2742,7 @@ img[src='undefined']{
     text-transform: uppercase;
     color: #FFFFFF;
     padding: 18px 56px;
+    background: #BB3E3F;
 }
 .photoFoldersHeadRetBtn:hover{
     color: #E39A4F;
