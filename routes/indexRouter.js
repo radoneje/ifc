@@ -186,11 +186,17 @@ router.get('/registration/:lang?', async function(req, res, next) {
   res.render('pageRegistration',{lang:req.params.lang, ru:req.params.lang=="ru", apiUrl:config.apiUrl} );
 });
 router.get('/:lang?', async function(req, res, next) {
+ console.log(req.headers.referer)
+  if(req.headers.referer=="https://pay.vtb.ru/" && req.session.token){
+   let r=await req.knex("t_users").update({statusid:70}).where({id:req.session.token})
+   return res.redirect("/personal?section=pay")
+ }
   if(!req.params.lang) {
    let url="/ru"
     if(req.query.adv)
       url+='?adv='+req.query.adv
     return res.redirect(url)
+
 
   }
   if(!req.params.lang.match(/ru|en/)) {
