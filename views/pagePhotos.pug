@@ -29,7 +29,7 @@ block content
                     .photoDayItem(id="day" + day.id)
                         .photoFolders
                             each folder in day.folders
-                                a.photoFolder(href="/photos/"+day.id+"/"+lang)
+                                a.photoFolder(href="/photos/"+folder.id+"/"+lang)
                                     .photoFolderBox
                                         .photoFolderImage
                                             img(src="/static/image/middle/" + folder.coverphotoid loading="lazy")
