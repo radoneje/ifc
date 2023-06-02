@@ -205,6 +205,36 @@ router.get('/photos/:lang?', async function(req, res, next) {
   })
   res.render('pagePhotos',{days, lang:req.params.lang, ru:req.params.lang=="ru", apiUrl:config.apiUrl} );
 });
+router.get('/photos/:id/:lang?', async function(req, res, next) {
+  try {
+    if (!req.params.lang)
+      return res.redirect("/photos/" + req.prarams.id + "/ru")
+    if (!req.params.lang.match(/ru|en/))
+      res.redirect("/photos/" + req.prarams.id + "/ru")
+    let f = (await req.knex("v_photo_folders").where({id: req.params.id}))[0];
+
+
+    if (!f.photo)
+      f.photo = []
+    f.photo = f.photo.filter(dd => {
+      return dd.isEnabled && !dd.isDeleted
+    });
+    f.photo.sort((a, b) => {
+      return a.sort - b.sort
+    });
+
+    res.render('pagePhotosItems', {
+      folder: f,
+      lang: req.params.lang,
+      ru: req.params.lang == "ru",
+      apiUrl: config.apiUrl
+    });
+  }
+  catch (e) {
+    console.warn(e)
+    res.sendStatus(404)
+  }
+  });
 
 router.get('/:lang?', async function(req, res, next) {
  console.log(req.headers.referer)

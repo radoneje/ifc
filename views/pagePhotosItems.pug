@@ -25,19 +25,15 @@ block content
 
 
             .photosWr
-                each day in days
-                    .photoDayItem(id="day" + day.id)
+
+
                         .photoFolders
-                            each folder in day.folders
-                                a.photoFolder(href="/photos/"+day.id+"/"+lang)
+                            each photo in folder.photos
+                                .photoFolder(href="")
                                     .photoFolderBox
                                         .photoFolderImage
-                                            img(src="/static/image/middle/" + folder.coverphotoid loading="lazy")
-                                        .photoFolderCount.flex.center
-                                            div !{folder.photos.length}
-                                    .photoDescrBox
-                                        .photoDescrBoxDate #{day["title_" + lang]}
-                                        .photoDescrBoxTitle #{folder["title" + lang]}
+                                            img(src="/static/image/middle/" + photo.fileid loading="lazy")
+
 
 
 
