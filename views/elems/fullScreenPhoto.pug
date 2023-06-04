@@ -1,7 +1,7 @@
 .FSPhotoWr
     each photo in folder.photos
         .FSPhotoItem(active=photo.selected id="photoitem"+photo.id)
-            img(src="/static/image/hi/"+photo.fileid loading="lazy")
+            img(src="/static/image/middle/"+photo.fileid loading="lazy")
             .upBtn.flex.center.active.rBtn(onclick="FSPhotoNext(this)")
                 include ../svg/arrowRightRed.svg
             .upBtn.flex.center.active.lBtn(onclick="FSPhotoPrev(this)")
