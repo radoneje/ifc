@@ -2,3 +2,7 @@
     each photo in folder.photos
         .FSPhotoItem(active=photo.selected)
             img(src="/static/image/hi/"+photo.fileid loading="lazy")
+            .upBtn.flex.center.active.rBtn
+                include ../svg/arrowRightRed.svg
+            .upBtn.flex.center.active.lBtn
+                include ../svg/arrowRightRed.svg

@@ -2786,6 +2786,9 @@ img[src='undefined']{
 a:focus a.active{
     outline: none !important;
 }
+.FSPhotoItem .upBtn{
+
+}
 
 
 
