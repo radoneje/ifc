@@ -2807,6 +2807,10 @@ a:focus, a:active, a:focus-visible{
 .FSPhotoWr div::selection {
     background: transparent;
 }
+body::selection {
+    background-color:transparent;
+    color:#0000FF;
+}
 
 
 @media all and (max-width: 1700px){
