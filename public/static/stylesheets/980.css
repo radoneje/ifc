@@ -1308,6 +1308,9 @@
         margin-top: 16px;
         display: block;
         text-align: center;
+        font-size: 18px;
+        line-height: 24px;
+        padding: 11px;
     }
     .photoFoldersHeadTitleDate,.photoFoldersHeadTitle{
         font-size: 17px;
