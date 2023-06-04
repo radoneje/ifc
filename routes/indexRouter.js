@@ -252,7 +252,7 @@ router.get('/fullScreenPhoto/:folderid/:photoid', async function(req, res, next)
       if(photo.id==req.params.photoid)
         photo.selected=true;
     })
-    res.render('fullScreenPhoto', {folder:f, ru: req.params.lang == "ru",apiUrl: config.apiUrl});
+    res.render('elems/fullScreenPhoto', {folder:f, ru: req.params.lang == "ru",apiUrl: config.apiUrl});
   }
   catch (e) {
     console.warn(e)
