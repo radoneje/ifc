@@ -2676,7 +2676,7 @@ img[src='undefined']{
  filter:brightness(1.1)
 }
 
-.photoFolderBox{
+.photoFolderBox, .FSPhotoWr{
     position: relative;
     width: 100%;
     height: 0;
@@ -2684,17 +2684,20 @@ img[src='undefined']{
    background: #C2C2C2;
 
 }
-.photoFolderImage{
+.photoFolderImage, .FSPhotoItem{
     width: 100%;
     height: 100%;
     position: absolute;
 }
-.photoFolderImage img{
+.photoFolderImage img, .FSPhotoItem img{
     width: 100%;
     height: 100%;
     object-position: center;
     object-fit: contain;
     filter:brightness(0.9)
+}
+.FSPhotoItem img{
+    filter:brightness(1)
 }
 .photoDescrBox{
     padding: 16px;

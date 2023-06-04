@@ -237,7 +237,7 @@ router.get('/photos/:id/:lang?', async function(req, res, next) {
   }
   });
 
-router.get('/fullScreenPhoto/:folderid/:photoid', async function(req, res, next) {
+router.get('/fullScreenPhoto/:folderid/:photoid?', async function(req, res, next) {
   try {
     let f = (await req.knex("v_photo_folders").where({id: req.params.folderid}))[0];
     if (!f.photos)
@@ -248,10 +248,13 @@ router.get('/fullScreenPhoto/:folderid/:photoid', async function(req, res, next)
     f.photos.sort((a, b) => {
       return a.sort - b.sort
     });
+    if(req.params.photoid)
     f.photos.forEach(photo=>{
       if(photo.id==req.params.photoid)
         photo.selected=true;
     })
+    else
+      f.photos[0].selected=true;
     res.render('elems/fullScreenPhoto', {folder:f, ru: req.params.lang == "ru",apiUrl: config.apiUrl});
   }
   catch (e) {

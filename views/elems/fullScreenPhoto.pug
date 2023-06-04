@@ -1,1 +1,4 @@
-div fullScreanPhoto
+.FSPhotoWr
+    each photo in folder.photos
+    .FSPhotoItem(selected=photo.selected)
+        img(src="/static/images/full/"+photo.fileid loading="lazy")
