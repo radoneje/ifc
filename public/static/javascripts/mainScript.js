@@ -420,6 +420,7 @@ function FSPhotoNext(ctrl){
     let box=ctrl.parentNode;
     let next =box.nextSibling;
     if(next){
+        console.log(next)
         box.removeAttribute("active")
         next.addAttribute("active","active")
     }
