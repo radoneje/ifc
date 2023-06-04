@@ -2783,7 +2783,7 @@ img[src='undefined']{
 
     color: #4A4A49;
 }
-a:focus a.active{
+a:focus, a:active, a:focus-visible{
     outline: none !important;
 }
 .FSPhotoItem .rBtn{
