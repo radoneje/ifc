@@ -2796,7 +2796,7 @@ a:focus a.active{
     position: absolute;
     left: 0;
     top: calc(50% - 32px);
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
 }
 .FSPhotoItem:last-child .rBtn{
     display: none;
