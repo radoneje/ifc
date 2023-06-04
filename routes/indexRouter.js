@@ -237,6 +237,18 @@ router.get('/photos/:id/:lang?', async function(req, res, next) {
   }
   });
 
+router.get('/fullScreenPhoto/', async function(req, res, next) {
+  try {
+
+
+    res.render('fullScreenPhoto', {ru: req.params.lang == "ru",apiUrl: config.apiUrl});
+  }
+  catch (e) {
+    console.warn(e)
+    res.sendStatus(404)
+  }
+});
+
 router.get('/:lang?', async function(req, res, next) {
  console.log(req.headers.referer)
   if(req.headers.referer=="https://pay.vtb.ru/" && req.session.token){
