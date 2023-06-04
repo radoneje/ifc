@@ -1,4 +1,4 @@
 .FSPhotoWr
     each photo in folder.photos
-        .FSPhotoItem(selected=photo.selected)
+        .FSPhotoItem(active=photo.selected)
             img(src="/static/image/hi/"+photo.fileid loading="lazy")
