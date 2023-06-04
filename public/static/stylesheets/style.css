@@ -2786,10 +2786,24 @@ img[src='undefined']{
 a:focus a.active{
     outline: none !important;
 }
-.FSPhotoItem .upBtn{
-
+.FSPhotoItem .rBtn{
+    position: absolute;
+    right: 0;
+    top: calc(50% - 32px);
+    transform: rotate(90deg);
 }
-
+.FSPhotoItem .lBtn{
+    position: absolute;
+    left: 0;
+    top: calc(50% - 32px);
+    transform: rotate(90deg);
+}
+.FSPhotoItem:last-child .rBtn{
+    display: none;
+}
+.FSPhotoItem:first-child .lBtn{
+    display: none;
+}
 
 
 @media all and (max-width: 1700px){
