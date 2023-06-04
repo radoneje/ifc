@@ -2811,6 +2811,13 @@ body::selection {
     background-color:transparent;
     color:#0000FF;
 }
+.FSPhotoWrCopyright{
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
 
 
 @media all and (max-width: 1700px){
