@@ -2705,6 +2705,7 @@ img[src='undefined']{
 .FSPhotoItem[active]{
     display: block;
 }
+
 .photoDescrBox{
     padding: 16px;
     background: #F5F5F5;
