@@ -237,11 +237,22 @@ router.get('/photos/:id/:lang?', async function(req, res, next) {
   }
   });
 
-router.get('/fullScreenPhoto/', async function(req, res, next) {
+router.get('/fullScreenPhoto/:folderid/:photoid', async function(req, res, next) {
   try {
-
-
-    res.render('fullScreenPhoto', {ru: req.params.lang == "ru",apiUrl: config.apiUrl});
+    let f = (await req.knex("v_photo_folders").where({id: req.params.id}))[0];
+    if (!f.photos)
+      f.photos = []
+    f.photos = f.photos.filter(dd => {
+      return dd.isEnabled && !dd.isDeleted
+    });
+    f.photos.sort((a, b) => {
+      return a.sort - b.sort
+    });
+    f.photos.forEach(photo=>{
+      if(photo.id==req.params.photoid)
+        photo.selected=true;
+    })
+    res.render('fullScreenPhoto', {folder:f, ru: req.params.lang == "ru",apiUrl: config.apiUrl});
   }
   catch (e) {
     console.warn(e)
