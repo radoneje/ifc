@@ -423,8 +423,6 @@ function FSPhotoNext(ctrl){
         box.removeAttribute("active")
         next.setAttribute("active","active")
     }
-
-    console.log(box)
 }
 function FSPhotoPrev(ctrl){
     let box=ctrl.parentNode;
