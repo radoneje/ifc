@@ -237,7 +237,7 @@ router.get('/photos/:id/:lang?', async function(req, res, next) {
   }
   });
 
-router.get('/fullScreenPhoto/:folderid', async function(req, res, next) {
+router.get('/fullScreenPhoto/:folderid/:photoid', async function(req, res, next) {
   try {
     let f = (await req.knex("v_photo_folders").where({id: req.params.id}))[0];
     if (!f.photos)
