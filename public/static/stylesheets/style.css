@@ -2702,7 +2702,7 @@ img[src='undefined']{
 .FSPhotoItem{
     display: none;
 }
-.FSPhotoItem.active{
+.FSPhotoItem[active]{
     display: block;
 }
 .photoDescrBox{
