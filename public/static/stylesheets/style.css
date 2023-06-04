@@ -2804,6 +2804,9 @@ a:focus, a:active, a:focus-visible{
 .FSPhotoItem:first-child .lBtn{
     display: none;
 }
+.FSPhotoWr div::selection {
+    background: transparent;
+}
 
 
 @media all and (max-width: 1700px){
