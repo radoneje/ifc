@@ -416,3 +416,11 @@ if(ts){
 
     })
 }
+function FSPhotoNext(ctrl){
+    let box=ctrl.parentNode;
+    console.log(box)
+}
+function FSPhotoPrev(ctrl){
+    let box=ctrl.parentNode;
+    console.log(box)
+}
