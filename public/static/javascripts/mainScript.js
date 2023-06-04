@@ -418,9 +418,19 @@ if(ts){
 }
 function FSPhotoNext(ctrl){
     let box=ctrl.parentNode;
+    let next =box.nextSibling;
+    if(next){
+        box.removeAttribute("active")
+        next.addAttribute("active","active")
+    }
+
     console.log(box)
 }
 function FSPhotoPrev(ctrl){
     let box=ctrl.parentNode;
-    console.log(box)
+    let next=box.previousSibling; // #foo1
+    if(next){
+        box.removeAttribute("active")
+        next.addAttribute("active","active")
+    }
 }
