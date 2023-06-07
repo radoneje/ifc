@@ -97,6 +97,8 @@ router.get('/badgeDelivery', async function(req, res, next) {
         return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
     }
 });
+
+
 router.post('/badgeDelivery', async function(req, res, next) {
     try {
 

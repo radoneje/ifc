@@ -46,6 +46,7 @@ let personalApp = new Vue({
                   arr.push({userid, name})
               })
               this.badgeDelivery.collegues=(arr);
+            //  await postJson("/personal/setCollegues", arr)
               closePopUp();
           }
         },
