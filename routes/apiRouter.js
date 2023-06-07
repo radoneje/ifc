@@ -24,7 +24,11 @@ const validateEmail = (email) => {
 };
 
 /* GET home page. */
+router.get('/ping',   async function (req, res, next) {
 
+
+    res.json("pong")
+});
 router.post('/uploadFile', upload.single('file'),  async function (req, res, next) {
 
     let ext = path.extname(req.file.originalname)
