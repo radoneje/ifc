@@ -45,16 +45,17 @@
                                                 .oSessionDetails(onclick="showSession("+session.id+", '"+lang+"', "+isSpk+")") подробнее
                                             else
                                                 .oSessionDetails(onclick="showSession("+session.id+", '"+lang+"', "+isSpk+")") details
-                                            if session.moderators
-                                                .oSessionSpkBox
-                                                    if ru
-                                                        .oSessionSpkBoxTitle Модератор:
-                                                    else
-                                                        .oSessionSpkBoxTitle Moderator:
+                                            if isSpk
+                                                if session.moderators
+                                                    .oSessionSpkBox
+                                                        if ru
+                                                            .oSessionSpkBoxTitle Модератор:
+                                                        else
+                                                            .oSessionSpkBoxTitle Moderator:
 
-                                                    .oSpkBox(onclick="showSpeaker("+session.moderators[0].id+", '"+lang+"')")
-                                                        .oSessionSpkBoxName #{session.moderators[0]["i"+lang]} #{session.moderators[0]["f"+lang]}
-                                                            .oSessionSpkBoxPos  #{session.moderators[0]["company"+lang]}
+                                                        .oSpkBox(onclick="showSpeaker("+session.moderators[0].id+", '"+lang+"')")
+                                                            .oSessionSpkBoxName #{session.moderators[0]["i"+lang]} #{session.moderators[0]["f"+lang]}
+                                                                .oSessionSpkBoxPos  #{session.moderators[0]["company"+lang]}
                                             if isSpk
                                                 if session.speakers
                                                     .oSessionSpkBox
