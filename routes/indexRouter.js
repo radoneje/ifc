@@ -105,8 +105,10 @@ router.get('/programme/:lang?', async function(req, res, next) {
     if (!req.params.lang.match(/ru|en/))
       res.redirect("/programme/ru")
     let pgm = await req.knex("v_pgm")
-
-    res.render('pageProgramme', {lang: req.params.lang, ru: req.params.lang == "ru", pgm});
+    let isSpk=false
+    if(req.query.spk)
+      isSpk=true
+    res.render('pageProgramme', {lang: req.params.lang,isSpk, ru: req.params.lang == "ru", pgm});
   }
   catch (e) {
     console.warn(e)

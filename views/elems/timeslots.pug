@@ -55,17 +55,18 @@
                                                     .oSpkBox(onclick="showSpeaker("+session.moderators[0].id+", '"+lang+"')")
                                                         .oSessionSpkBoxName #{session.moderators[0]["i"+lang]} #{session.moderators[0]["f"+lang]}
                                                             .oSessionSpkBoxPos  #{session.moderators[0]["company"+lang]}
-                                            if session.speakers
-                                                .oSessionSpkBox
-                                                    if ru
-                                                        .oSessionSpkBoxTitle Спикеры:
-                                                    else
-                                                        .oSessionSpkBoxTitle Speakers:
+                                            if isSpk
+                                                if session.speakers
+                                                    .oSessionSpkBox
+                                                        if ru
+                                                            .oSessionSpkBoxTitle Спикеры:
+                                                        else
+                                                            .oSessionSpkBoxTitle Speakers:
 
-                                                    each spk in session.speakers
-                                                        .oSpkBox(onclick="showSpeaker("+spk.id+", '"+lang+"')")
-                                                            .oSessionSpkBoxName #{spk["i" + lang]} #{spk["f" + lang]}
-                                                                .oSessionSpkBoxPos  #{spk["company" + lang]}
+                                                        each spk in session.speakers
+                                                            .oSpkBox(onclick="showSpeaker("+spk.id+", '"+lang+"')")
+                                                                .oSessionSpkBoxName #{spk["i" + lang]} #{spk["f" + lang]}
+                                                                    .oSessionSpkBoxPos  #{spk["company" + lang]}
                                             .oSessionSpkBox.pgmQBox(sessionid=session.id)
                                                 textarea(placeholder="Напишите вопрос здесь")
                                                 .pqmQBtn задать вопрос
