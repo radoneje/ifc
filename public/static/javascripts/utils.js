@@ -250,8 +250,11 @@ const showSpeaker=async (id, lang)=>{
         elem.style.overflowY="inherit"
         elem.style.overflowX="visible"
 }
-const showSession=async (id, lang)=>{
-    await createPopUp("/popupSession/"+id+"/"+lang,()=>{})
+const showSession=async (id, lang, isSpk=false)=>{
+    let url="/popupSession/"+id+"/"+lang
+    if(isSpk)
+        url+="?spk=show"
+    await createPopUp(url,()=>{})
     let elem=document.querySelector(".fullScreencontent")
     elem.style.overflowY="inherit"
     elem.style.overflowX="visible"

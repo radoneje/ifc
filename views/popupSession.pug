@@ -6,11 +6,12 @@
         .pPgmPopTitle.up #{session["title_"+lang]}
         .pPgmPopScroll
             .pPgmPopDescription #{session["discription_"+lang]}
-                .pPgmPopSpeakers.flex.center
-                    if session.moderators
-                        each spk in session.moderators
-                            include elems/sessionPopupSpeaker
-                    if session.speakers
-                        each spk in session.speakers
-                            include elems/sessionPopupSpeaker
+                if isSpk
+                    .pPgmPopSpeakers.flex.center
+                        if session.moderators
+                            each spk in session.moderators
+                                include elems/sessionPopupSpeaker
+                        if session.speakers
+                            each spk in session.speakers
+                                include elems/sessionPopupSpeaker
 

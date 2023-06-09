@@ -42,9 +42,9 @@
                                                         span.plenar  PLENARY session:&nbsp;
                                                 span #{session["title_"+lang]}
                                             if ru
-                                                .oSessionDetails(onclick="showSession("+session.id+", '"+lang+"')") подробнее
+                                                .oSessionDetails(onclick="showSession("+session.id+", '"+lang+"', "+isSpk+")") подробнее
                                             else
-                                                .oSessionDetails(onclick="showSession("+session.id+", '"+lang+"')") details
+                                                .oSessionDetails(onclick="showSession("+session.id+", '"+lang+"', "+isSpk+")") details
                                             if session.moderators
                                                 .oSessionSpkBox
                                                     if ru
@@ -64,7 +64,7 @@
                                                             .oSessionSpkBoxTitle Speakers:
 
                                                         each spk in session.speakers
-                                                            .oSpkBox(onclick="showSpeaker("+spk.id+", '"+lang+"')")
+                                                            .oSpkBox(onclick="showSpeaker("+spk.id+", '"+lang+"', "+isSpk+")")
                                                                 .oSessionSpkBoxName #{spk["i" + lang]} #{spk["f" + lang]}
                                                                     .oSessionSpkBoxPos  #{spk["company" + lang]}
                                             .oSessionSpkBox.pgmQBox(sessionid=session.id)

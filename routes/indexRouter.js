@@ -140,7 +140,10 @@ router.get('/popupSession/:id/:lang', async function(req, res, next) {
     let session = await req.knex("v_pgm_session_withdates").where({id:req.params.id})
     if(session.length==0)
       res.sendStatus(404);
-    res.render("popupSession",{session:session[0],lang:req.params.lang })
+    let isSpk=false;
+    if(req.query.spk)
+      isSpk=true;
+    res.render("popupSession",{session:session[0],isSpk,lang:req.params.lang })
   }
   catch (e) {
     console.warn(e)
