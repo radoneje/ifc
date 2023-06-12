@@ -414,7 +414,7 @@ let personalApp = new Vue({
         })
 
         setTimeout(async () => {
-            subscribe();
+           // subscribe();
             loader.style.display = "none"
             app.style.display = "block";
              let r= await getJson("/personal/badgeDelivery")
