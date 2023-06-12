@@ -357,8 +357,8 @@ block content
 
         let apiUrl = !{JSON.stringify(apiUrl)}
         let frontUrl = !{JSON.stringify(apiUrl)}
-        if(!navigator.onLine) {
-            alert("Эта страница доступна только приподключении к интернету")
+        if(navigator.standalone) {
+            alert("Эта страница доступна только при подключении к интернету")
         }
     if typeid == 4
         script.
