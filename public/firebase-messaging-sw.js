@@ -12,17 +12,25 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 const messaging = firebase.messaging();
-
-messaging.onBackgroundMessage((payload) => {
+messaging.setBackgroundMessageHandler(function(payload) {
     console.log('[firebase-messaging-sw.js] Received background message ', payload);
-    const notificationTitle = payload.notification.title;
+
+    /*const notificationTitle = payload['title'];
     const notificationOptions = {
-        body: payload.notification.body,
+        body: payload['body'],
+        icon: payload['icon']
     };
     return self.registration.showNotification(notificationTitle,
-        notificationOptions);
+        notificationOptions);*/
 });
 
-self.addEventListener('notificationclick', event => {
-    console.log(event)
+self.addEventListener('push', function(event) {
+    const data = event.data.json();
+   /* let url = 'url unknown';
+    if (data.hasOwnProperty('notification') && data.notification.hasOwnProperty('click_action')) {
+        url = data.notification.click_action;
+    }
+    event.waitUntil(
+        self.analytics.trackEvent('Pushes showed', url)
+    );*/
 });

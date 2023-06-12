@@ -27,27 +27,19 @@
         appId: "1:970751093432:web:2b6ac862eb43878007e24d",
         measurementId: "G-DEWMH500G8"
     };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-
-    if('serviceWorker' in navigator){
-        const messaging = firebase.messaging()
-        navigator.serviceWorker.register('firebase-messaging-sw.js')
-            .then((register) => {
-                messaging.requestPermission().then(() => {
-                    messaging.getToken()
-                        .then((fcmToken) => {
-                            console.log(fcmToken)
-                            messaging.onMessage((payload) => {
-                                console.log("onMessage event fired",payload)
-                            })
-                        });
-                });
-            })
-    } else {
-        console.log('Service Worker not supported')
+    if ('Notification' in window) {
+        var messaging = firebase.messaging();
+        //if (Notification.permission === 'granted') {
+            await subscribe();
+       // }
     }
+    async function subscribe() {
+        await messaging.requestPermission()
+        let t=await messaging.getToken()
+    }
+    let sw=await navigator.serviceWorker.register('/firebase-messaging-sw.js')
+    console.log('%c%s', 'color: green; font-weight:700;', '### Service worker register');
+
 
 </script>
 <h1>Push notification testing</h1>
