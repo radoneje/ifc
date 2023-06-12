@@ -23,10 +23,15 @@ if ('Notification' in window) {
 }
 
 async function subscribe() {
-    await messaging.requestPermission();
-    let currToken=await messaging.getToken();
-    if (currToken) {
-        await sendTokenToServer(currToken);
+    try {
+        await messaging.requestPermission();
+        let currToken = await messaging.getToken();
+        if (currToken) {
+            await sendTokenToServer(currToken);
+        }
+    }
+    catch (e){
+        console.warn(e);
     }
     /*
     // запрашиваем разрешение на получение уведомлений
@@ -56,7 +61,7 @@ async function subscribe() {
 
 // отправка ID на сервер
 async function sendTokenToServer(currentToken) {
-  //  if (!isTokenSentToServer(currentToken)) {
+    if (!isTokenSentToServer(currentToken)) {
         console.log('Отправка токена на сервер...');
 
         var url = '/personal/googleToken'; // адрес скрипта на сервере который сохраняет ID устройства
@@ -66,9 +71,9 @@ async function sendTokenToServer(currentToken) {
         let r=await postJson(url, {googleToken: currentToken} )
 
         setTokenSentToServer(currentToken);
-   // } else {
-    //    console.log('Токен уже отправлен на сервер.');
-   // }
+    } else {
+        console.log('Токен уже отправлен на сервер.');
+    }
 }
 
 // используем localStorage для отметки того,
