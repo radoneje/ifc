@@ -536,6 +536,17 @@ router.post('/loginToLK/', async function(req, res, next) {
         //res.text("Ошибка")
     }
 });
+router.post('/sendQFromTGbot/', async function(req, res, next) {
+    try {
+        let r = await req.knex("t_pgm_q_frombot").insert(req.body)
+        res.json(true)
+    }
+    catch (e) {
+        console.warn(e)
+        //res.text("Ошибка")
+    }
+});
+
 
 
 
