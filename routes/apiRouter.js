@@ -29,6 +29,18 @@ router.get('/ping',   async function (req, res, next) {
 
     res.json("pong")
 });
+
+router.post('/sendQFromTGbot/', async function(req, res, next) {
+    try {
+        let r = await req.knex("t_pgm_q_frombot").insert(req.body)
+        res.json(true)
+    }
+    catch (e) {
+        console.warn(e)
+        //res.text("Ошибка")
+    }
+});
+
 router.post('/uploadFile', upload.single('file'),  async function (req, res, next) {
 
     let ext = path.extname(req.file.originalname)
@@ -536,16 +548,7 @@ router.post('/loginToLK/', async function(req, res, next) {
         //res.text("Ошибка")
     }
 });
-router.post('/sendQFromTGbot/', async function(req, res, next) {
-    try {
-        let r = await req.knex("t_pgm_q_frombot").insert(req.body)
-        res.json(true)
-    }
-    catch (e) {
-        console.warn(e)
-        //res.text("Ошибка")
-    }
-});
+
 
 
 
