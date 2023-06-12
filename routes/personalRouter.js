@@ -26,6 +26,20 @@ const checkAccess=(req, res, next)=>{
 }
 /* GET home page. */
 
+router.post('/googleToken/?', async function(req, res, next) {
+    try {
+        if(!req.session.token)
+            return res.sendStatus(401)
+
+        await req.knex("t_users_google_tokens").insert({userid:req.session.token.id,token:req.body.googleToken})
+        res.json(true)
+    }
+    catch (e) {
+        console.warn(e)
+        return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
+    }
+});
+
 
 router.get('/colleguesDialog', async function(req, res, next) {
     try {
@@ -423,6 +437,9 @@ router.get('/:lang?', async function(req, res, next) {
         return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
     }
 });
+
+
+
 
 
 

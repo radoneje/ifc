@@ -99,6 +99,8 @@ block content
                             include ../svg/mainlogo.svg
                         .persHeadText.flex.center
                             .persHeadH1 Финансовый<br>конгресс<br>Банка&nbsp;России
+
+
     link(rel='stylesheet', href='/static/lib/cropper.min.css')
     script let apiUrl=!{JSON.stringify(apiUrl)}
     script let frontUrl=!{JSON.stringify(apiUrl)}
@@ -107,3 +109,6 @@ block content
     script(src="/static/javascripts/utils.js")
     script(src="/static/lib/cropper.min.js")
     script(src="/static/javascripts/personalScript.js")
+    <button type="button" id="subscribe">Следить за изменениями</button>
+    <script type="text/javascript" src="//www.gstatic.com/firebasejs/3.6.8/firebase.js"></script>
+    <script type="text/javascript" src="/firebase_subscribe.js"></script>
