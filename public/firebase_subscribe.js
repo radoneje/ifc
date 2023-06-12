@@ -1,6 +1,6 @@
 // firebase_subscribe.js
 firebase.initializeApp({
-    messagingSenderId: '<SENDER_ID>'
+    messagingSenderId: '970751093432'
 });
 
 // браузер поддерживает уведомления
@@ -16,9 +16,10 @@ if ('Notification' in window) {
 
     // по клику, запрашиваем у пользователя разрешение на уведомления
     // и подписываем его
-    $('#subscribe').on('click', function () {
+    document.getElementById("subscribe").onclick=subscribe
+   /* $('#subscribe').on('click', function () {
         subscribe();
-    });
+    });*/
 }
 
 async function subscribe() {
