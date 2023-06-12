@@ -9,18 +9,24 @@ block content
     script(src="/static/javascripts/utils.js")
     script(src="/static/javascripts/mainScript.js")
     script.
+        let usermame;
+        try{usermame=localStorage.getItem("pgmMesageUserName")}catch (e){}
         document.querySelectorAll(".pqmQBtn").forEach( btn=>{
-            console.log(btn)
+            let box = btn.parentNode;
+            let inp = box.querySelector("textarea")
+            let name = box.querySelector("input")
+            let loader = box.querySelector(".pgmQloader")
+            if(username)
+                name.value=usermame
+
             btn.onclick=async()=> {
 
-                let box = btn.parentNode;
-                let inp = box.querySelector("textarea")
-                let name = box.querySelector("input")
-                let loader=box.querySelector(".pgmQloader")
+
                 if (inp.value.length < 5)
                     return inp.focus();
-                f(inp.value.length < 3)
-                return name.focus();
+                f(name.value.length < 3)
+                    return name.focus();
+                try{localStorage.getItem("pgmMesageUserName", name.value)}catch (e){}
 
                 let id=box.parentNode.getAttribute("sessionid")
                 btn.style.display = "none";

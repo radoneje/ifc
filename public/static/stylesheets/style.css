@@ -2392,17 +2392,20 @@ img[src='undefined']{
 .tgPgm .pgmQBox{
     display: block;
 }
-.pgmQBox textarea{
+.pgmQBox textarea, .pgmQBox input{
     width: 100%;
     padding: 12px;
     box-sizing: border-box;
     border: 1px solid #878787;
     resize: none;
-    height: 8em;
+
     font-size: 16px;
     line-height: 21px;
     font-family: 'Stem';
     color:#4A4A49;
+}
+.pgmQBox textarea{
+    height: 8em;
 }
 .pqmQBtn{
     color:white;
