@@ -41,7 +41,9 @@
     })
     async function subscribe() {
         await messaging.requestPermission()
-        let t=await messaging.getToken()
+        let t=await messaging.getToken();
+
+        console.log(t)
     }
     async function register() {
        // let sw =  await navigator.serviceWorker.register('/firebase-messaging-sw.js')
