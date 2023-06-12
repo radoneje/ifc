@@ -428,15 +428,14 @@ let personalApp = new Vue({
     }
 })
 
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker
-        .register('/firebase-messaging-sw.js')
-        .then(function (registration) {
-            console.log( registration.scope)
-            return registration.scope;
-        })
-        .catch(function (err) {
-            return err;
-        });
+if ('Notification' in window) {
+    var messaging = firebase.messaging();
+
+    messaging.onMessage(function(payload) {
+        console.log('Message received. ', payload);
+        new Notification(payload.notification.title, payload.notification);
+    });
+
+    // ...
 }
 
