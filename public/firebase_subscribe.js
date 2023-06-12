@@ -14,10 +14,7 @@ if ('Notification' in window) {
         subscribe();
     }
 
-    messaging.onMessage(function(payload) {
-        console.log('Message received. ', payload);
-        new Notification(payload.notification.title, payload.notification);
-    });
+
 
     // по клику, запрашиваем у пользователя разрешение на уведомления
     // и подписываем его
