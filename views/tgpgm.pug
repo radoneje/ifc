@@ -24,7 +24,7 @@ block content
 
                 if (inp.value.length < 5)
                     return inp.focus();
-                f(name.value.length < 3)
+                if(name.value.length < 3)
                     return name.focus();
                 try{localStorage.getItem("pgmMesageUserName", name.value)}catch (e){}
 
