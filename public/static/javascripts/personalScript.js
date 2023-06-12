@@ -456,11 +456,11 @@ if ('Notification' in window) {
         console.log(event)
     });
    /* var messaging = firebase.messaging();
-
+*/
     messaging.onMessage(function(payload) {
         console.log('Message received. ', payload);
         new Notification(payload.notification.title, payload.notification);
-    });*/
+    });
 
     // ...
 }
