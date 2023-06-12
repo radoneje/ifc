@@ -26,6 +26,8 @@ const checkAccess=(req, res, next)=>{
 }
 /* GET home page. */
 
+
+
 router.post('/googleToken', async function(req, res, next) {
     try {
         if(!req.session.token)
