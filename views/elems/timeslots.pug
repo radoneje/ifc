@@ -17,7 +17,7 @@
                             if ts.sessions
                                 each session in ts.sessions
                                     if session["halltitle_"+lang]
-                                        .oSession(hallNumber=session["halltitle_"+lang].replace(/hall /i,"").replace(/зал /i,""))
+                                        .oSession(sessionid=session.id hallNumber=session["halltitle_"+lang].replace(/hall /i,"").replace(/зал /i,""))
                                             //tmp.pug
                                             if(!ts.isImpotant)
                                                 //.oSessionNextBtn
@@ -69,6 +69,7 @@
                                                                 .oSessionSpkBoxName #{spk["i" + lang]} #{spk["f" + lang]}
                                                                     .oSessionSpkBoxPos  #{spk["company" + lang]}
                                             .oSessionSpkBox.pgmQBox(sessionid=session.id)
+                                                input(placeholder="Ваше Имя")
                                                 textarea(placeholder="Напишите вопрос здесь")
                                                 .pqmQBtn задать вопрос
                                                 .pgmQloader

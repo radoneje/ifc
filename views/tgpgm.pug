@@ -12,14 +12,20 @@ block content
         document.querySelectorAll(".pqmQBtn").forEach( btn=>{
             console.log(btn)
             btn.onclick=async()=> {
-                console.log("btn click")
+
                 let box = btn.parentNode;
                 let inp = box.querySelector("textarea")
+                let name = box.querySelector("input")
                 let loader=box.querySelector(".pgmQloader")
                 if (inp.value.length < 5)
                     return inp.focus();
+                f(inp.value.length < 3)
+                return name.focus();
+
+                let id=box.parentNode.getAttribute("sessionid")
                 btn.style.display = "none";
                 loader.style.display = "block";
+                let res=await postJson("/api/sendQFromTGbot", {id, name:name.value, text:inp.value})
             }
         })
 
