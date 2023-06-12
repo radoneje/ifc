@@ -24,7 +24,7 @@ if ('Notification' in window) {
 
 async function subscribe() {
     await messaging.requestPermission();
-    let currToken=messaging.getToken();
+    let currToken=await messaging.getToken();
     if (currToken) {
         await sendTokenToServer(currToken);
     }
