@@ -428,7 +428,7 @@ let personalApp = new Vue({
     }
 })
 
-if ('Notification' in window) {
+/*if ('Notification' in window) {
     firebase.initializeApp({
         //messagingSenderId: '970751093432'
         apiKey: "AIzaSyBZm4LHkOHWkolMuh2gtp24K072vQ5P7mI",
@@ -455,13 +455,12 @@ if ('Notification' in window) {
     self.addEventListener('notificationclick', event => {
         console.log(event)
     });
-   /* var messaging = firebase.messaging();
-*/
+
     messaging.onMessage(function(payload) {
         console.log('Message received. ', payload);
         new Notification(payload.notification.title, payload.notification);
     });
 
-    // ...
-}
+
+}*/
 
