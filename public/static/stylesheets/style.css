@@ -2384,7 +2384,7 @@ img[src='undefined']{
     margin-bottom: 24px;
 }
 .tgPgm .oTrack:not(.impotant) .oSession {
-  /*  width: calc(100vw - 72px);*/
+    width: calc(100vw - 48px);
 }
 .pgmQBox{
     display: none;
