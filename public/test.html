@@ -32,13 +32,16 @@
         //if (Notification.permission === 'granted') {
              subscribe();
        // }
+        register()
     }
     async function subscribe() {
         await messaging.requestPermission()
         let t=await messaging.getToken()
     }
-    let sw=await navigator.serviceWorker.register('/firebase-messaging-sw.js')
-    console.log('%c%s', 'color: green; font-weight:700;', '### Service worker register');
+    async function register() {
+        let sw = await navigator.serviceWorker.register('/firebase-messaging-sw.js')
+        console.log('%c%s', 'color: green; font-weight:700;', '### Service worker register');
+    }
 
 
 </script>
