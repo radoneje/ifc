@@ -30,7 +30,7 @@ router.get('/ping',   async function (req, res, next) {
     res.json("pong")
 });
 
-router.post('/sendQFromTGbot/', async function(req, res, next) {
+router.post('/sendQFromTGbot', async function(req, res, next) {
     try {
         let r = await req.knex("t_pgm_q_frombot").insert(req.body)
         res.json(true)
