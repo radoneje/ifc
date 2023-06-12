@@ -10,9 +10,10 @@ if ('Notification' in window) {
 
     // пользователь уже разрешил получение уведомлений
     // подписываем на уведомления если ещё не подписали
-    if (Notification.permission === 'granted') {
+    if (Notification.permission != 'granted') {
         subscribe();
     }
+
     messaging.onMessage(function(payload) {
         console.log('Message received. ', payload);
         new Notification(payload.notification.title, payload.notification);
