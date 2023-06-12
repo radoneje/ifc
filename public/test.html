@@ -36,7 +36,9 @@
        // }
 
     }
-    register()
+    register().then(()=>{
+        console.log("reg cpmpl")
+    })
     async function subscribe() {
         await messaging.requestPermission()
         let t=await messaging.getToken()
