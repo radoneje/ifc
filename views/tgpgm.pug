@@ -26,15 +26,23 @@ block content
                     return inp.focus();
                 if(name.value.length < 3)
                     return name.focus();
-                try{localStorage.getItem("pgmMesageUserName", name.value)}catch (e){}
+                try{localStorage.setItem("pgmMesageUserName", name.value)}catch (e){}
 
                 let id=box.parentNode.getAttribute("sessionid")
                 btn.style.display = "none";
                 loader.style.display = "block";
-                //let res=await postJson("/api/sendQFromTGbot", {id, name:name.value, text:inp.value})
-                let tmp=loader.innerHTML;
-                loader.innerHTML="Вопрос передан организаторам"
-                inp.value=""
+                let res=await postJson("/api/sendQFromTGbot", {id, name:name.value, text:inp.value})
+                setTimeout(()=>{
+                    let tmp = loader.innerHTML;
+                    loader.innerHTML = "Вопрос передан организаторам"
+                    inp.value = ""
+                    setTimeout(()=>{
+                        loader.innerHTML=tmp;
+                        btn.style.display = "block";
+                        loader.style.display = "none";
+                    }, 4000)
+                }, 1000)
+
 
             }
         })
