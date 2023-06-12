@@ -7,7 +7,8 @@ toolbox.precache([
     '/personal/ru',
     '/personal/info/ru',
     '/static/stylesheets/style.css',
+    '/static/key/pgmru',
     '/static/javascripts/mainScript.js']);
 toolbox.router.get('/images/*', toolbox.cacheFirst);
-toolbox.router.get('/*', toolbox.cacheFirst);
-toolbox.router.get('/*', toolbox.networkFirst, {networkTimeoutSeconds: 5});
+//toolbox.router.get('/*', toolbox.cacheFirst);
+toolbox.router.get('/*', toolbox.networkFirst, {networkTimeoutSeconds: 2});
