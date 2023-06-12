@@ -426,3 +426,4 @@ let personalApp = new Vue({
 
     }
 })
+subscribe();
