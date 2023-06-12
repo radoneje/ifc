@@ -41,7 +41,8 @@
         let t=await messaging.getToken()
     }
     async function register() {
-        let sw = await navigator.serviceWorker.register('/firebase-messaging-sw.js')
+        let sw =  await navigator.serviceWorker.register('/firebase-messaging-sw.js')
+        await navigator.serviceWorker.register('/test_sw.js')
         console.log('%c%s', 'color: green; font-weight:700;', '### Service worker register');
     }
 
