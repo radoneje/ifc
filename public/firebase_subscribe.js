@@ -14,6 +14,16 @@ if ('Notification' in window) {
         subscribe();
     }
 
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+            .register('/firebase-messaging-sw.js')
+            .then(function (registration) {
+                return registration.scope;
+            })
+            .catch(function (err) {
+                return err;
+            });
+    }
 
 
     // по клику, запрашиваем у пользователя разрешение на уведомления
