@@ -30,12 +30,13 @@
 
     firebase.initializeApp(firebaseConfig)
     if ('Notification' in window) {
-        var messaging = firebase.messaging();
+       /// var messaging = firebase.messaging();
         //if (Notification.permission === 'granted') {
              subscribe();
        // }
-        register()
+
     }
+    register()
     async function subscribe() {
         await messaging.requestPermission()
         let t=await messaging.getToken()
