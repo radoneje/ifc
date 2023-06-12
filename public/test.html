@@ -45,7 +45,7 @@
     }
     async function register() {
        // let sw =  await navigator.serviceWorker.register('/firebase-messaging-sw.js')
-        await navigator.serviceWorker.register('/test_sw.js')
+        await navigator.serviceWorker.register('/test_sw.js', { scope: './' })
         console.log('%c%s', 'color: green; font-weight:700;', '### Service worker register');
     }
 
