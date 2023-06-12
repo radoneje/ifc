@@ -31,7 +31,11 @@ block content
                 let id=box.parentNode.getAttribute("sessionid")
                 btn.style.display = "none";
                 loader.style.display = "block";
-                let res=await postJson("/api/sendQFromTGbot", {id, name:name.value, text:inp.value})
+                //let res=await postJson("/api/sendQFromTGbot", {id, name:name.value, text:inp.value})
+                let tmp=loader.innerHTML;
+                loader.innerHTM="Вопрос передан организаторам"
+                inp.value=""
+
             }
         })
 
