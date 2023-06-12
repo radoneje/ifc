@@ -1,5 +1,5 @@
-importScripts('https://www.gstatic.com/firebasejs/3.6.8/firebase-app.js');
-importScripts('https://www.gstatic.com/firebasejs/3.6.8/firebase-messaging.js');
+importScripts('https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js');
+importScripts('https://www.gstatic.com/firebasejs/8.1.1/firebase-messaging.js');
 
 firebase.initializeApp({
     //messagingSenderId: '970751093432'
@@ -15,8 +15,15 @@ firebase.initializeApp({
 
 
 const messaging = firebase.messaging();
-messaging.onMessage(function(payload) {
-    console.log('Message received. ', payload);
-    new Notification(payload.notification.title, payload.notification);
+messaging.onBackgroundMessage((payload) => {
+    console.log('[firebase-messaging-sw.js] Received background message ', payload);
+    const notificationTitle = payload.notification.title;
+    const notificationOptions = {
+        body: payload.notification.body,
+    };
+    return self.registration.showNotification(notificationTitle,
+        notificationOptions);
 });
-
+self.addEventListener('notificationclick', event => {
+    console.log(event)
+});
