@@ -9,6 +9,10 @@ var firebaseConfig = {
     appId: "1:970751093432:web:2b6ac862eb43878007e24d",
     measurementId: "G-DEWMH500G8"
 };// Initialize Firebase
+function t(){
+    console.log("t")
+    setTimeout(t, 2000)
+}
 firebase.initializeApp(firebaseConfig);
 
 const messaging = firebase.messaging();
