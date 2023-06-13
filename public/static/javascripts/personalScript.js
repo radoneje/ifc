@@ -454,8 +454,10 @@ async function addPush() {
     }
 }
 async function sendTokenToServer(currentToken) {
-    let r=await postJson('/personal/googleToken', {googleToken: currentToken} )
-    setTokenSentToServer(currentToken);
-    localStorage.setItem('sentFirebaseMessagingToken', currentToken);
+    let pi= localStorage.getItem('sentFirebaseMessagingToken')
+    if(pi!=currentToken) {
+        let r = await postJson('/personal/googleToken', {googleToken: currentToken})
+        localStorage.setItem('sentFirebaseMessagingToken', currentToken);
+    }
 }
 
