@@ -447,6 +447,7 @@ async function addPush() {
             let token = await messaging.getToken();
             if (token)
                 await sendTokenToServer(token);
+
         } catch (e) {
             console.warn(e)
         }
