@@ -267,6 +267,9 @@
         width: 150px;
         top: 100px;
     }
+    .partnersDecor{
+        top: 144px;
+    }
 
     .partnersDecor svg, .faqDecor svg {
         width: 100%;
