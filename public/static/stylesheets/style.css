@@ -670,7 +670,9 @@ h2 {
 }
 .oficialPartner{
     width: calc(25% - 20px);
+    margin:20px 0;
     margin-bottom: 40px;
+
 }
 .ordinaryPartner{
     width: calc(20% - 20px);
