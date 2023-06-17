@@ -56,8 +56,8 @@
                                                         .oSpkBox(onclick="showSpeaker("+session.moderators[0].id+", '"+lang+"')")
                                                             .oSessionSpkBoxName #{session.moderators[0]["i"+lang]} #{session.moderators[0]["f"+lang]}
                                                                 .oSessionSpkBoxPos  #{session.moderators[0]["company"+lang]}
-                                            if isSpk
-                                                if session.speakers
+
+                                            if session.speakers
                                                     .oSessionSpkBox
                                                         if ru
                                                             .oSessionSpkBoxTitle Спикеры:
