@@ -6,7 +6,7 @@
         .pPgmPopTitle.up #{session["title_"+lang]}
         .pPgmPopScroll
             .pPgmPopDescription #{session["discription_"+lang]}
-                if isSpk
+
                     .pPgmPopSpeakers.flex.center
                         if session.moderators
                             each spk in session.moderators
