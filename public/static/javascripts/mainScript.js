@@ -464,3 +464,6 @@ async function startVideoPlayer(popUp){
     popUp.parentNode.style.padding=0;
 
 }
+async function registerUserToPlayer(){
+
+}
