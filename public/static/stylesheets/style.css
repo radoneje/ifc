@@ -2862,6 +2862,29 @@ body::selection {
     animation: live 2s infinite;
     transition: opacity 1s ease;
 }
+.playerHead{
+    display: flex;
+}
+.playerBtnWr{
+
+}
+.playerBtn{display: flex;
+align-items: center;
+    justify-content: center;
+}
+.playerBtnIco{
+    background: #BB3E3F;
+    width: 28px;
+    height: 28px;
+    margin-right: 16px;
+}
+.playerBtnText{
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 26px;
+}
 
 
 @media all and (max-width: 1700px){
