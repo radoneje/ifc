@@ -465,5 +465,15 @@ async function startVideoPlayer(popUp){
 
 }
 async function registerUserToPlayer(){
-
+    let form=document.querySelector(".videoReg")
+    form.querySelector("input[must]").forEach(inp=>{
+        let row=inp.parentNode.parentNode;
+        row.classList.remove("error")
+        if(inp.length<2)
+            row.classList.add("error")
+        if(inp.getAttribute("name")=="email" && !validateEmail(inp.value))
+            row.classList.add("error")
+    })
+    if(form.querySelectorAll(".regRow.error").length>0)
+        return;
 }
