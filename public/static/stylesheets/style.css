@@ -2868,6 +2868,8 @@ body::selection {
 .playerBtnWr{
     background: #e39a3f;
     padding: 18px;
+    flex: 1;
+
 }
 .playerBtn{display: flex;
 align-items: center;
