@@ -448,7 +448,7 @@ if ('serviceWorker' in navigator) {
 document.querySelectorAll(".liveBtn").forEach(e=>{
     e.onclick=async ()=>{
         let popUp=await createPopUp("/personal/playerWindow", ()=>{})
-        if(r.querySelector(".videoReg"))
+        if(popUp.querySelector(".videoReg"))
             await startVideoReg(popUp)
         else
             await startVideoPlayer(popUp)
