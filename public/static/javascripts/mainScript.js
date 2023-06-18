@@ -495,9 +495,12 @@ async function registerUserToPlayer(){
     errorElems=form.querySelectorAll(".regCheckBox.error")
     if(errorElems.length>0)
         return;
+
+    let submit=form.querySelector(".submit")
+    let loader=form.querySelector(".loader")
+
     try {
-        let submit=form.querySelector(".submit")
-        let loader=form.querySelector(".loader")
+
         submit.style.display="none"
         loader.style.display="block"
         let r = await postJson("/personal/regPlayerUser", dt);
