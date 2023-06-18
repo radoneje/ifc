@@ -318,22 +318,23 @@ function movePlaceImg(dir=true){
             item=placeImageArray.shift()
         else
             item=placeImageArray.pop()
+        if(item!="undefined") {
+            let elem = document.createElement("img")
+            elem.src = item;
+            elem.loading = "lazy"
+            //placePhotoBox.appendChild(elem);
+            placePhotoBox.insertBefore(elem, placePhotoBox.firstChild);
+            elem.onload = () => {
+                placePhotoBox.lastChild.style.opacity = 0;
+                setTimeout(() => {
+                    if (dir)
+                        placeImageArray.push(placePhotoBox.lastChild.src)
+                    else
+                        placeImageArray.unshift(placePhotoBox.lastChild.src)
+                    placePhotoBox.removeChild(placePhotoBox.lastChild)
+                }, 1000)
 
-        let elem = document.createElement("img")
-        elem.src = item;
-        elem.loading = "lazy"
-        //placePhotoBox.appendChild(elem);
-        placePhotoBox.insertBefore(elem, placePhotoBox.firstChild);
-        elem.onload = () => {
-            placePhotoBox.lastChild.style.opacity = 0;
-            setTimeout(() => {
-                if(dir)
-                    placeImageArray.push(placePhotoBox.lastChild.src)
-                else
-                    placeImageArray.unshift(placePhotoBox.lastChild.src)
-                placePhotoBox.removeChild(placePhotoBox.lastChild)
-            }, 1000)
-
+            }
         }
 
     }
