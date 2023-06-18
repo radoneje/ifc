@@ -1,11 +1,41 @@
 .videoReg#reg
     .videoRegTitle заявка на участие онлайн
-    .regRow(v-bind:class="{error:errors.f}")
+    .regRow.error
         .regRowGroup.flex.left
             if ru
                 .recLabel.reg287 Фамилия
             else
                 .recLabel.reg287 LAST NAME
             input.reqInput(must name="f")
+    .regRow()
+        .regRowGroup.flex.left
+            if ru
+                .recLabel.reg287 Имя
+            else
+                .recLabel.reg287 FIRST NAME
+            input.reqInput(must name="i")
+    if ru
+        .regRow(v-bind:class="{error:errors.o}")
+            .regRowGroup.flex.left
+                .recLabel.reg287 Отчество
+                input.reqInput(must name="o")
+    .regRow(v-bind:class="{error:errors.email}")
+        .regRowGroup.flex.left
+            .recLabel.reg287 email
+            input.reqInput(must name="email" email )
+    .regRow(v-bind:class="{error:errors.position}")
+        .regRowGroup.flex.left
+            if ru
+                .recLabel.reg287 компания
+            else
+                .recLabel.reg287 Company
+            input.reqInput(must  name="position" placeholder="" )
+    .regRow(v-bind:class="{error:errors.position}")
+        .regRowGroup.flex.left
+            if ru
+                .recLabel.reg287 должность
+            else
+                .recLabel.reg287 POSITION
+            input.reqInput(must  name="position" placeholder="" )
 script.
     console.log("start video reg")
