@@ -2844,6 +2844,12 @@ body::selection {
     font-weight: 400;
     cursor: pointer;
 }
+@keyframes live {
+    0% {opacity: 1}
+    50% {opacity: 0}
+    100% {opacity: 1}
+
+}
 .liveBtn:before{
     content: '';
     position: absolute;
@@ -2853,6 +2859,8 @@ body::selection {
     width: 24px;
     height: 24px;
     background: #BB3E3F;
+    animation: live 2s infinite;
+    transition: opacity 1s ease;
 }
 
 
