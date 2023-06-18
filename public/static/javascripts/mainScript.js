@@ -457,6 +457,7 @@ document.querySelectorAll(".liveBtn").forEach(e=>{
     }
 })
 async function startVideoReg(popUp){
+    popUp.querySelector("input[name='f']").focus();
 
 }
 async function startVideoPlayer(popUp){
