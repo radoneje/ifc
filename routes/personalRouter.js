@@ -408,7 +408,6 @@ router.post('/regPlayerUser', async function(req, res, next) {
             if(req.body[key].length>2048)
                 return res.sendStatus(422)
         }
-        console.log(req.body)
         let r=await req.knex("t_palyer_users").insert(req.body, "*")
         req.session.player=r[0]
         req.session.player.playeruserid=r[0].id;
@@ -417,7 +416,7 @@ router.post('/regPlayerUser', async function(req, res, next) {
     }
     catch (e) {
         console.warn(e)
-        //res.text("Ошибка")
+        res.sendStatus(500)
     }
 });
 
@@ -439,7 +438,7 @@ router.get('/playerWindow', async function(req, res, next) {
     catch (e) {
         console.warn(e)
         res.json(e)
-        //return res.sendStatus(404)
+       // return res.sendStatus(404)
     }
 });
 router.get('/exit/:lang?', async function(req, res, next) {
