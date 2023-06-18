@@ -477,4 +477,18 @@ async function registerUserToPlayer(){
     let errorElems=form.querySelectorAll(".regRow.error")
     if(errorElems.length>0)
         return errorElems[0].querySelector("input").focus();
+
+    form.querySelectorAll(".regCheckBox").forEach(cb=>{
+        cb.classList.remove("error")
+        let errMsg=cb.querySelector(".reqRowErrorMessage")
+        errMsg.style.display="none"
+        if(!c.classList.contains("active")){
+            cb.classList.add("error")
+            errMsg.style.display=null
+        }
+    })
+    errorElems=form.querySelectorAll(".regCheckBox.error")
+    if(errorElems.length>0)
+        return ;
 }
+
