@@ -404,7 +404,7 @@ router.get('/playerRegistration', async function(req, res, next) {
 });
 router.post('/regPlayerUser', async function(req, res, next) {
     try {
-        for(let key in Object.keys(req.body)){
+        for(let key of Object.keys(req.body)){
             console.log(key)
             if(req.body[key].length>2048)
                 return res.sendStatus(422)
