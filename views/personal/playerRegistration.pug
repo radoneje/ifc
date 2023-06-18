@@ -37,5 +37,39 @@
             else
                 .recLabel.reg287 POSITION
             input.reqInput(must  name="position" placeholder="" )
+    .regRow &nbsp;
+        .regRow.checkBox
+            .regCheckBox.green.flex.left(v-on:click="user.isPersonalAgreement=!user.isPersonalAgreement" v-bind:class="{active:user.isPersonalAgreement}")
+                div
+                    .regCheckBoxBox
+                div
+                    if ru
+                        .regCheckBoxText( ) ПРИНИМАЮ ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ
+                            a.gray(onclick="event.preventDefault();window.open('/static/key/agr" + lang + "?open=open')")  &nbsp;(посмотреть)
+                    else
+                        .regCheckBoxText( )  I HEREBY ACCEPT THE TERMS OF SERVICE
+                            a.gray(onclick="event.preventDefault();window.open('/static/key/agr" + lang + "?open=open')") &nbsp;(SEE DETAILS)
+            if ru
+                .reqRowErrorMessage(v-if="isPersonalAgreementError && !user.isPersonalAgreement") Cоглашение не принято
+            else
+                .reqRowErrorMessage(v-if="isPersonalAgreementError && !user.isPersonalAgreement") Please tick the box to accept the agreement
+        .regRow.checkBox
+            .regCheckBox.green.flex.left(v-on:click="user.isTerms=!user.isTerms" v-bind:class="{active:user.isTerms}")
+                div
+                    .regCheckBoxBox
+                div
+                    if ru
+                        .regCheckBoxText СОГЛАШАЮСЬ НА ОБРАБОТКУ ПЕРСОНАЛЬНЫХ ДАННЫХ
+                            a.gray(   onclick="event.preventDefault();window.open('/static/key/pers" + lang + "?open=open')")  &nbsp;(посмотреть)
+                    else
+                        .regCheckBoxText I HEREBY AGREE TO HAVE MY PERSONAL DATA PROCESSED
+                            a.gray(   onclick="event.preventDefault();window.open('/static/key/pers" + lang + "?open=open')")  &nbsp;(SEE DETAILS)
+            if ru
+                .reqRowErrorMessage(v-if="isTermsError && !user.isTerms") Cоглашение не принято
+            else
+                .reqRowErrorMessage(v-if="isTermsError && !user.isTerms") Please tick the box to accept the agreement
+
+        .regRow.desktop &nbsp;
+        .regRow &nbsp;
 script.
     console.log("start video reg")
