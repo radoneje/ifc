@@ -449,7 +449,7 @@ document.querySelectorAll(".liveBtn").forEach(e=>{
     e.onclick=async ()=>{
         let r=await createPopUp("/personal/playerWindow", ()=>{})
 
-        r.style.padding=0;
+        r.parentNode.style.padding=0;
 
     }
 })
