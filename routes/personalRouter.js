@@ -406,7 +406,7 @@ router.get('/playerRegistration', async function(req, res, next) {
 
 router.get('/playerWindow', async function(req, res, next) {
     try {
-        id(!req.session.player && !req.session.token)
+        if(!req.session.player && !req.session.token)
          return    res.redirect("/personal/playerRegistration")
         id(!req.session.player && req.session.token)
         req.session.player=req.session.token;
