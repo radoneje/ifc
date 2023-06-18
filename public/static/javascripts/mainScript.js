@@ -318,7 +318,7 @@ function movePlaceImg(dir=true){
             item=placeImageArray.shift()
         else
             item=placeImageArray.pop()
-        if(item!="undefined") {
+        if(item && item!="undefined") {
             let elem = document.createElement("img")
             elem.src = item;
             elem.loading = "lazy"
