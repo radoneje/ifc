@@ -2869,7 +2869,7 @@ body::selection {
     background: #e39a3f;
     padding: 18px;
     flex: 1;
-
+cursor: pointer;
 }
 .playerBtn{display: flex;
 align-items: center;
