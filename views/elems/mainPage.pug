@@ -9,6 +9,8 @@
                 include mainMenuItems
             .menu.desktop
                 include menuItems
+            if spk
+                .liveBtn Прямая трансляция
 
         .mainImageWr.mobile
             img.mainImg2(src="/static/images/mainImageMobile.png" onclick="document.location.href='/'")
@@ -16,6 +18,8 @@
             include mainTitle
             .mobileMenuBtn.mobile(onclick="showMobileMenu()")
                 include ../svg/mobileMenuBtn.svg
+            if spk
+                . Прямая трансляция
     include upBtn
 
 

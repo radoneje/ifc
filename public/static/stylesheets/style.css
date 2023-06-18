@@ -2832,6 +2832,16 @@ body::selection {
     font-weight: 300;
     color: #e39a3f;
 }
+.liveBtn{
+    text-transform: uppercase;
+    color: whitesmoke;
+    background: #e39a3f;
+    padding: 16px 8px;
+    position: relative;
+    top:0;
+    right: 0;
+    font-weight: 400;
+}
 
 
 @media all and (max-width: 1700px){
