@@ -469,7 +469,7 @@ async function registerUserToPlayer(){
     form.querySelectorAll("input[must]").forEach(inp=>{
         let row=inp.parentNode.parentNode;
         row.classList.remove("error")
-        if(inp.length<2)
+        if(inp.value.length<2)
             row.classList.add("error")
         if(inp.getAttribute("name")=="email" && !validateEmail(inp.value))
             row.classList.add("error")
