@@ -421,7 +421,8 @@ router.get('/playerWindow', async function(req, res, next) {
     }
     catch (e) {
         console.warn(e)
-        return res.sendStatus(404)
+        res.json(e)
+        //return res.sendStatus(404)
     }
 });
 router.get('/exit/:lang?', async function(req, res, next) {
