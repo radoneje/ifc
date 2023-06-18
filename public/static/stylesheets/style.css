@@ -2888,6 +2888,20 @@ align-items: center;
     font-size: 21px;
     line-height: 26px;
 }
+.videoRegTitle{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    text-transform: uppercase;
+
+    color: #4A4A49;
+}
+.videoRegRow{
+    margin-top:36px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
 
 
 @media all and (max-width: 1700px){

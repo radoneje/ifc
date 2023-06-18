@@ -1,3 +1,11 @@
-div videoReg
+.videoReg#reg
+    .videoRegTitle заявка на участие онлайн
+    .regRow(v-bind:class="{error:errors.f}")
+        .regRowGroup.flex.left
+            if ru
+                .recLabel.reg287 Фамилия
+            else
+                .recLabel.reg287 LAST NAME
+            input.reqInput(must name="f")
 script.
     console.log("start video reg")

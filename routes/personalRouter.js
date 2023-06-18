@@ -395,7 +395,7 @@ router.get('/info/:lang?', checkAccess, async function(req, res, next) {
 router.get('/playerRegistration', async function(req, res, next) {
     try {
         req.session.player=null
-        res.render("personal/playerRegistration")
+        res.render("personal/playerRegistration", {ru:true})
     }
     catch (e) {
         console.warn(e)

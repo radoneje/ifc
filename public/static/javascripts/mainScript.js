@@ -447,9 +447,19 @@ if ('serviceWorker' in navigator) {
 }
 document.querySelectorAll(".liveBtn").forEach(e=>{
     e.onclick=async ()=>{
-        let r=await createPopUp("/personal/playerWindow", ()=>{})
+        let popUp=await createPopUp("/personal/playerWindow", ()=>{})
+        if(r.querySelector(".videoReg"))
+            await startVideoReg(popUp)
+        else
+            await startVideoPlayer(popUp)
 
-        r.parentNode.style.padding=0;
 
     }
 })
+async function startVideoReg(popUp){
+
+}
+async function startVideoPlayer(popUp){
+    popUp.parentNode.style.padding=0;
+
+}
