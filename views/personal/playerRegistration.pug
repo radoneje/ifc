@@ -23,14 +23,14 @@
         .regRowGroup.flex.left
             .recLabel.reg287 email
             input.reqInput(must name="email" email )
-    .regRow(v-bind:class="{error:errors.position}")
+    .regRow()
         .regRowGroup.flex.left
             if ru
                 .recLabel.reg287 компания
             else
                 .recLabel.reg287 Company
-            input.reqInput(must  name="position" placeholder="" )
-    .regRow(v-bind:class="{error:errors.position}")
+            input.reqInput(must  name="company" placeholder="" )
+    .regRow()
         .regRowGroup.flex.left
             if ru
                 .recLabel.reg287 должность
