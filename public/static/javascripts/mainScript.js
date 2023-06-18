@@ -466,7 +466,7 @@ async function startVideoPlayer(popUp){
 }
 async function registerUserToPlayer(){
     let form=document.querySelector(".videoReg")
-    form.querySelector("input[must]").forEach(inp=>{
+    form.querySelectorAll("input[must]").forEach(inp=>{
         let row=inp.parentNode.parentNode;
         row.classList.remove("error")
         if(inp.length<2)
