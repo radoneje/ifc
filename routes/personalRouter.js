@@ -392,7 +392,38 @@ router.get('/info/:lang?', checkAccess, async function(req, res, next) {
         return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
     }
 });
+router.get('/playerRegistration', async function(req, res, next) {
+    try {
+        req.session.player=null
 
+        res.render("/personal/playerRegistration")
+    }
+    catch (e) {
+        console.warn(e)
+        return res.sendStatus(404)
+    }
+});
+
+router.get('/playerWindow', async function(req, res, next) {
+    try {
+        id(!req.session.player && !req.session.token)
+         return    res.redirect("/personal/playerRegistration")
+        id(!req.session.player && req.session.token)
+        req.session.player=req.session.token;
+
+        await req.knex("t_player_openlog").insert({
+            userid:req.session.player.id,
+            playeruserid:req.session.player.playeruserid
+
+        })
+
+            res.render("/personal/playerWindow")
+    }
+    catch (e) {
+        console.warn(e)
+        return res.sendStatus(404)
+    }
+});
 router.get('/exit/:lang?', async function(req, res, next) {
     try {
         req.session.token=null;

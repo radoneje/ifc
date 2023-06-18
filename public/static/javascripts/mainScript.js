@@ -444,3 +444,7 @@ if ('serviceWorker' in navigator) {
         });
     });
 }
+document.querySelectorAll(".liveBtn").onclick=async ()=>{
+    let r=await createPopUp("/personal/playerWindow", ()=>{})
+
+}

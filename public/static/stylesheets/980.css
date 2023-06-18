@@ -1319,6 +1319,22 @@
         font-size: 17px;
         line-height: 22px;
     }
+    .liveBtn {
+        text-transform: uppercase;
+        color: whitesmoke;
+        background: #e39a3f;
+        padding: 8px;
+        padding-left: 48px;
+        position: absolute;
+        top: 403px;
+        left: calc( 80% - 77px);
+        font-weight: 400;
+        cursor: pointer;
+        font-size: 12px;
+    }
+    .liveBtn:before {
+        top: 8px;
+    }
 
 }
 
