@@ -2841,6 +2841,7 @@ body::selection {
     top:0;
     right: 0;
     font-weight: 400;
+    cursor: pointer;
 }
 
 
