@@ -39,7 +39,7 @@
             input.reqInput(must  name="position" placeholder="" )
     .regRow &nbsp;
         .regRow.checkBox
-            .regCheckBox.green.flex.left(v-on:click="user.isPersonalAgreement=!user.isPersonalAgreement" v-bind:class="{active:user.isPersonalAgreement}")
+            .regCheckBox.green.flex.leftonclick="this.classList.toggle('active')"
                 div
                     .regCheckBoxBox
                 div
@@ -54,7 +54,7 @@
             else
                 .reqRowErrorMessage(v-if="isPersonalAgreementError && !user.isPersonalAgreement") Please tick the box to accept the agreement
         .regRow.checkBox
-            .regCheckBox.green.flex.left(v-on:click="user.isTerms=!user.isTerms" v-bind:class="{active:user.isTerms}")
+            .regCheckBox.green.flex.left(onclick="this.classList.toggle('active')")
                 div
                     .regCheckBoxBox
                 div
