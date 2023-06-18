@@ -476,5 +476,5 @@ async function registerUserToPlayer(){
     })
     let errorElems=form.querySelectorAll(".regRow.error")
     if(errorElems.length>0)
-        return errorElems[0].focus();
+        return errorElems[0].querySelector("input").focus();
 }
