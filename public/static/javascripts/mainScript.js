@@ -497,8 +497,11 @@ async function registerUserToPlayer(){
         return;
     try {
         let r = await postJson("/personal/regPlayerUser", dt);
-        closePopUp();
-        await openPlayerModal()
+        if(r) {
+            closePopUp();
+            await openPlayerModal()
+        }
+        else throw "err"
     }catch (e) {
         console.warn(e)
         alert("Произошла ошибка, проверьте данные и попробуйте позже.")
