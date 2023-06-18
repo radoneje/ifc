@@ -2838,7 +2838,7 @@ body::selection {
     background: #e39a3f;
     padding: 16px 8px;
     padding-left:32px;
-    position: relative;
+    position: absolute;
     top:0;
     left: calc( 80% - 18px);
     font-weight: 400;
