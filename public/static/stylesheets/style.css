@@ -2836,7 +2836,7 @@ body::selection {
     text-transform: uppercase;
     color: whitesmoke;
     background: #e39a3f;
-    padding: 24px 8px;
+    padding: 16px;
     padding-left:48px;
     position: absolute;
     top:0;
