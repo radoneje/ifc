@@ -396,7 +396,7 @@ router.get('/playerRegistration', async function(req, res, next) {
     try {
         req.session.player=null
 
-        res.render("/personal/playerRegistration")
+        res.render("personal/playerRegistration")
     }
     catch (e) {
         console.warn(e)
@@ -417,7 +417,7 @@ router.get('/playerWindow', async function(req, res, next) {
 
         })
 
-            res.render("/personal/playerWindow")
+            res.render("personal/playerWindow")
     }
     catch (e) {
         console.warn(e)
