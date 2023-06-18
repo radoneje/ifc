@@ -482,7 +482,7 @@ async function registerUserToPlayer(){
         cb.classList.remove("error")
         let errMsg=cb.parentNode.querySelector(".reqRowErrorMessage")
         errMsg.style.display="none"
-        if(!c.classList.contains("active")){
+        if(!cb.classList.contains("active")){
             cb.classList.add("error")
             errMsg.style.display=null
         }
