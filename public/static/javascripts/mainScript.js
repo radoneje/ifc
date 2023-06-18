@@ -477,7 +477,7 @@ async function registerUserToPlayer(){
             row.classList.add("error")
         if(inp.getAttribute("name")=="email" && !validateEmail(inp.value))
             row.classList.add("error")
-        dt[inp.getAttribute("name")]=dt.value;
+        dt[inp.getAttribute("name")]=inp.value;
     })
     let errorElems=form.querySelectorAll(".regRow.error")
     if(errorElems.length>0)
