@@ -288,9 +288,12 @@ router.get('/:lang?', async function(req, res, next) {
       url+='?adv='+req.query.adv
     return res.redirect(url)
   }
+  let test=false;
+  if(req.query.test)
+    test=true;
   let news=await req.knex("t_news").where({status:2, lang:req.params.lang}).orderBy("sort","desc").limit(4);
   news.sort((a,b)=>{return b.sort-a.sort});
-  res.render('demo',{lang:req.params.lang, ru:req.params.lang=="ru", apiUrl:config.apiUrl, news} );
+  res.render('demo',{lang:req.params.lang,test, ru:req.params.lang=="ru", apiUrl:config.apiUrl, news} );
 });
 
 
