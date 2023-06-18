@@ -448,8 +448,8 @@ if ('serviceWorker' in navigator) {
 document.querySelectorAll(".liveBtn").forEach(e=>{
     e.onclick=async ()=>{
         let r=await createPopUp("/personal/playerWindow", ()=>{})
-        console.log(r)
-        r.querySelector(".fullScreenBox").style.padding=0;
+
+        r.style.padding=0;
 
     }
 })
