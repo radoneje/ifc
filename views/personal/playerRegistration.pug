@@ -72,8 +72,10 @@
         .regRow.desktop &nbsp;
         .regRow &nbsp;
             if ru
-                .regSubmit(onclick="registerUserToPlayer()") подать заявку
+                .regSubmit.submit(onclick="registerUserToPlayer()") подать заявку
             else
-                .regSubmit(onclick="registerUserToPlayer()") submit form
+                .regSubmit.submit(onclick="registerUserToPlayer()") submit form
+            .regSubmit.loader(style="display:none")
+                    include svg/loader.svg
 script.
     console.log("start video reg")

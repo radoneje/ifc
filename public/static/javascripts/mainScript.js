@@ -496,15 +496,24 @@ async function registerUserToPlayer(){
     if(errorElems.length>0)
         return;
     try {
+        let submit=form.querySelector(".submit")
+        let loader=form.querySelector(".loader")
+        submit.style.display="none"
+        loader.style.display="block"
         let r = await postJson("/personal/regPlayerUser", dt);
         if(r) {
-            closePopUp();
-            await openPlayerModal()
+            setTimeout(async ()=>{
+                closePopUp();
+                await openPlayerModal()
+            },2000)
+
         }
         else throw "err"
     }catch (e) {
         console.warn(e)
         alert("Произошла ошибка, проверьте данные и попробуйте позже.")
+        submit.style.display="block"
+        loader.style.display="none"
     }
 
 
