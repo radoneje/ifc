@@ -395,7 +395,6 @@ router.get('/info/:lang?', checkAccess, async function(req, res, next) {
 router.get('/playerRegistration', async function(req, res, next) {
     try {
         req.session.player=null
-
         res.render("personal/playerRegistration")
     }
     catch (e) {
@@ -417,7 +416,7 @@ router.get('/playerWindow', async function(req, res, next) {
 
         })
 
-            res.render("personal/playerWindow")
+            res.render("personal/playerWindow", {test:req.session.player})
     }
     catch (e) {
         console.warn(e)
