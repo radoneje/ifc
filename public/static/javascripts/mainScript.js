@@ -444,7 +444,9 @@ if ('serviceWorker' in navigator) {
         });
     });
 }
-document.querySelectorAll(".liveBtn").onclick=async ()=>{
-    let r=await createPopUp("/personal/playerWindow", ()=>{})
+document.querySelectorAll(".liveBtn").forEach(e=>{
+    e.onclick=async ()=>{
+        let r=await createPopUp("/personal/playerWindow", ()=>{})
 
-}
+    }
+})
