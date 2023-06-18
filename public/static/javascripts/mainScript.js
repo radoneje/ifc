@@ -447,15 +447,18 @@ if ('serviceWorker' in navigator) {
 }
 document.querySelectorAll(".liveBtn").forEach(e=>{
     e.onclick=async ()=>{
-        let popUp=await createPopUp("/personal/playerWindow", ()=>{})
-        if(popUp.querySelector(".videoReg"))
-            await startVideoReg(popUp)
-        else
-            await startVideoPlayer(popUp)
 
-
+        await openPlayerModal()
     }
 })
+async function openPlayerModal(){
+    let popUp=await createPopUp("/personal/playerWindow", ()=>{})
+    if(popUp.querySelector(".videoReg"))
+        await startVideoReg(popUp)
+    else
+        await startVideoPlayer(popUp)
+
+}
 async function startVideoReg(popUp){
     popUp.querySelector("input[name='f']").focus();
 
@@ -466,6 +469,7 @@ async function startVideoPlayer(popUp){
 }
 async function registerUserToPlayer(){
     let form=document.querySelector(".videoReg")
+    let dt={};
     form.querySelectorAll("input[must]").forEach(inp=>{
         let row=inp.parentNode.parentNode;
         row.classList.remove("error")
@@ -473,6 +477,7 @@ async function registerUserToPlayer(){
             row.classList.add("error")
         if(inp.getAttribute("name")=="email" && !validateEmail(inp.value))
             row.classList.add("error")
+        dt[inp.getAttribute("name")]=dt.value;
     })
     let errorElems=form.querySelectorAll(".regRow.error")
     if(errorElems.length>0)
@@ -489,6 +494,16 @@ async function registerUserToPlayer(){
     })
     errorElems=form.querySelectorAll(".regCheckBox.error")
     if(errorElems.length>0)
-        return ;
+        return;
+    try {
+        let r = await postJson("/personal/regPlayerUser", dt);
+        closePopUp();
+        await openPlayerModal()
+    }catch (e) {
+        console.warn(e)
+        alert("Произошла ошибка, проверьте данные и попробуйте позже.")
+    }
+
+
 }
 

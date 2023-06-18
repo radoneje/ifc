@@ -402,6 +402,23 @@ router.get('/playerRegistration', async function(req, res, next) {
         return res.sendStatus(404)
     }
 });
+router.post('/regPlayerUser', async function(req, res, next) {
+    try {
+        for(let key in Object.keys(req.body)){
+            if(req.body[key].length>2048)
+                return res.sendStatus(422)
+        }
+        let r=await req.knex("t_palyer_users").insert(req.body, "*")
+        req.session.player=r[0]
+        req.session.player.playeruserid=r[0].id;
+        delete req.session.player.id;
+        res.json({i:r[0].i, o:r[0].o})
+    }
+    catch (e) {
+        console.warn(e)
+        //res.text("Ошибка")
+    }
+});
 
 router.get('/playerWindow', async function(req, res, next) {
     try {
