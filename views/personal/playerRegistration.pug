@@ -50,9 +50,9 @@
                         .regCheckBoxText( )  I HEREBY ACCEPT THE TERMS OF SERVICE
                             a.gray(onclick="event.preventDefault();window.open('/static/key/agr" + lang + "?open=open')") &nbsp;(SEE DETAILS)
             if ru
-                .reqRowErrorMessage(v-if="isPersonalAgreementError && !user.isPersonalAgreement") Cоглашение не принято
+                .reqRowErrorMessage(style="display:none") Cоглашение не принято
             else
-                .reqRowErrorMessage(v-if="isPersonalAgreementError && !user.isPersonalAgreement") Please tick the box to accept the agreement
+                .reqRowErrorMessage(style="display:none") Please tick the box to accept the agreement
         .regRow.checkBox
             .regCheckBox.green.flex.left(onclick="this.classList.toggle('active')")
                 div
@@ -65,9 +65,9 @@
                         .regCheckBoxText I HEREBY AGREE TO HAVE MY PERSONAL DATA PROCESSED
                             a.gray(   onclick="event.preventDefault();window.open('/static/key/pers" + lang + "?open=open')")  &nbsp;(SEE DETAILS)
             if ru
-                .reqRowErrorMessage(v-if="isTermsError && !user.isTerms") Cоглашение не принято
+                .reqRowErrorMessage(style="display:none") Cоглашение не принято
             else
-                .reqRowErrorMessage(v-if="isTermsError && !user.isTerms") Please tick the box to accept the agreement
+                .reqRowErrorMessage(style="display:none") Please tick the box to accept the agreement
 
         .regRow.desktop &nbsp;
         .regRow &nbsp;
