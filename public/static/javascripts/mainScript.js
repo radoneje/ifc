@@ -480,7 +480,7 @@ async function registerUserToPlayer(){
 
     form.querySelectorAll(".regCheckBox").forEach(cb=>{
         cb.classList.remove("error")
-        let errMsg=cb.querySelector(".reqRowErrorMessage")
+        let errMsg=cb.parentNode.querySelector(".reqRowErrorMessage")
         errMsg.style.display="none"
         if(!c.classList.contains("active")){
             cb.classList.add("error")
