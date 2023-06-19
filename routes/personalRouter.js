@@ -392,10 +392,12 @@ router.get('/info/:lang?', checkAccess, async function(req, res, next) {
         return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
     }
 });
-router.get('/playerRegistration', async function(req, res, next) {
+router.get('/playerRegistration/:lang?', async function(req, res, next) {
     try {
+        if(!(req.params.lang && req.params.lang.match(/ru|en/)))
+            req.params.lang="ru";
         req.session.player=null
-        res.render("personal/playerRegistration", {ru:true, lang:"ru"})
+        res.render("personal/playerRegistration", {lang:req.params.lang, ru:req.params.lang=="ru"})
     }
     catch (e) {
         console.warn(e)
@@ -421,10 +423,13 @@ router.post('/regPlayerUser', async function(req, res, next) {
     }
 });
 
-router.get('/playerWindow', async function(req, res, next) {
+router.get('/playerWindow/:lang?', async function(req, res, next) {
     try {
+        if(!(req.params.lang && req.params.lang.match(/ru|en/)))
+            req.params.lang="ru";
+
         if(!req.session.player && !req.session.token)
-         return    res.redirect("/personal/playerRegistration")
+         return    res.redirect("/personal/playerRegistration/"+req.params.lang)
         if(!req.session.player && req.session.token)
         req.session.player=req.session.token;
 
@@ -434,7 +439,7 @@ router.get('/playerWindow', async function(req, res, next) {
 
         })
 
-            res.render("personal/playerWindow", {test:req.session.player})
+            res.render("personal/playerWindow", {lang:req.params.lang, ru:req.params.lang=="ru", test:req.session.player})
     }
     catch (e) {
         console.warn(e)

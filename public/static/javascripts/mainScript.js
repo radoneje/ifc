@@ -452,7 +452,7 @@ document.querySelectorAll(".liveBtn").forEach(e=>{
     }
 })
 async function openPlayerModal(){
-    let popUp=await createPopUp("/personal/playerWindow", ()=>{})
+    let popUp=await createPopUp("/personal/playerWindow/"+lang, ()=>{})
     if(popUp.querySelector(".videoReg"))
         await startVideoReg(popUp)
     else
