@@ -2905,6 +2905,9 @@ align-items: center;
 .videoReg .regRow{
     padding-right: 24px;
 }
+.pagenatorPrev, .pagenatorNext{
+    cursor: pointer;
+}
 
 
 @media all and (max-width: 1700px){

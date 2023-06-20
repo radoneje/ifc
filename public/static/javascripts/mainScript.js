@@ -372,8 +372,9 @@ try {
 }catch (e){
     console.warn(e)
 }
-let ts=document.getElementById("timeslots")
-if(ts){
+//let ts=document.getElementById("timeslots")
+let timeslotsElems=document.querySelector(".timeslotsElems")
+for(let ts in timeslotsElems){
     let sessions=ts.querySelectorAll(".oSession")
     sessions.forEach(s=>{
         s.querySelectorAll(".paginator").forEach(p=>{
