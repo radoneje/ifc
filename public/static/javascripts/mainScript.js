@@ -374,7 +374,7 @@ try {
 }
 //let ts=document.getElementById("timeslots")
 let timeslotsElems=document.querySelectorAll(".timeslotsElems")
-for(let ts in timeslotsElems){
+for(let ts of timeslotsElems){
     let sessions=ts.querySelectorAll(".oSession")
     sessions.forEach(s=>{
         s.querySelectorAll(".paginator").forEach(p=>{
