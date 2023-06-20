@@ -373,7 +373,7 @@ try {
     console.warn(e)
 }
 //let ts=document.getElementById("timeslots")
-let timeslotsElems=document.querySelector(".timeslotsElems")
+let timeslotsElems=document.querySelectorAll(".timeslotsElems")
 for(let ts in timeslotsElems){
     let sessions=ts.querySelectorAll(".oSession")
     sessions.forEach(s=>{
