@@ -48,17 +48,28 @@
 
 
         .partnersBox
+
             .oficialPartner.partner(onclick="window.open('https://domrfbank.ru/')")
-                include  ../partners/dom_bank.svg
+                if ru
+                    include  ../partners/dom_bank.svg
+                else
+                    include  ../partners/dom_bank_eng.svg
 
             .oficialPartner.partner(onclick="window.open('https://mironline.ru/')")
+                if ru
                     include  ../partners/mir.svg
+                else
+                    include  ../partners/mir_en.svg
 
-            .oficialPartner.partner(onclick="window.open('https://nspk.ru/')")
-                    include  ../partners/sbp.svg
+            .oficialPartner.partner(onclick="window.open('https://mkb.ru/')")
+                if ru
+                    include  ../partners/mkb.svg
+                else
+                    include  ../partners/mkb_en.svg
             if ru
-                .oficialPartner.partner(onclick="window.open('https://mkb.ru/')")
-                        include  ../partners/mkb.svg
+                .oficialPartner.partner(onclick="window.open('https://sbp.nspk.ru/')")
+                        include  ../partners/sbp.svg
+
 
             .oficialPartner.partner(onclick="window.open('https://www.moex.com/')")
                     include  ../partners/moex.svg
@@ -69,22 +80,25 @@
                 else
                     include  ../partners/sovcombank_en.svg
 
+
         if ru
-            if ru
                 .sectionTitle ПАРТНЕР
-            else
+        else
                 .sectionTitle partner
 
-            .partnersDecor2
+        .partnersDecor2
                 <svg width="265" height="67" viewBox="0 0 265 67" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 58.8184L264.98 26.3184L261.87 0.968506L0 33.0884V58.8184Z" fill="#4D8955"/>
                 <path d="M0 66.9983L222.08 39.7583L221.06 31.4385L0 58.5483V66.9983Z" fill="#263378"/>
                 </svg>
 
 
-            .partnersBox
+        .partnersBox
                 .oficialPartner.partner(onclick="window.open('https://www.rshb.ru/')")
-                    include  ../partners/rosselhoz.svg
+                    if ru
+                        include  ../partners/rosselhoz.svg
+                    else
+                        include  ../partners/rosselhoz.svg
         if ru
             .sectionTitle Генеральный информационный ПАРТНЕР
         else
@@ -127,8 +141,8 @@
                     include  ../partners/interfax_ru.svg
                 else
                     include  ../partners/interfax_en.svg
-            if ru
-                .oficialPartner.partner(onclick="window.open('https://www.rbc.ru/')")
+
+            .oficialPartner.partner(onclick="window.open('https://www.rbc.ru/')")
                     include  ../partners/rbc.svg
 
             .oficialPartner.partner(onclick="window.open('https://1prime.ru/')")
@@ -138,8 +152,13 @@
                     include ../partners/prime1_en.svg
 
 
-            //.oficialPartner.partner(onclick="window.open('https://www.vedomosti.ru/')")
+            .oficialPartner.partner(onclick="window.open('https://www.vedomosti.ru/')")
                 include  ../partners/vedomosti.svg
+            .oficialPartner.partner(onclick="window.open('https://econs.online/')")
+                if ru
+                    include  ../partners/econs.svg
+                else
+                    include  ../partners/econs_en.svg
             .oficialPartner.partner(onclick="window.open('https://cbonds.ru/?show_main')")
                 include  ../partners/cbons_ru.svg
             .oficialPartner.partner(onclick="window.open('https://bosfera.ru/')")
