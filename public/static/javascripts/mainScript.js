@@ -434,7 +434,7 @@ function FSPhotoPrev(ctrl){
         next.setAttribute("active","active")
     }
 }
-if ('serviceWorker' in navigator) {
+/*if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
         navigator.serviceWorker.register('/sw.js').then(
         function(registration) {
@@ -445,7 +445,7 @@ if ('serviceWorker' in navigator) {
             console.log('ServiceWorker registration failed: ', err);
         });
     });
-}
+}*/
 document.querySelectorAll(".liveBtn").forEach(e=>{
     e.onclick=async ()=>{
 
