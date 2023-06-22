@@ -12,9 +12,13 @@ router.get("/undefined",(req, res)=>{
 router.get("/liveplayer/:id/:lang",async (req, res)=>{
   try {
     let r= (await req.knex("v_live_halls").where({id: req.params.id}).orderBy("id"))
+    let type=r[0]['url_'+req.params.lang];
+    if(!type)
+      return res.sendStatus(422)
+    type=type.match(/\.m3u8$/)?"application/x-mpegURL":"video/mp4"
     let source={
       src:r[0]['url_'+req.params.lang],
-      type:r[0]['url_'+req.params.lang].match(/\.mp4$/)?"video/mp4":"application/x-mpegURL",
+      type,
       poster:r[0]['poster_'+req.params.lang]
     }
     res.render("livePlayer",{source})
