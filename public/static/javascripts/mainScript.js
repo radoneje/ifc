@@ -454,7 +454,7 @@ document.querySelectorAll(".liveBtn").forEach(e=>{
         if(!playerScript){
             playerScript=document.createElement("script")
             playerScript.src="/static/javascripts/playerScript.js";
-            playerScript.body.appendChild();
+            document.body.appendChild();
         }
     }
 })
