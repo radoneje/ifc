@@ -12,6 +12,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 import PDFDocument from 'pdfkit';
 import moment from 'moment'
+import QRCode from 'qrcode'
 
 
 /* GET home page. */
@@ -416,6 +417,13 @@ router.get('/akt/:guid', async function (req, res, next) {
         res.sendStatus(500)
     }
 });
+router.get('/ticket/:userid', async function (req, res, next) {
+
+    let QRfilename="/var/ifc_data/userQr/"+String(req.params.id).padStart(3, '0')+".png"
+    await QRCode.toFile(QRfilename, JSON.stringify({id:req.params.id}),{width:1000})
+    res.json(QRfilename)
+})
+
 
 
 
