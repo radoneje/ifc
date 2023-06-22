@@ -2947,6 +2947,17 @@ align-items: center;
     height: 30%;
     color: #FFFFFF;
     font-size: 48px;
+    padding: 24px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.playerPosterAlertContent{
+
+}
+.playerPosterAlertText{
+    margin-top: 20px;
 }
 
 

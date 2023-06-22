@@ -14,8 +14,9 @@
                     else
                         img(:src="'/static/image/hi/'+status.poster_en")
                 .playerPosterAlert
-                    .playerPosterAlertLid {{status.alert_lid_!{lang}}}
-                    .playerPosterAlertText {{status.alert_title_!{lang}}}
+                    .playerPosterAlertContent
+                        .playerPosterAlertLid {{status.alert_lid_!{lang}}}
+                        .playerPosterAlertText {{status.alert_title_!{lang}}}
         div(v-else)
             .playerHead
                 .playerBtnWr
