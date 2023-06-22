@@ -457,7 +457,7 @@ router.get('/ticket/:userid', async function (req, res, next) {
     setTimeout(()=>{
 
         let pr=child.spawn("gs", [
-            -"sDEVICE=pdfwrite",
+            "-sDEVICE=pdfwrite",
             "-dCompatibilityLevel=1.4",
             "-dPDFSETTINGS=/screen",
             "-dNOPAUSE",
