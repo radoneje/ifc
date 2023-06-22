@@ -22,6 +22,5 @@
                         .playerBtnText {{hall.halltitle_#{lang}}}
             .playerBody(v-if="activeHall")
                 .videoWr
-                    iframe.videoWrContent(:src="'/liveplayer/'+activeHall.id+'/#{lang}'" border="0" allowfullscreen="true" width="1280" height="720")
-
+                    iframe.videoWrContent(:src="'/liveplayer/'+activeHall.id+'/!{ru?"ru":"en"}'" border="0" allowfullscreen="true" width="1280" height="720")
 
