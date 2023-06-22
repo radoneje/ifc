@@ -20,6 +20,8 @@
                     .playerBtn
                         .playerBtnIco
                         .playerBtnText {{hall.halltitle_#{lang}}}
-
+            .playerBody !{JSON.stringify(test)}
+                .videoWr
+                    iframe.videoWrContent(:src="'/liveplayer/'+hall.id+'/'"+lang border="0" allowfullscreen="true" width="1280" height="720")
 
 
