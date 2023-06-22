@@ -23,7 +23,7 @@
             .playerBody(v-if="activeHall")
                 .videoWr
                     if ru
-                        iframe.videoWrContent(:src="'/liveplayer/'+activeHall.id+'/ru'" border="0" allowfullscreen="true" width="1280" height="720")
+                        iframe.videoWrContent(:src="'/liveplayer/'+activeHall.id" border="0" allowfullscreen="true" width="1280" height="720")
                     //else
                         iframe.videoWrContent(:src="'/liveplayer/'+activeHall.id+'/ru'" border="0" allowfullscreen="true" width="1280" height="720")
 
