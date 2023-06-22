@@ -29,7 +29,7 @@ function initPlayer() {
                     }
                 setTimeout(() => {
                     this.updateLiveStatus();
-                }, 10000*60)
+                }, 10000)
 
             }
         },
@@ -39,7 +39,7 @@ function initPlayer() {
                 let loader = document.querySelector("#playerLoader")
                 loader.parentNode.removeChild(loader)
                 document.querySelector("#playerBox").style.display = "block"
-            }, 2000)
+            }, 2000*60)
 
         }
     })
