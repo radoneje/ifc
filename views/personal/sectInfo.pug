@@ -6,6 +6,13 @@
         else
             .menuItemText Information
 
+
+
+.participaintRow(v-for="item in user.info")
+    .participaintRowHead {{item.titleru}}
+    .participaintRowContent
+            ul
+                .wordWrap(v-html="getHtml(item.textru)")
 .participaintRow(v-if="user.isSpk")
     .participaintRowHead Приглашаем вас забронировать номер в одном из официальных отелей Конгресса.
     .participaintRowContent
@@ -39,9 +46,3 @@
             div «Талион Империал Отель» 5*,
             div «SO/ St. Petersburg» 5*.
         p Ознакомиться с условиями и направить запрос на бронирование вы можете в разделе Отели.
-
-.participaintRow(v-for="item in user.info")
-    .participaintRowHead {{item.titleru}}
-    .participaintRowContent
-            ul
-                .wordWrap(v-html="getHtml(item.textru)")
