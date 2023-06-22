@@ -9,7 +9,10 @@
         .playerPoster(v-if="!status.status")
             .videoWr
                 .videoWrContent
-                    img(:src="'/static/image/hi/'+status.poster_ru")
+                    img(:src="'/static/image/hi/'+status.poster"+lang)
+                .playerPosterAlert
+                    .playerPosterAlertLid {{alert_lid_!{lang}}}
+                    .playerPosterAlertText {{alert_title_!{lang}}}
         div(v-else)
             .playerHead
                 .playerBtnWr

@@ -2938,6 +2938,16 @@ align-items: center;
     width: 100%;
     height: auto;
 }
+.playerPosterAlert{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: url("/static/images/playerAlertBg.svg");
+    width: 30%;
+    height: 30%;
+    color: #FFFFFF;
+    font-size: 48px;
+}
 
 
 @media all and (max-width: 1700px){
