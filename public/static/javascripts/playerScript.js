@@ -8,9 +8,9 @@ function initPlayer() {
         methods: {
             updateLiveStatus:async function(){
                 let dt=await getJson("/liveStatus")
-                if(dt.liveStatus.updateTime!=this.liveStatus.updateTime)
+                if(dt.liveStatus.updateTime!=this.status.updateTime)
                     this.status=structuredClone(dt.liveStatus);
-                console.log(this.status)
+
                 if(this.halls!=dt.hallStatus){
                     this.halls!=dt.hallStatus;
                     console.log("update halls")
