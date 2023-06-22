@@ -2869,7 +2869,7 @@ body::selection {
     background: #e39a3f;
     padding: 18px;
     flex: 1;
-cursor: pointer;
+    cursor: pointer;
 }
 .playerBtn{display: flex;
 align-items: center;
@@ -2881,12 +2881,22 @@ align-items: center;
     height: 28px;
     margin-right: 16px;
 }
+
 .playerBtnText{
     color: #FFFFFF;
     text-transform: uppercase;
     font-weight:400;
     font-size: 21px;
     line-height: 26px;
+}
+.playerBtnWr.active{
+    background: #BB3E3F;
+}
+.playerBtnWr.active .playerBtnIco{
+    background: #e39a3f;
+}
+.playerBtnWr:hover .playerBtnText{
+    color:#F1CCA7;
 }
 .videoRegTitle{
     font-weight: 500;
