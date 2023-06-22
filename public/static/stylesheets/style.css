@@ -2908,6 +2908,13 @@ align-items: center;
 .pagenatorPrev, .pagenatorNext{
     cursor: pointer;
 }
+.playerLoader{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
 
 
 @media all and (max-width: 1700px){
