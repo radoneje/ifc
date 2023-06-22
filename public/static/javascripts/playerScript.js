@@ -10,6 +10,7 @@ function initPlayer() {
                 let dt=await getJson("/liveStatus")
                 if(dt.liveStatus.updateTime!=this.liveStatus.updateTime)
                     this.status=structuredClone(dt.liveStatus);
+                console.log(this.status)
                 if(this.halls!=dt.hallStatus){
                     this.halls!=dt.hallStatus;
                     console.log("update halls")
