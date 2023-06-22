@@ -1344,6 +1344,10 @@
     #playerBox{
         margin-top: 64px;
     }
+    .playerHead{
+        width: 100vw;
+        overflow: hidden;
+    }
 
 }
 
