@@ -451,7 +451,26 @@ router.get('/ticket/:userid', async function (req, res, next) {
         .text(seat.section.toUpperCase()+", "+seat.side.toUpperCase()+" "+seat.lounge.toUpperCase()+"\n"+seat.row.toUpperCase()+" "+seat.seat.toUpperCase() ,
             /*x*/ 98 , /*y*/ 1620)
     doc.end();
-    setTimeout(()=>{res.download(filename)},1000)
+    let compressed=QRfilename.replace(/(.pdf)$/,'_comp.pdf');
+
+
+    setTimeout(()=>{
+
+        spawn("gs", [
+            -"sDEVICE=pdfwrite",
+            "-dCompatibilityLevel=1.4",
+            "-dPDFSETTINGS=/screen",
+            "-dNOPAUSE",
+            "-dQUIET",
+            "-dBATCH",
+            "-sOutputFile="+compressed,
+            QRfilename
+
+        ])
+        spawn.on("close", code => {
+            res.download(compressed)
+        });
+    },500)
 
 
 
