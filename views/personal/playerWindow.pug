@@ -16,27 +16,10 @@
 
         div(v-else)
             .playerHead
-                .playerBtnWr
+                .playerBtnWr(v-for="hall in halls")
                     .playerBtn
                         .playerBtnIco
-                        .playerBtnText Пленарная Сессия
-                .playerBtnWr
-                    .playerBtn
-                        .playerBtnIco
-                        .playerBtnText зал 1
-                .playerBtnWr
-                    .playerBtn
-                        .playerBtnIco
-                        .playerBtnText зал 2
-                .playerBtnWr
-                    .playerBtn
-                        .playerBtnIco
-                        .playerBtnText зал 3
-                .playerBtnWr
-                    .playerBtn
-                        .playerBtnIco
-                        .playerBtnText зал 4
+                        .playerBtnText {{hall.halltitle_#{lang}}}
 
-            .playerBody !{JSON.stringify(test)}
 
 
