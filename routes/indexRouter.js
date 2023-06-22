@@ -22,7 +22,7 @@ router.get("/liveplayer/:id/:lang",async (req, res)=>{
   }
   catch (e) {
     console.warn(e)
-    res.json(e)
+    res.json(e.message)
   }
 })
 router.get("/liveStatus",async (req, res)=>{
