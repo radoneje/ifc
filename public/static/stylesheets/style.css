@@ -2889,6 +2889,7 @@ align-items: center;
     font-size: 21px;
     line-height: 26px;
 }
+
 .playerBtnWr:hover .playerBtnText{
     color:#F1CCA7;
 }
@@ -2900,6 +2901,13 @@ align-items: center;
 }
 .playerBtnWr.active .playerBtnText{
     color:#FFFFFF !important;
+}
+.vjs-big-play-button{
+    width: 36px;
+    height: 36px;
+    background: #BB3E3F;
+    border: none;
+    border-radius: 0;
 }
 
 .videoRegTitle{
