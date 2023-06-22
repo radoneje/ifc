@@ -79,10 +79,10 @@ div(v-if="user.statusid==60")
 div(v-if="user.statusid==65 && !user.isPaySelf")
     .participaintRow &nbsp;
         .participaintRowBtnGroup.flex.center.left
-            a( href="/personal/invoice" download="invoice.pdf") Счет на оплату
-            a( href="/personal/personalDataAgreement" download="personalDataAgreement.pdf") Согласие на обработку персональных данных
+            a( :href="'/personal/invoice?guid='+user.guid" download="invoice.pdf") Счет на оплату
+            a( :href="'/personal/personalDataAgreement?guid='+user.guid" download="personalDataAgreement.pdf") Согласие на обработку персональных данных
             div(v-if="(user.payCompany && user.payCompany.isEdo) || (!user.payCompany && user.company.isEdo)")
-                a( href="/personal/edoAgreement" download="EdoAgreement.pdf") Соглашение об ЭДО
+                a( :href="'/personal/edoAgreement?guid='+user.guid" download="EdoAgreement.pdf") Соглашение об ЭДО
     .participaintRow &nbsp;
     .participaintRow
         .participaintRowTextUp

@@ -9,23 +9,23 @@
     .participaintDocs
         .participaintDocsItem.flex.center.beetwen(v-for="f in user.files")
             .participaintDocTitle  {{f.name}}
-            a.participaintDocBtn( :href="'/static/file/'+f.guid" :download="f.name") Скачать
+            a.participaintDocBtn( :href="'/static/file/'+user.guid" :download="f.name") Скачать
         if ru
             .participaintDocsItem.flex.center.beetwen
                 .participaintDocTitle  Согласие на обработку персональных данных
-                a.participaintDocBtn( href="/personal/personalDataAgreement" download="personalDataAgreement.pdf") Скачать
+                a.participaintDocBtn( :href="'/personal/personalDataAgreement?guid='+user.guid" download="personalDataAgreement.pdf") Скачать
         else
             .participaintDocsItem.flex.center.beetwen
                 .participaintDocTitle  Personal data Agreement
-                a.participaintDocBtn( href="/personal/personalDataAgreementEn" download="personalDataAgreement.pdf") Download
+                a.participaintDocBtn( :href="'/personal/personalDataAgreementEn?guid='+user.guid" download="personalDataAgreement.pdf") Download
 
         if ru
             .participaintDocsItem.flex.center.beetwen(v-if="user.isPay && user.statusid>=65")
                 .participaintDocTitle  Счет-Договор
-                a.participaintDocBtn( href="/personal/invoice" download="invoice.pdf") Скачать
+                a.participaintDocBtn( :href="'/personal/invoice?guid='+user.guid" download="invoice.pdf") Скачать
             .participaintDocsItem.flex.center.beetwen(v-if="user.isPay && ((user.payCompany && user.payCompany.isEdo) || (!user.payCompany && user.company.isEdo))")
                 .participaintDocTitle  Соглашение об ЭДО
-                a.participaintDocBtn( href="/personal/edoAgreement" download="EdoAgreement.pdf") Скачать
+                a.participaintDocBtn( :href="'/personal/edoAgreement?guid='+user.guid" download="EdoAgreement.pdf") Скачать
 
 
 
