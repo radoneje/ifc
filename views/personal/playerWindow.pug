@@ -8,7 +8,7 @@
     #playerBox(style="display:none")
         .playerPoster(v-if="!status.status")
             .videoWr
-                .videoWrContent
+                .videoWrContent {{status.poster_ru}}
                     img(:src="'/static/image/middle/'+status.poster_ru")
 
         .playerHead
