@@ -13,7 +13,7 @@ function initPlayer() {
             updateLiveStatus: async function () {
                 let dt = await getJson("/liveStatus")
                 if (dt.liveStatus.updateTime != this.status.updateTime)
-                    this.status = structuredClone(dt.liveStatus);
+                    this.status = (dt.liveStatus);
                 let maxTime = 0;
                 dt.hallStatus.forEach(h => {
                     maxTime = Math.max(h.updateTime, maxTime)
