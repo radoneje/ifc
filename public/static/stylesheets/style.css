@@ -2889,15 +2889,19 @@ align-items: center;
     font-size: 21px;
     line-height: 26px;
 }
+.playerBtnWr:hover .playerBtnText{
+    color:#F1CCA7;
+}
 .playerBtnWr.active{
     background: #BB3E3F;
 }
 .playerBtnWr.active .playerBtnIco{
     background: #e39a3f;
 }
-.playerBtnWr:hover .playerBtnText{
-    color:#F1CCA7;
+.playerBtnWr.active .playerBtnText{
+    color:#FFFFFF !important;
 }
+
 .videoRegTitle{
     font-weight: 500;
     font-size: 24px;
