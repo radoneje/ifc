@@ -419,8 +419,8 @@ router.get('/akt/:guid', async function (req, res, next) {
 });
 router.get('/ticket/:userid', async function (req, res, next) {
 
-    let QRfilename="/var/ifc_data/userQr/"+String(req.params.id).padStart(3, '0')+".png"
-    await QRCode.toFile(QRfilename, JSON.stringify({id:req.params.id}),{width:1000})
+    let QRfilename="/var/ifc_data/userQr/"+String(req.params.userid).padStart(3, '0')+".png"
+    await QRCode.toFile(QRfilename, JSON.stringify({id:req.params.userid}),{width:1000})
     res.json(QRfilename)
 })
 
