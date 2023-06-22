@@ -1,6 +1,6 @@
 function initPlayer() {
     let playerApp = new Vue({
-        el: "playerWindow",
+        el: "#playerWindow",
         data: {
             status:{}
         },
