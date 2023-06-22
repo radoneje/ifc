@@ -407,7 +407,7 @@ router.get('/playerRegistration/:lang?', async function(req, res, next) {
 router.post('/regPlayerUser', async function(req, res, next) {
     try {
         for(let key of Object.keys(req.body)){
-            console.log(key)
+
             if(req.body[key].length>2048)
                 return res.sendStatus(422)
         }
@@ -428,10 +428,12 @@ router.get('/playerWindow/:lang?', async function(req, res, next) {
         if(!(req.params.lang && req.params.lang.match(/ru|en/)))
             req.params.lang="ru";
 
+        if(req.session.token)
+            req.session.player=structuredClone(req.session.token);
+
         if(!req.session.player && !req.session.token)
          return    res.redirect("/personal/playerRegistration/"+req.params.lang)
-        if(!req.session.player && req.session.token)
-        req.session.player=req.session.token;
+
 
         await req.knex("t_player_openlog").insert({
             userid:req.session.player.id,
