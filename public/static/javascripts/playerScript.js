@@ -4,7 +4,8 @@ function initPlayer() {
         data: {
             status:{},
             halls:[],
-            hallsUpdateTime:0
+            hallsUpdateTime:0,
+            activeHall:null,
         },
         methods: {
             updateLiveStatus:async function(){
@@ -18,6 +19,8 @@ function initPlayer() {
                 if(this.halls.length!=dt.hallStatus.length || maxTime!=this.hallsUpdateTime ){
                     this.hallsUpdateTime=maxTime
                     this.halls=dt.hallStatus;
+                    if(!this.activeHall)
+                        this.activeHall=this.halls[0]
                     console.log("update halls")
                 }
                 setTimeout(()=>{

@@ -16,12 +16,12 @@
 
         div(v-else)
             .playerHead
-                .playerBtnWr(v-for="hall in halls")
+                .playerBtnWr(v-for="hall in halls" v-on:click="activeHall=hall" v-bind:class="{active:activeHall.id==hall.id}")
                     .playerBtn
                         .playerBtnIco
                         .playerBtnText {{hall.halltitle_#{lang}}}
-            .playerBody !{JSON.stringify(test)}
+            .playerBody(v-if="activeHall")
                 .videoWr
-                    iframe.videoWrContent(:src="'/liveplayer/'+hall.id+'/'"+lang border="0" allowfullscreen="true" width="1280" height="720")
+                    iframe.videoWrContent(:src="'/liveplayer/'+activeHall.id+'/'"+lang border="0" allowfullscreen="true" width="1280" height="720")
 
 
