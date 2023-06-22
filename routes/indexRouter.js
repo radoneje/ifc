@@ -8,6 +8,11 @@ router.get("/undefined",(req, res)=>{
   res.sendStatus(401)
 })
 
+
+router.get("/liveStatus",async (req, res)=>{
+  res.json((await req.knex("t_livestatus"))[0] )
+})
+
 router.get("/tgpgm/:id",async (req, res)=>{
   try {
    let timeslots= await req.knex("v_pgm_timeslots").where({dayid:req.params.id})

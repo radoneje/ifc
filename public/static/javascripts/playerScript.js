@@ -1,10 +1,16 @@
 function initPlayer() {
     let playerApp = new Vue({
         el: "playerWindow",
-        data: {},
-        methods: {},
+        data: {
+            status:{}
+        },
+        methods: {
+            updateLiveStatus:async function(){
+                let dt=await getJson("/liveStatus")
+            }
+        },
         mounted: async function () {
-            console.log("playerScript")
+            this.updateLiveStatus();
             setTimeout(() => {
                 let loader = document.querySelector("#playerLoader")
                 loader.parentNode.removeChild(loader)
