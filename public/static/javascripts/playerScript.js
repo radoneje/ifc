@@ -3,16 +3,21 @@ function initPlayer() {
         el: "#playerWindow",
         data: {
             status:{},
-            halls:[]
+            halls:[],
+            hallsUpdateTime:0
         },
         methods: {
             updateLiveStatus:async function(){
                 let dt=await getJson("/liveStatus")
                 if(dt.liveStatus.updateTime!=this.status.updateTime)
                     this.status=structuredClone(dt.liveStatus);
-
-                if(this.halls!=dt.hallStatus){
-                    this.halls!=dt.hallStatus;
+                let maxTime=0;
+                dt.hallStatus.forEach(h=>{
+                    maxTime=Math.max(h.updateTime, maxTime)
+                })
+                if(this.halls.length!=dt.hallStatus.length || maxTime!=this.hallsUpdateTime ){
+                    this.hallsUpdateTime=maxTime
+                    this.halls=dt.hallStatus;
                     console.log("update halls")
                 }
                 setTimeout(()=>{
