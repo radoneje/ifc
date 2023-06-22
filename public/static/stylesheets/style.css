@@ -2927,7 +2927,7 @@ align-items: center;
     height: 80vh;
     display: flex;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
 }
 .videoWrContentLoader svg{
     width: 100%;
