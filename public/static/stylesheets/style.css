@@ -2903,11 +2903,11 @@ align-items: center;
     color:#FFFFFF !important;
 }
 .vjs-big-play-button{
-    width: 36px;
-    height: 36px;
-    background: #BB3E3F;
-    border: none;
-    border-radius: 0;
+    width: 36px !important;
+    height: 36px!important;
+    background: #BB3E3F!important;
+    border: none !important;
+    border-radius: 0 !important;
 }
 
 .videoRegTitle{
