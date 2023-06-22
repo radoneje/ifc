@@ -20,7 +20,7 @@
                 .pSpkSessionsWr
                     each session in spk.sessions
                         .pSpkSession(onclick="closePopUp();showSession("+session.id+", '"+lang+"')") #{session["title_" + lang]}
-        //if spk["bio"+lang]
+        if spk["bio"+lang]
             .menuItem.flex.center.left
                 .menuItemBox
                 .menuItemText Биография
