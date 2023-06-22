@@ -16,7 +16,7 @@ function initPlayer() {
                 dt.hallStatus.forEach(h => {
                     maxTime = Math.max(h.updateTime, maxTime)
                 })
-                if (this.halls.length > 0)
+                if (dt.hallStatus.length > 0)
                     if (this.halls.length != dt.hallStatus.length || maxTime != this.hallsUpdateTime) {
                         this.hallsUpdateTime = maxTime
                         this.halls = dt.hallStatus;
