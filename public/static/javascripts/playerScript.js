@@ -5,9 +5,9 @@ let playerApp=new Vue({
     methods:{},
     mounted:async function(){
         console.log("playerScript")
-        let loader=document.querySelector(".playerLoader")
+        let loader=document.querySelector("#playerLoader")
         loader.parentNode.removeChild(loader)
-        document.querySelector(".playerBox").style.display="block"
+        document.querySelector("#playerBox").style.display="block"
     }
 })
 
