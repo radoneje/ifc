@@ -2933,6 +2933,10 @@ align-items: center;
     width: 100%;
     height: auto;
 }
+.videoWrContent img{
+    width: 100%;
+    height: auto;
+}
 
 
 @media all and (max-width: 1700px){
