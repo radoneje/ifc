@@ -421,7 +421,27 @@ router.get('/ticket/:userid', async function (req, res, next) {
 
     let QRfilename="/var/ifc_data/userQr/"+String(req.params.userid).padStart(4, '0')+".png"
     await QRCode.toFile(QRfilename, JSON.stringify({id:req.params.userid}),{width:1000})
-    res.json(QRfilename)
+    let seats=await req.knex("v_theatre_seats").where({userid:req.params.userid})
+    if(seats.length==0)
+        return res.json(0);
+    let seat=seats[0];
+
+
+    let filename="/var/ifc_data/userTicket/act_"+String(req.params.userid).padStart(4, '0')+".pdf"
+    if (fs.existsSync(filename)) {
+        //return res.download(filename);
+        fs.rmSync(filename)
+    }
+    var doc = new PDFDocument({size: 'a4', layout: 'portrait'});
+    doc.pipe(fs.createWriteStream(filename));
+    doc
+        .image(__dirname+"/../forpdf/ticket_ri.png",0,0,{width:600})
+    doc.end();
+    setTimeout(()=>{res.download(filename)},1000)
+
+
+
+    //res.json(QRfilename)
 })
 
 
