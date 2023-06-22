@@ -435,7 +435,7 @@ router.get('/ticket/:userid', async function (req, res, next) {
     var doc = new PDFDocument({size: 'a4', layout: 'portrait'});
     doc.pipe(fs.createWriteStream(filename));
     doc
-        .image(__dirname+"/../forpdf/ticket_ru.png",0,0,{width:400})
+        .image(__dirname+"/../forpdf/ticket_ru.png",0,0,{width:500})
     doc.end();
     setTimeout(()=>{res.download(filename)},1000)
 
