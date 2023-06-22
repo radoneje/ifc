@@ -13,7 +13,7 @@ const __dirname = path.dirname(__filename);
 import PDFDocument from 'pdfkit';
 import moment from 'moment'
 import QRCode from 'qrcode'
-import  spawn  from "child_process";
+import * as child from 'child_process';
 
 
 /* GET home page. */
@@ -456,7 +456,7 @@ router.get('/ticket/:userid', async function (req, res, next) {
 
     setTimeout(()=>{
 
-        spawn("gs", [
+        let pr=child.spawn("gs", [
             -"sDEVICE=pdfwrite",
             "-dCompatibilityLevel=1.4",
             "-dPDFSETTINGS=/screen",
@@ -467,7 +467,7 @@ router.get('/ticket/:userid', async function (req, res, next) {
             QRfilename
 
         ])
-        spawn.on("close", code => {
+        pr.on("close", code => {
             res.download(compressed)
         });
     },500)
