@@ -446,10 +446,16 @@ function FSPhotoPrev(ctrl){
         });
     });
 }*/
+var playeScript=null;
 document.querySelectorAll(".liveBtn").forEach(e=>{
     e.onclick=async ()=>{
 
-        await openPlayerModal()
+        await openPlayerModal();
+        if(!playeScript){
+            playeScript=document.createElement("script")
+            playeScript.src="/static/javascripts/playerScript.js";
+            playeScript.body.appendChild();
+        }
     }
 })
 async function openPlayerModal(){
