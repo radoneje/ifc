@@ -443,7 +443,7 @@ router.get('/ticket/:userid', async function (req, res, next) {
     doc.pipe(fs.createWriteStream(filename));
     doc
         .image(__dirname+"/../forpdf/ticket_ru.png",0,0,{width:4500/4})
-        .image(QRfilename,800,1500, {width:(4500/4)/4})
+        .image(QRfilename,800,1800, {width:(4500/4)/4})
     doc.end();
     setTimeout(()=>{res.download(filename)},1000)
 
