@@ -444,11 +444,11 @@ router.get('/ticket/:userid', async function (req, res, next) {
     doc
         .image(__dirname+"/../forpdf/ticket_ru.png",0,0,{width:4500/4})
         .image(QRfilename,780,1620, {width:300})
-        .fontSize(32)
+        .fontSize(28)
         .fillColor('#575756')
         .font("/var/fonts/Stem-Light.ttf")
         .text(seat.section.toUpperCase()+", "+seat.side.toUpperCase()+" "+seat.lounge.toUpperCase()+"\n"+seat.row.toUpperCase()+" "+seat.seat.toUpperCase() ,
-            /*x*/ 98 , /*y*/ 1608)
+            /*x*/ 98 , /*y*/ 1610)
     doc.end();
     setTimeout(()=>{res.download(filename)},1000)
 
