@@ -464,7 +464,7 @@ router.get('/ticket/:userid', async function (req, res, next) {
             "-dQUIET",
             "-dBATCH",
             "-sOutputFile="+compressed,
-            QRfilename
+            filename
 
         ])
         pr.on("close", code => {
