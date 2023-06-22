@@ -446,7 +446,7 @@ router.get('/ticket/:userid', async function (req, res, next) {
         .image(QRfilename,800,1640, {width:(4500/4)/4})
         .fontSize(36)
         .fillColor('#575756')
-        .font("/var/fonts/Stem-Regular.ttf")
+        .font("/var/fonts/Stem-Thin.ttf")
         .text(seat.section+", "+seat.side+" "+seat.lounge+"\n"+seat.row+" "+seat.seat ,
             /*x*/ 98 , /*y*/ 1615)
     doc.end();
