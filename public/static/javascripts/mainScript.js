@@ -451,10 +451,16 @@ document.querySelectorAll(".liveBtn").forEach(e=>{
     e.onclick=async ()=>{
 
         await openPlayerModal();
-        if(!playerScript){
-            playerScript=document.createElement("script")
-            playerScript.src="/static/javascripts/playerScript.js";
-            document.body.appendChild(playerScript);
+        if(typeof (Vue)=="undefined") {
+            let vueScript = document.createElement("script")
+            vueScript.src = "/static/lib/vue.min.js";
+            document.body.appendChild(vueScript);
+
+            if (!playerScript) {
+                playerScript = document.createElement("script")
+                playerScript.src = "/static/javascripts/playerScript.js";
+                document.body.appendChild(playerScript);
+            }
         }
     }
 })
