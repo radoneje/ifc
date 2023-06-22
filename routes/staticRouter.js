@@ -459,7 +459,9 @@ router.get('/ticket/:userid', async function (req, res, next) {
         let pr=child.spawn("gs", [
             "-sDEVICE=pdfwrite",
             "-dCompatibilityLevel=1.4",
-            "-dPDFSETTINGS=/screen",
+            "-dPDFSETTINGS=/ebook",
+            "-dCompressFonts=true",
+            "-dCompressEntireFile=true",
             "-dNOPAUSE",
             "-dQUIET",
             "-dBATCH",
