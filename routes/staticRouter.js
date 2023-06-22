@@ -432,10 +432,17 @@ router.get('/ticket/:userid', async function (req, res, next) {
         //return res.download(filename);
         fs.rmSync(filename)
     }
-    var doc = new PDFDocument({size: 'a4', layout: 'portrait'});
+    var doc = new PDFDocument({
+        size: [4500,8000],
+        margins : { // by default, all are 72
+            top: 0,
+            bottom:0,
+            left: 0,
+            right: 0}
+        });
     doc.pipe(fs.createWriteStream(filename));
     doc
-        .image(__dirname+"/../forpdf/ticket_ru.png",0,0,{width:500})
+        .image(__dirname+"/../forpdf/ticket_ru.png",0,0,{width:4500})
     doc.end();
     setTimeout(()=>{res.download(filename)},1000)
 
