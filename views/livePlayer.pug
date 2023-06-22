@@ -15,7 +15,7 @@ html(lang="ru")
                 source(src=source.src type=source.type)
         script(src="/static/lib/video.min.js")
         script.
-            let player=videojs(document.querySelector(".player"))
+            let player=videojs(document.querySelector("#player"))
             player.tech_.on("retryplaylist", () => {
                     if (FailCount >= 5) {
                         setTimeout(() => {
