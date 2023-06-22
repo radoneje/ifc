@@ -13,6 +13,7 @@ const __dirname = path.dirname(__filename);
 import PDFDocument from 'pdfkit';
 import moment from 'moment'
 import QRCode from 'qrcode'
+import  spawn  from "child_process";
 
 
 /* GET home page. */
