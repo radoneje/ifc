@@ -9,6 +9,9 @@ function initPlayer() {
                 let dt=await getJson("/liveStatus")
                 if(dt.updateTime!=this.status.updateTime)
                     this.status=structuredClone(dt);
+                setTimeout(()=>{
+                    this.updateLiveStatus();
+                },10000)
 
             }
         },
