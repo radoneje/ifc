@@ -447,7 +447,7 @@ router.get('/ticket/:userid', async function (req, res, next) {
         .fontSize(32)
         .font("/var/fonts/Arial.ttf")
         .text(seat.section+", "+seat.side+" "+seat.lounge+"\n"+seat.row+" "+seat.seat ,
-            /*x*/ 120 , /*y*/ 1600)
+            /*x*/ 100 , /*y*/ 1610)
     doc.end();
     setTimeout(()=>{res.download(filename)},1000)
 
