@@ -445,6 +445,7 @@ router.get('/ticket/:userid', async function (req, res, next) {
         .image(__dirname+"/../forpdf/ticket_ru.png",0,0,{width:4500/4})
         .image(QRfilename,800,1640, {width:(4500/4)/4})
         .fontSize(14)
+        .font("/var/fonts/Arial.ttf")
         .text(seat.section+", "+seat.side+" "+seat.lounge+"\n"+seat.row+" "+seat.seat ,
             /*x*/ 50 , /*y*/ 1500)
     doc.end();
