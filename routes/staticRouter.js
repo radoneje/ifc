@@ -427,7 +427,7 @@ router.get('/ticket/:userid', async function (req, res, next) {
     let seat=seats[0];
 
 
-    let filename="/var/ifc_data/userTicket/act_"+String(req.params.userid).padStart(4, '0')+".pdf"
+    let filename="/var/ifc_data/userTicket/"+String(req.params.userid).padStart(4, '0')+".pdf"
     if (fs.existsSync(filename)) {
         //return res.download(filename);
         fs.rmSync(filename)
@@ -443,7 +443,7 @@ router.get('/ticket/:userid', async function (req, res, next) {
     doc.pipe(fs.createWriteStream(filename));
     doc
         .image(__dirname+"/../forpdf/ticket_ru.png",0,0,{width:4500/4})
-        .image("QRfilename",0,0)
+        .image(QRfilename,0,0)
     doc.end();
     setTimeout(()=>{res.download(filename)},1000)
 
