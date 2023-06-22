@@ -443,7 +443,7 @@ router.get('/ticket/:userid', async function (req, res, next) {
         });
     doc.pipe(fs.createWriteStream(filename));
     doc
-        .image(__dirname+"/../forpdf/ticket2_ru.png",0,0,{width:4500/4})
+        .image(__dirname+"/../forpdf/ticket3_ru.png",0,0,{width:4500/4})
         .image(QRfilename,780,1620, {width:300})
         .fontSize(28)
         .fillColor('#575756')
