@@ -2,13 +2,18 @@ function initPlayer() {
     let playerApp = new Vue({
         el: "#playerWindow",
         data: {
-            status:{}
+            status:{},
+            halls:[]
         },
         methods: {
             updateLiveStatus:async function(){
                 let dt=await getJson("/liveStatus")
-                if(dt.updateTime!=this.status.updateTime)
-                    this.status=structuredClone(dt);
+                if(dt.liveStatus.updateTime!=this.liveStatus.updateTime)
+                    this.status=structuredClone(dt.liveStatus);
+                if(this.halls!=dt.hallStatus){
+                    this.halls!=dt.hallStatus;
+                    console.log("update halls")
+                }
                 setTimeout(()=>{
                     this.updateLiveStatus();
                 },10000)

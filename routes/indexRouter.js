@@ -10,7 +10,11 @@ router.get("/undefined",(req, res)=>{
 
 
 router.get("/liveStatus",async (req, res)=>{
-  res.json((await req.knex("t_livestatus"))[0] )
+  let ret={
+    liveStatus:(await req.knex("t_livestatus"))[0],
+    hallStatus:(await req.knex("v_live_halls").where({isEnable:true}).orderBy("id"))
+  }
+  res.json( )
 })
 
 router.get("/tgpgm/:id",async (req, res)=>{
