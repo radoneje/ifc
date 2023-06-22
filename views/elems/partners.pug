@@ -34,6 +34,11 @@
                         include  ../partners/gaz_bank.svg
                     else
                         include ../partners/gazprombank_en.svg
+                .oficialPartner.partner(onclick="window.open('https://www.gazprombank.ru/')")
+                    if ru
+                        include  ../partners/sber.svg
+                    else
+                        include ../partners/sber_en.svg
 
 
         if ru
@@ -73,7 +78,10 @@
 
 
             .oficialPartner.partner(onclick="window.open('https://www.moex.com/')")
+                if ru
                     include  ../partners/moex.svg
+                else
+                    include  ../partners/moex_en.svg
 
             .oficialPartner.partner(onclick="window.open('https://sovcombank.ru/')")
                 if ru
