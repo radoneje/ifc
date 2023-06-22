@@ -14,7 +14,7 @@ router.get("/liveplayer/:id/:lang",async (req, res)=>{
     let r= (await req.knex("v_live_halls").where({id: req.params.id}).orderBy("id"))
     let source={
       src:r[0]['url_'+req.params.lang],
-      type:r[0]['url_'+req.params.lang].match(/\,.mp4$/)?"video/mp4":"application/x-mpegURL",
+      type:r[0]['url_'+req.params.lang].match(/\.mp4$/)?"video/mp4":"application/x-mpegURL",
       poster:r[0]['poster_'+req.params.lang]
     }
     res.render("livePlayer",{source})
@@ -22,7 +22,7 @@ router.get("/liveplayer/:id/:lang",async (req, res)=>{
   }
   catch (e) {
     console.warn(e)
-    res.sendStatus(404)
+    res.json(e)
   }
 })
 router.get("/liveStatus",async (req, res)=>{
