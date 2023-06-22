@@ -1,0 +1,14 @@
+doctype html
+html(lang="ru")
+    head
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+        <meta name="robots" content="noindex">
+        link(rel='stylesheet', href='/static/stylesheets/style.css')
+        link(rel='stylesheet', href='/static/stylesheets/1320.css')
+        link(rel='stylesheet', href='/static/stylesheets/980.css')
+    body(style="margin:0")
+        .videoWr
+            video.videoWrContent(poster="/static/images/hi/"+source.poster width="1280" height="720" controls="controls")
+                source(src=source.src type=source.type)
