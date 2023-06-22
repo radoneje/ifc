@@ -465,6 +465,8 @@ document.querySelectorAll(".liveBtn").forEach(e=>{
 
 
         }
+        else
+            initPlayer();
     }
 })
 async function openPlayerModal(){
