@@ -29,7 +29,7 @@ function initPlayer() {
                     }
                 setTimeout(() => {
                     this.updateLiveStatus();
-                }, 10000)
+                }, 10000*60)
 
             }
         },
