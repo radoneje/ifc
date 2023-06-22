@@ -431,7 +431,7 @@ router.get('/playerWindow/:lang?', async function(req, res, next) {
         if(req.session.token)
             req.session.player=structuredClone(req.session.token);
 
-        if(!req.session.player && !req.session.token)
+        if(!req.session.player)
          return    res.redirect("/personal/playerRegistration/"+req.params.lang)
 
 
