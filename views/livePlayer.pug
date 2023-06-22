@@ -5,10 +5,63 @@ html(lang="ru")
         meta(charset="utf-8")
         meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
         <meta name="robots" content="noindex">
+        link(rel='stylesheet', href='/static/lib/video-js.min.css')
         link(rel='stylesheet', href='/static/stylesheets/style.css')
         link(rel='stylesheet', href='/static/stylesheets/1320.css')
         link(rel='stylesheet', href='/static/stylesheets/980.css')
     body(style="margin:0")
         .videoWr
-            video.videoWrContent(poster="/static/images/hi/"+source.poster width="1280" height="720" controls="controls")
+            video#player.videoWrContent.video-js.vjs-big-play-centered.vjs-show-big-play-button-on-pause(poster="/static/images/hi/"+source.poster width="1280" height="720" controls="controls")
                 source(src=source.src type=source.type)
+        script(src="/static/lib/video.min.js")
+        script.
+            let player=videojs(document.querySelector(".player"))
+            player.tech_.on("retryplaylist", () => {
+                    if (FailCount >= 5) {
+                        setTimeout(() => {
+                            let elems = document.querySelectorAll(".safaryQMenuItem")
+                            if (elems.length > 0) {
+                                elems[1].click();
+                            } else {
+                                player.src({
+                                    type: 'application/x-mpegURL',
+                                    src: mm[1] + "_720p/playlist.m3u8"
+                                })
+                                player.play();
+                                FailCount = 0;
+                            }
+                        }, 1000)
+                    } else
+                        FailCount++
+                    console.warn("player failk", FailCount)
+                }
+            )
+
+            player.on('error', function (event) {
+
+
+            })
+            player.on('play', () => {
+                window.top.postMessage({
+                    type: 'player',
+                    message: "play"
+                }, '*');
+            });
+            player.on('pause', () => {
+                window.top.postMessage({
+                    type: 'player',
+                    message: "pause"
+                }, '*');
+            });
+            player.on('pause', () => {
+                window.top.postMessage({
+                    type: 'player',
+                    message: "pause"
+                }, '*');
+            });
+            player.on('volumechange', () => {
+                window.top.postMessage({
+                    type: 'player',
+                    message: "volumechange"
+                }, '*');
+            });
