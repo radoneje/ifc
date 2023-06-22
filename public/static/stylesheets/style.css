@@ -2909,11 +2909,29 @@ align-items: center;
     cursor: pointer;
 }
 .playerLoader{
+
+}
+.videoWr{
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+.videoWrContent{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.videoWrContentLoader{
     width: 100%;
     height: 80vh;
     display: flex;
     align-items: center;
     justify-items: center;
+}
+.videoWrContentLoader{
+    width: 30%;
+    height: auto;
 }
 
 
