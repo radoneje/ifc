@@ -448,7 +448,7 @@ router.get('/ticket/:userid', async function (req, res, next) {
         .fillColor('#575756')
         .font("/var/fonts/Stem-Light.ttf")
         .text(seat.section+", "+seat.side+" "+seat.lounge+"\n"+seat.row+" "+seat.seat ,
-            /*x*/ 98 , /*y*/ 1610)
+            /*x*/ 98 , /*y*/ 1608)
     doc.end();
     setTimeout(()=>{res.download(filename)},1000)
 
