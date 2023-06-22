@@ -6,6 +6,11 @@
                     .videoWrContentLoaderBox(style="width:30%")
                         include ../svg/loader.svg
     #playerBox(style="display:none")
+        .playerPoster(v-if="!status.status")
+            .videoWr
+                .videoWrContent
+                    img(:src="'/static/image/middle/'+status.poster_"+lang)
+
         .playerHead
             .playerBtnWr
                 .playerBtn

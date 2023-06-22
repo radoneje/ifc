@@ -7,6 +7,9 @@ function initPlayer() {
         methods: {
             updateLiveStatus:async function(){
                 let dt=await getJson("/liveStatus")
+                if(dt.updateTime!=this.status.updateTime)
+                    this.status=structuredClone(dt);
+
             }
         },
         mounted: async function () {
