@@ -426,7 +426,7 @@ router.get('/ticket/:userid', async function (req, res, next) {
         return res.json(0);
     let seat=seats[0];
 
-
+//
     let filename="/var/ifc_data/userTicket/"+String(req.params.userid).padStart(4, '0')+".pdf"
     if (fs.existsSync(filename)) {
         //return res.download(filename);
@@ -445,7 +445,8 @@ router.get('/ticket/:userid', async function (req, res, next) {
         .image(__dirname+"/../forpdf/ticket_ru.png",0,0,{width:4500/4})
         .image(QRfilename,800,1640, {width:(4500/4)/4})
         .fontSize(36)
-        .font("/var/fonts/Arial.ttf")
+        .fillColor('#575756')
+        .font("/var/fonts/Stem-Regular.ttff")
         .text(seat.section+", "+seat.side+" "+seat.lounge+"\n"+seat.row+" "+seat.seat ,
             /*x*/ 98 , /*y*/ 1615)
     doc.end();
