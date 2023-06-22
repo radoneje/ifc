@@ -454,13 +454,16 @@ document.querySelectorAll(".liveBtn").forEach(e=>{
         if(typeof (Vue)=="undefined") {
             let vueScript = document.createElement("script")
             vueScript.src = "/static/lib/vue.min.js";
+            vueScript.onload=()=>{
+                if (!playerScript) {
+                    playerScript = document.createElement("script")
+                    playerScript.src = "/static/javascripts/playerScript.js";
+                    document.body.appendChild(playerScript);
+                }
+            }
             document.body.appendChild(vueScript);
 
-            if (!playerScript) {
-                playerScript = document.createElement("script")
-                playerScript.src = "/static/javascripts/playerScript.js";
-                document.body.appendChild(playerScript);
-            }
+
         }
     }
 })
