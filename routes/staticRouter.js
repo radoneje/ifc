@@ -444,10 +444,10 @@ router.get('/ticket/:userid', async function (req, res, next) {
     doc
         .image(__dirname+"/../forpdf/ticket_ru.png",0,0,{width:4500/4})
         .image(QRfilename,800,1640, {width:(4500/4)/4})
-        .fontSize(32)
+        .fontSize(36)
         .font("/var/fonts/Arial.ttf")
         .text(seat.section+", "+seat.side+" "+seat.lounge+"\n"+seat.row+" "+seat.seat ,
-            /*x*/ 100 , /*y*/ 1610)
+            /*x*/ 98 , /*y*/ 1615)
     doc.end();
     setTimeout(()=>{res.download(filename)},1000)
 
