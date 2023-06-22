@@ -1335,6 +1335,15 @@
     .liveBtn:before {
         top: 8px;
     }
+    .playerBtnText{
+        font-size: 18px;
+    }
+    .playerBtnIco{
+        display: none;
+    }
+    #playerBox{
+        margin-top: 64px;
+    }
 
 }
 

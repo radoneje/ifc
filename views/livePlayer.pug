@@ -11,7 +11,7 @@ html(lang="ru")
         link(rel='stylesheet', href='/static/stylesheets/980.css')
     body(style="margin:0")
         .videoWr
-            video#player.videoWrContent.video-js.vjs-big-play-centered.vjs-show-big-play-button-on-pause(poster="/static/image/middle/"+source.poster width="1280" height="720" controls="controls")
+            video#player.videoWrContent.video-js.vjs-big-play-centered.vjs-show-big-play-button-on-pause(poster="/static/image/middle/"+source.poster width="1280" height="720" controls="controls" playsinline)
                 source(src=source.src type=source.type)
         script(src="/static/lib/video.min.js")
         script.
