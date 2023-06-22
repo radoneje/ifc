@@ -451,7 +451,7 @@ router.get('/ticket/:userid', async function (req, res, next) {
         .text(seat.section.toUpperCase()+", "+seat.side.toUpperCase()+" "+seat.lounge.toUpperCase()+"\n"+seat.row.toUpperCase()+" "+seat.seat.toUpperCase() ,
             /*x*/ 98 , /*y*/ 1620)
     doc.end();
-    let compressed=QRfilename.replace(/(.pdf)$/,'_comp.pdf');
+    let compressed=filename.replace(/(.pdf)$/,'_comp.pdf');
 
 
     setTimeout(()=>{
