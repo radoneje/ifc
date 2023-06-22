@@ -1,3 +1,5 @@
+"use strict";
+
 function initPlayer() {
     let playerApp = new Vue({
         el: "#playerWindow",
