@@ -36,6 +36,7 @@ function initPlayer() {
             }
         },
         mounted: async function () {
+            console.log("this")
             this.updateLiveStatus();
             setTimeout(() => {
                 let loader = document.querySelector("#playerLoader")
