@@ -2,7 +2,7 @@
 
 function initPlayer() {
     if (document.querySelector("#playerWindow")) {
-        let playerApp = new Vue({
+        new Vue({
             el: "#playerWindow",
             data: {
                 status: {},
