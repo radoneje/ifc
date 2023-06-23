@@ -39,8 +39,10 @@ function initPlayer() {
             this.updateLiveStatus();
             setTimeout(() => {
                 let loader = document.querySelector("#playerLoader")
-                loader.parentNode.removeChild(loader)
-                document.querySelector("#playerBox").style.display = "block"
+                if(loader) {
+                    loader.parentNode.removeChild(loader)
+                    document.querySelector("#playerBox").style.display = "block"
+                }
             }, 2000)
 
         }

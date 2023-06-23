@@ -418,7 +418,10 @@ router.get('/akt/:guid', async function (req, res, next) {
         res.sendStatus(500)
     }
 });
-router.get('/ticket/:userid', async function (req, res, next) {
+router.get('/ticket/:userid/:lang?', async function (req, res, next) {
+
+    if(req.params.lang!="en")
+        req.params.lang="ru";
 
     let QRfilename="/var/ifc_data/userQr/"+String(req.params.userid).padStart(4, '0')+".png"
     let user=(await req.knex("t_users").where({id:req.params.userid}))[0]
@@ -445,7 +448,7 @@ router.get('/ticket/:userid', async function (req, res, next) {
         });
     doc.pipe(fs.createWriteStream(filename));
     doc
-        .image(__dirname+"/../forpdf/ticket3_ru.png",0,0,{width:4500/4})
+        .image(__dirname+"/../forpdf/ticket3_"+req.params.lang+".png",0,0,{width:4500/4})
         .image(QRfilename,780,1620, {width:300})
         .fontSize(28)
         .fillColor('#575756')
