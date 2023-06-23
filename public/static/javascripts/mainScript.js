@@ -526,6 +526,7 @@ async function registerUserToPlayer(){
             setTimeout(async ()=>{
                 closePopUp();
                 await openPlayerModal()
+                initPlayer();
             },2000)
 
         }
