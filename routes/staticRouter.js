@@ -421,11 +421,13 @@ router.get('/akt/:guid', async function (req, res, next) {
 router.get('/ticket/:userid', async function (req, res, next) {
 
     let QRfilename="/var/ifc_data/userQr/"+String(req.params.userid).padStart(4, '0')+".png"
-    await QRCode.toFile(QRfilename, JSON.stringify({id:req.params.userid}),{width:1000})
+    let user=(await req.knex("t_users").where({id:req.params.userid}))[0]
+    await QRCode.toFile(QRfilename, JSON.stringify({guid:user.guid}),{width:1000})
     let seats=await req.knex("v_theatre_seats").where({userid:req.params.userid})
     if(seats.length==0)
         return res.json(0);
     let seat=seats[0];
+
 
 //
     let filename="/var/ifc_data/userTicket/"+String(req.params.userid).padStart(4, '0')+".pdf"
