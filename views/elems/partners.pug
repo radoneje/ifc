@@ -1,11 +1,12 @@
 .tower#partners
     .subTower
-        .partnersDecor
-            include ../svg/partnersDecor.svg
+
         if ru
             .sectionTitle Генеральные партнеры
         else
             .sectionTitle General partners
+        .partnersDecor2
+            include ../svg/partnersDecor.svg
         .partnersBox
                 //.generalPartner.partner(onclick="window.open('http://vtb.ru')")
                     include ../partners/vtb.svg
@@ -152,8 +153,10 @@
                     include  ../partners/interfax_en.svg
 
             .oficialPartner.partner(onclick="window.open('https://www.rbc.ru/')")
+                if ru
                     include  ../partners/rbc.svg
-
+                else
+                    include  ../partners/rb_en.svg
             .oficialPartner.partner(onclick="window.open('https://1prime.ru/')")
                 if ru
                     include  ../partners/prime_ru.svg
