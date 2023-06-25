@@ -653,7 +653,7 @@ h2 {
 }
 
 .partnersBox {
-    margin-top: 64px;
+    margin-top:8px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
