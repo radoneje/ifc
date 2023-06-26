@@ -210,6 +210,8 @@ router.get('/personalDataAgreement', async function(req, res, next) {
     try {
         if(!req.session.token)
             return res.sendStatus(401)
+        if(req.query.guid!=req.session.token.guid)
+            return res.sendStatus(404)
 
         res.redirect("/static/personalDataAgreement/"+req.session.token.guid);
     }
