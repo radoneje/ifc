@@ -381,6 +381,15 @@ router.get('/info/:lang?', checkAccess, async function(req, res, next) {
         if(!req.params.lang.match(/ru|en/))
             req.params.lang="ru";
 
+        if(req.session.token){
+            let r=await req.knex("t_users").where({guid:req.session.token.guid})
+            if(r.length==0)
+            {
+                req.session.token=null;
+                return res.redirect("/personal/"+req.params.lang)
+            }
+        }
+
         let hotels=await req.knex("v_hotels").where({isEnabled:true}).orderBy("stars").orderBy("nameru")
         let section="";
         if(req.query.section)
