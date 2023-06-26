@@ -470,6 +470,14 @@ router.get('/:lang?', async function(req, res, next) {
         if(req.session.token && req.query.token)
             req.session.token=null;
 
+        if(req.session.token){
+            let r=await req.knex("t_users").where({guid:req.session.token.guid})
+            if(r.length==0)
+            {
+                req.session.token=null;
+            }
+        }
+
         if(req.session.token)
             return res.redirect("/personal/info/"+req.params.lang)
 
