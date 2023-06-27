@@ -310,11 +310,37 @@ router.post('/changeUser', async function(req, res, next) {
             return res.sendStatus(422)
         if(req.body.postAddress.length>2048)
             return res.sendStatus(422)
+        if(req.body.passportNumber.length>2048)
+            return res.sendStatus(422)
+        if(req.body.passportDate.length>2048)
+            return res.sendStatus(422)
+        if(req.body.passportCode.length>2048)
+            return res.sendStatus(422)
+        if(req.body.address.length>2048)
+            return res.sendStatus(422)
+
+        /*
+        * passportNumber: this.user.passportNumber,
+                    passportDate: this.user.passportDate,
+                    passportCode: this.user.passportCode,
+                    address: this.user.address
+        * */
 
 
 
         let r= await req.knex("t_users")
-            .update({postAddress:req.body.postAddress,position:req.body.position, photoid:req.body.photoid,companyShort:req.body.companyShort,phone:req.body.phone,email:req.body.email  })
+            .update({
+                postAddress:req.body.postAddress,
+                position:req.body.position,
+                photoid:req.body.photoid,
+                companyShort:req.body.companyShort,
+                phone:req.body.phone,
+                email:req.body.email,
+                passportNumber:req.body.passportNumber,
+                passportDate:req.body.passportDate,
+                passportCode:req.body.passportCode,
+                address:req.body.address
+            })
             .where({guid:req.session.token.guid})
 
 
