@@ -315,6 +315,7 @@ router.get('/invoice/:guid', async function (req, res, next) {
             res.sendStatus(500)
         }
 });
+
 router.get('/personalDataAgreement/:userguid', async function (req, res, next) {
     try {
         let users=await req.knex("t_users").where({guid:req.params.userguid})
