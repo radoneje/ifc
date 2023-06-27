@@ -17,7 +17,7 @@
             ul
                 li Заполнитe форму ниже;
                 li Подготовьте подписанное
-                    a(href="/personal/personalDataAgreement" target="_blank") &nbsp;согласие на обработку персональных данных
+                    a(:href="'/personal/personalDataAgreement?guid='+user.guid" target="_blank") &nbsp;согласие на обработку персональных данных
                     span &nbsp;участника;
                 li Если бейдж получает третье лицо необходимо также подготовить подписанную доверенность от <a href="/static/images/proxy_ur.docx" download>компании</a> или от <a href="/static/images/proxy_fiz.docx" download>конкретного участника</a>;
                 li Уточните время доставки в согласованный день по запросу курьера;
