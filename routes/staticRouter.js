@@ -321,8 +321,8 @@ router.get('/personalDataAgreement/:userguid', async function (req, res, next) {
         let u=users[0];
         let filename="/var/ifc_data/personalDataAgreements/personalDataAgreement_"+u.guid+".pdf"
         if (fs.existsSync(filename)) {
-            return res.download(filename);
-            //fs.rmSync(filename)
+           // return res.download(filename);
+            fs.rmSync(filename)
         }
         let fio= u.f+" " + u.i+ " "+ u.o
         var doc = new PDFDocument({size: 'a4', layout: 'portrait'});
