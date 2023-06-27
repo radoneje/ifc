@@ -426,7 +426,7 @@ router.get('/ticket/:userid/:lang?', async function (req, res, next) {
 
     let QRfilename="/var/ifc_data/userQr/"+String(req.params.userid).padStart(4, '0')+".png"
     let user=(await req.knex("t_users").where({id:req.params.userid}))[0]
-    await QRCode.toFile(QRfilename, JSON.stringify({guid:user.guid}),{width:1000})
+    await QRCode.toFile(QRfilename, /*JSON.stringify({guid:*/user.guid/*})*/,{width:1000})
     let seats=await req.knex("v_theatre_seats").where({userid:req.params.userid})
     if(seats.length==0)
         return res.json(0);
