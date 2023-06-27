@@ -78,7 +78,8 @@ block content
                         include sectBage
                     .persSection(v-if="section=='transfers'")
                         include sectTransfers
-
+                    .persSection(v-if="section=='culture'")
+                        include sectCulture
                     .persSection(v-if="section=='profile'")
                         include sectProfile
                     .persSection(v-if="section=='doc'")
