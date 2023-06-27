@@ -357,7 +357,11 @@ let personalApp = new Vue({
                     phone: this.user.phone,
                     email: this.user.email,
                     position: this.user.position,
-                    postAddress: this.user.postAddress
+                    postAddress: this.user.postAddress,
+                    passportNumber: this.user.passportNumber,
+                    passportDate: this.user.passportDate,
+                    passportCode: this.user.passportCode,
+                    address: this.user.address
                 })
                 if (!res) {
                     alert("Произошла ошибка, попробуйте позже")
