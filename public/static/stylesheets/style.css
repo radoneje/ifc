@@ -656,7 +656,7 @@ h2 {
     margin-top:8px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     margin-bottom: 64px;
 }
