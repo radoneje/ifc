@@ -466,7 +466,8 @@ async function sendTokenToServer(currentToken) {
     }
 }
 async function showRestorant(id){
-    await createPopUp("/fullScreenRestorant/"+id);
+    let dlg=await createPopUp("/fullScreenRestorant/"+id);
+    console.log(dlg)
     let img=document.querySelector(".FSPhotoItem");
     if(img)
     {
