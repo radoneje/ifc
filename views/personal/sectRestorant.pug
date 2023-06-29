@@ -8,5 +8,19 @@
                     p Команда Московских гастрономических Фестивалей (МГФ) / <a href="https://gastronomic.ru">gastronomic.ru</a>
 
 
+.participaintRow &nbsp;
+.participaintRow
+    .flex.left
+        each day in bank
+            .restTrackBtn #{day.title}
+
+        .
+each day in bank
+    if day.items && day.items.length>0
+        .participaintRow &nbsp;
+        .participaintRow
+            .menuItem.flex.center.left
+                .menuItemBox
+                .menuItemText #{day.time} #{day.title}
 
 
