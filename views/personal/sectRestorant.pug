@@ -9,22 +9,4 @@
 
 
 
-        .
-each day in bank
-    if day.items && day.items.length>0
-        .participaintRow &nbsp;
-        .participaintRow
-            .menuItem.flex.center.left
-                .menuItemBox
-                .menuItemText #{day.time} #{day.title}
-        .participaintRow
-            .restWr
-                each item in day.items
-                    .restItem(onclick="showRestorant("+item.id+")")
-                        .restItemPhoto
-                            img(src="/static/image/middle/"+item.coverphotoid loading="lazy")
-                        .restBody
-                            .restTitle #{item.title}
-                            .restAddress #{item.address}
-                            .restAddress #{item.phone}
 
