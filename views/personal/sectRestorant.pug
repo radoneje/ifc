@@ -15,7 +15,7 @@ each day in bank
     .participaintRow
         .restWr
             each item in day.items
-                .restItem
+                .restItem(onclick="showRestorant("+item.id+")")
                     .restItemPhoto
                         img(src="/static/image/middle/"+item.coverphotoid loading="lazy")
                     .restBody

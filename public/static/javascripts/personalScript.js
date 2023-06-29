@@ -465,4 +465,7 @@ async function sendTokenToServer(currentToken) {
         localStorage.setItem('sentFirebaseMessagingToken', currentToken);
     }
 }
+async function showRestorant(id){
+    await createPopUp("/restorant/"+id);
+}
 

@@ -9,6 +9,17 @@ router.get("/undefined",(req, res)=>{
 })
 
 
+router.get("/restorant/:id",async (req, res)=>{
+  try {
+    let r= await req.knex("v_restoraints").where({id: req.params.id})
+    res.render("restorant",{item:r[0]})
+  }
+  catch (e) {
+    console.warn(e)
+    res.json(e.message)
+  }
+})
+
 router.get("/liveplayer/:id/:lang",async (req, res)=>{
   try {
     let r= (await req.knex("v_live_halls").where({id: req.params.id}).orderBy("id"))
