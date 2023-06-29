@@ -2990,17 +2990,17 @@ align-items: center;
 width: 100%;
 }
 .restItemPhoto{
-    width: 100%;
-    height: auto;
-    display: block;
+
 }
 .restItemPhoto img{
     width: 100%;
     height: auto;
+    display: block;
 }
 .restBody{
     background: #F5F5F5;
 padding: 16px;
+    height: 112px;
 }
 .restAddress{
     font-size: 21px;
