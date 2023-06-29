@@ -418,22 +418,7 @@ for(let ts of timeslotsElems){
 
     })
 }
-function FSPhotoNext(ctrl){
-    let box=ctrl.parentNode;
-    let next =box.nextSibling;
-    if(next){
-        box.removeAttribute("active")
-        next.setAttribute("active","active")
-    }
-}
-function FSPhotoPrev(ctrl){
-    let box=ctrl.parentNode;
-    let next=box.previousSibling; // #foo1
-    if(next){
-        box.removeAttribute("active")
-        next.setAttribute("active","active")
-    }
-}
+
 /*if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
         navigator.serviceWorker.register('/sw.js').then(

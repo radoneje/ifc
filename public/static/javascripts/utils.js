@@ -293,5 +293,21 @@ if(head && upBtn){
     }, options)
         observer.observe(head)
 }
+function FSPhotoNext(ctrl){
+    let box=ctrl.parentNode;
+    let next =box.nextSibling;
+    if(next){
+        box.removeAttribute("active")
+        next.setAttribute("active","active")
+    }
+}
+function FSPhotoPrev(ctrl){
+    let box=ctrl.parentNode;
+    let next=box.previousSibling; // #foo1
+    if(next){
+        box.removeAttribute("active")
+        next.setAttribute("active","active")
+    }
+}
 
 
