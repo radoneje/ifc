@@ -3094,10 +3094,10 @@ padding: 32px 28px;
 }
 
 .restTrackBtn{
+    background: #E39A4F99;
 
-background: #e39a3f;
     font-size: 21px;
-    font-weight: 500;
+    font-weight: 300;
     line-height: 26px;
     letter-spacing: 0em;
     text-align: left;
@@ -3108,7 +3108,8 @@ background: #e39a3f;
 
 }
 .restTrackBtn:hover{
-    background: #E39A4F99;
+
+    background: #e39a3f;
 }
 
 @media all and (max-width: 1700px){
