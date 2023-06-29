@@ -2982,7 +2982,9 @@ align-items: center;
     margin-top: 20px;
 }
 .restWr{
-
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap:48px;
 }
 .restItem{
 width: 100%;
