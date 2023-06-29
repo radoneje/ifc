@@ -12,11 +12,12 @@
 .participaintRow
     .flex.left
         each day in bank
-            .restTrackBtn(onclick="document.location.href='#track"+day.id+"'") #{day.title}
+            if day.items && day.items.length>0
+            .   restTrackBtn(onclick="document.location.href='#track"+day.id+"'") #{day.title}
 
 
 each day in bank
-    if true
+    if day.items && day.items.length>0
         .participaintRow(id="track"+day.id) &nbsp;
         .participaintRow
             .menuItem.flex.center.left
