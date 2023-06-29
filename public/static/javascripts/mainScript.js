@@ -541,6 +541,6 @@ async function registerUserToPlayer(){
 
 }
 async function showSessionPhotos(folderId){
-    await createPopUp("/fullScreenPhoto/"+folderid)
+    await createPopUp("/fullScreenPhoto/"+folderId)
 }
 
