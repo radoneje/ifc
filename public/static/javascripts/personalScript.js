@@ -469,6 +469,9 @@ async function showRestorant(id){
     await createPopUp("/fullScreenRestorant/"+id);
     let img=documwnt.querySelector(".FSPhotoItem");
     if(img)
+    {
         img.setAttribute("active","active")
+        img.classList.add("active")
+    }
 }
 
