@@ -3052,6 +3052,15 @@ padding: 16px;
     text-align: left;
     margin-top: 12px;
 }
+.fsRestText{
+
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top:24px;
+}
 
 
 @media all and (max-width: 1700px){
