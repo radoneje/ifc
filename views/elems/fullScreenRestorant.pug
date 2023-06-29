@@ -1,6 +1,6 @@
 #restorant
     .restPhotos
-        .FSPhotoWr(style="padding-bottom: 56.25%;")
+        .FSPhotoWr(style="padding-bottom: 56.25%;overflow: hidden;")
             each photo in item.photos
                 .FSPhotoItem( id="photoitem" + photo.coverphotoid)
                     img(src="/static/image/middle/" + photo loading="lazy")
@@ -11,7 +11,7 @@
                     //.FSPhotoWrCopyright.flex.center.left
                         div &#169;&nbsp;
                         div ifcongress.ru
-                .FSrestBody
-                    .fsRestTitle #{item.title}
-                    .fsRestLid #{item.lid}
+            .FSrestBody
+                .fsRestTitle #{item.title}
+                .fsRestLid #{item.lid}
 
