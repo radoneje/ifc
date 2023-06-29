@@ -2987,7 +2987,8 @@ align-items: center;
     grid-gap:48px;
 }
 .restItem{
-width: 100%;
+    width: 100%;
+    cursor: pointer;
 }
 .restItemPhoto{
 
@@ -3001,6 +3002,9 @@ width: 100%;
     background: #F5F5F5;
 padding: 16px;
     height: 112px;
+}
+.restItem:hover .restBody{
+    background: #e3e3e3;
 }
 .restAddress{
     font-size: 21px;
