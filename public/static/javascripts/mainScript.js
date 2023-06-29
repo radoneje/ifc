@@ -540,7 +540,7 @@ async function registerUserToPlayer(){
 
 
 }
-function showSessionPhotos(folderId){
-    alert("show photos "+ folderId);
+async function showSessionPhotos(folderId){
+    await createPopUp("/fullScreenPhoto/"+folderid)
 }
 
