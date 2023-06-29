@@ -541,6 +541,6 @@ async function registerUserToPlayer(){
 
 }
 function showSessionPhotos(folderId){
-    alert("show photos");
+    alert("show photos "+ folderId);
 }
 
