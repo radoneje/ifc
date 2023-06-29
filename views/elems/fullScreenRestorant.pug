@@ -1,3 +1,12 @@
 #restorant
     .restPhotos
         each photo in item.photos
+            .FSPhotoItem(active=item.coverphotoid id="photoitem" + photo.coverphotoid)
+                img(src="/static/image/middle/" + photo loading="lazy")
+                .upBtn.flex.center.active.rBtn(onclick="FSPhotoNext(this)")
+                    include ../svg/arrowRightRed.svg
+                .upBtn.flex.center.active.lBtn(onclick="FSPhotoPrev(this)")
+                    include ../svg/arrowRightRed.svg
+                //.FSPhotoWrCopyright.flex.center.left
+                    div &#169;&nbsp;
+                    div ifcongress.ru

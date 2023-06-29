@@ -466,6 +466,6 @@ async function sendTokenToServer(currentToken) {
     }
 }
 async function showRestorant(id){
-    await createPopUp("elems/fullScreenRestorant/"+id);
+    await createPopUp("/fullScreenRestorant/"+id);
 }
 
