@@ -6,9 +6,18 @@
                     .oSessionHallTitle Гид по ресторанам Петербурга
                     p Вы – эксперты в финансах и экономике. Мы – эксперты в гастрономии. Мы понимаем, что деловые и интеллектуальные задачи часто требуют более широкого контекста и неформальной обстановки, поэтому подготовили для вас гид лучших мест Петербурга, где вы можете продолжить диалог за пределами официальной программы: утром, вечером и даже ночью.
                     p Команда Московских гастрономических Фестивалей (МГФ) / <a href="https://gastronomic.ru">gastronomic.ru</a>
+
+    .participaintRow &nbsp;
+    .participaintRow
+        .flex.left
+            each day in bank
+                .restTrackBtn #{day.title}
+
+
+        .
 each day in bank
     if day.items.length>0
-        .participaintRow &nbsp;
+        .participaintRow(id="track"+day.id) &nbsp;
         .participaintRow
             .menuItem.flex.center.left
                 .menuItemBox
