@@ -424,7 +424,7 @@ router.get('/info/:lang?', checkAccess, async function(req, res, next) {
 
         let bank=[{id:1,time:"08:00-10:00", title:"Утрений трек"},{id:2,time:"18:00-22:00", title:"Бизнес-Ужин"},{id:3,time:"22:00-02:00", title:"Вечерний Трек"} ];
         for(let b of bank){
-            b.items=await req.knex("v_restoraints").where({dayid:b.id});
+            b.items=await req.knex("v_restoraints").where({dayid:b.id, isEnabled:true});
             if(!b.items)
                 b.items=[]
         }
