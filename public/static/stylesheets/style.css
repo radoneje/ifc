@@ -2985,10 +2985,12 @@ align-items: center;
 
 }
 .restItem{
-
+width: 100%;
 }
 .restItemPhoto{
-
+    width: 100%;
+    height: auto;
+    display: block;
 }
 .restItemPhoto img{
     width: 100%;
