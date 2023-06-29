@@ -3002,7 +3002,23 @@ width: 100%;
     background: #F5F5F5;
 padding: 16px;
 }
-.restAddress
+.restAddress{
+
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+.restTitle{
+
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+}
 
 
 @media all and (max-width: 1700px){
