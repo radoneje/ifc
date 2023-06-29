@@ -12,7 +12,7 @@ router.get("/undefined",(req, res)=>{
 router.get("/fullScreenRestorant/:id",async (req, res)=>{
   try {
     let r= await req.knex("v_restoraints").where({id: req.params.id})
-    res.render("felems/ullScreenRestorant",{item:r[0]})
+    res.render("elems/fullScreenRestorant",{item:r[0]})
   }
   catch (e) {
     console.warn(e)
