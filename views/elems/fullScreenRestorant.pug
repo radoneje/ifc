@@ -1,6 +1,6 @@
 #restorant
     .restPhotos
-        .FSPhotoWr
+        .FSPhotoWr(style="padding-bottom: 56.25%;")
             each photo in item.photos
                 .FSPhotoItem(active=item.coverphotoid id="photoitem" + photo.coverphotoid)
                     img(src="/static/image/middle/" + photo loading="lazy")
