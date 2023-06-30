@@ -3136,7 +3136,7 @@ a.restAddress{
     text-decoration: underline;
     display: block;
 }
-.playBtnWr h2{
+.playBtnWr h2.desktop{
     font-size: 44px;
     line-height: 52px;
 }
