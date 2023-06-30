@@ -3140,6 +3140,9 @@ a.restAddress{
     font-size: 44px;
     line-height: 52px;
 }
+.liveBtn{
+    cursor:pointer;
+}
 
 @media all and (max-width: 1700px){
 
