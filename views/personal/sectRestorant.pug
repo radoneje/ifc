@@ -1,4 +1,4 @@
-.participaintRow
+.participaintRow.restHead.desktop
     .oTrack.impotant(style="width: 100%;")
         .oSessionScroll
             .oSessionWr.flex.left
@@ -15,22 +15,22 @@
             if day.items && day.items.length>0
                 .restTrackBtn(onclick="document.location.href='#track"+day.id+"'") #{day.title}
 
-
-each day in bank
-    if day.items && day.items.length>0
-        .participaintRow.desktop &nbsp;
-        .participaintRow(id="track"+day.id)
-            .menuItem.flex.center.left
-                .menuItemBox
-                .menuItemText #{day.time} #{day.title}
-        .participaintRow
-            .restWr
-                each item in day.items
-                    .restItem(onclick="showRestorant("+item.id+")")
-                        .restItemPhoto
-                            img(src="/static/image/middle/"+item.coverphotoid loading="lazy")
-                        .restBody
-                            .restTitle #{item.title}
-                            .restAddress #{item.address}
-                            .restAddress #{item.phone}
+.restBody
+    each day in bank
+        if day.items && day.items.length>0
+            .participaintRow.desktop &nbsp;
+            .participaintRow(id="track"+day.id)
+                .menuItem.flex.center.left
+                    .menuItemBox
+                    .menuItemText #{day.time} #{day.title}
+            .participaintRow
+                .restWr
+                    each item in day.items
+                        .restItem(onclick="showRestorant("+item.id+")")
+                            .restItemPhoto
+                                img(src="/static/image/middle/"+item.coverphotoid loading="lazy")
+                            .restBody
+                                .restTitle #{item.title}
+                                .restAddress #{item.address}
+                                .restAddress #{item.phone}
 
