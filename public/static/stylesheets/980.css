@@ -724,6 +724,16 @@
         overflow-y: auto;
         width: 100%;
     }
+    .oSessionScroll::-webkit-scrollbar,  {
+        height: 4px;
+    }
+    .oSessionScroll::-webkit-scrollbar-track{
+        background-color: #c2c2c2;
+    }
+    .oSessionScroll::-webkit-scrollbar-thumb{
+        box-shadow: none;
+        background-color: #F1CCA7;
+    }
 
     .oTrack:not(.impotant) .oSessionScroll {
         width: calc(100% + 48px);
