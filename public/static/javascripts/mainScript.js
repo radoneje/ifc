@@ -432,7 +432,7 @@ for(let ts of timeslotsElems){
     });
 }*/
 var playerScript=null;
-document.querySelectorAll(".liveBtn").forEach(e=>{
+document.querySelectorAll(".liveBtn2").forEach(e=>{
     e.onclick=async ()=>{
 
         await openPlayerModal();
