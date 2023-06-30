@@ -1,4 +1,4 @@
-.participaintRow.restHead.desktop
+.participaintRow.restHead
     .oTrack.impotant(style="width: 100%;")
         .oSessionScroll
             .oSessionWr.flex.left
@@ -7,15 +7,15 @@
                     p Вы – эксперты в финансах и экономике. Мы – эксперты в гастрономии. Мы понимаем, что деловые и интеллектуальные задачи часто требуют более широкого контекста и неформальной обстановки, поэтому подготовили для вас гид лучших мест Петербурга, где вы можете продолжить диалог за пределами официальной программы: утром, вечером и даже ночью.
                     p Команда Московских гастрономических Фестивалей (МГФ) / <a href="https://gastronomic.ru">gastronomic.ru</a>
 
+.restBtns.desktop
+    .participaintRow.desktop &nbsp;
+    .participaintRow
+        .flex.left.restButtons
+            each day in bank
+                if day.items && day.items.length>0
+                    .restTrackBtn(onclick="document.location.href='#track"+day.id+"'") #{day.title}
 
-.participaintRow.desktop &nbsp;
-.participaintRow
-    .flex.left.restButtons
-        each day in bank
-            if day.items && day.items.length>0
-                .restTrackBtn(onclick="document.location.href='#track"+day.id+"'") #{day.title}
-
-.restBody
+.restBody.desktop
     each day in bank
         if day.items && day.items.length>0
             .participaintRow.desktop &nbsp;
