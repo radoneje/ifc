@@ -1251,7 +1251,7 @@ text-decoration: none !important;
     max-height: calc(100vh - 48px);
     overflow-y: auto;
 }
-fullScreencontent
+
 
 .fullScreencontent::-webkit-scrollbar {
     width: 10px;
