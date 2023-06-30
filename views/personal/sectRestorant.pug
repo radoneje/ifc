@@ -18,8 +18,8 @@
 
 each day in bank
     if day.items && day.items.length>0
-        .participaintRow(id="track"+day.id).desktop &nbsp;
-        .participaintRow
+        .participaintRow.desktop &nbsp;
+        .participaintRow(id="track"+day.id)
             .menuItem.flex.center.left
                 .menuItemBox
                 .menuItemText #{day.time} #{day.title}
