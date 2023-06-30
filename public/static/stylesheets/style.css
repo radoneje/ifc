@@ -1251,6 +1251,18 @@ text-decoration: none !important;
     max-height: calc(100vh - 48px);
     overflow-y: auto;
 }
+fullScreencontent
+
+.fullScreencontent::-webkit-scrollbar {
+    width: 10px;
+}
+.fullScreencontent::-webkit-scrollbar-track {
+    background-color: #c2c2c2;
+}
+.fullScreencontent::-webkit-scrollbar-thumb {
+    box-shadow: none;
+    background-color: #F1CCA7;
+}
 
 .fullScreenCloseNotSave {
     position: absolute;
