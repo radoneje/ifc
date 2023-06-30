@@ -31,6 +31,9 @@
                                 img(src="/static/image/middle/"+item.coverphotoid loading="lazy")
                             .restBody
                                 .restTitle #{item.title}
-                                .restAddress #{item.address}
+                                if item.map
+                                    a.restAddress(href=item.map target="_blank") #{item.address}
+                                else
+                                    .restAddress #{item.address}
                                 .restAddress #{item.phone}
 

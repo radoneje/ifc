@@ -3125,6 +3125,9 @@ padding: 32px 28px;
     color:#FFFFFF;
     background: #e39a3f;
 }
+a.restAddress{
+    text-decoration: underline;
+}
 
 @media all and (max-width: 1700px){
 
