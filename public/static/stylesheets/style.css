@@ -3041,6 +3041,13 @@ padding: 16px;
 }
 .FSrestBody{
     padding: 48px;
+    color:#878787;
+}
+.fsDiscountTitle{
+    color: #263378;
+}
+.fsDiscountText{
+    color:#878787;
 }
 .fsRestTitle{
 
