@@ -165,7 +165,10 @@
 
 
             .oficialPartner.partner(onclick="window.open('https://www.vedomosti.ru/')")
-                include  ../partners/vedomosti.svg
+                if ru
+                    include  ../partners/vedomosti.svg
+                else
+                    include  ../partners/vedomosti_en.svg
             .oficialPartner.partner(onclick="window.open('https://econs.online/')")
                 if ru
                     include  ../partners/econs.svg
