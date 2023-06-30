@@ -318,7 +318,7 @@ async function checkTrStatus(playBtnWr,playNoBtnWr){
     let r=await getJson("/checkTrStatus")
     if(r)
     {
-        if(r.btn){
+        if(r.isButton){
             playBtnWr.style.display="block"
             playNoBtnWr.style.display="none"
         }
