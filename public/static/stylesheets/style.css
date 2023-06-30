@@ -3165,6 +3165,13 @@ a.restAddress{
         top: inherit;
         color: #FFFFFF;
         padding-left: 48px;
+
+        bottom: 104px;
+        font-size: 44px;
+        font-weight: 300;
+        line-height: 52px;
+        text-align: left;
+
     }
 
     .
