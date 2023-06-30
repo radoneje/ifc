@@ -10,7 +10,7 @@ router.get("/undefined",(req, res)=>{
 
 router.get("/checkTrStatus",async (req, res)=>{
   let r= await req.knex("t_livestatus")
-  res.json({isButton:r[0].isButton})
+  res.json({IsButton:r[0].IsButton})
 })
 
 
