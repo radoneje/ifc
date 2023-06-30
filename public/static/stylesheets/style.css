@@ -3144,7 +3144,7 @@ a.restAddress{
     cursor:pointer;
     position: absolute;
     bottom: 102px;
-    left: calc( 80% - 18px);
+    left: 41px;
 }
 
 @media all and (max-width: 1700px){
