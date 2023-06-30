@@ -3136,6 +3136,10 @@ a.restAddress{
     text-decoration: underline;
     display: block;
 }
+.playBtnWr h2{
+    font-size: 44px;
+    line-height: 52px;
+}
 
 @media all and (max-width: 1700px){
 
