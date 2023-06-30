@@ -1253,13 +1253,13 @@ text-decoration: none !important;
 }
 
 
-.fullScreencontent::-webkit-scrollbar {
+.fullScreencontent::-webkit-scrollbar, .pSpkBody::-webkit-scrollbar {
     width: 10px;
 }
-.fullScreencontent::-webkit-scrollbar-track {
+.fullScreencontent::-webkit-scrollbar-track, .pSpkBody::-webkit-scrollbar-track {
     background-color: #c2c2c2;
 }
-.fullScreencontent::-webkit-scrollbar-thumb {
+.fullScreencontent::-webkit-scrollbar-thumb, .pSpkBody::-webkit-scrollbar-thumb {
     box-shadow: none;
     background-color: #F1CCA7;
 }
