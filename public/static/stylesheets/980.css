@@ -1376,6 +1376,12 @@
     .fsDiscountWr{
         padding: 12px;
     }
+    .restButtons{
+        display: block;
+    }
+    .restTrackBtn{
+        margin-top:8px;
+    }
 
 }
 

@@ -8,9 +8,9 @@
                     p Команда Московских гастрономических Фестивалей (МГФ) / <a href="https://gastronomic.ru">gastronomic.ru</a>
 
 
-.participaintRow &nbsp;
+.participaintRow.desktop &nbsp;
 .participaintRow
-    .flex.left
+    .flex.left.restButtons
         each day in bank
             if day.items && day.items.length>0
                 .restTrackBtn(onclick="document.location.href='#track"+day.id+"'") #{day.title}
@@ -18,7 +18,7 @@
 
 each day in bank
     if day.items && day.items.length>0
-        .participaintRow(id="track"+day.id) &nbsp;
+        .participaintRow(id="track"+day.id).desktop &nbsp;
         .participaintRow
             .menuItem.flex.center.left
                 .menuItemBox
