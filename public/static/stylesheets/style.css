@@ -3165,13 +3165,15 @@ a.restAddress{
         top: inherit;
         color: #FFFFFF;
         padding-left: 48px;
-
         bottom: 104px;
-        font-size: 44px;
+        font-size: 38px;
         font-weight: 300;
-        line-height: 52px;
+        line-height: 45px;
         text-align: left;
 
+    }
+    .liveBtn2{
+        bottom: 40px;
     }
 
     .
