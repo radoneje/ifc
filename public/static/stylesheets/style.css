@@ -242,8 +242,8 @@ input {
     width: 138px;
 }
 .mainImg2Wr h2.desktop {
-
-    left: 41px;
+top:112px;
+left: 41px;
 
 }
 .mainImg2Wr .menu {
@@ -3143,8 +3143,9 @@ a.restAddress{
 .liveBtn2{
     cursor:pointer;
     position: absolute;
-    bottom: 102px;
-    left: 41px;
+
+    bottom: 48px;
+    left: 88px;
 }
 
 @media all and (max-width: 1700px){
