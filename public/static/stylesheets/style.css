@@ -3142,6 +3142,9 @@ a.restAddress{
 }
 .liveBtn{
     cursor:pointer;
+    position: absolute;
+    top: 0;
+    left: calc( 80% - 18px);
 }
 
 @media all and (max-width: 1700px){
