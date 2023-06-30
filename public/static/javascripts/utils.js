@@ -310,4 +310,24 @@ function FSPhotoPrev(ctrl){
     }
 }
 
+let playBtnWr=document.querySelector(".playBtnWr")
+if(playBtnWr)
+    checkTrStatus(playBtnWr, document.querySelector(".playNoBtnWr"))
 
+async function checkTrStatus(playBtnWr,playNoBtnWr){
+    let r=await getJson("/checkTrStatus")
+    if(r)
+    {
+        if(r.btn){
+            playBtnWr.style.display="block"
+            playNoBtnWr.style.display="none"
+        }
+        else
+        {
+            playBtnWr.style.display="none"
+            playNoBtnWr.style.display="block"
+        }
+    }
+
+    setTimeout(async ()=>{await checkTrStatus(playBtnWr,playNoBtnWr)},20*1000);
+}

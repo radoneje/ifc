@@ -3147,6 +3147,9 @@ a.restAddress{
     bottom: 48px;
     left: 88px;
 }
+.playBtnWr{
+    display: none;
+}
 
 @media all and (max-width: 1700px){
 

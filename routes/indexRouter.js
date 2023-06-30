@@ -9,6 +9,14 @@ router.get("/undefined",(req, res)=>{
 })
 
 
+
+
+router.get("/checkTrStatus",async (req, res)=>{
+  let r= await req.knex("t_livestatus")
+  res.json({btn:r[0].status})
+})
+
+
 router.get("/fullScreenRestorant/:id",async (req, res)=>{
   try {
     let r= await req.knex("v_restoraints").where({id: req.params.id})
