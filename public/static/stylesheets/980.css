@@ -724,7 +724,7 @@
         overflow-y: auto;
         width: 100%;
     }
-    .oSessionScroll::-webkit-scrollbar,  {
+    .oSessionScroll::-webkit-scrollbar  {
         height: 4px;
     }
     .oSessionScroll::-webkit-scrollbar-track{
