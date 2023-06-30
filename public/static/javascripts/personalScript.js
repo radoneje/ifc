@@ -467,7 +467,7 @@ async function sendTokenToServer(currentToken) {
 }
 async function showRestorant(id){
     let dlg=await createPopUp("/fullScreenRestorant/"+id);
-    console.log(dlg)
+    document.querySelector(".fullScreenBox").classList.add("fsPhotoBoxFirst")
     //dlg.parentNode.style.maxWidth="600px"
     dlg.parentNode.style.padding=0;
     let img=document.querySelector(".FSPhotoItem");

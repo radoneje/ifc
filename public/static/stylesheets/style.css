@@ -1243,6 +1243,9 @@ text-decoration: none !important;
     width: min(100%, 1100px);
     position: relative;
 }
+.fullScreenBox.fsPhotoBoxFirst {
+    width: min(100%, 850px);
+}
 
 .fullScreencontent {
     max-height: calc(100vh - 48px);
@@ -3089,7 +3092,6 @@ padding: 32px 28px;
 
 }
 .restPhotos{
-    max-width: 600px;
     margin: 0 auto;
 }
 
