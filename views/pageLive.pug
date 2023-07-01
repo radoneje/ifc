@@ -8,6 +8,7 @@ block head
 block content
     include personal/playerWindow
     script.
+        var playerScript=null;
         if (typeof (Vue) == "undefined") {
             let vueScript = document.createElement("script")
             vueScript.src = "/static/lib/vue.min.js";
