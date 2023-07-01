@@ -25,7 +25,7 @@ router.get("/fullScreenRestorant/:id",async (req, res)=>{
   }
 })
 
-outer.get("/live",async (req, res)=>{
+router.get("/live",async (req, res)=>{
   try {
     res.render("personal/playerWindow",{lang:"ru", ru:true})
 
