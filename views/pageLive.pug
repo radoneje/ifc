@@ -7,6 +7,8 @@ block head
         title="FINANCIAL CONGRESS OF THE BANK OF RUSSIA: Programme"
 block content
     include personal/playerWindow
+    script(src="/static/javascripts/utils.js")
+    script(src="/static/javascripts/mainScript.js")
     script.
         var playerScript=null;
         if (typeof (Vue) == "undefined") {
