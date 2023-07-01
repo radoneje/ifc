@@ -25,6 +25,16 @@ router.get("/fullScreenRestorant/:id",async (req, res)=>{
   }
 })
 
+outer.get("/live",async (req, res)=>{
+  try {
+    res.render("personal/playerWindow",{lang:"ru", ru:true})
+
+  }
+  catch (e) {
+    console.warn(e)
+    res.json(e.message)
+  }
+})
 router.get("/liveplayer/:id/:lang",async (req, res)=>{
   try {
     let r= (await req.knex("v_live_halls").where({id: req.params.id}).orderBy("id"))
@@ -45,6 +55,7 @@ router.get("/liveplayer/:id/:lang",async (req, res)=>{
     res.json(e.message)
   }
 })
+
 router.get("/liveStatus",async (req, res)=>{
   let ret={
     liveStatus:(await req.knex("t_livestatus"))[0],
