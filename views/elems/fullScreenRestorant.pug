@@ -14,7 +14,13 @@
     .FSrestBody
                 .fsRestTitle #{item.title}
                 .fsRestLid #{item.lid}
-                .fsRestAddress #{item.address} #{item.phone}
+                .fsRestAddress
+                    if item.map
+                        a.restAddress(href=item.map target="_blank") #{item.address}
+                    else
+                        span #{item.address}
+                    span
+                        a(href="tel:"+ item.phone) #{item.phone}
                 .fsRestText #{item.descr}
                 if item.discount
                     .fsDiscountWr
