@@ -2146,7 +2146,7 @@ text-decoration: none !important;
     box-sizing: border-box;
     width: calc(100% - 400px);
     padding: 24px 100px;
-    padding-top:0;
+    padding-top:4;
     max-height: calc(100vh - 134px);
     overflow-y: scroll;
 }
