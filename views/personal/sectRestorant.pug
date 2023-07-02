@@ -27,8 +27,9 @@
                 .restWr
                     each item in day.items
                         .restItem(onclick="showRestorant("+item.id+")")
-                            .restItemPhoto
-                                img(src="/static/image/middle/"+item.coverphotoid loading="lazy")
+                            if item.coverphotoid
+                                .restItemPhoto
+                                    img(src="/static/image/middle/"+item.coverphotoid loading="lazy")
                             .restBody
                                 .restTitle #{item.title}
                                 if item.map
