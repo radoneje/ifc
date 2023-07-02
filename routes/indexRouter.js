@@ -19,7 +19,7 @@ router.get("/fullScreenVideoFile/:id",async (req, res)=>{
     let r= await req.knex("t_files").where({guid: req.params.id})
     if(r.length==0)
       return res.sendStatus(404);
-    res.render("elems/fullScreenVideoFile",{src:"/static/videofile/"+r[0].filename})
+    res.render("elems/fullScreenVideoFile",{src:"/uploads/"+r[0].filename})
   }
   catch (e) {
     console.warn(e)
