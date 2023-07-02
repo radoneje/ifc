@@ -20,7 +20,7 @@
                     else
                         span &nbsp; #{item.address}
                     span
-                        a(href="tel:"+ item.phone style="display:block;margin-top:.5em") #{item.phone}
+                        a(href="tel:"+ item.phone style="display:block;margin-top:.5em" onclick="window.open('tel:"+item.phone+"')") #{item.phone}
                 .fsRestText #{item.descr}
                 if item.discount
                     .fsDiscountWr
