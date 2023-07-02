@@ -53,6 +53,7 @@ block content
                             .persNavItem(v-on:click="personalMobileMenuClose();section='hotel'" v-bind:class="{active:section=='hotel'}") Отели
                             //.persNavItem(v-on:click="section='transfer'" v-bind:class="{active:section=='transfer'}") Трансферы
                             .persNavItem(v-on:click="personalMobileMenuClose();section='place'" v-bind:class="{active:section=='place'}") Место проведения
+                            .persNavItem(v-on:click="personalMobileMenuClose();section='restorant'" v-bind:class="{active:section=='restorant'}") Ресторанный гид
                             .persNavItem(v-on:click="personalMobileMenuClose();section='feedback'" v-bind:class="{active:section=='feedback'}") Обратная связь
                             .persNavItem.mobile(href="/personal/exit/"+lang) выход
                         else
