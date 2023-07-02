@@ -29,7 +29,7 @@
                         .restItem(onclick="showRestorant("+item.id+")")
                             if item.coverphotoid
                                 .restItemPhoto
-                                    img(src="/static/image/middle/"+item.coverphotoid loading="lazy")
+                                    img(src="/static/image/middle/"+item.coverphotoid loading="lazy" width="1280" height="720" alt=item.title)
                             .restBody
                                 .restTitle #{item.title}
                                 if item.map
