@@ -5,6 +5,8 @@ block head
         title="Финансовый Конгресс Банка России: Программа"
     else
         title="FINANCIAL CONGRESS OF THE BANK OF RUSSIA: Programme"
+
+    link(rel='stylesheet', href='/static/lib/video-js.min.css')
 block content
     include elems/internalHead
     .tower#newsPage
@@ -51,5 +53,6 @@ block content
 
     script(src="/static/javascripts/utils.js")
     script(src="/static/javascripts/mainScript.js")
+    script(src="/static/lib/video.min.js")
 
 
