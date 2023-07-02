@@ -14,6 +14,19 @@ router.get("/checkTrStatus",async (req, res)=>{
 })
 
 
+router.get("/fullScreenVideoFile/:id",async (req, res)=>{
+  try {
+    let r= await req.knex("t_files").where({guid: req.params.id})
+    if(t.length==0)
+      return res.sendStatus(404);
+    res.render("elems/fullScreenVideoFile",{src:"/static/videofile/"+r[0].filename})
+  }
+  catch (e) {
+    console.warn(e)
+    res.json(e.message)
+  }
+})
+
 router.get("/fullScreenRestorant/:id",async (req, res)=>{
   try {
     let r= await req.knex("v_restoraints").where({id: req.params.id})
