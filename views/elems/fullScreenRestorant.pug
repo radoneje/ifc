@@ -16,11 +16,11 @@
                 .fsRestLid #{item.lid}
                 .fsRestAddress
                     if item.map
-                        a.restAddress(href=item.map target="_blank") #{item.address}
+                        a.restAddress(href=item.map target="_blank" style="display: inline-block;") #{item.address}
                     else
-                        span #{item.address}
-                    span
-                        a(href="tel:"+ item.phone) #{item.phone}
+                        span &nbsp; #{item.address}
+                    span &nbsp;
+                        a(href="tel:"+ item.phone style="display: inline-block;") #{item.phone}
                 .fsRestText #{item.descr}
                 if item.discount
                     .fsDiscountWr
