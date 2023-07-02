@@ -82,11 +82,12 @@
                                                             .oSpkBox(onclick="showSpeaker("+spk.id+", '"+lang+"', "+isSpk+")")
                                                                 .oSessionSpkBoxName #{spk["i" + lang]} #{spk["f" + lang]}
                                                                     .oSessionSpkBoxPos  #{spk["company" + lang]}
-                                            .oSessionSpkBox.pgmQBox(sessionid=session.id)
-                                                input(placeholder="Ваше Имя")
-                                                textarea(placeholder="Напишите вопрос здесь")
-                                                .pqmQBtn задать вопрос
-                                                .pgmQloader
-                                                    include ../svg/loader.svg
-                                                .pgmQSuccess Вопрос передан организаторам
+                                            if(!ts.isImpotant)
+                                                .oSessionSpkBox.pgmQBox(sessionid=session.id)
+                                                    input(placeholder="Ваше Имя")
+                                                    textarea(placeholder="Напишите вопрос здесь")
+                                                    .pqmQBtn задать вопрос
+                                                    .pgmQloader
+                                                        include ../svg/loader.svg
+                                                    .pgmQSuccess Вопрос передан организаторам
 
