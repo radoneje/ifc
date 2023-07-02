@@ -951,8 +951,8 @@
     }
 
     .persNavItem {
-        margin-bottom: 8px;
-        padding: 16px 12px;
+        margin-bottom: 0;
+        padding: 10px 12px;
         width: 100%;
         color: #FFFFFF;
         text-align: center;
