@@ -465,16 +465,5 @@ async function sendTokenToServer(currentToken) {
         localStorage.setItem('sentFirebaseMessagingToken', currentToken);
     }
 }
-async function showRestorant(id){
-    let dlg=await createPopUp("/fullScreenRestorant/"+id);
-    document.querySelector(".fullScreenBox").classList.add("fsPhotoBoxFirst")
-    //dlg.parentNode.style.maxWidth="600px"
-    dlg.parentNode.style.padding=0;
-    let img=document.querySelector(".FSPhotoItem");
-    if(img)
-    {
-        img.setAttribute("active","active")
-        img.classList.add("active")
-    }
-}
+
 
