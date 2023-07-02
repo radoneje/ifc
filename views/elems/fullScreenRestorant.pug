@@ -16,7 +16,7 @@
                 .fsRestLid #{item.lid}
                 .fsRestAddress
                     if item.map
-                        a.restAddress(href=item.map target="_blank" style="") #{item.address}
+                        a.restAddress(href=item.map target="_blank" style="" onclick="window.open('"+item.map+"')") #{item.address}
                     else
                         span &nbsp; #{item.address}
                     span
