@@ -3,7 +3,7 @@
         .FSPhotoWr(style="padding-bottom: 56.25%;overflow: hidden;")
             each photo in item.photos
                 .FSPhotoItem( id="photoitem" + photo.coverphotoid)
-                    img(src="/static/image/middle/" + photo loading="lazy")
+                    img(src="/static/image/middle/" + photo loading="lazy" onclick="FSPhotoNext(this)")
                     .upBtn.flex.center.active.rBtn(onclick="FSPhotoNext(this)")
                         include ../svg/arrowRightRed.svg
                     .upBtn.flex.center.active.lBtn(onclick="FSPhotoPrev(this)")
