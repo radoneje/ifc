@@ -17,6 +17,19 @@ import * as child from 'child_process';
 
 
 /* GET home page. */
+router.get('/videofile/:id', async function (req, res, next) {
+    try {
+        let r = await req.knex("t_files").where({guid: req.params.id})
+        if (r.length==0)
+            return res.sendStatus(404)
+
+
+        res.redirect("https://ifcongress.ru/uploads/"+ r[0].filename)
+    } catch (e) {
+        console.error(e)
+        res.sendStatus(500)
+    }
+});
 
 router.get('/file/:id', async function (req, res, next) {
     try {
