@@ -474,7 +474,7 @@ router.get('/ticket/:userid/:lang?', async function (req, res, next) {
             /*x*/ 98 , /*y*/ 1620)
     if (seat.isvip){
         doc.addPage()
-            //.image(__dirname+"/../forpdf/ticketvip.png",0,0,{width:600})
+            .image(__dirname+"/../forpdf/ticketvip.png",0,0,{width:300})
             //.image(QRfilename,780,1620, {width:300})
     }
     doc.end();
