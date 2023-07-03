@@ -440,10 +440,13 @@ router.get('/ticket/:userid/:lang?', async function (req, res, next) {
     let QRfilename="/var/ifc_data/userQr/"+String(req.params.userid).padStart(4, '0')+".png"
     let user=(await req.knex("t_users").where({id:req.params.userid}))[0]
     await QRCode.toFile(QRfilename, /*JSON.stringify({guid:*/user.guid/*})*/,{width:1000})
-    let seats=await req.knex("v_theatre_seats").where({userid:req.params.userid})
+    let seats=await req.knex("v_theatre_seats").where({userid:req.params.userid});
+
+
     if(seats.length==0)
         return res.json(0);
     let seat=seats[0];
+
 
 
 //
@@ -469,6 +472,10 @@ router.get('/ticket/:userid/:lang?', async function (req, res, next) {
         .font("/var/fonts/Stem-Light.ttf")
         .text(seat.section.toUpperCase()+", "+seat.side.toUpperCase()+" "+seat.lounge.toUpperCase()+"\n"+seat.row.toUpperCase()+" "+seat.seat.toUpperCase() ,
             /*x*/ 98 , /*y*/ 1620)
+    if (seat.isvip){
+        doc.addPage()
+            .image(QRfilename,780,1620, {width:300})
+    }
     doc.end();
     //let compressed=filename.replace(/(.pdf)$/,'_comp.pdf');
 
