@@ -5,6 +5,13 @@
             .menuItemText Документы
         else
             .menuItemText Documents
+
+.participaintRow(v-if="user.isPay")
+    .participaintRowHead Закрывающие документы
+    .participaintRowContent
+        p закрывающие документы для бухгалтерии можно получить на стойке регистрации основной площадки Конгресса (ул.Декабристов, 34) 6 и 7 июля.
+        p Акты, которые не были переданы участнику на площадке, будут направлены заказным письмом по Почте России, начиная с 10-го июля. Просим заполнить поле "Почтовый адрес для документов" раздела "Профиль", если оно не было заполнено ранее для оперативной отправки.
+
 .participaintRow
     .participaintDocs
         .participaintDocsItem.flex.center.beetwen(v-for="f in user.files")
