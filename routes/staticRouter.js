@@ -478,6 +478,7 @@ router.get('/ticket/:userid/:lang?', async function (req, res, next) {
             //.image(QRfilename,780,1620, {width:300})
     }
     doc.end();
+
     //let compressed=filename.replace(/(.pdf)$/,'_comp.pdf');
 
 
