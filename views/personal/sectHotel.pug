@@ -27,51 +27,52 @@
 
 
 each hotel in hotels
+    if hotel.isEnabled=true
 
-    .participaintRow
-        .participaintRowHead
-            .hotelHead.flex.beetwen
-                .hotelName #{hotel['name' + lang]}
-                .hotelStarsWr.flex.cener
-                    .hotelStars
-                    - var n = 0;
-                    while n < hotel.stars
-                        - n++;
-                            include ../svg/hotelStar.svg
-                    .hotelLink
-                        if ru
-                            a.inline(href=hotel.link target="_blank") На сайт отеля
-                        else
-                            a.inline(href=hotel.link target="_blank") Holel site
-        .hotelDescrWr.flex.center.beetwen
-            .hotelImage
-                img(src="/static/image/middle/" + hotel.photoid  loading="lazy")
-            .hotelDescrBox
-                .hotelDescr #{hotel["descr"+lang]}
-                .hotelAddress #{hotel["address"+lang]}
+        .participaintRow
+            .participaintRowHead
+                .hotelHead.flex.beetwen
+                    .hotelName #{hotel['name' + lang]}
+                    .hotelStarsWr.flex.cener
+                        .hotelStars
+                        - var n = 0;
+                        while n < hotel.stars
+                            - n++;
+                                include ../svg/hotelStar.svg
+                        .hotelLink
+                            if ru
+                                a.inline(href=hotel.link target="_blank") На сайт отеля
+                            else
+                                a.inline(href=hotel.link target="_blank") Holel site
+            .hotelDescrWr.flex.center.beetwen
+                .hotelImage
+                    img(src="/static/image/middle/" + hotel.photoid  loading="lazy")
+                .hotelDescrBox
+                    .hotelDescr #{hotel["descr"+lang]}
+                    .hotelAddress #{hotel["address"+lang]}
 
-        .hotelRooms
-            each room in hotel.rooms
-                if room.isEnabled
-                    .hotelRoom
-                        .flex.center.beetwen
-                            .roomNameWr
-                                .roomName #{room["title"+lang]}
-                                .roomPrice !{String(room.price).replace(/000$/," 000")} &#8381;
-                            .roomBookWr(v-if="user.roomid!="+room.id)
-                                if ru
-                                    .roomBookBtn(v-on:click="bookRoom("+room.id+", '"+hotel['name' + lang]+"')") Забронировать
-                                else
-                                    .roomBookBtn(v-on:click="bookRoom("+room.id+", '"+hotel['name' + lang]+"')") Book Hotel
-                            .roomBookWr(v-else)
-                                .roomBookConfirmWr.flex.center
+            .hotelRooms
+                each room in hotel.rooms
+                    if room.isEnabled
+                        .hotelRoom
+                            .flex.center.beetwen
+                                .roomNameWr
+                                    .roomName #{room["title"+lang]}
+                                    .roomPrice !{String(room.price).replace(/000$/," 000")} &#8381;
+                                .roomBookWr(v-if="user.roomid!="+room.id)
                                     if ru
-                                        .roomBookConfirm Ваша заявка отправлена в отель,<br>менеджер с вами свяжется.
-                                        .roomBookBtn.roomBookConfirmBtn Ваш выбор
+                                        .roomBookBtn(v-on:click="bookRoom("+room.id+", '"+hotel['name' + lang]+"')") Забронировать
                                     else
-                                        .roomBookConfirm Your request will go to the booking service of the hotel you have selected.
-                                        .roomBookBtn.roomBookConfirmBtn Your choice
-                        .roomDescr #{room["descr"+lang]}
+                                        .roomBookBtn(v-on:click="bookRoom("+room.id+", '"+hotel['name' + lang]+"')") Book Hotel
+                                .roomBookWr(v-else)
+                                    .roomBookConfirmWr.flex.center
+                                        if ru
+                                            .roomBookConfirm Ваша заявка отправлена в отель,<br>менеджер с вами свяжется.
+                                            .roomBookBtn.roomBookConfirmBtn Ваш выбор
+                                        else
+                                            .roomBookConfirm Your request will go to the booking service of the hotel you have selected.
+                                            .roomBookBtn.roomBookConfirmBtn Your choice
+                            .roomDescr #{room["descr"+lang]}
 
 
 

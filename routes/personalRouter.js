@@ -417,7 +417,7 @@ router.get('/info/:lang?', checkAccess, async function(req, res, next) {
             }
         }
 
-        let hotels=await req.knex("v_hotels").where({isEnabled:true}).orderBy("stars").orderBy("nameru")
+        let hotels=await req.knex("v_hotels").orderBy("stars").orderBy("nameru")
         let section="";
         if(req.query.section)
             section=req.query.section;
