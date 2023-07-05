@@ -7,6 +7,9 @@ const router = express.Router();
 router.get("/undefined",(req, res)=>{
   res.sendStatus(401)
 })
+router.get("/dune",(req, res)=>{
+  res.render("dune")
+})
 
 router.get("/checkTrStatus",async (req, res)=>{
   let r= await req.knex("t_livestatus")

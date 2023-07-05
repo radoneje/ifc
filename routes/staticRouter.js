@@ -484,23 +484,8 @@ router.get('/ticket/:userid/:lang?', async function (req, res, next) {
 
     setTimeout(()=>{
         res.download(filename)
-        /*let pr=child.spawn("gs", [
-            "-sDEVICE=pdfwrite",
-            "-dCompatibilityLevel=1.4",
-            "-dPDFSETTINGS=/ebook",
-            "-dCompressFonts=true",
-            "-dCompressEntireFile=true",
-            "-dNOPAUSE",
-            "-dQUIET",
-            "-dBATCH",
-            "-sOutputFile="+compressed,
-            filename
-
-        ])
-        pr.on("close", code => {
-            res.download(compressed)
-        });*/
-    },500)
+        
+    },700)
 
 
 
