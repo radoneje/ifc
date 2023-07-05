@@ -319,20 +319,20 @@ async function checkTrStatus(playBtnWr,playNoBtnWr){
     if(r)
     {
         if(r.IsButton){
-            document.querySelector(".playBtnWr").forEach(b=>{
+            document.querySelectorAll(".playBtnWr").forEach(b=>{
                 b.style.display="block"
             })
-            document.querySelector(".playNoBtnWr").forEach(b=>{
+            document.querySelectorAll(".playNoBtnWr").forEach(b=>{
                 b.style.display="none"
             })
 
         }
         else
         {
-            document.querySelector(".playBtnWr").forEach(b=>{
+            document.querySelectorAll(".playBtnWr").forEach(b=>{
                 b.style.display="none"
             })
-            document.querySelector(".playNoBtnWr").forEach(b=>{
+            document.querySelectorAll(".playNoBtnWr").forEach(b=>{
                 b.style.display="block"
             })
         }
