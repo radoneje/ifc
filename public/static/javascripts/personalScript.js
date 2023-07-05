@@ -26,7 +26,7 @@ let personalApp = new Vue({
     methods: {
         //
         downloadTicket: async function (user) {
-            window.open("https://https://ifcongress.ru/static/ticket/"+user.id)
+            window.open("https://ifcongress.ru/static/ticket/"+user.id)
         },
         colleguesDialogShow: async function (event) {
           let elem=await createPopUp("/personal/colleguesDialog") ;
