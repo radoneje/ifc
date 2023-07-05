@@ -4,6 +4,22 @@ html(lang="ru")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         meta(charset="utf-8")
         meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+        style.
+            .videoWr {
+                position: relative;
+                width: 100%;
+                height: 0;
+                padding-bottom: 56.25%;
+                overflow: hidden;
+            }
+
+            .videoWrContent, .videoWr #player {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+
     body
-        video#player(src="https://static.sber.link/aij2022streams/sber_city_4.mp4" controls)
+        .videoWr
+            video#player(src="https://static.sber.link/aij2022streams/sber_city_4.mp4" controls)
         button(onclick="player.play()") Play
