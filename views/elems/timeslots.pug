@@ -48,7 +48,7 @@
                                                     .oSessionDetails(onclick="showSession(" + session.id + ", '" + lang + "', " + isSpk + ")") подробнее
                                                 else
                                                     .oSessionDetails(onclick="showSession(" + session.id + ", '" + lang + "', " + isSpk + ")") details
-                                                if session.videofile
+                                                if session.videofile && session.videoenable
                                                         if ru
                                                             .oSessionDetails( onclick="showVideoFile('"+session.videofile+"')" style="margin-left: 8px;padding-right: 6px;;padding-left: 9px;padding-top: 4px;padding-bottom: 0px;")
                                                                 <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
