@@ -16,7 +16,7 @@ html(lang="ru")
         script(src="/static/lib/video.min.js")
         script.
             let player=videojs(document.querySelector("#player"))
-            player.tech_.on("retryplaylist", () => {
+            /*player.tech_.on("retryplaylist", () => {
                     if (FailCount >= 5) {
                         setTimeout(() => {
                             let elems = document.querySelectorAll(".safaryQMenuItem")
@@ -35,9 +35,9 @@ html(lang="ru")
                         FailCount++
                     console.warn("player failk", FailCount)
                 }
-            )
+            )*/
 
-            player.on('error', function (event) {
+            /*player.on('error', function (event) {
 
 
             })
@@ -64,4 +64,4 @@ html(lang="ru")
                     type: 'player',
                     message: "volumechange"
                 }, '*');
-            });
+            });*/
