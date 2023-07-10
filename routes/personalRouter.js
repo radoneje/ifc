@@ -405,7 +405,7 @@ router.get('/data', async function(req, res, next) {
     }
 });
 router.get('/info/:lang?', checkAccess, async function(req, res, next) {
-    return res.sendStatus(404)
+    //return res.sendStatus(404)
     try {
         if(!req.params.lang.match(/ru|en/))
             req.params.lang="ru";
