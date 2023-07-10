@@ -371,7 +371,7 @@ router.post('/setPaySelf', async function(req, res, next) {
     }
 });
 router.get('/data', async function(req, res, next) {
-    return res.sendStatus(404)
+    //return res.sendStatus(404)
     try {
         if(!req.session.token)
             return res.sendStatus(401)
