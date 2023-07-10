@@ -506,7 +506,7 @@ router.get('/exit/:lang?', async function(req, res, next) {
         }
     });
 router.get('/:lang?', async function(req, res, next) {
-    return res.send(404)
+    return res.sendStatus(404)
     try {
 
         if(!(req.params.lang && req.params.lang.match(/ru|en/)))
