@@ -507,7 +507,10 @@ router.get('/exit/:lang?', async function(req, res, next) {
         }
     });
 router.get('/:lang?', async function(req, res, next) {
-    return res.sendStatus(404)
+    //return res.sendStatus(404)
+    if(!(req.query.token && req.query.token.match(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i)))
+        return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
+
     try {
 
         if(!(req.params.lang && req.params.lang.match(/ru|en/)))
