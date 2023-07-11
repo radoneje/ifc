@@ -299,7 +299,7 @@ router.get('/photos/:lang?', async function(req, res, next) {
   })
   res.render('pagePhotos',{days, lang:req.params.lang, ru:req.params.lang=="ru", apiUrl:config.apiUrl} );
 });
-router.get('/photos/:lang?', async function(req, res, next) {
+router.get('/videos/:lang?', async function(req, res, next) {
   if(!req.params.lang)
     return res.redirect("/photos/ru")
   if(!req.params.lang.match(/ru|en/))
