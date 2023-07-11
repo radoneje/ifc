@@ -557,7 +557,7 @@ router.get('/:lang?', async function(req, res, next) {
 });
 function to(){
     return new Promise((resp, rej)=>{
-        setTimeot((resp()),20000)
+        setTimeout((resp()),20000)
     })
 }
 
