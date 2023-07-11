@@ -528,8 +528,10 @@ async function registerUserToPlayer(){
 async function showSessionPhotos(folderId){
     await createPopUp("/fullScreenPhoto/"+folderId)
 }
-async function showVideoFile(fileid){
+async function showVideoFile(fileid, autostart=false){
     let ctrl=await createPopUp("/fullScreenVideoFile/"+fileid)
     let player=videojs(ctrl.querySelector("#player"))
+    if(autostart)
+        player.play();
 }
 
