@@ -510,9 +510,7 @@ router.get('/exit/:lang?', async function(req, res, next) {
             return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
         }
     });
-router.get('/:lang?', async function(req, res, next) {
-    return res.render("pagePersonalClose", {ru:true});
-})
+
 router.get('/test2/', async function(req, res, next) {
     res.json(req.session.token)
 });
@@ -567,6 +565,11 @@ router.get('/test/:lang?', async function(req, res, next) {
         return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
     }
 });
+
+router.get('/:lang?', async function(req, res, next) {
+    return res.render("pagePersonalClose", {ru:true});
+})
+
 function to(){
     return new Promise((resp, rej)=>{
         setTimeout(()=>{resp()},20000)
