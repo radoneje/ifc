@@ -22,7 +22,7 @@ block content
             .pgmDownloadBtnWr
             .photosWr
                 each day in days
-                    .photoDayItem(id="day" + day.id style="margin-bottom:24px")
+                    .photoDayItem(id="day" + day.id style="margin-bottom:36px")
                         .photoFolders
                             each folder in day.folders
                                 a.photoFolder(id="folder"+folder.id href="/photos/"+folder.id+"/"+lang)
