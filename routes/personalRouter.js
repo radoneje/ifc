@@ -377,7 +377,7 @@ router.get('/data', async function(req, res, next) {
 
             return res.sendStatus(401)
 
-        req.session.token.guid=null;
+        req.session.token.guid="234234324324";
 
         let r=await req.knex("v_personal_data").where({guid:req.session.token.guid})
 
