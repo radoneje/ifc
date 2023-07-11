@@ -30,7 +30,12 @@ block content
                                         .photoFolderImage
                                             img(src="/static/image/middle/" + folder.coverphotoid loading="lazy")
                                         .photoFolderImage.flex.center
-                                            .photoFolderPlay PLAY
+                                            .photoFolderPlay
+                                                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0 80L80 80L80 -3.05176e-05L6.99382e-06 -3.75114e-05L0 80Z" fill="#BB3E3F"/>
+                                                <path d="M30.666 23.9933V56.66L56.3327 40.3267L30.666 23.9933Z" fill="#E59B40"/>
+                                                </svg>
+
                                     .photoDescrBox
                                         .photoDescrBoxDate #{day["title_" + lang]}
                                         .photoDescrBoxTitle #{folder["title" + lang]}
