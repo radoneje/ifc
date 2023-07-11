@@ -545,6 +545,7 @@ router.get('/:lang?', async function(req, res, next) {
                     return res.sendStatus(401)
 
                 req.session.token = usr[0]
+                await to();
                 return res.redirect("/personal/info/"+req.params.lang)
             }
         }
@@ -554,7 +555,11 @@ router.get('/:lang?', async function(req, res, next) {
         return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
     }
 });
-
+function to(){
+    return new Promice((resp, rej)=>{
+        setTimeot((resp()),20000)
+    })
+}
 
 
 
