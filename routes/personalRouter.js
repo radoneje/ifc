@@ -511,7 +511,7 @@ router.get('/exit/:lang?', async function(req, res, next) {
         }
     });
 router.get('/:lang?', async function(req, res, next) {
-    return res.render("pagePersonalClose");
+    return res.render("pagePersonalClose", {ru:true});
 })
 router.get('/test/:lang?', async function(req, res, next) {
     //return res.sendStatus(404)
