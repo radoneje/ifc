@@ -377,7 +377,7 @@ router.get('/data', async function(req, res, next) {
 
             return res.sendStatus(401)
 
-        req.session.token.guid="234234324324";
+        //req.session.token.guid="234234324324";
 
         let r=await req.knex("v_personal_data").where({guid:req.session.token.guid})
 
@@ -511,6 +511,9 @@ router.get('/exit/:lang?', async function(req, res, next) {
         }
     });
 router.get('/:lang?', async function(req, res, next) {
+    return res.render("pagePersonalClose");
+})
+router.get('/test/:lang?', async function(req, res, next) {
     //return res.sendStatus(404)
     if(!(req.query.token && req.query.token.match(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i)))
         return res.render('pagePersonalNotLogin', {lang: req.params.lang, ru: req.params.lang == "ru"});
@@ -533,7 +536,7 @@ router.get('/:lang?', async function(req, res, next) {
 
         if(req.session.token) {
             await to();
-            return res.redirect("/personal/info/" + req.params.lang)
+            return res.redirect("/personal/info2/" + req.params.lang)
         }
 
         if(!(req.query.token && req.query.token.match(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i)))
@@ -552,7 +555,7 @@ router.get('/:lang?', async function(req, res, next) {
 
                 req.session.token = usr[0]
                 await to();
-                return res.redirect("/personal/info/"+req.params.lang)
+                return res.redirect("/personal/info2/"+req.params.lang)
             }
         }
     }

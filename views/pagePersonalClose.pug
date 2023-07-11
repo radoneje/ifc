@@ -1,0 +1,35 @@
+extends layout
+
+block head
+    if ru
+        title="Финансовый Конгресс Банка России: Вход в личный кабинет"
+    else
+        title="FINANCIAL CONGRESS OF THE BANK OF RUSSIA"
+block content
+    include elems/internalHead
+    .tower#participantsPage(class=ru?"":"en")
+        .subTower
+            .oNewsDecor
+                include svg/pgmDecor.svg
+            .newsDecor2
+                include svg/pgmDecor2.svg
+            if ru
+                .sectionTitle Личный кабинет
+            else
+                .sectionTitle PERSONAL ACCOUNT
+            .regBox.participaintHead
+
+                .participaintRow
+                    if ru
+                        div Финансовый конгресс Банка России 2033 завершил свою работу. Сервис личного кабинета будет доступен после открытия регистрации на следующее мероприятие.
+                        div Если у вас есть вопросы, пожалуйста, свяжитесь с Организационным комитетом по электронной почте <a href="mailto:info@ifcongress.ru">info@ifcongress.ru</a> или по телефону 8 800 300-69-23
+
+
+
+
+    include elems/footer
+    include elems/mobileMenu
+
+    script(src="/static/javascripts/utils.js")
+    script(src="/static/javascripts/mainScript.js")
+
