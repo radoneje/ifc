@@ -78,10 +78,10 @@ router.get('/image/:size/:id', async function (req, res, next) {
         let small=orig.replace("uploads","uploads/"+req.params.size)
        // console.log(orig,small )
 
-        /*if(fs.existsSync(small) ) {
+        if(fs.existsSync(small) ) {
             //console.log("downlod from cache", small)
             return res.download(small)
-        }*/
+        }
         //console.log("try resize")
 
         let size=150;
