@@ -311,9 +311,11 @@ router.get('/videos/:lang?', async function(req, res, next) {
       d.folders=[]
     d.folders=d.folders.filter(dd=>{return dd.isEnabled && !dd.isDeleted && dd.pgmsessionod});
     for(let f of d.folders){
-      f.session=(await req.knex("t_pgm_sessions").where({id:f.pgmsessionod}))[0]
+      f.session=(await req.knex("v_sessionwithtime").where({id:f.pgmsessionod}))[0]
+      if(req.params.lang!="ru")
+        f.session.videofile=f.session.videofileen;
     }
-    d.folders.sort((a,b)=>{return a.sort-b.sort});
+    d.folders.sort((a,b)=>{return a.session.time_ru.localeCompare(b.session.time_ru)});
     d.folders.forEach(f=>{
       if(!f.photos)
         f.photos=[]
