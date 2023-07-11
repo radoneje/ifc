@@ -299,6 +299,27 @@ router.get('/photos/:lang?', async function(req, res, next) {
   })
   res.render('pagePhotos',{days, lang:req.params.lang, ru:req.params.lang=="ru", apiUrl:config.apiUrl} );
 });
+router.get('/photos/:lang?', async function(req, res, next) {
+  if(!req.params.lang)
+    return res.redirect("/photos/ru")
+  if(!req.params.lang.match(/ru|en/))
+    res.redirect("/photos/ru")
+  let days=await req.knex("v_photo_days");
+  days.forEach(d=>{
+    if(!d.folders)
+      d.folders=[]
+    d.folders=d.folders.filter(dd=>{return dd.isEnabled && !dd.isDeleted && dd.pgmsessionid});
+    d.folders.sort((a,b)=>{return a.sort-b.sort});
+    d.folders.forEach(f=>{
+      if(!f.photos)
+        f.photos=[]
+      f.photos=f.photos.filter(dd=>{return dd.isEnabled && !dd.isDeleted});
+      f.photos.sort((a,b)=>{return a.sort-b.sort});
+    })
+  })
+  res.render('pageVideos',{days, lang:req.params.lang, ru:req.params.lang=="ru", apiUrl:config.apiUrl} );
+});
+
 router.get('/photos/:id/:lang?', async function(req, res, next) {
   try {
     if (!req.params.lang)

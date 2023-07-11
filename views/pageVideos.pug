@@ -1,0 +1,48 @@
+extends layout
+
+block head
+    if ru
+        title="Финансовый Конгресс Банка России: Видео"
+    else
+        title="FINANCIAL CONGRESS OF THE BANK OF RUSSIA: Videos"
+    <meta name="robots" content="noindex">
+block content
+    include elems/internalHead
+    .tower#newsPage
+        .subTower
+            .oNewsDecor
+                include svg/photoDecor.svg
+            .newsDecor2
+                include svg/photoDecor2.svg
+            if ru
+                .sectionTitle Видео Конгресса
+            else
+                .sectionTitle  Video gallery
+
+            .pgmDownloadBtnWr
+            .photosWr
+                each day in days
+                    .photoDayItem(id="day" + day.id)
+                        .photoFolders
+                            each folder in day.folders
+                                a.photoFolder(id="folder"+folder.id href="/photos/"+folder.id+"/"+lang)
+                                    .photoFolderBox
+                                        .photoFolderImage
+                                            img(src="/static/image/middle/" + folder.coverphotoid loading="lazy")
+
+                                    .photoDescrBox
+                                        .photoDescrBoxDate #{day["title_" + lang]}
+                                        .photoDescrBoxTitle #{folder["title" + lang]}
+
+
+
+
+
+
+    include elems/footer
+    include elems/mobileMenu
+
+    script(src="/static/javascripts/utils.js")
+    script(src="/static/javascripts/mainScript.js")
+
+
