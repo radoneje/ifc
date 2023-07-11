@@ -311,7 +311,7 @@ router.get('/videos/:lang?', async function(req, res, next) {
       d.folders=[]
     d.folders=d.folders.filter(dd=>{return dd.isEnabled && !dd.isDeleted && dd.pgmsessionod});
     for(let f of d.folders){
-      d.session=(await req.knex("t_pgm_sessions").where({id:f.pgmsessionod}))[0]
+      f.session=(await req.knex("t_pgm_sessions").where({id:f.pgmsessionod}))[0]
     }
     d.folders.sort((a,b)=>{return a.sort-b.sort});
     d.folders.forEach(f=>{
