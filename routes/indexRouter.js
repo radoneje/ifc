@@ -305,10 +305,14 @@ router.get('/videos/:lang?', async function(req, res, next) {
   if(!req.params.lang.match(/ru|en/))
     res.redirect("/photos/ru")
   let days=await req.knex("v_photo_days");
-  days.forEach(d=>{
+
+    for(let d of days){
     if(!d.folders)
       d.folders=[]
     d.folders=d.folders.filter(dd=>{return dd.isEnabled && !dd.isDeleted && dd.pgmsessionod});
+    for(let f of d.folders){
+      d.session=(await req.knex("t_pgm_sessions").where({id:f.pgmsessionod}))[0]
+    }
     d.folders.sort((a,b)=>{return a.sort-b.sort});
     d.folders.forEach(f=>{
       if(!f.photos)
@@ -316,7 +320,7 @@ router.get('/videos/:lang?', async function(req, res, next) {
       f.photos=f.photos.filter(dd=>{return dd.isEnabled && !dd.isDeleted});
       f.photos.sort((a,b)=>{return a.sort-b.sort});
     })
-  })
+  }
   res.render('pageVideos',{days, lang:req.params.lang, ru:req.params.lang=="ru", apiUrl:config.apiUrl} );
 });
 
