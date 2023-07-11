@@ -24,7 +24,7 @@ block content
             .pgmDownloadBtnWr
             .photosWr
                 each day in days
-                    .photoDayItem(id="day" + day.id)
+                    .photoDayItem(id="day" + day.id style="margin-bottom:24px")
                         .photoFolders
                             each folder in day.folders
                                 a.photoFolder(id="folder"+folder.id onclick="showVideoFile('"+folder.session.videofile+"', true)")
