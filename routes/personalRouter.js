@@ -511,7 +511,7 @@ router.get('/exit/:lang?', async function(req, res, next) {
         }
     });
 
-router.get('/test2/', async function(req, res, next) {
+router.get('/test2', async function(req, res, next) {
     res.json(req.session.token)
 });
 router.get('/test/:lang?', async function(req, res, next) {
