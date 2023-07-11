@@ -308,7 +308,7 @@ router.get('/videos/:lang?', async function(req, res, next) {
   days.forEach(d=>{
     if(!d.folders)
       d.folders=[]
-    d.folders=d.folders.filter(dd=>{return dd.isEnabled && !dd.isDeleted && dd.pgmsessionid});
+    d.folders=d.folders.filter(dd=>{return dd.isEnabled && !dd.isDeleted && dd.pgmsessionod});
     d.folders.sort((a,b)=>{return a.sort-b.sort});
     d.folders.forEach(f=>{
       if(!f.photos)
