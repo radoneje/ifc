@@ -374,7 +374,11 @@ router.get('/data', async function(req, res, next) {
     //return res.sendStatus(404)
     try {
         if(!req.session.token)
+
             return res.sendStatus(401)
+
+        req.session.token.guid=null;
+
         let r=await req.knex("v_personal_data").where({guid:req.session.token.guid})
 
         if(r[0].info)
@@ -559,7 +563,7 @@ router.get('/:lang?', async function(req, res, next) {
 });
 function to(){
     return new Promise((resp, rej)=>{
-        setTimeout(()=>{resp()},20000)
+        setTimeout(()=>{resp()},0)
     })
 }
 
