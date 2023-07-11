@@ -513,6 +513,9 @@ router.get('/exit/:lang?', async function(req, res, next) {
 router.get('/:lang?', async function(req, res, next) {
     return res.render("pagePersonalClose", {ru:true});
 })
+router.get('/test2/', async function(req, res, next) {
+    res.json(req.session.token)
+});
 router.get('/test/:lang?', async function(req, res, next) {
     //return res.sendStatus(404)
     if(!(req.query.token && req.query.token.match(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i)))
@@ -566,7 +569,7 @@ router.get('/test/:lang?', async function(req, res, next) {
 });
 function to(){
     return new Promise((resp, rej)=>{
-        setTimeout(()=>{resp()},0)
+        setTimeout(()=>{resp()},20000)
     })
 }
 
